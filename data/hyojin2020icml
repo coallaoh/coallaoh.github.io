@@ -1,0 +1,6 @@
+@inproceedings{hyojin2020icml,
+title = {Learning De-biased Representations with Biased Representations},
+author = {Bahng, Hyojin and Chun, Sanghyuk and Yun, Sangdoo and Choo, Jaegul and Oh, Seong Joon},
+year = {2020},
+booktitle = {International Conference on Machine Learning},
+}

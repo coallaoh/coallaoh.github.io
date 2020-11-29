@@ -1,0 +1,6 @@
+@article{chun2019icmlw,
+title = {An Empirical Evaluation on Robustness and Uncertainty of Regularization Methods},
+author = {Chun, Sanghyuk and Oh, Seong Joon and Yun, Sangdoo and Han, Dongyoon and Choe, Junsuk and Yoo, Youngjoon},
+journal = {Uncertainty and Robustness in Deep Learning. ICML Workshop},
+year = {2019},
+}

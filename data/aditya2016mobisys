@@ -1,0 +1,8 @@
+@inproceedings{aditya2016mobisys,
+  author = {Paarijaat Aditya and Rijurekha Sen and Seong Joon Oh and Rodrigo Benenson and Bobby Bhattacharjee and Peter Druschel and Tongtong Wu and Mario Fritz and Bernt Schiele},
+  title = {I-Pic: A Platform for Privacy-Compliant Image Capture},
+  booktitle = {The 14th International Conference on Mobile Systems, Applications, and Services (MobiSys'16)},
+  location = {Singapore},
+  month = june,
+  year = 2016
+}

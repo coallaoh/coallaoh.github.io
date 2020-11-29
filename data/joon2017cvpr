@@ -1,0 +1,9 @@
+@inproceedings{joon2017cvpr,
+title = {Exploiting Saliency for Object Segmentation from Image Level Labels},
+author = {Oh, Seong Joon and Benenson, Rodrigo and Khoreva, Anna and Akata, Zeynep and Fritz, Mario and Schiele, Bernt},
+year = {2017},
+booktitle = {Conference on Computer Vision and Pattern Recognition (CVPR)},
+note = {to appear},
+pubstate = {published},
+tppubtype = {inproceedings}
+}

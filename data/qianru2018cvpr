@@ -1,0 +1,6 @@
+@inproceedings{qianru2018cvpr,
+title = {Natural and Effective Obfuscation by Head Inpainting},
+author = {Sun, Qianru and Ma, Liqian and Oh, Seong Joon and van Gool, Luc and Schiele, Bernt and Fritz, Mario},
+year = {2018},
+booktitle = {Conference on Computer Vision and Pattern Recognition (CVPR)}
+}

@@ -1,0 +1,5 @@
+@INPROCEEDINGS{joon2015iccv,
+  title={Person Recognition in Personal Photo Collections},
+  author={Oh, Seong Joon and Benenson, Rodrigo and Fritz, Mario and Schiele, Bernt},
+  booktitle = {ICCV},
+  year={2015} }

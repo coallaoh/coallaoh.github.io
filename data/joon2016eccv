@@ -1,0 +1,11 @@
+@inproceedings{joon2016eccv,
+title = {Faceless Person Recognition; Privacy Implications in Social Media},
+author = {Seong Joon Oh and Rodrigo Benenson and Mario Fritz and Bernt Schiele},
+year = {2016},
+date = {2016-10-11},
+booktitle = {European Conference on Computer Vision (ECCV)},
+note = {to appear},
+keywords = {},
+pubstate = {published},
+tppubtype = {inproceedings}
+}

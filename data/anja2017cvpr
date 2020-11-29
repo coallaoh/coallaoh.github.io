@@ -1,0 +1,9 @@
+@inproceedings{anja2017cvpr,
+title = {Generating Descriptions with Grounded and Co-Referenced People},
+author = {Rohrbach, Anna and Rohrbach, Marcus and Tang, Siyu and Oh, Seong Joon and Schiele, Bernt},
+year = {2017},
+booktitle = {Conference on Computer Vision and Pattern Recognition (CVPR)},
+note = {to appear},
+pubstate = {published},
+tppubtype = {inproceedings}
+}

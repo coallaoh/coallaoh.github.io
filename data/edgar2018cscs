@@ -1,0 +1,6 @@
+@inproceedings{edgar2018cscs,
+title = {Sequential Attacks on Agents for Long-Term Adversarial Goals},
+author = {Tretschk, Edgar and Oh, Seong Joon and Fritz, Mario},
+year = {2018},
+booktitle = {ACM Computer Science in Cars Symposium -- Future Challenges in Artificial Intelligence & Security for Autonomous Vehicles (CSCS)},
+}

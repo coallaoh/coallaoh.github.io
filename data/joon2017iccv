@@ -1,0 +1,9 @@
+@inproceedings{joon2017iccv,
+title = {Adversarial Image Perturbation for Privacy Protection -- A Game Theory Perspective},
+author = {Oh, Seong Joon and Fritz, Mario and Schiele, Bernt},
+year = {2017},
+booktitle = {International Conference on Computer Vision (ICCV)},
+note = {to appear},
+pubstate = {published},
+tppubtype = {inproceedings},
+}
