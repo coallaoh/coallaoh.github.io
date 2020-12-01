@@ -102,7 +102,7 @@
               <br>
               <a href="data/choe2020arxiv">Bibtex</a> /
               <a href="https://github.com/clovaai/wsolevaluation">Code</a>
-              <p>Blabla.</p>
+              <p>Journal extension of CVPR'20! It now contains more analyses, including the evaluation of input gradient variants as Weakly-Supervised Object Localization (WSOL) methods.</p>
             </td>
           </tr>
 
@@ -133,7 +133,9 @@
               <a href="data/heo2020adamp">Bibtex</a> /
               <a href="https://github.com/clovaai/AdamP">Code</a> /
               <a href="https://clovaai.github.io/AdamP/">Project</a>
-              <p>Blabla.</p>
+              <p>When you apply a momentum-based optimizer over scale-invariant parameters, their norms increase quite a bit. 
+                The norm increase doesn't contribute anything to the loss minimization while only slowing down the convergence.
+                We fix this by appending a projection operation on SGD and Adam. This leads to performance improvements across the board. </p>
             </td>
           </tr>
 
@@ -162,7 +164,9 @@
               <a href="data/ferjad2020icml">Bibtex</a> /
               <a href="https://github.com/clovaai/generative-evaluation-prdc">Code</a> /
               <a href="https://www.youtube.com/watch?v=_XwsGkryVpk&feature=youtu.be&ab_channel=FerjadNaeem">Youtube</a>
-              <p>Blabla.</p>
+              <p>Evaluating generative models is tricky. There are Inception Score and Fr&eacute;chet Inception Distance measures indeed, and then (Improved) Precision and Recall metrics to separately examine the fidelity and diversity aspects. 
+              Yet, they are still not perfect. We address the issues with Improved Precision and Recall metrics and propose new metrics: Density and Coverage.
+              </p>
             </td>
           </tr>
 
@@ -191,7 +195,9 @@
               <a href="data/hyojin2020icml">Bibtex</a> /
               <a href="https://github.com/clovaai/rebias">Code</a> /
               <a href="https://www.youtube.com/watch?v=lkjMxZDGubA">Youtube</a>
-              <p>Blabla.</p>
+              <p>Models pick up correlations, rather than causal mechanisms, between inputs and outputs. 
+              De-biasing (and fairness) researches have guided models on "which cues to look at" through explicit bias labels or by re-weighting or re-generating training data to remove bias.
+              We show that, for many application scenarios, it is possible to encode the "cues to look at" through model architecture and such expensive strategies are no longer needed.  </p>
             </td>
           </tr>
 
@@ -219,7 +225,11 @@
               <br>
               <a href="data/choe2020cvpr">Bibtex</a> /
               <a href="https://github.com/clovaai/wsolevaluation">Code</a>
-              <p>Blabla.</p>
+              <p>I have long waited for this moment since CVPR'17. Weakly-Supervised Object Localization, or WSOL, has in fact been not weakly supervised in a strict sense.
+              Design choices and hyperparameters are validated with the localization annotations! 
+              This paper explains <em>why</em> researchers <em>had to</em> rely on localization validation -- without localization supervision, there is no way to force a model to not extract cues from background regions.
+              We propose a new fair benchmark acknowledging the need for localization annotations and show that WSOL methods since CAM in 2016 have not introduced much gain.
+              </p>
             </td>
           </tr>
 
@@ -243,7 +253,8 @@
               <em>CVPR Workshop</em>, 2020
               <br>
               <a href="data/lee2020selfattention">Bibtex</a>
-              <p>Blabla.</p>
+              <p>Scene text recognition works well, but there are remaining corner cases. An example is texts with unusual orientations and arrangements (<em>e.g.</em> BMW logo).
+              We focus on this corner case and propose a model based on self-attention. </p>
             </td>
           </tr>
 
@@ -269,7 +280,7 @@
               <br>
               <a href="data/joon2020tpami">Bibtex</a> /
               <a href="https://ieeexplore.ieee.org/document/8519337">Journal</a>
-              <p>Blabla.</p>
+              <p>Journal version of my first paper ICCV'15, after five years! We have developed the version two of the ICCV'15 system that outperforms the methods that have appeared in the meantime.</p>
             </td>
           </tr>
 
@@ -293,7 +304,7 @@
               <br>
               <a href="data/joon2019blackboxchapter">Bibtex</a> /
               <a href="https://link.springer.com/chapter/10.1007/978-3-030-28954-6_7">Book chapter</a>
-              <p>Blabla.</p>
+              <p>Book chapter version of ICLR'18! We build connections between our black-box inspection methodology and the explainable AI.</p>
             </td>
           </tr>
 
@@ -319,7 +330,39 @@
               <br>
               <a href="data/orekondy19neuripsfl">Bibtex</a> /
               <a href="data/orekondy2019neuripsfl_poster.pdf">Poster</a>
-              <p>Blabla.</p>
+              <p>Federated learning allows sensitive user data to never leave the device and still be used for training. It is considered a safer option than sending the user data directly to the server.
+              But is it? We show that users may be identified and linked based on the model updates communicated between the device and server.
+              </p>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src="pictures/chun2019icmlw.png" alt="chun2019icmlw" width="160" style="border-style: none">
+            </td>
+            <td width="75%" valign="middle">
+              <span style="background-color:#ff9aa2">Robustness</span>
+              <span style="background-color:#ffdac1">Uncertainty</span>
+              <span style="background-color:#c7ceea">Evaluation</span>
+              <br>
+              <a href="data/chun2019icmlw.pdf">
+                <papertitle>An Empirical Evaluation on Robustness and Uncertainty of Regularization Methods
+                </papertitle>
+              </a>
+              <br>
+              <a href="https://sanghyukchun.github.io/home/">Sanghyuk Chun</a>,
+              <strong>Seong Joon Oh</strong>,
+              <a href="https://sangdooyun.github.io/">Sangdoo Yun</a>,
+              <a href="https://sites.google.com/site/dyhan0920/">Dongyoon Han</a>,
+              <a href="https://sites.google.com/site/junsukchoe/">Junsuk Choe</a>,
+              <a href="https://yjyoo3312.github.io/">Youngjoon Yoo</a>.
+              <br>
+              <em>ICML Workshop</em>, 2019
+              <br>
+              <a href="data/chun2019icmlw">Bibtex</a>
+              <p>There has been a line of research on simple regularization techniques like CutMix (ICCV'19) and other lines of research on robustness and uncertainty.
+              We make a happy marriage of the two and measure how well the regularization techniques improve robustness and uncertainty of a model.
+              </p>
             </td>
           </tr>
 
@@ -352,7 +395,7 @@
               <a href="https://clova-ai.blog/2019/07/15/cutmix-regularization-strategy-to-train-strong-classifiers-with-localizable-features/">Blog</a> /
               <a href="https://clovaai.github.io/AdamP/">Project</a> /
               <a href="https://clovaai.github.io/AdamP/">Project</a>
-              <p>Blabla.</p>
+              <p>A simple solution that works surprisingly well! Cut and paste patches from other images during training. Quite likely, you will see a performance boost.</p>
             </td>
           </tr>
 
@@ -381,35 +424,9 @@
               <br>
               <a href="data/baek2019STRcomparisons">Bibtex</a> /
               <a href="https://github.com/clovaai/deep-text-recognition-benchmark">Code</a>
-              <p>Blabla.</p>
-            </td>
-          </tr>
-
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="pictures/chun2019icmlw.png" alt="chun2019icmlw" width="160" style="border-style: none">
-            </td>
-            <td width="75%" valign="middle">
-              <span style="background-color:#ff9aa2">Robustness</span>
-              <span style="background-color:#ffdac1">Uncertainty</span>
-              <span style="background-color:#c7ceea">Evaluation</span>
-              <br>
-              <a href="data/chun2019icmlw.pdf">
-                <papertitle>An Empirical Evaluation on Robustness and Uncertainty of Regularization Methods
-                </papertitle>
-              </a>
-              <br>
-              <a href="https://sanghyukchun.github.io/home/">Sanghyuk Chun</a>,
-              <strong>Seong Joon Oh</strong>,
-              <a href="https://sangdooyun.github.io/">Sangdoo Yun</a>,
-              <a href="https://sites.google.com/site/dyhan0920/">Dongyoon Han</a>,
-              <a href="https://sites.google.com/site/junsukchoe/">Junsuk Choe</a>,
-              <a href="https://yjyoo3312.github.io/">Youngjoon Yoo</a>.
-              <br>
-              <em>ICML Workshop</em>, 2019
-              <br>
-              <a href="data/chun2019icmlw">Bibtex</a>
-              <p>Blabla.</p>
+              <p>Scene text recognition field has long suffered from the lack of a unified agreement on the evaluation protocol.
+              We provide a standard protocol. We also provide a unified view on the previous methods and discover a novel combination of existing modules that turns out to be the state of the art.
+              </p>
             </td>
           </tr>
 
@@ -436,7 +453,10 @@
               <br>
               <a href="data/joon2019iclr">Bibtex</a> /
               <a href="data/oh2019iclr_poster.pdf">Poster</a>
-              <p>Blabla.</p>
+              <p>There has been quite some work on representing uncertainty for classification or regression tasks.
+              Is there a way to represent uncertainty for instance embedding models too?
+              We show that it is possible to train probabilistic representatitons for instances based on their inherent ambiguity.
+              </p>
             </td>
           </tr>
 
@@ -459,7 +479,7 @@
               <em>ACM CSCS</em>, 2018
               <br>
               <a href="data/edgar2018cscs">Bibtex</a>
-              <p>Blabla.</p>
+              <p>Can a bad guy hijack an RL agent? We show that it is possible to let an agent pursue an alternative reward by introducing small adversarial perturbations in the input stream.</p>
             </td>
           </tr>
 
@@ -486,7 +506,8 @@
               <a href="data/oh2018iclr_abstract.pdf">Extended abstract</a> /
               <a href="data/oh2018iclr_poster.pdf">Poster</a> /
               <a href="https://github.com/coallaoh/WhitenBlackBox">Code</a>
-              <p>Blabla.</p>
+              <p>Recipes for training a high-performance model are not cheap. Think about the GPU-and-research-scientist-and-engineer hours to find the right architectural components and optimizer hyperparameters.
+              What if they can be stolen by examining the model responses to certain inputs? </p>
             </td>
           </tr>
 
@@ -512,7 +533,32 @@
               <em>CVPR</em>, 2018
               <br>
               <a href="data/qianru2018cvpr">Bibtex</a>
-              <p>Blabla.</p>
+              <p>Adversarial perturbation solutions (ICCV'17) produce visually pleasant protections with high protection rates, but their effects may be confined to a handful of recognition systems.
+              We propose another solution based on face inpainting that changes the face to a fictitious yet natural-looking identity. It is effective against a broader set of recognition systems. </p>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src="pictures/joon2017cvprw.png" alt="joon2017cvprw" width="160" style="border-style: none">
+            </td>
+            <td width="75%" valign="middle">
+              <span style="background-color:#b5ead7">Privacy & Security</span>
+              <br>
+              <a href="data/oh2017cvprw.pdf">
+                <papertitle>From Understanding to Controlling Privacy against Automatic Person Recognition in Social Media
+                </papertitle>
+              </a>
+              <br>
+              <strong>Seong Joon Oh</strong>,
+              <a href="https://cispa.saarland/group/fritz/">Mario Fritz</a>,
+              <a href="https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/people/bernt-schiele">Bernt Schiele</a>.
+              <br>
+              <em>CVPR Workshop</em>, 2017
+              <br>
+              <a href="data/joon2017cvprw">Bibtex</a> /
+              <a href="data/oh2017cvprw_poster.pdf">Poster</a>
+              <p>We stop and look back on the visual privacy papers (ICCV'15, ECCV'16, ICCV'17).</p>
             </td>
           </tr>
 
@@ -539,31 +585,8 @@
               <a href="data/joon2017iccv">Bibtex</a> /
               <a href="data/oh2017iccv_poster.pdf">Poster</a> /
               <a href="https://github.com/coallaoh/AIP">Code</a>
-              <p>Blabla.</p>
-            </td>
-          </tr>
-
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="pictures/joon2017cvprw.png" alt="joon2017cvprw" width="160" style="border-style: none">
-            </td>
-            <td width="75%" valign="middle">
-              <span style="background-color:#b5ead7">Privacy & Security</span>
-              <br>
-              <a href="data/oh2017cvprw.pdf">
-                <papertitle>From Understanding to Controlling Privacy against Automatic Person Recognition in Social Media
-                </papertitle>
-              </a>
-              <br>
-              <strong>Seong Joon Oh</strong>,
-              <a href="https://cispa.saarland/group/fritz/">Mario Fritz</a>,
-              <a href="https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/people/bernt-schiele">Bernt Schiele</a>.
-              <br>
-              <em>CVPR Workshop</em>, 2017
-              <br>
-              <a href="data/joon2017cvprw">Bibtex</a> /
-              <a href="data/oh2017cvprw_poster.pdf">Poster</a>
-              <p>Blabla.</p>
+              <p>If face blurring doesn't work (ECCV'16), how should we shield our personal photos online against recognition systems? 
+                We propose a solution based on adversarial perturbations and the game theoretic considerations for the evaluation therein.</p>
             </td>
           </tr>
 
@@ -591,7 +614,10 @@
               <a href="data/joon2017cvpr">Bibtex</a> /
               <a href="data/oh2017cvpr_poster.pdf">Poster</a> /
               <a href="https://github.com/coallaoh/GuidedLabelling">Code</a>
-              <p>Blabla.</p>
+              <p>There has been quite some work around training models for localization tasks (<em>e.g.</em> semantic segmentation) from the image tag supervision only.
+                But is this fundamentally possible without relying on extensive validation with full localization annotations? 
+                We argue that certain priors are necessary at the very least to encode the extent of objects. Saliency, we argue, is a handy prior.
+              </p>
             </td>
           </tr>
 
@@ -614,7 +640,7 @@
               <em>CVPR</em>, 2017
               <br>
               <a href="data/anja2017cvpr">Bibtex</a>
-              <p>Blabla.</p>
+              <p>We casually use pronouns to refer to others. For machines, however, referring to people with pronouns necessitates new types of data and training strategies to explicitly localize and link people across frames. We do that. </p>
             </td>
           </tr>
 
@@ -641,7 +667,7 @@
               <a href="data/joon2016eccv">Bibtex</a> /
               <a href="data/oh2016eccv_poster.pdf">Poster</a> /
               <a href="data/oh2016eccvw.pdf">Extended abstract</a>
-              <p>Blabla.</p>
+              <p>But can you still be recognized even with a blur on your face? Quite likely.</p>
             </td>
           </tr>
 
@@ -671,7 +697,7 @@
               <br>
               <a href="data/aditya2016mobisys">Bibtex</a> /
               <a href="http://ipic.mpi-sws.org/">Project</a>
-              <p>Blabla.</p>
+              <p>You are a janitor at Taj Mahal. Against you will, sightseers take photos with your face in the background. How can you opt out of being present in someone else's photo? We present a mobile-system based solution.</p>
             </td>
           </tr>
 
@@ -699,7 +725,7 @@
               <a href="data/oh2015iccv_poster.pdf">Poster</a> /
               <a href="https://www.youtube.com/watch?v=F4Jh0f3xD0g">Video</a> /
               <a href="https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/research/people-detection-pose-estimation-and-tracking/person-recognition-in-personal-photo-collections/">Project</a>
-              <p>Blabla.</p>
+              <p>How well does a CNN model recognize people in personal photos? Even when people don't look at cameras, CNN finds out who they are, based on the context (<em>e.g.</em> location and social connections).</p>
             </td>
           </tr>
 
