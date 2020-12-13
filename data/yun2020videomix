@@ -1,0 +1,6 @@
+@ article{yun2020videomix,
+  title={VideoMix: Rethinking Data Augmentation for Video Classification},
+  author={Yun, Sangdoo and Oh, Seong Joon and Heo, Byeongho and Han, Dongyoon and Kim, Jinhyung},
+  year={2020},
+  journal={arXiv preprint arXiv:2012.03457},
+}
