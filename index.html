@@ -93,6 +93,64 @@
 
           <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src="pictures/yun2021arxiv.png" alt="yun2021arxiv" width="160" style="border-style: none">
+            </td>
+            <td width="75%" valign="middle">
+              <span style="background-color:#ff9aa2">Robustness</span>
+              <span style="background-color:#C9D3D8">Large-Scale ML</span>
+              <br>
+              <a href="data/yun2021arxiv.pdf" id="yun2021arxiv">
+                <papertitle>Re-labeling ImageNet: from Single to Multi-Labels, from Global to Localized Labels
+                </papertitle>
+              </a>
+              <br>
+              <a href="https://sangdooyun.github.io/">Sangdoo Yun</a>,
+              <strong>Seong Joon Oh</strong>,
+              <a href="https://sites.google.com/view/byeongho-heo/home">Byeongho Heo</a>,
+              <a href="https://sites.google.com/site/dyhan0920/">Dongyoon Han</a>,
+              <a href="https://sites.google.com/site/junsukchoe/">Junsuk Choe</a>,
+              <a href="https://sanghyukchun.github.io/home/">Sanghyuk Chun</a>.
+              <br>
+              <em>arXiv</em>, 2021
+              <br>
+              <a href="data/yun2021arxiv">Bibtex</a> /
+              <a href="https://github.com/naver-ai/relabel_imagenet">Code</a>
+              <p>ImageNet labels contain lots of noise (<em>e.g.</em> <a href="http://proceedings.mlr.press/v119/shankar20c.html">Shankar <em>et al.</em></a>).
+              There have been efforts to fix them on the evaluation set, but not yet on the training set.
+              We fix them on the training set (published at <a href="https://github.com/naver-ai/relabel_imagenet">codebase</a>), but with the help of a bigger image classifier, to make the task feasible at all.
+              This is another trick that will improve the ImageNet & downstream task accuracies across the board.</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src="pictures/chun2021arxiv.png" alt="chun2021arxiv" width="160" style="border-style: none">
+            </td>
+            <td width="75%" valign="middle">
+                <span style="background-color:#ffdac1">Uncertainty</span>.
+              <br>
+              <a href="data/chun2021arxiv.pdf" id="chun2021arxiv">
+                <papertitle>Probabilistic Embeddings for Cross-Modal Retrieval
+                </papertitle>
+              </a>
+              <br>
+              <a href="https://sanghyukchun.github.io/home/">Sanghyuk Chun</a>,
+              <strong>Seong Joon Oh</strong>,
+              <a href="https://europe.naverlabs.com/people_user/Rafael-Sampaio-De-Rezende/">Rafael Sampaio de Rezende</a>,
+              <a href="https://www.skamalas.com/">Yannis Kalantidis</a>,
+              <a href="https://europe.naverlabs.com/people_user/diane-larlus/">Diane Larlus</a>.
+              <br>
+              <em>arXiv</em>, 2021
+              <br>
+              <a href="data/chun2021arxiv">Bibtex</a>
+              <p>Given an image, there are many ways to describe it in text. Given a text description, there are likewise many possible images that suits the description.
+                Cross-model associations are of many-to-many nature. The usual deterministic embeddings cannot model this well.
+                We introduce a probabilistic embedding scheme based on the <em>Hedged Instance Embedding</em> (<a href="#joon2019iclr">ICLR'19</a>) to handle the many-to-many mapping gracefully.  </p>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
               <img src="pictures/choe2020cvpr.gif" alt="choe2020cvpr" width="160" style="border-style: none">
             </td>
             <td width="75%" valign="middle">
@@ -100,7 +158,7 @@
               <span style="background-color:#ffffce">Weak Supervision</span>
               <span style="background-color:#c7ceea">Evaluation</span>
               <br>
-              <a href="data/choe2020arxiv.pdf">
+              <a href="data/choe2020arxiv.pdf" id="choe2020arxiv">
                 <papertitle>Evaluation for Weakly Supervised Object Localization: Protocol, Metrics, and Datasets
                 </papertitle>
               </a>
@@ -118,7 +176,7 @@
               <a href="data/choe2020arxiv">Bibtex</a> /
               <a href="https://github.com/clovaai/wsolevaluation">Code</a> /
               <a href="https://www.youtube.com/watch?v=D_dEkeb-fto&list=PLcD_yLvcdUll95mAnBDV0rZKhfClJMZMr&index=5">Tutorial video</a>
-              <p>Journal extension of CVPR'20! It now contains more analyses, including the evaluation of input gradient variants as Weakly-Supervised Object Localization (WSOL) methods.</p>
+              <p>Journal extension of <a href="#choe2020cvpr">CVPR'20</a>! It now contains more analyses, including the evaluation of input gradient variants as Weakly-Supervised Object Localization (WSOL) methods.</p>
             </td>
           </tr>
 
@@ -129,7 +187,7 @@
             <td width="75%" valign="middle">
               <span style="background-color:#C9D3D8">Large-Scale ML</span>
               <br>
-              <a href="data/heo2021iclr.pdf">
+              <a href="data/heo2021iclr.pdf" id="heo2021iclr">
                 <papertitle>AdamP: Slowing Down the Slowdown for Momentum Optimizers on Scale-invariant Weights
                 </papertitle>
               </a>
@@ -162,7 +220,7 @@
             <td width="75%" valign="middle">
               <span style="background-color:#C9D3D8">Large-Scale ML</span>
               <br>
-              <a href="data/yun2020videomix.pdf">
+              <a href="data/yun2020videomix.pdf" id="yun2020videomix">
                 <papertitle>VideoMix: Rethinking Data Augmentation for Video Classification
                 </papertitle>
               </a>
@@ -188,7 +246,7 @@
             <td width="75%" valign="middle">
               <span style="background-color:#c7ceea">Evaluation</span>
               <br>
-              <a href="data/ferjad2020icml.pdf">
+              <a href="data/ferjad2020icml.pdf" id="ferjad2020icml">
                 <papertitle>Reliable Fidelity and Diversity Metrics for Generative Models
                 </papertitle>
               </a>
@@ -221,7 +279,7 @@
               <span style="background-color:#ffffce">Weak Supervision</span>
               <span style="background-color:#c7ceea">Evaluation</span>
               <br>
-              <a href="data/hyojin2020icml.pdf">
+              <a href="data/hyojin2020icml.pdf" id="hyojin2020icml">
                 <papertitle>Learning De-biased Representations with Biased Representations
                 </papertitle>
               </a>
@@ -252,7 +310,7 @@
               <span style="background-color:#ffffce">Weak Supervision</span>
               <span style="background-color:#c7ceea">Evaluation</span>
               <br>
-              <a href="data/choe2020cvpr.pdf">
+              <a href="data/choe2020cvpr.pdf" id="choe2020cvpr">
                 <papertitle>Evaluating Weakly-Supervised Object Localization Methods Right
                 </papertitle>
               </a>
@@ -268,7 +326,7 @@
               <a href="data/choe2020cvpr">Bibtex</a> /
               <a href="https://github.com/clovaai/wsolevaluation">Code</a> /
               <a href="https://www.youtube.com/watch?v=D_dEkeb-fto&list=PLcD_yLvcdUll95mAnBDV0rZKhfClJMZMr&index=5">Tutorial video</a>
-              <p>I have long waited for this moment since CVPR'17. Weakly-Supervised Object Localization, or WSOL, has in fact been not weakly supervised in a strict sense.
+              <p>I have long waited for this moment since <a href="#joon2017cvpr">CVPR'17</a>. Weakly-Supervised Object Localization, or WSOL, has in fact been not weakly supervised in a strict sense.
               Design choices and hyperparameters are validated with the localization annotations! 
               This paper explains <em>why</em> researchers <em>had to</em> rely on localization validation -- without localization supervision, there is no way to force a model to not extract cues from background regions.
               We propose a new fair benchmark acknowledging the need for localization annotations and show that WSOL methods since CAM in 2016 have not introduced much gain.
@@ -281,7 +339,7 @@
               <img src="pictures/lee2020cvprw.png" alt="lee2020cvprw" width="160" style="border-style: none">
             </td>
             <td width="75%" valign="middle">
-              <a href="data/lee2019arxiv.pdf">
+              <a href="data/lee2019arxiv.pdf" id="lee2019arxiv">
                 <papertitle>On Recognizing Texts of Arbitrary Shapes with 2D Self-Attention
                 </papertitle>
               </a>
@@ -309,7 +367,7 @@
               <span style="background-color:#b5ead7">Privacy & Security</span>
               <span style="background-color:#c7ceea">Evaluation</span>
               <br>
-              <a href="data/oh2018tpami.pdf">
+              <a href="data/oh2018tpami.pdf" id="oh2018tpami">
                 <papertitle>Person Recognition in Personal Photo Collections
                 </papertitle>
               </a>
@@ -323,7 +381,7 @@
               <br>
               <a href="data/joon2020tpami">Bibtex</a> /
               <a href="https://ieeexplore.ieee.org/document/8519337">Journal</a>
-              <p>Journal version of my first paper ICCV'15, after five years! We have developed the version two of the ICCV'15 system that outperforms the methods that have appeared in the meantime.</p>
+              <p>Journal version of my first paper <a href="#joon2015iccv">ICCV'15</a>, after five years! We have developed the version two of the <a href="#joon2015iccv">ICCV'15</a> system that outperforms the methods that have appeared in the meantime.</p>
             </td>
           </tr>
 
@@ -334,7 +392,7 @@
             <td width="75%" valign="middle">
               <span style="background-color:#b5ead7">Privacy & Security</span>
               <br>
-              <a href="data/oh2018iclr.pdf">
+              <a href="data/oh2018iclr.pdf" id="oh2018iclr">
                 <papertitle>Towards Reverse-Engineering Black-Box Neural Networks
                 </papertitle>
               </a>
@@ -347,7 +405,7 @@
               <br>
               <a href="data/joon2019blackboxchapter">Bibtex</a> /
               <a href="https://link.springer.com/chapter/10.1007/978-3-030-28954-6_7">Book chapter</a>
-              <p>Book chapter version of ICLR'18! We build connections between our black-box inspection methodology and the explainable AI.</p>
+              <p>Book chapter version of <a href="#joon2018iclr">ICLR'18</a>! We build connections between our black-box inspection methodology and the explainable AI.</p>
             </td>
           </tr>
 
@@ -358,7 +416,7 @@
             <td width="75%" valign="middle">
               <span style="background-color:#b5ead7">Privacy & Security</span>
               <br>
-              <a href="data/orekondy2019neuripsfl.pdf">
+              <a href="data/orekondy2019neuripsfl.pdf" id="orekondy2019neuripsfl">
                 <papertitle>Gradient-Leaks: Understanding and Controlling Deanonymization in Federated Learning
                 </papertitle>
               </a>
@@ -388,7 +446,7 @@
               <span style="background-color:#ffdac1">Uncertainty</span>
               <span style="background-color:#c7ceea">Evaluation</span>
               <br>
-              <a href="data/chun2019icmlw.pdf">
+              <a href="data/chun2019icmlw.pdf" id="chun2019icmlw">
                 <papertitle>An Empirical Evaluation on Robustness and Uncertainty of Regularization Methods
                 </papertitle>
               </a>
@@ -403,7 +461,7 @@
               <em>ICML Workshop</em>, 2019
               <br>
               <a href="data/chun2019icmlw">Bibtex</a>
-              <p>There has been a line of research on simple regularization techniques like CutMix (ICCV'19) and other lines of research on robustness and uncertainty.
+              <p>There has been a line of research on simple regularization techniques like CutMix (<a href="#yun2019iccv">ICCV'19</a>) and other lines of research on robustness and uncertainty.
               We make a happy marriage of the two and measure how well the regularization techniques improve robustness and uncertainty of a model.
               </p>
             </td>
@@ -417,7 +475,7 @@
               <span style="background-color:#ff9aa2">Robustness</span>
               <span style="background-color:#C9D3D8">Large-Scale ML</span>
               <br>
-              <a href="data/yun2019iccv.pdf">
+              <a href="data/yun2019iccv.pdf" id="yun2019iccv">
                 <papertitle>CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features
                 </papertitle>
               </a>
@@ -449,7 +507,7 @@
             <td width="75%" valign="middle">
               <span style="background-color:#c7ceea">Evaluation</span>
               <br>
-              <a href="data/baek2019iccv.pdf">
+              <a href="data/baek2019iccv.pdf" id="baek2019iccv">
                 <papertitle>What Is Wrong with Scene Text Recognition Model Comparisons? Dataset and Model Analysis
                 </papertitle>
               </a>
@@ -480,7 +538,7 @@
             <td width="75%" valign="middle">
               <span style="background-color:#ffdac1">Uncertainty</span>
               <br>
-              <a href="data/oh2019iclr.pdf">
+              <a href="data/oh2019iclr.pdf" id="joon2019iclr">
                 <papertitle>Modeling Uncertainty with Hedged Instance Embedding
                 </papertitle>
               </a>
@@ -510,7 +568,7 @@
             <td width="75%" valign="middle">
               <span style="background-color:#b5ead7">Privacy & Security</span>
               <br>
-              <a href="data/tretschk2018cscs.pdf">
+              <a href="data/tretschk2018cscs.pdf" id="tretschk2018cscs">
                 <papertitle>Sequential Attacks on Agents for Long-Term Adversarial Goals
                 </papertitle>
               </a>
@@ -533,7 +591,7 @@
             <td width="75%" valign="middle">
               <span style="background-color:#b5ead7">Privacy & Security</span>
               <br>
-              <a href="data/oh2018iclr.pdf">
+              <a href="data/oh2018iclr.pdf" id="joon2018iclr">
                 <papertitle>Towards Reverse-Engineering Black-Box Neural Networks
                 </papertitle>
               </a>
@@ -561,7 +619,7 @@
             <td width="75%" valign="middle">
               <span style="background-color:#b5ead7">Privacy & Security</span>
               <br>
-              <a href="data/sun2018cvpr.pdf">
+              <a href="data/sun2018cvpr.pdf" id="sun2018cvpr">
                 <papertitle>Natural and Effective Obfuscation by Head Inpainting
                 </papertitle>
               </a>
@@ -576,7 +634,7 @@
               <em>CVPR</em>, 2018
               <br>
               <a href="data/qianru2018cvpr">Bibtex</a>
-              <p>Adversarial perturbation solutions (ICCV'17) produce visually pleasant protections with high protection rates, but their effects may be confined to a handful of recognition systems.
+              <p>Adversarial perturbation solutions (<a href="#joon2017iccv">ICCV'17</a>) produce visually pleasant protections with high protection rates, but their effects may be confined to a handful of recognition systems.
               We propose another solution based on face inpainting that changes the face to a fictitious yet natural-looking identity. It is effective against a broader set of recognition systems. </p>
             </td>
           </tr>
@@ -588,7 +646,7 @@
             <td width="75%" valign="middle">
               <span style="background-color:#b5ead7">Privacy & Security</span>
               <br>
-              <a href="data/oh2017cvprw.pdf">
+              <a href="data/oh2017cvprw.pdf" id="joon2017cvprw">
                 <papertitle>From Understanding to Controlling Privacy against Automatic Person Recognition in Social Media
                 </papertitle>
               </a>
@@ -601,7 +659,7 @@
               <br>
               <a href="data/joon2017cvprw">Bibtex</a> /
               <a href="data/oh2017cvprw_poster.pdf">Poster</a>
-              <p>We stop and look back on the visual privacy papers (ICCV'15, ECCV'16, ICCV'17).</p>
+              <p>We stop and look back on the visual privacy papers (<a href="#joon2015iccv">ICCV'15</a>, <a href="#joon2016eccv">ECCV'16</a>, <a href="#joon2017iccv">ICCV'17</a>).</p>
             </td>
           </tr>
 
@@ -614,7 +672,7 @@
               <span style="background-color:#b5ead7">Privacy & Security</span>
               <span style="background-color:#c7ceea">Evaluation</span>
               <br>
-              <a href="data/oh2017iccv.pdf">
+              <a href="data/oh2017iccv.pdf" id="joon2017iccv">
                 <papertitle>Adversarial Image Perturbation for Privacy Protection -- A Game Theory Perspective
                 </papertitle>
               </a>
@@ -628,7 +686,7 @@
               <a href="data/joon2017iccv">Bibtex</a> /
               <a href="data/oh2017iccv_poster.pdf">Poster</a> /
               <a href="https://github.com/coallaoh/AIP">Code</a>
-              <p>If face blurring doesn't work (ECCV'16), how should we shield our personal photos online against recognition systems? 
+              <p>If face blurring doesn't work (<a href="#joon2016eccv">ECCV'16</a>), how should we shield our personal photos online against recognition systems?
                 We propose a solution based on adversarial perturbations and the game theoretic considerations for the evaluation therein.</p>
             </td>
           </tr>
@@ -640,7 +698,7 @@
             <td width="75%" valign="middle">
               <span style="background-color:#ffffce">Weak Supervision</span>
               <br>
-              <a href="data/oh2017cvpr.pdf">
+              <a href="data/oh2017cvpr.pdf" id="joon2017cvpr">
                 <papertitle>Exploiting Saliency for Object Segmentation from Image Level Labels
                 </papertitle>
               </a>
@@ -669,7 +727,7 @@
               <img src="pictures/anja2017cvpr.png" alt="anja2017cvpr" width="160" style="border-style: none">
             </td>
             <td width="75%" valign="middle">
-              <a href="data/rohrbach2017cvpr.pdf">
+              <a href="data/rohrbach2017cvpr.pdf" id="rohrbach2017cvpr">
                 <papertitle>Generating Descriptions with Grounded and Co-Referenced People
                 </papertitle>
               </a>
@@ -695,7 +753,7 @@
               <span style="background-color:#b5ead7">Privacy & Security</span>
               <span style="background-color:#c7ceea">Evaluation</span>
               <br>
-              <a href="data/oh2016eccv.pdf">
+              <a href="data/oh2016eccv.pdf" id="joon2016eccv">
                 <papertitle>Faceless Person Recognition; Privacy Implications in Social Media
                 </papertitle>
               </a>
@@ -721,7 +779,7 @@
             <td width="75%" valign="middle">
               <span style="background-color:#b5ead7">Privacy & Security</span>
               <br>
-              <a href="data/aditya2016mobisys.pdf">
+              <a href="data/aditya2016mobisys.pdf" id="aditya2016mobisys">
                 <papertitle>I-pic: A Platform for Privacy-Compliant Image Capture
                 </papertitle>
               </a>
@@ -752,7 +810,7 @@
               <span style="background-color:#b5ead7">Privacy & Security</span>
               <span style="background-color:#c7ceea">Evaluation</span>
               <br>
-              <a href="data/oh2015iccv.pdf">
+              <a href="data/oh2015iccv.pdf" id="joon2015iccv">
                 <papertitle>Person Recognition in Personal Photo Collections
                 </papertitle>
               </a>
