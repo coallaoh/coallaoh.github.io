@@ -93,14 +93,14 @@
 
           <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="pictures/kim2021calm.png" alt="kim2021calm" width="160" style="border-style: none">
+              <img src="pictures/kim2021iccv.png" alt="kim2021iccv" width="160" style="border-style: none">
             </td>
             <td width="75%" valign="middle">
               <span style="background-color:#ff9aa2">Robustness</span>
               <span style="background-color:#ffffce">Weak Supervision</span>
               <span style="background-color:#c7ceea">Evaluation</span>
               <br>
-              <a href="data/kim2021calm.pdf" id="kim2021calm">
+              <a href="data/kim2021iccv.pdf" id="kim2021iccv">
                 <papertitle>Keep CALM and Improve Visual Feature Attribution
                 </papertitle>
               </a>
@@ -110,9 +110,9 @@
               <a href="https://eml-unitue.de/people/zeynep-akata">Zeynep Akata</a>,
               <strong>Seong Joon Oh</strong>.
               <br>
-              <em>arXiv</em>, 2021
+              <em>ICCV</em>, 2021
               <br>
-              <a href="data/kim2021calm">Bibtex</a> /
+              <a href="data/kim2021iccv">Bibtex</a> /
               <a href="https://github.com/naver-ai/calm">Code</a>
               <p>It is difficult to find a CV researcher or practitioner who hasn't used (or at least heard of) the Class Activation Maps (<a href="http://cnnlocalization.csail.mit.edu/Zhou_Learning_Deep_Features_CVPR_2016_paper.pdf">CAM</a>).
                 It is a seminal  <em>feature attribution</em> method that has left a deep mark on the vision research and applications.
@@ -123,6 +123,36 @@
             </td>
           </tr>
 
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src="pictures/heo2021iccv.png" alt="heo2021iccv" width="160" style="border-style: none">
+            </td>
+            <td width="75%" valign="middle">
+              <span style="background-color:#C9D3D8">Large-Scale ML</span>
+              <br>
+              <a href="data/heo2021iccv.pdf" id="heo2021iccv">
+                <papertitle>Rethinking Spatial Dimensions of Vision Transformers
+                </papertitle>
+              </a>
+              <br>
+              <a href="https://sites.google.com/view/byeongho-heo/home">Byeongho Heo</a>,
+              <a href="https://sangdooyun.github.io/">Sangdoo Yun</a>,
+              <a href="https://sites.google.com/site/dyhan0920/">Dongyoon Han</a>,
+              <a href="https://sanghyukchun.github.io/home/">Sanghyuk Chun</a>,
+              <a href="https://sites.google.com/site/junsukchoe/">Junsuk Choe</a>,
+              <strong>Seong Joon Oh</strong>.
+              <br>
+              <em>ICCV</em>, 2021
+              <br>
+              <a href="data/heo2021iccv">Bibtex</a> /
+              <a href="https://github.com/naver-ai/pit">Code</a>
+              <p>The <a href="https://papers.nips.cc/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf">Tranformer</a> architecture has successfully been adapted to visual models (<em>e.g.</em> <a href="https://openreview.net/forum?id=YicbFdNTTy">ViT</a>).
+                However, Transformers, originally designed for language modelling, and ViT assign a constant ratio of computational loads between spatial and channel dimensions at different depths.
+                We postulate this as a suboptimal design choice, as CNNs assign different ratios at different depths to maximise the utility of compute.
+                We thus present <em>Pooling-based Vision Transformer (PiT)</em> that does this.
+              </p>
+            </td>
+          </tr>
 
           <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
@@ -157,37 +187,6 @@
                 For example, an aircraft essentially follows a continuous dynamics but goes through a discrete mode shift at touchdown.
                 Such a system is referred to as a <a href="https://www.springer.com/gp/book/9783540334668">Stochastic Hybrid System (SHS)</a>.
                 We present a framework that recovers SHS from time series data using ingredients like <a href="https://papers.nips.cc/paper/2018/file/69386f6bb1dfed68692a24c8686939b9-Paper.pdf">Neural ODEs</a> and <a href="https://en.wikipedia.org/wiki/Latent_variable_model">latent variable models</a>.
-              </p>
-            </td>
-          </tr>
-
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="pictures/heo2021pit.png" alt="heo2021pit" width="160" style="border-style: none">
-            </td>
-            <td width="75%" valign="middle">
-              <span style="background-color:#C9D3D8">Large-Scale ML</span>
-              <br>
-              <a href="data/heo2021pit.pdf" id="heo2021pit">
-                <papertitle>Rethinking Spatial Dimensions of Vision Transformers
-                </papertitle>
-              </a>
-              <br>
-              <a href="https://sites.google.com/view/byeongho-heo/home">Byeongho Heo</a>,
-              <a href="https://sangdooyun.github.io/">Sangdoo Yun</a>,
-              <a href="https://sites.google.com/site/dyhan0920/">Dongyoon Han</a>,
-              <a href="https://sanghyukchun.github.io/home/">Sanghyuk Chun</a>,
-              <a href="https://sites.google.com/site/junsukchoe/">Junsuk Choe</a>,
-              <strong>Seong Joon Oh</strong>.
-              <br>
-              <em>arXiv</em>, 2021
-              <br>
-              <a href="data/heo2021pit">Bibtex</a> /
-              <a href="https://github.com/naver-ai/pit">Code</a>
-              <p>The <a href="https://papers.nips.cc/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf">Tranformer</a> architecture has successfully been adapted to visual models (<em>e.g.</em> <a href="https://openreview.net/forum?id=YicbFdNTTy">ViT</a>).
-                However, Transformers, originally designed for language modelling, and ViT assign a constant ratio of computational loads between spatial and channel dimensions at different depths.
-                We postulate this as a suboptimal design choice, as CNNs assign different ratios at different depths to maximise the utility of compute.
-                We thus present <em>Pooling-based Vision Transformer (PiT)</em> that does this.
               </p>
             </td>
           </tr>
@@ -445,7 +444,7 @@
               <img src="pictures/lee2020cvprw.png" alt="lee2020cvprw" width="160" style="border-style: none">
             </td>
             <td width="75%" valign="middle">
-              <a href="data/lee2019arxiv.pdf" id="lee2019arxiv">
+              <a href="data/lee2019cvprw.pdf" id="lee2019cvprw">
                 <papertitle>On Recognizing Texts of Arbitrary Shapes with 2D Self-Attention
                 </papertitle>
               </a>
@@ -459,7 +458,7 @@
               <br>
               <em>CVPR Workshop</em>, 2020
               <br>
-              <a href="data/lee2020selfattention">Bibtex</a>
+              <a href="data/lee2020cvprw">Bibtex</a>
               <p>Scene text recognition works well, but there are remaining corner cases. An example is texts with unusual orientations and arrangements (<em>e.g.</em> BMW logo).
               We focus on this corner case and propose a model based on self-attention. </p>
             </td>

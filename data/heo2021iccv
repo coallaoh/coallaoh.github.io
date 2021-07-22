@@ -1,6 +1,9 @@
-@article{heo2021pit,
+@inproceedings{heo2021iccv,
   title={Rethinking Spatial Dimensions of Vision Transformers},
   author={Heo, Byeongho and Yun, Sangdoo and Han, Dongyoon and Chun, Sanghyuk and Choe, Junsuk and Oh, Seong Joon},
   year={2021},
-  journal = {arXiv preprint arXiv:2103.16302},
+  booktitle = {International Conference on Computer Vision (ICCV)},
+  note = {to appear},
+  pubstate = {published},
+  tppubtype = {inproceedings},
 }
