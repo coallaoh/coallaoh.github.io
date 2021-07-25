@@ -34,7 +34,7 @@
                 <name>Seong Joon Oh</name>
               </p>
               <p>I am a research scientist at <a href="https://clova.ai/en/research/publications.html">NAVER AI Lab</a>, working on the challenges of deploying machine learning models in the real world.
-                I am interested in training robust, probabilistic, and weakly-supervised models in pragmatic settings.
+                I am interested in training reliable models (<emph>e.g.</emph> explainable, robust, and probabilistic models) and obtaining the necessary human supervision and guidance in a cost-effective way.
               </p>
               <p>
                 I received my PhD in computer vision and machine learning at <a href="https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning">Max-Planck Institute for Informatics</a> in 2018, 
@@ -62,6 +62,13 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
+              <heading>Updates</heading>
+              <p>
+                <ul>
+                  <li>23 July 2021. We will organize a Neurips'21 workshop on <a href="#imagenet2021neurips">ImageNet: Past, Present, and Future</a>.</li>
+                  <li>23 July 2021. 2 papers accepted @ ICCV'21: <a href="#kim2021iccv">CALM</a> and <a href="#heo2021iccv">PiT</a>.</li>
+                </ul>
+              </p>
               <heading>Research</heading>
               <p>
                 I have tried to push certain fronts in ML research to make models truly useful and deployable in real life. They can be grouped into a few keywords.
@@ -72,8 +79,8 @@
                 <span style="background-color:#ffdac1">Uncertainty</span>. 
                 A model should know when it is going to get it wrong. This allows the users and downstream systems to make sensible and safe decisions based on the estimated confidence levels.
                 <br>
-                <span style="background-color:#ffffce">Weak Supervision</span>.
-                Human supervision is often a bottleneck for training a model on a new task. I have sought cost-effective surrogates for the annotations and corresponding training methodologies.
+                <span style="background-color:#ffffce">Human Annotation</span>.
+                An integral part of training a high-performance model is the human supervision. I have sought cost-effective ways to extract useful supervisory signals from humans.
                 <br>
                 <span style="background-color:#b5ead7">Privacy & Security</span>.
                 There are different privacy and security angles with which ML can be analyzed. One may question the "stealability" of a black-box model as an IP; one may also question the privacy guarantees for user data in the federated learning setup. 
@@ -97,7 +104,7 @@
             </td>
             <td width="75%" valign="middle">
               <span style="background-color:#ff9aa2">Robustness</span>
-              <span style="background-color:#ffffce">Weak Supervision</span>
+              <span style="background-color:#ffffce">Human Annotation</span>
               <span style="background-color:#c7ceea">Evaluation</span>
               <br>
               <a href="data/kim2021iccv.pdf" id="kim2021iccv">
@@ -258,7 +265,7 @@
             </td>
             <td width="75%" valign="middle">
               <span style="background-color:#ff9aa2">Robustness</span>
-              <span style="background-color:#ffffce">Weak Supervision</span>
+              <span style="background-color:#ffffce">Human Annotation</span>
               <span style="background-color:#c7ceea">Evaluation</span>
               <br>
               <a href="data/choe2020arxiv.pdf" id="choe2020arxiv">
@@ -381,7 +388,7 @@
             </td>
             <td width="75%" valign="middle">
               <span style="background-color:#ff9aa2">Robustness</span>
-              <span style="background-color:#ffffce">Weak Supervision</span>
+              <span style="background-color:#ffffce">Human Annotation</span>
               <span style="background-color:#c7ceea">Evaluation</span>
               <br>
               <a href="data/hyojin2020icml.pdf" id="hyojin2020icml">
@@ -413,7 +420,7 @@
             </td>
             <td width="75%" valign="middle">
               <span style="background-color:#ff9aa2">Robustness</span>
-              <span style="background-color:#ffffce">Weak Supervision</span>
+              <span style="background-color:#ffffce">Human Annotation</span>
               <span style="background-color:#c7ceea">Evaluation</span>
               <br>
               <a href="data/choe2020cvpr.pdf" id="choe2020cvpr">
@@ -803,7 +810,7 @@
               <img src="pictures/joon2017cvpr.png" alt="joon2017cvpr" width="160" style="border-style: none">
             </td>
             <td width="75%" valign="middle">
-              <span style="background-color:#ffffce">Weak Supervision</span>
+              <span style="background-color:#ffffce">Human Annotation</span>
               <br>
               <a href="data/oh2017cvpr.pdf" id="joon2017cvpr">
                 <papertitle>Exploiting Saliency for Object Segmentation from Image Level Labels
@@ -953,12 +960,57 @@
 
           <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
+              <a href="https://www.iconbros.com/icons/workshop_2">
+                <img src="https://d338t8kmirgyke.cloudfront.net/icons/icon_pngs/000/009/250/original/workshop.png" alt="freepik image" width="120" style="border-style: none">
+              </a>
+            </td>
+            <td width="75%" valign="middle">
+              <span style="background-color:#ff9aa2">Robustness</span>
+              <span style="background-color:#ffffce">Human Annotation</span>
+              <span style="background-color:#c7ceea">Evaluation</span>
+              <span style="background-color:#C9D3D8">Large-Scale ML</span>
+              <br>
+              <a id="imagenet2021neurips">
+                <papertitle>Workshop on ImageNet: Past, Present, and Future
+                </papertitle>
+              </a>
+              <br>
+              <a href="https://eml-unitue.de/people/zeynep-akata">Zeynep Akata</a>,
+              <a href="http://lucasb.eyer.be/">Lucas Beyer</a>,
+              <a href="https://sanghyukchun.github.io/home/">Sanghyuk Chun</a>,
+              <a href="https://eml-unitue.de/people/almut-sophia-koepke">Almut Sophia Koepke</a>,
+              <a href="https://europe.naverlabs.com/people_user/diane-larlus/">Diane Larlus</a>,
+              <strong>Seong Joon Oh</strong>,
+              <a href="https://europe.naverlabs.com/people_user/Rafael-Sampaio-De-Rezende/">Rafael Sampaio de Rezende</a>,
+              <a href="https://sangdooyun.github.io/">Sangdoo Yun</a>,
+              <a href="https://sites.google.com/site/xzhai89">‪Xiaohua Zhai‬</a>.
+              <br>
+              <em>NeurIPS</em>, 2021
+              <br>
+              <a>Website (Will be published soon)</a>
+              <p>
+                <a href="https://image-net.org/">ImageNet</a> symbolises the stellar achievements in ML and CV in the past decade.
+                It has served as the go-to benchmark for model architectures and training techniques and as a common pre-training dataset for numerous downstream tasks.
+                As of 2021, ImageNet is going through a creative destruction.
+                As the SOTA models are saturating towards the upper bound of the benchmark, new versions of the benchmarks are being proposed (<emph>e.g.</emph> ImageNet-<a href="https://arxiv.org/abs/1907.07174">A</a>/<a href="https://github.com/hendrycks/robustness">C</a>/<a href="https://arxiv.org/abs/2104.12928">D</a>/<a href="https://github.com/zhmiao/OpenLongTailRecognition-OLTR">LT</a>/<a href="https://arxiv.org/abs/1907.07174">O</a>/<a href="https://github.com/hendrycks/robustness">P</a>/<a href="https://github.com/hendrycks/imagenet-r">R</a>), with more focus on the reliability of models.
+                Emerging fields in CV are now venturing beyond the ImageNet pre-training with class labels: <emph>e.g.</emph> <a href="https://paperswithcode.com/task/self-supervised-image-classification">self-supervision</a> and <a href="https://github.com/openai/CLIP">language-description supervision</a>.
+                We believe now is a good time to discuss what’s next.
+                The workshop will cover questions like:
+                What are the main lessons learnt thanks to this benchmark?
+                How can we reflect on the diverse requirements for good datasets and models, such as fairness, privacy, security, generalization, scale, and efficiency?
+                What should the next generation of ImageNet-like benchmarks encompass?
+                Through this workshop, we hope to collectively shape the landscape of the ML and CV research in the post-ImageNet era.
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
               <a href="https://www.flaticon.com/authors/freepik">
                 <img src="pictures/tutorial.png" alt="freepik image" width="120" style="border-style: none">
               </a>
             </td>
             <td width="75%" valign="middle">
-              <span style="background-color:#ffffce">Weak Supervision</span>
+              <span style="background-color:#ffffce">Human Annotation</span>
               <span style="background-color:#c7ceea">Evaluation</span>
               <br>
               <a href="https://www.youtube.com/watch?v=-cc2RYF37zE&list=PLcD_yLvcdUll95mAnBDV0rZKhfClJMZMr&index=1">
@@ -968,7 +1020,7 @@
               <br>
               <a href="http://homepages.inf.ed.ac.uk/hbilen/">Hakan Bilen</a>,
               <a href="http://rodrigob.github.io/">Rodrigo Benenson</a>,
-              <strong>Seong Joon Oh</strong> (co-organizer).
+              <strong>Seong Joon Oh</strong>.
               <br>
               <em>ECCV</em>, 2020
               <br>
@@ -1032,6 +1084,11 @@
               </papertitle>
               <br>
               <ul>
+                <li>
+                  <a href="https://docs.google.com/presentation/d/1QNWWBygLdiAvSG3N0z4i4xBfIOb5W7sFYoylIhdENfw/edit?usp=sharing">
+                    Beyond "what", towards "how".
+                  </a>
+                  University of Tübingen & MPI-IS, Tübingen, January 2021.</li>
                 <li>
                   <a href="https://docs.google.com/presentation/d/1KhqlOq-cXWYGVJxBNx9EbwEUv6JPHM88Y7IhLsqEvG4/edit?usp=sharing">
                     Towards reliable machine learning.
