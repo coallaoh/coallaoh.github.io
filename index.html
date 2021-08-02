@@ -239,7 +239,8 @@
               <img src="pictures/chun2021cvpr.png" alt="chun2021cvpr" width="160" style="border-style: none">
             </td>
             <td width="75%" valign="middle">
-                <span style="background-color:#ffdac1">Uncertainty</span>.
+                <span style="background-color:#ffdac1">Uncertainty</span>
+                <span style="background-color:#c7ceea">Evaluation</span>
               <br>
               <a href="data/chun2021cvpr.pdf" id="chun2021cvpr">
                 <papertitle>Probabilistic Embeddings for Cross-Modal Retrieval
@@ -258,7 +259,11 @@
               <a href="https://github.com/naver-ai/pcme">Code</a>
               <p>Given an image, there are many ways to describe it in text. Given a text description, there are likewise many possible images that suits the description.
                 Cross-model associations are of many-to-many nature. The usual deterministic embeddings cannot model this well.
-                We introduce a probabilistic embedding scheme based on the <em>Hedged Instance Embedding</em> (<a href="#joon2019iclr">ICLR'19</a>) to handle the many-to-many mapping gracefully.  </p>
+                We introduce a probabilistic embedding scheme based on the <em>Hedged Instance Embedding</em> (<a href="#joon2019iclr">ICLR'19</a>) to handle the many-to-many mapping gracefully.  
+                We address another crucial issue with evaluation: your method gets either penalised or rewarded for retrieving synonymous sentences.
+                This is because of the non-exhaustive true matches in the eval set.
+                Since ground-up collection of such matches is too expensive, we introduce a novel surrogate measure <em>plausible-Match R-Precision</em> based on the estimated true matches.
+              </p>
             </td>
           </tr>
 
