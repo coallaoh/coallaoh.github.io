@@ -1,0 +1,6 @@
+@inproceedings{poli2021neurips,
+    title={Neural Hybrid Automata: Learning Dynamics with Multiple Modes and Stochastic Transitions},
+    author = {Poli, Michael and Massaroli, Stefano and Scimeca, Luca and Oh, Seong Joon and Chun, Sanghyuk and Yamashita, Atsushi and Asama, Hajime and Park, Jinkyoo and Garg, Animesh},
+    year = {2021},
+    booktitle = {Conference on Neural Information Processing Systems},
+}

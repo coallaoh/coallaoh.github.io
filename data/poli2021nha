@@ -1,7 +1,0 @@
-@article{poli2021nha,
-  title={Neural Hybrid Automata: Learning Dynamics with Multiple Modes and Stochastic Transitions
-},
-  author={Poli, Michael and Massaroli, Stefano and Scimeca, Luca and Oh, Seong Joon and Chun, Sanghyuk and Yamashita, Atsushi and Asama, Hajime and Park, Jinkyoo and Garg, Animesh},
-  year={2021},
-  journal = {arXiv preprint arXiv:2106.04165},
-}
