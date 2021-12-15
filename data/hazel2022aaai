@@ -1,0 +1,9 @@
+@inproceedings{hazel2022aaai,
+  title={ALP: Data Augmentation using Lexicalized PCFGs for Few-Shot Text Classification},
+  author={Kim, Hazel and Woo, Daecheol and Oh, Seong Joon and Cha, Jeong-Won and Han, Yo-Sub},
+  year={2022},
+  booktitle = {Association for the Advancement of Artificial Intelligence Conference (AAAI)},
+  note = {to appear},
+  pubstate = {published},
+  tppubtype = {inproceedings},
+}

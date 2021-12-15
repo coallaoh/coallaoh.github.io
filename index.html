@@ -69,7 +69,7 @@
               <p>
                 <ul>
                   <li>13-14 December 2022. NeurIPS'21 workshop on <a href="https://sites.google.com/view/imagenet-workshop/">ImageNet: Past, Present, and Future</a> was held with 400+ attendees. Recordings will be available in January 2022.</li>
-                  <li>1 December 2022. 1 paper accepted @ AAAI'21: <a href="#hazel2021aaai">ALP</a> - a data augmentation method for few-shot text classification.</li>
+                  <li>1 December 2022. 1 paper accepted @ AAAI'22: <a href="#hazel2022aaai">ALP</a> - a data augmentation method for few-shot text classification.</li>
                   <li>29 September 2021. 1 paper accepted @ NeurIPS'21: <a href="#poli2021neurips">Neural Hybrid Automata</a>.</li>
                   <li>23 July 2021. We will organize a NeurIPS'21 workshop on <a href="https://sites.google.com/view/imagenet-workshop/">ImageNet: Past, Present, and Future</a>.</li>
                   <li>23 July 2021. 2 papers accepted @ ICCV'21: <a href="#kim2021iccv">CALM</a> and <a href="#heo2021iccv">PiT</a>.</li>
@@ -132,6 +132,38 @@
                 For example, trained on a dataset where both colour and shape are valid cues for recognising the object,
                 models of different types (MLP, CNN, and ViT) choose to use colour over shape.
                 Why is that? We provide an explanation from the parameter-space perspective. Read the paper. Worth it!
+              </p>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src="pictures/hazel2022aaai.png" alt="hazel2022aaai" width="160" style="border-style: none">
+            </td>
+            <td width="75%" valign="middle">
+              <span style="background-color:#ff9aa2">Robustness</span>
+              <span style="background-color:#ffffce">Human Annotation</span>
+              <br>
+              <a href="data/hazel2022aaai.pdf" id="hazel2022aaai">
+                <papertitle>ALP: Data Augmentation using Lexicalized PCFGs for Few-Shot Text Classification
+                </papertitle>
+              </a>
+              <br>
+              <a href="https://github.com/hazelhkim">Hazel Kim</a>,
+              Daecheol Woo,
+              <strong>Seong Joon Oh</strong>,
+              <a href="https://www.linkedin.com/in/jeong-won-cha-a936142a/">Jeong-Won Cha</a>,
+              <a href="http://toc.yonsei.ac.kr/~emmous/">Yo-Sub Han</a>.
+              <br>
+              <em>AAAI</em>, 2022
+              <br>
+              <a href="data/hazel2022aaai">Bibtex</a>
+              <p>This is an NLP paper. There have been many attempts at enlarging the training text data for few-shot text classification, like back-translation (<em>e.g.</em> En-Fr-En) and the use of pre-trained language models.
+                Unlike those, we propose an augmentation method that is fully aware of the underlying grammatical structure of the sentence.
+                Importantly, our method generates a set of synonymous sentences that are both grammatically correct and grammatically diverse!
+                Here we gain quite some points in few-shot text classification benchmarks.
+                Another contribution is viewing the train-val split <em>as part of the method</em> and seeking the best splitting strategy when data augmentation is being used.
+                It turns out that splitting the few-shot labelled samples <em>S</em> into disjoint train-val splits (train split is then augmented) is sub-optimal; a better strategy is to use the augmented source data <em>S'</em> as the train split and the original <em>S</em> itself as the validation split!
               </p>
             </td>
           </tr>
