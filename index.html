@@ -71,6 +71,7 @@
                 <ul>
                   <li>1 April 2022. I will join the <a href="https://tuebingen.ai/">University of Tübingen</a> as an independent group leader.</li>
                   <li>21 Januray 2022. 1 paper accepted @ ICLR'22: <a href="#scimeca2022iclr">Shortcut learning from the parameter-space viewpoint</a>.</li>
+                  <li>2 March 2022. 1 paper accepted @ CVPR'22: <a href="#lee2022cvpr">Weakly-Supervised Semantic Segmentation using Out-of-Distribution Data.</li>
                   <li>13-14 December 2021. NeurIPS'21 workshop on <a href="https://sites.google.com/view/imagenet-workshop/">ImageNet: Past, Present, and Future</a> was held with 400+ attendees. Recordings will be available in January 2022.</li>
                   <li>1 December 2021. 1 paper accepted @ AAAI'22: <a href="#hazel2022aaai">ALP</a> - a data augmentation method for few-shot text classification.</li>
                   <li>29 September 2021. 1 paper accepted @ NeurIPS'21: <a href="#poli2021neurips">Neural Hybrid Automata</a>.</li>
@@ -140,13 +141,12 @@
               <br>
               <a href="data/lee2022cvpr">Bibtex</a> /
               <a href="https://github.com/naver-ai/w-ood">Code</a>
-              <p>Weakly-supervised semantic segmentation (WSSS) is the task of solving pixel-wise class assignment with only image-level labels.
-                The problem is <a href="#choe2020cvpr">ill-posed</a>.
-                The ill-posedness stems from the inability of the models to distinguish the foreground (FG) objects (<em>e.g.</em> train) from the spuriously-correlated background (BG) pixels (<em>e.g.</em> rail).
-                Researchers have sought <a href="https://www.youtube.com/watch?v=jM1T1HwbY5s">alternative sources</a> to supply the lacking information, typically relying on the shape priors.
-                In this paper, we explore a novel source: <em>background images</em> (<em>e.g.</em> rail images without a train).
-                Conceptually, telling models what are <em>not</em> FG cues is equivalent to telling them what <em>actually</em> are the FG cues; BG data are sufficient for turning the problem into a well-posed one.
-                The key advantage of our approach is that collecting such BG data turns out to be highly cost-efficient, requiring orders of magnitude less annotation costs than the cost for collecting the image-level labels.
+              <p>Weakly-supervised semantic segmentation (WSSS) is the task of solving pixel-wise class assignment with only the image-level supervision.
+                The problem is <a href="#choe2020cvpr">ill-posed</a> because the image-level labels alone do not let models distinguish foreground (FG) objects (<em>e.g.</em> train) from spuriously-correlated background (BG) cues (<em>e.g.</em> rail).
+                Researchers have sought <a href="https://www.youtube.com/watch?v=jM1T1HwbY5s">external sources of information</a>, such as shape prior, to address the ill-posedness.
+                In this paper, we explore a novel source: <em>BG images</em> (<em>e.g.</em> rail images without a train).
+                Conceptually, telling models what are <em>not</em> the FG cues is equivalent to telling them what <em>actually</em> are the FG cues; BG images are sufficient for turning the problem into a well-posed one.
+                Collecting such BG data is cost-efficient, requiring orders of magnitude less annotation costs than the already-cheap cost for collecting the image-level labels.
               </p>
             </td>
           </tr>
