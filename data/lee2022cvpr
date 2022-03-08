@@ -1,5 +1,5 @@
 @inproceedings{lee2022cvpr,
-title = {Weakly Supervised Semantic Segmentation using Out-of-Distribution Data},
+title = {Weakly Supervised Semantic Segmentation Using Out-of-Distribution Data},
 author = {Lee, Jungbeom and Oh, Seong Joon and Yun, Sangdoo and Choe, Junsuk and Kim, Eunji and Yoon, Sungroh},
 year = {2022},
 booktitle = {Conference on Computer Vision and Pattern Recognition (CVPR)},
