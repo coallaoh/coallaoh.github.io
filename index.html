@@ -113,40 +113,71 @@
         </tbody></table>
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="pictures/lee2022cvpr.png" alt="lee2022cvpr" width="99%" style="border-style: none">
-            </td>
-            <td width="75%" valign="middle">
-              <span style="background-color:#ff9aa2">Robustness</span>
-              <span style="background-color:#ffffce">Human Annotation</span>
-              <br>
-              <a href="data/lee2022cvpr.pdf" id="lee2022cvpr">
-                <papertitle>Weakly Supervised Semantic Segmentation Using Out-of-Distribution Data
-                </papertitle>
-              </a>
-              <br>
-              <a href="https://github.com/jbeomlee93">Jungbeom Lee</a>,
-              <strong>Seong Joon Oh</strong>,
-              <a href="https://sangdooyun.github.io/">Sangdoo Yun</a>,
-              <a href="https://sites.google.com/site/junsukchoe/">Junsuk Choe</a>,
-              <a href="http://data.snu.ac.kr/index.php/people/">Eunji Kim</a>,
-              <a href="http://data.snu.ac.kr/index.php/people/">Sungroh Yoon</a>.
-              <br>
-              <em>CVPR</em>, 2022
-              <br>
-              <a href="data/lee2022cvpr">Bibtex</a> /
-              <a href="https://github.com/naver-ai/w-ood">Code</a>
-              <p>Weakly-supervised semantic segmentation (WSSS) is the task of solving pixel-wise class assignment with only the image-level supervision.
-                The problem is <a href="#choe2020cvpr">ill-posed</a> because the image-level labels alone do not let models distinguish foreground (FG) objects (<em>e.g.</em> train) from spuriously-correlated background (BG) cues (<em>e.g.</em> rail).
-                Researchers have sought <a href="https://www.youtube.com/watch?v=jM1T1HwbY5s">external sources of information</a>, such as shape prior, to address the ill-posedness.
-                In this paper, we explore a novel source: <em>BG images</em> (<em>e.g.</em> rail images without a train).
-                Conceptually, telling models what are <em>not</em> the FG cues is equivalent to telling them what <em>actually</em> are the FG cues; BG images are sufficient for turning the problem into a well-posed one.
-                Collecting such BG data is cost-efficient, requiring orders of magnitude less annotation costs than the already-cheap image-level labels.
-              </p>
-            </td>
-          </tr>
+            
+            <tr>
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <img src="pictures/kim2022icml.png" alt="kim2022icml" width="99%" style="border-style: none">
+              </td>
+              <td width="75%" valign="middle">
+                <br>
+                <a href="data/kim2022icml.pdf" id="kim2022icml">
+                  <papertitle>Information-Intensive Dataset Condensation
+                  </papertitle>
+                </a>
+                <br>
+                <a href="https://janghyun1230.github.io/">Jang-Hyun Kim</a>,
+                <a href="https://mllab.snu.ac.kr/people.html">Jinuk Kim</a>,
+                <strong>Seong Joon Oh</strong>,
+                <a href="https://sangdooyun.github.io/">Sangdoo Yun</a>,
+                <a href="https://sites.google.com/site/junsukchoe/">Hwanjun Song</a>,
+                <a href="https://songhwanjun.github.io/">Joonhyun Jeong</a>,
+                <a href="https://aidljwha.wordpress.com/">Jung-Woo Ha</a>,
+                <a href="https://mllab.snu.ac.kr/hyunoh/">Hyun Oh Song</a>.
+                <br>
+                <em>ICML</em>, 2022
+                <br>
+                <a href="data/kim2022icml">Bibtex</a>
+                <p>Dataset condensation is the art of compactifying a training dataset.
+                The aim is that a model trained on a condensed dataset is <em>similar</em> to the one trained on the original dataset, most importantly in terms of model accuracy (<em>e.g.</em> <a href="https://groups.inf.ed.ac.uk/vico/research/DatasetCondensation/">91%-accuracy MNIST classifier with only 1 sample per class</a>).
+                We introduce many practical tricks to make data condensation work beyond the toy setting.
+                We present the first data condensation method that <em>actually</em> works on images with sizes as large as 224x224, instead of 32x32!
+                </p>
+              </td>
+            </tr>
+            
+            <tr>
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <img src="pictures/lee2022cvpr.png" alt="lee2022cvpr" width="99%" style="border-style: none">
+              </td>
+              <td width="75%" valign="middle">
+                <span style="background-color:#ff9aa2">Robustness</span>
+                <span style="background-color:#ffffce">Human Annotation</span>
+                <br>
+                <a href="data/lee2022cvpr.pdf" id="lee2022cvpr">
+                  <papertitle>Weakly Supervised Semantic Segmentation Using Out-of-Distribution Data
+                  </papertitle>
+                </a>
+                <br>
+                <a href="https://github.com/jbeomlee93">Jungbeom Lee</a>,
+                <strong>Seong Joon Oh</strong>,
+                <a href="https://sangdooyun.github.io/">Sangdoo Yun</a>,
+                <a href="https://sites.google.com/site/junsukchoe/">Junsuk Choe</a>,
+                <a href="http://data.snu.ac.kr/index.php/people/">Eunji Kim</a>,
+                <a href="http://data.snu.ac.kr/index.php/people/">Sungroh Yoon</a>.
+                <br>
+                <em>CVPR</em>, 2022
+                <br>
+                <a href="data/lee2022cvpr">Bibtex</a> /
+                <a href="https://github.com/naver-ai/w-ood">Code</a>
+                <p>Weakly-supervised semantic segmentation (WSSS) is the task of solving pixel-wise class assignment with only the image-level supervision.
+                  The problem is <a href="#choe2020cvpr">ill-posed</a> because the image-level labels alone do not let models distinguish foreground (FG) objects (<em>e.g.</em> train) from spuriously-correlated background (BG) cues (<em>e.g.</em> rail).
+                  Researchers have sought <a href="https://www.youtube.com/watch?v=jM1T1HwbY5s">external sources of information</a>, such as shape prior, to address the ill-posedness.
+                  In this paper, we explore a novel source: <em>BG images</em> (<em>e.g.</em> rail images without a train).
+                  Conceptually, telling models what are <em>not</em> the FG cues is equivalent to telling them what <em>actually</em> are the FG cues; BG images are sufficient for turning the problem into a well-posed one.
+                  Collecting such BG data is cost-efficient, requiring orders of magnitude less annotation costs than the already-cheap image-level labels.
+                </p>
+              </td>
+            </tr>
 
           <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">

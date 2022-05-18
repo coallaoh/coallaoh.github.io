@@ -1,0 +1,9 @@
+@inproceedings{lee2022cvpr,
+title = {Information-Intensive Data Condensation},
+author = {Kim, Jang-Hyun and Kim, Junuk and  Oh, Seong Joon and Yun, Sangdoo and Song, Hwanjun and Ha, Jung-Wooa and Song, Hyun Oh},
+year = {2022},
+booktitle = {International Conference on Machine Learning (ICML)},
+note = {to appear},
+pubstate = {published},
+tppubtype = {inproceedings}
+}
