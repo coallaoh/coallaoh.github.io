@@ -78,11 +78,10 @@
               <p>
                 <ul>
                   <li>3 August 2022. I'm giving a talk on Scalable Trustworthy AI @ SNU Summer School. <a href="https://docs.google.com/presentation/d/1BVyjRE-jq3cuVl9NM29WeFi6eUBTtPi6KzKRQufJr4g/edit?usp=sharing">Slides</a> available.
+                  <li>2 March 2022. 1 paper accepted @ ECCV'22: <a href="#chun2022eccv">ECCV Captions</a>.</li>
                   <li>7 July 2022. Our group web page is available: <a href="https://scalabletrustworthyai.github.io/">Scalable Trustworthy AI (STAI)</a>. We're hiring PhD students.
                   <li>1 April 2022. I joined the <a href="https://tuebingen.ai/">University of Tübingen</a> as an independent group leader.</li>
                   <li>24 March 2022. Recordings for the NeurIPS workshop on ImageNet: Past, Present, and Future are available <a href="https://sites.google.com/view/imagenet-workshop/#h.nz6qoftuckhz">here</a>.</li>
-                  <li>2 March 2022. 1 paper accepted @ CVPR'22: <a href="#lee2022cvpr">Weakly-Supervised Semantic Segmentation Using BG Images</a>.</li>
-                  <li>21 Januray 2022. 1 paper accepted @ ICLR'22: <a href="#scimeca2022iclr">Shortcut learning from the parameter-space viewpoint</a>.</li>
                 </ul>
               </p>
               <heading>Research</heading>
@@ -122,6 +121,39 @@
         </tbody></table>
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+            <tr>
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <img src="pictures/chun2022eccv.png" alt="chun2022eccv" width="99%" style="border-style: none">
+              </td>
+              <td width="75%" valign="middle">
+                <span style="background-color:#ffffce">Human Annotation</span>
+                <span style="background-color:#c7ceea">Evaluation</span>
+                <span style="background-color:#C9D3D8">Large-Scale ML</span>
+                <br>
+                <a href="data/chun2022eccv.pdf" id="chun2022eccv">
+                  <papertitle>ECCV Caption: Correcting False Negatives by Collecting Machine-and-Human-verified Image-Caption Associations for MS-COCO
+                  </papertitle>
+                </a>
+                <br>
+                <a href="https://sanghyukchun.github.io/home/">Sanghyuk Chun</a>,
+                <a href="https://wonjae.kim/">Wonjae Kim</a>,
+                <a href="https://8uos.github.io/">Song Park</a>,
+                <a href="https://minsukchang.com/">Minsuk Chang</a>,
+                <strong>Seong Joon Oh</strong>.
+                <br>
+                <em>ECCV</em>, 2022
+                <br>
+                <a href="data/chun2022eccv.txt">Bibtex</a> /
+                <a href="https://github.com/naver-ai/eccv-caption">Code</a>
+                <p>Image-captioning benchmarks such as <a href="https://paperswithcode.com/dataset/coco-captions">COCO Captions</a> contain lots of nonsense.
+                  For the same image on the left, the caption that goes "Playing tennis with a racket" is deemed correct, while "Swinging a tennis racket" is penalised.
+                  This comes from the erratic recipe for constructing the datasets: (1) let annotators write down 5 captions per image and (2) consider <em>only</em> those 5 captions to be correct matches.
+                  We show that this practice introduces a lot of noise in the evaluation benchmarks.
+                  We then introduce <a href="https://github.com/naver-ai/eccv-caption">a novel image-captioning dataset</a> based on MS-COCO Captions that captures the model performances more precisely.
+                </p>
+              </td>
+            </tr>
 
             <tr>
               <td style="padding:20px;width:25%;vertical-align:middle">
