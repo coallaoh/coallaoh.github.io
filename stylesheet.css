@@ -130,29 +130,72 @@ span.highlight {
   background-color: #ffffd0;
 }
 
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 800px;
+}
+
 .personal-photo{
   width: 80%;
   max-width: 100%;
+  margin: auto;
+  display: block;
 }
 
 .institute-logo{
-  width: 15%;
+  width: 60px;
 }
 
 .paper-images{
   width: 100%;
+  margin: auto;
+  display: block;
 }
 
+@media screen and (max-width: 576px) {
+  .personal-photo{
+    width: 80%;
+    max-width: 200px;
+    margin: auto;
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .paper-images{
+    width: 100%;
+    max-width: 200px;
+    margin: auto;
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+
 .left-column{
-  /* vertical-align: middle; */
   margin-top: auto;
   margin-bottom: auto;
 }
 
 .right-column{
-  /* vertical-align: middle; */
   margin-top: auto;
   margin-bottom: auto;
+}
+
+.personal-column{
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.name-column{
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .common-rows {
