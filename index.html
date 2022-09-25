@@ -83,11 +83,11 @@
     <div class="row">
       <p>
         <ul>
-          <li>3 August 2022. I'm giving a talk on Scalable Trustworthy AI @ SNU Summer School. <a href="https://docs.google.com/presentation/d/1BVyjRE-jq3cuVl9NM29WeFi6eUBTtPi6KzKRQufJr4g/edit?usp=sharing">Slides</a> available.
+          <li>15 September 2022. 1 paper accepted @ NeurIPS'22: <a href="#hwang2022neurips">SelecMix</a>.</li>
+          <li>3 August 2022. I'm giving a talk on Scalable Trustworthy AI @ SNU Summer School. <a href="https://docs.google.com/presentation/d/1BVyjRE-jq3cuVl9NM29WeFi6eUBTtPi6KzKRQufJr4g/edit?usp=sharing">Slides</a> and <a href="https://www.youtube.com/watch?v=oiFS2N1ocTA">video</a> are available.
           <li>7 July 2022. Our group web page is available: <a href="https://scalabletrustworthyai.github.io/">Scalable Trustworthy AI (STAI)</a>. We're hiring PhD students.
           <li>3 July 2022. 1 paper accepted @ ECCV'22: <a href="#chun2022eccv">ECCV Captions</a>.</li>
           <li>1 April 2022. I joined the <a href="https://tuebingen.ai/">University of Tübingen</a> as an independent group leader.</li>
-          <li>24 March 2022. Recordings for the NeurIPS workshop on ImageNet: Past, Present, and Future are available <a href="https://sites.google.com/view/imagenet-workshop/#h.nz6qoftuckhz">here</a>.</li>
         </ul>
       </p>
     </div>
@@ -158,6 +158,40 @@
         We present counterexamples where one does observe a trade-off between ID and OOD generalisation.
         We point to the selection method for networks as the key reason for the contradicting observations.
         We alter the recommendation to the field in a more nuanced manner.
+        </p>
+      </div>
+    </div>
+
+    <div class="row common-rows">
+      <div class="col-xs-12 col-sm-3 left-column">
+          <img src="pictures/hwang2022neurips.png" alt="hwang2022neurips" class="paper-images">
+      </div>
+      <div class="col-xs-12 col-sm-9 right-column">
+        <span style="background-color:#ff9aa2">Robustness</span>
+        <br>
+        <a href="data/hwang2022neurips.pdf" id="hwang2022neurips">
+          <papertitle>SelecMix: Debiased Learning by Contradicting-pair Sampling (working on camera ready)
+          </papertitle>
+        </a>
+        <br>
+        <a href="https://bluemoon010.github.io/">Inwoo Hwang</a>,
+        <a href="https://bi.snu.ac.kr/People/index.html">Sangjun Lee</a>,
+        <a href="https://bi.snu.ac.kr/People/index.html">Yunhyeok Kwak</a>,
+        <strong>Seong Joon Oh</strong>,
+        <a href="https://www.damienteney.info/">Damien Teney</a>,
+        <a href="http://wityworks.com/">Jin-Hwa Kim</a>,
+        <a href="https://bi.snu.ac.kr/~btzhang/">Byoung-Tak Zhang</a>.
+        <br>
+        <em>NeurIPS</em>, 2022
+        <br>
+        <a href="data/hwang2022neurips.txt">Bibtex</a> /
+        <a href="data/hwang2022neurips_workshop.pdf">Workshop paper</a>
+        <p>A classifier gets biased when its decision boundary separates the bias attribute (<em>e.g.</em> gender attribute for profession prediction).
+          Some prior de-biasing methods correct the decision boundary by identifying the <em>bias-conflicting</em> samples in the training data (<em>e.g.</em> female mechanical engineers) and giving more weight on them.
+          We go one step further.
+          We argue that it's more effective to augment the whole convex hull between usual data points (<em>e.g.</em> male mechanical engineers) and <em>bias-conflicting</em> samples (<em>e.g.</em> female mechanical engineers).
+          We do this through simple Mixup.
+          It effectively de-biases a model, even in the presence of strong label noise, arguably the greatest arch-enemy for a de-biasing method.
         </p>
       </div>
     </div>
