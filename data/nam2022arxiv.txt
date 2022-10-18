@@ -1,0 +1,6 @@
+@article{nam2022arxiv,
+title = {Scratching Visual Transformer's Back with Uniform Attention},
+author = {Nam, Hyeon-Woo and Kim, Yu-Ji and Heo, Byeongho and Han, Doonyoon and Oh, Seong Joon and Oh, Tae-Hyun},
+journal={arXiv preprint arXiv:2210.08457},
+year = {2022}
+}
