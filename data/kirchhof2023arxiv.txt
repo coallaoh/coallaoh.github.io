@@ -1,0 +1,6 @@
+@article{kirchhof2023arxiv,
+title = {Probabilistic Contrastive Learning Recovers the Correct Aleatoric Uncertainty of Ambiguous Inputs},
+author = {Kirchhof, Michael and Kasneci, Enkelejda and Oh, Seong Joon},
+journal={arXiv preprint arXiv:2302.02865},
+year = {2023}
+}
