@@ -1,0 +1,6 @@
+@article{elif2023arxiv,
+title = {Playing repeated games with Large Language Models},
+author = {Akata, Elif and Schulz, Lion and Coda-Forno, Julian and Oh, Seong Joon and Bethge, Matthias and Schulz, Eric},
+journal={arXiv preprint arXiv:2305.16867},
+year = {2023}
+}
