@@ -1,6 +1,6 @@
-@article{nam2022arxiv,
+@inproceedings{nam2023iccv,
 title = {Scratching Visual Transformer's Back with Uniform Attention},
 author = {Nam, Hyeon-Woo and Kim, Yu-Ji and Heo, Byeongho and Han, Doonyoon and Oh, Seong Joon and Oh, Tae-Hyun},
-journal={arXiv preprint arXiv:2210.08457},
+booktitle = {International Conference on Computer Vision (ICCV)},
 year = {2022}
 }

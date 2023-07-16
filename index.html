@@ -83,11 +83,11 @@
     <div class="row">
       <p>
         <ul>
+          <li>14 July 2023. 2 papers accepted @ ICCV'23: <a href="#han2023iccv">Neglected Free Lunch</a> and <a href="#nam2023iccv">Scratching the Back</a>.
           <li>8 June 2023. Posted <a href="https://github.com/coallaoh/Principles/tree/main/principles/phd">Principles for a PhD Program</a> for current & future students in my group.</li>
           <li>25 April 2023. 1 paper accepted @ ICML'23 with Michael Kirchhof: <a href="#kirchhof2023icml">A theoretical guarantee for probabilistic embeddings</a>.</li>
           <li>3 April 2023. We have an opening for a postdoc at STAI. See <a href="https://scalabletrustworthyai.github.io/#openings">job posting</a>.</li>
-          <li>29 March 2023. Here are the <a href="https://docs.google.com/presentation/d/19VLAJRzy13Zt2gvWpmO0Vqm5LQgvH8wbgB0-yCDwA_8/edit?usp=sharing">slides</a> for the talk at the EML Workshop. The annotation byproducts paper is available <a href="#han2023arxiv">below</a>.</li>
-          <li>21 October 2022. Lecture on <a href="https://scalabletrustworthyai.github.io/courses/tml_winter_2223/">Trustworthy ML</a> at the University of Tübingen starts (Winter 22/23).</li>
+          <li>29 March 2023. Here are the <a href="https://docs.google.com/presentation/d/19VLAJRzy13Zt2gvWpmO0Vqm5LQgvH8wbgB0-yCDwA_8/edit?usp=sharing">slides</a> for the talk at the EML Workshop. The annotation byproducts paper is available <a href="#han2023iccv">below</a>.</li>
         </ul>
       </p>
     </div>
@@ -222,7 +222,7 @@
 
     <div class="row common-rows">
       <div class="col-xs-12 col-sm-3 left-column">
-          <img src="pictures/han2023arxiv.png" alt="han2023arxiv" class="paper-images">
+          <img src="pictures/han2023iccv.png" alt="han2023iccv" class="paper-images">
       </div>
       <div class="col-xs-12 col-sm-9 right-column">
         <span style="background-color:#ff9aa2">Robustness</span>
@@ -231,7 +231,7 @@
         <span style="background-color:#c7ceea">Explainability</span>
         <span style="background-color:#C9D3D8">Large-Scale ML</span>
         <br>
-        <a href="data/han2023arxiv.pdf" id="han2023arxiv">
+        <a href="data/han2023iccv.pdf" id="han2023iccv">
           <papertitle>Neglected Free Lunch -- Learning Image Classifiers Using Annotation Byproducts
           </papertitle>
         </a>
@@ -247,9 +247,9 @@
         <br>
         <em>*Equal contribution</em>
         <br>
-        <em>arXiv</em>, 2023
+        <em>ICCV</em>, 2023
         <br>
-        <a href="data/han2023arxiv.txt">Bibtex</a> /
+        <a href="data/han2023iccv.txt">Bibtex</a> /
         <a href="https://github.com/naver-ai/NeglectedFreeLunch">Code</a>
         <p>Supervised learning trains models with (X,Y) data.
         The (X,Y) data comes from the annotation procedure where annotators provide the correct Y for each X. 
@@ -257,6 +257,37 @@
         We call them <em>annotation byproducts (AB)</em> Z.
         We propose the new paradigm of <em>learning using annotation byproducts (LUAB)</em>, where models are trained with the triplets (X,Y,Z) involving the ABs.
         We reproduce the original annotation procedures for ImageNet and COCO to generate AB-enriched datasets: ImageNet-AB and COCO-AB. we show that the auxiliary Z may help models be better aligned with human recognition mechanisms, leading to improved model robustness.
+        </p>
+      </div>
+    </div>
+
+    <div class="row common-rows">
+      <div class="col-xs-12 col-sm-3 left-column">
+          <img src="pictures/nam2023iccv.png" alt="nam2023iccv" class="paper-images">
+      </div>
+      <div class="col-xs-12 col-sm-9 right-column">
+      <span style="background-color:#C9D3D8">Large-Scale ML</span>
+        <br>
+        <a href="data/nam2023iccv.pdf" id="nam2023iccv">
+          <papertitle>Scratching Visual Transformer's Back with Uniform Attention
+          </papertitle>
+        </a>
+        <br>
+        <a href="https://ami.postech.ac.kr/members/nam-hyeon-woo">Hyeon-Woo Nam</a>,
+        <a href="https://ug-kim.notion.site/">Yu-Ji Kim</a>,
+        <a href="https://sites.google.com/view/byeongho-heo/home">Byeongho Heo</a>,
+        <a href="https://sites.google.com/site/dyhan0920/">Dongyoon Han</a>,
+        <strong>Seong Joon Oh</strong>,
+        <a href="https://ami.postech.ac.kr/members/tae-hyun-oh">Tae-Hyun Oh</a>.
+        <br>
+        <em>arXiv</em>, 2022
+        <br>
+        <a href="data/nam2023iccv.txt">Bibtex</a>
+        <p>ViT’s itchy point seems to be the uniform attention.
+          ViTs are hungry for denser connections, yet dense connections are hard to achieve because of softmax's steep gradient around the uniform attention.
+          We manually insert additional uniform attention layers in ViT models.
+          This is very cheap!
+          It turns out to be an effective trick for increasing the capacity and generalisation for ViT models, especially for the smaller versions.
         </p>
       </div>
     </div>
@@ -284,37 +315,6 @@
         <p>We finally came up with some theoretical guarantees for <a href="#joon2019iclr">probabilistic embeddings</a>! 
           Given a spherical embedding space with a von-Mises-Fisher (vMF) family of true latent embedding distribution, one may identify the true latent vMF for every data point up to rotations with a Monte-Carlo version of InfoNCE (called <em>MCInfoNCE</em>).
           This result is a probabilistic extension of the work by <a href="https://brendel-group.github.io/cl-ica/">Zimmerman <em>et al.</em></a>
-        </p>
-      </div>
-    </div>
-
-    <div class="row common-rows">
-      <div class="col-xs-12 col-sm-3 left-column">
-          <img src="pictures/nam2022arxiv.png" alt="nam2022arxiv" class="paper-images">
-      </div>
-      <div class="col-xs-12 col-sm-9 right-column">
-      <span style="background-color:#C9D3D8">Large-Scale ML</span>
-        <br>
-        <a href="data/nam2022arxiv.pdf" id="nam2022arxiv">
-          <papertitle>Scratching Visual Transformer's Back with Uniform Attention
-          </papertitle>
-        </a>
-        <br>
-        <a href="https://ami.postech.ac.kr/members/nam-hyeon-woo">Hyeon-Woo Nam</a>,
-        <a href="https://ug-kim.notion.site/">Yu-Ji Kim</a>,
-        <a href="https://sites.google.com/view/byeongho-heo/home">Byeongho Heo</a>,
-        <a href="https://sites.google.com/site/dyhan0920/">Dongyoon Han</a>,
-        <strong>Seong Joon Oh</strong>,
-        <a href="https://ami.postech.ac.kr/members/tae-hyun-oh">Tae-Hyun Oh</a>.
-        <br>
-        <em>arXiv</em>, 2022
-        <br>
-        <a href="data/nam2022arxiv.txt">Bibtex</a>
-        <p>ViT’s itchy point seems to be the uniform attention.
-          ViTs are hungry for denser connections, yet dense connections are hard to achieve because of softmax's steep gradient around the uniform attention.
-          We manually insert additional uniform attention layers in ViT models.
-          This is very cheap!
-          It turns out to be an effective trick for increasing the capacity and generalisation for ViT models, especially for the smaller versions.
         </p>
       </div>
     </div>
