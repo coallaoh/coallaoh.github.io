@@ -1,0 +1,6 @@
+@inproceedings{kirchhof2023uaieai,
+title = {URL: A Representation Learning Benchmark for Transferable Uncertainty Estimates},
+author = {Kirchhof, Michael and Mucsányi, Bálint and Oh, Seong Joon and Kasneci, Enkelejda},
+booktitle = {Conference on Uncertainty in Artificial Intelligence Workshop on Epistemic Uncertainty in Artificial Intelligence},
+year = {2023}
+}
