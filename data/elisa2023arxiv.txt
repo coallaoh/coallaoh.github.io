@@ -1,6 +1,0 @@
-@article{elisa2023arxiv,
-title = {A Bayesian Perspective On Training Data Attribution},
-author = {Nguyen, Elisa and Seo, Minjoon and Oh, Seong Joon},
-journal={arXiv preprint arXiv:2305.19765},
-year = {2023}
-}

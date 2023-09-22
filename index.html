@@ -86,11 +86,11 @@
     <div class="row">
       <p>
         <ul>
+          <li>22 September 2023. 3 paper accepted @ NeurIPS 2023. 1 <a href="#elisa2023neurips">poster</a> with Elisa, 1 <a href="#siwon2023neurips">spotlight</a> with Siwon, Parameter Lab, and Naver, and another <a href="#teney2023neurips">spotlight</a> with Damien.</li>
           <li>24 July 2023. The <a href="#kirchhof2023uaieai">URL benchmark</a> has received the Best Student Paper Award at the UAI workshop on Epistemic AI.</li>
           <li>21 July 2023. I have started my affiliation with <a href="https://www.parameterlab.de/">Parameter Lab</a>. Through this construct, I collaborate with <a href="https://navercorp.com/en">Naver</a> on foundational models and bridge industrial and academic research efforts.</li>
           <li>14 July 2023. 2 papers accepted @ ICCV'23: <a href="#han2023iccv">Neglected Free Lunch</a> and <a href="#nam2023iccv">Scratching the Back</a>.
           <li>8 June 2023. Posted <a href="https://github.com/coallaoh/Principles/tree/main/principles/phd">Principles for a PhD Program</a> for current & future students in my group.</li>
-          <li>25 April 2023. 1 paper accepted @ ICML'23 with Michael Kirchhof: <a href="#kirchhof2023icml">A theoretical guarantee for probabilistic embeddings</a>.</li>
         </ul>
       </p>
     </div>
@@ -139,6 +139,96 @@
 
     <div class="row common-rows">
       <div class="col-xs-12 col-sm-3 left-column">
+          <img src="pictures/elisa2023neurips.png" alt="elisa2023neurips" class="paper-images">
+      </div>
+      <div class="col-xs-12 col-sm-9 right-column">
+        <span style="background-color:#ffdac1">Uncertainty</span>
+        <span style="background-color:#c7ceea">Explainability</span>
+        <span style="background-color:#e2c7e5">Evaluation</span>
+        <br>
+        <a href="data/elisa2023neurips.pdf" id="elisa2023neurips">
+          <papertitle>A Bayesian Perspective On Training Data Attribution
+          </papertitle>
+        </a>
+        <br>
+        <a href="https://elisanguyen.github.io/">Elisa Nguyen</a>,
+        <a href="https://seominjoon.github.io/">Minjoon Seo</a>,
+        <strong>Seong Joon Oh</strong>.
+        <br>
+        <em>NeurIPS</em>, 2023
+        <br>
+        <a href="data/elisa2023neurips.txt">Bibtex</a> /
+        <a href="https://github.com/ElisaNguyen/bayesian-tda">Code</a>
+        <p>Consider <em>Training Data Attribution (TDA)</em> as a spotlight, highlighting the role each training sample plays in the predictions a model whips up. It's a tantalizing concept, especially for human-centric XAI, where it can guide users to tweak their training samples for better results. However, it's a bit like trying to hear a whisper in a storm. That's because the impact of removing a single training sample usually pales in comparison to the cacophony of noise stirred up during model training, like the random spark of model initialization or the chaotic dance of SGD batch shuffling. To understand this better, we've adopted a Bayesian deep learning viewpoint, treating our learned model as a Bayesian posterior and TDA estimates as random variables. Our findings? TDA is like trying to tune in to a radio station that's mostly static. It's really only effective in those rare instances when the impact of a single sample isn't lost in the noise. In those cases, TDA can indeed play a sweet tune!
+        </p>
+      </div>
+    </div>
+
+    <div class="row common-rows">
+      <div class="col-xs-12 col-sm-3 left-column">
+          <img src="pictures/siwon2023neurips.png" alt="siwon2023neurips" class="paper-images">
+      </div>
+      <div class="col-xs-12 col-sm-9 right-column">
+        <span style="background-color:#b5ead7">Privacy & Security</span>
+        <span style="background-color:#e2c7e5">Evaluation</span>
+        <span style="background-color:#C9D3D8">Large-Scale ML</span>
+        <br>
+        <a href="data/siwon2023neurips.pdf" id="siwon2023neurips">
+          <papertitle>ProPILE: Probing Privacy Leakage in Large Language Models
+          </papertitle>
+        </a>
+        <br>
+        <a href="https://sites.google.com/view/siwonkim">Siwon Kim</a>,
+        <a href="https://sangdooyun.github.io/">Sangdoo Yun</a>,
+        <a href="https://hwaranlee.github.io/">Hwaran Lee</a>,
+        <a href="https://gubri.eu/">Martin Gubri</a>,
+        <a href="http://data.snu.ac.kr/index.php/people/">Sungroh Yoon*</a>
+        <strong>Seong Joon Oh*</strong>.
+        <br>
+        <em>*Equal contribution</em>
+        <br>
+        <em>NeurIPS Spotlight</em>, 2023
+        <br>
+        <a href="data/siwon2023neurips.txt">Bibtex</a>
+        <p>Large language models (LLMs) are like giant sponges, soaking up vast amounts of data from the web. But amidst all that data, there could be some sensitive stuff, like personally identifiable information (PII). Makes you a bit worried, right? That's where our new tool, <em>ProPILE</em>, comes in. Think of it as a detective, helping people investigate if their personal data might be seeping out from these LLMs. You can create your own prompts based on your personal info to check how much of your PII are likely to be exposed to millions of users. ProPILE is one of our first efforts to empower data subjects to gain awareness and control over their own PII in the era of LLMs.
+        </p>
+      </div>
+    </div>
+
+    <div class="row common-rows">
+      <div class="col-xs-12 col-sm-3 left-column">
+          <img src="pictures/teney2023neurips.png" alt="teney2023neurips" class="paper-images">
+      </div>
+      <div class="col-xs-12 col-sm-9 right-column">
+        <span style="background-color:#ff9aa2">Robustness</span>
+        <span style="background-color:#e2c7e5">Evaluation</span>
+        <br>
+        <a href="data/teney2023neurips.pdf" id="teney2023neurips">
+          <papertitle>ID and OOD Performance Are Sometimes Inversely Correlated on Real-world Datasets
+          </papertitle>
+        </a>
+        <br>
+        <a href="https://www.damienteney.info/">Damien Teney</a>,
+        <a href="https://linyongver.github.io/yonglin.github.io/">Lin Yong</a>,
+        <strong>Seong Joon Oh</strong>,
+        <a href="https://ehsanabb.github.io/">Ehsan Abbasnejad</a>.
+        <br>
+        <em>NeurIPS Spotlight</em>, 2023
+        <br>
+        <a href="data/teney2023neurips.txt">Bibtex</a>
+        <p>Several recent studies have reported positive correlations between in-distribution (ID) and out-of-distribution (OOD) generalisation performances.
+        In particular, <a href="https://arxiv.org/abs/2207.09239">Wenzel et al. (2022)</a> found that <em>none</em> of the 31k networks examined on 172 dataset pairs has shown a trade-off, or a negative correlation, between the ID and OOD performances.
+        They further recommend that, to improve the OOD generalisation, one can instead focus on improving the ID generalisation.
+        <strong>We argue that this may not always be true</strong>.
+        We present counterexamples where one does observe a trade-off between ID and OOD generalisation.
+        We point to the selection method for networks as the key reason for the contradicting observations.
+        We alter the recommendation to the field in a more nuanced manner.
+        </p>
+      </div>
+    </div>
+
+    <div class="row common-rows">
+      <div class="col-xs-12 col-sm-3 left-column">
           <img src="pictures/kirchhof2023uaieai.png" alt="kirchhof2023uaieai" class="paper-images">
       </div>
       <div class="col-xs-12 col-sm-9 right-column">
@@ -160,64 +250,6 @@
         <a href="data/kirchhof2023uaieai.txt">Bibtex</a> /
         <a href="https://github.com/mkirchhof/url">Code</a>
         <p>We developed the Uncertainty-aware Representation Learning (URL) benchmark in our research. This tool evaluates the reliability of uncertainty estimates from pretrained models on unseen datasets. Its implementation is simple, requiring only four lines of code. In our experiment, we applied URL to ten models trained on ImageNet. Then, we tested these models on eight different datasets. The results showed that achieving transferable uncertainty quantification remains a challenge. We invite the community to work on this novel problem!
-        </p>
-      </div>
-    </div>
-
-    <div class="row common-rows">
-      <div class="col-xs-12 col-sm-3 left-column">
-          <img src="pictures/elisa2023arxiv.png" alt="elisa2023arxiv" class="paper-images">
-      </div>
-      <div class="col-xs-12 col-sm-9 right-column">
-        <span style="background-color:#ffdac1">Uncertainty</span>
-        <span style="background-color:#c7ceea">Explainability</span>
-        <span style="background-color:#e2c7e5">Evaluation</span>
-        <br>
-        <a href="data/elisa2023arxiv.pdf" id="elisa2023arxiv">
-          <papertitle>A Bayesian Perspective On Training Data Attribution
-          </papertitle>
-        </a>
-        <br>
-        <a href="https://elisanguyen.github.io/">Elisa Nguyen</a>,
-        <a href="https://seominjoon.github.io/">Minjoon Seo</a>,
-        <strong>Seong Joon Oh</strong>.
-        <br>
-        <em>arXiv</em>, 2023
-        <br>
-        <a href="data/elisa2023arxiv.txt">Bibtex</a> /
-        <a href="https://github.com/ElisaNguyen/bayesian-tda">Code</a>
-        <p>Consider <em>Training Data Attribution (TDA)</em> as a spotlight, highlighting the role each training sample plays in the predictions a model whips up. It's a tantalizing concept, especially for human-centric XAI, where it can guide users to tweak their training samples for better results. However, it's a bit like trying to hear a whisper in a storm. That's because the impact of removing a single training sample usually pales in comparison to the cacophony of noise stirred up during model training, like the random spark of model initialization or the chaotic dance of SGD batch shuffling. To understand this better, we've adopted a Bayesian deep learning viewpoint, treating our learned model as a Bayesian posterior and TDA estimates as random variables. Our findings? TDA is like trying to tune in to a radio station that's mostly static. It's really only effective in those rare instances when the impact of a single sample isn't lost in the noise. In those cases, TDA can indeed play a sweet tune!
-        </p>
-      </div>
-    </div>
-
-    <div class="row common-rows">
-      <div class="col-xs-12 col-sm-3 left-column">
-          <img src="pictures/siwon2023arxiv.png" alt="siwon2023arxiv" class="paper-images">
-      </div>
-      <div class="col-xs-12 col-sm-9 right-column">
-        <span style="background-color:#b5ead7">Privacy & Security</span>
-        <span style="background-color:#e2c7e5">Evaluation</span>
-        <span style="background-color:#C9D3D8">Large-Scale ML</span>
-        <br>
-        <a href="data/siwon2023arxiv.pdf" id="siwon2023arxiv">
-          <papertitle>ProPILE: Probing Privacy Leakage in Large Language Models
-          </papertitle>
-        </a>
-        <br>
-        <a href="https://sites.google.com/view/siwonkim">Siwon Kim</a>,
-        <a href="https://sangdooyun.github.io/">Sangdoo Yun</a>,
-        <a href="https://hwaranlee.github.io/">Hwaran Lee</a>,
-        <a href="https://gubri.eu/">Martin Gubri</a>,
-        <a href="http://data.snu.ac.kr/index.php/people/">Sungroh Yoon*</a>
-        <strong>Seong Joon Oh*</strong>.
-        <br>
-        <em>*Equal contribution</em>
-        <br>
-        <em>arXiv</em>, 2023
-        <br>
-        <a href="data/siwon2023arxiv.txt">Bibtex</a>
-        <p>Large language models (LLMs) are like giant sponges, soaking up vast amounts of data from the web. But amidst all that data, there could be some sensitive stuff, like personally identifiable information (PII). Makes you a bit worried, right? That's where our new tool, <em>ProPILE</em>, comes in. Think of it as a detective, helping people investigate if their personal data might be seeping out from these LLMs. You can create your own prompts based on your personal info to check how much of your PII are likely to be exposed to millions of users. ProPILE is one of our first efforts to empower data subjects to gain awareness and control over their own PII in the era of LLMs.
         </p>
       </div>
     </div>
@@ -316,7 +348,7 @@
         <strong>Seong Joon Oh</strong>,
         <a href="https://ami.postech.ac.kr/members/tae-hyun-oh">Tae-Hyun Oh</a>.
         <br>
-        <em>arXiv</em>, 2022
+        <em>ICCV</em>, 2023
         <br>
         <a href="data/nam2023iccv.txt">Bibtex</a> /
         <a href="https://uniform-attention.github.io/">Code</a>
@@ -352,37 +384,6 @@
         <p>We finally came up with some theoretical guarantees for <a href="#joon2019iclr">probabilistic embeddings</a>! 
           Given a spherical embedding space with a von-Mises-Fisher (vMF) family of true latent embedding distribution, one may identify the true latent vMF for every data point up to rotations with a Monte-Carlo version of InfoNCE (called <em>MCInfoNCE</em>).
           This result is a probabilistic extension of the work by <a href="https://brendel-group.github.io/cl-ica/">Zimmerman <em>et al.</em></a>
-        </p>
-      </div>
-    </div>
-
-    <div class="row common-rows">
-      <div class="col-xs-12 col-sm-3 left-column">
-          <img src="pictures/teney2022arxiv.png" alt="teney2022arxiv" class="paper-images">
-      </div>
-      <div class="col-xs-12 col-sm-9 right-column">
-        <span style="background-color:#ff9aa2">Robustness</span>
-        <span style="background-color:#e2c7e5">Evaluation</span>
-        <br>
-        <a href="data/teney2022arxiv.pdf" id="teney2022arxiv">
-          <papertitle>ID and OOD Performance Are Sometimes Inversely Correlated on Real-world Datasets
-          </papertitle>
-        </a>
-        <br>
-        <a href="https://www.damienteney.info/">Damien Teney</a>,
-        <strong>Seong Joon Oh</strong>,
-        <a href="https://ehsanabb.github.io/">Ehsan Abbasnejad</a>.
-        <br>
-        <em>arXiv</em>, 2022
-        <br>
-        <a href="data/teney2022arxiv.txt">Bibtex</a>
-        <p>Several recent studies have reported positive correlations between in-distribution (ID) and out-of-distribution (OOD) generalisation performances.
-        In particular, <a href="https://arxiv.org/abs/2207.09239">Wenzel et al. (2022)</a> found that <em>none</em> of the 31k networks examined on 172 dataset pairs has shown a trade-off, or a negative correlation, between the ID and OOD performances.
-        They further recommend that, to improve the OOD generalisation, one can instead focus on improving the ID generalisation.
-        <strong>We argue that this may not always be true</strong>.
-        We present counterexamples where one does observe a trade-off between ID and OOD generalisation.
-        We point to the selection method for networks as the key reason for the contradicting observations.
-        We alter the recommendation to the field in a more nuanced manner.
         </p>
       </div>
     </div>
