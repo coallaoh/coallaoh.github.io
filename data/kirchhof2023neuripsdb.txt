@@ -1,0 +1,6 @@
+@inproceedings{kirchhof2023neuripsdb,
+title = {URL: A Representation Learning Benchmark for Transferable Uncertainty Estimates},
+author = {Kirchhof, Michael and Mucsányi, Bálint and Oh, Seong Joon and Kasneci, Enkelejda},
+booktitle = {Conference on Neural Information Processing Systems: Datasets and Benchmarks Track},
+year = {2023}
+}
