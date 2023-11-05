@@ -1,0 +1,6 @@
+@inproceedings{elisa2023neuripsxaiw,
+title = {Exploring Practitioner Perspectives On Training Data Attribution Explanations},
+author = {Nguyen, Elisa and Kortukov, Evgenii and Song, Jean Y. and Oh, Seong Joon},
+booktitle = {Conference on Neural Information Processing Systems Workshop on XAI in Action},
+year = {2023}
+}
