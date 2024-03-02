@@ -1,0 +1,6 @@
+@article{balint2024disentanglement,
+  title={Benchmarking Uncertainty Disentanglement: Specialized Uncertainties for Specialized Tasks},
+  author={Mucsányi, Bálint and Kirchhof, Michael and Oh, Seong Joon},
+  year={2024},
+  journal={arXiv preprint arXiv:2402.19460},
+}

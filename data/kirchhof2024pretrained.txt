@@ -1,0 +1,6 @@
+@article{kirchhof2024pretrained,
+  title={Pretrained Visual Uncertainties},
+  author={Kirchhof, Michael and Collier, Mark and Oh, Seong Joon and Kasneci, Enkelejda},
+  year={2024},
+  journal={arXiv preprint arXiv:2402.16569},
+}
