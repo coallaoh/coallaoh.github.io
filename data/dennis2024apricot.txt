@@ -1,6 +1,6 @@
-@article{dennis2024apricot,
+@inproceedings{dennis2024apricot,
     title = {Calibrating Large Language Models Using Their Generations Only},
     author = {Ulmer, Dennis and Gubri, Martin and Lee, Hwaran and Yun, Sangdoo and Oh, Seong Joon},
     year={2024},
-    journal={arXiv preprint arXiv:2403.05973},
+    booktitle = "Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics",
 }
