@@ -1,6 +1,6 @@
-@article{evgenii2024ralm,
+@inproceedings{evgenii2024ralm,
   title={Studying Large Language Model Behaviors Under Realistic Knowledge Conflicts},
   author={Kortukov, Evgenii and Rubinstein, Alexander and Nguyen, Elisa and Oh, Seong Joon},
   year={2024},
-  journal={arXiv preprint arXiv:2404.16032},
+  booktitle = {Conference on Language Modeling (CoLM)},
 }
