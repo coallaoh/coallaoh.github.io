@@ -1,0 +1,6 @@
+@article{alex2024diversify,
+  title={Scalable Ensemble Diversification for OOD Generalization and Detection},
+  author={Rubinstein, Alexander and Scimeca, Luca and Teney, Damien and Oh, Seong Joon},
+  journal={arXiv preprint arXiv:2409.16797},
+  year={2024}
+}
