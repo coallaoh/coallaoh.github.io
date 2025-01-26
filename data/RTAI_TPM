@@ -75,3 +75,108 @@
 - Tractable control for autoregressive language generation  
 - A unified approach for learning the parameters of sum-product networks  
 - Probabilistic neural circuits
+- A neural network approach for efficiently answering most probable explanation queries in probabilistic models  
+- A confidence machine for sparse high-order interaction model  
+- Conditional Bayesian quadrature  
+- GraphSPNs: Sum-product networks benefit from canonical orderings  
+- Hyperparameter optimisation via interacting with probabilistic circuits  
+- IBIA: An incremental build-infer-approximate framework for approximate inference of partition function  
+- Neural network approximators for marginal MAP in probabilistic circuits  
+- On hardware-efficient inference in probabilistic circuits  
+- On the relationship between monotone and squared probabilistic circuits  
+- Polynomial semantics of tractable probabilistic circuits  
+- Probabilistic circuits for cumulative distribution functions  
+- Probabilistic inference by projected weighted model counting on Horn clauses  
+- Towards reliable outlier detection using invertible one-class networks  
+- χSPN: Characteristic interventional sum-product networks for causal inference in hybrid domains  
+- Training and inference on any-order autoregressive models the right way  
+- Long horizon temperature scaling  
+- On modal clustering with Gaussian sum-product networks  
+- Sum-product-set networks  
+- Probabilistic circuits that know what they don’t know  
+- Characteristic circuit  
+- Probabilistic flow circuits: Towards unified deep models for tractable probabilistic inference  
+- On test-time active feature selection through tractable acquisition functions  
+- Logarithm-approximate floating-point multiplier for hardware-efficient inference in probabilistic circuits  
+- Unifying and understanding overparameterized circuit representations via low-rank tensor decompositions  
+- Encoding negative dependencies in probabilistic circuits  
+- Negative mixture models via squaring  
+- Tractable bounding of counterfactual queries by knowledge compilation  
+- Knowledge-intensive learning of cutset networks  
+- A probabilistic approach to fairness under label bias  
+- Causal normalising flows: From theory to practice  
+- Bayesian learning of probabilistic circuits with domain constraints  
+- LOFT: Stable training of normalising flows for variational inference  
+- Boosting AND/OR-based computational protein design: Dynamic heuristics and generalisable UFO  
+- Analytically tractable inference in deep neural networks  
+- Whittle networks: A deep likelihood model for time series  
+- RECOWNs: Probabilistic circuits for trustworthy time series forecasting  
+- Leveraging probabilistic circuits for nonparametric multi-output regression  
+- Cluster trellis: Data structures and algorithms for exact inference in hierarchical clustering  
+- Easy variational inference for categorical observations via a new view of diagonal orthant probit models  
+- Improving efficiency and accuracy of causal discovery using a hierarchical wrapper  
+- On recovering from modelling errors using testing Bayesian networks  
+- No-regret approximate inference via Bayesian optimisation  
+- HyperSPNs: Compact and expressive probabilistic circuits  
+- Probabilistic circuits for variational inference in discrete graphical models  
+- Probabilistic sufficient explanations  
+- Provable guarantees on the robustness of decision rules to causal interventions  
+- Conditionally tractable density estimation using neural networks  
+- Dynamic cutset networks  
+- CInC flow: Characterisable invertible 3x3 convolution  
+- Tractable regularisation of probabilistic circuits  
+- Interventional sum-product networks: Causal inference with tractable probabilistic models  
+- Random probabilistic circuits  
+- Structural learning of probabilistic sentential decision diagrams under partial closed-world assumption  
+- Negative weights in hinge-loss Markov random fields  
+- Fast and accurate learning of probabilistic circuits by random projections  
+- Probabilistic generating circuits  
+- Automatic variational inference with cascading flows  
+- Trumpets: Injective flows for inference and inverse problems  
+- IL-Strudel: Independence-based learning of structured-decomposable probabilistic circuit ensembles  
+- Composing normalising flows for inverse problems  
+- Is parameter learning via weighted model integration tractable?  
+- Exact and efficient adversarial robustness with decomposable neural networks  
+- A compositional atlas of tractable circuit operations for probabilistic inference  
+- Distributionally robust graphical models  
+- Inference in probabilistic graphical models by graph neural networks  
+- Towards hardware-aware tractable learning of probabilistic models  
+- Efficient search-based weighted model integration  
+- Hierarchical decompositional mixtures of variational autoencoders  
+- A two-phase method for focused learning in sum-product networks  
+- Optimisation of overparameterised sum-product networks  
+- Tractable marginal inference for hinge-loss Markov random fields  
+- Faster attend-infer-repeat with tractable probabilistic models  
+- Discriminative non-parametric learning of arithmetic circuits  
+- Look ma, no latent variables: Accurate cutset networks via compilation  
+- Cutset Bayesian networks: A new representation for learning Rao-Blackwellised graphical models  
+- Smoothing structured decomposable circuits  
+- Learning logistic circuits  
+- What to expect of classifiers? Reasoning about logistic regression with missing features  
+- On constrained open-world probabilistic databases  
+- Tractable probabilistic reasoning through effective grounding  
+- Explainable activity recognition in videos using dynamic cutset networks  
+- Decomposition-based reparametrisation for efficient estimation of sparse Gaussian conditional random fields  
+- Exploring the space of probabilistic sentential decision diagrams  
+- Randomly projected additive Gaussian processes  
+- A unified construction for series representations and finite approximations of completely random measures  
+- Amortised inference of variational bounds for learning noisy-OR  
+- Symbolic exact inference for discrete probabilistic programs  
+- Tractable computation of the moments of predictive models  
+- Conditional sum-product networks: Imposing structure on deep probabilistic architectures  
+- Weighted counting for constraint satisfaction with default values: Algorithms and complexity results  
+- Learning deep mixtures of Gaussian process experts using sum-product networks  
+- Sequential sampling of Gaussian process latent variable models  
+- A semantic loss function for deep learning with symbolic knowledge  
+- On robust trimming of Bayesian network classifiers  
+- Approximate knowledge compilation by online collapsed importance sampling  
+- An SMT approach to fractional hypertree width  
+- Efficient learning for latent Dirichlet allocation from few documents  
+- Hierarchical maps using structured Bayesian networks  
+- Sum-product autoencoding: Encoding and decoding representations using sum-product networks  
+- Automatic Bayesian density analysis  
+- Automatic synthesis of FPGA-based accelerators for the sum-product network inference problem  
+- Tractable inference with Stein density ratio estimation  
+- Learning in integer latent variable models with nested automatic differentiation  
+- Bounding the complexity of structural expectation-maximisation  
+- Efficient symbolic integration for probabilistic inference  
