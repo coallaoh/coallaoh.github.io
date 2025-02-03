@@ -1,0 +1,41 @@
+1. **DeepWalk: Online Learning of Social Representations**
+2. **node2vec: Scalable Feature Learning for Networks**
+3. **Network Embedding as Matrix Factorization**
+4. **Geometric Deep Learning: the Erlangen Programme of ML**
+5. **Semi-Supervised Classification with Graph Convolutional Networks**
+6. **Design Space of Graph Neural Networks**
+7. **Inductive Representation Learning on Large Graphs**
+8. **Graph Attention Networks**
+9. **Hierarchical Graph Representation Learning with Differentiable Pooling**
+10. **How Powerful Are Graph Neural Networks?**
+11. **Identity-aware Graph Neural Networks**
+12. **Graph Neural Networks are More Powerful than We Think**
+13. **Counting Graph Substructures with Graph Neural Networks**
+14. **Position-aware Graph Neural Networks**
+15. **Do Transformers Really Perform Bad for Graph Representation?**
+16. **Sign and Basis Invariant Networks for Spectral Graph Representation Learning**
+17. **Attending to Graph Transformers**
+18. **Modeling Relational Data with Graph Convolutional Networks**
+19. **Heterogeneous Graph Transformer**
+20. **Translating Embeddings for Modeling Multi-relational Data**
+21. **Learning Entity and Relation Embeddings for Knowledge Graph Completion**
+22. **Embedding Entities and Relations for Learning and Inference in Knowledge Bases**
+23. **Complex Embeddings for Simple Link Prediction**
+24. **RotatE: Knowledge Graph Embedding by Relational Rotation in Complex Space**
+25. **Embedding Logical Queries on Knowledge Graphs**
+26. **Query2box: Reasoning over Knowledge Graphs in Vector Space Using Box Embeddings**
+27. **Traversing Knowledge Graphs in Vector Space**
+28. **Neural Graph Collaborative Filtering**
+29. **LightGCN: Simplifying and Powering Graph Convolution Network for Recommendation**
+30. **Graph Convolutional Neural Networks for Web-Scale Recommender Systems**
+31. **Relational Deep Learning - Graph Representation Learning on Relational Databases**
+32. **RelBench: A Benchmark for Deep Learning on Relational Databases**
+33. **PRODIGY: Enabling In-context Learning Over Graphs**
+34. **Uncertainty Quantification over Graph with Conformalized Graph Neural Networks**
+35. **Double Equivariance for Inductive Link Prediction for Both New Nodes and New Relation Types**
+36. **Towards Foundation Models for Knowledge Graph Reasoning**
+37. **InGram: Inductive Knowledge Graph Embedding via Relation Graphs**
+38. **GraphRNN: Generating Realistic Graphs with Deep Auto-regressive Models**
+39. **Graph Convolutional Policy Network for Goal-Directed Molecular Graph Generation**
+40. **Tensor field networks: Rotation- and translation-equivariant neural networks for 3D point clouds**
+41. **GeoDiff: A Geometric Diffusion Model for Molecular Conformation Generation**

@@ -1,0 +1,89 @@
+Uncertainty quantification in skin cancer classification using threeway decision-based Bayesian deep learning
+A review on Bayesian deep learning in healthcare: Applications and challenges
+Wide neural networks with bottlenecks are deep Gaussian processes
+A statistical theory of cold posteriors in deep neural networks
+Deep kernel processes
+Variational prediction
+Structured stochastic gradient MCMC
+Getting a CLUE: A method for explaining uncertainty estimates
+Linearised Laplace inference in networks with normalisation layers and the neural g-prior
+Sampling-based inference for large linear models, with application to linearised Laplace
+A primer on Bayesian neural networks: review and debates
+Benchmarking Bayesian deep learning on diabetic retinopathy detection tasks
+Pyro: Deep universal probabilistic programming
+Weight uncertainty in neural networks
+Laplace-approximated neural additive models: Improving interpretability with Bayesian inference
+Understanding variational inference in function-space
+On diagonal approximations to the extended Kalman filter for online training of Bayesian neural networks
+Stochastic gradient Hamiltonian Monte Carlo
+Conservative uncertainty estimation by fitting prior networks
+A Bayesian neural network predicts the dissolution of compact planetary systems
+Deep Gaussian processes
+Repulsive deep ensembles are Bayesian
+On Stein variational neural network ensembles
+Laplace redux - effortless Bayesian deep learning
+Bayesian deep learning via subnetwork inference
+Gaussian process behaviour in wide deep neural networks
+Fortuna: A library for uncertainty quantification in deep learning
+Shaving weights with Occam’s razor: Bayesian sparsification for neural networks using the marginal likelihood
+Semi-structured subspace inference
+Galaxy merger rates up to z ∼ 3 using a Bayesian deep learning model
+Priors in Bayesian deep learning: a review
+BNNpriors: A library for Bayesian neural network inference with different prior distributions
+Bayesian neural network priors revisited
+Dropout as a Bayesian approximation: Representing model uncertainty in deep learning
+Deep Bayesian active learning with image data
+Exact Langevin dynamics with stochastic gradients
+Structured variational learning of bayesian neural networks with horseshoe priors
+Bayes’ rays: uncertainty quantification in neural radiance fields
+Convolutional conditional neural processes
+Practical variational inference for neural networks
+Evaluating scalable Bayesian deep learning methods for robust computer vision
+Bayesian deep ensembles via the neural tangent kernel
+Uncertainty quantification for plant disease detection using Bayesian deep learning
+Fast predictive uncertainty for classification with Bayesian deep networks
+Combining model and parameter uncertainty in Bayesian neural networks
+Sparse Bayesian neural networks: bridging model and parameter uncertainty through scalable variational inference
+Scalable marginal likelihood estimation for model selection in deep learning
+Improving predictions of Bayesian neural nets via local linearization
+Invariance learning in deep neural networks with differentiable Laplace approximations
+Stochastic marginal likelihood gradients using neural tangent kernels
+Subspace inference for Bayesian deep learning
+What are Bayesian neural network posteriors really like?
+On uncertainty, tempering, and data augmentation in Bayesian classification
+Hierarchical Gaussian process priors for Bayesian neural network weights
+Probabilistic meta-representations of neural networks
+The Bayesian learning rule
+Approximate inference turns deep networks into Gaussian processes
+Drug Discovery under Covariate Shift with Domain-Informed Prior Distributions over Functions
+BayesDiff: estimating pixel-wise uncertainty in diffusion via Bayesian inference
+Being Bayesian, even just a bit, fixes overconfidence in ReLU networks
+An infinite-feature extension for Bayesian ReLU nets that fixes their asymptotic overconfidence
+Learnable uncertainty under Laplace approximations
+Being a bit frequentist improves Bayesian neural networks
+A study of Bayesian neural network surrogates for Bayesian optimization
+Bayesian model selection, the marginal likelihood, and generalization
+Bayesian compression for deep learning
+A Bayesian deep neural network for safe visual servoing in human–robot interaction
+Bayesian hypernetworks
+Bayesian approach for neural networks—review and case studies
+Deep neural networks as Gaussian processes
+Robust recognition and exploratory analysis of crystal structures via Bayesian deep learning
+Training Bayesian neural networks with sparse subspace variational inference
+Bayesian deep learning and a probabilistic perspective of generalization
+Gaussian process regression networks
+Deep kernel learning
+Evaluating approximate inference in Bayesian deep learning
+Pre-train your loss: Easy Bayesian transfer learning with informative priors
+In-context learning as implicit Bayesian inference
+Bayesian reward models for LLM alignment
+Bayesian low-rank adaptation for large language models
+Spherical priors for Bayesian deep learning
+All you need is a good functional prior for Bayesian deep learning
+Bayesian deep net GLM and GLMM
+Quantifying uncertainty in discretecontinuous and skewed data with Bayesian deep learning
+Cyclical stochastic gradient MCMC for Bayesian deep learning
+Low-precision stochastic gradient Langevin dynamics
+Bayesian neural networks and dimensionality reduction
+Incorporating unlabelled data into Bayesian neural networks
+Human activity recognition based on improved Bayesian convolution network
