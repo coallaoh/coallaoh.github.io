@@ -1,6 +1,0 @@
-@article{haritz2024mia,
-  title={Scaling Up Membership Inference: When and How Attacks Succeed on Large Language Models},
-  author={Puerto, Haritz and Gubri, Martin and Yun, Sangdoo and Oh, Seong Joon},
-  year={2024},
-  journal={arXiv preprint arXiv:2411.00154},
-}

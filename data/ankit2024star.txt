@@ -1,6 +1,0 @@
-@article{ankit2024star,
-  title={Do Deep Neural Network Solutions Form a Star Domain?},
-  author={Sonthalia, Ankit and Rubinstein, Alexander and Abbasnejad, Ehsan and Oh, Seong Joon},
-  year={2024},
-  journal={arXiv preprint arXiv:2403.07968},
-}
