@@ -1,0 +1,55 @@
+Git re-basin: Merging models modulo permutation symmetries
+Wasserstein barycenter-based model fusion and linear mode connectivity of neural networks
+Knowledge fusion in feedforward artificial neural networks
+Large scale distributed neural network training through online distillation
+FedBE: Making bayesian model ensemble applicable to federated learning
+FedSoup: Improving generalization and personalization in federated learning via selective model interpolation
+Fusing finetuned models for better pretraining
+AdapterSoup: Weight averaging to improve generalization of pretrained language models
+Seasoning model soups for robustness to adversarial and natural distribution shifts
+Cold fusion: Collaborative descent for distributed multitask finetuning
+Agree to disagree: Adaptive ensemble knowledge distillation in gradient space
+The role of permutation invariance in linear mode connectivity of neural networks
+Loss surfaces, mode connectivity, and fast ensembling of DNNs
+Collective model fusion for multiple black-box experts
+Hierarchical weight averaging for deep neural networks
+Averaging weights leads to wider optima and better generalization
+LLM-Blender: Ensembling large language models with pairwise ranking and generative fusion
+Dataless knowledge fusion by merging weights of language models
+Population parameter averaging (PAPA)
+REPAIR: Renormalizing permuted activations for interpolation repair
+Editing models with task arithmetic
+Patching open-vocabulary models by interpolating weights
+Ensemble distillation for robust model fusion in federated learning
+Deep neural network fusion via graph matching with applications to model ensemble and federated learning
+Knowledge flow: Improve upon your teachers
+Non-iterative knowledge fusion in deep convolutional neural networks
+Trainable weight averaging: Efficient training by optimizing historical solutions
+Trainable weight averaging: A general approach for subspace training
+Parameter-efficient weight ensembling facilitates task-level knowledge transfer
+Merging models with Fisher-weighted averaging
+Mechanistic mode connectivity
+Nonlinear multi-model reuse
+Task arithmetic in the tangent space: Improved editing of pre-trained models
+Re-Basin via implicit Sinkhorn differentiation
+Model ratatouille: Recycling diverse models for out-of-distribution generalization
+Rewarded soups: towards Pareto-optimal alignment by interpolating weights fine-tuned on diverse rewards
+Diverse weight averaging for out-of-distribution generalization
+Towards summary candidates fusion
+Model fusion via optimal transport
+ZipIt! Merging models from different tasks without training
+An empirical study of multimodal model merging
+Geodesic mode connectivity
+Improving heterogeneous model reuse by density estimation
+Mean teachers are better role models: Weight-averaged consistency targets improve semi-supervised deep learning results
+Optimizing mode connectivity via neuron alignment
+Federated learning with matched averaging
+Exploring diversified adversarial robustness in neural networks via robust mode connectivity
+Meta-learning without data via Wasserstein distributionally-robust model fusion
+NTK-approximating MLP fusion for efficient language model fine-tuning
+Model soups: averaging weights of multiple fine-tuned models improves accuracy without increasing inference time
+Heterogeneous model reuse via optimizing multiparty multiclass margin
+Model reuse with reduced kernel mean embedding specification
+Modal consistency based pre-trained multi-model reuse
+Zhijian: A unifying and rapidly deployable toolbox for pre-trained model reuse
+Sparse model soups: A recipe for improved pruning via model averaging
