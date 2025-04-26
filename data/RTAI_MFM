@@ -1,0 +1,147 @@
+Git re-basin: Merging models modulo permutation symmetries
+Wasserstein barycenter-based model fusion and linear mode connectivity of neural networks
+Knowledge fusion in feedforward artificial neural networks
+Large scale distributed neural network training through online distillation
+FedBE: Making bayesian model ensemble applicable to federated learning
+FedSoup: Improving generalization and personalization in federated learning via selective model interpolation
+Fusing finetuned models for better pretraining
+AdapterSoup: Weight averaging to improve generalization of pretrained language models
+Seasoning model soups for robustness to adversarial and natural distribution shifts
+Cold fusion: Collaborative descent for distributed multitask finetuning
+Agree to disagree: Adaptive ensemble knowledge distillation in gradient space
+The role of permutation invariance in linear mode connectivity of neural networks
+Loss surfaces, mode connectivity, and fast ensembling of DNNs
+Collective model fusion for multiple black-box experts
+Hierarchical weight averaging for deep neural networks
+Averaging weights leads to wider optima and better generalization
+LLM-Blender: Ensembling large language models with pairwise ranking and generative fusion
+Dataless knowledge fusion by merging weights of language models
+Population parameter averaging (PAPA)
+REPAIR: Renormalizing permuted activations for interpolation repair
+Editing models with task arithmetic
+Patching open-vocabulary models by interpolating weights
+Ensemble distillation for robust model fusion in federated learning
+Deep neural network fusion via graph matching with applications to model ensemble and federated learning
+Knowledge flow: Improve upon your teachers
+Non-iterative knowledge fusion in deep convolutional neural networks
+Trainable weight averaging: Efficient training by optimizing historical solutions
+Trainable weight averaging: A general approach for subspace training
+Parameter-efficient weight ensembling facilitates task-level knowledge transfer
+Merging models with Fisher-weighted averaging
+Mechanistic mode connectivity
+Nonlinear multi-model reuse
+Task arithmetic in the tangent space: Improved editing of pre-trained models
+Re-Basin via implicit Sinkhorn differentiation
+Model ratatouille: Recycling diverse models for out-of-distribution generalization
+Rewarded soups: towards Pareto-optimal alignment by interpolating weights fine-tuned on diverse rewards
+Diverse weight averaging for out-of-distribution generalization
+Towards summary candidates fusion
+Model fusion via optimal transport
+ZipIt! Merging models from different tasks without training
+An empirical study of multimodal model merging
+Geodesic mode connectivity
+Improving heterogeneous model reuse by density estimation
+Mean teachers are better role models: Weight-averaged consistency targets improve semi-supervised deep learning results
+Optimizing mode connectivity via neuron alignment
+Federated learning with matched averaging
+Exploring diversified adversarial robustness in neural networks via robust mode connectivity
+Meta-learning without data via Wasserstein distributionally-robust model fusion
+NTK-approximating MLP fusion for efficient language model fine-tuning
+Model soups: averaging weights of multiple fine-tuned models improves accuracy without increasing inference time
+Heterogeneous model reuse via optimizing multiparty multiclass margin
+Model reuse with reduced kernel mean embedding specification
+Modal consistency based pre-trained multi-model reuse
+Zhijian: A unifying and rapidly deployable toolbox for pre-trained model reuse
+Sparse model soups: A recipe for improved pruning via model averaging
+Strong copyright protection for language models via adaptive model fusion
+Evolutionary optimization of model merging recipes
+Mitigating catastrophic forgetting in language transfer via model merging
+Gan cocktail: mixing gans without dataset access
+Diffusion soup: Model merging for text-to-image diffusion models
+Robust weight signatures: gaining robustness as easy as patching weights?
+SWAD: Domain generalization by seeking flat minima
+Model composition for multimodal large language models
+Adaptive discovering and merging for incremental novel class discovery
+Dam: Dynamic adapter merging for continual video qa learning
+Task arithmetic with lora for continual learning
+Model merging by uncertainty-based gradient matching
+Model breadcrumbs: Scaling multi-task model merging with sparse masks
+Della-merging: Reducing interference in model merging through magnitude-based sampling
+Controlled text generation via language model arithmetic
+Adaptive stochastic weight averaging
+ForkMerge: Mitigating negative transfer in auxiliary-task learning
+Fine-tuning linear layers only is a simple yet effective way for task arithmetic
+Stop wasting my time! Saving days of ImageNet and BERT training with latest weight averaging
+Personalized soups: Personalized large language model alignment via post-hoc parameter merging
+Exploring the benefits of training expert language models over instruction tuning
+Erasure coded neural network inference via fisher averaging
+FedFisher: Leveraging fisher information for one-shot federated learning
+Learning private neural language modeling with attentive aggregation
+Mixtral of experts
+Knowledge fusion of large language models
+FedAvg: Communication-efficient learning of deep networks from decentralized data
+Towards modular llms by building and reusing a library of loras
+Lottery ticket adaptation: Mitigating destructive interference in llms
+PAFT: A parallel training paradigm for effective llm fine-tuning
+A second-order perspective on compositionality and incremental learning
+DynaMmo: Dynamic model merging for efficient class incremental learning for medical images
+No train but gain: Language arithmetic for training-free language adapters enhancement
+Activated parameter locating via causal intervention for model merging
+Conditioned language policy: A general framework for steerable multi-objective finetuning
+Localizing task information for improved model merging and compression
+It's morphing time: Unleashing the potential of multiple llms via multi-objective optimization
+Selma: Learning and merging skill-specific text-to-image experts with auto-generated data
+Map: Low-compute model merging with amortized pareto fronts via quadratic approximation
+Branch-train-merge: Embarrassingly parallel training of expert language models
+Merge, then compress: Demystify efficient smoe with hints from its routing policy
+Scalable learned model soup on a single gpu: An efficient subspace training strategy
+Deep model fusion: A survey
+Training-free model merging for multi-target domain adaptation
+DoGerm: Equipping reward models with domain knowledge through model merging
+Checkpoint merging via bayesian optimization in llm pretraining
+Linear combination of saved checkpoints makes consistency and diffusion models better
+Lora-as-an-attack! piercing llm safety under the share-and-play scenario
+Tangent model composition for ensembling and continual fine-tuning
+Tangent transformers for composition, privacy and removal
+Online merging optimizers for boosting rewards and mitigating tax in alignment
+Twin-merging: Dynamic integration of modular expertise in model merging
+LM-Cocktail: Resilient tuning of language models via model merging
+Training-free pretrained model merging
+Resolving interference when merging models
+Representation surgery for multi-task model merging
+AdaMerging: Adaptive model merging for multi-task learning
+DARE: Language models are super Mario: Absorbing abilities from homologous models as a free lunch
+Extend model merging from fine-tuned to pre-trained large language models via weight disentanglement
+Have you merged my model? On the robustness of large language model IP protection methods against model merging
+C2m3: Cycle-consistent multi-model merging
+MaxFusion: Plug&play multi-modal generation in text-to-image diffusion models
+Equivariant deep weight space alignment
+On cross-layer alignment for model fusion of heterogeneous neural networks
+Forgetting before learning: Utilizing parametric arithmetic for knowledge updating in large language models
+FuseChat: Knowledge fusion of chat models
+LoRA-Flow: Dynamic lora fusion for large language models in generative tasks
+DEM: Distribution edited model for training with mixed data distributions
+Warp: On the benefits of weight averaged rewarded policies
+Warm: On the benefits of weight averaged reward models
+Branch-train-mix: Mixing expert llms into a mixture-of-experts llm
+Merging by matching models in task subspaces
+Concrete subspace learning based interference elimination for multi-task model fusion
+FusionBench: A comprehensive benchmark of deep model fusion
+Towards efficient pareto set approximation via mixture of experts based model fusion
+Merging multi-task models via weight-ensembling mixture of experts
+Parameter efficient multi-task model fusion with partial linearization
+Unlocking the potential of model merging for low-resource languages
+Fisher mask nodes for language model merging
+Merging vision transformers from different tasks and domains
+A safety realignment framework via subspace-oriented model fusion for large language models
+Metagpt: Merging large language models using model exclusive task arithmetic
+Going beyond linear mode connectivity: The layerwise linear feature connectivity
+Cross-task linearity emerges in the pretraining-finetuning paradigm
+Model tailor: Mitigating catastrophic forgetting in multi-modal large language models
+Merging loras
+ZipLoRA: Any subject in any style by effectively merging LoRAs
+Multimodal attention merging for improved speech recognition and audio event classification
+AdaMergEx: Cross-lingual transfer with large language models via adaptive adapter merging
+LoRARetriever: Input-aware lora retrieval and composition for mixed tasks in the wild
+Badmerging: Backdoor attacks against model merging
+Layerwise linear mode connectivity

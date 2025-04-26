@@ -1,0 +1,59 @@
+AI for Computational Engineering: Key Papers
+Machine Learning for Simulation & PDEs
+
+Learning mesh-based simulation with graph networks
+Multiscale meshgraphnets (Fortunato et al., 2022)
+Transolver: A fast transformer solver for PDEs on general geometries (Wu et al., 2024)
+PIGNN-CFD: A physics-informed graph neural network for rapid predicting urban wind field defined on unstructured mesh (Shao et al., 2023)
+Hood: Hierarchical graphs for generalized modelling of clothing dynamics (Grigorev et al., 2023)
+Geometry-informed neural operator for large-scale 3D PDEs (Li et al., 2023)
+PhyCRNet: Physics-informed convolutional-recurrent network for solving spatiotemporal PDEs (Ren et al., 2022)
+Physics-informed graph neural Galerkin networks: A unified framework for solving PDE-governed forward and inverse problems (Gao et al., 2022)
+
+Physics-Informed AI
+
+Physics-informed machine learning: A survey on problems, methods and applications (Hao et al., 2022)
+When physics meets machine learning: A survey of physics-informed machine learning (Meng et al., 2022)
+A physics-informed diffusion model for high-fidelity flow field reconstruction (Shu et al., 2023)
+Clifford neural layers for PDE modeling (Brandstetter et al., 2022)
+Physics-informed PointNet: A deep learning solver for steady-state incompressible flows and thermal fields on multiple sets of irregular geometries (Kashefi & Mukerji, 2022)
+Super-resolution and denoising of fluid flow using physics-informed convolutional neural networks without high-resolution labels (Gao et al., 2021)
+
+Deep Learning in Materials & Design
+
+Artificial intelligence for science in quantum, atomistic, and continuum systems (Zhang et al., 2023)
+Accelerating the design of compositionally complex materials via physics-informed artificial intelligence (Raabe et al., 2023)
+Deep generative models in engineering design: A review (Regenwetter et al., 2022)
+Pre-training via denoising for molecular property prediction (Zaidi et al., 2022)
+Predicting stress, strain and deformation fields in materials and structures with graph neural networks (Maurizi et al., 2022)
+A state-of-the-art review on machine learning-based multiscale modeling, simulation, homogenization and design of materials (Bishara et al., 2023)
+
+Graph Neural Networks for Engineering
+
+Towards high-accuracy axial springback: Mesh-based simulation of metal tube bending via geometry/process-integrated graph neural networks (Wang et al., 2024)
+Graph neural networks for temporal graphs: State of the art, open challenges, and opportunities (Longa et al., 2023)
+Towards understanding generalization of graph neural networks (Tang & Liu, 2023)
+Towards multi-spatiotemporal-scale generalized PDE modeling (Gupta & Brandstetter, 2022)
+DyGFormer: A new Transformer-based architecture for dynamic graph learning (Yu et al., 2023)
+Combinatorial optimization and reasoning with graph neural networks (Cappart et al., 2023)
+
+Advanced ML for Engineering Applications
+
+Learning dynamical systems from data: An introduction to physics-guided deep learning (Yu & Wang, 2024)
+Multiple physics pretraining for physical surrogate models (McCabe et al., 2023)
+Deep learning in computational mechanics: A review (Herrmann & Kollmannsberger, 2024)
+Machine learning with data assimilation and uncertainty quantification for dynamical systems: A review (Cheng et al., 2023)
+Learning multi-object dynamics with compositional neural radiance fields (Driess et al., 2023)
+Current and emerging deep-learning methods for the simulation of fluid dynamics (Lino et al., 2023)
+Deep learning methods for flood mapping: A review of existing applications and future research directions (Bentivoglio et al., 2022)
+Continuous PDE dynamics forecasting with implicit neural representations (Yin et al., 2022)
+
+Energy Management & Data Centers
+
+Deep learning GAN-based data generation and fault diagnosis in the data center HVAC system (Du et al., 2023)
+Evaporative cooling method to improve energy management of overhead downward flow-type data center (Lee et al., 2023)
+DRL-S: Toward safe real-world learning of dynamic thermal management in data center (Zhang et al., 2023)
+Optimization air-conditioning system and thermal management of data center via fan-wall free cooling technology (Zhang et al., 2023)
+
+https://arxiv.org/abs/2010.03409
+https://arxiv.org/abs/2305.12871
