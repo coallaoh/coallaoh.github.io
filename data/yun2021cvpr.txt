@@ -1,6 +1,0 @@
-@inproceedings{yun2021cvpr,
-  title={Re-labeling ImageNet: from Single to Multi-Labels, from Global to Localized Labels},
-  author={Yun, Sangdoo and Oh, Seong Joon and Heo, Byeongho and Han, Dongyoon and Choe, Junsuk and Chun, Sanghyuk},
-  year={2021},
-  booktitle = {Conference on Computer Vision and Pattern Recognition (CVPR)},
-}

@@ -1,6 +1,0 @@
-@inproceedings{elisa2023neurips,
-    title = {A Bayesian Perspective On Training Data Attribution},
-    author = {Nguyen, Elisa and Seo, Minjoon and Oh, Seong Joon},
-    year = {2023},
-    booktitle = {Conference on Neural Information Processing Systems},
-}

@@ -1,6 +1,0 @@
-@inproceedings{joon2019iclr,
-title = {Modeling Uncertainty with Hedged Instance Embedding},
-author = {Oh, Seong Joon and Murphy, Kevin and Pan, Jiyan and Roth, Joseph and Schroff, Florian and Gallagher, Andrew},
-year = {2019},
-booktitle = {International Conference on Learning Representations (ICLR)},
-}

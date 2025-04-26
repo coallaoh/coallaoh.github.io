@@ -1,6 +1,0 @@
-@inproceedings{siwon2023neurips,
-    title = {ProPILE: Probing Privacy Leakage in Large Language Models},
-    author = {Kim, Siwon and Yun, Sangdoo and Lee, Hwaran and Gubri, Martin and Yoon, Sungroh and Oh, Seong Joon},
-    year = {2023},
-    booktitle = {Conference on Neural Information Processing Systems},
-}

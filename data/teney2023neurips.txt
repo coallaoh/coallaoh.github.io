@@ -1,6 +1,0 @@
-@inproceedings{teney2023neurips,
-    title = {ID and OOD Performance Are Sometimes Inversely Correlated on Real-world Datasets},
-    author = {Teney, Damien and Oh, Seong Joon and Abbasnejad, Ehsan},
-    year = {2023},
-    booktitle = {Conference on Neural Information Processing Systems},
-}

@@ -207,3 +207,48 @@ span.highlight {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+/* BibTeX styling */
+.bibtex-content {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 6px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  font-size: 11px;
+  line-height: 1.2;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 100%;
+  font-family: monospace;
+  display: block;
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.2s;
+}
+
+.bibtex-content:hover {
+  background-color: #eaeaea;
+}
+
+.bibtex-content:hover::after {
+  content: "Click to copy";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #333;
+  color: white;
+  padding: 2px 5px;
+  font-size: 10px;
+  border-radius: 0 4px 0 4px;
+  opacity: 0.8;
+}
+
+.bibtex-content pre {
+  margin: 0;
+  padding: 0;
+  white-space: pre-wrap;
+  font-family: monospace;
+}

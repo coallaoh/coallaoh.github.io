@@ -1,6 +1,0 @@
-@inproceedings{kirchhof2023icml,
-title = {Probabilistic Contrastive Learning Recovers the Correct Aleatoric Uncertainty of Ambiguous Inputs},
-author = {Kirchhof, Michael and Kasneci, Enkelejda and Oh, Seong Joon},
-booktitle = {International Conference on Machine Learning},
-year = {2023}
-}

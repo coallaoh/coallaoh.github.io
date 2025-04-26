@@ -1,6 +1,0 @@
-@inproceedings{haritz2025mia,
-  title={Scaling Up Membership Inference: When and How Attacks Succeed on Large Language Models},
-  author={Puerto, Haritz and Gubri, Martin and Yun, Sangdoo and Oh, Seong Joon},
-  year={2024},
-  booktitle = "Annual Conference of the North American Chapter of the Association for Computational Linguistics: NAACL 2025",
-}

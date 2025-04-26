@@ -1,8 +1,0 @@
-@misc{mucsányi2023trustworthy,
-  title={Trustworthy Machine Learning},
-  author={Bálint Mucsányi and Michael Kirchhof and Elisa Nguyen and Alexander Rubinstein and Seong Joon Oh},
-  year={2023},
-  eprint={2310.08215},
-  archivePrefix={arXiv},
-  primaryClass={cs.LG}
-}

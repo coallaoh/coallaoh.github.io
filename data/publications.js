@@ -1,0 +1,1601 @@
+// Publications data in JSON format
+const publicationsData = [
+    {
+      "id": "haritz2025mia",
+      "title": "Scaling Up Membership Inference: When and How Attacks Succeed on Large Language Models",
+      "authors": [
+        {"name": "Haritz Puerto", "url": "https://haritzpuerto.github.io/"},
+        {"name": "Martin Gubri", "url": "https://gubri.eu/"},
+        {"name": "Sangdoo Yun", "url": "https://sangdooyun.github.io/"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true}
+      ],
+      "venue": "NAACL Findings",
+      "year": "2025",
+      "url": "https://arxiv.org/abs/2411.00154",
+      "bibtex": `@inproceedings{haritz2025mia,
+  title={Scaling Up Membership Inference: When and How Attacks Succeed on Large Language Models},
+  author={Puerto, Haritz and Gubri, Martin and Yun, Sangdoo and Oh, Seong Joon},
+  year={2024},
+  booktitle = "Annual Conference of the North American Chapter of the Association for Computational Linguistics: NAACL 2025",
+}`,
+      "image": "pictures/haritz2025mia.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2411.00154"}
+      ],
+      "abstract": "People have tried to check if certain copyrighted material is used by LLMs by analysing their characteristic reactions to it, a task known as Membership Inference Attack (MIA). Research so far has mostly reported negative results, finding barely any statistically significant signals. In our paper, we show that meaningful signals only appear at scale: not in sentences or paragraphs, but at the level of documents and more.",
+      "tags": ["Privacy & Security", "Evaluation"]
+    },
+    {
+      "id": "arnas2025iclr",
+      "title": "Intermediate Layer Classifiers for OOD Generalization",
+      "authors": [
+        {"name": "Arnas Uselis", "url": "https://www.linkedin.com/in/arnas-uselis-193883144/"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true}
+      ],
+      "venue": "International Conference on Learning Representations, ICLR",
+      "year": "2025",
+      "url": "https://openreview.net/forum?id=ByCV9xWfNK",
+      "bibtex": `@inproceedings{arnas2025iclr,
+title = {Intermediate Layer Classifiers for OOD Generalization},
+author = {Uselis, Arnas and Oh, Seong Joon},
+year = {2025},
+booktitle = {International Conference on Learning Representations (ICLR)},
+}`,
+      "image": "pictures/arnas2025iclr.png",
+      "links": [],
+      "abstract": "Retraining the last layer for target OOD dataset is a common practice for adapting to new distributions. We question the practice and consider using intermediate-layer representations. This turns out to be a good idea in many vision applications. The empirical results are quite surprising.",
+      "tags": ["Robustness", "Evaluation"]
+    },
+    {
+      "id": "ankit2025star",
+      "title": "Do Deep Neural Network Solutions Form a Star Domain?",
+      "authors": [
+        {"name": "Ankit Sonthalia", "url": "https://www.linkedin.com/in/ankit-sonthalia-2a05b4202/"},
+        {"name": "Alexander Rubinstein", "url": "https://scalabletrustworthyai.github.io/member/alex/"},
+        {"name": "Ehsan Abbasnejad", "url": "https://ehsanabb.github.io/"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true}
+      ],
+      "venue": "ICLR",
+      "year": "2025",
+      "url": "https://arxiv.org/abs/2403.07968",
+      "bibtex": `@inproceedings{ankit2025star,
+title = {Do Deep Neural Network Solutions Form a Star Domain?},
+author = {Sonthalia, Ankit and Rubinstein, Alexander and Abbasnejad, Ehsan and Oh, Seong Joon},
+year = {2025},
+booktitle = {International Conference on Learning Representations (ICLR)},
+}`,
+      "image": "pictures/ankit2025star.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2403.07968"}
+      ],
+      "abstract": "For deep neural networks, understanding the solution set, or the set of parameters with low loss values, is crucial. It has been conjectured that the solution set forms a convex set, modulo parameter permutations. The conjecture has met several counterexamples. Instead, we propose that the solution set forms a star domain: there exists a central \"star model\" connected to all other solutions. This is weaker and more relaxed than the convex-set conjecture, but does not contradict empirical findings.",
+      "tags": ["Robustness", "Uncertainty"]
+    },
+    {
+      "id": "jaehyun2025iclr",
+      "title": "Decoupled Finetuning for Domain Generalizable Semantic Segmentation",
+      "authors": [
+        {"name": "Jaehyun Pahk", "url": "https://www.linkedin.com/in/jaehyun-pahk/"},
+        {"name": "Donghyeon Kwon", "url": "https://kinux98.github.io/"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true},
+        {"name": "Suha Kwak", "url": "https://suhakwak.github.io/"}
+      ],
+      "venue": "ICLR",
+      "year": "2025",
+      "url": "https://openreview.net/forum?id=qZEdmyqCHF",
+      "bibtex": `@inproceedings{jaehyun2025iclr,
+title = {Decoupled Finetuning for Domain Generalizable Semantic Segmentation},
+author = {Pahk, Jaehyun and Kwon, Donghyeon and Oh, Seong Joon and Kwak, Suha},
+year = {2025},
+booktitle = {International Conference on Learning Representations (ICLR)},
+}`,
+      "image": "pictures/jaehyun2025iclr.png",
+      "links": [],
+      "abstract": "Joint finetuning of a pretrained encoder and a new decoder is common in semantic segmentation, but it struggles with domain shifts. Our Decoupled FineTuning (DeFT) method tackles this by warming up the decoder first and then finetuning both parts separately. This approach reduces learnable parameters and boosts generalisation.",
+      "tags": ["Robustness", "Evaluation"]
+    },
+    {
+      "id": "elisa2024tda",
+      "title": "Towards User-Focused Research in Training Data Attribution for Human-Centered Explainable AI",
+      "authors": [
+        {"name": "Elisa Nguyen", "url": "https://elisanguyen.github.io/"},
+        {"name": "Johannes Bertram", "url": "https://scalabletrustworthyai.github.io/member/johannes/"},
+        {"name": "Evgenii Kortukov", "url": "https://kortukov.github.io/"},
+        {"name": "Jean Y Song", "url": "https://jyskwon.github.io/"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true}
+      ],
+      "venue": "arXiv",
+      "year": "2024",
+      "url": "https://arxiv.org/abs/2409.16978",
+      "bibtex": `@article{nguyen2024towards,
+  title={Towards User-Focused Research in Training Data Attribution for Human-Centered Explainable AI},
+  author={Nguyen, Elisa and Bertram, Johannes and Kortukov, Evgenii and Song, Jean Y and Oh, Seong Joon},
+  journal={arXiv preprint arXiv:2409.16978},
+  year={2024}
+}`,
+      "image": "pictures/elisa2024tda.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2409.16978"}
+      ],
+      "abstract": "Explainable AI (XAI) has been criticised for relying too much on formalism and solutionism, focusing more on mathematical soundness than user needs. Despite efforts to correct this through user-focused studies from the HCI communities, we observe repeating patterns of formalism solutionism in a relatively young subfield of XAI: Training Data Attribution (TDA). We set out to correct this with a needfinding study with a diverse group of AI practitioners to identify potential user needs related to TDA. Our studies have uncovered new TDA tasks that are currently largely overlooked. We invite the TDA and XAI communities to consider these novel tasks and improve the user relevance of their research outcomes.",
+      "tags": ["Explainability", "Evaluation"]
+    },
+    {
+      "id": "alex2024diversify",
+      "title": "Scalable Ensemble Diversification for OOD Generalization and Detection",
+      "authors": [
+        {"name": "Alexander Rubinstein", "url": "https://scalabletrustworthyai.github.io/member/alex/"},
+        {"name": "Luca Scimeca", "url": "https://www.lucascimeca.com/"},
+        {"name": "Damien Teney", "url": "https://www.damienteney.info/"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true}
+      ],
+      "venue": "arXiv",
+      "year": "2024",
+      "url": "https://arxiv.org/abs/2409.16797",
+      "bibtex": `@article{alex2024diversify,
+  title={Scalable Ensemble Diversification for OOD Generalization and Detection},
+  author={Rubinstein, Alexander and Scimeca, Luca and Teney, Damien and Oh, Seong Joon},
+  journal={arXiv preprint arXiv:2409.16797},
+  year={2024}
+}`,
+      "image": "pictures/alex2024diversify.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2409.16797"}
+      ],
+      "abstract": "Ensemble diversification has traditionally been applied at sub-ImageNet scales (e.g. Waterbirds). We present methods to make them applicable at ImageNet+ scales. (1) Instead of relying on a separate OOD dataset to diversify the ensembles on, we source them from hard samples of the training set. (2) Stochastic pair selection. (3) Diversification of last 2 layers. We show that diversified ensembles are useful at OOD generalisation and (particularly) OOD detection, where we achieve the state-of-the-art performance.",
+      "tags": ["Robustness", "Uncertainty", "Evaluation", "Large-Scale ML"]
+    },
+    {
+      "id": "evgenii2024ralm",
+      "title": "Studying Large Language Model Behaviors Under Realistic Knowledge Conflicts",
+      "authors": [
+        {"name": "Evgenii Kortukov", "url": "https://kortukov.github.io/"},
+        {"name": "Alexander Rubinstein", "url": "https://scalabletrustworthyai.github.io/member/alex/"},
+        {"name": "Elisa Nguyen", "url": "https://elisanguyen.github.io/"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true}
+      ],
+      "venue": "CoLM",
+      "year": "2024",
+      "url": "https://arxiv.org/abs/2404.16032",
+      "bibtex": `@inproceedings{evgenii2024ralm,
+  title={Studying Large Language Model Behaviors Under Realistic Knowledge Conflicts},
+  author={Kortukov, Evgenii and Rubinstein, Alexander and Nguyen, Elisa and Oh, Seong Joon},
+  year={2024},
+  booktitle = {Conference on Language Modeling (CoLM)},
+}`,
+      "image": "pictures/evgenii2024ralm.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2404.16032"}
+      ],
+      "abstract": "Retrieval augmented generation (RAG) promises more trustworthy outputs from large language models (LLMs). RAG first retrieves relevant documents from a DB and includes them in the context for subsequent generation. However, RAG does not come with guarantee. Eventually, LLM decides whether to use the new information in retrieved document or to stick to the original information in the pre-training data. We present a study on this knowledge conflict.",
+      "tags": ["Explainability", "Evaluation", "Large-Scale ML"]
+    },
+    {
+      "id": "balint2024disentanglement",
+      "title": "Benchmarking Uncertainty Disentanglement: Specialized Uncertainties for Specialized Tasks",
+      "authors": [
+        {"name": "Bálint Mucsányi", "url": "https://bmucsanyi.github.io/"},
+        {"name": "Michael Kirchhof", "url": "https://www.hci.uni-tuebingen.de/chair/team/michael-kirchhof"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true}
+      ],
+      "venue": "NeurIPS Datasets and Benchmarks Spotlight",
+      "year": "2024",
+      "url": "https://arxiv.org/abs/2402.19460",
+      "bibtex": `@article{balint2024disentanglement,
+  title={Benchmarking Uncertainty Disentanglement: Specialized Uncertainties for Specialized Tasks},
+  author={Mucsányi, Bálint and Kirchhof, Michael and Oh, Seong Joon},
+  year={2024},
+  journal={arXiv preprint arXiv:2402.19460},
+}`,
+      "image": "pictures/balint2024disentanglement.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2402.19460"}
+      ],
+      "abstract": "After the Trustworthy Machine Learning course, Bálint has investigated the relationships between different types of uncertainty in machine learning models. He found that many methods claiming to measure specific uncertainties had not been thoroughly verified. After the experiments, we concluded that these methods hardly achieved their claimed goals. This revelation is crucial for the uncertainty estimation community, where they try to understand and disentangle different uncertainty types.",
+      "tags": ["Uncertainty", "Evaluation"]
+    },
+    {
+      "id": "kirchhof2024pretrained",
+      "title": "Pretrained Visual Uncertainties",
+      "authors": [
+        {"name": "Michael Kirchhof", "url": "https://www.hci.uni-tuebingen.de/chair/team/michael-kirchhof"},
+        {"name": "Mark Collier", "url": "https://www.linkedin.com/in/mark-collier-aa446032/"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true},
+        {"name": "Enkelejda Kasneci", "url": "https://www.edu.sot.tum.de/hctl/prof-dr-enkelejda-kasneci/"}
+      ],
+      "venue": "arXiv",
+      "year": "2024",
+      "url": "https://arxiv.org/abs/2402.16569",
+      "bibtex": `@article{kirchhof2024pretrained,
+  title={Pretrained Visual Uncertainties},
+  author={Kirchhof, Michael and Collier, Mark and Oh, Seong Joon and Kasneci, Enkelejda},
+  year={2024},
+  journal={arXiv preprint arXiv:2402.16569},
+}`,
+      "image": "pictures/kirchhof2024pretrained.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2402.16569"}
+      ],
+      "abstract": "Uncertainty estimation so far had to be learned from scratch for each new task. We introduce a new approach that allows us to train uncertainty estimation on a large, general dataset and then apply it to new, specific tasks. We focus on practicality and efficiency. Our approach captures inherent uncertainty in the data, separate from uncertainty due to limited knowledge.",
+      "tags": ["Uncertainty", "Evaluation", "Large-Scale ML"]
+    },
+    {
+      "id": "martin2024trap",
+      "title": "TRAP: Targeted Random Adversarial Prompt Honeypot for Black-Box Identification",
+      "authors": [
+        {"name": "Martin Gubri", "url": "https://gubri.eu/"},
+        {"name": "Dennis Ulmer", "url": "https://dennisulmer.eu/"},
+        {"name": "Hwaran Lee", "url": "https://hwaranlee.github.io/"},
+        {"name": "Sangdoo Yun", "url": "https://sangdooyun.github.io/"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true}
+      ],
+      "venue": "ACL Findings",
+      "year": "2024",
+      "url": "https://arxiv.org/abs/2402.12991",
+      "bibtex": `@inproceedings{martin2024trap,
+    title = {TRAP: Targeted Random Adversarial Prompt Honeypot for Black-Box Identification},
+    author = {Gubri, Martin and Ulmer, Dennis and Lee, Hwaran and Yun, Sangdoo and Oh, Seong Joon},
+    year={2024},
+    booktitle = "Findings of the Association for Computational Linguistics: ACL 2024",
+}`,
+      "image": "pictures/martin2024trap.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2402.12991"}
+      ],
+      "abstract": "Large language models (LLM) and surrounding services come with their own rules about who can use them and how they should be used. These rules are important to protect the company's work and to prevent misuse. Now, given a new LLM-based chatbot service, it's important to find out the underlying LLM in order to check the compliance with the rules attached to each LLM. Here's our method for doing this: We ask the chatbot a very specific question that only one company's machine will answer in a certain way. It's like asking a friend a secret question only they would know the answer to. If the machine answers the question the way we expect, we know it's based on a specific LLM.",
+      "tags": ["Privacy & Security", "Evaluation", "Large-Scale ML"]
+    },
+    {
+      "id": "dennis2024apricot",
+      "title": "Calibrating Large Language Models Using Their Generations Only",
+      "authors": [
+        {"name": "Dennis Ulmer", "url": "https://dennisulmer.eu/"},
+        {"name": "Martin Gubri", "url": "https://gubri.eu/"},
+        {"name": "Hwaran Lee", "url": "https://hwaranlee.github.io/"},
+        {"name": "Sangdoo Yun", "url": "https://sangdooyun.github.io/"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true}
+      ],
+      "venue": "ACL",
+      "year": "2024",
+      "url": "https://arxiv.org/abs/2403.05973",
+      "bibtex": `@inproceedings{dennis2024apricot,
+    title = {Calibrating Large Language Models Using Their Generations Only},
+    author = {Ulmer, Dennis and Gubri, Martin and Lee, Hwaran and Yun, Sangdoo and Oh, Seong Joon},
+    year={2024},
+    booktitle = "Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics",
+}`,
+      "image": "pictures/dennis2024apricot.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2403.05973"}
+      ],
+      "abstract": "We can't trust large language model (LLM) outputs. One of the reasons is that it doesn't always generate reliable confidence estimates. One could look into the model likelihoods, but even that is infeasible for many black-box models. We show here that it's possible to train a lightweight external model to infer an LLM's internal confidence based only on the prompt and answers from the LLM (purely black box).",
+      "tags": ["Uncertainty", "Large-Scale ML"]
+    },
+    {
+      "id": "elisa2023neuripsxaiw",
+      "title": "Exploring Practitioner Perspectives On Training Data Attribution Explanations",
+      "authors": [
+        {"name": "Elisa Nguyen", "url": "https://elisanguyen.github.io/"},
+        {"name": "Evgenii Kortukov", "url": "https://scalabletrustworthyai.github.io/member/evgenii/"},
+        {"name": "Jean Y. Song", "url": "https://jyskwon.github.io/"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true}
+      ],
+      "venue": "NeurIPS XAI in Action Workshop",
+      "year": "2023",
+      "url": "https://arxiv.org/abs/2310.20477",
+      "bibtex": `@inproceedings{elisa2023neuripsxaiw,
+title = {Exploring Practitioner Perspectives On Training Data Attribution Explanations},
+author = {Nguyen, Elisa and Kortukov, Evgenii and Song, Jean Y. and Oh, Seong Joon},
+booktitle = {Conference on Neural Information Processing Systems Workshop on XAI in Action},
+year = {2023}
+}`,
+      "image": "pictures/elisa2023neuripsxaiw.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2310.20477"}
+      ],
+      "abstract": "Training data attribution (TDA) provides a non-parametric viewpoint for model explanations - which training data points are blamable for this test error? Apparently useful in practice, we realised that the actual usefulness is not tested in real applications. As a first step, we approach individuals working in a diverse array of sectors, either using or developing ML models, and ask whether they would find TDA useful in practice. The answer is affirmative - read the paper for more details.",
+      "tags": ["Explainability", "Evaluation"]
+    },
+    {
+      "id": "balint2023tml",
+      "title": "Trustworthy Machine Learning",
+      "authors": [
+        {"name": "Bálint Mucsányi", "url": "https://scalabletrustworthyai.github.io/member/balint/"},
+        {"name": "Michael Kirchhof", "url": "https://www.hci.uni-tuebingen.de/chair/team/michael-kirchhof"},
+        {"name": "Elisa Nguyen", "url": "https://elisanguyen.github.io/"},
+        {"name": "Alexander Rubinstein", "url": "https://scalabletrustworthyai.github.io/member/alex/"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true}
+      ],
+      "venue": "",
+      "year": "2023",
+      "url": "https://trustworthyml.io/",
+      "bibtex": `@misc{mucsányi2023trustworthy,
+  title={Trustworthy Machine Learning},
+  author={Bálint Mucsányi and Michael Kirchhof and Elisa Nguyen and Alexander Rubinstein and Seong Joon Oh},
+  year={2023},
+  eprint={2310.08215},
+  archivePrefix={arXiv},
+  primaryClass={cs.LG}
+}`,
+      "image": "pictures/balint2023tml.png",
+      "links": [
+        {"text": "Webpage", "url": "https://trustworthyml.io/"},
+        {"text": "arXiv", "url": "https://arxiv.org/abs/2310.08215"}
+      ],
+      "abstract": "The challenges posed by the trustworthiness of machine learning models are increasingly significant as these models find real-world applications. Our newly-released textbook, \"Trustworthy Machine Learning,\" aims to address these challenges comprehensively. It covers four crucial dimensions: Out-of-Distribution Generalization, Explainability, Uncertainty Quantification, and Evaluation of Trustworthiness. The text offers a thorough analysis of seminal and modern research papers, elucidating the foundational theories and practices. Originating from a course first offered at the University of Tübingen in the Winter Semester of 2022/23, the book serves as a stand-alone resource and includes code snippets and additional references. For further information, please visit our dedicated website.",
+      "tags": ["Robustness", "Uncertainty", "Human Annotation", "Explainability", "Evaluation", "Large-Scale ML"]
+    },
+    {
+      "id": "elisa2023neurips",
+      "title": "A Bayesian Perspective On Training Data Attribution",
+      "authors": [
+        {"name": "Elisa Nguyen", "url": "https://elisanguyen.github.io/"},
+        {"name": "Minjoon Seo", "url": "https://seominjoon.github.io/"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true}
+      ],
+      "venue": "NeurIPS",
+      "year": "2023",
+      "url": "https://arxiv.org/abs/2305.19765",
+      "bibtex": `@inproceedings{elisa2023neurips,
+    title = {A Bayesian Perspective On Training Data Attribution},
+    author = {Nguyen, Elisa and Seo, Minjoon and Oh, Seong Joon},
+    year = {2023},
+    booktitle = {Conference on Neural Information Processing Systems},
+}`,
+      "image": "pictures/elisa2023neurips.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2305.19765"}
+      ],
+      "abstract": "Consider Training Data Attribution (TDA) as a spotlight, highlighting the role each training sample plays in the predictions a model whips up. It's a tantalizing concept, especially for human-centric XAI, where it can guide users to tweak their training samples for better results. However, it's a bit like trying to hear a whisper in a storm. That's because the impact of removing a single training sample usually pales in comparison to the cacophony of noise stirred up during model training, like the random spark of model initialization or the chaotic dance of SGD batch shuffling. To understand this better, we've adopted a Bayesian deep learning viewpoint, treating our learned model as a Bayesian posterior and TDA estimates as random variables. Our findings? TDA is like trying to tune in to a radio station that's mostly static. It's really only effective in those rare instances when the impact of a single sample isn't lost in the noise. In those cases, TDA can indeed play a sweet tune!",
+      "tags": ["Uncertainty", "Explainability", "Evaluation"]
+    },
+    {
+      "id": "siwon2023neurips",
+      "title": "ProPILE: Probing Privacy Leakage in Large Language Models",
+      "authors": [
+        {"name": "Siwon Kim", "url": "https://sites.google.com/view/siwonkim"},
+        {"name": "Sangdoo Yun", "url": "https://sangdooyun.github.io/"},
+        {"name": "Hwaran Lee", "url": "https://hwaranlee.github.io/"},
+        {"name": "Martin Gubri", "url": "https://gubri.eu/"},
+        {"name": "Sungroh Yoon", "url": "http://data.snu.ac.kr/index.php/people/", "isPI": true},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true}
+      ],
+      "venue": "NeurIPS Spotlight",
+      "year": "2023",
+      "url": "https://arxiv.org/abs/2307.01881",
+      "bibtex": `@inproceedings{siwon2023neurips,
+    title = {ProPILE: Probing Privacy Leakage in Large Language Models},
+    author = {Kim, Siwon and Yun, Sangdoo and Lee, Hwaran and Gubri, Martin and Yoon, Sungroh and Oh, Seong Joon},
+    year = {2023},
+    booktitle = {Conference on Neural Information Processing Systems},
+}`,
+      "image": "pictures/siwon2023neurips.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2307.01881"}
+      ],
+      "abstract": "Large language models (LLMs) are like giant sponges, soaking up vast amounts of data from the web. But amidst all that data, there could be some sensitive stuff, like personally identifiable information (PII). Makes you a bit worried, right? That's where our new tool, ProPILE, comes in. Think of it as a detective, helping people investigate if their personal data might be seeping out from these LLMs. You can create your own prompts based on your personal info to check how much of your PII are likely to be exposed to millions of users. ProPILE is one of our first efforts to empower data subjects to gain awareness and control over their own PII in the era of LLMs.",
+      "tags": ["Privacy & Security", "Evaluation", "Large-Scale ML"]
+    },
+    {
+      "id": "teney2023neurips",
+      "title": "ID and OOD Performance Are Sometimes Inversely Correlated on Real-world Datasets",
+      "authors": [
+        {"name": "Damien Teney", "url": "https://www.damienteney.info/"},
+        {"name": "Lin Yong", "url": "https://linyongver.github.io/yonglin.github.io/"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true},
+        {"name": "Ehsan Abbasnejad", "url": "https://ehsanabb.github.io/"}
+      ],
+      "venue": "NeurIPS Spotlight",
+      "year": "2023",
+      "url": "https://arxiv.org/abs/2209.00613",
+      "bibtex": `@inproceedings{teney2023neurips,
+    title = {ID and OOD Performance Are Sometimes Inversely Correlated on Real-world Datasets},
+    author = {Teney, Damien and Oh, Seong Joon and Abbasnejad, Ehsan},
+    year = {2023},
+    booktitle = {Conference on Neural Information Processing Systems},
+}`,
+      "image": "pictures/teney2023neurips.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2209.00613"}
+      ],
+      "abstract": "Several recent studies have reported positive correlations between in-distribution (ID) and out-of-distribution (OOD) generalisation performances. In particular, Wenzel et al. (2022) found that none of the 31k networks examined on 172 dataset pairs has shown a trade-off, or a negative correlation, between the ID and OOD performances. They further recommend that, to improve the OOD generalisation, one can instead focus on improving the ID generalisation. We argue that this may not always be true. We present counterexamples where one does observe a trade-off between ID and OOD generalisation. We point to the selection method for networks as the key reason for the contradicting observations. We alter the recommendation to the field in a more nuanced manner.",
+      "tags": ["Robustness", "Evaluation"]
+    },
+    {
+      "id": "kirchhof2023neuripsdb",
+      "title": "URL: A Representation Learning Benchmark for Transferable Uncertainty Estimates",
+      "authors": [
+        {"name": "Michael Kirchhof", "url": "https://www.hci.uni-tuebingen.de/chair/team/michael-kirchhof"},
+        {"name": "Bálint Mucsányi", "url": "https://scholar.google.com/citations?user=NexA8EEAAAAJ&hl=hu"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true},
+        {"name": "Enkelejda Kasneci", "url": "https://www.edu.sot.tum.de/hctl/prof-dr-enkelejda-kasneci/"}
+      ],
+      "venue": "NeurIPS Datasets and Benchmarks",
+      "year": "2023",
+      "url": "https://arxiv.org/abs/2307.03810",
+      "bibtex": `@inproceedings{kirchhof2023neuripsdb,
+title = {URL: A Representation Learning Benchmark for Transferable Uncertainty Estimates},
+author = {Kirchhof, Michael and Mucsányi, Bálint and Oh, Seong Joon and Kasneci, Enkelejda},
+booktitle = {Conference on Neural Information Processing Systems: Datasets and Benchmarks Track},
+year = {2023}
+}`,
+      "image": "pictures/kirchhof2023neuripsdb.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2307.03810"}
+      ],
+      "abstract": "NeurIPS D&B extension of the UAI Epistemic AI Workshop paper below.",
+      "tags": ["Uncertainty", "Evaluation"]
+    },
+    {
+      "id": "kirchhof2023uaieai",
+      "title": "URL: A Representation Learning Benchmark for Transferable Uncertainty Estimates",
+      "authors": [
+        {"name": "Michael Kirchhof", "url": "https://www.hci.uni-tuebingen.de/chair/team/michael-kirchhof"},
+        {"name": "Bálint Mucsányi", "url": "https://scholar.google.com/citations?user=NexA8EEAAAAJ&hl=hu"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true},
+        {"name": "Enkelejda Kasneci", "url": "https://www.edu.sot.tum.de/hctl/prof-dr-enkelejda-kasneci/"}
+      ],
+      "venue": "UAI Epistemic AI Workshop Best Student Paper",
+      "year": "2023",
+      "url": "https://arxiv.org/abs/2307.03810",
+      "bibtex": `@inproceedings{kirchhof2023uaieai,
+title = {URL: A Representation Learning Benchmark for Transferable Uncertainty Estimates},
+author = {Kirchhof, Michael and Mucsányi, Bálint and Oh, Seong Joon and Kasneci, Enkelejda},
+booktitle = {Conference on Uncertainty in Artificial Intelligence Workshop on Epistemic Uncertainty in Artificial Intelligence},
+year = {2023}
+}`,
+      "image": "pictures/kirchhof2023uaieai.png",
+      "links": [
+        {"text": "Code", "url": "https://github.com/mkirchhof/url"},
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2307.03810"}
+      ],
+      "abstract": "We developed the Uncertainty-aware Representation Learning (URL) benchmark in our research. This tool evaluates the reliability of uncertainty estimates from pretrained models on unseen datasets. Its implementation is simple, requiring only four lines of code. In our experiment, we applied URL to ten models trained on ImageNet. Then, we tested these models on eight different datasets. The results showed that achieving transferable uncertainty quantification remains a challenge. We invite the community to work on this novel problem!",
+      "tags": ["Uncertainty", "Evaluation"]
+    },
+    {
+      "id": "elif2023arxiv",
+      "title": "Playing repeated games with Large Language Models",
+      "authors": [
+        {"name": "Elif Akata", "url": "https://github.com/eliaka"},
+        {"name": "Lion Schulz", "url": "https://sites.google.com/view/lionschulz/home"},
+        {"name": "Julian Coda-Forno", "url": "https://www.kyb.tuebingen.mpg.de/person/124121/249684"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true},
+        {"name": "Matthias Bethge", "url": "https://bethgelab.org/"},
+        {"name": "Eric Schulz", "url": "https://www.kyb.tuebingen.mpg.de/person/103915/2549"}
+      ],
+      "venue": "arXiv",
+      "year": "2023",
+      "url": "https://arxiv.org/abs/2305.16867",
+      "bibtex": `@article{elif2023arxiv,
+title = {Playing repeated games with Large Language Models},
+author = {Akata, Elif and Schulz, Lion and Coda-Forno, Julian and Oh, Seong Joon and Bethge, Matthias and Schulz, Eric},
+journal={arXiv preprint arXiv:2305.16867},
+year = {2023}
+}`,
+      "image": "pictures/elif2023arxiv.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2305.16867"}
+      ],
+      "abstract": "Imagine Large Language Models (LLMs) as digital diplomats, interacting with us and others in the cyber world. We set LLMs - GPT-3, GPT-3.5, and GPT-4 - against each other in games to understand their social behavior. LLMs are great when self-interest rules, like in the Prisoner's Dilemma, but stumble when coordination is key. GPT-4, for instance, acts tough in the Prisoner's Dilemma and struggles with simple conventions in the Battle of the Sexes. But, give GPT-4 more info or ask it to predict the opponent's move, and it adjusts its strategy. Our insights open up an exciting path towards a behavioral game theory for machines!",
+      "tags": ["Evaluation", "Large-Scale ML"]
+    },
+    {
+      "id": "han2023iccv",
+      "title": "Neglected Free Lunch -- Learning Image Classifiers Using Annotation Byproducts",
+      "authors": [
+        {"name": "Dongyoon Han", "url": "https://sites.google.com/site/dyhan0920/"},
+        {"name": "Junsuk Choe", "url": "https://sites.google.com/site/junsukchoe/"},
+        {"name": "Dante Chun", "url": "https://github.com/1000ship"},
+        {"name": "John Joon Young Chung", "url": "https://johnr0.github.io/"},
+        {"name": "Minsuk Chang", "url": "https://minsukchang.com/"},
+        {"name": "Sangdoo Yun", "url": "https://sangdooyun.github.io/"},
+        {"name": "Jean Y. Song", "url": "https://jyskwon.github.io/"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true}
+      ],
+      "venue": "ICCV",
+      "year": "2023",
+      "url": "https://arxiv.org/abs/2303.17595",
+      "bibtex": `@inproceedings{han2023iccv,
+  title = {Neglected Free Lunch – Learning Image Classifiers Using Annotation Byproducts},
+  author = {Han, Dongyoon and Choe, Junsuk and Chun, Seonghyeok and Chung, John Joon Young and Chang, Minsuk and Yun, Sangdoo and Song, Jean Y. and Oh, Seong Joon},
+  booktitle = {International Conference on Computer Vision (ICCV)},
+  year = {2023}
+}`,
+      "image": "pictures/han2023iccv.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2303.17595"},
+        {"text": "Code", "url": "https://github.com/naver-ai/NeglectedFreeLunch"},
+        {"text": "Youtube", "url": "https://www.youtube.com/watch?v=9HEj3Km2TWo"},
+        {"text": "Poster", "url": "data/han2023iccv_poster.pdf"},
+        {"text": "ImageNet-AB (HuggingFace)", "url": "https://huggingface.co/datasets/coallaoh/ImageNet-AB"},
+        {"text": "COCO-AB (HuggingFace)", "url": "https://huggingface.co/datasets/coallaoh/COCO-AB"},
+        {"text": "ImageNet annotation tool", "url": "https://github.com/naver-ai/imagenet-annotation-tool"},
+        {"text": "COCO annotation tool", "url": "https://github.com/naver-ai/coco-annotation-tool"}
+      ],
+      "abstract": "Supervised learning trains models with (X,Y) data. The (X,Y) data comes from the annotation procedure where annotators provide the correct Y for each X. But behind the scene, annotators generate much more data than the (X,Y) data themselves: they unintionally generate auxiliary information during the annotation task, such as the history of corrections and the time-series of mouse traces and clicks. We call them annotation byproducts (AB) Z. We propose the new paradigm of learning using annotation byproducts (LUAB), where models are trained with the triplets (X,Y,Z) involving the ABs. We reproduce the original annotation procedures for ImageNet and COCO to generate AB-enriched datasets: ImageNet-AB and COCO-AB. we show that the auxiliary Z may help models be better aligned with human recognition mechanisms, leading to improved model robustness.",
+      "tags": ["Robustness", "Uncertainty", "Human Annotation", "Explainability", "Large-Scale ML"]
+    },
+    {
+      "id": "nam2023iccv",
+      "title": "Scratching Visual Transformer's Back with Uniform Attention",
+      "authors": [
+        {"name": "Hyeon-Woo Nam", "url": "https://ami.postech.ac.kr/members/nam-hyeon-woo"},
+        {"name": "Yu-Ji Kim", "url": "https://ug-kim.notion.site/"},
+        {"name": "Byeongho Heo", "url": "https://sites.google.com/view/byeongho-heo/home"},
+        {"name": "Dongyoon Han", "url": "https://sites.google.com/site/dyhan0920/"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true},
+        {"name": "Tae-Hyun Oh", "url": "https://ami.postech.ac.kr/members/tae-hyun-oh/"}
+      ],
+      "venue": "ICCV",
+      "year": "2023",
+      "url": "https://arxiv.org/abs/2210.08457",
+      "bibtex": `@inproceedings{nam2023iccv,
+title = {Scratching Visual Transformer's Back with Uniform Attention},
+author = {Nam, Hyeon-Woo and Kim, Yu-Ji and Heo, Byeongho and Han, Doonyoon and Oh, Seong Joon and Oh, Tae-Hyun},
+booktitle = {International Conference on Computer Vision (ICCV)},
+year = {2022}
+}`,
+      "image": "pictures/nam2023iccv.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2210.08457"},
+        {"text": "Code", "url": "https://uniform-attention.github.io/"}
+      ],
+      "abstract": "ViT's itchy point seems to be the uniform attention. ViTs are hungry for denser connections, yet dense connections are hard to achieve because of softmax's steep gradient around the uniform attention. We manually insert additional uniform attention layers in ViT models. This is very cheap! It turns out to be an effective trick for increasing the capacity and generalisation for ViT models, especially for the smaller versions.",
+      "tags": ["Large-Scale ML"]
+    },
+    {
+      "id": "kirchhof2023icml",
+      "title": "Probabilistic Contrastive Learning Recovers the Correct Aleatoric Uncertainty of Ambiguous Inputs",
+      "authors": [
+        {"name": "Michael Kirchhof", "url": "https://www.hci.uni-tuebingen.de/chair/team/michael-kirchhof"},
+        {"name": "Enkelejda Kasneci", "url": "https://www.edu.sot.tum.de/hctl/prof-dr-enkelejda-kasneci/"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true}
+      ],
+      "venue": "ICML",
+      "year": "2023",
+      "url": "https://arxiv.org/abs/2302.02865",
+      "bibtex": `@inproceedings{kirchhof2023icml,
+title = {Probabilistic Contrastive Learning Recovers the Correct Aleatoric Uncertainty of Ambiguous Inputs},
+author = {Kirchhof, Michael and Kasneci, Enkelejda and Oh, Seong Joon},
+booktitle = {International Conference on Machine Learning},
+year = {2023}
+}`,
+      "image": "pictures/kirchhof2023icml.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2302.02865"},
+        {"text": "Code", "url": "https://github.com/mkirchhof/Probabilistic_Contrastive_Learning"}
+      ],
+      "abstract": "We finally came up with some theoretical guarantees for probabilistic embeddings! Given a spherical embedding space with a von-Mises-Fisher (vMF) family of true latent embedding distribution, one may identify the true latent vMF for every data point up to rotations with a Monte-Carlo version of InfoNCE (called MCInfoNCE). This result is a probabilistic extension of the work by Zimmerman et al.",
+      "tags": ["Uncertainty"]
+    },
+    {
+      "id": "hwang2022neurips",
+      "title": "SelecMix: Debiased Learning by Contradicting-pair Sampling",
+      "authors": [
+        {"name": "Inwoo Hwang", "url": "https://bluemoon010.github.io/"},
+        {"name": "Sangjun Lee", "url": "https://bi.snu.ac.kr/People/index.html"},
+        {"name": "Yunhyeok Kwak", "url": "https://bi.snu.ac.kr/People/index.html"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true},
+        {"name": "Damien Teney", "url": "https://www.damienteney.info/"},
+        {"name": "Jin-Hwa Kim", "url": "http://wityworks.com/"},
+        {"name": "Byoung-Tak Zhang", "url": "https://bi.snu.ac.kr/~btzhang/"}
+      ],
+      "venue": "NeurIPS",
+      "year": "2022",
+      "url": "https://arxiv.org/abs/2211.02291",
+      "bibtex": `@inproceedings{hwang2022neurips,
+    title={SelecMix: Debiased Learning by Contradicting-pair Sampling},
+    author = {Hwang, Inwoo and Lee, Sangjun and Kwak, Yunhyeok and Oh, Seong Joon and Teney, Damien and Kim, Jin-Hwa and Zhang, Byoung-Tak},
+    year = {2022},
+    booktitle = {Conference on Neural Information Processing Systems},
+}`,
+      "image": "pictures/hwang2022neurips.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2211.02291"},
+        {"text": "Workshop paper", "url": "data/hwang2022neurips_workshop.pdf"}
+      ],
+      "abstract": "A classifier gets biased when its decision boundary separates the bias attribute (e.g. gender attribute for profession prediction). Some prior de-biasing methods correct the decision boundary by identifying the bias-conflicting samples in the training data (e.g. female mechanical engineers) and giving more weight on them. We go one step further. We argue that it's more effective to augment the whole convex hull between usual data points (e.g. male mechanical engineers) and bias-conflicting samples (e.g. female mechanical engineers). We do this through simple Mixup. It effectively de-biases a model, even in the presence of strong label noise, arguably the greatest arch-enemy for a de-biasing method.",
+      "tags": ["Robustness"]
+    },
+    {
+      "id": "chun2022eccv",
+      "title": "ECCV Caption: Correcting False Negatives by Collecting Machine-and-Human-verified Image-Caption Associations for MS-COCO",
+      "authors": [
+        {"name": "Sanghyuk Chun", "url": "https://sanghyukchun.github.io/home/"},
+        {"name": "Wonjae Kim", "url": "https://wonjae.kim/"},
+        {"name": "Song Park", "url": "https://8uos.github.io/"},
+        {"name": "Minsuk Chang", "url": "https://minsukchang.com/"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true}
+      ],
+      "venue": "ECCV",
+      "year": "2022",
+      "url": "https://arxiv.org/abs/2204.03359",
+      "bibtex": `@inproceedings{chun2022eccv_caption,
+    title={ECCV Caption: Correcting False Negatives by Collecting Machine-and-Human-verified Image-Caption Associations for MS-COCO},
+    author={Chun, Sanghyuk and Kim, Wonjae and Park, Song and Chang, Minsuk Chang and Oh, Seong Joon},
+    year={2022},
+    booktitle={European Conference on Computer Vision (ECCV)},
+}`,
+      "image": "pictures/chun2022eccv.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2204.03359"},
+        {"text": "Code", "url": "https://github.com/naver-ai/eccv-caption"},
+        {"text": "Slides (long)", "url": "https://docs.google.com/presentation/d/1OKaWPlNblepiXF57oWs2miGgYb5kuu1qxNqV_-hDddU/edit?usp=sharing"},
+        {"text": "Slides (short)", "url": "https://docs.google.com/presentation/d/1zyLL49_2-F6mQFaMIumPfdE7el_r048XtidLnehepHo/edit?usp=sharing"}
+      ],
+      "abstract": "Image-captioning benchmarks such as COCO Captions contain lots of nonsense. For the same image on the left, the caption that goes \"Playing tennis with a racket\" is deemed correct, while \"Swinging a tennis racket\" is penalised. This comes from the erratic recipe for constructing the datasets: (1) let annotators write down 5 captions per image and (2) consider only those 5 captions to be correct matches. We show that this practice introduces a lot of noise in the evaluation benchmarks. We then introduce a novel image-captioning dataset based on the MS-COCO Captions that captures the model performances more precisely.",
+      "tags": ["Human Annotation", "Evaluation", "Large-Scale ML"]
+    },
+    {
+      "id": "kim2022icml",
+      "title": "Dataset Condensation via Efficient Synthetic-Data Parameterization",
+      "authors": [
+        {"name": "Jang-Hyun Kim", "url": "https://janghyun1230.github.io/"},
+        {"name": "Jinuk Kim", "url": "https://mllab.snu.ac.kr/people.html"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true},
+        {"name": "Sangdoo Yun", "url": "https://sangdooyun.github.io/"},
+        {"name": "Hwanjun Song", "url": "https://songhwanjun.github.io/"},
+        {"name": "Joonhyun Jeong", "url": ""},
+        {"name": "Jung-Woo Ha", "url": "https://aidljwha.wordpress.com/"},
+        {"name": "Hyun Oh Song", "url": "https://mllab.snu.ac.kr/hyunoh/"}
+      ],
+      "venue": "ICML",
+      "year": "2022",
+      "url": "https://arxiv.org/abs/2205.14959",
+      "bibtex": `@inproceedings{kim2022icml,
+title = {Dataset Condensation via Efficient Synthetic-Data Parameterization},
+author = {Kim, Jang-Hyun and Kim, Junuk and  Oh, Seong Joon and Yun, Sangdoo and Song, Hwanjun and Ha, Jung-Wooa and Song, Hyun Oh},
+year = {2022},
+booktitle = {International Conference on Machine Learning (ICML)},
+note = {to appear},
+tppubtype = {inproceedings}
+}`,
+      "image": "pictures/kim2022icml.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2205.14959"},
+        {"text": "Code", "url": "https://github.com/snu-mllab/Efficient-Dataset-Condensation"}
+      ],
+      "abstract": "Dataset condensation is the art of compactifying a training dataset. The aim is that a model trained on a condensed dataset is similar to the one trained on the original dataset, most importantly in terms of model accuracy (e.g. 91%-accuracy MNIST classifier with only 1 sample per class). We introduce many practical tricks to make data condensation work beyond the toy setting. We present the first data condensation method that actually works on images with sizes as large as 224x224, instead of 32x32!",
+      "tags": ["Human Annotation", "Large-Scale ML"]
+    },
+    {
+      "id": "lee2022cvpr",
+      "title": "Weakly Supervised Semantic Segmentation Using Out-of-Distribution Data",
+      "authors": [
+        {"name": "Jungbeom Lee", "url": "https://github.com/jbeomlee93"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true},
+        {"name": "Sangdoo Yun", "url": "https://sangdooyun.github.io/"},
+        {"name": "Junsuk Choe", "url": "https://sites.google.com/site/junsukchoe/"},
+        {"name": "Eunji Kim", "url": "http://data.snu.ac.kr/index.php/people/"},
+        {"name": "Sungroh Yoon", "url": "http://data.snu.ac.kr/index.php/people/"}
+      ],
+      "venue": "CVPR",
+      "year": "2022",
+      "url": "https://arxiv.org/abs/2203.03860",
+      "bibtex": `@inproceedings{lee2022cvpr,
+title = {Weakly Supervised Semantic Segmentation Using Out-of-Distribution Data},
+author = {Lee, Jungbeom and Oh, Seong Joon and Yun, Sangdoo and Choe, Junsuk and Kim, Eunji and Yoon, Sungroh},
+year = {2022},
+booktitle = {Conference on Computer Vision and Pattern Recognition (CVPR)},
+note = {to appear},
+pubstate = {published},
+tppubtype = {inproceedings}
+}`,
+      "image": "pictures/lee2022cvpr.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2203.03860"},
+        {"text": "Code", "url": "https://github.com/naver-ai/w-ood"}
+      ],
+      "abstract": "Weakly-supervised semantic segmentation (WSSS) is the task of solving pixel-wise class assignment with only the image-level supervision. The problem is ill-posed because the image-level labels alone do not let models distinguish foreground (FG) objects (e.g. train) from spuriously-correlated background (BG) cues (e.g. rail). Researchers have sought external sources of information, such as shape prior, to address the ill-posedness. In this paper, we explore a novel source: BG images (e.g. rail images without a train). Conceptually, telling models what are not the FG cues is equivalent to telling them what actually are the FG cues; BG images are sufficient for turning the problem into a well-posed one. Collecting such BG data is cost-efficient, requiring orders of magnitude less annotation costs than the already-cheap image-level labels.",
+      "tags": ["Robustness", "Human Annotation", "Explainability"]
+    },
+    {
+      "id": "scimeca2022iclr",
+      "title": "Which Shortcut Cues Will DNNs Choose? A Study from the Parameter-Space Perspective",
+      "authors": [
+        {"name": "Luca Scimeca", "url": "https://lucascimeca.com/"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true},
+        {"name": "Sanghyuk Chun", "url": "https://sanghyukchun.github.io/home/"},
+        {"name": "Michael Poli", "url": "https://zymrael.github.io/"},
+        {"name": "Sangdoo Yun", "url": "https://sangdooyun.github.io/"}
+      ],
+      "venue": "ICLR",
+      "year": "2022",
+      "url": "https://arxiv.org/abs/2110.03095",
+      "bibtex": `@inproceedings{scimeca2022iclr,
+    title={Which Shortcut Cues Will DNNs Choose? A Study from the Parameter-Space Perspective},
+    author={Scimeca, Luca and Oh, Seong Joon and Chun, Sanghyuk and Poli, Michael and Yun, Sangdoo},
+    year={2022},
+    booktitle = {International Conference on Learning Representations (ICLR)},
+}`,
+      "image": "pictures/scimeca2022iclr.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2110.03095"}
+      ],
+      "abstract": "Shortcut learning is emerging as a key limitation of the current generation of machine learning models (CVPR'20, ICML'20). In this work, instead of proposing yet another solution, we take a step back and deepen our understanding of the problem. For example, trained on a dataset where both colour and shape are valid cues for recognising the object, models of different types (MLP, CNN, and ViT) choose to use colour over shape. Why is that? We provide an explanation from the parameter-space perspective. Read the paper. Worth it!",
+      "tags": ["Robustness", "Explainability"]
+    },
+    {
+      "id": "hazel2022aaai",
+      "title": "ALP: Data Augmentation using Lexicalized PCFGs for Few-Shot Text Classification",
+      "authors": [
+        {"name": "Hazel Kim", "url": "https://github.com/hazelhkim"},
+        {"name": "Daecheol Woo", "url": ""},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true},
+        {"name": "Jeong-Won Cha", "url": "https://www.linkedin.com/in/jeong-won-cha-a936142a/"},
+        {"name": "Yo-Sub Han", "url": "http://toc.yonsei.ac.kr/~emmous/"}
+      ],
+      "venue": "AAAI",
+      "year": "2022",
+      "url": "https://arxiv.org/abs/2112.11916",
+      "bibtex": `@inproceedings{hazel2022aaai,
+  title={ALP: Data Augmentation using Lexicalized PCFGs for Few-Shot Text Classification},
+  author={Kim, Hazel and Woo, Daecheol and Oh, Seong Joon and Cha, Jeong-Won and Han, Yo-Sub},
+  year={2022},
+  booktitle = {Association for the Advancement of Artificial Intelligence Conference (AAAI)},
+  note = {to appear},
+  pubstate = {published},
+  tppubtype = {inproceedings},
+}`,
+      "image": "pictures/hazel2022aaai.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2112.11916"}
+      ],
+      "abstract": "This is an NLP paper. There have been many attempts at enlarging the training text data for few-shot text classification, like back-translation (e.g. En-Fr-En) and the use of pre-trained language models. Unlike those, we propose an augmentation method that is fully aware of the underlying grammatical structure of the sentence. Importantly, our method generates a set of synonymous sentences that are both grammatically correct and grammatically diverse! Here we gain quite some points in few-shot text classification benchmarks. Another contribution is viewing the train-val split as part of the method and seeking the best splitting strategy when data augmentation is being used. It turns out that splitting the few-shot labelled samples S into disjoint train-val splits (train split is then augmented) is sub-optimal; a better strategy is to use the augmented source data S' as the train split and the original S itself as the validation split!",
+      "tags": ["Robustness", "Human Annotation"]
+    },
+    {
+      "id": "choe2022tpami",
+      "title": "Evaluation for Weakly Supervised Object Localization: Protocol, Metrics, and Datasets",
+      "authors": [
+        {"name": "Junsuk Choe", "url": "https://sites.google.com/site/junsukchoe/"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true},
+        {"name": "Sanghyuk Chun", "url": "https://sanghyukchun.github.io/home/"},
+        {"name": "Zeynep Akata", "url": "https://eml-unitue.de/people/zeynep-akata"},
+        {"name": "Hyunjung Shim", "url": "https://sites.google.com/site/katehyunjungshim/home"}
+      ],
+      "venue": "TPAMI",
+      "year": "2022",
+      "url": "https://arxiv.org/abs/2007.04178",
+      "bibtex": `@article{choe2022tpami,
+    title={Evaluation for Weakly Supervised Object Localization: Protocol, Metrics, and Datasets},
+    author={Choe, Junsuk and Oh, Seong Joon and Chun, Sanghyuk and Akata, Zeynepand Shim, Hyunjung},
+    journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+    year={2022},
+    number  = {},
+    pages   = {},
+    month   = {},
+    volume  = {}
+}`,
+      "image": "pictures/choe2020cvpr.gif",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2007.04178"},
+        {"text": "Code", "url": "https://github.com/clovaai/wsolevaluation"},
+        {"text": "Slides", "url": "data/choe2020cvpr_slides.pdf"},
+        {"text": "Tutorial video", "url": "https://www.youtube.com/watch?v=D_dEkeb-fto&list=PLcD_yLvcdUll95mAnBDV0rZKhfClJMZMr&index=5"}
+      ],
+      "abstract": "Journal extension of CVPR'20! It now contains more analyses, including the evaluation of input gradient variants as Weakly-Supervised Object Localization (WSOL) methods.",
+      "tags": ["Robustness", "Human Annotation", "Explainability", "Evaluation"]
+    },
+    {
+      "id": "kim2021iccv",
+      "title": "Keep CALM and Improve Visual Feature Attribution",
+      "authors": [
+        {"name": "Jae Myung Kim", "url": "https://jaemyung-kim.github.io/"},
+        {"name": "Junsuk Choe", "url": "https://sites.google.com/site/junsukchoe/"},
+        {"name": "Zeynep Akata", "url": "https://eml-unitue.de/people/zeynep-akata"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true}
+      ],
+      "venue": "ICCV",
+      "year": "2021",
+      "url": "https://arxiv.org/abs/2106.07861",
+      "bibtex": `@inproceedings{kim2021iccv,
+  title={Keep CALM and Improve Visual Feature Attribution},
+  author={Kim, Jae Myung and Choe, Junsuk and Akata, Zeynep and Oh, Seong Joon},
+  year={2021},
+  booktitle = {International Conference on Computer Vision (ICCV)},
+  note = {to appear},
+  pubstate = {published},
+  tppubtype = {inproceedings},
+}`,
+      "image": "pictures/kim2021iccv.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2106.07861"},
+        {"text": "Code", "url": "https://github.com/naver-ai/calm"}
+      ],
+      "abstract": "It is difficult to find a CV researcher or practitioner who hasn't used (or at least heard of) the Class Activation Maps (CAM). It is a seminal feature attribution method that has left a deep mark on the vision research and applications. Notwithstanding its popularity, we found some practical and conceptual issues that makes CAM not as interpretable as it should be. We address the issues with a probabilistic treatment of the last layers of CNNs where the latent cue variable Z is trained via Marginal Likelihood (ML) or Expectation-Maximisation (EM) algorithms. The resulting Class Activation Latent Maps, or CALM, produces more precise and interpretable score maps.",
+      "tags": ["Robustness", "Human Annotation", "Explainability", "Evaluation"]
+    },
+    {
+      "id": "heo2021iccv",
+      "title": "Rethinking Spatial Dimensions of Vision Transformers",
+      "authors": [
+        {"name": "Byeongho Heo", "url": "https://sites.google.com/view/byeongho-heo/home"},
+        {"name": "Sangdoo Yun", "url": "https://sangdooyun.github.io/"},
+        {"name": "Dongyoon Han", "url": "https://sites.google.com/site/dyhan0920/"},
+        {"name": "Sanghyuk Chun", "url": "https://sanghyukchun.github.io/home/"},
+        {"name": "Junsuk Choe", "url": "https://sites.google.com/site/junsukchoe/"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true}
+      ],
+      "venue": "ICCV",
+      "year": "2021",
+      "url": "https://arxiv.org/abs/2103.16302",
+      "bibtex": `@inproceedings{heo2021iccv,
+  title={Rethinking Spatial Dimensions of Vision Transformers},
+  author={Heo, Byeongho and Yun, Sangdoo and Han, Dongyoon and Chun, Sanghyuk and Choe, Junsuk and Oh, Seong Joon},
+  year={2021},
+  booktitle = {International Conference on Computer Vision (ICCV)},
+  note = {to appear},
+  pubstate = {published},
+  tppubtype = {inproceedings},
+}`,
+      "image": "pictures/heo2021iccv.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2103.16302"},
+        {"text": "Code", "url": "https://github.com/naver-ai/pit"}
+      ],
+      "abstract": "The Tranformer architecture has successfully been adapted to visual models (e.g. ViT). However, Transformers, originally designed for language modelling, and ViT assign a constant ratio of computational loads between spatial and channel dimensions at different depths. We postulate this as a suboptimal design choice, as CNNs assign different ratios at different depths to maximise the utility of compute. We thus present Pooling-based Vision Transformer (PiT) that does this.",
+      "tags": ["Large-Scale ML"]
+    },
+    {
+      "id": "poli2021neurips",
+      "title": "Neural Hybrid Automata: Learning Dynamics with Multiple Modes and Stochastic Transitions",
+      "authors": [
+        {"name": "Michael Poli", "url": "https://zymrael.github.io/"},
+        {"name": "Stefano Massaroli", "url": "https://github.com/massastrello"},
+        {"name": "Luca Scimeca", "url": "https://lucascimeca.com/"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true},
+        {"name": "Sanghyuk Chun", "url": "https://sanghyukchun.github.io/home/"},
+        {"name": "Atsushi Yamashita", "url": "http://www.robot.t.u-tokyo.ac.jp/~yamashita/"},
+        {"name": "Hajime Asama", "url": "http://www.robot.t.u-tokyo.ac.jp/asamalab/Asama_page/top_a_e.html"},
+        {"name": "Jinkyoo Park", "url": "http://silab.kaist.ac.kr/our-team/"},
+        {"name": "Animesh Garg", "url": "https://animesh.garg.tech/"}
+      ],
+      "venue": "NeurIPS",
+      "year": "2021",
+      "url": "https://arxiv.org/abs/2106.04165",
+      "bibtex": `@inproceedings{poli2021neurips,
+    title={Neural Hybrid Automata: Learning Dynamics with Multiple Modes and Stochastic Transitions},
+    author = {Poli, Michael and Massaroli, Stefano and Scimeca, Luca and Oh, Seong Joon and Chun, Sanghyuk and Yamashita, Atsushi and Asama, Hajime and Park, Jinkyoo and Garg, Animesh},
+    year = {2021},
+    booktitle = {Conference on Neural Information Processing Systems},
+}`,
+      "image": "pictures/poli2021neurips.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2106.04165"}
+      ],
+      "abstract": "Recovering the dynamical systems, or the data generation process, behind time series data enables an effective and robust prediction, interpretation, and forecasting. There exist prior methods for recovering either continuous or discrete dynamics, but not the mixture. The underlying dynamics behind many real-world systems contain both continuous and discrete elements. For example, an aircraft essentially follows a continuous dynamics but goes through a discrete mode shift at touchdown. Such a system is referred to as a Stochastic Hybrid System (SHS). We present a framework that recovers SHS from time series data using ingredients like Neural ODEs and latent variable models.",
+      "tags": ["Robustness"]
+    },
+    {
+      "id": "yun2021cvpr",
+      "title": "Re-labeling ImageNet: from Single to Multi-Labels, from Global to Localized Labels",
+      "authors": [
+        {"name": "Sangdoo Yun", "url": "https://sangdooyun.github.io/"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true},
+        {"name": "Byeongho Heo", "url": "https://sites.google.com/view/byeongho-heo/home"},
+        {"name": "Dongyoon Han", "url": "https://sites.google.com/site/dyhan0920/"},
+        {"name": "Junsuk Choe", "url": "https://sites.google.com/site/junsukchoe/"},
+        {"name": "Sanghyuk Chun", "url": "https://sanghyukchun.github.io/home/"}
+      ],
+      "venue": "CVPR",
+      "year": "2021",
+      "url": "https://arxiv.org/abs/2101.05022",
+      "bibtex": `@inproceedings{yun2021cvpr,
+  title={Re-labeling ImageNet: from Single to Multi-Labels, from Global to Localized Labels},
+  author={Yun, Sangdoo and Oh, Seong Joon and Heo, Byeongho and Han, Dongyoon and Choe, Junsuk and Chun, Sanghyuk},
+  year={2021},
+  booktitle = {Conference on Computer Vision and Pattern Recognition (CVPR)},
+}`,
+      "image": "pictures/yun2021cvpr.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2101.05022"},
+        {"text": "Code", "url": "https://github.com/naver-ai/relabel_imagenet"}
+      ],
+      "abstract": "ImageNet labels contain lots of noise (e.g. Shankar et al.). There have been efforts to fix them on the evaluation set, but not yet on the training set. We fix them on the training set (published at codebase), but with the help of a bigger image classifier, to make the task feasible at all. This is another trick that will improve the ImageNet & downstream task accuracies across the board.",
+      "tags": ["Robustness", "Large-Scale ML"]
+    },
+    {
+      "id": "chun2021cvpr",
+      "title": "Probabilistic Embeddings for Cross-Modal Retrieval",
+      "authors": [
+        {"name": "Sanghyuk Chun", "url": "https://sanghyukchun.github.io/home/"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true},
+        {"name": "Rafael Sampaio de Rezende", "url": "https://europe.naverlabs.com/people_user/Rafael-Sampaio-De-Rezende/"},
+        {"name": "Yannis Kalantidis", "url": "https://www.skamalas.com/"},
+        {"name": "Diane Larlus", "url": "https://europe.naverlabs.com/people_user/diane-larlus/"}
+      ],
+      "venue": "CVPR",
+      "year": "2021",
+      "url": "https://arxiv.org/abs/2101.05068",
+      "bibtex": `@inproceedings{chun2021cvpr,
+  title={Probabilistic Embeddings for Cross-Modal Retrieval},
+  author={Chun, Sanghyuk and Oh, Seong Joon and Rezende, Rafael and Kalantidis, Yannis and Larlus, Diane},
+  year={2021},
+  booktitle = {Conference on Computer Vision and Pattern Recognition (CVPR)},
+}`,
+      "image": "pictures/chun2021cvpr.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2101.05068"},
+        {"text": "Code", "url": "https://github.com/naver-ai/pcme"}
+      ],
+      "abstract": "Given an image, there are many ways to describe it in text. Given a text description, there are likewise many possible images that suits the description. Cross-model associations are of many-to-many nature. The usual deterministic embeddings cannot model this well. We introduce a probabilistic embedding scheme based on the Hedged Instance Embedding (ICLR'19) to handle the many-to-many mapping gracefully. We address another crucial issue with evaluation: your method gets either penalised or rewarded for retrieving synonymous sentences. This is because of the non-exhaustive true matches in the eval set. Since ground-up collection of such matches is too expensive, we introduce a novel surrogate measure Plausible-Match R-Precision based on the estimated true matches.",
+      "tags": ["Uncertainty", "Evaluation"]
+    },
+    {
+      "id": "heo2021iclr",
+      "title": "AdamP: Slowing Down the Slowdown for Momentum Optimizers on Scale-invariant Weights",
+      "authors": [
+        {"name": "Byeongho Heo", "url": "https://sites.google.com/view/byeongho-heo/home"},
+        {"name": "Sanghyuk Chun", "url": "https://sanghyukchun.github.io/home/"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true},
+        {"name": "Dongyoon Han", "url": "https://sites.google.com/site/dyhan0920/"},
+        {"name": "Youngjung Uh", "url": "https://sites.google.com/site/youngjunguh"},
+        {"name": "Sangdoo Yun", "url": "https://sangdooyun.github.io/"},
+        {"name": "Jungwoo Ha", "url": "https://sites.google.com/site/hjw9096/"}
+      ],
+      "venue": "ICLR",
+      "year": "2021",
+      "url": "https://arxiv.org/abs/2006.08217",
+      "bibtex": `@inproceedings{heo2021iclr,
+    title={AdamP: Slowing Down the Slowdown for Momentum Optimizers on Scale-invariant Weights},
+    author={Heo, Byeongho and Chun, Sanghyuk and Oh, Seong Joon and Han, Dongyoon and Yun, Sangdoo and Uh, Youngjung and Ha, Jung-Woo},
+    year={2021},
+    booktitle = {International Conference on Learning Representations},
+}`,
+      "image": "pictures/heo2021iclr.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2006.08217"},
+        {"text": "Code", "url": "https://github.com/clovaai/AdamP"},
+        {"text": "Project", "url": "https://clovaai.github.io/AdamP/"}
+      ],
+      "abstract": "When you apply a momentum-based optimizer over scale-invariant parameters, their norms increase quite a bit. The norm increase doesn't contribute anything to the loss minimization while only slowing down the convergence. We fix this by appending a projection operation on SGD and Adam. This leads to performance improvements across the board.",
+      "tags": ["Large-Scale ML"]
+    },
+    {
+      "id": "yun2020videomix",
+      "title": "VideoMix: Rethinking Data Augmentation for Video Classification",
+      "authors": [
+        {"name": "Sangdoo Yun", "url": "https://sangdooyun.github.io/"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true},
+        {"name": "Byeongho Heo", "url": "https://sites.google.com/view/byeongho-heo/home"},
+        {"name": "Dongyoon Han", "url": "https://sites.google.com/site/dyhan0920/"},
+        {"name": "Jinhyung Kim", "url": ""}
+      ],
+      "venue": "arXiv",
+      "year": "2020",
+      "url": "https://arxiv.org/abs/2012.03457",
+      "bibtex": `@article{yun2020videomix,
+  title={VideoMix: Rethinking Data Augmentation for Video Classification},
+  author={Yun, Sangdoo and Oh, Seong Joon and Heo, Byeongho and Han, Dongyoon and Kim, Jinhyung},
+  year={2020},
+  journal={arXiv preprint arXiv:2012.03457},
+}`,
+      "image": "pictures/yun2020videomix.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2012.03457"}
+      ],
+      "abstract": "Data augmentation is not as extensively studied in the video recognition tasks as in the static image recognition domain. We study the extension of popular static-image augmentation method, such as CutMix, on video recognition tasks.",
+      "tags": ["Large-Scale ML"]
+    },
+    {
+      "id": "ferjad2020icml",
+      "title": "Reliable Fidelity and Diversity Metrics for Generative Models",
+      "authors": [
+        {"name": "Muhammad Ferjad Naeem", "url": "https://ferjad.github.io/"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true},
+        {"name": "Youngjung Uh", "url": "https://sites.google.com/site/youngjunguh"},
+        {"name": "Yunjey Choi", "url": "https://yunjey.github.io/"},
+        {"name": "Jaejun Yoo", "url": "https://people.epfl.ch/jaejun.yoo/?lang=en"}
+      ],
+      "venue": "ICML",
+      "year": "2020",
+      "url": "https://arxiv.org/abs/2002.09797",
+      "bibtex": `@inproceedings{ferjad2020icml,
+title = {Reliable Fidelity and Diversity Metrics for Generative Models},
+author = {Naeem, Muhammad Ferjad and Oh, Seong Joon and Uh, Youngjung and Choi, Yunjey and Yoo, Jaejun},
+year = {2020},
+booktitle = {International Conference on Machine Learning},
+}`,
+      "image": "pictures/ferjad2020icml.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2002.09797"},
+        {"text": "Code", "url": "https://github.com/clovaai/generative-evaluation-prdc"},
+        {"text": "ICML Virtual", "url": "https://icml.cc/virtual/2020/poster/5832"},
+        {"text": "Youtube", "url": "https://www.youtube.com/watch?v=_XwsGkryVpk&feature=youtu.be&ab_channel=FerjadNaeem"}
+      ],
+      "abstract": "Evaluating generative models is tricky. There are Inception Score and Fréchet Inception Distance measures indeed, and then (Improved) Precision and Recall metrics to separately examine the fidelity and diversity aspects. Yet, they are still not perfect. We address the issues with Improved Precision and Recall metrics and propose new metrics: Density and Coverage.",
+      "tags": ["Evaluation"]
+    },
+    {
+      "id": "hyojin2020icml",
+      "title": "Learning De-biased Representations with Biased Representations",
+      "authors": [
+        {"name": "Hyojin Bahng", "url": "https://hjbahng.github.io/"},
+        {"name": "Sanghyuk Chun", "url": "https://sanghyukchun.github.io/home/"},
+        {"name": "Sangdoo Yun", "url": "https://sangdooyun.github.io/"},
+        {"name": "Jaegul Choo", "url": "https://sites.google.com/site/jaegulchoo/"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true}
+      ],
+      "venue": "ICML",
+      "year": "2020",
+      "url": "https://arxiv.org/abs/1910.02806",
+      "bibtex": `@inproceedings{hyojin2020icml,
+title = {Learning De-biased Representations with Biased Representations},
+author = {Bahng, Hyojin and Chun, Sanghyuk and Yun, Sangdoo and Choo, Jaegul and Oh, Seong Joon},
+year = {2020},
+booktitle = {International Conference on Machine Learning},
+}`,
+      "image": "pictures/bahng2020icml.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/1910.02806"},
+        {"text": "Code", "url": "https://github.com/clovaai/rebias"},
+        {"text": "ICML Virtual", "url": "https://icml.cc/virtual/2020/poster/5783"},
+        {"text": "Youtube", "url": "https://www.youtube.com/watch?v=lkjMxZDGubA"}
+      ],
+      "abstract": "Models pick up correlations, rather than causal mechanisms, between inputs and outputs. De-biasing (and fairness) researches have guided models on \"which cues to look at\" through explicit bias labels or by re-weighting or re-generating training data to remove bias. We show that, for many application scenarios, it is possible to encode the \"cues to look at\" through model architecture and such expensive strategies are no longer needed.",
+      "tags": ["Robustness", "Human Annotation", "Evaluation"]
+    },
+    {
+      "id": "choe2020cvpr",
+      "title": "Evaluating Weakly-Supervised Object Localization Methods Right",
+      "authors": [
+        {"name": "Junsuk Choe", "url": "https://sites.google.com/site/junsukchoe/"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true},
+        {"name": "Sanghyuk Chun", "url": "https://sanghyukchun.github.io/home/"},
+        {"name": "Zeynep Akata", "url": "https://eml-unitue.de/people/zeynep-akata"},
+        {"name": "Hyunjung Shim", "url": "https://sites.google.com/site/katehyunjungshim/home"}
+      ],
+      "venue": "CVPR",
+      "year": "2020",
+      "url": "https://arxiv.org/abs/2001.07437",
+      "bibtex": `@inproceedings{choe2020cvpr,
+  title={Evaluating Weakly Supervised Object Localization Methods Right},
+  author={Choe, Junsuk and Oh, Seong Joon and Lee, Seungho and Chun, Sanghyuk and Akata, Zeynep and Shim, Hyunjung},
+  year = {2020},
+  booktitle = {Conference on Computer Vision and Pattern Recognition (CVPR)},
+  note = {to appear},
+  pubstate = {published},
+  tppubtype = {inproceedings}
+}`,
+      "image": "pictures/choe2020cvpr.gif",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2001.07437"},
+        {"text": "Code", "url": "https://github.com/clovaai/wsolevaluation"},
+        {"text": "Slides", "url": "data/choe2020cvpr_slides.pdf"},
+        {"text": "Tutorial video", "url": "https://www.youtube.com/watch?v=D_dEkeb-fto&list=PLcD_yLvcdUll95mAnBDV0rZKhfClJMZMr&index=5"}
+      ],
+      "abstract": "I have long waited for this moment since CVPR'17. Weakly-Supervised Object Localization, or WSOL, has in fact been not weakly supervised in a strict sense. Design choices and hyperparameters are validated with the localization annotations! This paper explains why researchers had to rely on localization validation -- without localization supervision, there is no way to force a model to not extract cues from background regions. We propose a new fair benchmark acknowledging the need for localization annotations and show that WSOL methods since CAM in 2016 have not introduced much gain.",
+      "tags": ["Robustness", "Human Annotation", "Explainability", "Evaluation"]
+    },
+    {
+      "id": "lee2019cvprw",
+      "title": "On Recognizing Texts of Arbitrary Shapes with 2D Self-Attention",
+      "authors": [
+        {"name": "Junyeop Lee", "url": "https://www.linkedin.com/in/junyeop-lee-7489aab7/"},
+        {"name": "Sungrae Park", "url": "https://sites.google.com/view/sungraepark"},
+        {"name": "Jeonghun Baek", "url": "http://jeonghunbaek.net/"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true},
+        {"name": "Seonghyeon Kim", "url": "https://rosinality.github.io/"},
+        {"name": "Hwalsuk Lee", "url": "https://github.com/hwalsuklee"}
+      ],
+      "venue": "CVPR Workshop",
+      "year": "2020",
+      "url": "https://arxiv.org/abs/1910.04396",
+      "bibtex": `@inproceedings{lee2020selfattention,
+  title={On Recognizing Texts of Arbitrary Shapes with 2D Self-Attention},
+  author={Lee, Junyeop and Park, Sungrae and Baek, Jeonghun and Oh, Seong Joon and Kim, Seonghyeon and Lee, Hwalsuk},
+  year={2020},
+  booktitle = {Workshop on Text and Documents in the Deep Learning Era},
+}`,
+      "image": "pictures/lee2020cvprw.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/1910.04396"}
+      ],
+      "abstract": "Scene text recognition works well, but there are remaining corner cases. An example is texts with unusual orientations and arrangements (e.g. BMW logo). We focus on this corner case and propose a model based on self-attention.",
+      "tags": []
+    },
+    {
+      "id": "oh2018tpami",
+      "title": "Person Recognition in Personal Photo Collections",
+      "authors": [
+        {"name": "Seong Joon Oh", "url": "", "isPI": true},
+        {"name": "Rodrigo Benenson", "url": "https://research.google/people/RodrigoBenenson/"},
+        {"name": "Mario Fritz", "url": "https://cispa.saarland/group/fritz/"},
+        {"name": "Bernt Schiele", "url": "https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/people/bernt-schiele"}
+      ],
+      "venue": "TPAMI",
+      "year": "2020",
+      "url": "https://arxiv.org/abs/1710.03224",
+      "bibtex": `@article{joon2020tpami,
+  author  = {Oh, Seong Joon and Benenson, Rodrigo and Fritz, Mario and Schiele, Bernt}, 
+  title   = {Person Recognition in Personal Photo Collections},
+  journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  year    = 2020,
+  number  = 1,
+  pages   = {203-220},
+  month   = 1,
+  volume  = 42
+}`,
+      "image": "pictures/joon2015iccv.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/1710.03224"},
+        {"text": "Journal", "url": "https://ieeexplore.ieee.org/document/8519337"}
+      ],
+      "abstract": "Journal version of my first paper ICCV'15, after five years! We have developed the version two of the ICCV'15 system that outperforms the methods that have appeared in the meantime.",
+      "tags": ["Privacy & Security", "Evaluation"]
+    },
+    {
+      "id": "oh2018iclr",
+      "title": "Towards Reverse-Engineering Black-Box Neural Networks",
+      "authors": [
+        {"name": "Seong Joon Oh", "url": "", "isPI": true},
+        {"name": "Mario Fritz", "url": "https://cispa.saarland/group/fritz/"},
+        {"name": "Bernt Schiele", "url": "https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/people/bernt-schiele"}
+      ],
+      "venue": "Explainable AI: Interpreting, Explaining and Visualizing Deep Learning (book chapter)",
+      "year": "2019",
+      "url": "https://arxiv.org/abs/1711.01768",
+      "bibtex": `@Inbook{joon2019blackboxchapter,
+author="Oh, Seong Joon
+and Schiele, Bernt
+and Fritz, Mario",
+editor="Samek, Wojciech
+and Montavon, Gr{\'e}goire
+and Vedaldi, Andrea
+and Hansen, Lars Kai
+and Muller, Klaus-Robert",
+title="Towards Reverse-Engineering Black-Box Neural Networks",
+bookTitle="Explainable AI: Interpreting, Explaining and Visualizing Deep Learning",
+year="2019",
+publisher="Springer International Publishing",
+address="Cham",
+pages="121--144",
+abstract="Much progress in interpretable AI is built around scenarios where the user, one who interprets the model, has a full ownership of the model to be diagnosed. The user either owns the training data and computing resources to train an interpretable model herself or owns a full access to an already trained model to be interpreted post-hoc. In this chapter, we consider a less investigated scenario of diagnosing black-box neural networks, where the user can only send queries and read off outputs. Black-box access is a common deployment mode for many public and commercial models, since internal details, such as architecture, optimisation procedure, and training data, can be proprietary and aggravate their vulnerability to attacks like adversarial examples. We propose a method for exposing internals of black-box models and show that the method is surprisingly effective at inferring a diverse set of internal information. We further show how the exposed internals can be exploited to strengthen adversarial examples against the model. Our work starts an important discussion on the security implications of diagnosing deployed models with limited accessibility. The code is available at goo.gl/MbYfsv.",
+isbn="978-3-030-28954-6",
+doi="10.1007/978-3-030-28954-6_7",
+url="https://doi.org/10.1007/978-3-030-28954-6_7"
+}`,
+      "image": "pictures/joon2018iclr.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/1711.01768"},
+        {"text": "Book chapter", "url": "https://link.springer.com/chapter/10.1007/978-3-030-28954-6_7"}
+      ],
+      "abstract": "Book chapter version of ICLR'18! We build connections between our black-box inspection methodology and the explainable AI.",
+      "tags": ["Privacy & Security"]
+    },
+    {
+      "id": "orekondy2019neuripsfl",
+      "title": "Gradient-Leaks: Understanding and Controlling Deanonymization in Federated Learning",
+      "authors": [
+        {"name": "Tribhuvanesh Orekondy", "url": "https://tribhuvanesh.github.io/"},
+        {"name": "Seong Joon Oh", "url": ""},
+        {"name": "Yang Zhang", "url": "https://yangzhangalmo.github.io/"},
+        {"name": "Bernt Schiele", "url": "https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/people/bernt-schiele"},
+        {"name": "Mario Fritz", "url": "https://cispa.saarland/group/fritz/"}
+      ],
+      "venue": "NeurIPS Workshop",
+      "year": "2019",
+      "url": "https://arxiv.org/abs/1805.05838",
+      "bibtex": `@inproceedings{orekondy19neuripsfl,
+    TITLE = {Gradient-Leaks: Understanding and Controlling Deanonymization in Federated Learning},
+    AUTHOR = {Orekondy, Tribhuvanesh and Oh, Seong Joon and Zhang, Yang and Schiele, Bernt and Fritz, Mario},
+    YEAR = {2019},
+    BOOKTITLE = {NeurIPS Workshop on Federated Learning for Data Privacy and Confidentiality},
+}`,
+      "image": "pictures/orekondy2019neuripsfl.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/1805.05838"},
+        {"text": "Poster", "url": "data/orekondy2019neuripsfl_poster.pdf"}
+      ],
+      "abstract": "Federated learning allows sensitive user data to never leave the device and still be used for training. It is considered a safer option than sending the user data directly to the server. But is it? We show that users may be identified and linked based on the model updates communicated between the device and server.",
+      "tags": ["Privacy & Security"]
+    },
+    {
+      "id": "chun2019icmlw",
+      "title": "An Empirical Evaluation on Robustness and Uncertainty of Regularization Methods",
+      "authors": [
+        {"name": "Sanghyuk Chun", "url": "https://sanghyukchun.github.io/home/"},
+        {"name": "Seong Joon Oh", "url": ""},
+        {"name": "Sangdoo Yun", "url": "https://sangdooyun.github.io/"},
+        {"name": "Dongyoon Han", "url": "https://sites.google.com/site/dyhan0920/"},
+        {"name": "Junsuk Choe", "url": "https://sites.google.com/site/junsukchoe/"},
+        {"name": "Youngjoon Yoo", "url": "https://yjyoo3312.github.io/"}
+      ],
+      "venue": "ICML Workshop",
+      "year": "2019",
+      "url": "https://arxiv.org/abs/2003.03879",
+      "bibtex": `@article{chun2019icmlw,
+title = {An Empirical Evaluation on Robustness and Uncertainty of Regularization Methods},
+author = {Chun, Sanghyuk and Oh, Seong Joon and Yun, Sangdoo and Han, Dongyoon and Choe, Junsuk and Yoo, Youngjoon},
+journal = {Uncertainty and Robustness in Deep Learning. ICML Workshop},
+year = {2019},
+}`,
+      "image": "pictures/chun2019icmlw.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2003.03879"}
+      ],
+      "abstract": "There has been a line of research on simple regularization techniques like CutMix (ICCV'19) and other lines of research on robustness and uncertainty. We make a happy marriage of the two and measure how well the regularization techniques improve robustness and uncertainty of a model.",
+      "tags": ["Robustness", "Uncertainty", "Evaluation"]
+    },
+    {
+      "id": "yun2019iccv",
+      "title": "CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features",
+      "authors": [
+        {"name": "Sangdoo Yun", "url": "https://sangdooyun.github.io/"},
+        {"name": "Dongyoon Han", "url": "https://sites.google.com/site/dyhan0920/"},
+        {"name": "Seong Joon Oh", "url": ""},
+        {"name": "Sanghyuk Chun", "url": "https://sanghyukchun.github.io/home/"},
+        {"name": "Junsuk Choe", "url": "https://sites.google.com/site/junsukchoe/"},
+        {"name": "Youngjoon Yoo", "url": "https://yjyoo3312.github.io/"}
+      ],
+      "venue": "ICCV Oral Talk",
+      "year": "2019",
+      "url": "https://arxiv.org/abs/1905.04899",
+      "bibtex": `@inproceedings{yun2019cutmix,
+  title={CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features},
+  author={Yun, Sangdoo and Han, Dongyoon and Oh, Seong Joon and Chun, Sanghyuk and Choe, Junsuk and Yoo, Youngjoon},
+  booktitle = {International Conference on Computer Vision (ICCV)},
+  year={2019},
+  note={to appear},
+  pubstate={published},
+  tppubtype={inproceedings}
+}`,
+      "image": "pictures/yun2019iccv.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/1905.04899"},
+        {"text": "Code", "url": "https://github.com/clovaai/CutMix-PyTorch"},
+        {"text": "Talk", "url": "data/yun2019iccv_talk.pdf"},
+        {"text": "Poster", "url": "data/yun2019iccv_poster.pdf"},
+        {"text": "Blog", "url": "https://clova-ai.blog/2019/07/15/cutmix-regularization-strategy-to-train-strong-classifiers-with-localizable-features/"},
+        {"text": "Project", "url": "https://clovaai.github.io/AdamP/"}
+      ],
+      "abstract": "A simple solution that works surprisingly well! Cut and paste patches from other images during training. Quite likely, you will see a performance boost.",
+      "tags": ["Robustness", "Large-Scale ML"]
+    },
+    {
+      "id": "baek2019iccv",
+      "title": "What Is Wrong with Scene Text Recognition Model Comparisons? Dataset and Model Analysis",
+      "authors": [
+        {"name": "Jeonghun Baek", "url": "http://jeonghunbaek.net/"},
+        {"name": "Geewook Kim", "url": "http://geewook.kim/"},
+        {"name": "Junyeop Lee", "url": "https://www.linkedin.com/in/junyeop-lee-7489aab7/"},
+        {"name": "Sungrae Park", "url": "https://sites.google.com/view/sungraepark"},
+        {"name": "Dongyoon Han", "url": "https://sites.google.com/site/dyhan0920/"},
+        {"name": "Sangdoo Yun", "url": "https://sangdooyun.github.io/"},
+        {"name": "Seong Joon Oh", "url": ""},
+        {"name": "Hwalsuk Lee", "url": "https://github.com/hwalsuklee"}
+      ],
+      "venue": "ICCV Oral Talk",
+      "year": "2019",
+      "url": "https://arxiv.org/abs/1904.01906",
+      "bibtex": `@inproceedings{baek2019STRcomparisons,
+  title={What is wrong with scene text recognition model comparisons? dataset and model analysis},
+  author={Baek, Jeonghun and Kim, Geewook and Lee, Junyeop and Park, Sungrae and Han, Dongyoon and Yun, Sangdoo and Oh, Seong Joon and Lee, Hwalsuk},
+  booktitle = {International Conference on Computer Vision (ICCV)},
+  year={2019},
+  note={to appear},
+  pubstate={published},
+  tppubtype={inproceedings}
+}`,
+      "image": "pictures/baek2019iccv.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/1904.01906"},
+        {"text": "Code", "url": "https://github.com/clovaai/deep-text-recognition-benchmark"}
+      ],
+      "abstract": "Scene text recognition field has long suffered from the lack of a unified agreement on the evaluation protocol. We provide a standard protocol. We also provide a unified view on the previous methods and discover a novel combination of existing modules that turns out to be the state of the art.",
+      "tags": ["Evaluation"]
+    },
+    {
+      "id": "joon2019iclr",
+      "title": "Modeling Uncertainty with Hedged Instance Embedding",
+      "authors": [
+        {"name": "Seong Joon Oh", "url": "", "isPI": true},
+        {"name": "Kevin Murphy", "url": "https://research.google/people/KevinMurphy/"},
+        {"name": "Jiyan Pan", "url": "https://www.linkedin.com/in/jiyanpan/"},
+        {"name": "Joseph Roth", "url": "https://research.google/people/JosephRoth/"},
+        {"name": "Florian Schroff", "url": "https://www.florian-schroff.de/"},
+        {"name": "Andrew Gallagher", "url": "https://research.google/people/AndrewGallagher/"}
+      ],
+      "venue": "ICLR",
+      "year": "2019",
+      "url": "https://arxiv.org/abs/1810.00319",
+      "bibtex": `@inproceedings{joon2019iclr,
+title = {Modeling Uncertainty with Hedged Instance Embedding},
+author = {Oh, Seong Joon and Murphy, Kevin and Pan, Jiyan and Roth, Joseph and Schroff, Florian and Gallagher, Andrew},
+year = {2019},
+booktitle = {International Conference on Learning Representations (ICLR)},
+}`,
+      "image": "pictures/joon2019iclr.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/1810.00319"},
+        {"text": "Poster", "url": "data/oh2019iclr_poster.pdf"}
+      ],
+      "abstract": "There has been quite some work on representing uncertainty for classification or regression tasks. Is there a way to represent uncertainty for instance embedding models too? We show that it is possible to train probabilistic representatitons for instances based on their inherent ambiguity.",
+      "tags": ["Uncertainty"]
+    },
+    {
+      "id": "tretschk2018cscs",
+      "title": "Sequential Attacks on Agents for Long-Term Adversarial Goals",
+      "authors": [
+        {"name": "Edgar Tretschk", "url": "https://people.mpi-inf.mpg.de/~tretschk/"},
+        {"name": "Seong Joon Oh", "url": ""},
+        {"name": "Mario Fritz", "url": "https://cispa.saarland/group/fritz/"}
+      ],
+      "venue": "ACM CSCS",
+      "year": "2018",
+      "url": "https://arxiv.org/abs/1805.12487",
+      "bibtex": `@inproceedings{edgar2018cscs,
+title = {Sequential Attacks on Agents for Long-Term Adversarial Goals},
+author = {Tretschk, Edgar and Oh, Seong Joon and Fritz, Mario},
+year = {2018},
+booktitle = {ACM Computer Science in Cars Symposium -- Future Challenges in Artificial Intelligence & Security for Autonomous Vehicles (CSCS)},
+}`,
+      "image": "pictures/tretschk2018cscs.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/1805.12487"}
+      ],
+      "abstract": "Can a bad guy hijack an RL agent? We show that it is possible to let an agent pursue an alternative reward by introducing small adversarial perturbations in the input stream.",
+      "tags": ["Privacy & Security"]
+    },
+    {
+      "id": "joon2018iclr",
+      "title": "Towards Reverse-Engineering Black-Box Neural Networks",
+      "authors": [
+        {"name": "Seong Joon Oh", "url": "", "isPI": true},
+        {"name": "Max Augustin", "url": ""},
+        {"name": "Mario Fritz", "url": "https://cispa.saarland/group/fritz/"},
+        {"name": "Bernt Schiele", "url": "https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/people/bernt-schiele"}
+      ],
+      "venue": "ICLR",
+      "year": "2018",
+      "url": "https://arxiv.org/abs/1711.01768",
+      "bibtex": `@inproceedings{joon2018iclr,
+title = {Towards Reverse-Engineering Black-Box Neural Networks},
+author = {Oh, Seong Joon and Augustin, Max and Schiele, Bernt and Fritz, Mario},
+year = {2018},
+booktitle = {International Conference on Learning Representations (ICLR)},
+}`,
+      "image": "pictures/joon2018iclr.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/1711.01768"},
+        {"text": "Extended abstract", "url": "data/oh2018iclr_abstract.pdf"},
+        {"text": "Poster", "url": "data/oh2018iclr_poster.pdf"},
+        {"text": "Code", "url": "https://github.com/coallaoh/WhitenBlackBox"}
+      ],
+      "abstract": "Recipes for training a high-performance model are not cheap. Think about the GPU-and-research-scientist-and-engineer hours to find the right architectural components and optimizer hyperparameters. What if they can be stolen by examining the model responses to certain inputs?",
+      "tags": ["Privacy & Security"]
+    },
+    {
+      "id": "sun2018cvpr",
+      "title": "Natural and Effective Obfuscation by Head Inpainting",
+      "authors": [
+        {"name": "Qianru Sun", "url": "https://qianrusun.com/"},
+        {"name": "Liqian Ma", "url": "http://charliememory.github.io/"},
+        {"name": "Seong Joon Oh", "url": ""},
+        {"name": "Luc Van Gool", "url": "https://ee.ethz.ch/the-department/faculty/professors/person-detail.OTAyMzM=.TGlzdC80MTEsMTA1ODA0MjU5.html"},
+        {"name": "Bernt Schiele", "url": "https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/people/bernt-schiele"},
+        {"name": "Mario Fritz", "url": "https://cispa.saarland/group/fritz/"}
+      ],
+      "venue": "CVPR",
+      "year": "2018",
+      "url": "https://arxiv.org/abs/1711.09001",
+      "bibtex": `@inproceedings{qianru2018cvpr,
+title = {Natural and Effective Obfuscation by Head Inpainting},
+author = {Sun, Qianru and Ma, Liqian and Oh, Seong Joon and van Gool, Luc and Schiele, Bernt and Fritz, Mario},
+year = {2018},
+booktitle = {Conference on Computer Vision and Pattern Recognition (CVPR)}
+}`,
+      "image": "pictures/sun2017cvpr.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/1711.09001"}
+      ],
+      "abstract": "Adversarial perturbation solutions (ICCV'17) produce visually pleasant protections with high protection rates, but their effects may be confined to a handful of recognition systems. We propose another solution based on face inpainting that changes the face to a fictitious yet natural-looking identity. It is effective against a broader set of recognition systems.",
+      "tags": ["Privacy & Security"]
+    },
+    {
+      "id": "joon2017cvprw",
+      "title": "From Understanding to Controlling Privacy against Automatic Person Recognition in Social Media",
+      "authors": [
+        {"name": "Seong Joon Oh", "url": "", "isPI": true},
+        {"name": "Mario Fritz", "url": "https://cispa.saarland/group/fritz/"},
+        {"name": "Bernt Schiele", "url": "https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/people/bernt-schiele"}
+      ],
+      "venue": "CVPR Workshop",
+      "year": "2017",
+      "url": "data/oh2017cvprw.pdf",
+      "bibtex": `@article{joon2017cvprw,
+title = {From Understanding to Controlling Privacy against Automatic Person Recognition in Social Media},
+author = {Oh, Seong Joon and Fritz, Mario and Schiele, Bernt},
+journal = {The Bright and Dark Sides of Computer Vision: Challenges and Opportunities for Privacy and Security. CVPR Workshop},
+year = {2017},
+}`,
+      "image": "pictures/joon2017cvprw.png",
+      "links": [
+        {"text": "Poster", "url": "data/oh2017cvprw_poster.pdf"}
+      ],
+      "abstract": "We stop and look back on the visual privacy papers (ICCV'15, ECCV'16, ICCV'17).",
+      "tags": ["Privacy & Security"]
+    },
+    {
+      "id": "joon2017iccv",
+      "title": "Adversarial Image Perturbation for Privacy Protection -- A Game Theory Perspective",
+      "authors": [
+        {"name": "Seong Joon Oh", "url": "", "isPI": true},
+        {"name": "Mario Fritz", "url": "https://cispa.saarland/group/fritz/"},
+        {"name": "Bernt Schiele", "url": "https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/people/bernt-schiele"}
+      ],
+      "venue": "ICCV",
+      "year": "2017",
+      "url": "https://arxiv.org/abs/1703.09471",
+      "bibtex": `@inproceedings{joon2017iccv,
+title = {Adversarial Image Perturbation for Privacy Protection -- A Game Theory Perspective},
+author = {Oh, Seong Joon and Fritz, Mario and Schiele, Bernt},
+year = {2017},
+booktitle = {International Conference on Computer Vision (ICCV)},
+note = {to appear},
+pubstate = {published},
+tppubtype = {inproceedings},
+}`,
+      "image": "pictures/joon2017iccv.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/1703.09471"},
+        {"text": "Poster", "url": "data/oh2017iccv_poster.pdf"},
+        {"text": "Code", "url": "https://github.com/coallaoh/AIP"}
+      ],
+      "abstract": "If face blurring doesn't work (ECCV'16), how should we shield our personal photos online against recognition systems? We propose a solution based on adversarial perturbations and the game theoretic considerations for the evaluation therein.",
+      "tags": ["Robustness", "Privacy & Security", "Evaluation"]
+    },
+    {
+      "id": "joon2017cvpr",
+      "title": "Exploiting Saliency for Object Segmentation from Image Level Labels",
+      "authors": [
+        {"name": "Seong Joon Oh", "url": "", "isPI": true},
+        {"name": "Rodrigo Benenson", "url": "https://research.google/people/RodrigoBenenson/"},
+        {"name": "Anna Khoreva", "url": "https://www.linkedin.com/in/anna-khoreva/"},
+        {"name": "Zeynep Akata", "url": "https://eml-unitue.de/people/zeynep-akata"},
+        {"name": "Mario Fritz", "url": "https://cispa.saarland/group/fritz/"},
+        {"name": "Bernt Schiele", "url": "https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/people/bernt-schiele"}
+      ],
+      "venue": "CVPR",
+      "year": "2017",
+      "url": "https://arxiv.org/abs/1701.08261",
+      "bibtex": `@inproceedings{joon2017cvpr,
+title = {Exploiting Saliency for Object Segmentation from Image Level Labels},
+author = {Oh, Seong Joon and Benenson, Rodrigo and Khoreva, Anna and Akata, Zeynep and Fritz, Mario and Schiele, Bernt},
+year = {2017},
+booktitle = {Conference on Computer Vision and Pattern Recognition (CVPR)},
+note = {to appear},
+pubstate = {published},
+tppubtype = {inproceedings}
+}`,
+      "image": "pictures/joon2017cvpr.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/1701.08261"},
+        {"text": "Poster", "url": "data/oh2017cvpr_poster.pdf"},
+        {"text": "Code", "url": "https://github.com/coallaoh/GuidedLabelling"}
+      ],
+      "abstract": "There has been quite some work around training models for localization tasks (e.g. semantic segmentation) from the image tag supervision only. But is this fundamentally possible without relying on extensive validation with full localization annotations? We argue that certain priors are necessary at the very least to encode the extent of objects. Saliency, we argue, is a handy prior.",
+      "tags": ["Human Annotation", "Explainability"]
+    },
+    {
+      "id": "rohrbach2017cvpr",
+      "title": "Generating Descriptions with Grounded and Co-Referenced People",
+      "authors": [
+        {"name": "Anna Rohrbach", "url": "https://anna-rohrbach.net/"},
+        {"name": "Marcus Rohrbach", "url": "https://rohrbach.vision/"},
+        {"name": "Siyu Tang", "url": "https://inf.ethz.ch/people/person-detail.MjYyNzgw.TGlzdC8zMDQsLTg3NDc3NjI0MQ==.html"},
+        {"name": "Seong Joon Oh", "url": ""},
+        {"name": "Bernt Schiele", "url": "https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/people/bernt-schiele"}
+      ],
+      "venue": "CVPR",
+      "year": "2017",
+      "url": "https://arxiv.org/abs/1704.01518",
+      "bibtex": `@inproceedings{anja2017cvpr,
+title = {Generating Descriptions with Grounded and Co-Referenced People},
+author = {Rohrbach, Anna and Rohrbach, Marcus and Tang, Siyu and Oh, Seong Joon and Schiele, Bernt},
+year = {2017},
+booktitle = {Conference on Computer Vision and Pattern Recognition (CVPR)},
+note = {to appear},
+pubstate = {published},
+tppubtype = {inproceedings}
+}`,
+      "image": "pictures/anja2017cvpr.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/1704.01518"}
+      ],
+      "abstract": "We casually use pronouns to refer to others. For machines, however, referring to people with pronouns necessitates new types of data and training strategies to explicitly localize and link people across frames. We do that.",
+      "tags": []
+    },
+    {
+      "id": "joon2016eccv",
+      "title": "Faceless Person Recognition; Privacy Implications in Social Media",
+      "authors": [
+        {"name": "Seong Joon Oh", "url": "", "isPI": true},
+        {"name": "Rodrigo Benenson", "url": "https://research.google/people/RodrigoBenenson/"},
+        {"name": "Mario Fritz", "url": "https://cispa.saarland/group/fritz/"},
+        {"name": "Bernt Schiele", "url": "https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/people/bernt-schiele"}
+      ],
+      "venue": "ECCV",
+      "year": "2016",
+      "url": "https://arxiv.org/abs/1607.08438",
+      "bibtex": `@inproceedings{joon2016eccv,
+title = {Faceless Person Recognition; Privacy Implications in Social Media},
+author = {Seong Joon Oh and Rodrigo Benenson and Mario Fritz and Bernt Schiele},
+year = {2016},
+date = {2016-10-11},
+booktitle = {European Conference on Computer Vision (ECCV)},
+note = {to appear},
+keywords = {},
+pubstate = {published},
+tppubtype = {inproceedings}
+}`,
+      "image": "pictures/joon2016eccv.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/1607.08438"},
+        {"text": "Poster", "url": "data/oh2016eccv_poster.pdf"},
+        {"text": "Extended abstract", "url": "data/oh2016eccvw.pdf"}
+      ],
+      "abstract": "But can you still be recognized even with a blur on your face? Quite likely.",
+      "tags": ["Privacy & Security", "Evaluation"]
+    },
+    {
+      "id": "aditya2016mobisys",
+      "title": "I-pic: A Platform for Privacy-Compliant Image Capture",
+      "authors": [
+        {"name": "Paarijaat Aditya", "url": "https://www.bell-labs.com/usr/paarijaat.aditya"},
+        {"name": "Rijurekha Sen", "url": "http://www.cse.iitd.ernet.in/~rijurekha/"},
+        {"name": "Peter Druschel", "url": "https://people.mpi-sws.org/~druschel/"},
+        {"name": "Seong Joon Oh", "url": ""},
+        {"name": "Rodrigo Benenson", "url": "https://research.google/people/RodrigoBenenson/"},
+        {"name": "Mario Fritz", "url": "https://cispa.saarland/group/fritz/"},
+        {"name": "Bernt Schiele", "url": "https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/people/bernt-schiele"},
+        {"name": "Bobby Bhattacharjee", "url": "https://www.cs.umd.edu/people/bobby"},
+        {"name": "Tong Tong Wu", "url": "https://www.urmc.rochester.edu/biostat/people/faculty/wu-tongtong.aspx"}
+      ],
+      "venue": "MobiSys",
+      "year": "2016",
+      "url": "data/aditya2016mobisys.pdf",
+      "bibtex": `@inproceedings{aditya2016mobisys,
+  author = {Paarijaat Aditya and Rijurekha Sen and Seong Joon Oh and Rodrigo Benenson and Bobby Bhattacharjee and Peter Druschel and Tongtong Wu and Mario Fritz and Bernt Schiele},
+  title = {I-Pic: A Platform for Privacy-Compliant Image Capture},
+  booktitle = {The 14th International Conference on Mobile Systems, Applications, and Services (MobiSys'16)},
+  location = {Singapore},
+  month = june,
+  year = 2016
+}`,
+      "image": "pictures/aditya2016mobisys.png",
+      "links": [
+        {"text": "Project", "url": "http://ipic.mpi-sws.org/"}
+      ],
+      "abstract": "You are a janitor at Taj Mahal. Against you will, sightseers take photos with your face in the background. How can you opt out of being present in someone else's photo? We present a mobile-system based solution.",
+      "tags": ["Privacy & Security"]
+    },
+    {
+      "id": "joon2015iccv",
+      "title": "Person Recognition in Personal Photo Collections",
+      "authors": [
+        {"name": "Seong Joon Oh", "url": "", "isPI": true},
+        {"name": "Rodrigo Benenson", "url": "https://research.google/people/RodrigoBenenson/"},
+        {"name": "Mario Fritz", "url": "https://cispa.saarland/group/fritz/"},
+        {"name": "Bernt Schiele", "url": "https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/people/bernt-schiele"}
+      ],
+      "venue": "ICCV",
+      "year": "2015",
+      "url": "https://arxiv.org/abs/1509.03502",
+      "bibtex": `@INPROCEEDINGS{joon2015iccv,
+  title={Person Recognition in Personal Photo Collections},
+  author={Oh, Seong Joon and Benenson, Rodrigo and Fritz, Mario and Schiele, Bernt},
+  booktitle = {ICCV},
+  year={2015} }`,
+      "image": "pictures/joon2015iccv.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/1509.03502"},
+        {"text": "Poster", "url": "data/oh2015iccv_poster.pdf"},
+        {"text": "Video", "url": "https://www.youtube.com/watch?v=F4Jh0f3xD0g"},
+        {"text": "Project", "url": "https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/research/people-detection-pose-estimation-and-tracking/person-recognition-in-personal-photo-collections/"}
+      ],
+      "abstract": "How well does a CNN model recognize people in personal photos? Even when people don't look at cameras, CNN finds out who they are, based on the context (e.g. location and social connections).",
+      "tags": ["Privacy & Security", "Evaluation"]
+    }
+  ];

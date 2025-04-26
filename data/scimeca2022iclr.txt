@@ -1,6 +1,0 @@
-@inproceedings{scimeca2022iclr,
-    title={Which Shortcut Cues Will DNNs Choose? A Study from the Parameter-Space Perspective},
-    author={Scimeca, Luca and Oh, Seong Joon and Chun, Sanghyuk and Poli, Michael and Yun, Sangdoo},
-    year={2022},
-    booktitle = {International Conference on Learning Representations (ICLR)},
-}

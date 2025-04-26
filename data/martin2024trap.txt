@@ -1,6 +1,0 @@
-@inproceedings{martin2024trap,
-    title = {TRAP: Targeted Random Adversarial Prompt Honeypot for Black-Box Identification},
-    author = {Gubri, Martin and Ulmer, Dennis and Lee, Hwaran and Yun, Sangdoo and Oh, Seong Joon},
-    year={2024},
-    booktitle = "Findings of the Association for Computational Linguistics: ACL 2024",
-}
