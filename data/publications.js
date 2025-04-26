@@ -1,6 +1,111 @@
 // Publications data in JSON format
 const publicationsData = [
     {
+      "id": "alex2025ocl",
+      "title": "Are We Done with Object-Centric Learning?",
+      "authors": [
+        {"name": "Alexander Rubinstein", "url": "https://scalabletrustworthyai.github.io/member/alex/"},
+        {"name": "Ameya Prabhu", "url": "https://drimpossible.github.io/"},
+        {"name": "Matthias Bethge", "url": "https://bethgelab.org/"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true}
+      ],
+      "venue": "ICLR Workshop on Spurious Correlation and Shortcut Learning: Foundations and Solutions",
+      "year": "2025",
+      "url": "https://arxiv.org/abs/2504.07092",
+      "bibtex": `@article{alex2025ocl,
+  title={Are We Done with Object-Centric Learning?},
+  author={Rubinstein, Alexander and Prabhu, Ameya and Bethge, Matthias and Oh, Seong Joon},
+  journal={arXiv preprint arXiv:2504.07092},
+  year={2025}
+}`,
+      "image": "pictures/alex2025ocl.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2504.07092"},
+        {"text": "HuggingFace", "url": "https://huggingface.co/papers/2504.07092"},
+        {"text": "Project Page", "url": "https://alexanderrubinstein.github.io/are-we-done-with-ocl/"},
+        {"text": "Code", "url": "https://github.com/AlexanderRubinstein/OCCAM"}
+      ],
+      "abstract": "Object-centric learning (OCL) seeks to learn representations that only encode an object, isolated from background cues. Recent segmentation-based methods achieve strong zero-shot OOD object discovery and scale to foundation models. The study proposes a training-free probe, OCCAM, showing that segmentation-based encoding outperforms slot-based methods. Challenges for real-world application and broader goals like OOD generalisation remain open.",
+      "tags": ["Robustness", "Evaluation"]
+    },
+    {
+      "id": "luca2025diffdiv",
+      "title": "Mitigating Shortcut Learning with Diffusion Counterfactuals and Diverse Ensembles",
+      "authors": [
+        {"name": "Luca Scimeca", "url": "https://lucascimeca.com/"},
+        {"name": "Alexander Rubinstein", "url": "https://scalabletrustworthyai.github.io/member/alex/"},
+        {"name": "Damien Teney", "url": "https://www.damienteney.info/"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true},
+        {"name": "Yoshua Bengio", "url": "https://yoshuabengio.org/"}
+      ],
+      "venue": "ICLR Workshop on Spurious Correlation and Shortcut Learning: Foundations and Solutions",
+      "year": "2025",
+      "url": "https://arxiv.org/abs/2311.16176",
+      "bibtex": `@inproceedings{luca2025diffdiv,
+  title={Mitigating Shortcut Learning with Diffusion Counterfactuals and Diverse Ensembles},
+  author={Scimeca, Luca and Rubinstein, Alexander and Teney, Damien and Oh, Seong Joon and Bengio, Yoshua},
+  booktitle={ICLR Workshop},
+  year={2025}
+}`,
+      "image": "pictures/luca2025diffdiv.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2311.16176"}
+      ],
+      "abstract": "Shortcut learning occurs when models rely on spurious correlations instead of robust features. This paper introduces DiffDiv, an ensemble diversification framework using diffusion probabilistic models (DPMs) to generate synthetic counterfactuals. These counterfactuals encourage ensemble disagreement, reducing reliance on shortcut cues. DiffDiv improves generalisation without requiring additional supervision or data collection.",
+      "tags": ["Robustness", "Representation Learning", "Generative Models"]
+    },    
+    {
+      "id": "darina2025binding",
+      "title": "CLIP Behaves like a Bag-of-Words Model Cross-modally but not Uni-modally",
+      "authors": [
+        {"name": "Darina Koishigarina", "url": "https://scalabletrustworthyai.github.io/member/darina/"},
+        {"name": "Arnas Uselis", "url": "https://www.linkedin.com/in/arnas-uselis-193883144/"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true}
+      ],
+      "venue": "arXiv",
+      "year": "2025",
+      "url": "https://arxiv.org/abs/2502.03566",
+      "bibtex": `@article{darina2025binding,
+  title={CLIP Behaves like a Bag-of-Words Model Cross-modally but not Uni-modally},
+  author={Koishigarina, Darina and Uselis, Arnas and Oh, Seong Joon},
+  journal={arXiv preprint arXiv:2502.03566},
+  year={2025}
+}`,
+      "image": "pictures/darina2025binding.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2502.03566"},
+        {"text": "Code", "url": "https://github.com/kdariina/CLIP-not-BoW-unimodally"}
+      ],
+      "abstract": "CLIP is widely used for downstream tasks but struggles with compositional understanding. It often acts like a bag-of-words model, failing to bind attributes to objects in cross-modal settings. The issue lies in the cross-modal alignment via cosine similarity. The authors propose LABCLIP, which applies a linear transformation to text embeddings before computing similarity. This improves attribute-object binding and enhances compositional understanding.",
+      "tags": ["Robustness"]
+    },
+    {
+      "id": "sohyun2025dicotta",
+      "title": "DiCoTTA: Domain-invariant Learning for Continual Test-time Adaptation",
+      "authors": [
+        {"name": "Sohyun Lee", "url": "https://sohyun-l.github.io/"},
+        {"name": "Nayeong Kim", "url": "https://nayeong-v-kim.github.io/"},
+        {"name": "Juwon Kang", "url": "https://openreview.net/profile?id=~Juwon_Kang1"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true},
+        {"name": "Suha Kwak", "url": "https://suhakwak.github.io/"}
+      ],
+      "venue": "arXiv",
+      "year": "2025",
+      "url": "https://arxiv.org/abs/2504.04981",
+      "bibtex": `@article{sohyun2025dicotta,
+  title={DiCoTTA: Domain-invariant Learning for Continual Test-time Adaptation},
+  author={Lee, Sohyun and Kim, Nayeong and Kang, Juwon and Oh, Seong Joon and Kwak, Suha},
+  journal={arXiv preprint arXiv:2504.04981},
+  year={2025}
+}`,
+      "image": "pictures/sohyun2025dicotta.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2504.04981"}
+      ],
+      "abstract": "This paper studies continual test-time adaptation (CTTA), the task of adapting a model to constantly changing unseen domains in testing while preserving previously learned knowledge. Existing CTTA methods mostly focus on adaptation to the current test domain only, overlooking generalization to arbitrary test domains a model may face in the future. To tackle this limitation, we present a novel online domain-invariant learning framework for CTTA, dubbed DiCoTTA. DiCoTTA aims to learn feature representation to be invariant to both current and previous test domains on the fly during testing. To this end, we propose a new model architecture and a test-time adaptation strategy dedicated to learning domain-invariant features without corrupting semantic contents, along with a new data structure and optimization algorithm for effectively managing information from previous test domains. DiCoTTA achieved state-of-the-art performance on four public CTTA benchmarks. Moreover, it showed superior generalization to unseen test domains.",
+      "tags": ["Robustness"]
+    },    
+    {
       "id": "haritz2025mia",
       "title": "Scaling Up Membership Inference: When and How Attacks Succeed on Large Language Models",
       "authors": [
@@ -84,13 +189,13 @@ booktitle = {International Conference on Learning Representations (ICLR)},
       "year": "2025",
       "url": "https://openreview.net/forum?id=qZEdmyqCHF",
       "bibtex": `@inproceedings{jaehyun2025iclr,
-title = {Decoupled Finetuning for Domain Generalizable Semantic Segmentation},
-author = {Pahk, Jaehyun and Kwon, Donghyeon and Oh, Seong Joon and Kwak, Suha},
-year = {2025},
-booktitle = {International Conference on Learning Representations (ICLR)},
+  title = {Decoupled Finetuning for Domain Generalizable Semantic Segmentation},
+  author = {Pahk, Jaehyun and Kwon, Donghyeon and Oh, Seong Joon and Kwak, Suha},
+  year = {2025},
+  booktitle = {International Conference on Learning Representations (ICLR)},
 }`,
       "image": "pictures/jaehyun2025iclr.png",
-      "links": [],
+      "links": [],      
       "abstract": "Joint finetuning of a pretrained encoder and a new decoder is common in semantic segmentation, but it struggles with domain shifts. Our Decoupled FineTuning (DeFT) method tackles this by warming up the decoder first and then finetuning both parts separately. This approach reduces learnable parameters and boosts generalisation.",
       "tags": ["Robustness", "Evaluation"]
     },
@@ -119,6 +224,26 @@ booktitle = {International Conference on Learning Representations (ICLR)},
       ],
       "abstract": "Explainable AI (XAI) has been criticised for relying too much on formalism and solutionism, focusing more on mathematical soundness than user needs. Despite efforts to correct this through user-focused studies from the HCI communities, we observe repeating patterns of formalism solutionism in a relatively young subfield of XAI: Training Data Attribution (TDA). We set out to correct this with a needfinding study with a diverse group of AI practitioners to identify potential user needs related to TDA. Our studies have uncovered new TDA tasks that are currently largely overlooked. We invite the TDA and XAI communities to consider these novel tasks and improve the user relevance of their research outcomes.",
       "tags": ["Explainability", "Evaluation"]
+    },
+    {
+      "id": "dongjun2025ovs",
+      "title": "Overcoming Domain Limitations in Open-vocabulary Segmentation",
+      "authors": [
+        {"name": "Dongjun Hwang", "url": ""},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true},
+        {"name": "Junsuk Choe", "url": ""}
+      ],
+      "venue": "arXiv",
+      "year": "2025",
+      "url": "https://arxiv.org/abs/2410.11536",
+      "bibtex": "@article{dongjun2025ovs,\n  title={Overcoming Domain Limitations in Open-vocabulary Segmentation},\n  author={Hwang, Dongjun and Oh, Seong Joon and Choe, Junsuk},\n  journal={arXiv preprint arXiv:2410.11536},\n  year={2025}\n}",
+      "image": "pictures/dongjun2025ovs.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2410.11536"},
+        {"text": "Code", "url": "https://github.com/dongjunhwang/dwi"}
+      ],
+      "abstract": "Open-vocabulary segmentation (OVS) models often underperform when applied to unseen domains. Fine-tuning on new datasets can improve performance but risks catastrophic forgetting. This paper introduces a method that enables OVS models to learn from new domains while preserving prior knowledge. The approach evaluates the input sample's proximity to multiple domains using precomputed multivariate normal distributions. Based on this prediction, it dynamically interpolates between the weights of the pre-trained decoder and the fine-tuned decoders. Experiments demonstrate that this method allows OVS models to adapt to new domains while maintaining performance on the original dataset.",
+      "tags": ["Computer Vision", "Domain Adaptation", "Segmentation"]
     },
     {
       "id": "alex2024diversify",
@@ -453,7 +578,7 @@ year = {2023}
       "tags": ["Uncertainty", "Evaluation"]
     },
     {
-      "id": "elif2023arxiv",
+      "id": "elif2025naturehumanbehaviour",
       "title": "Playing repeated games with Large Language Models",
       "authors": [
         {"name": "Elif Akata", "url": "https://github.com/eliaka"},
@@ -463,16 +588,16 @@ year = {2023}
         {"name": "Matthias Bethge", "url": "https://bethgelab.org/"},
         {"name": "Eric Schulz", "url": "https://www.kyb.tuebingen.mpg.de/person/103915/2549"}
       ],
-      "venue": "arXiv",
-      "year": "2023",
+      "venue": "Nature Human Behaviour",
+      "year": "2025",
       "url": "https://arxiv.org/abs/2305.16867",
-      "bibtex": `@article{elif2023arxiv,
+      "bibtex": `@article{elif2025naturehumanbehaviour,
 title = {Playing repeated games with Large Language Models},
 author = {Akata, Elif and Schulz, Lion and Coda-Forno, Julian and Oh, Seong Joon and Bethge, Matthias and Schulz, Eric},
-journal={arXiv preprint arXiv:2305.16867},
-year = {2023}
+journal={Nature Human Behaviour},
+year = {2025}
 }`,
-      "image": "pictures/elif2023arxiv.png",
+      "image": "pictures/elif2025naturehumanbehaviour.png",
       "links": [
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2305.16867"}
       ],
