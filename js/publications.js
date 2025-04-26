@@ -17,14 +17,21 @@ function renderPublication(publication) {
   const linksHTML = publication.links.length > 0 ? 
     publication.links.map(link => `<a href="${link.url}">${link.text}</a>`).join(' / ') : '';
   
-  // Create a hidden div with the BibTeX content and button to toggle it
+  // Create a BibTeX toggle link (without the pre element)
   const bibtexId = `bibtex-${publication.id}`;
-  const bibtexHTML = publication.bibtex ? 
-    `<a href="javascript:void(0)" onclick="toggleBibtex('${bibtexId}')">BibTeX</a>
-     <pre id="${bibtexId}" class="bibtex-content" style="display:none" onclick="selectAndCopyBibtex(event, '${bibtexId}')">${publication.bibtex}</pre>` : '';
+  const bibtexLinkHTML = publication.bibtex ? 
+    `<a href="javascript:void(0)" onclick="toggleBibtex('${bibtexId}')">BibTeX</a>` : '';
   
-  const linksSection = (bibtexHTML || linksHTML) ? 
-    `<br>\n${bibtexHTML}${linksHTML ? (bibtexHTML ? ' / ' : '') + linksHTML : ''}` : '';
+  // Create the BibTeX content pre element separately
+  const bibtexContentHTML = publication.bibtex ? 
+    `<pre id="${bibtexId}" class="bibtex-content" style="display:none" onclick="selectAndCopyBibtex(event, '${bibtexId}')">${publication.bibtex}</pre>` : '';
+  
+  // Combine all links first (BibTeX link + other links)
+  const combinedLinksHTML = bibtexLinkHTML + (linksHTML ? (bibtexLinkHTML ? ' / ' : '') + linksHTML : '');
+  
+  // Create the links section with the links on one line and the BibTeX content below them
+  const linksSection = combinedLinksHTML ? 
+    `<br>\n${combinedLinksHTML}\n${bibtexContentHTML}` : '';
 
   return `
     <div class="row common-rows">

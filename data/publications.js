@@ -15,7 +15,7 @@ const publicationsData = [
       "bibtex": `@inproceedings{haritz2025mia,
   title={Scaling Up Membership Inference: When and How Attacks Succeed on Large Language Models},
   author={Puerto, Haritz and Gubri, Martin and Yun, Sangdoo and Oh, Seong Joon},
-  year={2024},
+  year={2025},
   booktitle = "Annual Conference of the North American Chapter of the Association for Computational Linguistics: NAACL 2025",
 }`,
       "image": "pictures/haritz2025mia.png",
@@ -32,7 +32,7 @@ const publicationsData = [
         {"name": "Arnas Uselis", "url": "https://www.linkedin.com/in/arnas-uselis-193883144/"},
         {"name": "Seong Joon Oh", "url": "", "isPI": true}
       ],
-      "venue": "International Conference on Learning Representations, ICLR",
+      "venue": "ICLR",
       "year": "2025",
       "url": "https://openreview.net/forum?id=ByCV9xWfNK",
       "bibtex": `@inproceedings{arnas2025iclr,
@@ -306,7 +306,7 @@ year = {2023}
         {"name": "Alexander Rubinstein", "url": "https://scalabletrustworthyai.github.io/member/alex/"},
         {"name": "Seong Joon Oh", "url": "", "isPI": true}
       ],
-      "venue": "",
+      "venue": "arXiv",
       "year": "2023",
       "url": "https://trustworthyml.io/",
       "bibtex": `@misc{mucsányi2023trustworthy,
