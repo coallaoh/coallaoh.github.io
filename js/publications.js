@@ -1,5 +1,5 @@
 // Function to render a single publication
-function renderPublication(publication) {
+async function renderPublication(publication) {
   // Check if tags exist, otherwise use empty array
   const tags = publication.tags || [];
   const tagsHTML = tags.map(tag => 
@@ -7,9 +7,11 @@ function renderPublication(publication) {
   ).join('\n');
   
   // Render RTAITags if they exist
-  const rtaiTagsHTML = publication.rtai_tags ? publication.rtai_tags.map(tag => 
-    htmlCommunityTag(tag)
-  ).join('\n') : '';
+  let rtaiTagsHTML = '';
+  if (publication.rtai_tags) {
+    const rtaiTags = await Promise.all(publication.rtai_tags.map(tag => htmlCommunityTag(tag)));
+    rtaiTagsHTML = rtaiTags.join('\n');
+  }
   
   // Combine regular tags and RTAI tags
   const allTagsHTML = tagsHTML + (rtaiTagsHTML ? '\n' + rtaiTagsHTML : '');
@@ -120,37 +122,21 @@ class SimpleHasher {
     return this;
   }
 
-  digest(format) {
-    if (format === "hex") {
-      // For hex format, we'll create a simple hex representation
-      const encoder = new TextEncoder();
-      const data = encoder.encode(this._data);
-      let hexString = "";
-      
-      for (let i = 0; i < data.length; i++) {
-        const hex = (data[i] ^ (data[i] * 17 + 0xff)).toString(16).padStart(2, '0');
-        hexString += hex;
-      }
-      
-      // Ensure we have enough characters
-      while (hexString.length < 64) {
-        hexString += "0";
-      }
-      
-      return hexString;
-    } else {
-      // For non-hex format (default), return a numeric value
-      const encoder = new TextEncoder();
-      const data = encoder.encode(this._data);
-      let value = 0;
-      
-      for (let i = 0; i < data.length; i++) {
-        value = ((value << 5) - value) + data[i];
-        value = value & value; // Convert to 32bit integer
-      }
-      
-      return value;
-    }
+  digest() {
+    // manual SHA-256 fixed for this use case
+    const buffer = new TextEncoder().encode(this._data);
+    return crypto.subtle.digest("SHA-256", buffer)
+      .then(digest => {
+        const view = new DataView(digest);
+        // read first 6 bytes manually
+        const firstSix = (view.getUint8(0) * 2 ** 40) +
+                         (view.getUint8(1) * 2 ** 32) +
+                         (view.getUint8(2) * 2 ** 24) +
+                         (view.getUint8(3) * 2 ** 16) +
+                         (view.getUint8(4) * 2 ** 8) +
+                         (view.getUint8(5));
+        return firstSix;
+      });
   }
 }
 
@@ -161,93 +147,65 @@ function createHash(algorithm) {
   return new SimpleHasher();
 }
 
-function hashAcronym(value) {
+async function hashAcronym(value) {
   const hasher = createHash("sha256").update(value ?? "");
-  const hexDigest = hasher.digest("hex");
+  // digest() returns a Promise that resolves to a hex string
+  const digest = await hasher.digest();
+  
+  // Convert the first 12 characters of the hex digest to an integer
+  const hexDigest = digest.toString(16).padStart(12, '0');
   return parseInt(hexDigest.slice(0, 12), 16);
 }
 
-// Function to convert string to HSL color
-function stringToHSL(str) {
-  const baseHue = 150; // green base
-  const hash = hashAcronym(str);
-
-  const hue = baseHue + Math.abs(hash % 100) - 50;
-  return `hsl(${hue}, 50%, 50%)`;
-}
-
-// Function to adjust lightness level of HSL color
-function adjustLightness(hsl, level) {
-  const [hue, saturation, lightness] = hsl.match(/\d+/g)?.map(Number) ?? [
-    0, 0, 0,
-  ];
-  const newLightness = Math.min(100, Math.max(0, 50 + (level - 1) * 10)); // 명도(Lightness) 조절
-
-  return `hsl(${hue}, ${saturation}%, ${newLightness}%)`;
-}
-
-// Function to get color from category and level
-function getColor(category, level) {
-  const baseHSL = stringToHSL(category);
-  return adjustLightness(baseHSL, level);
-}
-
-// Use the new color function for community tags
-function getHashColor(acronym) {
-  if (!acronym) {
-    return "#CCCCCC";
-  }
-  
-  // Use our SimpleHasher to generate a hash value
-  const hasher = createHash("sha256").update(acronym);
-  const hexDigest = hasher.digest("hex");
-  const value = parseInt(hexDigest.slice(0, 12), 16);
-  
-  // Calculate HSL values based on the hash
-  const hue = Math.abs(value % 360);
-  const saturation = 40 + (Math.abs(value) % 40);
-  const lightness = 40 + (40 - (Math.abs(value) % 40));
-  
-  // Convert HSL to hex
+async function hashColor(acronym) {
+  const value = await hashAcronym(acronym);
+  const hue = value % 360;
+  const saturation = 40 + (value % 40);
+  const lightness = 40 + (40 - (value % 40));
   return hslToHex(hue, saturation, lightness);
 }
 
-// Helper function to convert HSL to hex
 function hslToHex(h, s, l) {
   s /= 100;
   l /= 100;
 
   const c = (1 - Math.abs(2 * l - 1)) * s;
-  const x = c * (1 - Math.abs((h / 60) % 2 - 1));
+  const x = c * (1 - Math.abs(((h / 60) % 2) - 1));
   const m = l - c / 2;
 
-  let r = 0, g = 0, b = 0;
+  let r = 0,
+    g = 0,
+    b = 0;
 
   if (0 <= h && h < 60) {
-    r = c; g = x; b = 0;
+    [r, g, b] = [c, x, 0];
   } else if (60 <= h && h < 120) {
-    r = x; g = c; b = 0;
+    [r, g, b] = [x, c, 0];
   } else if (120 <= h && h < 180) {
-    r = 0; g = c; b = x;
+    [r, g, b] = [0, c, x];
   } else if (180 <= h && h < 240) {
-    r = 0; g = x; b = c;
+    [r, g, b] = [0, x, c];
   } else if (240 <= h && h < 300) {
-    r = x; g = 0; b = c;
+    [r, g, b] = [x, 0, c];
   } else if (300 <= h && h < 360) {
-    r = c; g = 0; b = x;
+    [r, g, b] = [c, 0, x];
   }
 
-  function toHex(n) {
-    const hexValue = Math.round((n + m) * 255).toString(16);
-    return hexValue.length === 2 ? hexValue : '0' + hexValue;
-  }
+  const toHex = (n) => {
+    const hex = Math.round((n + m) * 255).toString(16);
+    return hex.length === 1 ? "0" + hex : hex;
+  };
 
   return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
 }
 
-// Function to create HTML for community tag
-function htmlCommunityTag(acronym, putColor = true, additionalText = "") {
-  const color = putColor ? getHashColor(acronym) : '#CCCCCC';
+// async function getColor(category, level) {
+//   const baseHSL = await stringToHSL(category);
+//   return adjustLightness(baseHSL, level);
+// }
+
+async function htmlCommunityTag(acronym, putColor = true, additionalText = "") {
+  const color = putColor ? await hashColor(acronym) : '#CCCCCC';
   return `<a href='https://researchtrend.ai/communities/${acronym}' style='text-decoration: none; color: white;'>
     <span class='inline-flex items-center rounded-full font-medium text-medium text-white' 
     style='background-color: ${color}; padding: 1px 4px; border-radius: 12px; font-family: Mukta, sans-serif;'>
@@ -269,7 +227,7 @@ function getTagColor(tag) {
 }
 
 // Function to render all publications
-function renderPublications() {
+async function renderPublications() {
   const publicationsContainer = document.getElementById('publications-container');
   if (!publicationsContainer) return;
   
@@ -282,8 +240,9 @@ function renderPublications() {
   // Sort publications by year (descending)
   const publications = [...publicationsData].sort((a, b) => b.year - a.year);
   
-  const publicationsHTML = publications.map(pub => renderPublication(pub)).join('\n');
-  publicationsContainer.innerHTML = publicationsHTML;
+  // Using Promise.all correctly to await all async renderPublication calls
+  const publicationsHTMLArray = await Promise.all(publications.map(pub => renderPublication(pub)));
+  publicationsContainer.innerHTML = publicationsHTMLArray.join('\n');
   
   // Make the functions globally available
   window.toggleBibtex = toggleBibtex;
@@ -291,4 +250,8 @@ function renderPublications() {
 }
 
 // Initialize when the DOM is loaded
-document.addEventListener('DOMContentLoaded', renderPublications); 
+document.addEventListener('DOMContentLoaded', () => {
+  renderPublications().catch(error => {
+    console.error('Error rendering publications:', error);
+  });
+}); 
