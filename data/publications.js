@@ -103,7 +103,7 @@ const publicationsData = [
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2504.04981"}
       ],
       "abstract": "This paper studies continual test-time adaptation (CTTA), the task of adapting a model to constantly changing unseen domains in testing while preserving previously learned knowledge. Existing CTTA methods mostly focus on adaptation to the current test domain only, overlooking generalization to arbitrary test domains a model may face in the future. To tackle this limitation, we present a novel online domain-invariant learning framework for CTTA, dubbed DiCoTTA. DiCoTTA aims to learn feature representation to be invariant to both current and previous test domains on the fly during testing. To this end, we propose a new model architecture and a test-time adaptation strategy dedicated to learning domain-invariant features without corrupting semantic contents, along with a new data structure and optimization algorithm for effectively managing information from previous test domains. DiCoTTA achieved state-of-the-art performance on four public CTTA benchmarks. Moreover, it showed superior generalization to unseen test domains.",
-      "rtai_tags": ["OOD", "TTA"]
+      "rtai_tags": ["TTA"]
     },    
     {
       "id": "haritz2025mia",
@@ -197,7 +197,7 @@ booktitle = {International Conference on Learning Representations (ICLR)},
       "image": "pictures/jaehyun2025iclr.png",
       "links": [],      
       "abstract": "Joint finetuning of a pretrained encoder and a new decoder is common in semantic segmentation, but it struggles with domain shifts. Our Decoupled FineTuning (DeFT) method tackles this by warming up the decoder first and then finetuning both parts separately. This approach reduces learnable parameters and boosts generalisation.",
-      "rtai_tags": ["OOD", "SSeg"]
+      "rtai_tags": ["SSeg", "OOD"]
     },
     {
       "id": "elisa2024tda",
@@ -243,7 +243,7 @@ booktitle = {International Conference on Learning Representations (ICLR)},
         {"text": "Code", "url": "https://github.com/dongjunhwang/dwi"}
       ],
       "abstract": "Open-vocabulary segmentation (OVS) models often underperform when applied to unseen domains. Fine-tuning on new datasets can improve performance but risks catastrophic forgetting. This paper introduces a method that enables OVS models to learn from new domains while preserving prior knowledge. The approach evaluates the input sample's proximity to multiple domains using precomputed multivariate normal distributions. Based on this prediction, it dynamically interpolates between the weights of the pre-trained decoder and the fine-tuned decoders. Experiments demonstrate that this method allows OVS models to adapt to new domains while maintaining performance on the original dataset.",
-      "rtai_tags": ["SSeg", "OOD", "VLM"]
+      "rtai_tags": ["SSeg", "VLM", "OOD"]
     },
     {
       "id": "alex2024diversify",
@@ -268,7 +268,7 @@ booktitle = {International Conference on Learning Representations (ICLR)},
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2409.16797"}
       ],
       "abstract": "Ensemble diversification has traditionally been applied at sub-ImageNet scales (e.g. Waterbirds). We present methods to make them applicable at ImageNet+ scales. (1) Instead of relying on a separate OOD dataset to diversify the ensembles on, we source them from hard samples of the training set. (2) Stochastic pair selection. (3) Diversification of last 2 layers. We show that diversified ensembles are useful at OOD generalisation and (particularly) OOD detection, where we achieve the state-of-the-art performance.",
-      "rtai_tags": ["OOD", "OODD", "BDL", "UQCV"]
+      "rtai_tags": ["OODD", "OOD", "UQCV"]
     },
     {
       "id": "evgenii2024ralm",
@@ -317,7 +317,7 @@ booktitle = {International Conference on Learning Representations (ICLR)},
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2402.19460"}
       ],
       "abstract": "After the Trustworthy Machine Learning course, Bálint has investigated the relationships between different types of uncertainty in machine learning models. He found that many methods claiming to measure specific uncertainties had not been thoroughly verified. After the experiments, we concluded that these methods hardly achieved their claimed goals. This revelation is crucial for the uncertainty estimation community, where they try to understand and disentangle different uncertainty types.",
-      "rtai_tags": ["UD", "BDL", "OODD", "UQCV"]
+      "rtai_tags": ["UD", "OODD", "UQCV"]
     },
     {
       "id": "kirchhof2024pretrained",
@@ -368,7 +368,7 @@ booktitle = {International Conference on Learning Representations (ICLR)},
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2402.12991"}
       ],
       "abstract": "Large language models (LLM) and surrounding services come with their own rules about who can use them and how they should be used. These rules are important to protect the company's work and to prevent misuse. Now, given a new LLM-based chatbot service, it's important to find out the underlying LLM in order to check the compliance with the rules attached to each LLM. Here's our method for doing this: We ask the chatbot a very specific question that only one company's machine will answer in a certain way. It's like asking a friend a secret question only they would know the answer to. If the machine answers the question the way we expect, we know it's based on a specific LLM.",
-      "rtai_tags": ["PILM", "SILM", "MLAU"]
+      "rtai_tags": ["MLAU", "SILM"]
     },
     {
       "id": "dennis2024apricot",
@@ -445,10 +445,11 @@ year = {2023}
       "image": "pictures/balint2023tml.png",
       "links": [
         {"text": "Webpage", "url": "https://trustworthyml.io/"},
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2310.08215"},
         {"text": "arXiv", "url": "https://arxiv.org/abs/2310.08215"}
       ],
       "abstract": "The challenges posed by the trustworthiness of machine learning models are increasingly significant as these models find real-world applications. Our newly-released textbook, \"Trustworthy Machine Learning,\" aims to address these challenges comprehensively. It covers four crucial dimensions: Out-of-Distribution Generalization, Explainability, Uncertainty Quantification, and Evaluation of Trustworthiness. The text offers a thorough analysis of seminal and modern research papers, elucidating the foundational theories and practices. Originating from a course first offered at the University of Tübingen in the Winter Semester of 2022/23, the book serves as a stand-alone resource and includes code snippets and additional references. For further information, please visit our dedicated website.",
-      "rtai_tags": ["BDL", "OODD", "OOD", "AAML", "TDI"]
+      "rtai_tags": ["OOD", "AAML", "FAtt", "TDI", "BDL"]
     },
     {
       "id": "elisa2023neurips",
@@ -812,7 +813,7 @@ tppubtype = {inproceedings}
         {"text": "Code", "url": "https://github.com/naver-ai/w-ood"}
       ],
       "abstract": "Weakly-supervised semantic segmentation (WSSS) is the task of solving pixel-wise class assignment with only the image-level supervision. The problem is ill-posed because the image-level labels alone do not let models distinguish foreground (FG) objects (e.g. train) from spuriously-correlated background (BG) cues (e.g. rail). Researchers have sought external sources of information, such as shape prior, to address the ill-posedness. In this paper, we explore a novel source: BG images (e.g. rail images without a train). Conceptually, telling models what are not the FG cues is equivalent to telling them what actually are the FG cues; BG images are sufficient for turning the problem into a well-posed one. Collecting such BG data is cost-efficient, requiring orders of magnitude less annotation costs than the already-cheap image-level labels.",
-      "rtai_tags": ["WSOL", "OOD"]
+      "rtai_tags": ["WSOL"]
     },
     {
       "id": "scimeca2022iclr",
@@ -990,7 +991,7 @@ tppubtype = {inproceedings}
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2106.04165"}
       ],
       "abstract": "Recovering the dynamical systems, or the data generation process, behind time series data enables an effective and robust prediction, interpretation, and forecasting. There exist prior methods for recovering either continuous or discrete dynamics, but not the mixture. The underlying dynamics behind many real-world systems contain both continuous and discrete elements. For example, an aircraft essentially follows a continuous dynamics but goes through a discrete mode shift at touchdown. Such a system is referred to as a Stochastic Hybrid System (SHS). We present a framework that recovers SHS from time series data using ingredients like Neural ODEs and latent variable models.",
-      "rtai_tags": ["AI4TS", "AI4CE"]
+      "rtai_tags": ["AI4TS"]
     },
     {
       "id": "yun2021cvpr",
@@ -1341,7 +1342,7 @@ year = {2019},
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2003.03879"}
       ],
       "abstract": "There has been a line of research on simple regularization techniques like CutMix (ICCV'19) and other lines of research on robustness and uncertainty. We make a happy marriage of the two and measure how well the regularization techniques improve robustness and uncertainty of a model.",
-      "rtai_tags": ["AAML", "OOD"]
+      "rtai_tags": ["OOD", "UQCV"]
     },
     {
       "id": "yun2019iccv",
@@ -1376,7 +1377,7 @@ year = {2019},
         {"text": "Project", "url": "https://clovaai.github.io/AdamP/"}
       ],
       "abstract": "A simple solution that works surprisingly well! Cut and paste patches from other images during training. Quite likely, you will see a performance boost.",
-      "rtai_tags": ["OOD"]
+      "rtai_tags": []
     },
     {
       "id": "baek2019iccv",
@@ -1569,7 +1570,7 @@ tppubtype = {inproceedings},
         {"text": "Code", "url": "https://github.com/coallaoh/AIP"}
       ],
       "abstract": "If face blurring doesn't work (ECCV'16), how should we shield our personal photos online against recognition systems? We propose a solution based on adversarial perturbations and the game theoretic considerations for the evaluation therein.",
-      "rtai_tags": ["PICV", "CVBM", "AAML"]
+      "rtai_tags": ["PICV", "AAML", "CVBM"]
     },
     {
       "id": "joon2017cvpr",
