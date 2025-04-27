@@ -420,6 +420,9 @@ function setupToggleButtons() {
           }
         }
       });
+      
+      // Filter publications after updating all toggles
+      filterPublicationsByTags();
     });
   }
   
@@ -440,6 +443,9 @@ function setupToggleButtons() {
           }
         }
       });
+      
+      // Filter publications after updating all toggles
+      filterPublicationsByTags();
     });
   }
 }
@@ -473,6 +479,49 @@ function toggleCommunityVisibility(community, isVisible) {
   if (checkbox) {
     checkbox.checked = isVisible;
   }
+  
+  // Filter publications based on selected communities
+  filterPublicationsByTags();
+}
+
+// Filter publications based on selected communities
+function filterPublicationsByTags() {
+  if (typeof publicationsData === 'undefined') return;
+  
+  // Get all communities
+  const allCommunities = Object.keys(communityVisibility);
+  
+  // Check if all communities are selected or none are selected
+  const selectedCommunities = allCommunities.filter(comm => communityVisibility[comm]);
+  const allSelected = selectedCommunities.length === allCommunities.length;
+  const noneSelected = selectedCommunities.length === 0;
+  
+  // Get all publication elements
+  const publicationElements = document.querySelectorAll('#publications-container .row.common-rows');
+  
+  publicationElements.forEach(pubElement => {
+    // If all or none are selected, show all publications
+    if (allSelected || noneSelected) {
+      pubElement.style.display = 'flex';
+      return;
+    }
+    
+    // Check if the publication has any of the selected community tags
+    const pubTags = Array.from(pubElement.querySelectorAll('a[href^="https://researchtrend.ai/communities/"]'))
+      .map(tag => tag.textContent.trim());
+    
+    // Special case for "Unknown" - show papers with no community tags
+    if (selectedCommunities.includes('Unknown') && pubTags.length === 0) {
+      pubElement.style.display = 'flex';
+      return;
+    }
+    
+    // Check if any of the publication's tags match the selected communities
+    const hasSelectedTag = pubTags.some(tag => selectedCommunities.includes(tag));
+    
+    // Show or hide based on whether it has a selected tag
+    pubElement.style.display = hasSelectedTag ? 'flex' : 'none';
+  });
 }
 
 // Initialize when the DOM is loaded
@@ -502,4 +551,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }, 1000);
   }
+  
+  // Make the filter function globally available
+  window.filterPublicationsByTags = filterPublicationsByTags;
 }); 

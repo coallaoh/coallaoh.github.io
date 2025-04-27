@@ -247,6 +247,11 @@ async function renderPublications() {
   // Make the functions globally available
   window.toggleBibtex = toggleBibtex;
   window.selectAndCopyBibtex = selectAndCopyBibtex;
+  
+  // Filter publications based on selected communities if the filter function exists
+  if (typeof filterPublicationsByTags === 'function') {
+    filterPublicationsByTags();
+  }
 }
 
 // Initialize when the DOM is loaded
