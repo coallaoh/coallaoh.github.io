@@ -373,8 +373,9 @@ async function createCommunityToggles(communities) {
     
     // Create the span similar to htmlCommunityTag
     const tagSpan = document.createElement('span');
-    tagSpan.className = 'inline-flex items-center rounded-full font-medium text-medium text-white';
+    tagSpan.className = 'inline-flex items-center rounded-full font-medium text-medium';
     tagSpan.style.backgroundColor = communityColors[community];
+    tagSpan.style.color = 'var(--community-tag-text-color)';
     tagSpan.style.padding = '1px 4px';
     tagSpan.style.borderRadius = '12px';
     tagSpan.style.fontFamily = 'Mukta, sans-serif';

@@ -72,6 +72,7 @@
   --code-hover-color: #eaeaea;
   --community-count-color: #666;
   --community-name-color: #333;
+  --community-tag-text-color: #ffffff;
 }
 
 [data-theme="dark"] {
@@ -83,6 +84,7 @@
   --code-hover-color: #444444;
   --community-count-color: #cccccc;
   --community-name-color: #ffffff;
+  --community-tag-text-color: #333333;
 }
 
 @media (prefers-color-scheme: dark) {
