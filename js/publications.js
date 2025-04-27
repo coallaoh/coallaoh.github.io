@@ -255,8 +255,15 @@ async function renderPublications() {
 }
 
 // Initialize when the DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-  renderPublications().catch(error => {
-    console.error('Error rendering publications:', error);
-  });
+document.addEventListener('DOMContentLoaded', function() {
+  renderPublications();
+  
+  // Add theme change listener for charts
+  const toggleSwitch = document.querySelector('#checkbox');
+  if (toggleSwitch) {
+    toggleSwitch.addEventListener('change', updateChartTheme);
+  }
+  
+  // Listen for system preference changes
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateChartTheme);
 }); 

@@ -564,6 +564,46 @@ function filterPublicationsByTags() {
   });
 }
 
+// Add a function to get theme-aware colors for charts
+function getChartColors() {
+  const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark' || 
+                     (window.matchMedia && 
+                      window.matchMedia('(prefers-color-scheme: dark)').matches && 
+                      !document.documentElement.hasAttribute('data-theme'));
+  
+  return {
+    gridColor: isDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)',
+    tickColor: isDarkMode ? 'rgba(255, 255, 255, 0.5)' : 'rgba(0, 0, 0, 0.5)',
+    textColor: isDarkMode ? '#e0e0e0' : '#666'
+  };
+}
+
+// Update chart theme when theme changes
+function updateChartTheme() {
+  if (window.topicTrendsChart && window.topicTrendsChart.options && 
+      window.topicTrendsChart.options.scales && 
+      window.topicTrendsChart.options.scales.x) {
+    const colors = getChartColors();
+    
+    window.topicTrendsChart.options.scales.x.grid.color = colors.gridColor;
+    window.topicTrendsChart.options.scales.y.grid.color = colors.gridColor;
+    window.topicTrendsChart.options.scales.x.ticks.color = colors.textColor;
+    window.topicTrendsChart.options.scales.y.ticks.color = colors.textColor;
+    
+    window.topicTrendsChart.update();
+  } else if (topicChart && topicChart.options && topicChart.options.scales) {
+    const colors = getChartColors();
+    
+    // Update topic chart if it exists
+    topicChart.options.scales.x.grid.color = colors.gridColor;
+    topicChart.options.scales.y.grid.color = colors.gridColor;
+    topicChart.options.scales.x.ticks.color = colors.textColor;
+    topicChart.options.scales.y.ticks.color = colors.textColor;
+    
+    topicChart.update();
+  }
+}
+
 // Initialize when the DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
   // We need to ensure publications are processed first
@@ -594,4 +634,70 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Make the filter function globally available
   window.filterPublicationsByTags = filterPublicationsByTags;
-}); 
+});
+
+function initializeTopicTrendsChart() {
+  const ctx = document.getElementById('topicTrendsChart');
+  if (!ctx) return;
+  
+  const colors = getChartColors();
+  
+  window.topicTrendsChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      datasets: [] // Will be populated later
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        x: {
+          type: 'linear',
+          position: 'bottom',
+          title: {
+            display: true,
+            text: 'Year',
+            color: colors.textColor
+          },
+          grid: {
+            color: colors.gridColor
+          },
+          ticks: {
+            color: colors.textColor
+          }
+        },
+        y: {
+          title: {
+            display: true,
+            text: 'Publications',
+            color: colors.textColor
+          },
+          grid: {
+            color: colors.gridColor
+          },
+          ticks: {
+            color: colors.textColor
+          }
+        }
+      },
+      plugins: {
+        legend: {
+          position: 'top',
+          labels: {
+            color: colors.textColor
+          }
+        },
+        tooltip: {
+          backgroundColor: 'rgba(0, 0, 0, 0.7)',
+          titleColor: '#fff',
+          bodyColor: '#fff',
+          callbacks: {
+            label: function(context) {
+              return context.dataset.label + ': ' + context.raw.y;
+            }
+          }
+        }
+      }
+    }
+  });
+} 

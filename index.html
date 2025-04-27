@@ -30,6 +30,16 @@
 </head>
 
 <body>
+  <!-- Dark Mode Toggle -->
+  <div class="theme-switch-wrapper">
+    <span class="darkmode-label">Light</span>
+    <label class="theme-switch" for="checkbox">
+      <input type="checkbox" id="checkbox" />
+      <div class="slider"></div>
+    </label>
+    <span class="darkmode-label">Dark</span>
+  </div>
+
   <div class="container">
     <div class="row" style="margin-top: 10px;">
       <div class="col-sm-4 name-column" style="min-width: 266px;">
@@ -201,6 +211,63 @@
       line-height: 1.2;
     }
   </style>
+
+  <script>
+    // Dark mode functionality
+    const toggleSwitch = document.querySelector('#checkbox');
+    const currentTheme = localStorage.getItem('theme');
+
+    // Function to set theme
+    function setTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+      
+      if (theme === 'dark') {
+        toggleSwitch.checked = true;
+      } else {
+        toggleSwitch.checked = false;
+      }
+      
+      // Update charts if they exist
+      if (typeof updateChartTheme === 'function') {
+        try {
+          updateChartTheme();
+        } catch (error) {
+          console.log('Chart update failed:', error);
+        }
+      }
+    }
+
+    // Check for saved user preference, if any
+    if (currentTheme) {
+      setTheme(currentTheme);
+    } else {
+      // If no preference stored, check system preference
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        setTheme('dark');
+      } else {
+        setTheme('light');
+      }
+    }
+
+    // Listen for toggle switch change
+    toggleSwitch.addEventListener('change', function(e) {
+      if (e.target.checked) {
+        setTheme('dark');
+      } else {
+        setTheme('light');
+      }
+    });
+
+    // Listen for system preference changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+      const newTheme = e.matches ? 'dark' : 'light';
+      // Only apply if user hasn't manually set a preference
+      if (!localStorage.getItem('theme')) {
+        setTheme(newTheme);
+      }
+    });
+  </script>
 </body>
 
 </html>
