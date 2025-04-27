@@ -255,8 +255,8 @@ span.highlight {
 
 /* Community filter styling */
 .community-toggle {
-  margin: 3px;
   display: inline-block;
+  margin: 2px;
 }
 
 .community-checkbox {
@@ -266,7 +266,10 @@ span.highlight {
 #communityFilters {
   margin-top: 10px;
   max-width: 100%;
+  display: flex;
   flex-wrap: wrap;
+  gap: 2px;
+  justify-content: center;
 }
 
 /* Style the control buttons to match community tags */

@@ -5,6 +5,17 @@ let communityVisibility = {};
 let communityColors = {};
 let communityTotalAreas = {};
 
+// Helper function to find a community's full name from its acronym
+function getCommunityFullName(acronym) {
+  if (!Array.isArray(communities)) {
+    console.error('Communities data is not an array');
+    return acronym;
+  }
+  
+  const community = communities.find(comm => comm.acronym === acronym);
+  return community ? community.full_name : acronym;
+}
+
 // Function to generate topic trend visualization
 function generateTopicTrendsChart() {
   // Check if Chart.js is loaded
@@ -17,6 +28,14 @@ function generateTopicTrendsChart() {
   if (typeof publicationsData === 'undefined') {
     console.error('Publications data not found');
     return;
+  }
+  
+  // Check if communities data is available
+  if (typeof communities === 'undefined') {
+    console.error('Communities data not found');
+    console.log('Make sure data/communities.js is loaded');
+  } else {
+    console.log('Communities data loaded successfully:', communities.length, 'communities found');
   }
 
   // Get the canvas element
@@ -159,7 +178,7 @@ function createStackedBarChart(ctx, yearCommunityMap) {
       plugins: {
         title: {
           display: true,
-          text: 'Research Community Tags by Year',
+          text: 'To Which Communities Did I Contribute?',
           font: {
             size: 16
           }
@@ -173,9 +192,12 @@ function createStackedBarChart(ctx, yearCommunityMap) {
             title: function() {
               return ''; // Hide the year label (title)
             },
-            // Show only the community name on hover
+            // Show acronym and full name on hover
             label: function(context) {
-              return context.dataset.label; // Just show the acronym
+              const acronym = context.dataset.label;
+              // Get full name using the helper function
+              const fullName = getCommunityFullName(acronym);
+              return `${acronym}: ${fullName}`;
             },
             // Remove the colored box from the tooltip
             labelColor: function(context) {
@@ -271,16 +293,23 @@ function createCommunityToggles(communities) {
   const container = document.getElementById('communityFilters');
   if (!container) return;
   
+  // Set container styles for denser layout
+  container.style.display = 'flex';
+  container.style.flexWrap = 'wrap';
+  container.style.gap = '2px';
+  container.style.justifyContent = 'center';
+  container.style.maxWidth = '100%';
+  
   // Clear any existing toggles
   container.innerHTML = '';
   
   // Create a toggle for each community, sorted by area
   communities.forEach(community => {
     const area = communityTotalAreas[community];
-    const areaText = ` (${area.toFixed(1)})`;
     
     const toggleContainer = document.createElement('div');
-    toggleContainer.className = 'community-toggle m-1';
+    toggleContainer.className = 'community-toggle';
+    toggleContainer.style.margin = '2px'; // Reduce margins to fit more tags per row
     
     // Create a checkbox but hide it visually
     const checkbox = document.createElement('input');
@@ -306,7 +335,53 @@ function createCommunityToggles(communities) {
     tagSpan.style.padding = '1px 4px';
     tagSpan.style.borderRadius = '12px';
     tagSpan.style.fontFamily = 'Mukta, sans-serif';
-    tagSpan.textContent = community + areaText;
+    
+    // Create main text and area text separately
+    const mainText = document.createTextNode(community + ' ');
+    tagSpan.appendChild(mainText);
+    
+    // Add the area as a smaller text
+    const areaSpan = document.createElement('span');
+    areaSpan.style.fontSize = '60%';
+    areaSpan.textContent = area.toFixed(1);
+    tagSpan.appendChild(areaSpan);
+    
+    // Add tooltip showing full community name
+    const fullName = getCommunityFullName(community);
+    if (fullName !== community) {  // Only add tooltip if we have a full name
+      // Create a tooltip div that appears on hover
+      const tooltip = document.createElement('div');
+      tooltip.className = 'community-tooltip';
+      tooltip.textContent = fullName;
+      tooltip.style.display = 'none';
+      tooltip.style.position = 'absolute';
+      tooltip.style.backgroundColor = '#333';
+      tooltip.style.color = 'white';
+      tooltip.style.padding = '5px 8px';
+      tooltip.style.borderRadius = '4px';
+      tooltip.style.zIndex = '1000';
+      tooltip.style.fontSize = '14px';
+      tooltip.style.pointerEvents = 'none'; // Prevent tooltip from blocking mouse events
+      
+      // Add events to show/hide the tooltip
+      label.onmouseenter = (e) => {
+        tooltip.style.display = 'block';
+        tooltip.style.left = (e.pageX + 10) + 'px';
+        tooltip.style.top = (e.pageY + 10) + 'px';
+      };
+      
+      label.onmousemove = (e) => {
+        tooltip.style.left = (e.pageX + 10) + 'px';
+        tooltip.style.top = (e.pageY + 10) + 'px';
+      };
+      
+      label.onmouseleave = () => {
+        tooltip.style.display = 'none';
+      };
+      
+      // Add the tooltip to the document body
+      document.body.appendChild(tooltip);
+    }
     
     // Append elements
     label.appendChild(tagSpan);
