@@ -396,7 +396,7 @@ async function createCommunityToggles(communities) {
     countCell.style.verticalAlign = 'middle';
     countCell.style.width = '30px';
     countCell.style.fontSize = '12px';
-    countCell.style.color = '#666';
+    countCell.style.color = 'var(--community-count-color)';
     countCell.style.textAlign = 'right';
     countCell.textContent = area.toFixed(1);
     row.appendChild(countCell);
@@ -415,7 +415,7 @@ async function createCommunityToggles(communities) {
     link.href = `https://researchtrend.ai/communities/${community}`;
     link.textContent = fullName;
     link.style.textDecoration = 'underline'; // Add underline to indicate it's a link
-    link.style.color = '#333';
+    link.style.color = 'var(--community-name-color)';
     link.style.fontSize = '14px'; // Smaller text
     link.target = '_blank'; // Open in new tab
     link.style.whiteSpace = 'nowrap';
@@ -574,7 +574,7 @@ function getChartColors() {
   return {
     gridColor: isDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)',
     tickColor: isDarkMode ? 'rgba(255, 255, 255, 0.5)' : 'rgba(0, 0, 0, 0.5)',
-    textColor: isDarkMode ? '#e0e0e0' : '#666'
+    textColor: isDarkMode ? '#ffffff' : '#666'
   };
 }
 

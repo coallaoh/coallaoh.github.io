@@ -70,6 +70,8 @@
   --link-hover-color: #f09228;
   --code-bg-color: #f5f5f5;
   --code-hover-color: #eaeaea;
+  --community-count-color: #666;
+  --community-name-color: #333;
 }
 
 [data-theme="dark"] {
@@ -79,6 +81,8 @@
   --link-hover-color: #ff9f3a;
   --code-bg-color: #333333;
   --code-hover-color: #444444;
+  --community-count-color: #cccccc;
+  --community-name-color: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
