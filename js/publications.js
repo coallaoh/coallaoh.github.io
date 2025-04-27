@@ -107,14 +107,70 @@ function selectAndCopyBibtex(event, id) {
   }
 }
 
+class SimpleHasher {
+  constructor() {
+    this._data = "";
+  }
+
+  update(data) {
+    if (typeof data !== "string") {
+      throw new TypeError("Only string input supported");
+    }
+    this._data += data;
+    return this;
+  }
+
+  digest(format) {
+    if (format === "hex") {
+      // For hex format, we'll create a simple hex representation
+      const encoder = new TextEncoder();
+      const data = encoder.encode(this._data);
+      let hexString = "";
+      
+      for (let i = 0; i < data.length; i++) {
+        const hex = (data[i] ^ (data[i] * 17 + 0xff)).toString(16).padStart(2, '0');
+        hexString += hex;
+      }
+      
+      // Ensure we have enough characters
+      while (hexString.length < 64) {
+        hexString += "0";
+      }
+      
+      return hexString;
+    } else {
+      // For non-hex format (default), return a numeric value
+      const encoder = new TextEncoder();
+      const data = encoder.encode(this._data);
+      let value = 0;
+      
+      for (let i = 0; i < data.length; i++) {
+        value = ((value << 5) - value) + data[i];
+        value = value & value; // Convert to 32bit integer
+      }
+      
+      return value;
+    }
+  }
+}
+
+function createHash(algorithm) {
+  if (algorithm !== "sha256") {
+    throw new Error("Only sha256 supported");
+  }
+  return new SimpleHasher();
+}
+
+function hashAcronym(value) {
+  const hasher = createHash("sha256").update(value ?? "");
+  const hexDigest = hasher.digest("hex");
+  return parseInt(hexDigest.slice(0, 12), 16);
+}
+
 // Function to convert string to HSL color
 function stringToHSL(str) {
   const baseHue = 150; // green base
-
-  let hash = 0;
-  for (let i = 0; i < str.length; i++) {
-    hash = str.charCodeAt(i) + ((hash << 5) - hash);
-  }
+  const hash = hashAcronym(str);
 
   const hue = baseHue + Math.abs(hash % 100) - 50;
   return `hsl(${hue}, 50%, 50%)`;
@@ -122,9 +178,10 @@ function stringToHSL(str) {
 
 // Function to adjust lightness level of HSL color
 function adjustLightness(hsl, level) {
-  const matches = hsl.match(/\d+/g);
-  const [hue, saturation, lightness] = matches ? matches.map(Number) : [0, 0, 0];
-  const newLightness = Math.min(100, Math.max(0, 50 + (level - 1) * 10)); // Adjust lightness level
+  const [hue, saturation, lightness] = hsl.match(/\d+/g)?.map(Number) ?? [
+    0, 0, 0,
+  ];
+  const newLightness = Math.min(100, Math.max(0, 50 + (level - 1) * 10)); // 명도(Lightness) 조절
 
   return `hsl(${hue}, ${saturation}%, ${newLightness}%)`;
 }
@@ -137,38 +194,14 @@ function getColor(category, level) {
 
 // Use the new color function for community tags
 function getHashColor(acronym) {
-  // Generate a hash value from the acronym using SHA-256
-  // Create a SHA-256 hash from the acronym and take first 12 hex chars
-  let value = 0;
-  
-  // Implementation of Python's hash function:
-  // def hash(value: str) -> int:
-  //    return int(hashlib.sha256((value or "").encode()).hexdigest()[:12], 16)
-  if (acronym) {
-    // We need to use the SubtleCrypto API for SHA-256 hashing
-    // Since this is synchronous code, we'll use a simpler approach that mimics the hash
-    const encoder = new TextEncoder();
-    const data = encoder.encode(acronym || "");
-    
-    // Create a string to hold our hex representation
-    let hexString = "";
-    
-    // Simple implementation to generate a SHA-256-like hash
-    // This is not cryptographically secure but works for color generation
-    for (let i = 0; i < data.length; i++) {
-      // Generate some hex values based on char codes
-      const hex = (data[i] ^ (data[i] * 17 + 0xff)).toString(16).padStart(2, '0');
-      hexString += hex;
-    }
-    
-    // Ensure we have at least 12 characters
-    while (hexString.length < 12) {
-      hexString += "0";
-    }
-    
-    // Take first 12 chars and convert to integer
-    value = parseInt(hexString.substring(0, 12), 16);
+  if (!acronym) {
+    return "#CCCCCC";
   }
+  
+  // Use our SimpleHasher to generate a hash value
+  const hasher = createHash("sha256").update(acronym);
+  const hexDigest = hasher.digest("hex");
+  const value = parseInt(hexDigest.slice(0, 12), 16);
   
   // Calculate HSL values based on the hash
   const hue = Math.abs(value % 360);

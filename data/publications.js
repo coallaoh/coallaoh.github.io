@@ -52,8 +52,7 @@ const publicationsData = [
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2311.16176"}
       ],
       "abstract": "Shortcut learning occurs when models rely on spurious correlations instead of robust features. This paper introduces DiffDiv, an ensemble diversification framework using diffusion probabilistic models (DPMs) to generate synthetic counterfactuals. These counterfactuals encourage ensemble disagreement, reducing reliance on shortcut cues. DiffDiv improves generalisation without requiring additional supervision or data collection.",
-      "tags": ["Robustness", "Representation Learning", "Generative Models"],
-      "rtai_tags": ["DPM", "Ensemble", "GEN"]
+      "rtai_tags": ["SyDa"]
     },    
     {
       "id": "darina2025binding",
@@ -79,7 +78,7 @@ const publicationsData = [
       ],
       "abstract": "CLIP is widely used for downstream tasks but struggles with compositional understanding. It often acts like a bag-of-words model, failing to bind attributes to objects in cross-modal settings. The issue lies in the cross-modal alignment via cosine similarity. The authors propose LABCLIP, which applies a linear transformation to text embeddings before computing similarity. This improves attribute-object binding and enhances compositional understanding.",
       "tags": ["Robustness"],
-      "rtai_tags": ["CLIP", "MM", "VL"]
+      "rtai_tags": ["VLM"]
     },
     {
       "id": "sohyun2025dicotta",
