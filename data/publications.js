@@ -77,7 +77,6 @@ const publicationsData = [
         {"text": "Code", "url": "https://github.com/kdariina/CLIP-not-BoW-unimodally"}
       ],
       "abstract": "CLIP is widely used for downstream tasks but struggles with compositional understanding. It often acts like a bag-of-words model, failing to bind attributes to objects in cross-modal settings. The issue lies in the cross-modal alignment via cosine similarity. The authors propose LABCLIP, which applies a linear transformation to text embeddings before computing similarity. This improves attribute-object binding and enhances compositional understanding.",
-      "tags": ["Robustness"],
       "rtai_tags": ["VLM"]
     },
     {
@@ -104,8 +103,7 @@ const publicationsData = [
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2504.04981"}
       ],
       "abstract": "This paper studies continual test-time adaptation (CTTA), the task of adapting a model to constantly changing unseen domains in testing while preserving previously learned knowledge. Existing CTTA methods mostly focus on adaptation to the current test domain only, overlooking generalization to arbitrary test domains a model may face in the future. To tackle this limitation, we present a novel online domain-invariant learning framework for CTTA, dubbed DiCoTTA. DiCoTTA aims to learn feature representation to be invariant to both current and previous test domains on the fly during testing. To this end, we propose a new model architecture and a test-time adaptation strategy dedicated to learning domain-invariant features without corrupting semantic contents, along with a new data structure and optimization algorithm for effectively managing information from previous test domains. DiCoTTA achieved state-of-the-art performance on four public CTTA benchmarks. Moreover, it showed superior generalization to unseen test domains.",
-      "tags": ["Robustness"],
-      "rtai_tags": ["DA", "TTA", "CL"]
+      "rtai_tags": ["OOD", "TTA"]
     },    
     {
       "id": "haritz2025mia",
@@ -130,8 +128,7 @@ const publicationsData = [
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2411.00154"}
       ],
       "abstract": "People have tried to check if certain copyrighted material is used by LLMs by analysing their characteristic reactions to it, a task known as Membership Inference Attack (MIA). Research so far has mostly reported negative results, finding barely any statistically significant signals. In our paper, we show that meaningful signals only appear at scale: not in sentences or paragraphs, but at the level of documents and more.",
-      "tags": ["Privacy & Security", "Evaluation"],
-      "rtai_tags": ["LLM", "SEC", "MIA"]
+      "rtai_tags": ["MIALM"]
     },
     {
       "id": "arnas2025iclr",
@@ -152,8 +149,7 @@ booktitle = {International Conference on Learning Representations (ICLR)},
       "image": "pictures/arnas2025iclr.png",
       "links": [],
       "abstract": "Retraining the last layer for target OOD dataset is a common practice for adapting to new distributions. We question the practice and consider using intermediate-layer representations. This turns out to be a good idea in many vision applications. The empirical results are quite surprising.",
-      "tags": ["Robustness", "Evaluation"],
-      "rtai_tags": ["OOD", "CV", "IL"]
+      "rtai_tags": ["OOD"]
     },
     {
       "id": "ankit2025star",
@@ -178,8 +174,7 @@ booktitle = {International Conference on Learning Representations (ICLR)},
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2403.07968"}
       ],
       "abstract": "The non-convexity of modern neural networks poses unique challenges for understanding and controlling them. While optima may be scattered across different regions of the parameter space, training methods are expected to find good solutions. We aim to understand the geometric structure of these solutions by investigating whether they form a star domain. We apply linear interpolation between models trained with different initialisations and examine the resulting performance. Experimental results from 11 architectures on 5 datasets reveal that in 80% of cases, the average performance on the linear interpolation path stays within 20% of the original performance. We further show that these findings are unaffected by various factors such as optimiser choice, weight averaging, or model accuracy.",
-      "tags": ["Robustness", "Evaluation"],
-      "rtai_tags": ["OPT", "NN", "THE"]
+      "rtai_tags": ["MoMe"]
     },
     {
       "id": "jaehyun2025iclr",
@@ -202,7 +197,7 @@ booktitle = {International Conference on Learning Representations (ICLR)},
       "image": "pictures/jaehyun2025iclr.png",
       "links": [],      
       "abstract": "Joint finetuning of a pretrained encoder and a new decoder is common in semantic segmentation, but it struggles with domain shifts. Our Decoupled FineTuning (DeFT) method tackles this by warming up the decoder first and then finetuning both parts separately. This approach reduces learnable parameters and boosts generalisation.",
-      "tags": ["Robustness", "Evaluation"]
+      "rtai_tags": ["OOD", "SSeg"]
     },
     {
       "id": "elisa2024tda",
@@ -228,7 +223,7 @@ booktitle = {International Conference on Learning Representations (ICLR)},
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2409.16978"}
       ],
       "abstract": "Explainable AI (XAI) has been criticised for relying too much on formalism and solutionism, focusing more on mathematical soundness than user needs. Despite efforts to correct this through user-focused studies from the HCI communities, we observe repeating patterns of formalism solutionism in a relatively young subfield of XAI: Training Data Attribution (TDA). We set out to correct this with a needfinding study with a diverse group of AI practitioners to identify potential user needs related to TDA. Our studies have uncovered new TDA tasks that are currently largely overlooked. We invite the TDA and XAI communities to consider these novel tasks and improve the user relevance of their research outcomes.",
-      "tags": ["Explainability", "Evaluation"]
+      "rtai_tags": ["TDI"]
     },
     {
       "id": "dongjun2025ovs",
@@ -248,7 +243,7 @@ booktitle = {International Conference on Learning Representations (ICLR)},
         {"text": "Code", "url": "https://github.com/dongjunhwang/dwi"}
       ],
       "abstract": "Open-vocabulary segmentation (OVS) models often underperform when applied to unseen domains. Fine-tuning on new datasets can improve performance but risks catastrophic forgetting. This paper introduces a method that enables OVS models to learn from new domains while preserving prior knowledge. The approach evaluates the input sample's proximity to multiple domains using precomputed multivariate normal distributions. Based on this prediction, it dynamically interpolates between the weights of the pre-trained decoder and the fine-tuned decoders. Experiments demonstrate that this method allows OVS models to adapt to new domains while maintaining performance on the original dataset.",
-      "tags": ["Computer Vision", "Domain Adaptation", "Segmentation"]
+      "rtai_tags": ["SSeg", "OOD", "VLM"]
     },
     {
       "id": "alex2024diversify",
@@ -273,7 +268,7 @@ booktitle = {International Conference on Learning Representations (ICLR)},
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2409.16797"}
       ],
       "abstract": "Ensemble diversification has traditionally been applied at sub-ImageNet scales (e.g. Waterbirds). We present methods to make them applicable at ImageNet+ scales. (1) Instead of relying on a separate OOD dataset to diversify the ensembles on, we source them from hard samples of the training set. (2) Stochastic pair selection. (3) Diversification of last 2 layers. We show that diversified ensembles are useful at OOD generalisation and (particularly) OOD detection, where we achieve the state-of-the-art performance.",
-      "tags": ["Robustness", "Uncertainty", "Evaluation", "Large-Scale ML"]
+      "rtai_tags": ["OOD", "OODD", "BDL", "UQCV"]
     },
     {
       "id": "evgenii2024ralm",
@@ -298,7 +293,7 @@ booktitle = {International Conference on Learning Representations (ICLR)},
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2404.16032"}
       ],
       "abstract": "Retrieval augmented generation (RAG) promises more trustworthy outputs from large language models (LLMs). RAG first retrieves relevant documents from a DB and includes them in the context for subsequent generation. However, RAG does not come with guarantee. Eventually, LLM decides whether to use the new information in retrieved document or to stick to the original information in the pre-training data. We present a study on this knowledge conflict.",
-      "tags": ["Explainability", "Evaluation", "Large-Scale ML"]
+      "rtai_tags": ["RALM"]
     },
     {
       "id": "balint2024disentanglement",
@@ -322,7 +317,7 @@ booktitle = {International Conference on Learning Representations (ICLR)},
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2402.19460"}
       ],
       "abstract": "After the Trustworthy Machine Learning course, Bálint has investigated the relationships between different types of uncertainty in machine learning models. He found that many methods claiming to measure specific uncertainties had not been thoroughly verified. After the experiments, we concluded that these methods hardly achieved their claimed goals. This revelation is crucial for the uncertainty estimation community, where they try to understand and disentangle different uncertainty types.",
-      "tags": ["Uncertainty", "Evaluation"]
+      "rtai_tags": ["UD", "BDL", "OODD", "UQCV"]
     },
     {
       "id": "kirchhof2024pretrained",
@@ -347,7 +342,7 @@ booktitle = {International Conference on Learning Representations (ICLR)},
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2402.16569"}
       ],
       "abstract": "Uncertainty estimation so far had to be learned from scratch for each new task. We introduce a new approach that allows us to train uncertainty estimation on a large, general dataset and then apply it to new, specific tasks. We focus on practicality and efficiency. Our approach captures inherent uncertainty in the data, separate from uncertainty due to limited knowledge.",
-      "tags": ["Uncertainty", "Evaluation", "Large-Scale ML"]
+      "rtai_tags": ["UQCV"]
     },
     {
       "id": "martin2024trap",
@@ -373,7 +368,7 @@ booktitle = {International Conference on Learning Representations (ICLR)},
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2402.12991"}
       ],
       "abstract": "Large language models (LLM) and surrounding services come with their own rules about who can use them and how they should be used. These rules are important to protect the company's work and to prevent misuse. Now, given a new LLM-based chatbot service, it's important to find out the underlying LLM in order to check the compliance with the rules attached to each LLM. Here's our method for doing this: We ask the chatbot a very specific question that only one company's machine will answer in a certain way. It's like asking a friend a secret question only they would know the answer to. If the machine answers the question the way we expect, we know it's based on a specific LLM.",
-      "tags": ["Privacy & Security", "Evaluation", "Large-Scale ML"]
+      "rtai_tags": ["PILM", "SILM", "MLAU"]
     },
     {
       "id": "dennis2024apricot",
@@ -399,7 +394,7 @@ booktitle = {International Conference on Learning Representations (ICLR)},
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2403.05973"}
       ],
       "abstract": "We can't trust large language model (LLM) outputs. One of the reasons is that it doesn't always generate reliable confidence estimates. One could look into the model likelihoods, but even that is infeasible for many black-box models. We show here that it's possible to train a lightweight external model to infer an LLM's internal confidence based only on the prompt and answers from the LLM (purely black box).",
-      "tags": ["Uncertainty", "Large-Scale ML"]
+      "rtai_tags": ["UQLM"]
     },
     {
       "id": "elisa2023neuripsxaiw",
@@ -424,7 +419,7 @@ year = {2023}
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2310.20477"}
       ],
       "abstract": "Training data attribution (TDA) provides a non-parametric viewpoint for model explanations - which training data points are blamable for this test error? Apparently useful in practice, we realised that the actual usefulness is not tested in real applications. As a first step, we approach individuals working in a diverse array of sectors, either using or developing ML models, and ask whether they would find TDA useful in practice. The answer is affirmative - read the paper for more details.",
-      "tags": ["Explainability", "Evaluation"]
+      "rtai_tags": ["TDI"]
     },
     {
       "id": "balint2023tml",
@@ -453,7 +448,7 @@ year = {2023}
         {"text": "arXiv", "url": "https://arxiv.org/abs/2310.08215"}
       ],
       "abstract": "The challenges posed by the trustworthiness of machine learning models are increasingly significant as these models find real-world applications. Our newly-released textbook, \"Trustworthy Machine Learning,\" aims to address these challenges comprehensively. It covers four crucial dimensions: Out-of-Distribution Generalization, Explainability, Uncertainty Quantification, and Evaluation of Trustworthiness. The text offers a thorough analysis of seminal and modern research papers, elucidating the foundational theories and practices. Originating from a course first offered at the University of Tübingen in the Winter Semester of 2022/23, the book serves as a stand-alone resource and includes code snippets and additional references. For further information, please visit our dedicated website.",
-      "tags": ["Robustness", "Uncertainty", "Human Annotation", "Explainability", "Evaluation", "Large-Scale ML"]
+      "rtai_tags": ["BDL", "OODD", "OOD", "AAML", "TDI"]
     },
     {
       "id": "elisa2023neurips",
@@ -477,7 +472,7 @@ year = {2023}
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2305.19765"}
       ],
       "abstract": "Consider Training Data Attribution (TDA) as a spotlight, highlighting the role each training sample plays in the predictions a model whips up. It's a tantalizing concept, especially for human-centric XAI, where it can guide users to tweak their training samples for better results. However, it's a bit like trying to hear a whisper in a storm. That's because the impact of removing a single training sample usually pales in comparison to the cacophony of noise stirred up during model training, like the random spark of model initialization or the chaotic dance of SGD batch shuffling. To understand this better, we've adopted a Bayesian deep learning viewpoint, treating our learned model as a Bayesian posterior and TDA estimates as random variables. Our findings? TDA is like trying to tune in to a radio station that's mostly static. It's really only effective in those rare instances when the impact of a single sample isn't lost in the noise. In those cases, TDA can indeed play a sweet tune!",
-      "tags": ["Uncertainty", "Explainability", "Evaluation"]
+      "rtai_tags": ["TDI", "BDL"]
     },
     {
       "id": "siwon2023neurips",
@@ -504,7 +499,7 @@ year = {2023}
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2307.01881"}
       ],
       "abstract": "Large language models (LLMs) are like giant sponges, soaking up vast amounts of data from the web. But amidst all that data, there could be some sensitive stuff, like personally identifiable information (PII). Makes you a bit worried, right? That's where our new tool, ProPILE, comes in. Think of it as a detective, helping people investigate if their personal data might be seeping out from these LLMs. You can create your own prompts based on your personal info to check how much of your PII are likely to be exposed to millions of users. ProPILE is one of our first efforts to empower data subjects to gain awareness and control over their own PII in the era of LLMs.",
-      "tags": ["Privacy & Security", "Evaluation", "Large-Scale ML"]
+      "rtai_tags": ["PILM"]
     },
     {
       "id": "teney2023neurips",
@@ -529,7 +524,7 @@ year = {2023}
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2209.00613"}
       ],
       "abstract": "Several recent studies have reported positive correlations between in-distribution (ID) and out-of-distribution (OOD) generalisation performances. In particular, Wenzel et al. (2022) found that none of the 31k networks examined on 172 dataset pairs has shown a trade-off, or a negative correlation, between the ID and OOD performances. They further recommend that, to improve the OOD generalisation, one can instead focus on improving the ID generalisation. We argue that this may not always be true. We present counterexamples where one does observe a trade-off between ID and OOD generalisation. We point to the selection method for networks as the key reason for the contradicting observations. We alter the recommendation to the field in a more nuanced manner.",
-      "tags": ["Robustness", "Evaluation"]
+      "rtai_tags": ["OOD"]
     },
     {
       "id": "kirchhof2023neuripsdb",
@@ -554,7 +549,7 @@ year = {2023}
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2307.03810"}
       ],
       "abstract": "NeurIPS D&B extension of the UAI Epistemic AI Workshop paper below.",
-      "tags": ["Uncertainty", "Evaluation"]
+      "rtai_tags": ["UQCV"]
     },
     {
       "id": "kirchhof2023uaieai",
@@ -580,7 +575,7 @@ year = {2023}
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2307.03810"}
       ],
       "abstract": "We developed the Uncertainty-aware Representation Learning (URL) benchmark in our research. This tool evaluates the reliability of uncertainty estimates from pretrained models on unseen datasets. Its implementation is simple, requiring only four lines of code. In our experiment, we applied URL to ten models trained on ImageNet. Then, we tested these models on eight different datasets. The results showed that achieving transferable uncertainty quantification remains a challenge. We invite the community to work on this novel problem!",
-      "tags": ["Uncertainty", "Evaluation"]
+      "rtai_tags": ["UQCV"]
     },
     {
       "id": "elif2025naturehumanbehaviour",
@@ -607,7 +602,7 @@ year = {2025}
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2305.16867"}
       ],
       "abstract": "Imagine Large Language Models (LLMs) as digital diplomats, interacting with us and others in the cyber world. We set LLMs - GPT-3, GPT-3.5, and GPT-4 - against each other in games to understand their social behavior. LLMs are great when self-interest rules, like in the Prisoner's Dilemma, but stumble when coordination is key. GPT-4, for instance, acts tough in the Prisoner's Dilemma and struggles with simple conventions in the Battle of the Sexes. But, give GPT-4 more info or ask it to predict the opponent's move, and it adjusts its strategy. Our insights open up an exciting path towards a behavioral game theory for machines!",
-      "tags": ["Evaluation", "Large-Scale ML"]
+      "rtai_tags": []
     },
     {
       "id": "han2023iccv",
@@ -643,7 +638,7 @@ year = {2025}
         {"text": "COCO annotation tool", "url": "https://github.com/naver-ai/coco-annotation-tool"}
       ],
       "abstract": "Supervised learning trains models with (X,Y) data. The (X,Y) data comes from the annotation procedure where annotators provide the correct Y for each X. But behind the scene, annotators generate much more data than the (X,Y) data themselves: they unintionally generate auxiliary information during the annotation task, such as the history of corrections and the time-series of mouse traces and clicks. We call them annotation byproducts (AB) Z. We propose the new paradigm of learning using annotation byproducts (LUAB), where models are trained with the triplets (X,Y,Z) involving the ABs. We reproduce the original annotation procedures for ImageNet and COCO to generate AB-enriched datasets: ImageNet-AB and COCO-AB. we show that the auxiliary Z may help models be better aligned with human recognition mechanisms, leading to improved model robustness.",
-      "tags": ["Robustness", "Uncertainty", "Human Annotation", "Explainability", "Large-Scale ML"]
+      "rtai_tags": ["OOD"]
     },
     {
       "id": "nam2023iccv",
@@ -671,7 +666,7 @@ year = {2022}
         {"text": "Code", "url": "https://uniform-attention.github.io/"}
       ],
       "abstract": "ViT's itchy point seems to be the uniform attention. ViTs are hungry for denser connections, yet dense connections are hard to achieve because of softmax's steep gradient around the uniform attention. We manually insert additional uniform attention layers in ViT models. This is very cheap! It turns out to be an effective trick for increasing the capacity and generalisation for ViT models, especially for the smaller versions.",
-      "tags": ["Large-Scale ML"]
+      "rtai_tags": []
     },
     {
       "id": "kirchhof2023icml",
@@ -696,7 +691,7 @@ year = {2023}
         {"text": "Code", "url": "https://github.com/mkirchhof/Probabilistic_Contrastive_Learning"}
       ],
       "abstract": "We finally came up with some theoretical guarantees for probabilistic embeddings! Given a spherical embedding space with a von-Mises-Fisher (vMF) family of true latent embedding distribution, one may identify the true latent vMF for every data point up to rotations with a Monte-Carlo version of InfoNCE (called MCInfoNCE). This result is a probabilistic extension of the work by Zimmerman et al.",
-      "tags": ["Uncertainty"]
+      "rtai_tags": ["UQCV"]
     },
     {
       "id": "hwang2022neurips",
@@ -725,7 +720,7 @@ year = {2023}
         {"text": "Workshop paper", "url": "data/hwang2022neurips_workshop.pdf"}
       ],
       "abstract": "A classifier gets biased when its decision boundary separates the bias attribute (e.g. gender attribute for profession prediction). Some prior de-biasing methods correct the decision boundary by identifying the bias-conflicting samples in the training data (e.g. female mechanical engineers) and giving more weight on them. We go one step further. We argue that it's more effective to augment the whole convex hull between usual data points (e.g. male mechanical engineers) and bias-conflicting samples (e.g. female mechanical engineers). We do this through simple Mixup. It effectively de-biases a model, even in the presence of strong label noise, arguably the greatest arch-enemy for a de-biasing method.",
-      "tags": ["Robustness"]
+      "rtai_tags": ["OOD"]
     },
     {
       "id": "chun2022eccv",
@@ -754,7 +749,7 @@ year = {2023}
         {"text": "Slides (short)", "url": "https://docs.google.com/presentation/d/1zyLL49_2-F6mQFaMIumPfdE7el_r048XtidLnehepHo/edit?usp=sharing"}
       ],
       "abstract": "Image-captioning benchmarks such as COCO Captions contain lots of nonsense. For the same image on the left, the caption that goes \"Playing tennis with a racket\" is deemed correct, while \"Swinging a tennis racket\" is penalised. This comes from the erratic recipe for constructing the datasets: (1) let annotators write down 5 captions per image and (2) consider only those 5 captions to be correct matches. We show that this practice introduces a lot of noise in the evaluation benchmarks. We then introduce a novel image-captioning dataset based on the MS-COCO Captions that captures the model performances more precisely.",
-      "tags": ["Human Annotation", "Evaluation", "Large-Scale ML"]
+      "rtai_tags": ["VLM"]
     },
     {
       "id": "kim2022icml",
@@ -786,7 +781,7 @@ tppubtype = {inproceedings}
         {"text": "Code", "url": "https://github.com/snu-mllab/Efficient-Dataset-Condensation"}
       ],
       "abstract": "Dataset condensation is the art of compactifying a training dataset. The aim is that a model trained on a condensed dataset is similar to the one trained on the original dataset, most importantly in terms of model accuracy (e.g. 91%-accuracy MNIST classifier with only 1 sample per class). We introduce many practical tricks to make data condensation work beyond the toy setting. We present the first data condensation method that actually works on images with sizes as large as 224x224, instead of 32x32!",
-      "tags": ["Human Annotation", "Large-Scale ML"]
+      "rtai_tags": ["DD"]
     },
     {
       "id": "lee2022cvpr",
@@ -817,7 +812,7 @@ tppubtype = {inproceedings}
         {"text": "Code", "url": "https://github.com/naver-ai/w-ood"}
       ],
       "abstract": "Weakly-supervised semantic segmentation (WSSS) is the task of solving pixel-wise class assignment with only the image-level supervision. The problem is ill-posed because the image-level labels alone do not let models distinguish foreground (FG) objects (e.g. train) from spuriously-correlated background (BG) cues (e.g. rail). Researchers have sought external sources of information, such as shape prior, to address the ill-posedness. In this paper, we explore a novel source: BG images (e.g. rail images without a train). Conceptually, telling models what are not the FG cues is equivalent to telling them what actually are the FG cues; BG images are sufficient for turning the problem into a well-posed one. Collecting such BG data is cost-efficient, requiring orders of magnitude less annotation costs than the already-cheap image-level labels.",
-      "tags": ["Robustness", "Human Annotation", "Explainability"]
+      "rtai_tags": ["WSOL", "OOD"]
     },
     {
       "id": "scimeca2022iclr",
@@ -843,7 +838,7 @@ tppubtype = {inproceedings}
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2110.03095"}
       ],
       "abstract": "Shortcut learning is emerging as a key limitation of the current generation of machine learning models (CVPR'20, ICML'20). In this work, instead of proposing yet another solution, we take a step back and deepen our understanding of the problem. For example, trained on a dataset where both colour and shape are valid cues for recognising the object, models of different types (MLP, CNN, and ViT) choose to use colour over shape. Why is that? We provide an explanation from the parameter-space perspective. Read the paper. Worth it!",
-      "tags": ["Robustness", "Explainability"]
+      "rtai_tags": ["OOD"]
     },
     {
       "id": "hazel2022aaai",
@@ -872,7 +867,7 @@ tppubtype = {inproceedings}
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2112.11916"}
       ],
       "abstract": "This is an NLP paper. There have been many attempts at enlarging the training text data for few-shot text classification, like back-translation (e.g. En-Fr-En) and the use of pre-trained language models. Unlike those, we propose an augmentation method that is fully aware of the underlying grammatical structure of the sentence. Importantly, our method generates a set of synonymous sentences that are both grammatically correct and grammatically diverse! Here we gain quite some points in few-shot text classification benchmarks. Another contribution is viewing the train-val split as part of the method and seeking the best splitting strategy when data augmentation is being used. It turns out that splitting the few-shot labelled samples S into disjoint train-val splits (train split is then augmented) is sub-optimal; a better strategy is to use the augmented source data S' as the train split and the original S itself as the validation split!",
-      "tags": ["Robustness", "Human Annotation"]
+      "rtai_tags": []
     },
     {
       "id": "choe2022tpami",
@@ -905,7 +900,7 @@ tppubtype = {inproceedings}
         {"text": "Tutorial video", "url": "https://www.youtube.com/watch?v=D_dEkeb-fto&list=PLcD_yLvcdUll95mAnBDV0rZKhfClJMZMr&index=5"}
       ],
       "abstract": "Journal extension of CVPR'20! It now contains more analyses, including the evaluation of input gradient variants as Weakly-Supervised Object Localization (WSOL) methods.",
-      "tags": ["Robustness", "Human Annotation", "Explainability", "Evaluation"]
+      "rtai_tags": ["WSOL"]
     },
     {
       "id": "kim2021iccv",
@@ -934,7 +929,7 @@ tppubtype = {inproceedings}
         {"text": "Code", "url": "https://github.com/naver-ai/calm"}
       ],
       "abstract": "It is difficult to find a CV researcher or practitioner who hasn't used (or at least heard of) the Class Activation Maps (CAM). It is a seminal feature attribution method that has left a deep mark on the vision research and applications. Notwithstanding its popularity, we found some practical and conceptual issues that makes CAM not as interpretable as it should be. We address the issues with a probabilistic treatment of the last layers of CNNs where the latent cue variable Z is trained via Marginal Likelihood (ML) or Expectation-Maximisation (EM) algorithms. The resulting Class Activation Latent Maps, or CALM, produces more precise and interpretable score maps.",
-      "tags": ["Robustness", "Human Annotation", "Explainability", "Evaluation"]
+      "rtai_tags": ["FAtt"]
     },
     {
       "id": "heo2021iccv",
@@ -965,7 +960,7 @@ tppubtype = {inproceedings}
         {"text": "Code", "url": "https://github.com/naver-ai/pit"}
       ],
       "abstract": "The Tranformer architecture has successfully been adapted to visual models (e.g. ViT). However, Transformers, originally designed for language modelling, and ViT assign a constant ratio of computational loads between spatial and channel dimensions at different depths. We postulate this as a suboptimal design choice, as CNNs assign different ratios at different depths to maximise the utility of compute. We thus present Pooling-based Vision Transformer (PiT) that does this.",
-      "tags": ["Large-Scale ML"]
+      "rtai_tags": []
     },
     {
       "id": "poli2021neurips",
@@ -995,7 +990,7 @@ tppubtype = {inproceedings}
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2106.04165"}
       ],
       "abstract": "Recovering the dynamical systems, or the data generation process, behind time series data enables an effective and robust prediction, interpretation, and forecasting. There exist prior methods for recovering either continuous or discrete dynamics, but not the mixture. The underlying dynamics behind many real-world systems contain both continuous and discrete elements. For example, an aircraft essentially follows a continuous dynamics but goes through a discrete mode shift at touchdown. Such a system is referred to as a Stochastic Hybrid System (SHS). We present a framework that recovers SHS from time series data using ingredients like Neural ODEs and latent variable models.",
-      "tags": ["Robustness"]
+      "rtai_tags": ["AI4TS", "AI4CE"]
     },
     {
       "id": "yun2021cvpr",
@@ -1023,7 +1018,7 @@ tppubtype = {inproceedings}
         {"text": "Code", "url": "https://github.com/naver-ai/relabel_imagenet"}
       ],
       "abstract": "ImageNet labels contain lots of noise (e.g. Shankar et al.). There have been efforts to fix them on the evaluation set, but not yet on the training set. We fix them on the training set (published at codebase), but with the help of a bigger image classifier, to make the task feasible at all. This is another trick that will improve the ImageNet & downstream task accuracies across the board.",
-      "tags": ["Robustness", "Large-Scale ML"]
+      "rtai_tags": []
     },
     {
       "id": "chun2021cvpr",
@@ -1050,7 +1045,7 @@ tppubtype = {inproceedings}
         {"text": "Code", "url": "https://github.com/naver-ai/pcme"}
       ],
       "abstract": "Given an image, there are many ways to describe it in text. Given a text description, there are likewise many possible images that suits the description. Cross-model associations are of many-to-many nature. The usual deterministic embeddings cannot model this well. We introduce a probabilistic embedding scheme based on the Hedged Instance Embedding (ICLR'19) to handle the many-to-many mapping gracefully. We address another crucial issue with evaluation: your method gets either penalised or rewarded for retrieving synonymous sentences. This is because of the non-exhaustive true matches in the eval set. Since ground-up collection of such matches is too expensive, we introduce a novel surrogate measure Plausible-Match R-Precision based on the estimated true matches.",
-      "tags": ["Uncertainty", "Evaluation"]
+      "rtai_tags": ["UQCV"]
     },
     {
       "id": "heo2021iclr",
@@ -1080,7 +1075,7 @@ tppubtype = {inproceedings}
         {"text": "Project", "url": "https://clovaai.github.io/AdamP/"}
       ],
       "abstract": "When you apply a momentum-based optimizer over scale-invariant parameters, their norms increase quite a bit. The norm increase doesn't contribute anything to the loss minimization while only slowing down the convergence. We fix this by appending a projection operation on SGD and Adam. This leads to performance improvements across the board.",
-      "tags": ["Large-Scale ML"]
+      "rtai_tags": ["ODL"]
     },
     {
       "id": "yun2020videomix",
@@ -1106,7 +1101,7 @@ tppubtype = {inproceedings}
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2012.03457"}
       ],
       "abstract": "Data augmentation is not as extensively studied in the video recognition tasks as in the static image recognition domain. We study the extension of popular static-image augmentation method, such as CutMix, on video recognition tasks.",
-      "tags": ["Large-Scale ML"]
+      "rtai_tags": []
     },
     {
       "id": "ferjad2020icml",
@@ -1135,7 +1130,7 @@ booktitle = {International Conference on Machine Learning},
         {"text": "Youtube", "url": "https://www.youtube.com/watch?v=_XwsGkryVpk&feature=youtu.be&ab_channel=FerjadNaeem"}
       ],
       "abstract": "Evaluating generative models is tricky. There are Inception Score and Fréchet Inception Distance measures indeed, and then (Improved) Precision and Recall metrics to separately examine the fidelity and diversity aspects. Yet, they are still not perfect. We address the issues with Improved Precision and Recall metrics and propose new metrics: Density and Coverage.",
-      "tags": ["Evaluation"]
+      "rtai_tags": ["EGVM"]
     },
     {
       "id": "hyojin2020icml",
@@ -1164,7 +1159,7 @@ booktitle = {International Conference on Machine Learning},
         {"text": "Youtube", "url": "https://www.youtube.com/watch?v=lkjMxZDGubA"}
       ],
       "abstract": "Models pick up correlations, rather than causal mechanisms, between inputs and outputs. De-biasing (and fairness) researches have guided models on \"which cues to look at\" through explicit bias labels or by re-weighting or re-generating training data to remove bias. We show that, for many application scenarios, it is possible to encode the \"cues to look at\" through model architecture and such expensive strategies are no longer needed.",
-      "tags": ["Robustness", "Human Annotation", "Evaluation"]
+      "rtai_tags": ["OOD"]
     },
     {
       "id": "choe2020cvpr",
@@ -1196,7 +1191,7 @@ booktitle = {International Conference on Machine Learning},
         {"text": "Tutorial video", "url": "https://www.youtube.com/watch?v=D_dEkeb-fto&list=PLcD_yLvcdUll95mAnBDV0rZKhfClJMZMr&index=5"}
       ],
       "abstract": "I have long waited for this moment since CVPR'17. Weakly-Supervised Object Localization, or WSOL, has in fact been not weakly supervised in a strict sense. Design choices and hyperparameters are validated with the localization annotations! This paper explains why researchers had to rely on localization validation -- without localization supervision, there is no way to force a model to not extract cues from background regions. We propose a new fair benchmark acknowledging the need for localization annotations and show that WSOL methods since CAM in 2016 have not introduced much gain.",
-      "tags": ["Robustness", "Human Annotation", "Explainability", "Evaluation"]
+      "rtai_tags": ["WSOL"]
     },
     {
       "id": "lee2019cvprw",
@@ -1223,7 +1218,7 @@ booktitle = {International Conference on Machine Learning},
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/1910.04396"}
       ],
       "abstract": "Scene text recognition works well, but there are remaining corner cases. An example is texts with unusual orientations and arrangements (e.g. BMW logo). We focus on this corner case and propose a model based on self-attention.",
-      "tags": []
+      "rtai_tags": []
     },
     {
       "id": "oh2018tpami",
@@ -1253,7 +1248,7 @@ booktitle = {International Conference on Machine Learning},
         {"text": "Journal", "url": "https://ieeexplore.ieee.org/document/8519337"}
       ],
       "abstract": "Journal version of my first paper ICCV'15, after five years! We have developed the version two of the ICCV'15 system that outperforms the methods that have appeared in the meantime.",
-      "tags": ["Privacy & Security", "Evaluation"]
+      "rtai_tags": ["CVBM"]
     },
     {
       "id": "oh2018iclr",
@@ -1292,7 +1287,7 @@ url="https://doi.org/10.1007/978-3-030-28954-6_7"
         {"text": "Book chapter", "url": "https://link.springer.com/chapter/10.1007/978-3-030-28954-6_7"}
       ],
       "abstract": "Book chapter version of ICLR'18! We build connections between our black-box inspection methodology and the explainable AI.",
-      "tags": ["Privacy & Security"]
+      "rtai_tags": ["MLAU", "AAML"]
     },
     {
       "id": "orekondy2019neuripsfl",
@@ -1319,7 +1314,7 @@ url="https://doi.org/10.1007/978-3-030-28954-6_7"
         {"text": "Poster", "url": "data/orekondy2019neuripsfl_poster.pdf"}
       ],
       "abstract": "Federated learning allows sensitive user data to never leave the device and still be used for training. It is considered a safer option than sending the user data directly to the server. But is it? We show that users may be identified and linked based on the model updates communicated between the device and server.",
-      "tags": ["Privacy & Security"]
+      "rtai_tags": ["PICV", "FedML"]
     },
     {
       "id": "chun2019icmlw",
@@ -1346,7 +1341,7 @@ year = {2019},
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2003.03879"}
       ],
       "abstract": "There has been a line of research on simple regularization techniques like CutMix (ICCV'19) and other lines of research on robustness and uncertainty. We make a happy marriage of the two and measure how well the regularization techniques improve robustness and uncertainty of a model.",
-      "tags": ["Robustness", "Uncertainty", "Evaluation"]
+      "rtai_tags": ["AAML", "OOD"]
     },
     {
       "id": "yun2019iccv",
@@ -1381,7 +1376,7 @@ year = {2019},
         {"text": "Project", "url": "https://clovaai.github.io/AdamP/"}
       ],
       "abstract": "A simple solution that works surprisingly well! Cut and paste patches from other images during training. Quite likely, you will see a performance boost.",
-      "tags": ["Robustness", "Large-Scale ML"]
+      "rtai_tags": ["OOD"]
     },
     {
       "id": "baek2019iccv",
@@ -1414,7 +1409,7 @@ year = {2019},
         {"text": "Code", "url": "https://github.com/clovaai/deep-text-recognition-benchmark"}
       ],
       "abstract": "Scene text recognition field has long suffered from the lack of a unified agreement on the evaluation protocol. We provide a standard protocol. We also provide a unified view on the previous methods and discover a novel combination of existing modules that turns out to be the state of the art.",
-      "tags": ["Evaluation"]
+      "rtai_tags": []
     },
     {
       "id": "joon2019iclr",
@@ -1442,7 +1437,7 @@ booktitle = {International Conference on Learning Representations (ICLR)},
         {"text": "Poster", "url": "data/oh2019iclr_poster.pdf"}
       ],
       "abstract": "There has been quite some work on representing uncertainty for classification or regression tasks. Is there a way to represent uncertainty for instance embedding models too? We show that it is possible to train probabilistic representatitons for instances based on their inherent ambiguity.",
-      "tags": ["Uncertainty"]
+      "rtai_tags": ["UQCV"]
     },
     {
       "id": "tretschk2018cscs",
@@ -1466,7 +1461,7 @@ booktitle = {ACM Computer Science in Cars Symposium -- Future Challenges in Arti
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/1805.12487"}
       ],
       "abstract": "Can a bad guy hijack an RL agent? We show that it is possible to let an agent pursue an alternative reward by introducing small adversarial perturbations in the input stream.",
-      "tags": ["Privacy & Security"]
+      "rtai_tags": ["AAML", "OnRL"]
     },
     {
       "id": "joon2018iclr",
@@ -1494,7 +1489,7 @@ booktitle = {International Conference on Learning Representations (ICLR)},
         {"text": "Code", "url": "https://github.com/coallaoh/WhitenBlackBox"}
       ],
       "abstract": "Recipes for training a high-performance model are not cheap. Think about the GPU-and-research-scientist-and-engineer hours to find the right architectural components and optimizer hyperparameters. What if they can be stolen by examining the model responses to certain inputs?",
-      "tags": ["Privacy & Security"]
+      "rtai_tags": ["MLAU", "AAML"]
     },
     {
       "id": "sun2018cvpr",
@@ -1521,7 +1516,7 @@ booktitle = {Conference on Computer Vision and Pattern Recognition (CVPR)}
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/1711.09001"}
       ],
       "abstract": "Adversarial perturbation solutions (ICCV'17) produce visually pleasant protections with high protection rates, but their effects may be confined to a handful of recognition systems. We propose another solution based on face inpainting that changes the face to a fictitious yet natural-looking identity. It is effective against a broader set of recognition systems.",
-      "tags": ["Privacy & Security"]
+      "rtai_tags": ["PICV"]
     },
     {
       "id": "joon2017cvprw",
@@ -1545,7 +1540,7 @@ year = {2017},
         {"text": "Poster", "url": "data/oh2017cvprw_poster.pdf"}
       ],
       "abstract": "We stop and look back on the visual privacy papers (ICCV'15, ECCV'16, ICCV'17).",
-      "tags": ["Privacy & Security"]
+      "rtai_tags": ["PICV", "CVBM"]
     },
     {
       "id": "joon2017iccv",
@@ -1574,7 +1569,7 @@ tppubtype = {inproceedings},
         {"text": "Code", "url": "https://github.com/coallaoh/AIP"}
       ],
       "abstract": "If face blurring doesn't work (ECCV'16), how should we shield our personal photos online against recognition systems? We propose a solution based on adversarial perturbations and the game theoretic considerations for the evaluation therein.",
-      "tags": ["Robustness", "Privacy & Security", "Evaluation"]
+      "rtai_tags": ["PICV", "CVBM", "AAML"]
     },
     {
       "id": "joon2017cvpr",
@@ -1606,7 +1601,7 @@ tppubtype = {inproceedings}
         {"text": "Code", "url": "https://github.com/coallaoh/GuidedLabelling"}
       ],
       "abstract": "There has been quite some work around training models for localization tasks (e.g. semantic segmentation) from the image tag supervision only. But is this fundamentally possible without relying on extensive validation with full localization annotations? We argue that certain priors are necessary at the very least to encode the extent of objects. Saliency, we argue, is a handy prior.",
-      "tags": ["Human Annotation", "Explainability"]
+      "rtai_tags": ["SSeg"]
     },
     {
       "id": "rohrbach2017cvpr",
@@ -1635,7 +1630,7 @@ tppubtype = {inproceedings}
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/1704.01518"}
       ],
       "abstract": "We casually use pronouns to refer to others. For machines, however, referring to people with pronouns necessitates new types of data and training strategies to explicitly localize and link people across frames. We do that.",
-      "tags": []
+      "rtai_tags": []
     },
     {
       "id": "joon2016eccv",
@@ -1667,7 +1662,7 @@ tppubtype = {inproceedings}
         {"text": "Extended abstract", "url": "data/oh2016eccvw.pdf"}
       ],
       "abstract": "But can you still be recognized even with a blur on your face? Quite likely.",
-      "tags": ["Privacy & Security", "Evaluation"]
+      "rtai_tags": ["PICV", "CVBM"]
     },
     {
       "id": "aditya2016mobisys",
@@ -1699,7 +1694,7 @@ tppubtype = {inproceedings}
         {"text": "Project", "url": "http://ipic.mpi-sws.org/"}
       ],
       "abstract": "You are a janitor at Taj Mahal. Against you will, sightseers take photos with your face in the background. How can you opt out of being present in someone else's photo? We present a mobile-system based solution.",
-      "tags": ["Privacy & Security"]
+      "rtai_tags": ["PICV"]
     },
     {
       "id": "joon2015iccv",
@@ -1726,6 +1721,6 @@ tppubtype = {inproceedings}
         {"text": "Project", "url": "https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/research/people-detection-pose-estimation-and-tracking/person-recognition-in-personal-photo-collections/"}
       ],
       "abstract": "How well does a CNN model recognize people in personal photos? Even when people don't look at cameras, CNN finds out who they are, based on the context (e.g. location and social connections).",
-      "tags": ["Privacy & Security", "Evaluation"]
+      "rtai_tags": ["CVBM"]
     }
   ];
