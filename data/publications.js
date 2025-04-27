@@ -25,7 +25,7 @@ const publicationsData = [
         {"text": "Project Page", "url": "https://alexanderrubinstein.github.io/are-we-done-with-ocl/"},
         {"text": "Code", "url": "https://github.com/AlexanderRubinstein/OCCAM"}
       ],
-      "abstract": "Object-centric learning (OCL) seeks to learn representations that only encode an object, isolated from background cues. Recent segmentation-based methods achieve strong zero-shot OOD object discovery and scale to foundation models. The study proposes a training-free probe, OCCAM, showing that segmentation-based encoding outperforms slot-based methods. Challenges for real-world application and broader goals like OOD generalisation remain open.",
+      "abstract": "Object-centric learning (OCL) aims to learn object-wise representations, promising robust vision and human-like perception. However, OCL evaluation remains tied to unsupervised object discovery, a problem largely solved by foundational segmentation models. We argue that both object discovery and robust vision are effectively addressed. The field must shift towards real-world applications beyond object discovery.",
       "rtai_tags": ["OCL"]
     },
     {
@@ -51,8 +51,8 @@ const publicationsData = [
       "links": [
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2311.16176"}
       ],
-      "abstract": "Shortcut learning occurs when models rely on spurious correlations instead of robust features. This paper introduces DiffDiv, an ensemble diversification framework using diffusion probabilistic models (DPMs) to generate synthetic counterfactuals. These counterfactuals encourage ensemble disagreement, reducing reliance on shortcut cues. DiffDiv improves generalisation without requiring additional supervision or data collection.",
-      "rtai_tags": ["SyDa"]
+      "abstract": "Did you know that diffusion models can be forced to generate novel compositions of concepts by sampling from a half-trained model? We show that this can be used to generate diverse ensembles of counterfactuals that can be used to improve out-of-distribution generalisation.",
+      "rtai_tags": ["DiffM", "SyDa"]
     },    
     {
       "id": "darina2025binding",
@@ -76,8 +76,8 @@ const publicationsData = [
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2502.03566"},
         {"text": "Code", "url": "https://github.com/kdariina/CLIP-not-BoW-unimodally"}
       ],
-      "abstract": "CLIP is widely used for downstream tasks but struggles with compositional understanding. It often acts like a bag-of-words model, failing to bind attributes to objects in cross-modal settings. The issue lies in the cross-modal alignment via cosine similarity. The authors propose LABCLIP, which applies a linear transformation to text embeddings before computing similarity. This improves attribute-object binding and enhances compositional understanding.",
-      "rtai_tags": ["VLM"]
+      "abstract": "CLIP is widely used for downstream tasks but struggles with compositional understanding. It often behaves like a bag of words model and fails to bind attributes to objects in cross-modal settings. The problem comes from the cross-modal alignment using cosine similarity. We propose LABCLIP. It applies a linear transformation to text embeddings before computing similarity. This improves attribute-object binding and strengthens compositional understanding.",
+      "rtai_tags": ["CoGe", "VLM"]
     },
     {
       "id": "sohyun2025dicotta",
@@ -102,7 +102,7 @@ const publicationsData = [
       "links": [
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2504.04981"}
       ],
-      "abstract": "This paper studies continual test-time adaptation (CTTA), the task of adapting a model to constantly changing unseen domains in testing while preserving previously learned knowledge. Existing CTTA methods mostly focus on adaptation to the current test domain only, overlooking generalization to arbitrary test domains a model may face in the future. To tackle this limitation, we present a novel online domain-invariant learning framework for CTTA, dubbed DiCoTTA. DiCoTTA aims to learn feature representation to be invariant to both current and previous test domains on the fly during testing. To this end, we propose a new model architecture and a test-time adaptation strategy dedicated to learning domain-invariant features without corrupting semantic contents, along with a new data structure and optimization algorithm for effectively managing information from previous test domains. DiCoTTA achieved state-of-the-art performance on four public CTTA benchmarks. Moreover, it showed superior generalization to unseen test domains.",
+      "abstract": "We study continual test-time adaptation (CTTA), where a model adapts to changing unseen domains while retaining past knowledge. Existing methods focus only on the current domain. We propose DiCoTTA, which learns domain-invariant features during testing. It introduces a new architecture, adaptation strategy, and data management. DiCoTTA achieves state-of-the-art performance and strong generalisation on four CTTA benchmarks.",
       "rtai_tags": ["TTA"]
     },    
     {
