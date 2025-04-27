@@ -251,11 +251,9 @@ async function createStackedBarChart(ctx, yearCommunityMap) {
           const datasetIndex = chartElement[0].datasetIndex;
           const community = this.data.datasets[datasetIndex].label;
           
-          // Only open the link if the community portion is actually visible (not toggled off)
-          if (communityVisibility[community]) {
-            // Open the community page in a new tab
-            window.open(`https://researchtrend.ai/communities/${community}`, '_blank');
-          }
+          // Toggle the community visibility instead of opening a link
+          const isCurrentlyVisible = communityVisibility[community];
+          toggleCommunityVisibility(community, !isCurrentlyVisible);
         }
       },
       // Add cursor pointer to hint clickability - improved version
@@ -290,23 +288,70 @@ async function createCommunityToggles(communities) {
   const container = document.getElementById('communityFilters');
   if (!container) return;
   
-  // Set container styles for denser layout
-  container.style.display = 'flex';
-  container.style.flexWrap = 'wrap';
-  container.style.gap = '2px';
-  container.style.justifyContent = 'center';
+  // Clear previous styling and any existing content
+  container.style.display = 'block';
   container.style.maxWidth = '100%';
-  
-  // Clear any existing toggles
   container.innerHTML = '';
   
-  // Create a toggle for each community, sorted by area
-  for (const community of communities) {
+  // Create a table for structured layout
+  const table = document.createElement('table');
+  table.className = 'community-toggle-table';
+  table.style.width = '100%';
+  table.style.borderCollapse = 'collapse';
+  
+  // Create table body
+  const tbody = document.createElement('tbody');
+  
+  // Split communities into two columns
+  const halfLength = Math.ceil(communities.length / 2);
+  const firstHalf = communities.slice(0, halfLength);
+  const secondHalf = communities.slice(halfLength);
+  
+  // Pad the second half if needed to make them equal length
+  while (secondHalf.length < firstHalf.length) {
+    secondHalf.push(null);
+  }
+  
+  // Create rows with communities side by side
+  for (let i = 0; i < firstHalf.length; i++) {
+    const row = document.createElement('tr');
+    row.style.padding = '0'; // Remove padding to reduce height
+    
+    // Process first community (left side)
+    createCommunityCells(row, firstHalf[i], tbody);
+    
+    // Process second community (right side) if it exists
+    if (i < secondHalf.length && secondHalf[i] !== null) {
+      createCommunityCells(row, secondHalf[i], tbody);
+    } else {
+      // Add empty cells for padding if no second community
+      const emptyCell1 = document.createElement('td');
+      const emptyCell2 = document.createElement('td');
+      row.appendChild(emptyCell1);
+      row.appendChild(emptyCell2);
+    }
+    
+    // Add the row to the table
+    tbody.appendChild(row);
+  }
+  
+  // Append the tbody to the table
+  table.appendChild(tbody);
+  
+  // Append the table to the container
+  container.appendChild(table);
+  
+  // Helper function to create cells for a community
+  function createCommunityCells(row, community, tbody) {
+    if (!community) return;
+    
     const area = communityTotalAreas[community];
     
-    const toggleContainer = document.createElement('div');
-    toggleContainer.className = 'community-toggle';
-    toggleContainer.style.margin = '2px'; // Reduce margins to fit more tags per row
+    // First cell: Acronym tag toggle
+    const tagCell = document.createElement('td');
+    tagCell.style.padding = '1px 5px 1px 5px'; // Reduced vertical padding
+    tagCell.style.verticalAlign = 'middle';
+    tagCell.style.width = '80px';
     
     // Create a checkbox but hide it visually
     const checkbox = document.createElement('input');
@@ -324,6 +369,7 @@ async function createCommunityToggles(communities) {
     label.style.textDecoration = 'none';
     label.style.color = 'white';
     label.style.cursor = 'pointer';
+    label.style.display = 'inline-block';
     
     // Create the span similar to htmlCommunityTag
     const tagSpan = document.createElement('span');
@@ -332,59 +378,53 @@ async function createCommunityToggles(communities) {
     tagSpan.style.padding = '1px 4px';
     tagSpan.style.borderRadius = '12px';
     tagSpan.style.fontFamily = 'Mukta, sans-serif';
+    tagSpan.style.display = 'inline-block';
     
-    // Create main text and area text separately
-    const mainText = document.createTextNode(community + ' ');
+    // Create main text without the area
+    const mainText = document.createTextNode(community);
     tagSpan.appendChild(mainText);
     
-    // Add the area as a smaller text
-    const areaSpan = document.createElement('span');
-    areaSpan.style.fontSize = '60%';
-    areaSpan.textContent = area.toFixed(1);
-    tagSpan.appendChild(areaSpan);
-    
-    // Add tooltip showing full community name
-    const fullName = getCommunityFullName(community);
-    if (fullName !== community) {  // Only add tooltip if we have a full name
-      // Create a tooltip div that appears on hover
-      const tooltip = document.createElement('div');
-      tooltip.className = 'community-tooltip';
-      tooltip.textContent = fullName;
-      tooltip.style.display = 'none';
-      tooltip.style.position = 'absolute';
-      tooltip.style.backgroundColor = '#333';
-      tooltip.style.color = 'white';
-      tooltip.style.padding = '5px 8px';
-      tooltip.style.borderRadius = '4px';
-      tooltip.style.zIndex = '1000';
-      tooltip.style.fontSize = '14px';
-      tooltip.style.pointerEvents = 'none'; // Prevent tooltip from blocking mouse events
-      
-      // Add events to show/hide the tooltip
-      label.onmouseenter = (e) => {
-        tooltip.style.display = 'block';
-        tooltip.style.left = (e.pageX + 10) + 'px';
-        tooltip.style.top = (e.pageY + 10) + 'px';
-      };
-      
-      label.onmousemove = (e) => {
-        tooltip.style.left = (e.pageX + 10) + 'px';
-        tooltip.style.top = (e.pageY + 10) + 'px';
-      };
-      
-      label.onmouseleave = () => {
-        tooltip.style.display = 'none';
-      };
-      
-      // Add the tooltip to the document body
-      document.body.appendChild(tooltip);
-    }
-    
-    // Append elements
+    // Append tag elements
     label.appendChild(tagSpan);
-    toggleContainer.appendChild(checkbox);
-    toggleContainer.appendChild(label);
-    container.appendChild(toggleContainer);
+    tagCell.appendChild(checkbox);
+    tagCell.appendChild(label);
+    row.appendChild(tagCell);
+    
+    // New cell: Paper count
+    const countCell = document.createElement('td');
+    countCell.style.padding = '1px 5px';
+    countCell.style.verticalAlign = 'middle';
+    countCell.style.width = '30px';
+    countCell.style.fontSize = '12px';
+    countCell.style.color = '#666';
+    countCell.style.textAlign = 'right';
+    countCell.textContent = area.toFixed(1);
+    row.appendChild(countCell);
+    
+    // Third cell: Community full name with link
+    const nameCell = document.createElement('td');
+    nameCell.style.padding = '1px 15px 1px 5px'; // Reduced vertical padding
+    nameCell.style.verticalAlign = 'middle';
+    nameCell.style.maxWidth = '220px';
+    
+    // Get the full name of the community
+    const fullName = getCommunityFullName(community);
+    
+    // Create link to the community page
+    const link = document.createElement('a');
+    link.href = `https://researchtrend.ai/communities/${community}`;
+    link.textContent = fullName;
+    link.style.textDecoration = 'underline'; // Add underline to indicate it's a link
+    link.style.color = '#333';
+    link.style.fontSize = '14px'; // Smaller text
+    link.target = '_blank'; // Open in new tab
+    link.style.whiteSpace = 'nowrap';
+    link.style.overflow = 'hidden';
+    link.style.textOverflow = 'ellipsis';
+    link.style.display = 'block';
+    
+    nameCell.appendChild(link);
+    row.appendChild(nameCell);
     
     // Add event listener for checkbox
     checkbox.addEventListener('change', () => {

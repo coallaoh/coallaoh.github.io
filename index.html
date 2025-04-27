@@ -151,7 +151,7 @@
           <button id="selectAllCommunities" class="community-control-btn mr-2">Select All</button>
           <button id="clearAllCommunities" class="community-control-btn">Clear All</button>
         </div>
-        <div id="communityFilters" class="d-flex flex-wrap justify-content-center">
+        <div id="communityFilters" class="community-filters-container">
           <!-- Community filter toggles will be added here dynamically -->
         </div>
       </div>
@@ -177,6 +177,30 @@
       </div>
     </div>
   </div>
+
+  <style>
+    .community-filters-container {
+      max-width: 900px;
+      margin: 0 auto;
+      overflow-y: visible;
+    }
+    .community-control-btn {
+      background-color: #555555;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 5px 15px;
+      font-size: 14px;
+      cursor: pointer;
+      margin: 0 5px;
+    }
+    .community-control-btn:hover {
+      background-color: #333333;
+    }
+    .community-toggle-table td {
+      line-height: 1.2;
+    }
+  </style>
 </body>
 
 </html>
