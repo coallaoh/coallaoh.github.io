@@ -26,7 +26,7 @@ const publicationsData = [
         {"text": "Code", "url": "https://github.com/AlexanderRubinstein/OCCAM"}
       ],
       "abstract": "Object-centric learning (OCL) seeks to learn representations that only encode an object, isolated from background cues. Recent segmentation-based methods achieve strong zero-shot OOD object discovery and scale to foundation models. The study proposes a training-free probe, OCCAM, showing that segmentation-based encoding outperforms slot-based methods. Challenges for real-world application and broader goals like OOD generalisation remain open.",
-      "tags": ["Robustness", "Evaluation"]
+      "rtai_tags": ["OCL"]
     },
     {
       "id": "luca2025diffdiv",
@@ -52,7 +52,8 @@ const publicationsData = [
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2311.16176"}
       ],
       "abstract": "Shortcut learning occurs when models rely on spurious correlations instead of robust features. This paper introduces DiffDiv, an ensemble diversification framework using diffusion probabilistic models (DPMs) to generate synthetic counterfactuals. These counterfactuals encourage ensemble disagreement, reducing reliance on shortcut cues. DiffDiv improves generalisation without requiring additional supervision or data collection.",
-      "tags": ["Robustness", "Representation Learning", "Generative Models"]
+      "tags": ["Robustness", "Representation Learning", "Generative Models"],
+      "rtai_tags": ["DPM", "Ensemble", "GEN"]
     },    
     {
       "id": "darina2025binding",
@@ -77,7 +78,8 @@ const publicationsData = [
         {"text": "Code", "url": "https://github.com/kdariina/CLIP-not-BoW-unimodally"}
       ],
       "abstract": "CLIP is widely used for downstream tasks but struggles with compositional understanding. It often acts like a bag-of-words model, failing to bind attributes to objects in cross-modal settings. The issue lies in the cross-modal alignment via cosine similarity. The authors propose LABCLIP, which applies a linear transformation to text embeddings before computing similarity. This improves attribute-object binding and enhances compositional understanding.",
-      "tags": ["Robustness"]
+      "tags": ["Robustness"],
+      "rtai_tags": ["CLIP", "MM", "VL"]
     },
     {
       "id": "sohyun2025dicotta",
@@ -103,7 +105,8 @@ const publicationsData = [
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2504.04981"}
       ],
       "abstract": "This paper studies continual test-time adaptation (CTTA), the task of adapting a model to constantly changing unseen domains in testing while preserving previously learned knowledge. Existing CTTA methods mostly focus on adaptation to the current test domain only, overlooking generalization to arbitrary test domains a model may face in the future. To tackle this limitation, we present a novel online domain-invariant learning framework for CTTA, dubbed DiCoTTA. DiCoTTA aims to learn feature representation to be invariant to both current and previous test domains on the fly during testing. To this end, we propose a new model architecture and a test-time adaptation strategy dedicated to learning domain-invariant features without corrupting semantic contents, along with a new data structure and optimization algorithm for effectively managing information from previous test domains. DiCoTTA achieved state-of-the-art performance on four public CTTA benchmarks. Moreover, it showed superior generalization to unseen test domains.",
-      "tags": ["Robustness"]
+      "tags": ["Robustness"],
+      "rtai_tags": ["DA", "TTA", "CL"]
     },    
     {
       "id": "haritz2025mia",
@@ -121,14 +124,15 @@ const publicationsData = [
   title={Scaling Up Membership Inference: When and How Attacks Succeed on Large Language Models},
   author={Puerto, Haritz and Gubri, Martin and Yun, Sangdoo and Oh, Seong Joon},
   year={2025},
-  booktitle = "Annual Conference of the North American Chapter of the Association for Computational Linguistics: NAACL 2025",
+  booktitle = {Annual Conference of the North American Chapter of the Association for Computational Linguistics: NAACL 2025},
 }`,
       "image": "pictures/haritz2025mia.png",
       "links": [
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2411.00154"}
       ],
       "abstract": "People have tried to check if certain copyrighted material is used by LLMs by analysing their characteristic reactions to it, a task known as Membership Inference Attack (MIA). Research so far has mostly reported negative results, finding barely any statistically significant signals. In our paper, we show that meaningful signals only appear at scale: not in sentences or paragraphs, but at the level of documents and more.",
-      "tags": ["Privacy & Security", "Evaluation"]
+      "tags": ["Privacy & Security", "Evaluation"],
+      "rtai_tags": ["LLM", "SEC", "MIA"]
     },
     {
       "id": "arnas2025iclr",
@@ -149,7 +153,8 @@ booktitle = {International Conference on Learning Representations (ICLR)},
       "image": "pictures/arnas2025iclr.png",
       "links": [],
       "abstract": "Retraining the last layer for target OOD dataset is a common practice for adapting to new distributions. We question the practice and consider using intermediate-layer representations. This turns out to be a good idea in many vision applications. The empirical results are quite surprising.",
-      "tags": ["Robustness", "Evaluation"]
+      "tags": ["Robustness", "Evaluation"],
+      "rtai_tags": ["OOD", "CV", "IL"]
     },
     {
       "id": "ankit2025star",
@@ -173,8 +178,9 @@ booktitle = {International Conference on Learning Representations (ICLR)},
       "links": [
         {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2403.07968"}
       ],
-      "abstract": "For deep neural networks, understanding the solution set, or the set of parameters with low loss values, is crucial. It has been conjectured that the solution set forms a convex set, modulo parameter permutations. The conjecture has met several counterexamples. Instead, we propose that the solution set forms a star domain: there exists a central \"star model\" connected to all other solutions. This is weaker and more relaxed than the convex-set conjecture, but does not contradict empirical findings.",
-      "tags": ["Robustness", "Uncertainty"]
+      "abstract": "The non-convexity of modern neural networks poses unique challenges for understanding and controlling them. While optima may be scattered across different regions of the parameter space, training methods are expected to find good solutions. We aim to understand the geometric structure of these solutions by investigating whether they form a star domain. We apply linear interpolation between models trained with different initialisations and examine the resulting performance. Experimental results from 11 architectures on 5 datasets reveal that in 80% of cases, the average performance on the linear interpolation path stays within 20% of the original performance. We further show that these findings are unaffected by various factors such as optimiser choice, weight averaging, or model accuracy.",
+      "tags": ["Robustness", "Evaluation"],
+      "rtai_tags": ["OPT", "NN", "THE"]
     },
     {
       "id": "jaehyun2025iclr",
@@ -361,7 +367,7 @@ booktitle = {International Conference on Learning Representations (ICLR)},
     title = {TRAP: Targeted Random Adversarial Prompt Honeypot for Black-Box Identification},
     author = {Gubri, Martin and Ulmer, Dennis and Lee, Hwaran and Yun, Sangdoo and Oh, Seong Joon},
     year={2024},
-    booktitle = "Findings of the Association for Computational Linguistics: ACL 2024",
+    booktitle = {Findings of the Association for Computational Linguistics: ACL 2024},
 }`,
       "image": "pictures/martin2024trap.png",
       "links": [
@@ -387,7 +393,7 @@ booktitle = {International Conference on Learning Representations (ICLR)},
     title = {Calibrating Large Language Models Using Their Generations Only},
     author = {Ulmer, Dennis and Gubri, Martin and Lee, Hwaran and Yun, Sangdoo and Oh, Seong Joon},
     year={2024},
-    booktitle = "Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics",
+    booktitle = {Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics},
 }`,
       "image": "pictures/dennis2024apricot.png",
       "links": [
