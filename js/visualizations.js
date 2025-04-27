@@ -175,10 +175,12 @@ async function createStackedBarChart(ctx, yearCommunityMap) {
       plugins: {
         title: {
           display: true,
-          text: 'To Which Communities Did I Contribute?',
+          text: 'Research Community Contributions',
           font: {
             size: 16
-          }
+          },
+          color: document.documentElement.getAttribute('data-theme') === 'dark' ? 
+            '#FFFFFF' : '#333333' // Bright white in dark mode, dark gray in light mode
         },
         tooltip: {
           enabled: true,
