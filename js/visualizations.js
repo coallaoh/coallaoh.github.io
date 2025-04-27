@@ -477,12 +477,12 @@ function setupToggleButtons() {
         checkbox.checked = false;
         toggleCommunityVisibility(community, false);
         
-        // Update tag span to gray
+        // Update tag span to theme-aware gray
         const label = checkbox.nextElementSibling;
         if (label) {
           const tagSpan = label.querySelector('span');
           if (tagSpan) {
-            tagSpan.style.backgroundColor = '#CCCCCC';
+            tagSpan.style.backgroundColor = getUnselectedColor();
           }
         }
       });
@@ -510,18 +510,15 @@ function toggleCommunityVisibility(community, isVisible) {
       topicChart.data.datasets[datasetIndex].backgroundColor = communityColors[community];
     } else {
       // Make the bars gray but keep their height
-      topicChart.data.datasets[datasetIndex].backgroundColor = '#CCCCCC'; // Use same gray as htmlCommunityTag
+      topicChart.data.datasets[datasetIndex].backgroundColor = getUnselectedColor(); // Theme-aware gray
     }
   }
   
   // Update the chart
   topicChart.update();
   
-  // Update checkbox state
-  const checkbox = document.getElementById(`toggle-${community}`);
-  if (checkbox) {
-    checkbox.checked = isVisible;
-  }
+  // Update checkbox state and appearance
+  updateCheckboxState(community, isVisible);
   
   // Filter publications based on selected communities
   filterPublicationsByTags();
@@ -703,4 +700,28 @@ function initializeTopicTrendsChart() {
       }
     }
   });
+}
+
+// Add function to get theme-aware gray color
+function getUnselectedColor() {
+  return document.documentElement.getAttribute('data-theme') === 'dark' ? 
+    '#666666' : '#CCCCCC'; // Darker gray in dark mode, light gray in light mode
+}
+
+// Update checkbox state and appearance
+function updateCheckboxState(community, isVisible) {
+  const checkbox = document.getElementById(`toggle-${community}`);
+  if (checkbox) {
+    checkbox.checked = isVisible;
+    
+    // Update tag span color
+    const label = checkbox.nextElementSibling;
+    if (label) {
+      const tagSpan = label.querySelector('span');
+      if (tagSpan) {
+        tagSpan.style.backgroundColor = isVisible ? 
+          communityColors[community] : getUnselectedColor();
+      }
+    }
+  }
 } 
