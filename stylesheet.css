@@ -255,15 +255,8 @@ span.highlight {
 
 /* Community filter styling */
 .community-toggle {
-  background-color: #f8f9fa;
-  border-radius: 4px;
-  padding: 5px 10px;
   margin: 3px;
-  transition: all 0.2s ease;
-}
-
-.community-toggle:hover {
-  background-color: #e9ecef;
+  display: inline-block;
 }
 
 .community-checkbox {
@@ -276,13 +269,21 @@ span.highlight {
   flex-wrap: wrap;
 }
 
-.color-swatch {
-  display: inline-block;
-  vertical-align: middle;
-  width: 12px;
-  height: 12px;
-  margin-right: 5px;
-  border-radius: 2px;
+/* Style the control buttons to match community tags */
+.community-control-btn {
+  background-color: #4a86e8;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  border: none;
+  font-family: 'Mukta', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.community-control-btn:hover {
+  background-color: #3a76d8;
 }
 
 /* Fix for button spacing */

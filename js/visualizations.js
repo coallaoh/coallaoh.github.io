@@ -3,6 +3,7 @@ let topicChart = null;
 let chartData = null;
 let communityVisibility = {};
 let communityColors = {};
+let communityTotalAreas = {};
 
 // Function to generate topic trend visualization
 function generateTopicTrendsChart() {
@@ -74,6 +75,23 @@ function processPublicationData(publications) {
   return yearCommunityMap;
 }
 
+// Function to generate the colors for communities using the same logic as hashColor
+function generateCommunityColor(community) {
+  // Use the same hash function as in hashColor
+  let hash = 0;
+  for (let i = 0; i < community.length; i++) {
+    hash = ((hash << 5) - hash) + community.charCodeAt(i);
+    hash = hash & hash; // Convert to 32bit integer
+  }
+  
+  // Match the color generation logic from hashColor function
+  const hue = hash % 360;
+  const saturation = 40 + (hash % 40);
+  const lightness = 40 + (40 - (hash % 40));
+  
+  return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+}
+
 // Create a stacked bar chart
 function createStackedBarChart(ctx, yearCommunityMap) {
   // Get unique years and communities
@@ -87,7 +105,17 @@ function createStackedBarChart(ctx, yearCommunityMap) {
     });
   });
   
-  const communities = Array.from(allCommunities).sort();
+  const communities = Array.from(allCommunities);
+  
+  // Calculate total area for each community
+  communities.forEach(community => {
+    communityTotalAreas[community] = years.reduce((total, year) => {
+      return total + (yearCommunityMap[year][community] || 0);
+    }, 0);
+  });
+  
+  // Sort communities by total area (descending)
+  communities.sort((a, b) => communityTotalAreas[b] - communityTotalAreas[a]);
   
   // Initialize visibility for all communities to true
   communities.forEach(community => {
@@ -103,18 +131,7 @@ function createStackedBarChart(ctx, yearCommunityMap) {
   
   // Generate community colors
   communities.forEach(community => {
-    // Use the same hash function as in hashColor
-    let hash = 0;
-    for (let i = 0; i < community.length; i++) {
-      hash = ((hash << 5) - hash) + community.charCodeAt(i);
-      hash = hash & hash; // Convert to 32bit integer
-    }
-    
-    // Match the color generation logic
-    const hue = hash % 360;
-    const saturation = 40 + (hash % 40);
-    const lightness = 40 + (40 - (hash % 40));
-    communityColors[community] = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+    communityColors[community] = generateCommunityColor(community);
   });
   
   // Prepare datasets for Chart.js
@@ -123,8 +140,8 @@ function createStackedBarChart(ctx, yearCommunityMap) {
       label: community,
       data: years.map(year => yearCommunityMap[year][community] || 0),
       backgroundColor: communityColors[community],
-      borderColor: communityColors[community],
-      borderWidth: 1,
+      borderColor: 'transparent', // Remove borders
+      borderWidth: 0, // Ensure no border
       community: community // Store community for filtering
     };
   });
@@ -148,15 +165,43 @@ function createStackedBarChart(ctx, yearCommunityMap) {
           }
         },
         tooltip: {
-          mode: 'index',
-          intersect: false,
+          enabled: true,
+          mode: 'nearest',
+          intersect: true,
           callbacks: {
+            // Customize the tooltip title (year) - hide it to simplify
+            title: function() {
+              return ''; // Hide the year label (title)
+            },
+            // Show only the community name on hover
             label: function(context) {
-              const label = context.dataset.label || '';
-              const value = context.raw.toFixed(2);
-              return `${label}: ${value}`;
+              return context.dataset.label; // Just show the acronym
+            },
+            // Remove the colored box from the tooltip
+            labelColor: function(context) {
+              return {
+                borderColor: 'transparent',
+                backgroundColor: 'transparent'
+              };
+            },
+            // Format the tooltip to be very simple
+            labelTextColor: function(context) {
+              return '#ffffff';
             }
-          }
+          },
+          // Custom tooltip styling
+          backgroundColor: '#333',
+          titleColor: '#fff',
+          titleFont: {
+            weight: 'bold'
+          },
+          bodyColor: '#fff',
+          bodyFont: {
+            size: 14
+          },
+          padding: 6,
+          displayColors: false,
+          borderWidth: 0
         },
         legend: {
           display: false // Hide default legend, we'll create custom toggles
@@ -181,70 +226,102 @@ function createStackedBarChart(ctx, yearCommunityMap) {
             precision: 1
           }
         }
+      },
+      onClick: function(event, chartElement) {
+        if (chartElement && chartElement.length > 0) {
+          const datasetIndex = chartElement[0].datasetIndex;
+          const community = this.data.datasets[datasetIndex].label;
+          
+          // Only open the link if the community portion is actually visible (not toggled off)
+          if (communityVisibility[community]) {
+            // Open the community page in a new tab
+            window.open(`https://researchtrend.ai/communities/${community}`, '_blank');
+          }
+        }
+      },
+      // Add cursor pointer to hint clickability - improved version
+      onHover: (event, chartElement) => {
+        if (!chartElement || chartElement.length === 0) {
+          event.chart.canvas.style.cursor = 'default';
+          return;
+        }
+        
+        const datasetIndex = chartElement[0].datasetIndex;
+        const community = topicChart.data.datasets[datasetIndex].label;
+        
+        // Check if this community is actually visible
+        if (communityVisibility[community]) {
+          event.chart.canvas.style.cursor = 'pointer';
+        } else {
+          event.chart.canvas.style.cursor = 'default';
+        }
       }
     }
   });
   
-  // Create custom community filter toggles
-  createCommunityToggles(communities, communityColors);
+  // Create custom community filter toggles with areas shown
+  createCommunityToggles(communities);
   
   // Set up event listeners for toggle buttons
   setupToggleButtons();
 }
 
 // Create custom community filter toggles
-function createCommunityToggles(communities, communityColors) {
+function createCommunityToggles(communities) {
   const container = document.getElementById('communityFilters');
   if (!container) return;
   
   // Clear any existing toggles
   container.innerHTML = '';
   
-  // Create a toggle for each community
+  // Create a toggle for each community, sorted by area
   communities.forEach(community => {
-    const toggleContainer = document.createElement('div');
-    toggleContainer.className = 'community-toggle m-1 d-inline-flex align-items-center';
+    const area = communityTotalAreas[community];
+    const areaText = ` (${area.toFixed(1)})`;
     
+    const toggleContainer = document.createElement('div');
+    toggleContainer.className = 'community-toggle m-1';
+    
+    // Create a checkbox but hide it visually
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.id = `toggle-${community}`;
-    checkbox.className = 'community-checkbox mr-1';
+    checkbox.className = 'community-checkbox';
     checkbox.checked = true;
     checkbox.dataset.community = community;
+    checkbox.style.display = 'none'; // Hide the actual checkbox
     
+    // Create the tag-like label similar to htmlCommunityTag
     const label = document.createElement('label');
     label.htmlFor = `toggle-${community}`;
-    label.className = 'mb-0 ml-1';
+    label.className = 'community-tag-label';
+    label.style.textDecoration = 'none';
+    label.style.color = 'white';
     label.style.cursor = 'pointer';
     
-    const colorSwatch = document.createElement('span');
-    colorSwatch.className = 'color-swatch d-inline-block mr-1';
-    colorSwatch.style.width = '15px';
-    colorSwatch.style.height = '15px';
-    colorSwatch.style.backgroundColor = communityColors[community];
-    colorSwatch.style.display = 'inline-block';
-    colorSwatch.style.verticalAlign = 'middle';
-    colorSwatch.style.borderRadius = '3px';
+    // Create the span similar to htmlCommunityTag
+    const tagSpan = document.createElement('span');
+    tagSpan.className = 'inline-flex items-center rounded-full font-medium text-medium text-white';
+    tagSpan.style.backgroundColor = communityColors[community];
+    tagSpan.style.padding = '1px 4px';
+    tagSpan.style.borderRadius = '12px';
+    tagSpan.style.fontFamily = 'Mukta, sans-serif';
+    tagSpan.textContent = community + areaText;
     
-    const communityText = document.createElement('span');
-    communityText.textContent = community;
-    
-    label.appendChild(colorSwatch);
-    label.appendChild(communityText);
-    
+    // Append elements
+    label.appendChild(tagSpan);
     toggleContainer.appendChild(checkbox);
     toggleContainer.appendChild(label);
     container.appendChild(toggleContainer);
     
     // Add event listener for checkbox
     checkbox.addEventListener('change', () => {
-      toggleCommunityVisibility(community, checkbox.checked);
+      // Update the tag background color based on checked state
+      tagSpan.style.backgroundColor = checkbox.checked ? 
+        communityColors[community] : '#CCCCCC';
       
-      // Update color swatch
-      const swatch = checkbox.nextElementSibling.querySelector('.color-swatch');
-      if (swatch) {
-        swatch.style.backgroundColor = checkbox.checked ? communityColors[community] : '#e0e0e0';
-      }
+      // Update chart
+      toggleCommunityVisibility(community, checkbox.checked);
     });
   });
 }
@@ -262,10 +339,13 @@ function setupToggleButtons() {
         checkbox.checked = true;
         toggleCommunityVisibility(community, true);
         
-        // Update color swatch
-        const swatch = checkbox.nextElementSibling.querySelector('.color-swatch');
-        if (swatch && communityColors) {
-          swatch.style.backgroundColor = communityColors[community];
+        // Update tag span background color
+        const label = checkbox.nextElementSibling;
+        if (label) {
+          const tagSpan = label.querySelector('span');
+          if (tagSpan && communityColors) {
+            tagSpan.style.backgroundColor = communityColors[community];
+          }
         }
       });
     });
@@ -279,10 +359,13 @@ function setupToggleButtons() {
         checkbox.checked = false;
         toggleCommunityVisibility(community, false);
         
-        // Update color swatch to gray
-        const swatch = checkbox.nextElementSibling.querySelector('.color-swatch');
-        if (swatch) {
-          swatch.style.backgroundColor = '#e0e0e0';
+        // Update tag span to gray
+        const label = checkbox.nextElementSibling;
+        if (label) {
+          const tagSpan = label.querySelector('span');
+          if (tagSpan) {
+            tagSpan.style.backgroundColor = '#CCCCCC';
+          }
         }
       });
     });
@@ -303,10 +386,10 @@ function toggleCommunityVisibility(community, isVisible) {
     // just change the color to gray when not visible
     if (isVisible) {
       // Restore original color
-      topicChart.data.datasets[datasetIndex].backgroundColor = topicChart.data.datasets[datasetIndex].borderColor;
+      topicChart.data.datasets[datasetIndex].backgroundColor = communityColors[community];
     } else {
       // Make the bars gray but keep their height
-      topicChart.data.datasets[datasetIndex].backgroundColor = '#e0e0e0'; // Light gray color
+      topicChart.data.datasets[datasetIndex].backgroundColor = '#CCCCCC'; // Use same gray as htmlCommunityTag
     }
   }
   
