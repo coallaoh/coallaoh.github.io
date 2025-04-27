@@ -17,7 +17,7 @@ function getCommunityFullName(acronym) {
 }
 
 // Function to generate topic trend visualization
-function generateTopicTrendsChart() {
+async function generateTopicTrendsChart() {
   // Check if Chart.js is loaded
   if (typeof Chart === 'undefined') {
     console.error('Chart.js not loaded');
@@ -37,6 +37,13 @@ function generateTopicTrendsChart() {
   } else {
     console.log('Communities data loaded successfully:', communities.length, 'communities found');
   }
+  
+  // Check if hashColor function is available
+  if (typeof hashColor !== 'function') {
+    console.error('hashColor function not found');
+    console.log('Make sure js/publications.js is loaded properly');
+    return;
+  }
 
   // Get the canvas element
   const ctx = document.getElementById('topicTrendsChart');
@@ -49,7 +56,7 @@ function generateTopicTrendsChart() {
   const yearCommunityMap = processPublicationData(publicationsData);
   
   // Create and render the chart
-  createStackedBarChart(ctx, yearCommunityMap);
+  await createStackedBarChart(ctx, yearCommunityMap);
 }
 
 // Process publication data to extract year and community information
@@ -94,25 +101,8 @@ function processPublicationData(publications) {
   return yearCommunityMap;
 }
 
-// Function to generate the colors for communities using the same logic as hashColor
-function generateCommunityColor(community) {
-  // Use the same hash function as in hashColor
-  let hash = 0;
-  for (let i = 0; i < community.length; i++) {
-    hash = ((hash << 5) - hash) + community.charCodeAt(i);
-    hash = hash & hash; // Convert to 32bit integer
-  }
-  
-  // Match the color generation logic from hashColor function
-  const hue = hash % 360;
-  const saturation = 40 + (hash % 40);
-  const lightness = 40 + (40 - (hash % 40));
-  
-  return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
-}
-
 // Create a stacked bar chart
-function createStackedBarChart(ctx, yearCommunityMap) {
+async function createStackedBarChart(ctx, yearCommunityMap) {
   // Get unique years and communities
   const years = Object.keys(yearCommunityMap).sort();
   const allCommunities = new Set();
@@ -148,10 +138,17 @@ function createStackedBarChart(ctx, yearCommunityMap) {
     yearCommunityMap
   };
   
-  // Generate community colors
-  communities.forEach(community => {
-    communityColors[community] = generateCommunityColor(community);
-  });
+  // Generate community colors using hashColor
+  for (const community of communities) {
+    try {
+      // Use hashColor from js/publications.js
+      communityColors[community] = await hashColor(community);
+    } catch (error) {
+      console.error(`Error generating color for ${community}:`, error);
+      // Fallback color if hashColor fails
+      communityColors[community] = `hsl(${Math.floor(Math.random() * 360)}, 70%, 50%)`;
+    }
+  }
   
   // Prepare datasets for Chart.js
   const datasets = communities.map(community => {
@@ -282,14 +279,14 @@ function createStackedBarChart(ctx, yearCommunityMap) {
   });
   
   // Create custom community filter toggles with areas shown
-  createCommunityToggles(communities);
+  await createCommunityToggles(communities);
   
   // Set up event listeners for toggle buttons
   setupToggleButtons();
 }
 
 // Create custom community filter toggles
-function createCommunityToggles(communities) {
+async function createCommunityToggles(communities) {
   const container = document.getElementById('communityFilters');
   if (!container) return;
   
@@ -304,7 +301,7 @@ function createCommunityToggles(communities) {
   container.innerHTML = '';
   
   // Create a toggle for each community, sorted by area
-  communities.forEach(community => {
+  for (const community of communities) {
     const area = communityTotalAreas[community];
     
     const toggleContainer = document.createElement('div');
@@ -398,7 +395,7 @@ function createCommunityToggles(communities) {
       // Update chart
       toggleCommunityVisibility(community, checkbox.checked);
     });
-  });
+  }
 }
 
 // Set up event listeners for select all / clear all buttons
@@ -460,7 +457,7 @@ function toggleCommunityVisibility(community, isVisible) {
     // Instead of hiding the dataset or setting data to zero,
     // just change the color to gray when not visible
     if (isVisible) {
-      // Restore original color
+      // Restore original color from our saved colors map
       topicChart.data.datasets[datasetIndex].backgroundColor = communityColors[community];
     } else {
       // Make the bars gray but keep their height
@@ -487,7 +484,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new MutationObserver((mutations) => {
       if (mutations.some(mutation => mutation.type === 'childList' && mutation.addedNodes.length > 0)) {
         // Publications have been rendered, now create the chart
-        generateTopicTrendsChart();
+        generateTopicTrendsChart().catch(error => {
+          console.error('Error generating topic trends chart:', error);
+        });
         // Disconnect after first observation
         observer.disconnect();
       }
@@ -497,6 +496,10 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(targetNode, { childList: true });
   } else {
     // Fallback to timeout if container not found
-    setTimeout(generateTopicTrendsChart, 1000);
+    setTimeout(() => {
+      generateTopicTrendsChart().catch(error => {
+        console.error('Error generating topic trends chart:', error);
+      });
+    }, 1000);
   }
 }); 
