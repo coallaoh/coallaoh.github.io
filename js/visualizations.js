@@ -295,11 +295,19 @@ async function createCommunityToggles(communities) {
   container.style.maxWidth = '100%';
   container.innerHTML = '';
   
+  // Create a scrollable wrapper for mobile
+  const scrollWrapper = document.createElement('div');
+  scrollWrapper.className = 'community-toggle-scroll-wrapper';
+  scrollWrapper.style.width = '100%';
+  scrollWrapper.style.overflowX = 'auto';
+  scrollWrapper.style.WebkitOverflowScrolling = 'touch'; // For smoother scrolling on iOS
+  
   // Create a table for structured layout
   const table = document.createElement('table');
   table.className = 'community-toggle-table';
   table.style.width = '100%';
   table.style.borderCollapse = 'collapse';
+  table.style.minWidth = '600px'; // Ensure table has a minimum width for mobile scrolling
   
   // Create table body
   const tbody = document.createElement('tbody');
@@ -340,8 +348,40 @@ async function createCommunityToggles(communities) {
   // Append the tbody to the table
   table.appendChild(tbody);
   
-  // Append the table to the container
-  container.appendChild(table);
+  // Append the table to the scroll wrapper and then to the container
+  scrollWrapper.appendChild(table);
+  container.appendChild(scrollWrapper);
+  
+  // Add responsive styles for mobile
+  const mediaQuery = window.matchMedia('(max-width: 768px)');
+  if (mediaQuery.matches) {
+    // Add additional mobile-specific styles when viewport is small
+    scrollWrapper.style.width = '100vw';
+    scrollWrapper.style.marginLeft = 'calc(-50vw + 50%)';
+    scrollWrapper.style.marginRight = 'calc(-50vw + 50%)';
+    scrollWrapper.style.paddingLeft = '15px';
+    scrollWrapper.style.paddingRight = '15px';
+    scrollWrapper.style.boxSizing = 'border-box';
+  }
+  
+  // Add media query listener to adjust styles when window resizes
+  mediaQuery.addEventListener('change', (e) => {
+    if (e.matches) {
+      // Apply mobile styles
+      scrollWrapper.style.width = '100vw';
+      scrollWrapper.style.marginLeft = 'calc(-50vw + 50%)';
+      scrollWrapper.style.marginRight = 'calc(-50vw + 50%)';
+      scrollWrapper.style.paddingLeft = '15px';
+      scrollWrapper.style.paddingRight = '15px';
+    } else {
+      // Reset to desktop styles
+      scrollWrapper.style.width = '100%';
+      scrollWrapper.style.marginLeft = '0';
+      scrollWrapper.style.marginRight = '0';
+      scrollWrapper.style.paddingLeft = '0';
+      scrollWrapper.style.paddingRight = '0';
+    }
+  });
   
   // Helper function to create cells for a community
   function createCommunityCells(row, community, tbody) {
