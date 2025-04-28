@@ -156,9 +156,9 @@ async function createStackedBarChart(ctx, yearCommunityMap) {
       label: community,
       data: years.map(year => yearCommunityMap[year][community] || 0),
       backgroundColor: communityColors[community],
-      borderColor: 'transparent', // Remove borders
-      borderWidth: 0, // Ensure no border
-      community: community // Store community for filtering
+      borderColor: 'transparent',
+      borderWidth: 0,
+      community: community
     };
   });
   
@@ -180,37 +180,31 @@ async function createStackedBarChart(ctx, yearCommunityMap) {
             size: 16
           },
           color: document.documentElement.getAttribute('data-theme') === 'dark' ? 
-            '#FFFFFF' : '#333333' // Bright white in dark mode, dark gray in light mode
+            '#FFFFFF' : '#333333'
         },
         tooltip: {
           enabled: true,
           mode: 'nearest',
           intersect: true,
           callbacks: {
-            // Customize the tooltip title (year) - hide it to simplify
             title: function() {
-              return ''; // Hide the year label (title)
+              return '';
             },
-            // Show acronym and full name on hover
             label: function(context) {
               const acronym = context.dataset.label;
-              // Get full name using the helper function
               const fullName = getCommunityFullName(acronym);
               return `${acronym}: ${fullName}`;
             },
-            // Remove the colored box from the tooltip
             labelColor: function(context) {
               return {
                 borderColor: 'transparent',
                 backgroundColor: 'transparent'
               };
             },
-            // Format the tooltip to be very simple
             labelTextColor: function(context) {
               return '#ffffff';
             }
           },
-          // Custom tooltip styling
           backgroundColor: '#333',
           titleColor: '#fff',
           titleFont: {
@@ -225,7 +219,7 @@ async function createStackedBarChart(ctx, yearCommunityMap) {
           borderWidth: 0
         },
         legend: {
-          display: false // Hide default legend, we'll create custom toggles
+          display: false
         }
       },
       scales: {
@@ -253,12 +247,10 @@ async function createStackedBarChart(ctx, yearCommunityMap) {
           const datasetIndex = chartElement[0].datasetIndex;
           const community = this.data.datasets[datasetIndex].label;
           
-          // Toggle the community visibility instead of opening a link
           const isCurrentlyVisible = communityVisibility[community];
           toggleCommunityVisibility(community, !isCurrentlyVisible);
         }
       },
-      // Add cursor pointer to hint clickability - improved version
       onHover: (event, chartElement) => {
         if (!chartElement || chartElement.length === 0) {
           event.chart.canvas.style.cursor = 'default';
@@ -268,12 +260,7 @@ async function createStackedBarChart(ctx, yearCommunityMap) {
         const datasetIndex = chartElement[0].datasetIndex;
         const community = topicChart.data.datasets[datasetIndex].label;
         
-        // Check if this community is actually visible
-        if (communityVisibility[community]) {
-          event.chart.canvas.style.cursor = 'pointer';
-        } else {
-          event.chart.canvas.style.cursor = 'default';
-        }
+        event.chart.canvas.style.cursor = communityVisibility[community] ? 'pointer' : 'default';
       }
     }
   });
@@ -298,16 +285,12 @@ async function createCommunityToggles(communities) {
   // Create a scrollable wrapper for mobile
   const scrollWrapper = document.createElement('div');
   scrollWrapper.className = 'community-toggle-scroll-wrapper';
-  scrollWrapper.style.width = '100%';
-  scrollWrapper.style.overflowX = 'auto';
-  scrollWrapper.style.WebkitOverflowScrolling = 'touch'; // For smoother scrolling on iOS
+  scrollWrapper.style.cssText = 'width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;';
   
   // Create a table for structured layout
   const table = document.createElement('table');
   table.className = 'community-toggle-table';
-  table.style.width = '100%';
-  table.style.borderCollapse = 'collapse';
-  table.style.minWidth = '600px'; // Ensure table has a minimum width for mobile scrolling
+  table.style.cssText = 'width:100%;border-collapse:collapse;min-width:600px;';
   
   // Create table body
   const tbody = document.createElement('tbody');
@@ -325,7 +308,7 @@ async function createCommunityToggles(communities) {
   // Create rows with communities side by side
   for (let i = 0; i < firstHalf.length; i++) {
     const row = document.createElement('tr');
-    row.style.padding = '0'; // Remove padding to reduce height
+    row.style.padding = '0';
     
     // Process first community (left side)
     createCommunityCells(row, firstHalf[i], tbody);
@@ -335,10 +318,8 @@ async function createCommunityToggles(communities) {
       createCommunityCells(row, secondHalf[i], tbody);
     } else {
       // Add empty cells for padding if no second community
-      const emptyCell1 = document.createElement('td');
-      const emptyCell2 = document.createElement('td');
-      row.appendChild(emptyCell1);
-      row.appendChild(emptyCell2);
+      row.appendChild(document.createElement('td'));
+      row.appendChild(document.createElement('td'));
     }
     
     // Add the row to the table
@@ -354,34 +335,21 @@ async function createCommunityToggles(communities) {
   
   // Add responsive styles for mobile
   const mediaQuery = window.matchMedia('(max-width: 768px)');
-  if (mediaQuery.matches) {
-    // Add additional mobile-specific styles when viewport is small
-    scrollWrapper.style.width = '100vw';
-    scrollWrapper.style.marginLeft = 'calc(-50vw + 50%)';
-    scrollWrapper.style.marginRight = 'calc(-50vw + 50%)';
-    scrollWrapper.style.paddingLeft = '15px';
-    scrollWrapper.style.paddingRight = '15px';
-    scrollWrapper.style.boxSizing = 'border-box';
+  
+  // Apply mobile styles if needed
+  function applyResponsiveStyles(isMobile) {
+    if (isMobile) {
+      scrollWrapper.style.cssText += 'width:100vw;margin-left:calc(-50vw + 50%);margin-right:calc(-50vw + 50%);padding-left:15px;padding-right:15px;box-sizing:border-box;';
+    } else {
+      scrollWrapper.style.cssText = 'width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;margin-left:0;margin-right:0;padding-left:0;padding-right:0;';
+    }
   }
   
-  // Add media query listener to adjust styles when window resizes
-  mediaQuery.addEventListener('change', (e) => {
-    if (e.matches) {
-      // Apply mobile styles
-      scrollWrapper.style.width = '100vw';
-      scrollWrapper.style.marginLeft = 'calc(-50vw + 50%)';
-      scrollWrapper.style.marginRight = 'calc(-50vw + 50%)';
-      scrollWrapper.style.paddingLeft = '15px';
-      scrollWrapper.style.paddingRight = '15px';
-    } else {
-      // Reset to desktop styles
-      scrollWrapper.style.width = '100%';
-      scrollWrapper.style.marginLeft = '0';
-      scrollWrapper.style.marginRight = '0';
-      scrollWrapper.style.paddingLeft = '0';
-      scrollWrapper.style.paddingRight = '0';
-    }
-  });
+  // Initial application of styles
+  applyResponsiveStyles(mediaQuery.matches);
+  
+  // Add listener for window resize
+  mediaQuery.addEventListener('change', (e) => applyResponsiveStyles(e.matches));
   
   // Helper function to create cells for a community
   function createCommunityCells(row, community, tbody) {
@@ -391,9 +359,7 @@ async function createCommunityToggles(communities) {
     
     // First cell: Acronym tag toggle
     const tagCell = document.createElement('td');
-    tagCell.style.padding = '1px 5px 1px 5px'; // Reduced vertical padding
-    tagCell.style.verticalAlign = 'middle';
-    tagCell.style.width = '80px';
+    tagCell.style.cssText = 'padding:1px 5px;vertical-align:middle;width:80px;';
     
     // Create a checkbox but hide it visually
     const checkbox = document.createElement('input');
@@ -402,80 +368,52 @@ async function createCommunityToggles(communities) {
     checkbox.className = 'community-checkbox';
     checkbox.checked = true;
     checkbox.dataset.community = community;
-    checkbox.style.display = 'none'; // Hide the actual checkbox
+    checkbox.style.display = 'none';
     
-    // Create the tag-like label similar to htmlCommunityTag
+    // Create the tag-like label
     const label = document.createElement('label');
     label.htmlFor = `toggle-${community}`;
     label.className = 'community-tag-label';
-    label.style.textDecoration = 'none';
-    label.style.color = 'white';
-    label.style.cursor = 'pointer';
-    label.style.display = 'inline-block';
+    label.style.cssText = 'text-decoration:none;color:white;cursor:pointer;display:inline-block;';
     
-    // Create the span similar to htmlCommunityTag
+    // Create the span for the tag
     const tagSpan = document.createElement('span');
     tagSpan.className = 'inline-flex items-center rounded-full font-medium text-medium';
-    tagSpan.style.backgroundColor = communityColors[community];
-    tagSpan.style.color = 'var(--community-tag-text-color)';
-    tagSpan.style.padding = '1px 4px';
-    tagSpan.style.borderRadius = '12px';
-    tagSpan.style.fontFamily = 'Mukta, sans-serif';
-    tagSpan.style.display = 'inline-block';
+    tagSpan.style.cssText = `background-color:${communityColors[community]};color:var(--community-tag-text-color);padding:1px 4px;border-radius:12px;font-family:Mukta,sans-serif;display:inline-block;`;
     
-    // Create main text without the area
-    const mainText = document.createTextNode(community);
-    tagSpan.appendChild(mainText);
+    // Add the community text
+    tagSpan.textContent = community;
     
-    // Append tag elements
+    // Assemble components
     label.appendChild(tagSpan);
     tagCell.appendChild(checkbox);
     tagCell.appendChild(label);
     row.appendChild(tagCell);
     
-    // New cell: Paper count
+    // Paper count cell
     const countCell = document.createElement('td');
-    countCell.style.padding = '1px 5px';
-    countCell.style.verticalAlign = 'middle';
-    countCell.style.width = '30px';
-    countCell.style.fontSize = '12px';
-    countCell.style.color = 'var(--community-count-color)';
-    countCell.style.textAlign = 'right';
+    countCell.style.cssText = 'padding:1px 5px;vertical-align:middle;width:30px;font-size:12px;color:var(--community-count-color);text-align:right;';
     countCell.textContent = area.toFixed(1);
     row.appendChild(countCell);
     
-    // Third cell: Community full name with link
+    // Community full name with link
     const nameCell = document.createElement('td');
-    nameCell.style.padding = '1px 15px 1px 5px'; // Reduced vertical padding
-    nameCell.style.verticalAlign = 'middle';
-    nameCell.style.maxWidth = '220px';
-    
-    // Get the full name of the community
-    const fullName = getCommunityFullName(community);
+    nameCell.style.cssText = 'padding:1px 15px 1px 5px;vertical-align:middle;max-width:220px;';
     
     // Create link to the community page
     const link = document.createElement('a');
     link.href = `https://researchtrend.ai/communities/${community}`;
-    link.textContent = fullName;
-    link.style.textDecoration = 'underline'; // Add underline to indicate it's a link
-    link.style.color = 'var(--community-name-color)';
-    link.style.fontSize = '14px'; // Smaller text
-    link.target = '_blank'; // Open in new tab
-    link.style.whiteSpace = 'nowrap';
-    link.style.overflow = 'hidden';
-    link.style.textOverflow = 'ellipsis';
-    link.style.display = 'block';
+    link.textContent = getCommunityFullName(community);
+    link.style.cssText = 'text-decoration:underline;color:var(--community-name-color);font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;';
+    link.target = '_blank';
     
     nameCell.appendChild(link);
     row.appendChild(nameCell);
     
     // Add event listener for checkbox
     checkbox.addEventListener('change', () => {
-      // Update the tag background color based on checked state
       tagSpan.style.backgroundColor = checkbox.checked ? 
-        communityColors[community] : '#CCCCCC';
-      
-      // Update chart
+        communityColors[community] : getUnselectedColor();
       toggleCommunityVisibility(community, checkbox.checked);
     });
   }
@@ -504,7 +442,6 @@ function setupToggleButtons() {
         }
       });
       
-      // Filter publications after updating all toggles
       filterPublicationsByTags();
     });
   }
@@ -527,7 +464,6 @@ function setupToggleButtons() {
         }
       });
       
-      // Filter publications after updating all toggles
       filterPublicationsByTags();
     });
   }
@@ -543,15 +479,8 @@ function toggleCommunityVisibility(community, isVisible) {
   // Update corresponding dataset visibility
   const datasetIndex = topicChart.data.datasets.findIndex(dataset => dataset.community === community);
   if (datasetIndex !== -1) {
-    // Instead of hiding the dataset or setting data to zero,
-    // just change the color to gray when not visible
-    if (isVisible) {
-      // Restore original color from our saved colors map
-      topicChart.data.datasets[datasetIndex].backgroundColor = communityColors[community];
-    } else {
-      // Make the bars gray but keep their height
-      topicChart.data.datasets[datasetIndex].backgroundColor = getUnselectedColor(); // Theme-aware gray
-    }
+    topicChart.data.datasets[datasetIndex].backgroundColor = isVisible ?
+      communityColors[community] : getUnselectedColor();
   }
   
   // Update the chart
@@ -596,11 +525,8 @@ function filterPublicationsByTags() {
       return;
     }
     
-    // Check if any of the publication's tags match the selected communities
-    const hasSelectedTag = pubTags.some(tag => selectedCommunities.includes(tag));
-    
     // Show or hide based on whether it has a selected tag
-    pubElement.style.display = hasSelectedTag ? 'flex' : 'none';
+    pubElement.style.display = pubTags.some(tag => selectedCommunities.includes(tag)) ? 'flex' : 'none';
   });
 }
 
@@ -620,18 +546,7 @@ function getChartColors() {
 
 // Update chart theme when theme changes
 function updateChartTheme() {
-  if (window.topicTrendsChart && window.topicTrendsChart.options && 
-      window.topicTrendsChart.options.scales && 
-      window.topicTrendsChart.options.scales.x) {
-    const colors = getChartColors();
-    
-    window.topicTrendsChart.options.scales.x.grid.color = colors.gridColor;
-    window.topicTrendsChart.options.scales.y.grid.color = colors.gridColor;
-    window.topicTrendsChart.options.scales.x.ticks.color = colors.textColor;
-    window.topicTrendsChart.options.scales.y.ticks.color = colors.textColor;
-    
-    window.topicTrendsChart.update();
-  } else if (topicChart && topicChart.options && topicChart.options.scales) {
+  if (topicChart && topicChart.options && topicChart.options.scales) {
     const colors = getChartColors();
     
     // Update topic chart if it exists
@@ -644,9 +559,32 @@ function updateChartTheme() {
   }
 }
 
+// Get theme-aware gray color for unselected items
+function getUnselectedColor() {
+  return document.documentElement.getAttribute('data-theme') === 'dark' ? 
+    '#666666' : '#CCCCCC';
+}
+
+// Update checkbox state and appearance
+function updateCheckboxState(community, isVisible) {
+  const checkbox = document.getElementById(`toggle-${community}`);
+  if (checkbox) {
+    checkbox.checked = isVisible;
+    
+    // Update tag span color
+    const label = checkbox.nextElementSibling;
+    if (label) {
+      const tagSpan = label.querySelector('span');
+      if (tagSpan) {
+        tagSpan.style.backgroundColor = isVisible ? 
+          communityColors[community] : getUnselectedColor();
+      }
+    }
+  }
+}
+
 // Initialize when the DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-  // We need to ensure publications are processed first
   // Use MutationObserver to detect when publications are rendered
   const targetNode = document.getElementById('publications-container');
   if (targetNode) {
@@ -674,94 +612,4 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Make the filter function globally available
   window.filterPublicationsByTags = filterPublicationsByTags;
-});
-
-function initializeTopicTrendsChart() {
-  const ctx = document.getElementById('topicTrendsChart');
-  if (!ctx) return;
-  
-  const colors = getChartColors();
-  
-  window.topicTrendsChart = new Chart(ctx, {
-    type: 'line',
-    data: {
-      datasets: [] // Will be populated later
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      scales: {
-        x: {
-          type: 'linear',
-          position: 'bottom',
-          title: {
-            display: true,
-            text: 'Year',
-            color: colors.textColor
-          },
-          grid: {
-            color: colors.gridColor
-          },
-          ticks: {
-            color: colors.textColor
-          }
-        },
-        y: {
-          title: {
-            display: true,
-            text: 'Publications',
-            color: colors.textColor
-          },
-          grid: {
-            color: colors.gridColor
-          },
-          ticks: {
-            color: colors.textColor
-          }
-        }
-      },
-      plugins: {
-        legend: {
-          position: 'top',
-          labels: {
-            color: colors.textColor
-          }
-        },
-        tooltip: {
-          backgroundColor: 'rgba(0, 0, 0, 0.7)',
-          titleColor: '#fff',
-          bodyColor: '#fff',
-          callbacks: {
-            label: function(context) {
-              return context.dataset.label + ': ' + context.raw.y;
-            }
-          }
-        }
-      }
-    }
-  });
-}
-
-// Add function to get theme-aware gray color
-function getUnselectedColor() {
-  return document.documentElement.getAttribute('data-theme') === 'dark' ? 
-    '#666666' : '#CCCCCC'; // Darker gray in dark mode, light gray in light mode
-}
-
-// Update checkbox state and appearance
-function updateCheckboxState(community, isVisible) {
-  const checkbox = document.getElementById(`toggle-${community}`);
-  if (checkbox) {
-    checkbox.checked = isVisible;
-    
-    // Update tag span color
-    const label = checkbox.nextElementSibling;
-    if (label) {
-      const tagSpan = label.querySelector('span');
-      if (tagSpan) {
-        tagSpan.style.backgroundColor = isVisible ? 
-          communityColors[community] : getUnselectedColor();
-      }
-    }
-  }
-} 
+}); 
