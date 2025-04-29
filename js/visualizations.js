@@ -596,10 +596,14 @@ function filterPublicationsByTags() {
   // Get all publication elements
   const publicationElements = document.querySelectorAll('#publications-container .row.common-rows');
   
+  let visiblePublicationsCount = 0;
+  const totalPublicationsCount = publicationElements.length;
+  
   publicationElements.forEach(pubElement => {
     // If all or none are selected, show all publications
     if (allSelected || noneSelected) {
       pubElement.style.display = 'flex';
+      visiblePublicationsCount++;
       return;
     }
     
@@ -610,12 +614,30 @@ function filterPublicationsByTags() {
     // Special case for "Unknown" - show papers with no community tags
     if (selectedCommunities.includes('Unknown') && pubTags.length === 0) {
       pubElement.style.display = 'flex';
+      visiblePublicationsCount++;
       return;
     }
     
     // Show or hide based on whether it has a selected tag
-    pubElement.style.display = pubTags.some(tag => selectedCommunities.includes(tag)) ? 'flex' : 'none';
+    const isVisible = pubTags.some(tag => selectedCommunities.includes(tag));
+    pubElement.style.display = isVisible ? 'flex' : 'none';
+    if (isVisible) visiblePublicationsCount++;
   });
+  
+  // Update the publications heading
+  updatePublicationsHeading(visiblePublicationsCount, totalPublicationsCount);
+}
+
+// Update the publications heading based on filter status
+function updatePublicationsHeading(selectedCount, totalCount) {
+  const headingElement = document.getElementById('publications-heading');
+  if (!headingElement) return;
+  
+  if (selectedCount === totalCount) {
+    headingElement.textContent = `Publications (${totalCount})`;
+  } else {
+    headingElement.textContent = `Publications (${selectedCount}/${totalCount})`;
+  }
 }
 
 // Add a function to get theme-aware colors for charts
@@ -798,6 +820,11 @@ document.addEventListener('DOMContentLoaded', () => {
         generateTopicTrendsChart().catch(error => {
           console.error('Error generating topic trends chart:', error);
         });
+        
+        // Initialize the publications heading with the total count
+        const totalPublications = document.querySelectorAll('#publications-container .row.common-rows').length;
+        updatePublicationsHeading(totalPublications, totalPublications);
+        
         // Disconnect after first observation
         observer.disconnect();
       }
@@ -811,6 +838,10 @@ document.addEventListener('DOMContentLoaded', () => {
       generateTopicTrendsChart().catch(error => {
         console.error('Error generating topic trends chart:', error);
       });
+      
+      // Initialize the publications heading with the total count
+      const totalPublications = document.querySelectorAll('#publications-container .row.common-rows').length;
+      updatePublicationsHeading(totalPublications, totalPublications);
     }, 1000);
   }
   
