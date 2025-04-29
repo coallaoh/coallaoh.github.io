@@ -195,8 +195,8 @@ async function createStackedBarChart(ctx, yearCommunityMap) {
             label: function(context) {
               const acronym = context.dataset.label;
               const fullName = getCommunityFullName(acronym);
-              const paperCount = context.raw.toFixed(1);
-              return `${acronym}: ${fullName} (${paperCount})`;
+              const totalPapers = communityTotalAreas[acronym].toFixed(1);
+              return `${acronym}: ${fullName} (${totalPapers})`;
             },
             labelColor: function(context) {
               return {
