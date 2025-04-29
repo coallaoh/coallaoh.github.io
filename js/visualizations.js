@@ -123,21 +123,6 @@ async function createStackedBarChart(ctx, yearCommunityMap) {
     }, 0);
   });
   
-  // Sort communities by total area (descending)
-  communities.sort((a, b) => communityTotalAreas[b] - communityTotalAreas[a]);
-  
-  // Initialize visibility for all communities to true
-  communities.forEach(community => {
-    communityVisibility[community] = true;
-  });
-  
-  // Store the original data for filtering later
-  chartData = {
-    years,
-    communities,
-    yearCommunityMap
-  };
-  
   // Generate community colors using hashColor
   for (const community of communities) {
     try {
@@ -150,8 +135,29 @@ async function createStackedBarChart(ctx, yearCommunityMap) {
     }
   }
   
+  // Sort communities by total area (descending) for initial ordering
+  communities.sort((a, b) => communityTotalAreas[b] - communityTotalAreas[a]);
+  
+  // Store the area-sorted communities for the legend and toggle buttons
+  const areaSortedCommunities = [...communities];
+  
+  // Reorder communities to separate similar colors for the chart
+  const reorderedCommunities = optimizeColorSeparation(communities);
+  
+  // Initialize visibility for all communities to true
+  reorderedCommunities.forEach(community => {
+    communityVisibility[community] = true;
+  });
+  
+  // Store the original data for filtering later
+  chartData = {
+    years,
+    communities: reorderedCommunities,
+    yearCommunityMap
+  };
+  
   // Prepare datasets for Chart.js
-  const datasets = communities.map(community => {
+  const datasets = reorderedCommunities.map(community => {
     return {
       label: community,
       data: years.map(year => yearCommunityMap[year][community] || 0),
@@ -280,8 +286,8 @@ async function createStackedBarChart(ctx, yearCommunityMap) {
     }
   });
   
-  // Create custom community filter toggles with areas shown
-  await createCommunityToggles(communities);
+  // Create custom community filter toggles with areas shown, using area-sorted communities
+  await createCommunityToggles(areaSortedCommunities);
   
   // Set up event listeners for toggle buttons
   setupToggleButtons();
@@ -649,6 +655,122 @@ function updateCheckboxState(community, isVisible) {
       }
     }
   }
+}
+
+// Function to optimize color separation in the stacked bar chart
+function optimizeColorSeparation(communities) {
+  if (communities.length <= 2) return communities;
+  
+  // Convert colors to HSL for better color distance calculation
+  const colorData = communities.map(community => {
+    const color = communityColors[community];
+    const hsl = colorToHSL(color);
+    return {
+      community,
+      color,
+      hsl,
+      area: communityTotalAreas[community]
+    };
+  });
+  
+  // Sort by area first (largest to smallest)
+  colorData.sort((a, b) => b.area - a.area);
+  
+  // Start with the largest community
+  const result = [colorData[0].community];
+  const used = new Set([colorData[0].community]);
+  
+  // Keep track of the last added color
+  let lastAddedHSL = colorData[0].hsl;
+  
+  // Add remaining communities one by one, always choosing the one with the most different color
+  while (used.size < communities.length) {
+    let bestIndex = -1;
+    let maxColorDistance = -1;
+    
+    // Find the community with the most different color from the last added one
+    for (let i = 0; i < colorData.length; i++) {
+      if (used.has(colorData[i].community)) continue;
+      
+      const colorDistance = calculateColorDistance(lastAddedHSL, colorData[i].hsl);
+      
+      if (colorDistance > maxColorDistance) {
+        maxColorDistance = colorDistance;
+        bestIndex = i;
+      }
+    }
+    
+    if (bestIndex !== -1) {
+      result.push(colorData[bestIndex].community);
+      used.add(colorData[bestIndex].community);
+      lastAddedHSL = colorData[bestIndex].hsl;
+    }
+  }
+  
+  return result;
+}
+
+// Helper function to convert color to HSL
+function colorToHSL(color) {
+  // Create a temporary div to use the browser's color parsing
+  const temp = document.createElement('div');
+  temp.style.color = color;
+  document.body.appendChild(temp);
+  const computedColor = window.getComputedStyle(temp).color;
+  document.body.removeChild(temp);
+  
+  // Parse the computed color
+  const rgbMatch = computedColor.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/);
+  if (!rgbMatch) return { h: 0, s: 0, l: 0 };
+  
+  const r = parseInt(rgbMatch[1]) / 255;
+  const g = parseInt(rgbMatch[2]) / 255;
+  const b = parseInt(rgbMatch[3]) / 255;
+  
+  const max = Math.max(r, g, b);
+  const min = Math.min(r, g, b);
+  let h, s, l = (max + min) / 2;
+  
+  if (max === min) {
+    h = s = 0; // achromatic
+  } else {
+    const d = max - min;
+    s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+    
+    switch (max) {
+      case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+      case g: h = (b - r) / d + 2; break;
+      case b: h = (r - g) / d + 4; break;
+    }
+    
+    h /= 6;
+  }
+  
+  return { h: h * 360, s: s * 100, l: l * 100 };
+}
+
+// Helper function to calculate color distance in HSL space
+function calculateColorDistance(hsl1, hsl2) {
+  // Weight hue more heavily than saturation and lightness
+  const hueWeight = 0.6;
+  const satWeight = 0.2;
+  const lightWeight = 0.2;
+  
+  // Normalize hue difference to [0, 180] range (half the hue circle)
+  const hueDiff = Math.min(
+    Math.abs(hsl1.h - hsl2.h),
+    360 - Math.abs(hsl1.h - hsl2.h)
+  );
+  
+  const satDiff = Math.abs(hsl1.s - hsl2.s);
+  const lightDiff = Math.abs(hsl1.l - hsl2.l);
+  
+  // Calculate weighted distance
+  return (
+    hueWeight * (hueDiff / 180) +
+    satWeight * (satDiff / 100) +
+    lightWeight * (lightDiff / 100)
+  );
 }
 
 // Initialize when the DOM is loaded
