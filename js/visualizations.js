@@ -158,7 +158,9 @@ async function createStackedBarChart(ctx, yearCommunityMap) {
       backgroundColor: communityColors[community],
       borderColor: 'transparent',
       borderWidth: 0,
-      community: community
+      community: community,
+      // Add a custom property to store the original color for hover effects
+      originalColor: communityColors[community]
     };
   });
   
@@ -247,6 +249,13 @@ async function createStackedBarChart(ctx, yearCommunityMap) {
       },
       onHover: (event, chartElement) => {
         if (!chartElement || chartElement.length === 0) {
+          // Reset all datasets to their original colors
+          topicChart.data.datasets.forEach(dataset => {
+            if (communityVisibility[dataset.community]) {
+              dataset.backgroundColor = dataset.originalColor;
+            }
+          });
+          topicChart.update();
           event.chart.canvas.style.cursor = 'default';
           return;
         }
@@ -254,6 +263,18 @@ async function createStackedBarChart(ctx, yearCommunityMap) {
         const datasetIndex = chartElement[0].datasetIndex;
         const community = topicChart.data.datasets[datasetIndex].label;
         
+        // Highlight all regions of the same community across all years
+        topicChart.data.datasets.forEach(dataset => {
+          if (dataset.community === community && communityVisibility[community]) {
+            // Make the color brighter for the hovered community
+            dataset.backgroundColor = adjustColorBrightness(dataset.originalColor, 20);
+          } else if (communityVisibility[dataset.community]) {
+            // Reset other visible communities to their original colors
+            dataset.backgroundColor = dataset.originalColor;
+          }
+        });
+        
+        topicChart.update();
         event.chart.canvas.style.cursor = communityVisibility[community] ? 'pointer' : 'default';
       }
     }
@@ -264,6 +285,59 @@ async function createStackedBarChart(ctx, yearCommunityMap) {
   
   // Set up event listeners for toggle buttons
   setupToggleButtons();
+}
+
+// Helper function to adjust color brightness
+function adjustColorBrightness(color, percent) {
+  // Handle hex colors
+  if (color.startsWith('#')) {
+    const num = parseInt(color.replace('#', ''), 16);
+    const amt = Math.round(2.55 * percent);
+    const R = (num >> 16) + amt;
+    const G = (num >> 8 & 0x00FF) + amt;
+    const B = (num & 0x0000FF) + amt;
+    
+    return '#' + (
+      0x1000000 +
+      (R < 255 ? (R < 1 ? 0 : R) : 255) * 0x10000 +
+      (G < 255 ? (G < 1 ? 0 : G) : 255) * 0x100 +
+      (B < 255 ? (B < 1 ? 0 : B) : 255)
+    ).toString(16).slice(1);
+  }
+  
+  // Handle rgb/rgba colors
+  if (color.startsWith('rgb')) {
+    const values = color.match(/\d+/g);
+    if (values && values.length >= 3) {
+      const amt = Math.round(2.55 * percent);
+      const r = Math.min(255, Math.max(0, parseInt(values[0]) + amt));
+      const g = Math.min(255, Math.max(0, parseInt(values[1]) + amt));
+      const b = Math.min(255, Math.max(0, parseInt(values[2]) + amt));
+      
+      if (values.length === 4) {
+        return `rgba(${r}, ${g}, ${b}, ${values[3]})`;
+      }
+      return `rgb(${r}, ${g}, ${b})`;
+    }
+  }
+  
+  // Handle hsl/hsla colors
+  if (color.startsWith('hsl')) {
+    const values = color.match(/\d+/g);
+    if (values && values.length >= 3) {
+      const h = parseInt(values[0]);
+      const s = parseInt(values[1]);
+      const l = Math.min(100, Math.max(0, parseInt(values[2]) + percent));
+      
+      if (values.length === 4) {
+        return `hsla(${h}, ${s}%, ${l}%, ${values[3]})`;
+      }
+      return `hsl(${h}, ${s}%, ${l}%)`;
+    }
+  }
+  
+  // Return original color if we can't parse it
+  return color;
 }
 
 // Create custom community filter toggles
