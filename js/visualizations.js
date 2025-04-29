@@ -289,6 +289,18 @@ async function createStackedBarChart(ctx, yearCommunityMap) {
     }
   });
   
+  // Add a mouseleave event listener to the chart canvas to reset colors when mouse leaves the chart area
+  ctx.addEventListener('mouseleave', () => {
+    // Reset all datasets to their original colors
+    topicChart.data.datasets.forEach(dataset => {
+      if (communityVisibility[dataset.community]) {
+        dataset.backgroundColor = dataset.originalColor;
+      }
+    });
+    topicChart.update();
+    ctx.style.cursor = 'default';
+  });
+  
   // Create custom community filter toggles with areas shown, using area-sorted communities
   await createCommunityToggles(areaSortedCommunities);
   
