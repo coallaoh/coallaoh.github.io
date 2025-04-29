@@ -256,11 +256,10 @@ async function createStackedBarChart(ctx, yearCommunityMap) {
       },
       onHover: (event, chartElement) => {
         if (!chartElement || chartElement.length === 0) {
-          // Reset all datasets to their original colors
+          // Reset all datasets to their original colors or unselected colors
           topicChart.data.datasets.forEach(dataset => {
-            if (communityVisibility[dataset.community]) {
-              dataset.backgroundColor = dataset.originalColor;
-            }
+            dataset.backgroundColor = communityVisibility[dataset.community] ? 
+              dataset.originalColor : getUnselectedColor();
           });
           topicChart.update();
           event.chart.canvas.style.cursor = 'default';
@@ -272,30 +271,30 @@ async function createStackedBarChart(ctx, yearCommunityMap) {
         
         // Update colors for all datasets
         topicChart.data.datasets.forEach(dataset => {
-          if (communityVisibility[dataset.community]) {
-            if (dataset.community === community) {
-              // Make the hovered community brighter
-              dataset.backgroundColor = adjustColorBrightness(dataset.originalColor, 20);
-            } else {
-              // Turn other visible communities gray
-              dataset.backgroundColor = getUnselectedColor();
-            }
+          if (dataset.community === community) {
+            // Always make the hovered community brighter - even if it's deselected
+            dataset.backgroundColor = adjustColorBrightness(dataset.originalColor, 20);
+            event.chart.canvas.style.cursor = 'pointer';
+          } else if (communityVisibility[dataset.community]) {
+            // Turn other visible communities gray
+            dataset.backgroundColor = getUnselectedColor();
+          } else {
+            // Keep unselected communities gray
+            dataset.backgroundColor = getUnselectedColor();
           }
         });
         
         topicChart.update();
-        event.chart.canvas.style.cursor = communityVisibility[community] ? 'pointer' : 'default';
       }
     }
   });
   
   // Add a mouseleave event listener to the chart canvas to reset colors when mouse leaves the chart area
   ctx.addEventListener('mouseleave', () => {
-    // Reset all datasets to their original colors
+    // Reset all datasets to their original colors or unselected colors based on visibility
     topicChart.data.datasets.forEach(dataset => {
-      if (communityVisibility[dataset.community]) {
-        dataset.backgroundColor = dataset.originalColor;
-      }
+      dataset.backgroundColor = communityVisibility[dataset.community] ? 
+        dataset.originalColor : getUnselectedColor();
     });
     topicChart.update();
     ctx.style.cursor = 'default';
