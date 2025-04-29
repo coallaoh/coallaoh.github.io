@@ -270,14 +270,16 @@ async function createStackedBarChart(ctx, yearCommunityMap) {
         const datasetIndex = chartElement[0].datasetIndex;
         const community = topicChart.data.datasets[datasetIndex].label;
         
-        // Highlight all regions of the same community across all years
+        // Update colors for all datasets
         topicChart.data.datasets.forEach(dataset => {
-          if (dataset.community === community && communityVisibility[community]) {
-            // Make the color brighter for the hovered community
-            dataset.backgroundColor = adjustColorBrightness(dataset.originalColor, 20);
-          } else if (communityVisibility[dataset.community]) {
-            // Reset other visible communities to their original colors
-            dataset.backgroundColor = dataset.originalColor;
+          if (communityVisibility[dataset.community]) {
+            if (dataset.community === community) {
+              // Make the hovered community brighter
+              dataset.backgroundColor = adjustColorBrightness(dataset.originalColor, 20);
+            } else {
+              // Turn other visible communities gray
+              dataset.backgroundColor = getUnselectedColor();
+            }
           }
         });
         
