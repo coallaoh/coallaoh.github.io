@@ -174,13 +174,7 @@ async function createStackedBarChart(ctx, yearCommunityMap) {
       maintainAspectRatio: false,
       plugins: {
         title: {
-          display: true,
-          text: 'Research Community Contributions',
-          font: {
-            size: 16
-          },
-          color: document.documentElement.getAttribute('data-theme') === 'dark' ? 
-            '#FFFFFF' : '#333333'
+          display: false
         },
         tooltip: {
           enabled: true,
@@ -538,7 +532,7 @@ function getChartColors() {
                       !document.documentElement.hasAttribute('data-theme'));
   
   return {
-    gridColor: isDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)',
+    gridColor: isDarkMode ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.1)',
     tickColor: isDarkMode ? 'rgba(255, 255, 255, 0.5)' : 'rgba(0, 0, 0, 0.5)',
     textColor: isDarkMode ? '#ffffff' : '#666'
   };
