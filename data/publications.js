@@ -5,7 +5,7 @@ const publicationsData = [
       "title": "Does Data Scaling Lead to Visual Compositional Generalization?",
       "authors": [
         {"name": "Arnas Uselis", "url": "https://www.linkedin.com/in/arnas-uselis-193883144/"},
-        {"name": "Andrea Dittadi", "url": "https://www.linkedin.com/in/andrea-dittadi-b0000000000000000000000000000000000000000/"},
+        {"name": "Andrea Dittadi", "url": "https://addtt.github.io/"},
         {"name": "Seong Joon Oh", "url": "", "isPI": true}
       ],
       "venue": "ICML",
@@ -20,8 +20,8 @@ const publicationsData = [
       "image": "pictures/arnas2025icml.png",
       "links": [
       ],
-      "abstract": "Vision-language models (VLMs) are able to reason about the world in a compositional manner. However, the compositional generalisation of VLMs is not well understood. We study the compositional generalisation of VLMs by analysing the performance of VLMs on a suite of compositional visual reasoning benchmarks. We find that VLMs are able to reason about the world in a compositional manner, but their compositional generalisation is limited.",
-      "rtai_tags": ["CoGe", "VLM", "OOD"]
+      "abstract": "We study the mechanisms of compositional generalisation in visual reasoning. Our current hypothesis follows a three-step process: (1) When data diversity exceeds a certain threshold, it leads to (2) the emergence of \"linear\" representations, which in turn (3) enables compositional capabilities.",
+      "rtai_tags": ["CoGe", "OOD"]
     },
     {
       "id": "alex2025ocl",
