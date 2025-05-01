@@ -1,6 +1,29 @@
 // Publications data in JSON format
 const publicationsData = [
     {
+      "id": "arnas2025icml",
+      "title": "Does Data Scaling Lead to Visual Compositional Generalization?",
+      "authors": [
+        {"name": "Arnas Uselis", "url": "https://www.linkedin.com/in/arnas-uselis-193883144/"},
+        {"name": "Andrea Dittadi", "url": "https://www.linkedin.com/in/andrea-dittadi-b0000000000000000000000000000000000000000/"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true}
+      ],
+      "venue": "ICML",
+      "year": "2025",
+      "url": "",
+      "bibtex": `@article{arnas2025icml,
+  title={Does Data Scaling Lead to Visual Compositional Generalization?},
+  author={Uselis, Arnas and Dittadi, Andrea and Oh, Seong Joon},
+  journal={arXiv preprint arXiv:2504.07092},
+  year={2025}
+}`,
+      "image": "pictures/arnas2025icml.png",
+      "links": [
+      ],
+      "abstract": "Vision-language models (VLMs) are able to reason about the world in a compositional manner. However, the compositional generalisation of VLMs is not well understood. We study the compositional generalisation of VLMs by analysing the performance of VLMs on a suite of compositional visual reasoning benchmarks. We find that VLMs are able to reason about the world in a compositional manner, but their compositional generalisation is limited.",
+      "rtai_tags": ["CoGe", "VLM", "OOD"]
+    },
+    {
       "id": "alex2025ocl",
       "title": "Are We Done with Object-Centric Learning?",
       "authors": [
