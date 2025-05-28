@@ -1,6 +1,32 @@
 // Publications data in JSON format
 const publicationsData = [
     {
+      "id": "yujin2025diffusion",
+      "title": "Diffusion Classifiers Understand Compositionality, but Conditions Apply",
+      "authors": [
+        {"name": "Yujin Jeong", "url": "https://eugene6923.github.io/"},
+        {"name": "Arnas Uselis", "url": "https://www.linkedin.com/in/arnas-uselis-193883144/"},
+        {"name": "Seong Joon Oh", "url": "", "isPI": true},
+        {"name": "Anna Rohrbach", "url": "https://anna-rohrbach.net/"}
+      ],
+      "venue": "arXiv",
+      "year": "2025",
+      "url": "https://arxiv.org/abs/2505.17955",
+      "bibtex": `@article{yujin2025diffusion,
+  title={Diffusion Classifiers Understand Compositionality, but Conditions Apply},
+  author={Jeong, Yujin and Uselis, Arnas and Oh, Seong Joon and Rohrbach, Anna},
+  journal={arXiv preprint arXiv:2505.17955},
+  year={2025}
+}`,
+      "image": "pictures/yujin2025diffusion.png",
+      "links": [
+        {"text": "ResearchTrend.AI", "url": "https://researchtrend.ai/papers/2505.17955"},
+        {"text": "Code", "url": "https://github.com/eugene6923/Diffusion-Classifiers-Compositionality"}
+      ],
+      "abstract": "Diffusion models can generate novel compositions. But can they also understand them? Some recent methods convert diffusion models into discriminative ones (\"Diffusion Classifiers\", ICCV 2023). Yet, we lack a clear understanding of when and how their generative compositionality transfers to discriminative tasks. We also do not know which factors control this transfer or how to tune them. In this work, we study this question and offer practical insights for improving compositional transfer from generative to discriminative models.",
+      "rtai_tags": ["CoGe", "DiffM"]
+    },
+    {
       "id": "arnas2025icml",
       "title": "Does Data Scaling Lead to Visual Compositional Generalization?",
       "authors": [
