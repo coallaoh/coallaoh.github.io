@@ -476,7 +476,7 @@ const publicationsData = [
     "authors": [
       "elisa_nguyen",
       "evgenii_kortukov",
-      "jean_y_song_2",
+      "jean_y_song",
       "seong_joon_oh"
     ],
     "venue": "NeurIPS XAI in Action Workshop",
@@ -699,7 +699,7 @@ const publicationsData = [
       "john_joon_young_chung",
       "minsuk_chang",
       "sangdoo_yun",
-      "jean_y_song_2",
+      "jean_y_song",
       "seong_joon_oh"
     ],
     "venue": "ICCV",
@@ -1182,7 +1182,7 @@ const publicationsData = [
       "dongyoon_han",
       "youngjung_uh",
       "sangdoo_yun",
-      "jungwoo_ha"
+      "jung_woo_ha"
     ],
     "venue": "ICLR",
     "year": "2021",

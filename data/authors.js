@@ -303,12 +303,6 @@ const authorsData = {
     },
     {
       "id": "jean_y_song",
-      "name": "Jean Y Song",
-      "url": "https://jyskwon.github.io/",
-      "isMe": false
-    },
-    {
-      "id": "jean_y_song_2",
       "name": "Jean Y. Song",
       "url": "https://jyskwon.github.io/",
       "isMe": false
@@ -395,12 +389,6 @@ const authorsData = {
       "id": "jungbeom_lee",
       "name": "Jungbeom Lee",
       "url": "https://github.com/jbeomlee93",
-      "isMe": false
-    },
-    {
-      "id": "jungwoo_ha",
-      "name": "Jungwoo Ha",
-      "url": "https://sites.google.com/site/hjw9096/",
       "isMe": false
     },
     {
