@@ -25,8 +25,8 @@ Each publication entry should follow this format:
   "id": "uniqueid",
   "title": "Publication Title",
   "authors": [
-    {"name": "Author Name", "url": "https://author-website.com", "isPI": false},
-    {"name": "Seong Joon Oh", "url": "", "isPI": true}
+    {"name": "Author Name", "url": "https://author-website.com", "isMe": false},
+    {"name": "Seong Joon Oh", "url": "", "isMe": true}
   ],
   "venue": "Conference or Journal Name",
   "year": "2025",

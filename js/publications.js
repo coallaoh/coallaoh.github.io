@@ -16,8 +16,25 @@ async function renderPublication(publication) {
   // Combine regular tags and RTAI tags
   const allTagsHTML = tagsHTML + (rtaiTagsHTML ? '\n' + rtaiTagsHTML : '');
   
-  const authorsHTML = publication.authors.map(author => {
-    if (author.isPI) {
+  // Create author lookup map if it doesn't exist
+  if (!window.authorLookup) {
+    window.authorLookup = new Map();
+    if (typeof authorsData !== 'undefined' && authorsData.authors) {
+      authorsData.authors.forEach(author => {
+        window.authorLookup.set(author.id, author);
+      });
+    }
+  }
+  
+  // Resolve author IDs to author objects
+  const authorsHTML = publication.authors.map(authorId => {
+    const author = window.authorLookup.get(authorId);
+    if (!author) {
+      console.warn(`Author not found for ID: ${authorId}`);
+      return authorId; // fallback to showing the ID
+    }
+    
+    if (author.isMe) {
       return `<strong>${author.name}</strong>`;
     } else if (author.url) {
       return `<a href="${author.url}">${author.name}</a>`;
