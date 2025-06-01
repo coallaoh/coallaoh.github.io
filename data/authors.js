@@ -5,7 +5,7 @@ const authorsData = {
       "id": "alexander_rubinstein",
       "name": "Alexander Rubinstein",
       "url": "https://scalabletrustworthyai.github.io/member/alex/",
-      "isMe": false
+      "isMe": true
     },
     {
       "id": "ameya_prabhu",
@@ -574,8 +574,8 @@ const authorsData = {
     {
       "id": "seong_joon_oh",
       "name": "Seong Joon Oh",
-      "url": "",
-      "isMe": true
+      "url": "https://coallaoh.github.io/",
+      "isMe": false
     },
     {
       "id": "seonghyeon_kim",

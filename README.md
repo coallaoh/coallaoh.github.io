@@ -1,4 +1,4 @@
-# Seong Joon Oh's Personal Website
+# Alexander Rubinstein's Personal Website
 
 ## Managing Publications
 
@@ -26,14 +26,14 @@ Each publication entry should follow this format:
   "title": "Publication Title",
   "authors": [
     {"name": "Author Name", "url": "https://author-website.com", "isMe": false},
-    {"name": "Seong Joon Oh", "url": "", "isMe": true}
+    {"name": "Alexander Rubinstein", "url": "", "isMe": true}
   ],
   "venue": "Conference or Journal Name",
   "year": "2025",
   "url": "https://arxiv.org/abs/paper-url",
   "bibtex": `@inproceedings{uniqueid,
     title = {Publication Title},
-    author = {Author, Name and Oh, Seong Joon},
+    author = {Author, Name and Rubinstein, Alexander},
     year = {2025},
     booktitle = {Conference Name},
   }`,
@@ -54,7 +54,7 @@ The BibTeX content is now embedded directly in the publication data. Use backtic
 ```javascript
 "bibtex": `@inproceedings{uniqueid,
   title = {Publication Title},
-  author = {Author, Name and Oh, Seong Joon},
+  author = {Author, Name and Rubinstein, Alexander},
   year = {2025},
   booktitle = {Conference Name},
 }`
