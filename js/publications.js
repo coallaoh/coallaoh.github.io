@@ -2,20 +2,20 @@
 async function renderPublication(publication) {
   // Check if tags exist, otherwise use empty array
   const tags = publication.tags || [];
-  const tagsHTML = tags.map(tag => 
+  const tagsHTML = tags.map(tag =>
     `<span style="background-color:${getTagColor(tag)}">${tag}</span>`
   ).join('\n');
-  
+
   // Render RTAITags if they exist
   let rtaiTagsHTML = '';
   if (publication.rtai_tags) {
     const rtaiTags = await Promise.all(publication.rtai_tags.map(tag => htmlCommunityTag(tag)));
     rtaiTagsHTML = rtaiTags.join('\n');
   }
-  
+
   // Combine regular tags and RTAI tags
   const allTagsHTML = tagsHTML + (rtaiTagsHTML ? '\n' + rtaiTagsHTML : '');
-  
+
   // Create author lookup map if it doesn't exist
   if (!window.authorLookup) {
     window.authorLookup = new Map();
@@ -25,7 +25,7 @@ async function renderPublication(publication) {
       });
     }
   }
-  
+
   // Resolve author IDs to author objects
   const authorsHTML = publication.authors.map(authorId => {
     const author = window.authorLookup.get(authorId);
@@ -33,7 +33,7 @@ async function renderPublication(publication) {
       console.warn(`Author not found for ID: ${authorId}`);
       return authorId; // fallback to showing the ID
     }
-    
+
     if (author.isMe) {
       return `<strong>${author.name}</strong>`;
     } else if (author.url) {
@@ -42,24 +42,24 @@ async function renderPublication(publication) {
       return author.name;
     }
   }).join(',\n');
-  
-  const linksHTML = publication.links.length > 0 ? 
+
+  const linksHTML = publication.links.length > 0 ?
     publication.links.map(link => `<a href="${link.url}">${link.text}</a>`).join(' / ') : '';
-  
+
   // Create a BibTeX toggle link (without the pre element)
   const bibtexId = `bibtex-${publication.id}`;
-  const bibtexLinkHTML = publication.bibtex ? 
+  const bibtexLinkHTML = publication.bibtex ?
     `<a href="javascript:void(0)" onclick="toggleBibtex('${bibtexId}')">BibTeX</a>` : '';
-  
+
   // Create the BibTeX content pre element separately
-  const bibtexContentHTML = publication.bibtex ? 
+  const bibtexContentHTML = publication.bibtex ?
     `<pre id="${bibtexId}" class="bibtex-content" style="display:none" onclick="selectAndCopyBibtex(event, '${bibtexId}')">${publication.bibtex}</pre>` : '';
-  
+
   // Combine all links first (BibTeX link + other links)
   const combinedLinksHTML = bibtexLinkHTML + (linksHTML ? (bibtexLinkHTML ? ' / ' : '') + linksHTML : '');
-  
+
   // Create the links section with the links on one line and the BibTeX content below them
-  const linksSection = combinedLinksHTML ? 
+  const linksSection = combinedLinksHTML ?
     `<br>\n${combinedLinksHTML}\n${bibtexContentHTML}` : '';
 
   return `
@@ -79,7 +79,7 @@ async function renderPublication(publication) {
         <br>
         <em>${publication.venue}</em>, ${publication.year}
         ${linksSection}
-        <p>${publication.abstract}
+        <p>${marked.parse(publication.abstract)}
         </p>
       </div>
     </div>
@@ -99,27 +99,27 @@ function toggleBibtex(id) {
 // Function to select and copy BibTeX text
 function selectAndCopyBibtex(event, id) {
   event.stopPropagation(); // Prevent the click from triggering parent elements
-  
+
   const bibtexElement = document.getElementById(id);
   const range = document.createRange();
   range.selectNodeContents(bibtexElement);
-  
+
   const selection = window.getSelection();
   selection.removeAllRanges();
   selection.addRange(range);
-  
+
   try {
     // Copy the selected text to clipboard
     document.execCommand('copy');
-    
+
     // Visual feedback for copy
     const originalBgColor = bibtexElement.style.backgroundColor;
     bibtexElement.style.backgroundColor = '#e8f5e9'; // Light green for success
-    
+
     setTimeout(() => {
       bibtexElement.style.backgroundColor = originalBgColor;
     }, 300);
-    
+
     console.log('BibTeX copied to clipboard');
   } catch (err) {
     console.error('Failed to copy BibTeX: ', err);
@@ -168,7 +168,7 @@ async function hashAcronym(value) {
   const hasher = createHash("sha256").update(value ?? "");
   // digest() returns a Promise that resolves to a hex string
   const digest = await hasher.digest();
-  
+
   // Convert the first 12 characters of the hex digest to an integer
   const hexDigest = digest.toString(16).padStart(12, '0');
   return parseInt(hexDigest.slice(0, 12), 16);
@@ -224,7 +224,7 @@ function hslToHex(h, s, l) {
 async function htmlCommunityTag(acronym, putColor = true, additionalText = "") {
   const color = putColor ? await hashColor(acronym) : '#CCCCCC';
   return `<a href='https://researchtrend.ai/communities/${acronym}' style='text-decoration: none; color: white;'>
-    <span class='inline-flex items-center rounded-full font-medium text-medium' 
+    <span class='inline-flex items-center rounded-full font-medium text-medium'
     style='background-color: ${color}; color: var(--community-tag-text-color); padding: 1px 4px; border-radius: 12px; font-family: Mukta, sans-serif;'>
     ${acronym}${additionalText}</span></a>`;
 }
@@ -239,7 +239,7 @@ function getTagColor(tag) {
     'Explainability': '#c7ceea',
     'Large-Scale ML': '#C9D3D8'
   };
-  
+
   return tagColors[tag] || '#cccccc';
 }
 
@@ -247,24 +247,24 @@ function getTagColor(tag) {
 async function renderPublications() {
   const publicationsContainer = document.getElementById('publications-container');
   if (!publicationsContainer) return;
-  
+
   // Publications data comes from data/publications.js (already loaded in the page)
   if (typeof publicationsData === 'undefined') {
     console.error('Publications data not found. Make sure data/publications.js is loaded before this script.');
     return;
   }
-  
+
   // Sort publications by year (descending)
   const publications = [...publicationsData].sort((a, b) => b.year - a.year);
-  
+
   // Using Promise.all correctly to await all async renderPublication calls
   const publicationsHTMLArray = await Promise.all(publications.map(pub => renderPublication(pub)));
   publicationsContainer.innerHTML = publicationsHTMLArray.join('\n');
-  
+
   // Make the functions globally available
   window.toggleBibtex = toggleBibtex;
   window.selectAndCopyBibtex = selectAndCopyBibtex;
-  
+
   // Filter publications based on selected communities if the filter function exists
   if (typeof filterPublicationsByTags === 'function') {
     filterPublicationsByTags();
@@ -274,13 +274,13 @@ async function renderPublications() {
 // Initialize when the DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
   renderPublications();
-  
+
   // Add theme change listener for charts
   const toggleSwitch = document.querySelector('#checkbox');
   if (toggleSwitch) {
     toggleSwitch.addEventListener('change', updateChartTheme);
   }
-  
+
   // Listen for system preference changes
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateChartTheme);
-}); 
+});
