@@ -4,7 +4,7 @@ const authorsData = {
     {
       "id": "alexander_rubinstein",
       "name": "Alexander Rubinstein",
-      "url": "https://scalabletrustworthyai.github.io/member/alex/",
+      "url": "https://arubique.github.io/",
       "isMe": false
     },
     {
