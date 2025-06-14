@@ -164,7 +164,22 @@ const publicationsData = [
         "url": "https://researchtrend.ai/papers/2403.07968"
       }
     ],
-    "abstract": "The non-convexity of modern neural networks poses unique challenges for understanding and controlling them. While optima may be scattered across different regions of the parameter space, training methods are expected to find good solutions. We aim to understand the geometric structure of these solutions by investigating whether they form a star domain. We apply linear interpolation between models trained with different initialisations and examine the resulting performance. Experimental results from 11 architectures on 5 datasets reveal that in 80% of cases, the average performance on the linear interpolation path stays within 20% of the original performance. We further show that these findings are unaffected by various factors such as optimiser choice, weight averaging, or model accuracy.",
+    // "abstract": "The non-convexity of modern neural networks poses unique challenges for understanding and controlling them. While optima may be scattered across different regions of the parameter space, training methods are expected to find good solutions. We aim to understand the geometric structure of these solutions by investigating whether they form a star domain. We apply linear interpolation between models trained with different initialisations and examine the resulting performance. Experimental results from 11 architectures on 5 datasets reveal that in 80% of cases, the average performance on the linear interpolation path stays within 20% of the original performance. We further show that these findings are unaffected by various factors such as optimiser choice, weight averaging, or model accuracy.",
+    "abstract": "TLDR: We investigate the geometric structure of neural network solutions by " +
+      "studying linear mode connectivity between independently trained models. Our findings " +
+      "reveal a star-domain structure in parameter space, where a subset of solutions are " +
+      "linearly connected to all others (up to weight permutation)." +
+      "<details><summary>Not TLDR</summary>" +
+      "As we continued exploring functional modularity through the lens of diverse ensembles, " +
+      "we asked: What is the relationship between ensemble members in parameter space when " +
+      "each model is viewed as a solution obtained from a different random initialization and " +
+      "batch ordering during training? To investigate the geometric structure of these " +
+      "solutions, we study linear mode connectivity — the existence of low-loss linear paths " +
+      "between pairs of trained models. We linearly interpolate between independently trained " +
+      "models and evaluate performance along these paths. Our findings reveal a subset of " +
+      "solutions that are linearly connected to all others (up to weight permutation), " +
+      "suggesting that the overall solution set forms a star-domain structure in parameter " +
+      "space.</details>",
     "rtai_tags": [
       "MoMe"
     ]
