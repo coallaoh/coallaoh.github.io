@@ -32,7 +32,22 @@ const publicationsData = [
         "url": "https://github.com/AlexanderRubinstein/OCCAM"
       }
     ],
-    "abstract": "Object-centric learning (OCL) aims to learn object-wise representations, promising robust vision and human-like perception. However, OCL evaluation remains tied to unsupervised object discovery, a problem largely solved by foundational segmentation models. We argue that both object discovery and robust vision are effectively addressed. The field must shift towards real-world applications beyond object discovery.",
+    // "abstract": "Object-centric learning (OCL) aims to learn object-wise representations, promising robust vision and human-like perception. However, OCL evaluation remains tied to unsupervised object discovery, a problem largely solved by foundational segmentation models. We argue that both object discovery and robust vision are effectively addressed. The field must shift towards real-world applications beyond object discovery.",
+    "abstract": "TLDR: We argue that the current focus of the Object-Centric Learning (OCL) " +
+      " on unsupervised object discovery is substantially addressed by foundational segmentation models " +
+      " and that the field should shift focus toward real-world applications, e.g. robust " +
+      " classification." +
+      "<details><summary>Not TLDR</summary>" +
+      "To explore modularity at the representation level, I aimed to disentangle " +
+      "representations such that different parts of the representation vector specialize in " +
+      "detecting distinct objects — for example, one part encoding the foreground object, and " +
+      "another, disjoint part encoding the background. Object-centric learning (OCL) seeks " +
+      "to learn object-wise representations, offering the promise of robust visual " +
+      "understanding and human-like perception. However, OCL research remains largely " +
+      "focused on unsupervised object discovery — a task that has been substantially " +
+      "addressed by modern segmentation models. We argue that the " +
+      "field should now shift focus toward real-world applications that go beyond object " +
+      "segmentation.</details>",
     "rtai_tags": [
       "OCL"
     ]
