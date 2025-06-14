@@ -79,7 +79,7 @@ async function renderPublication(publication) {
         <br>
         <em>${publication.venue}</em>, ${publication.year}
         ${linksSection}
-        <p>${marked.parse(publication.abstract)}
+        <p>${publication.abstract}
         </p>
       </div>
     </div>
