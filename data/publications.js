@@ -111,7 +111,15 @@ const publicationsData = [
         "url": "https://researchtrend.ai/papers/2404.16032"
       }
     ],
-    "abstract": "Retrieval augmented generation (RAG) promises more trustworthy outputs from large language models (LLMs). RAG first retrieves relevant documents from a DB and includes them in the context for subsequent generation. However, RAG does not come with guarantee. Eventually, LLM decides whether to use the new information in retrieved document or to stick to the original information in the pre-training data. We present a study on this knowledge conflict.",
+    // "abstract": "Retrieval augmented generation (RAG) promises more trustworthy outputs from large language models (LLMs). RAG first retrieves relevant documents from a DB and includes them in the context for subsequent generation. However, RAG does not come with guarantee. Eventually, LLM decides whether to use the new information in retrieved document or to stick to the original information in the pre-training data. We present a study on this knowledge conflict.",
+    "abstract": "TLDR: RAGs often ignore correct retrieved information due to " +
+    " parametric bias — when the model’s possibly incorrect parametric answer (the answer that it gives without any context) " +
+    "appears as a substring in the retrieved document, the model is more likely to repeat that answer, even if it contradicts information in the document." +
+    "<details><summary>Not TLDR</summary>" +
+    "One approach to enforcing modularity in large language models (LLMs) is to separate memory and generation. In this setup, memory is handled by a document database, while generation is performed by an LLM that produces responses based on the original user query and the documents retrieved from the database." +
+    "<br>Retrieval-augmented generation (RAG) exemplifies this approach and holds the promise of producing more trustworthy outputs. It retrieves relevant documents from a database and incorporates them into the generation context. However, RAG provides no guarantees: the LLM ultimately decides whether to incorporate the retrieved information or rely on its pre-trained knowledge." +
+    "<br>In this work, we study how LLMs resolve conflicts between retrieved content and their internal (parametric) knowledge. We find that when models fail to update their answers in light of new information, it is often due to <b>parametric bias</b>: the presence of an incorrect answer in the retrieved document makes it more likely to ignore the retrieved document." +
+    "</details>",
     "rtai_tags": [
       "RALM"
     ]
@@ -172,7 +180,7 @@ const publicationsData = [
     ],
     // "abstract": "TEst link [Trustworthy Machine Learning (TML)](https://trustworthyml.io/)",
     // "abstract": "TEst link <a href=\"https://trustworthyml.io/\">Trustworthy Machine Learning (TML)</a>  <details><summary>Click to expand</summary>INSIDE toggle list</details>",
-    "abstract": "TDLR: Our textbook Trustworthy Machine Learning addresses key challenges in deploying ML models, covering OOD generalization, explainability, uncertainty, and evaluation. Based on a course at the University of Tübingen, it combines theory, research, and code for practical learning."  +
+    "abstract": "TLDR: Our textbook Trustworthy Machine Learning addresses key challenges in deploying ML models, covering OOD generalization, explainability, uncertainty, and evaluation. Based on a course at the University of Tübingen, it combines theory, research, and code for practical learning."  +
     "<details><summary>Not TLDR</summary>" +
     "The lecture notes for the <a href='https://scalabletrustworthyai.github.io/courses/tml_winter_2223/'>Trustworthy Machine Learning (TML)</a> " +
     "course, originally prepared by <a href='https://coallaoh.github.io/'>Joon</a>, " +
