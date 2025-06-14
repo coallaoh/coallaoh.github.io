@@ -170,7 +170,33 @@ const publicationsData = [
         "url": "https://arxiv.org/abs/2310.08215"
       }
     ],
-    "abstract": "The lecture notes for the [Trustworthy Machine Learning (TML)](https://trustworthyml.io/) course, originally prepared by [Joon](https://coallaoh.github.io/), have been consolidated into a textbook by our exceptional Master's student [Bálint](https://bmucsanyi.github.io/). I initially served as Bálint's Master's thesis advisor and teaching assistant for the course. After seeing the extensive notes he had compiled while preparing for the TML exam, I encouraged him to share them with the world. He embraced the idea with remarkable dedication and turned his work into this excellent textbook. Later, [Michael](https://scholar.google.com/citations?user=Xtgj8q0AAAAJ&hl=de), [Elisa](https://elisanguyen.github.io/), and I each reviewed the chapters on uncertainty estimation, explainability, and robustness, respectively. About the textbook: As machine-learning systems transition from research to real-world deployment, their trustworthiness has become a pressing concern. Our newly released textbook, [Trustworthy Machine Learning](https://trustworthyml.io/), tackles this challenge head-on through four pillars: out-of-distribution generalisation, explainability, uncertainty quantification, and evaluation of trustworthiness. Drawing on both seminal and contemporary research, the book explains foundational theory, highlights practical techniques, and includes code snippets plus further reading. Adapted from a course first offered at the [University of Tübingen](https://uni-tuebingen.de/) in the winter semester 2022/23, it now stands alone as a comprehensive reference. For more details, please visit the [accompanying website](https://trustworthyml.io/).",
+    // "abstract": "TEst link [Trustworthy Machine Learning (TML)](https://trustworthyml.io/)",
+    // "abstract": "TEst link <a href=\"https://trustworthyml.io/\">Trustworthy Machine Learning (TML)</a>  <details><summary>Click to expand</summary>INSIDE toggle list</details>",
+    "abstract": "TDLR: Our textbook Trustworthy Machine Learning addresses key challenges in deploying ML models, covering OOD generalization, explainability, uncertainty, and evaluation. Based on a course at the University of Tübingen, it combines theory, research, and code for practical learning."  +
+    "<details><summary>Not TLDR</summary>" +
+    "The lecture notes for the <a href='https://scalabletrustworthyai.github.io/courses/tml_winter_2223/'>Trustworthy Machine Learning (TML)</a> " +
+    "course, originally prepared by <a href='https://coallaoh.github.io/'>Joon</a>, " +
+    "have been consolidated into a textbook by our exceptional Master's student " +
+    "<a href='https://bmucsanyi.github.io/'>Bálint</a>. I initially served as Bálint's " +
+    "Master's thesis advisor and teaching assistant for the course. After seeing the " +
+    "extensive notes he had compiled while preparing for the TML exam, I encouraged him " +
+    "to share them with the world. He embraced the idea with remarkable dedication and " +
+    "turned his work into this excellent textbook. " +
+    "Later <a href='https://scholar.google.com/citations?user=Xtgj8q0AAAAJ&hl=de'>Michael</a>, " +
+    "<a href='https://elisanguyen.github.io/'>Elisa</a>, and I each reviewed the chapters " +
+    "on uncertainty estimation, explainability, and robustness, respectively. " +
+    "<br><br>About the " +
+    "textbook: As machine-learning systems transition from research to real-world deployment, " +
+    "their trustworthiness has become a pressing concern. Our textbook, " +
+    "<a href='https://trustworthyml.io/'>Trustworthy Machine Learning</a>, tackles this " +
+    "challenge head-on through four pillars: out-of-distribution generalisation, explainability, " +
+    "uncertainty quantification, and evaluation of trustworthiness. Drawing on both seminal " +
+    "and contemporary research, the book explains foundational theory, highlights practical " +
+    "techniques, and includes code snippets plus further reading. Adapted from a course " +
+    "first offered at the <a href='https://uni-tuebingen.de/'>University of Tübingen</a> " +
+    "in the winter semester 2022/23, it now stands alone as a comprehensive reference. " +
+    "<br>For more details, please visit the <a href='https://trustworthyml.io/'>accompanying website</a>." +
+    "</details>",
     // "abstract": "No links",
     "rtai_tags": [
       "OOD",
