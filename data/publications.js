@@ -58,7 +58,19 @@ const publicationsData = [
         "url": "https://researchtrend.ai/papers/2311.16176"
       }
     ],
-    "abstract": "Did you know that diffusion models can be forced to generate novel compositions of concepts by sampling from a half-trained model? We show that this can be used to generate diverse ensembles of counterfactuals that can be used to improve out-of-distribution generalisation.",
+    // "abstract": "Did you know that diffusion models can be forced to generate novel compositions of concepts by sampling from a half-trained model? We show that this can be used to generate diverse ensembles of counterfactuals that can be used to improve out-of-distribution generalisation.",
+    "abstract": "TLDR: We use underfitted diffusion models to generate counterfactuals" +
+    " with novel concepts compositions that can be used to diversify ensembles " +
+    "and improve out-of-distribution generalisation." +
+    "<details><summary>Not TLDR</summary>" +
+    "We continue our exploration of functional modularity through diverse ensembles, " +
+    "particularly in scenarios where available data is affected by spurious correlations. " +
+    "In such settings, curating suitable data for ensemble diversification is especially " +
+    "difficult, as it must avoid reinforcing these confounding patterns. To overcome this " +
+    "challenge, we propose using diffusion models to synthesize cleaner, more controlled " +
+    "training data. Notably, diffusion models can be guided to generate novel concept " +
+    "compositions by sampling from partially trained checkpoints. We leverage this capability to produce counterfactual samples, which facilitate the training of more functionally diverse models and enhance out-of-distribution generalization." +
+    "</details>",
     "rtai_tags": [
       "DiffM",
       "SyDa"
