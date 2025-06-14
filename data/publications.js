@@ -84,7 +84,27 @@ const publicationsData = [
         "url": "https://researchtrend.ai/papers/2409.16797"
       }
     ],
-    "abstract": "Ensemble diversification has traditionally been applied at sub-ImageNet scales (e.g. Waterbirds). We present methods to make them applicable at ImageNet+ scales. (1) Instead of relying on a separate OOD dataset to diversify the ensembles on, we source them from hard samples of the training set. (2) Stochastic pair selection. (3) Diversification of last 2 layers. We show that diversified ensembles are useful at OOD generalisation and (particularly) OOD detection, where we achieve the state-of-the-art performance.",
+    "abstract": "TLDR: We scale ensemble diversification to ImageNet-scale " +
+    "datasets by (1) leveraging hard training samples instead of external OOD data, " +
+    "(2) approximating costly pairwise disagreement with stochastic pair selection, " +
+    "and (3) enforcing diversification only for a few last layers. This yields state-of-the-art " +
+    "OOD detection and strong OOD generalization results." +
+    "<details><summary>Not TLDR</summary>" +
+    "To explore modularity at the functional level, I aimed to train separate image " +
+      "classifiers as modules specialized in detecting distinct visual features such as " +
+      "texture, shape, and color. A modern and effective approach for achieving this is to " +
+      "train an ensemble of neural networks with an additional objective that encourages " +
+      "diversity in their predictions. While ensemble diversification has typically been " +
+      "explored on smaller datasets (e.g., Waterbirds), we introduce methods that scale to " +
+      "larger datasets like ImageNet and beyond. Our contributions include: (1) sourcing " +
+      "difficult samples directly from the training set instead of relying on a separate " +
+      "out-of-distribution (OOD) dataset, (2) employing stochastic pair selection to " +
+      "encourage diverse predictions, and (3) applying diversification specifically to the " +
+      "final layers of each network. We demonstrate that such diversified ensembles " +
+      "significantly improve OOD generalization and, in particular, achieve state-of-the-art " +
+      "performance in OOD detection when combining ensemble with a novel " +
+      "uncertainty estimate - Predictive Diversity Score (PDS)." +
+      "</details>",
     "rtai_tags": [
       "OODD",
       "OOD",
@@ -113,7 +133,7 @@ const publicationsData = [
     ],
     // "abstract": "Retrieval augmented generation (RAG) promises more trustworthy outputs from large language models (LLMs). RAG first retrieves relevant documents from a DB and includes them in the context for subsequent generation. However, RAG does not come with guarantee. Eventually, LLM decides whether to use the new information in retrieved document or to stick to the original information in the pre-training data. We present a study on this knowledge conflict.",
     "abstract": "TLDR: RAGs often ignore correct retrieved information due to " +
-    " parametric bias — when the model’s possibly incorrect parametric answer (the answer that it gives without any context) " +
+    " parametric bias — when the model's possibly incorrect parametric answer (the answer that it gives without any context) " +
     "appears as a substring in the retrieved document, the model is more likely to repeat that answer, even if it contradicts information in the document." +
     "<details><summary>Not TLDR</summary>" +
     "One approach to enforcing modularity in large language models (LLMs) is to separate memory and generation. In this setup, memory is handled by a document database, while generation is performed by an LLM that produces responses based on the original user query and the documents retrieved from the database." +
