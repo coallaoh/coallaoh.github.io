@@ -1,6 +1,76 @@
 // Publications data in JSON format
 const publicationsData = [
   {
+    "id": "tommaso2025leakythoughts",
+    "title": "Leaky Thoughts: Large Reasoning Models Are Not Private Thinkers",
+    "authors": [
+      "tommaso_green",
+      "martin_gubri",
+      "haritz_puerto",
+      "sangdoo_yun",
+      "seong_joon_oh"
+    ],
+    "venue": "arXiv",
+    "year": "2025",
+    "url": "https://arxiv.org/abs/2506.15674",
+    "bibtex": "@article{tommaso2025leakythoughts,\n  title={Leaky Thoughts: Large Reasoning Models Are Not Private Thinkers},\n  author={Green, Tommaso and Gubri, Martin and Puerto, Haritz and Yun, Sangdoo and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2506.15674},\n  year={2025}\n}",
+    "image": "pictures/tommaso2025leakythoughts.png",
+    "links": [
+      {
+        "text": "ResearchTrend.AI",
+        "url": "https://researchtrend.ai/papers/2506.15674"
+      },
+      {
+        "text": "Code",
+        "url": "https://github.com/parameterlab/leaky_thoughts"
+      },
+      {
+        "text": "Dataset",
+        "url": "https://huggingface.co/datasets/parameterlab/leaky_thoughts"
+      }
+    ],
+    "abstract": "A critical paradox emerges when a Large Language Model (LLM) is tasked with reasoning over private information. The model will actively attempt to conceal the sensitive data within its reasoning trace; ironically, the more complex its effort to hide the information, the greater the risk of an accidental leak. This demonstrates that the very presence of private data within an LLM's reasoning process is inherently risky.",
+    "rtai_tags": [
+      "PILM",
+      "LRM"
+    ]
+  },
+  {
+    "id": "haritz2025cseo",
+    "title": "C-SEO Bench: Does Conversational SEO Work?",
+    "authors": [
+      "haritz_puerto",
+      "martin_gubri",
+      "tommaso_green",
+      "seong_joon_oh",
+      "sangdoo_yun"
+    ],
+    "venue": "arXiv",
+    "year": "2025",
+    "url": "https://arxiv.org/abs/2506.11097",
+    "bibtex": "@article{haritz2025cseo,\n  title={C-SEO Bench: Does Conversational SEO Work?},\n  author={Puerto, Haritz and Gubri, Martin and Green, Tommaso and Oh, Seong Joon and Yun, Sangdoo},\n  journal={arXiv preprint arXiv:2506.11097},\n  year={2025}\n}",
+    "image": "pictures/haritz2025cseo.png",
+    "links": [
+      {
+        "text": "ResearchTrend.AI",
+        "url": "https://researchtrend.ai/papers/2506.11097"
+      },
+      {
+        "text": "Code",
+        "url": "https://github.com/parameterlab/c-seo-bench"
+      },
+      {
+        "text": "Data",
+        "url": "https://huggingface.co/datasets/parameterlab/c-seo-bench"
+      }
+    ],
+    "abstract": "With the rise of conversational search engines like <a href=\"https://www.perplexity.ai/\">Perplexity</a>, a new discipline of \"Conversational Search Engine Optimization\" (C-SEO) emerged in 2024-2025. These new strategies claim that writing articles in a certain way can boost their inclusion in AI-generated answers. We built C-SEO Bench, the first comprehensive benchmark covering 6 domains and multi-actor scenarios, to test these claims. The results are definitive and disappointing: none of the new C-SEO strategies are effective. We expect that traditional SEO approaches will continue to provide much more significant results, indicating that the development of effective C-SEO methods requires more work.",
+    "rtai_tags": [
+      "RALM",
+      "LLMAG"
+    ]
+  },
+  {
     "id": "yujin2025diffusion",
     "title": "Diffusion Classifiers Understand Compositionality, but Conditions Apply",
     "authors": [

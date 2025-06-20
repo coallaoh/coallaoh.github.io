@@ -638,6 +638,12 @@ const authorsData = {
       "isMe": false
     },
     {
+      "id": "tommaso_green",
+      "name": "Tommaso Green",
+      "url": "https://green-t.io/",
+      "isMe": false
+    },
+    {
       "id": "tong_tong_wu",
       "name": "Tong Tong Wu",
       "url": "https://www.urmc.rochester.edu/biostat/people/faculty/wu-tongtong.aspx",
