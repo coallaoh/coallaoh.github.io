@@ -138,7 +138,7 @@ const publicationsData = [
     ],
     "venue": "ICML",
     "year": "2025",
-    "url": "",
+    "url": "https://openreview.net/forum?id=M2WMUuwoh5",
     "bibtex": "@article{arnas2025icml,\n  title={Does Data Scaling Lead to Visual Compositional Generalization?},\n  author={Uselis, Arnas and Dittadi, Andrea and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2504.07092},\n  year={2025}\n}",
     "image": "pictures/arnas2025icml.png",
     "links": [],
