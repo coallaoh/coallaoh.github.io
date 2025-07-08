@@ -1,7 +1,7 @@
 // Publications data in JSON format
 const publicationsData = [
   {
-    "id": "sonthalia2025rankability",
+    "id": "ankit2025ranking",
     "title": "On the rankability of visual embeddings",
     "authors": [
       "ankit_sonthalia",
@@ -12,7 +12,7 @@ const publicationsData = [
     "year": "2025",
     "url": "https://arxiv.org/abs/2507.03683",
     "bibtex": "@article{sonthalia2025_2507.03683,\n  title={ On the rankability of visual embeddings },\n  author={ Ankit Sonthalia and Arnas Uselis and Seong Joon Oh },\n  journal={arXiv preprint arXiv:2507.03683},\n  year={ 2025 }\n}",
-    "image": "pictures/sonthalia2025rankability.png",
+    "image": "pictures/ankit2025ranking.png",
     "links": [
       {
         "text": "ResearchTrend.AI",
