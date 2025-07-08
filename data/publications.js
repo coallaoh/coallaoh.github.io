@@ -1,6 +1,34 @@
 // Publications data in JSON format
 const publicationsData = [
   {
+    "id": "sonthalia2025rankability",
+    "title": "On the rankability of visual embeddings",
+    "authors": [
+      "ankit_sonthalia",
+      "arnas_uselis",
+      "seong_joon_oh"
+    ],
+    "venue": "arXiv",
+    "year": "2025",
+    "url": "https://arxiv.org/abs/2507.03683",
+    "bibtex": "@article{sonthalia2025_2507.03683,\n  title={ On the rankability of visual embeddings },\n  author={ Ankit Sonthalia and Arnas Uselis and Seong Joon Oh },\n  journal={arXiv preprint arXiv:2507.03683},\n  year={ 2025 }\n}",
+    "image": "pictures/sonthalia2025rankability.png",
+    "links": [
+      {
+        "text": "ResearchTrend.AI",
+        "url": "https://researchtrend.ai/papers/2507.03683"
+      },
+      {
+        "text": "Code",
+        "url": "https://github.com/aktsonthalia/rankable-vision-embeddings"
+      }
+    ],
+    "abstract": "We use vector databases to store and retrieve visual data via embeddings. Unlike traditional databases, they typically support only similarity search, not sorting by specific attributes. We test whether modern visual embeddings can support sorting along continuous \"rank axes\" such as age, crowd count, head pose, aesthetics, and recency. Across 7 encoders and 9 datasets, we find that many embeddings are inherently rankable.",
+    "rtai_tags": [
+      "VLM"
+    ]
+  },
+  {
     "id": "tommaso2025leakythoughts",
     "title": "Leaky Thoughts: Large Reasoning Models Are Not Private Thinkers",
     "authors": [
