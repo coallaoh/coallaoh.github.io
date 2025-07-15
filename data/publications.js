@@ -1,6 +1,35 @@
 // Publications data in JSON format
 const publicationsData = [
   {
+    "id": "arnas2025scaling",
+    "title": "Does Data Scaling Lead to Visual Compositional Generalization?",
+    "authors": [
+      "arnas_uselis",
+      "andrea_dittadi",
+      "seong_joon_oh"
+    ],
+    "venue": "ICML",
+    "year": "2025",
+    "url": "https://arxiv.org/abs/2507.07102",
+    "bibtex": "@article{arnas2025scaling,\n  title={Does Data Scaling Lead to Visual Compositional Generalization?},\n  author={Arnas Uselis and Andrea Dittadi and Seong Joon Oh},\n  journal={arXiv preprint arXiv:2507.07102},\n  year={2025}\n}",
+    "image": "pictures/arnas2025scaling.png",
+    "links": [
+      {
+        "text": "ResearchTrend.AI",
+        "url": "https://researchtrend.ai/papers/2507.07102"
+      },
+      {
+        "text": "Code",
+        "url": "https://github.com/oshapio/visual-compositional-generalization"
+      }
+    ],
+    "abstract": "Compositional understanding is key to intelligence, but its presence in vision models is unclear. We test whether scaling data helps and find that diversity, not size, drives compositional generalisation. Broad concept coverage leads models to form additive, factored representations. This structure enables efficient generalisation. Pretrained models like DINO and CLIP show partial use of it. We call for more diverse datasets and attention to representational structure..",
+    "rtai_tags": [
+      "CoGe",
+      "VLM"
+    ]
+  },
+  {
     "id": "ankit2025ranking",
     "title": "On the rankability of visual embeddings",
     "authors": [
