@@ -1,6 +1,41 @@
 // Publications data in JSON format
 const publicationsData = [
   {
+    "id": "tommaso2025leakythoughts",
+    "title": "Leaky Thoughts: Large Reasoning Models Are Not Private Thinkers",
+    "authors": [
+      "tommaso_green",
+      "martin_gubri",
+      "haritz_puerto",
+      "sangdoo_yun",
+      "seong_joon_oh"
+    ],
+    "venue": "EMNLP",
+    "year": "2025",
+    "url": "https://arxiv.org/abs/2506.15674",
+    "bibtex": "@inproceedings{tommaso2025leakythoughts,\n  title={Leaky Thoughts: Large Reasoning Models Are Not Private Thinkers},\n  author={Green, Tommaso and Gubri, Martin and Puerto, Haritz and Yun, Sangdoo and Oh, Seong Joon},\n  year={2025},\n  booktitle = {Conference on Empirical Methods in Natural Language Processing (EMNLP)},\n}",
+    "image": "pictures/tommaso2025leakythoughts.png",
+    "links": [
+      {
+        "text": "ResearchTrend.AI",
+        "url": "https://researchtrend.ai/papers/2506.15674"
+      },
+      {
+        "text": "Code",
+        "url": "https://github.com/parameterlab/leaky_thoughts"
+      },
+      {
+        "text": "Dataset",
+        "url": "https://huggingface.co/datasets/parameterlab/leaky_thoughts"
+      }
+    ],
+    "abstract": "A critical paradox emerges when a Large Language Model (LLM) is tasked with reasoning over private information. The model will actively attempt to conceal the sensitive data within its reasoning trace; ironically, the more complex its effort to hide the information, the greater the risk of an accidental leak. This demonstrates that the very presence of private data within an LLM's reasoning process is inherently risky.",
+    "rtai_tags": [
+      "PILM",
+      "LRM"
+    ]
+  },
+  {
     "id": "arnas2025scaling",
     "title": "Does Data Scaling Lead to Visual Compositional Generalization?",
     "authors": [
@@ -55,41 +90,6 @@ const publicationsData = [
     "abstract": "We use vector databases to store and retrieve visual data via embeddings. Unlike traditional databases, they typically support only similarity search, not sorting by specific attributes. We test whether modern visual embeddings can support sorting along continuous \"rank axes\" such as age, crowd count, head pose, aesthetics, and recency. Across 7 encoders and 9 datasets, we find that many embeddings are inherently rankable.",
     "rtai_tags": [
       "VLM"
-    ]
-  },
-  {
-    "id": "tommaso2025leakythoughts",
-    "title": "Leaky Thoughts: Large Reasoning Models Are Not Private Thinkers",
-    "authors": [
-      "tommaso_green",
-      "martin_gubri",
-      "haritz_puerto",
-      "sangdoo_yun",
-      "seong_joon_oh"
-    ],
-    "venue": "EMNLP",
-    "year": "2025",
-    "url": "https://arxiv.org/abs/2506.15674",
-    "bibtex": "@inproceedings{tommaso2025leakythoughts,\n  title={Leaky Thoughts: Large Reasoning Models Are Not Private Thinkers},\n  author={Green, Tommaso and Gubri, Martin and Puerto, Haritz and Yun, Sangdoo and Oh, Seong Joon},\n  year={2025},\n  booktitle = {Conference on Empirical Methods in Natural Language Processing (EMNLP)},\n}",
-    "image": "pictures/tommaso2025leakythoughts.png",
-    "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2506.15674"
-      },
-      {
-        "text": "Code",
-        "url": "https://github.com/parameterlab/leaky_thoughts"
-      },
-      {
-        "text": "Dataset",
-        "url": "https://huggingface.co/datasets/parameterlab/leaky_thoughts"
-      }
-    ],
-    "abstract": "A critical paradox emerges when a Large Language Model (LLM) is tasked with reasoning over private information. The model will actively attempt to conceal the sensitive data within its reasoning trace; ironically, the more complex its effort to hide the information, the greater the risk of an accidental leak. This demonstrates that the very presence of private data within an LLM's reasoning process is inherently risky.",
-    "rtai_tags": [
-      "PILM",
-      "LRM"
     ]
   },
   {
