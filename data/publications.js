@@ -67,10 +67,10 @@ const publicationsData = [
       "sangdoo_yun",
       "seong_joon_oh"
     ],
-    "venue": "arXiv",
+    "venue": "EMNLP",
     "year": "2025",
     "url": "https://arxiv.org/abs/2506.15674",
-    "bibtex": "@article{tommaso2025leakythoughts,\n  title={Leaky Thoughts: Large Reasoning Models Are Not Private Thinkers},\n  author={Green, Tommaso and Gubri, Martin and Puerto, Haritz and Yun, Sangdoo and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2506.15674},\n  year={2025}\n}",
+    "bibtex": "@inproceedings{tommaso2025leakythoughts,\n  title={Leaky Thoughts: Large Reasoning Models Are Not Private Thinkers},\n  author={Green, Tommaso and Gubri, Martin and Puerto, Haritz and Yun, Sangdoo and Oh, Seong Joon},\n  year={2025},\n  booktitle = {Conference on Empirical Methods in Natural Language Processing (EMNLP)},\n}",
     "image": "pictures/tommaso2025leakythoughts.png",
     "links": [
       {
