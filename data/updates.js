@@ -3,6 +3,11 @@
 // The FE will render the latest 5 items.
 const updatesData = [
   {
+    date: '2025-08-20',
+    id: 'update-2025-08-20-emnlp25-acceptance',
+    html: "20 August 2025. 1 paper accepted @ EMNLP'25: <a href=\"#tommaso2025leakythoughts\">Leaky Thoughts: Large Reasoning Models Are Not Private Thinkers</a>."
+  },
+  {
     date: '2025-05-01',
     id: 'update-icml-2025-compositional-generalisation',
     html: "1 May 2025. 1 paper on <a href=\"#arnas2025icml\">compositional generalisation</a> is accepted at ICML'25."
