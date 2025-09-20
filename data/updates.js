@@ -3,6 +3,11 @@
 // The FE will render the latest 5 items.
 const updatesData = [
   {
+    date: '2025-09-20',
+    id: 'update-2025-09-20-neurips25-acceptance',
+    html: "20 September 2025. 4 papers accepted @ NeurIPS'25: <a href=\"#haritz2025cseo\">C-SEO Bench</a>, <a href=\"#ankit2025ranking\">Visual Embedding Rankability</a>, <a href=\"#yujin2025diffusion\">Diffusion Classifier Compositionality</a>, <a href=\"#dongjun2025ovs\">Open-vocabulary Segmentation</a>."
+  },
+  {
     date: '2025-08-20',
     id: 'update-2025-08-20-emnlp25-acceptance',
     html: "20 August 2025. 1 paper accepted @ EMNLP'25: <a href=\"#tommaso2025leakythoughts\">Leaky Thoughts: Large Reasoning Models Are Not Private Thinkers</a>."

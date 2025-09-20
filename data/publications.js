@@ -1,6 +1,129 @@
 // Publications data in JSON format
 const publicationsData = [
   {
+    "id": "haritz2025cseo",
+    "title": "C-SEO Bench: Does Conversational SEO Work?",
+    "authors": [
+      "haritz_puerto",
+      "martin_gubri",
+      "tommaso_green",
+      "seong_joon_oh",
+      "sangdoo_yun"
+    ],
+    "venue": "NeurIPS Datasets and Benchmarks",
+    "year": "2025",
+    "url": "https://arxiv.org/abs/2506.11097",
+    "bibtex": "@inproceedings{haritz2025cseo,\n  title={C-SEO Bench: Does Conversational SEO Work?},\n  author={Puerto, Haritz and Gubri, Martin and Green, Tommaso and Oh, Seong Joon and Yun, Sangdoo},\n  booktitle={Advances in Neural Information Processing Systems 38 (NeurIPS 2025), Datasets and Benchmarks Track},\n  year={2025}\n}",
+    "image": "pictures/haritz2025cseo.png",
+    "links": [
+      {
+        "text": "ResearchTrend.AI",
+        "url": "https://researchtrend.ai/papers/2506.11097"
+      },
+      {
+        "text": "Code",
+        "url": "https://github.com/parameterlab/c-seo-bench"
+      },
+      {
+        "text": "Data",
+        "url": "https://huggingface.co/datasets/parameterlab/c-seo-bench"
+      }
+    ],
+    "abstract": "With the rise of conversational search engines like <a href=\"https://www.perplexity.ai/\">Perplexity</a>, a new discipline of \"Conversational Search Engine Optimization\" (C-SEO) emerged in 2024-2025. These new strategies claim that writing articles in a certain way can boost their inclusion in AI-generated answers. We built C-SEO Bench, the first comprehensive benchmark covering 6 domains and multi-actor scenarios, to test these claims. The results are definitive and disappointing: none of the new C-SEO strategies are effective. We expect that traditional SEO approaches will continue to provide much more significant results, indicating that the development of effective C-SEO methods requires more work.",
+    "rtai_tags": [
+      "RALM",
+      "LLMAG"
+    ]
+  },
+  {
+    "id": "ankit2025ranking",
+    "title": "On the rankability of visual embeddings",
+    "authors": [
+      "ankit_sonthalia",
+      "arnas_uselis",
+      "seong_joon_oh"
+    ],
+    "venue": "NeurIPS",
+    "year": "2025",
+    "url": "https://arxiv.org/abs/2507.03683",
+    "bibtex": "@inproceedings{ankit2025ranking,\n  title={On the rankability of visual embeddings},\n  author={Sonthalia, Ankit and Uselis, Arnas and Oh, Seong Joon},\n  booktitle={Advances in Neural Information Processing Systems 38 (NeurIPS 2025)},\n  year={2025}\n}",
+    "image": "pictures/ankit2025ranking.png",
+    "links": [
+      {
+        "text": "ResearchTrend.AI",
+        "url": "https://researchtrend.ai/papers/2507.03683"
+      },
+      {
+        "text": "Code",
+        "url": "https://github.com/aktsonthalia/rankable-vision-embeddings"
+      }
+    ],
+    "abstract": "We use vector databases to store and retrieve visual data via embeddings. Unlike traditional databases, they typically support only similarity search, not sorting by specific attributes. We test whether modern visual embeddings can support sorting along continuous \"rank axes\" such as age, crowd count, head pose, aesthetics, and recency. Across 7 encoders and 9 datasets, we find that many embeddings are inherently rankable.",
+    "rtai_tags": [
+      "VLM"
+    ]
+  },
+  {
+    "id": "yujin2025diffusion",
+    "title": "Diffusion Classifiers Understand Compositionality, but Conditions Apply",
+    "authors": [
+      "yujin_jeong",
+      "arnas_uselis",
+      "seong_joon_oh",
+      "anna_rohrbach"
+    ],
+    "venue": "NeurIPS Datasets and Benchmarks",
+    "year": "2025",
+    "url": "https://arxiv.org/abs/2505.17955",
+    "bibtex": "@inproceedings{yujin2025diffusion,\n  title={Diffusion Classifiers Understand Compositionality, but Conditions Apply},\n  author={Jeong, Yujin and Uselis, Arnas and Oh, Seong Joon and Rohrbach, Anna},\n  booktitle={Advances in Neural Information Processing Systems 38: Datasets and Benchmarks Track},\n  year={2025}\n}",
+    "image": "pictures/yujin2025diffusion.png",
+    "links": [
+      {
+        "text": "ResearchTrend.AI",
+        "url": "https://researchtrend.ai/papers/2505.17955"
+      },
+      {
+        "text": "Code",
+        "url": "https://github.com/eugene6923/Diffusion-Classifiers-Compositionality"
+      }
+    ],
+    "abstract": "Diffusion models can generate novel compositions. But can they also understand them? Some recent methods convert diffusion models into discriminative ones (\"Diffusion Classifiers\", ICCV 2023). Yet, we lack a clear understanding of when and how their generative compositionality transfers to discriminative tasks. We also do not know which factors control this transfer or how to tune them. In this work, we study this question and offer practical insights for improving compositional transfer from generative to discriminative models.",
+    "rtai_tags": [
+      "CoGe",
+      "DiffM"
+    ]
+  },
+  {
+    "id": "dongjun2025ovs",
+    "title": "Overcoming Domain Limitations in Open-vocabulary Segmentation",
+    "authors": [
+      "dongjun_hwang",
+      "seong_joon_oh",
+      "junsuk_choe"
+    ],
+    "venue": "NeurIPS",
+    "year": "2025",
+    "url": "https://arxiv.org/abs/2410.11536",
+    "bibtex": "@inproceedings{dongjun2025ovs,\n  title={Overcoming Domain Limitations in Open-vocabulary Segmentation},\n  author={Hwang, Dongjun and Oh, Seong Joon and Choe, Junsuk},\n  booktitle={Advances in Neural Information Processing Systems 38 (NeurIPS 2025)},\n  year={2025}\n}",
+    "image": "pictures/dongjun2025ovs.png",
+    "links": [
+      {
+        "text": "ResearchTrend.AI",
+        "url": "https://researchtrend.ai/papers/2410.11536"
+      },
+      {
+        "text": "Code",
+        "url": "https://github.com/dongjunhwang/dwi"
+      }
+    ],
+    "abstract": "Open-vocabulary segmentation (OVS) models often underperform when applied to unseen domains. Fine-tuning on new datasets can improve performance but risks catastrophic forgetting. This paper introduces a method that enables OVS models to learn from new domains while preserving prior knowledge. The approach evaluates the input sample's proximity to multiple domains using precomputed multivariate normal distributions. Based on this prediction, it dynamically interpolates between the weights of the pre-trained decoder and the fine-tuned decoders. Experiments demonstrate that this method allows OVS models to adapt to new domains while maintaining performance on the original dataset.",
+    "rtai_tags": [
+      "SSeg",
+      "VLM",
+      "OOD"
+    ]
+  },
+  {
     "id": "tommaso2025leakythoughts",
     "title": "Leaky Thoughts: Large Reasoning Models Are Not Private Thinkers",
     "authors": [
@@ -62,99 +185,6 @@ const publicationsData = [
     "rtai_tags": [
       "CoGe",
       "VLM"
-    ]
-  },
-  {
-    "id": "ankit2025ranking",
-    "title": "On the rankability of visual embeddings",
-    "authors": [
-      "ankit_sonthalia",
-      "arnas_uselis",
-      "seong_joon_oh"
-    ],
-    "venue": "arXiv",
-    "year": "2025",
-    "url": "https://arxiv.org/abs/2507.03683",
-    "bibtex": "@article{sonthalia2025_2507.03683,\n  title={ On the rankability of visual embeddings },\n  author={ Ankit Sonthalia and Arnas Uselis and Seong Joon Oh },\n  journal={arXiv preprint arXiv:2507.03683},\n  year={ 2025 }\n}",
-    "image": "pictures/ankit2025ranking.png",
-    "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2507.03683"
-      },
-      {
-        "text": "Code",
-        "url": "https://github.com/aktsonthalia/rankable-vision-embeddings"
-      }
-    ],
-    "abstract": "We use vector databases to store and retrieve visual data via embeddings. Unlike traditional databases, they typically support only similarity search, not sorting by specific attributes. We test whether modern visual embeddings can support sorting along continuous \"rank axes\" such as age, crowd count, head pose, aesthetics, and recency. Across 7 encoders and 9 datasets, we find that many embeddings are inherently rankable.",
-    "rtai_tags": [
-      "VLM"
-    ]
-  },
-  {
-    "id": "haritz2025cseo",
-    "title": "C-SEO Bench: Does Conversational SEO Work?",
-    "authors": [
-      "haritz_puerto",
-      "martin_gubri",
-      "tommaso_green",
-      "seong_joon_oh",
-      "sangdoo_yun"
-    ],
-    "venue": "arXiv",
-    "year": "2025",
-    "url": "https://arxiv.org/abs/2506.11097",
-    "bibtex": "@article{haritz2025cseo,\n  title={C-SEO Bench: Does Conversational SEO Work?},\n  author={Puerto, Haritz and Gubri, Martin and Green, Tommaso and Oh, Seong Joon and Yun, Sangdoo},\n  journal={arXiv preprint arXiv:2506.11097},\n  year={2025}\n}",
-    "image": "pictures/haritz2025cseo.png",
-    "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2506.11097"
-      },
-      {
-        "text": "Code",
-        "url": "https://github.com/parameterlab/c-seo-bench"
-      },
-      {
-        "text": "Data",
-        "url": "https://huggingface.co/datasets/parameterlab/c-seo-bench"
-      }
-    ],
-    "abstract": "With the rise of conversational search engines like <a href=\"https://www.perplexity.ai/\">Perplexity</a>, a new discipline of \"Conversational Search Engine Optimization\" (C-SEO) emerged in 2024-2025. These new strategies claim that writing articles in a certain way can boost their inclusion in AI-generated answers. We built C-SEO Bench, the first comprehensive benchmark covering 6 domains and multi-actor scenarios, to test these claims. The results are definitive and disappointing: none of the new C-SEO strategies are effective. We expect that traditional SEO approaches will continue to provide much more significant results, indicating that the development of effective C-SEO methods requires more work.",
-    "rtai_tags": [
-      "RALM",
-      "LLMAG"
-    ]
-  },
-  {
-    "id": "yujin2025diffusion",
-    "title": "Diffusion Classifiers Understand Compositionality, but Conditions Apply",
-    "authors": [
-      "yujin_jeong",
-      "arnas_uselis",
-      "seong_joon_oh",
-      "anna_rohrbach"
-    ],
-    "venue": "arXiv",
-    "year": "2025",
-    "url": "https://arxiv.org/abs/2505.17955",
-    "bibtex": "@article{yujin2025diffusion,\n  title={Diffusion Classifiers Understand Compositionality, but Conditions Apply},\n  author={Jeong, Yujin and Uselis, Arnas and Oh, Seong Joon and Rohrbach, Anna},\n  journal={arXiv preprint arXiv:2505.17955},\n  year={2025}\n}",
-    "image": "pictures/yujin2025diffusion.png",
-    "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2505.17955"
-      },
-      {
-        "text": "Code",
-        "url": "https://github.com/eugene6923/Diffusion-Classifiers-Compositionality"
-      }
-    ],
-    "abstract": "Diffusion models can generate novel compositions. But can they also understand them? Some recent methods convert diffusion models into discriminative ones (\"Diffusion Classifiers\", ICCV 2023). Yet, we lack a clear understanding of when and how their generative compositionality transfers to discriminative tasks. We also do not know which factors control this transfer or how to tune them. In this work, we study this question and offer practical insights for improving compositional transfer from generative to discriminative models.",
-    "rtai_tags": [
-      "CoGe",
-      "DiffM"
     ]
   },
   {
@@ -409,36 +439,6 @@ const publicationsData = [
     "abstract": "Explainable AI (XAI) has been criticised for relying too much on formalism and solutionism, focusing more on mathematical soundness than user needs. Despite efforts to correct this through user-focused studies from the HCI communities, we observe repeating patterns of formalism solutionism in a relatively young subfield of XAI: Training Data Attribution (TDA). We set out to correct this with a needfinding study with a diverse group of AI practitioners to identify potential user needs related to TDA. Our studies have uncovered new TDA tasks that are currently largely overlooked. We invite the TDA and XAI communities to consider these novel tasks and improve the user relevance of their research outcomes.",
     "rtai_tags": [
       "TDI"
-    ]
-  },
-  {
-    "id": "dongjun2025ovs",
-    "title": "Overcoming Domain Limitations in Open-vocabulary Segmentation",
-    "authors": [
-      "dongjun_hwang",
-      "seong_joon_oh",
-      "junsuk_choe"
-    ],
-    "venue": "arXiv",
-    "year": "2025",
-    "url": "https://arxiv.org/abs/2410.11536",
-    "bibtex": "@article{dongjun2025ovs,\n  title={Overcoming Domain Limitations in Open-vocabulary Segmentation},\n  author={Hwang, Dongjun and Oh, Seong Joon and Choe, Junsuk},\n  journal={arXiv preprint arXiv:2410.11536},\n  year={2025}\n}",
-    "image": "pictures/dongjun2025ovs.png",
-    "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2410.11536"
-      },
-      {
-        "text": "Code",
-        "url": "https://github.com/dongjunhwang/dwi"
-      }
-    ],
-    "abstract": "Open-vocabulary segmentation (OVS) models often underperform when applied to unseen domains. Fine-tuning on new datasets can improve performance but risks catastrophic forgetting. This paper introduces a method that enables OVS models to learn from new domains while preserving prior knowledge. The approach evaluates the input sample's proximity to multiple domains using precomputed multivariate normal distributions. Based on this prediction, it dynamically interpolates between the weights of the pre-trained decoder and the fine-tuned decoders. Experiments demonstrate that this method allows OVS models to adapt to new domains while maintaining performance on the original dataset.",
-    "rtai_tags": [
-      "SSeg",
-      "VLM",
-      "OOD"
     ]
   },
   {
