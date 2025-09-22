@@ -71,3 +71,43 @@ The following colors are used for tags:
 - Large-Scale ML: #C9D3D8
 
 Edit the `getTagColor` function in `js/publications.js` to add or modify tag colors. 
+
+## CV build and privacy (important for LLMs and collaborators)
+
+- The CV source code and generator live in a private submodule: `cv-tools/`.
+- Only the generated PDF `cv/cv.pdf` is kept in this public repository.
+- Do not add LaTeX sources or generator scripts to this repository.
+
+### Directory and privacy overview
+
+- Public: root website files (`index.html`, `js/`, `pictures/`, `data/`, `cv/cv.pdf`)
+- Private: `cv-tools/` submodule (private GitHub repo); contains LaTeX sources, Makefile, and generator
+
+### How to update the CV (local workflow)
+
+1. Ensure the submodule is present:
+   ```bash
+   git submodule update --init --recursive
+   ```
+2. Build privately inside `cv-tools/`:
+   ```bash
+   cd cv-tools
+   # Optional: re-generate publications.tex from public data
+   # (expects Node.js; reads ../data/publications.js and ../data/authors.js)
+   if [ -f generate_publications.js ]; then node generate_publications.js; fi
+   make  # produces cv.pdf via latexmk
+   cd ..
+   ```
+3. Publish the artifact to the public repo:
+   ```bash
+   mkdir -p cv
+   cp cv-tools/cv.pdf cv/cv.pdf
+   git add cv/cv.pdf
+   git commit -m "Update CV PDF"
+   git push
+   ```
+
+### Branch policy
+
+- Do not merge any branch that contains private CV sources into `master`.
+- The `cv-tools/` submodule pointer may advance, but its contents remain private.
