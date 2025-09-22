@@ -1,0 +1,4 @@
+[submodule "cv-tools"]
+	path = cv-tools
+	url = git@github.com:coallaoh/cv-tools.git
+	branch = main
