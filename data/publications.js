@@ -188,26 +188,6 @@ const publicationsData = [
     ]
   },
   {
-    "id": "arnas2025icml",
-    "title": "Does Data Scaling Lead to Visual Compositional Generalization?",
-    "authors": [
-      "arnas_uselis",
-      "andrea_dittadi",
-      "seong_joon_oh"
-    ],
-    "venue": "ICML",
-    "year": "2025",
-    "url": "https://openreview.net/forum?id=M2WMUuwoh5",
-    "bibtex": "@article{arnas2025icml,\n  title={Does Data Scaling Lead to Visual Compositional Generalization?},\n  author={Uselis, Arnas and Dittadi, Andrea and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2504.07092},\n  year={2025}\n}",
-    "image": "pictures/arnas2025icml.png",
-    "links": [],
-    "abstract": "We study the mechanisms of compositional generalisation in visual reasoning. Our current hypothesis follows a three-step process: (1) When data diversity exceeds a certain threshold, it leads to (2) the emergence of \"linear\" representations, which in turn (3) enables compositional capabilities.",
-    "rtai_tags": [
-      "CoGe",
-      "OOD"
-    ]
-  },
-  {
     "id": "alex2025ocl",
     "title": "Are We Done with Object-Centric Learning?",
     "authors": [
