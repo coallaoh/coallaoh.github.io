@@ -726,6 +726,90 @@ const authorsData = {
       "name": "Zeynep Akata",
       "url": "https://eml-unitue.de/people/zeynep-akata",
       "isMe": false
+    },
+    {
+      "id": "benjamin_raible",
+      "name": "Benjamin Raible",
+      "url": "",
+      "isMe": false
+    },
+    {
+      "id": "ahmed_heakl",
+      "name": "Ahmed Heakl",
+      "url": "",
+      "isMe": false
+    },
+    {
+      "id": "salman_khan",
+      "name": "Salman Khan",
+      "url": "",
+      "isMe": false
+    },
+    {
+      "id": "stefano_woerner",
+      "name": "Stefano Woerner",
+      "url": "",
+      "isMe": false
+    },
+    {
+      "id": "christian_f_baumgartner",
+      "name": "Christian F. Baumgartner",
+      "url": "",
+      "isMe": false
+    },
+    {
+      "id": "philipp_davydov",
+      "name": "Philipp Davydov",
+      "url": "",
+      "isMe": false
+    },
+    {
+      "id": "minyoung_lee",
+      "name": "Minyoung Lee",
+      "url": "",
+      "isMe": false
+    },
+    {
+      "id": "yeji_park",
+      "name": "Yeji Park",
+      "url": "",
+      "isMe": false
+    },
+    {
+      "id": "yejin_kim",
+      "name": "Yejin Kim",
+      "url": "",
+      "isMe": false
+    },
+    {
+      "id": "luca_fuger",
+      "name": "Luca Füger",
+      "url": "",
+      "isMe": false
+    },
+    {
+      "id": "adam_golinski",
+      "name": "Adam Golinski",
+      "url": "",
+      "isMe": false
+    },
+    {
+      "id": "eeshan_gunesh_dhekane",
+      "name": "Eeshan Gunesh Dhekane",
+      "url": "",
+      "isMe": false
+    },
+    {
+      "id": "arno_blaas",
+      "name": "Arno Blaas",
+      "url": "",
+      "isMe": false
+    },
+    {
+      "id": "sinead_williamson",
+      "name": "Sinead Williamson",
+      "url": "",
+      "isMe": false
     }
   ]
 };
