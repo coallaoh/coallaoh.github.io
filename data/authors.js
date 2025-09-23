@@ -736,79 +736,79 @@ const authorsData = {
     {
       "id": "ahmed_heakl",
       "name": "Ahmed Heakl",
-      "url": "",
+      "url": "https://www.linkedin.com/in/ahmed-heakl/",
       "isMe": false
     },
     {
       "id": "salman_khan",
       "name": "Salman Khan",
-      "url": "",
+      "url": "https://salman-h-khan.github.io/",
       "isMe": false
     },
     {
       "id": "stefano_woerner",
       "name": "Stefano Woerner",
-      "url": "",
+      "url": "https://www.linkedin.com/in/stefano-woerner/",
       "isMe": false
     },
     {
       "id": "christian_f_baumgartner",
       "name": "Christian F. Baumgartner",
-      "url": "",
+      "url": "https://baumgach.github.io/",
       "isMe": false
     },
     {
       "id": "philipp_davydov",
       "name": "Philipp Davydov",
-      "url": "",
+      "url": "https://www.linkedin.com/in/philipp-davydov-456091227/",
       "isMe": false
     },
     {
       "id": "minyoung_lee",
       "name": "Minyoung Lee",
-      "url": "",
+      "url": "https://mymy-young.github.io/",
       "isMe": false
     },
     {
       "id": "yeji_park",
       "name": "Yeji Park",
-      "url": "",
+      "url": "https://yejipark-m.github.io/",
       "isMe": false
     },
     {
       "id": "yejin_kim",
       "name": "Yejin Kim",
-      "url": "",
+      "url": "https://sites.google.com/view/yejin-c-kim/",
       "isMe": false
     },
     {
       "id": "luca_fuger",
       "name": "Luca Füger",
-      "url": "",
+      "url": "https://scalabletrustworthyai.github.io/member/luca/",
       "isMe": false
     },
     {
       "id": "adam_golinski",
       "name": "Adam Golinski",
-      "url": "",
+      "url": "http://adamgol.me/",
       "isMe": false
     },
     {
       "id": "eeshan_gunesh_dhekane",
       "name": "Eeshan Gunesh Dhekane",
-      "url": "",
+      "url": "https://www.linkedin.com/in/eeshan-gunesh-dhekane-05677482/",
       "isMe": false
     },
     {
       "id": "arno_blaas",
       "name": "Arno Blaas",
-      "url": "",
+      "url": "https://www.linkedin.com/in/arno-blaas-18725380",
       "isMe": false
     },
     {
       "id": "sinead_williamson",
       "name": "Sinead Williamson",
-      "url": "",
+      "url": "https://sinead.github.io/",
       "isMe": false
     }
   ]
