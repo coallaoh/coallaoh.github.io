@@ -26,21 +26,37 @@ async function renderPublication(publication) {
     }
   }
   
-  // Resolve author IDs to author objects
+  // Resolve author IDs to author objects and add optional markers
+  const coFirstAuthorsSet = new Set((publication.co_first_authors || publication.coFirstAuthors || []));
+  const correspondingAuthorsSet = new Set((publication.corresponding_authors || publication.co_corresponding_authors || publication.coCorrespondingAuthors || []));
+  let starUsed = false;
+  let daggerUsed = false;
   const authorsHTML = publication.authors.map(authorId => {
     const author = window.authorLookup.get(authorId);
     if (!author) {
       console.warn(`Author not found for ID: ${authorId}`);
-      return authorId; // fallback to showing the ID
+      // Still allow marking even if author not found
+      const isCoFirst = coFirstAuthorsSet.has(authorId);
+      const isCorresponding = correspondingAuthorsSet.has(authorId);
+      let suffix = '';
+      if (isCoFirst) { starUsed = true; suffix += '<sup>*</sup>'; }
+      if (isCorresponding) { daggerUsed = true; suffix += '<sup>†</sup>'; }
+      return authorId + suffix;
     }
     
+    let rendered = '';
     if (author.isMe) {
-      return `<strong>${author.name}</strong>`;
+      rendered = `<strong>${author.name}</strong>`;
     } else if (author.url) {
-      return `<a href="${author.url}">${author.name}</a>`;
+      rendered = `<a href="${author.url}">${author.name}</a>`;
     } else {
-      return author.name;
+      rendered = author.name;
     }
+    const isCoFirst = coFirstAuthorsSet.has(authorId);
+    const isCorresponding = correspondingAuthorsSet.has(authorId);
+    if (isCoFirst) { starUsed = true; rendered += '<sup>*</sup>'; }
+    if (isCorresponding) { daggerUsed = true; rendered += '<sup>†</sup>'; }
+    return rendered;
   }).join(',\n');
   
   const linksHTML = publication.links.length > 0 ? 
@@ -62,6 +78,8 @@ async function renderPublication(publication) {
   const linksSection = combinedLinksHTML ? 
     `<br>\n${combinedLinksHTML}\n${bibtexContentHTML}` : '';
 
+  const legendHTML = (starUsed || daggerUsed) ? `<span style="font-size:12px;color:#666;">${starUsed ? '* co-first author' : ''}${starUsed && daggerUsed ? '; ' : ''}${daggerUsed ? '† corresponding author' : ''}</span>` : '';
+
   return `
     <div class="row common-rows">
       <div class="col-xs-12 col-sm-3 left-column">
@@ -77,6 +95,7 @@ async function renderPublication(publication) {
         <br>
         ${authorsHTML}.
         <br>
+        ${legendHTML ? legendHTML + '<br>' : ''}
         <em>${publication.venue}</em>, ${publication.year}
         ${linksSection}
         <p>${publication.abstract}
