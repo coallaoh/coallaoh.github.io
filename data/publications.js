@@ -10,6 +10,10 @@ const publicationsData = [
       "seong_joon_oh",
       "sangdoo_yun"
     ],
+    "corresponding_authors": [
+      "seong_joon_oh",
+      "sangdoo_yun"
+    ],
     "venue": "NeurIPS Datasets and Benchmarks",
     "year": "2025",
     "url": "https://arxiv.org/abs/2506.11097",
@@ -72,6 +76,10 @@ const publicationsData = [
       "seong_joon_oh",
       "anna_rohrbach"
     ],
+    "co_first_authors": [
+      "yujin_jeong",
+      "arnas_uselis"
+    ],
     "venue": "NeurIPS Datasets and Benchmarks",
     "year": "2025",
     "url": "https://arxiv.org/abs/2505.17955",
@@ -130,6 +138,10 @@ const publicationsData = [
       "tommaso_green",
       "martin_gubri",
       "haritz_puerto",
+      "sangdoo_yun",
+      "seong_joon_oh"
+    ],
+    "corresponding_authors": [
       "sangdoo_yun",
       "seong_joon_oh"
     ],
@@ -676,6 +688,10 @@ const publicationsData = [
       "sungroh_yoon",
       "seong_joon_oh"
     ],
+    "corresponding_authors": [
+      "sungroh_yoon",
+      "seong_joon_oh"
+    ],
     "venue": "NeurIPS Spotlight",
     "year": "2023",
     "url": "https://arxiv.org/abs/2307.01881",
@@ -808,6 +824,10 @@ const publicationsData = [
       "sangdoo_yun",
       "jean_y_song",
       "seong_joon_oh"
+    ],
+    "co_first_authors": [
+      "dongyoon_han",
+      "junsuk_choe"
     ],
     "venue": "ICCV",
     "year": "2023",
@@ -1054,6 +1074,10 @@ const publicationsData = [
       "michael_poli",
       "sangdoo_yun"
     ],
+    "co_first_authors": [
+      "luca_scimeca",
+      "seong_joon_oh"
+    ],
     "venue": "ICLR",
     "year": "2022",
     "url": "https://arxiv.org/abs/2110.03095",
@@ -1104,6 +1128,10 @@ const publicationsData = [
       "zeynep_akata",
       "hyunjung_shim"
     ],
+    "co_first_authors": [
+      "junsuk_choe",
+      "seong_joon_oh"
+    ],
     "venue": "TPAMI",
     "year": "2022",
     "url": "https://arxiv.org/abs/2007.04178",
@@ -1140,6 +1168,10 @@ const publicationsData = [
       "junsuk_choe",
       "zeynep_akata",
       "seong_joon_oh"
+    ],
+    "co_first_authors": [
+      "jae_myung_kim",
+      "junsuk_choe"
     ],
     "venue": "ICCV",
     "year": "2021",
@@ -1349,6 +1381,10 @@ const publicationsData = [
       "yunjey_choi",
       "jaejun_yoo"
     ],
+    "co_first_authors": [
+      "muhammad_ferjad_naeem",
+      "seong_joon_oh"
+    ],
     "venue": "ICML",
     "year": "2020",
     "url": "https://arxiv.org/abs/2002.09797",
@@ -1424,6 +1460,10 @@ const publicationsData = [
       "sanghyuk_chun",
       "zeynep_akata",
       "hyunjung_shim"
+    ],
+    "co_first_authors": [
+      "junsuk_choe",
+      "seong_joon_oh"
     ],
     "venue": "CVPR",
     "year": "2020",
