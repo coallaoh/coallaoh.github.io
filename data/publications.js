@@ -171,6 +171,35 @@ const publicationsData = [
     ]
   },
   {
+    "id": "michael2025selfreflect",
+    "title": "SelfReflect: Can LLMs Communicate Their Internal Answer Distribution?",
+    "authors": [
+      "michael_kirchhof",
+      "luca_fuger",
+      "adam_golinski",
+      "eeshan_gunesh_dhekane",
+      "arno_blaas",
+      "seong_joon_oh",
+      "sinead_williamson"
+    ],
+    "venue": "arXiv",
+    "year": "2025",
+    "url": "https://arxiv.org/abs/2505.20295",
+    "bibtex": "@article{kirchhof2025selfreflect,\n  title={SelfReflect: Can LLMs Communicate Their Internal Answer Distribution?},\n  author={Kirchhof, Michael and Füger, Luca and Goliński, Adam and Dhekane, Eeshan Gunesh and Blaas, Arno and Oh, Seong Joon and Williamson, Sinead},\n  journal={arXiv preprint arXiv:2505.20295},\n  year={2025}\n}",
+    "image": "pictures/michael2025selfreflect.png",
+    "links": [
+      {
+        "text": "ResearchTrend.AI",
+        "url": "https://researchtrend.ai/papers/2505.20295"
+      }
+    ],
+    "abstract": "We introduce SelfReflect, an information-theoretic metric measuring how faithfully a summary string reflects an LLM's internal answer distribution. Across interventional and human studies, SelfReflect is sensitive to small deviations and reveals that modern LLMs generally fail to communicate their uncertainties. Faithful summaries emerge when sampling multiple outputs and summarizing them in-context.",
+    "rtai_tags": [
+      "UQLM",
+      "ELM"
+    ]
+  },
+  {
     "id": "arnas2025scaling",
     "title": "Does Data Scaling Lead to Visual Compositional Generalization?",
     "authors": [
