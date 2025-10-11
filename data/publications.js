@@ -1,6 +1,39 @@
 // Publications data in JSON format
 const publicationsData = [
   {
+    "id": "alex2025disco",
+    "title": "DISCO: Diversifying Sample Condensation for Efficient Model Evaluation",
+    "authors": [
+      "alexander_rubinstein",
+      "benjamin_raible",
+      "martin_gubri",
+      "seong_joon_oh"
+    ],
+    "venue": "arXiv",
+    "year": "2025",
+    "url": "https://arxiv.org/abs/2510.07959",
+    "bibtex": "@article{alex2025disco,\n  title={DISCO: Diversifying Sample Condensation for Efficient Model Evaluation},\n  author={Rubinstein, Alexander and Raible, Benjamin and Gubri, Martin and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2510.07959},\n  year={2025}\n}",
+    "image": "pictures/alex2025disco.png",
+    "links": [
+      {
+        "text": "ResearchTrend.AI",
+        "url": "https://researchtrend.ai/papers/2510.07959"
+      },
+      {
+        "text": "Project Page",
+        "url": "https://arubique.github.io/disco-site/"
+      },
+      {
+        "text": "Code",
+        "url": "https://github.com/arubique/disco-public"
+      }
+    ],
+    "abstract": "DISCO selects an anchor subset for fast evaluation by greedily choosing samples that maximize inter-model disagreement, avoiding clustering-based selection. It simplifies anchor selection and achieves state-of-the-art performance prediction on benchmarks like MMLU, HellaSwag, Winogrande, and ARC.",
+    "rtai_tags": [
+      "ELM"
+    ]
+  },
+  {
     "id": "haritz2025cseo",
     "title": "C-SEO Bench: Does Conversational SEO Work?",
     "authors": [
