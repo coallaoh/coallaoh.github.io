@@ -1,6 +1,36 @@
 // Publications data in JSON format
 const publicationsData = [
   {
+    "id": "ahmed2025drllm",
+    "title": "Dr.LLM: Dynamic Layer Routing for LLMs",
+    "authors": [
+      "ahmed_heakl",
+      "martin_gubri",
+      "salman_khan",
+      "sangdoo_yun",
+      "seong_joon_oh"
+    ],
+    "venue": "arXiv",
+    "year": "2025",
+    "url": "https://arxiv.org/abs/2510.12773",
+    "bibtex": "@article{ahmed2025drllm,\n  title={Dr.LLM: Dynamic Layer Routing for LLMs},\n  author={Heakl, Ahmed and Gubri, Martin and Khan, Salman and Yun, Sangdoo and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2510.12773},\n  year={2025}\n}",
+    "image": "pictures/ahmed2025drllm.png",
+    "links": [
+      {
+        "text": "ResearchTrend.AI",
+        "url": "https://researchtrend.ai/papers/2510.12773"
+      },
+      {
+        "text": "Code",
+        "url": "https://github.com/parameterlab/dr-llm"
+      }
+    ],
+    "abstract": "Dr.LLM improves reasoning with less computation. Lightweight routers at each layer decide whether to skip, execute, or repeat transformer blocks. Monte Carlo tree search trains the routers to find optimal paths. The approach is retrofittable and generalises to new tasks.",
+    "rtai_tags": [
+      "ReLM"
+    ]
+  },
+  {
     "id": "alex2025disco",
     "title": "DISCO: Diversifying Sample Condensation for Efficient Model Evaluation",
     "authors": [
