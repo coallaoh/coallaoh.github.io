@@ -5,7 +5,10 @@ const authorsData = {
       "id": "alexander_rubinstein",
       "name": "Alexander Rubinstein",
       "url": "https://arubique.github.io/",
-      "isMe": false
+      "isMe": false,
+      "startYear": 2022,
+      "endYear": null,
+      "type": "phd"
     },
     {
       "id": "ameya_prabhu",
@@ -35,7 +38,10 @@ const authorsData = {
       "id": "ankit_sonthalia",
       "name": "Ankit Sonthalia",
       "url": "https://www.linkedin.com/in/ankit-sonthalia-2a05b4202/",
-      "isMe": false
+      "isMe": false,
+      "startYear": 2024,
+      "endYear": null,
+      "type": "phd"
     },
     {
       "id": "anna_khoreva",
@@ -53,7 +59,10 @@ const authorsData = {
       "id": "arnas_uselis",
       "name": "Arnas Uselis",
       "url": "https://www.linkedin.com/in/arnas-uselis-193883144/",
-      "isMe": false
+      "isMe": false,
+      "startYear": 2023,
+      "endYear": null,
+      "type": "phd"
     },
     {
       "id": "atsushi_yamashita",
@@ -65,7 +74,10 @@ const authorsData = {
       "id": "blint_mucsnyi",
       "name": "Bálint Mucsányi",
       "url": "https://bmucsanyi.github.io/",
-      "isMe": false
+      "isMe": false,
+      "startYear": 2023,
+      "endYear": 2024,
+      "type": "master"
     },
     {
       "id": "bernt_schiele",
@@ -113,13 +125,28 @@ const authorsData = {
       "id": "darina_koishigarina",
       "name": "Darina Koishigarina",
       "url": "https://scalabletrustworthyai.github.io/member/darina/",
-      "isMe": false
+      "isMe": false,
+      "supervision": [
+        {
+          "startYear": 2025,
+          "endYear": null,
+          "type": "phd"
+        },
+        {
+          "startYear": 2024,
+          "endYear": 2025,
+          "type": "master"
+        }
+      ]
     },
     {
       "id": "dennis_ulmer",
       "name": "Dennis Ulmer",
       "url": "https://dennisulmer.eu/",
-      "isMe": false
+      "isMe": false,
+      "startYear": 2023,
+      "endYear": 2023,
+      "type": "intern"
     },
     {
       "id": "diane_larlus",
@@ -149,7 +176,10 @@ const authorsData = {
       "id": "edgar_tretschk",
       "name": "Edgar Tretschk",
       "url": "https://people.mpi-inf.mpg.de/~tretschk/",
-      "isMe": false
+      "isMe": false,
+      "startYear": 2017,
+      "endYear": 2018,
+      "type": "master"
     },
     {
       "id": "ehsan_abbasnejad",
@@ -161,13 +191,19 @@ const authorsData = {
       "id": "elif_akata",
       "name": "Elif Akata",
       "url": "https://github.com/eliaka",
-      "isMe": false
+      "isMe": false,
+      "startYear": 2022,
+      "endYear": 2023,
+      "type": "phd"
     },
     {
       "id": "elisa_nguyen",
       "name": "Elisa Nguyen",
       "url": "https://elisanguyen.github.io/",
-      "isMe": false
+      "isMe": false,
+      "startYear": 2022,
+      "endYear": null,
+      "type": "phd"
     },
     {
       "id": "enkelejda_kasneci",
@@ -191,7 +227,10 @@ const authorsData = {
       "id": "evgenii_kortukov",
       "name": "Evgenii Kortukov",
       "url": "https://kortukov.github.io/",
-      "isMe": false
+      "isMe": false,
+      "startYear": 2023,
+      "endYear": 2024,
+      "type": "master"
     },
     {
       "id": "florian_schroff",
@@ -215,7 +254,10 @@ const authorsData = {
       "id": "haritz_puerto",
       "name": "Haritz Puerto",
       "url": "https://haritzpuerto.github.io/",
-      "isMe": false
+      "isMe": false,
+      "startYear": 2024,
+      "endYear": 2024,
+      "type": "intern"
     },
     {
       "id": "hazel_kim",
@@ -251,7 +293,10 @@ const authorsData = {
       "id": "hyojin_bahng",
       "name": "Hyojin Bahng",
       "url": "https://hjbahng.github.io/",
-      "isMe": false
+      "isMe": false,
+      "startYear": 2019,
+      "endYear": 2019,
+      "type": "intern"
     },
     {
       "id": "hyun_oh_song",
@@ -275,7 +320,10 @@ const authorsData = {
       "id": "jae_myung_kim",
       "name": "Jae Myung Kim",
       "url": "https://jaemyung-kim.github.io/",
-      "isMe": false
+      "isMe": false,
+      "startYear": 2021,
+      "endYear": 2021,
+      "type": "intern"
     },
     {
       "id": "jaegul_choo",
@@ -395,7 +443,10 @@ const authorsData = {
       "id": "junsuk_choe",
       "name": "Junsuk Choe",
       "url": "https://sites.google.com/site/junsukchoe/",
-      "isMe": false
+      "isMe": false,
+      "startYear": 2019,
+      "endYear": 2019,
+      "type": "intern"
     },
     {
       "id": "junyeop_lee",
@@ -467,7 +518,10 @@ const authorsData = {
       "id": "martin_gubri",
       "name": "Martin Gubri",
       "url": "https://gubri.eu/",
-      "isMe": false
+      "isMe": false,
+      "startYear": 2023,
+      "endYear": null,
+      "type": "postdoc"
     },
     {
       "id": "matthias_bethge",
@@ -479,19 +533,28 @@ const authorsData = {
       "id": "max_augustin",
       "name": "Max Augustin",
       "url": "",
-      "isMe": false
+      "isMe": false,
+      "startYear": 2017,
+      "endYear": 2018,
+      "type": "master"
     },
     {
       "id": "michael_kirchhof",
       "name": "Michael Kirchhof",
       "url": "https://www.hci.uni-tuebingen.de/chair/team/michael-kirchhof",
-      "isMe": false
+      "isMe": false,
+      "startYear": 2022,
+      "endYear": 2024,
+      "type": "co-advised-phd"
     },
     {
       "id": "michael_poli",
       "name": "Michael Poli",
       "url": "https://zymrael.github.io/",
-      "isMe": false
+      "isMe": false,
+      "startYear": 2021,
+      "endYear": 2021,
+      "type": "intern"
     },
     {
       "id": "minjoon_seo",
@@ -509,7 +572,10 @@ const authorsData = {
       "id": "muhammad_ferjad_naeem",
       "name": "Muhammad Ferjad Naeem",
       "url": "https://ferjad.github.io/",
-      "isMe": false
+      "isMe": false,
+      "startYear": 2019,
+      "endYear": 2019,
+      "type": "intern"
     },
     {
       "id": "nayeong_kim",
@@ -587,7 +653,10 @@ const authorsData = {
       "id": "siwon_kim",
       "name": "Siwon Kim",
       "url": "https://sites.google.com/view/siwonkim",
-      "isMe": false
+      "isMe": false,
+      "startYear": 2023,
+      "endYear": 2023,
+      "type": "intern"
     },
     {
       "id": "siyu_tang",
@@ -641,7 +710,10 @@ const authorsData = {
       "id": "tommaso_green",
       "name": "Tommaso Green",
       "url": "https://green-t.io/",
-      "isMe": false
+      "isMe": false,
+      "startYear": 2025,
+      "endYear": 2025,
+      "type": "intern"
     },
     {
       "id": "tong_tong_wu",
@@ -737,7 +809,10 @@ const authorsData = {
       "id": "ahmed_heakl",
       "name": "Ahmed Heakl",
       "url": "https://www.linkedin.com/in/ahmed-heakl/",
-      "isMe": false
+      "isMe": false,
+      "startYear": 2025,
+      "endYear": 2025,
+      "type": "intern"
     },
     {
       "id": "salman_khan",
@@ -749,7 +824,10 @@ const authorsData = {
       "id": "stefano_woerner",
       "name": "Stefano Woerner",
       "url": "https://www.linkedin.com/in/stefano-woerner/",
-      "isMe": false
+      "isMe": false,
+      "startYear": 2023,
+      "endYear": 2025,
+      "type": "co-advised-phd"
     },
     {
       "id": "christian_f_baumgartner",
@@ -761,7 +839,10 @@ const authorsData = {
       "id": "philipp_davydov",
       "name": "Philipp Davydov",
       "url": "https://www.linkedin.com/in/philipp-davydov-456091227/",
-      "isMe": false
+      "isMe": false,
+      "startYear": 2025,
+      "endYear": null,
+      "type": "master"
     },
     {
       "id": "minyoung_lee",
@@ -785,7 +866,10 @@ const authorsData = {
       "id": "luca_fuger",
       "name": "Luca Füger",
       "url": "https://scalabletrustworthyai.github.io/member/luca/",
-      "isMe": false
+      "isMe": false,
+      "startYear": 2025,
+      "endYear": null,
+      "type": "master"
     },
     {
       "id": "adam_golinski",
@@ -810,6 +894,87 @@ const authorsData = {
       "name": "Sinead Williamson",
       "url": "https://sinead.github.io/",
       "isMe": false
+    },
+    {
+      "id": "lennart_bramlage",
+      "name": "Lennart Bramlage",
+      "url": "",
+      "isMe": false,
+      "startYear": 2024,
+      "endYear": null,
+      "type": "co-advised-phd"
+    },
+    {
+      "id": "benjamin_leo_raible",
+      "name": "Benjamin Leo Raible",
+      "url": "",
+      "isMe": false,
+      "startYear": 2024,
+      "endYear": 2024,
+      "type": "master"
+    },
+    {
+      "id": "anastasiia_alekseeva",
+      "name": "Anastasiia Alekseeva",
+      "url": "",
+      "isMe": false,
+      "startYear": 2024,
+      "endYear": 2024,
+      "type": "master"
+    },
+    {
+      "id": "albert_catalan_tatjer",
+      "name": "Albert Catalan Tatjer",
+      "url": "",
+      "isMe": false,
+      "startYear": 2024,
+      "endYear": 2025,
+      "type": "master"
+    },
+    {
+      "id": "bora_kargi",
+      "name": "Bora Kargi",
+      "url": "",
+      "isMe": false,
+      "startYear": 2025,
+      "endYear": null,
+      "type": "master"
+    },
+    {
+      "id": "fabian_morelli",
+      "name": "Fabian Morelli",
+      "url": "",
+      "isMe": false,
+      "startYear": 2025,
+      "endYear": null,
+      "type": "master"
+    },
+    {
+      "id": "cornelius_emde",
+      "name": "Cornelius Emde",
+      "url": "",
+      "isMe": false,
+      "startYear": 2025,
+      "endYear": 2025,
+      "type": "intern"
+    },
+    {
+      "id": "anmol_goel",
+      "name": "Anmol Goel",
+      "url": "",
+      "isMe": false,
+      "startYear": 2025,
+      "endYear": 2025,
+      "type": "intern"
+    },
+    {
+      "id": "elena_sofia_ruzzetti",
+      "name": "Elena Sofia Ruzzetti",
+      "url": "",
+      "isMe": false,
+      "startYear": 2026,
+      "endYear": 2026,
+      "type": "intern"
     }
   ]
 };
