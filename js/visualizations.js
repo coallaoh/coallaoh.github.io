@@ -814,6 +814,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // Use MutationObserver to detect when publications are rendered
   const targetNode = document.getElementById('publications-container');
   if (targetNode) {
+    // If publications are already rendered (race condition), init immediately
+    if (targetNode.children && targetNode.children.length > 0) {
+      generateTopicTrendsChart().catch(error => {
+        console.error('Error generating topic trends chart:', error);
+      });
+      const totalPublications = document.querySelectorAll('#publications-container .row.common-rows').length;
+      updatePublicationsHeading(totalPublications, totalPublications);
+      // No need to observe further
+      return;
+    }
+
     const observer = new MutationObserver((mutations) => {
       if (mutations.some(mutation => mutation.type === 'childList' && mutation.addedNodes.length > 0)) {
         // Publications have been rendered, now create the chart

@@ -2171,4 +2171,9 @@ const publicationsData = [
   }
 ];
 
-module.exports = publicationsData;
+// Support both Node/CommonJS and browser environments
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = publicationsData;
+} else {
+  window.publicationsData = publicationsData;
+}

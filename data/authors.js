@@ -991,4 +991,9 @@ const authorsData = {
   ]
 };
 
-module.exports = authorsData;
+// Support both Node/CommonJS and browser environments
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = authorsData;
+} else {
+  window.authorsData = authorsData;
+}
