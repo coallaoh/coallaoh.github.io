@@ -1,6 +1,32 @@
 // Publications data in JSON format
 const publicationsData = [
   {
+    "id": "heejin2025reasoning",
+    "title": "What Defines Good Reasoning in LLMs? Dissecting Reasoning Steps with Multi-Aspect Evaluation",
+    "authors": [
+      "heejin_do",
+      "jaehui_hwang",
+      "dongyoon_han",
+      "seong_joon_oh",
+      "sangdoo_yun"
+    ],
+    "venue": "arXiv",
+    "year": "2025",
+    "url": "https://arxiv.org/abs/2510.20603",
+    "bibtex": "@article{heejin2025reasoning,\n  title={What Defines Good Reasoning in LLMs? Dissecting Reasoning Steps with Multi-Aspect Evaluation},\n  author={Do, Heejin and Hwang, Jaehui and Han, Dongyoon and Oh, Seong Joon and Yun, Sangdoo},\n  journal={arXiv preprint arXiv:2510.20603},\n  year={2025}\n}",
+    "image": "pictures/heejin2025reasoning.png",
+    "links": [
+      {
+        "text": "ResearchTrend.AI",
+        "url": "https://researchtrend.ai/papers/2510.20603"
+      }
+    ],
+    "abstract": "Most people judge LLMs by their final answers. This misses the quality of the reasoning process. We break down reasoning into two dimensions: relevance and coherence. Relevance checks if each step is grounded in the problem. Coherence checks if it follows from prior steps. Our method, causal stepwise evaluation (CaSE), assesses each step without hindsight bias. We validate CaSE on two new expert-annotated benchmarks, MRa-GSM8K and MRa-MATH. Training data curated with CaSE directly improves model performance. This is a practical way to analyse, debug, and improve LLM reasoning.",
+    "rtai_tags": [
+      "ReLM"
+    ]
+  },
+  {
     "id": "ahmed2025drllm",
     "title": "Dr.LLM: Dynamic Layer Routing for LLMs",
     "authors": [

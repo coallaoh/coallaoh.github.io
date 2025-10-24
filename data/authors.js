@@ -260,6 +260,18 @@ const authorsData = {
       "type": "intern"
     },
     {
+      "id": "heejin_do",
+      "name": "Heejin Do",
+      "url": "https://doheejin.github.io/about_me/",
+      "isMe": false
+    },
+    {
+      "id": "jaehui_hwang",
+      "name": "Jaehui Hwang",
+      "url": "https://j-h-hwang.github.io/",
+      "isMe": false
+    },
+    {
       "id": "hazel_kim",
       "name": "Hazel Kim",
       "url": "https://github.com/hazelhkim",
