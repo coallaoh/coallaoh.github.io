@@ -1,6 +1,36 @@
 // Publications data in JSON format
 const publicationsData = [
   {
+    "id": "philipp2026nonattrib",
+    "title": "Un-Attributability: Computing Novelty From Retrieval & Semantic Similarity",
+    "authors": [
+      "philipp_davydov",
+      "ameya_prabhu",
+      "matthias_bethge",
+      "elisa_nguyen",
+      "seong_joon_oh"
+    ],
+    "venue": "arXiv",
+    "year": "2025",
+    "url": "https://arxiv.org/abs/2510.27313",
+    "bibtex": "@article{philipp2026nonattrib,\n  title={Un-Attributability: Computing Novelty From Retrieval & Semantic Similarity},\n  author={Davydov, Philipp and Prabhu, Ameya and Bethge, Matthias and Nguyen, Elisa and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2510.27313},\n  year={2025}\n}",
+    "image": "pictures/philipp2026nonattrib.png",
+    "links": [
+      {
+        "text": "ResearchTrend.AI",
+        "url": "https://researchtrend.ai/papers/2510.27313"
+      },
+      {
+        "text": "Dataset",
+        "url": "https://huggingface.co/datasets/stai-tuebingen/faiss-smollm"
+      }
+    ],
+    "abstract": "How much of a model's answer is truly new versus recalled? We introduce un-attributability: a simple test that flags outputs with no close match in the pretraining corpus. A two-stage pipeline (fast GIST retrieval plus ColBERTv2 reranking) checks nearby contexts against a human reference. On SmolLM and SmolLM2, we uncover longer-range training influences than expected, domain-specific patterns in novelty, and a boost from instruction tuning.",
+    "rtai_tags": [
+      "TDI"
+    ]
+  },
+  {
     "id": "heejin2025reasoning",
     "title": "What Defines Good Reasoning in LLMs? Dissecting Reasoning Steps with Multi-Aspect Evaluation",
     "authors": [
