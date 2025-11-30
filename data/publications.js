@@ -500,10 +500,15 @@ const publicationsData = [
     ],
     "venue": "ICLR",
     "year": "2025",
-    "url": "https://openreview.net/forum?id=ByCV9xWfNK",
+    "url": "https://arxiv.org/abs/2504.05461",
     "bibtex": "@inproceedings{arnas2025iclr,\ntitle = {Intermediate Layer Classifiers for OOD Generalization},\nauthor = {Uselis, Arnas and Oh, Seong Joon},\nyear = {2025},\nbooktitle = {International Conference on Learning Representations (ICLR)},\n}",
     "image": "pictures/arnas2025iclr.png",
-    "links": [],
+    "links": [
+      {
+        "text": "OpenReview",
+        "url": "https://openreview.net/forum?id=ByCV9xWfNK"
+      }
+    ],
     "abstract": "Retraining the last layer for target OOD dataset is a common practice for adapting to new distributions. We question the practice and consider using intermediate-layer representations. This turns out to be a good idea in many vision applications. The empirical results are quite surprising.",
     "rtai_tags": [
       "OOD"
