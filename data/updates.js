@@ -3,6 +3,11 @@
 // The FE will render the latest 5 items.
 const updatesData = [
   {
+    date: '2025-12-21',
+    id: 'update-2025-12-21-joining-kaist',
+    html: "21 December 2025. I'm joining <a href=\"https://gsai.kaist.ac.kr/\">KAIST AI</a> as an associate professor from February 2026."
+  },
+  {
     date: '2025-09-20',
     id: 'update-2025-09-20-neurips25-acceptance',
     html: "20 September 2025. 4 papers accepted @ NeurIPS'25: <a href=\"#haritz2025cseo\">C-SEO Bench</a>, <a href=\"#ankit2025ranking\">Visual Embedding Rankability</a>, <a href=\"#yujin2025diffusion\">Diffusion Classifier Compositionality</a>, <a href=\"#dongjun2025ovs\">Open-vocabulary Segmentation</a>."
