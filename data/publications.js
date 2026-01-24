@@ -1,6 +1,32 @@
 // Publications data in JSON format
 const publicationsData = [
   {
+    "id": "anmol2026privacycollapse",
+    "title": "Privacy Collapse: Benign Fine-Tuning Can Break Contextual Privacy in Language Models",
+    "authors": [
+      "anmol_goel",
+      "cornelius_emde",
+      "sangdoo_yun",
+      "seong_joon_oh",
+      "martin_gubri"
+    ],
+    "venue": "arXiv",
+    "year": "2026",
+    "url": "https://arxiv.org/abs/2601.15220",
+    "bibtex": "@article{anmol2026privacycollapse,\n  title={Privacy Collapse: Benign Fine-Tuning Can Break Contextual Privacy in Language Models},\n  author={Goel, Anmol and Emde, Cornelius and Yun, Sangdoo and Oh, Seong Joon and Gubri, Martin},\n  journal={arXiv preprint arXiv:2601.15220},\n  year={2026}\n}",
+    "image": "pictures/anmol2026privacycollapse.png",
+    "links": [
+      {
+        "text": "ResearchTrend.AI",
+        "url": "https://researchtrend.ai/papers/2601.15220"
+      }
+    ],
+    "abstract": "Benign fine-tuning of frontier models can lead to privacy collapse. Diverse, subtle patterns in training data degrade contextual privacy, including optimisation for helpfulness, exposure to user information, and debugging code printing internal variables. Fine-tuned models lose their ability to reason about contextual privacy norms, share information inappropriately with tools, and violate memory boundaries across contexts. Privacy collapse is a silent failure: models maintain high performance on standard safety and utility benchmarks whilst exhibiting severe privacy vulnerabilities.",
+    "rtai_tags": [
+      "PILM"
+    ]
+  },
+  {
     "id": "philipp2026nonattrib",
     "title": "Un-Attributability: Computing Novelty From Retrieval & Semantic Similarity",
     "authors": [
