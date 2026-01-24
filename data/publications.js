@@ -1,6 +1,37 @@
 // Publications data in JSON format
 const publicationsData = [
   {
+    "id": "maseval2026",
+    "title": "MASEval: LLM-based Multi-Agent Evaluation & Benchmark Framework",
+    "authors": [
+      "cornelius_emde",
+      "martin_gubri",
+      "anmol_goel",
+      "seong_joon_oh",
+      "sangdoo_yun"
+    ],
+    "venue": "GitHub",
+    "year": "2026",
+    "url": "https://github.com/parameterlab/MASEval",
+    "bibtex": "@software{maseval2026,\n  title={MASEval: LLM-based Multi-Agent Evaluation \\& Benchmark Framework},\n  author={Emde, Cornelius and Gubri, Martin and Goel, Anmol and Oh, Seong Joon and Yun, Sangdoo},\n  year={2026},\n  url={https://github.com/parameterlab/MASEval}\n}",
+    "image": "pictures/maseval2026.png",
+    "links": [
+      {
+        "text": "Documentation",
+        "url": "https://maseval.readthedocs.io/en/stable/"
+      },
+      {
+        "text": "PyPI",
+        "url": "https://pypi.org/project/maseval/"
+      }
+    ],
+    "abstract": "MASEval is an evaluation library that provides a unified interface for benchmarking multi-agent systems. It offers standardised abstractions for running any agent implementation. The library is framework agnostic, supporting AutoGen, LangChain, custom code, or direct LLM calls. It includes implementations for several benchmarks to evaluate a variety of multi-agent scenarios.",
+    "rtai_tags": [
+      "LLMAG",
+      "ELM"
+    ]
+  },
+  {
     "id": "anmol2026privacycollapse",
     "title": "Privacy Collapse: Benign Fine-Tuning Can Break Contextual Privacy in Language Models",
     "authors": [

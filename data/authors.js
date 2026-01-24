@@ -964,7 +964,7 @@ const authorsData = {
     {
       "id": "cornelius_emde",
       "name": "Cornelius Emde",
-      "url": "",
+      "url": "https://cemde.github.io/",
       "isMe": false,
       "startYear": 2025,
       "endYear": 2025,
@@ -973,7 +973,7 @@ const authorsData = {
     {
       "id": "anmol_goel",
       "name": "Anmol Goel",
-      "url": "",
+      "url": "https://www.goel.ai/",
       "isMe": false,
       "startYear": 2025,
       "endYear": 2025,
