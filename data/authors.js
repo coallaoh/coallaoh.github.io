@@ -163,7 +163,7 @@ const authorsData = {
     {
       "id": "dongjun_hwang",
       "name": "Dongjun Hwang",
-      "url": "",
+      "url": "https://dongjunhwang.github.io/",
       "isMe": false
     },
     {
