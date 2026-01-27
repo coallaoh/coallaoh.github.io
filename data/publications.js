@@ -1,6 +1,149 @@
 // Publications data in JSON format
 const publicationsData = [
   {
+    "id": "alex2025disco",
+    "title": "DISCO: Diversifying Sample Condensation for Efficient Model Evaluation",
+    "authors": [
+      "alexander_rubinstein",
+      "benjamin_raible",
+      "martin_gubri",
+      "seong_joon_oh"
+    ],
+    "venue": "ICLR",
+    "year": "2026",
+    "url": "https://arxiv.org/abs/2510.07959",
+    "bibtex": "@inproceedings{alex2025disco,\n  title={DISCO: Diversifying Sample Condensation for Efficient Model Evaluation},\n  author={Rubinstein, Alexander and Raible, Benjamin and Gubri, Martin and Oh, Seong Joon},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2026}\n}",
+    "image": "pictures/alex2025disco.png",
+    "links": [
+      {
+        "text": "ResearchTrend.AI",
+        "url": "https://researchtrend.ai/papers/2510.07959"
+      },
+      {
+        "text": "Project Page",
+        "url": "https://arubique.github.io/disco-site/"
+      },
+      {
+        "text": "Code",
+        "url": "https://github.com/arubique/disco-public"
+      }
+    ],
+    "abstract": "DISCO selects an anchor subset for fast evaluation by greedily choosing samples that maximize inter-model disagreement, avoiding clustering-based selection. It simplifies anchor selection and achieves state-of-the-art performance prediction on benchmarks like MMLU, HellaSwag, Winogrande, and ARC.",
+    "rtai_tags": [
+      "ELM"
+    ]
+  },
+  {
+    "id": "ahmed2025drllm",
+    "title": "Dr.LLM: Dynamic Layer Routing for LLMs",
+    "authors": [
+      "ahmed_heakl",
+      "martin_gubri",
+      "salman_khan",
+      "sangdoo_yun",
+      "seong_joon_oh"
+    ],
+    "venue": "ICLR",
+    "year": "2026",
+    "url": "https://arxiv.org/abs/2510.12773",
+    "bibtex": "@inproceedings{ahmed2025drllm,\n  title={Dr.LLM: Dynamic Layer Routing for LLMs},\n  author={Heakl, Ahmed and Gubri, Martin and Khan, Salman and Yun, Sangdoo and Oh, Seong Joon},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2026}\n}",
+    "image": "pictures/ahmed2025drllm.png",
+    "links": [
+      {
+        "text": "ResearchTrend.AI",
+        "url": "https://researchtrend.ai/papers/2510.12773"
+      },
+      {
+        "text": "Code",
+        "url": "https://github.com/parameterlab/dr-llm"
+      }
+    ],
+    "abstract": "Dr.LLM improves reasoning with less computation. Lightweight routers at each layer decide whether to skip, execute, or repeat transformer blocks. Monte Carlo tree search trains the routers to find optimal paths. The approach is retrofittable and generalises to new tasks.",
+    "rtai_tags": [
+      "ReLM"
+    ]
+  },
+  {
+    "id": "darina2025binding",
+    "title": "CLIP Behaves like a Bag-of-Words Model Cross-modally but not Uni-modally",
+    "authors": [
+      "darina_koishigarina",
+      "arnas_uselis",
+      "seong_joon_oh"
+    ],
+    "venue": "ICLR",
+    "year": "2026",
+    "url": "https://arxiv.org/abs/2502.03566",
+    "bibtex": "@inproceedings{darina2025binding,\n  title={CLIP Behaves like a Bag-of-Words Model Cross-modally but not Uni-modally},\n  author={Koishigarina, Darina and Uselis, Arnas and Oh, Seong Joon},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2026}\n}",
+    "image": "pictures/darina2025binding.png",
+    "links": [
+      {
+        "text": "ResearchTrend.AI",
+        "url": "https://researchtrend.ai/papers/2502.03566"
+      },
+      {
+        "text": "Code",
+        "url": "https://github.com/kdariina/CLIP-not-BoW-unimodally"
+      }
+    ],
+    "abstract": "CLIP is widely used for downstream tasks but struggles with compositional understanding. It often behaves like a bag of words model and fails to bind attributes to objects in cross-modal settings. The problem comes from the cross-modal alignment using cosine similarity. We propose LABCLIP. It applies a linear transformation to text embeddings before computing similarity. This improves attribute-object binding and strengthens compositional understanding.",
+    "rtai_tags": [
+      "CoGe",
+      "VLM"
+    ]
+  },
+  {
+    "id": "minyoung2026delimiter",
+    "title": "Enhancing Multi-Image Understanding through Delimiter Token Scaling",
+    "authors": [
+      "minyoung_lee",
+      "yeji_park",
+      "dongjun_hwang",
+      "yejin_kim",
+      "seong_joon_oh",
+      "junsuk_choe"
+    ],
+    "venue": "ICLR",
+    "year": "2026",
+    "url": "",
+    "bibtex": "@inproceedings{minyoung2026delimiter,\n  title={Enhancing Multi-Image Understanding through Delimiter Token Scaling},\n  author={Lee, Minyoung and Park, Yeji and Hwang, Dongjun and Kim, Yejin and Oh, Seong Joon and Choe, Junsuk},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2026}\n}",
+    "image": "pictures/minyoung2026delimiter.png",
+    "links": [],
+    "abstract": "Multi-image understanding in vision-language models is enhanced through delimiter token scaling. The method improves how models process and distinguish between multiple images in a single context.",
+    "rtai_tags": [
+      "VLM"
+    ]
+  },
+  {
+    "id": "michael2025selfreflect",
+    "title": "SelfReflect: Can LLMs Communicate Their Internal Answer Distribution?",
+    "authors": [
+      "michael_kirchhof",
+      "luca_fuger",
+      "adam_golinski",
+      "eeshan_gunesh_dhekane",
+      "arno_blaas",
+      "seong_joon_oh",
+      "sinead_williamson"
+    ],
+    "venue": "ICLR",
+    "year": "2026",
+    "url": "https://arxiv.org/abs/2505.20295",
+    "bibtex": "@inproceedings{kirchhof2025selfreflect,\n  title={SelfReflect: Can LLMs Communicate Their Internal Answer Distribution?},\n  author={Kirchhof, Michael and Füger, Luca and Goliński, Adam and Dhekane, Eeshan Gunesh and Blaas, Arno and Oh, Seong Joon and Williamson, Sinead},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2026}\n}",
+    "image": "pictures/michael2025selfreflect.png",
+    "links": [
+      {
+        "text": "ResearchTrend.AI",
+        "url": "https://researchtrend.ai/papers/2505.20295"
+      }
+    ],
+    "abstract": "We introduce SelfReflect, an information-theoretic metric measuring how faithfully a summary string reflects an LLM's internal answer distribution. Across interventional and human studies, SelfReflect is sensitive to small deviations and reveals that modern LLMs generally fail to communicate their uncertainties. Faithful summaries emerge when sampling multiple outputs and summarizing them in-context.",
+    "rtai_tags": [
+      "UQLM",
+      "ELM"
+    ]
+  },
+  {
     "id": "maseval2026",
     "title": "MASEval: LLM-based Multi-Agent Evaluation & Benchmark Framework",
     "authors": [
@@ -111,69 +254,6 @@ const publicationsData = [
     "abstract": "Most people judge LLMs by their final answers. This misses the quality of the reasoning process. We break down reasoning into two dimensions: relevance and coherence. Relevance checks if each step is grounded in the problem. Coherence checks if it follows from prior steps. Our method, causal stepwise evaluation (CaSE), assesses each step without hindsight bias. We validate CaSE on two new expert-annotated benchmarks, MRa-GSM8K and MRa-MATH. Training data curated with CaSE directly improves model performance. This is a practical way to analyse, debug, and improve LLM reasoning.",
     "rtai_tags": [
       "ReLM"
-    ]
-  },
-  {
-    "id": "ahmed2025drllm",
-    "title": "Dr.LLM: Dynamic Layer Routing for LLMs",
-    "authors": [
-      "ahmed_heakl",
-      "martin_gubri",
-      "salman_khan",
-      "sangdoo_yun",
-      "seong_joon_oh"
-    ],
-    "venue": "ICLR",
-    "year": "2026",
-    "url": "https://arxiv.org/abs/2510.12773",
-    "bibtex": "@inproceedings{ahmed2025drllm,\n  title={Dr.LLM: Dynamic Layer Routing for LLMs},\n  author={Heakl, Ahmed and Gubri, Martin and Khan, Salman and Yun, Sangdoo and Oh, Seong Joon},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2026}\n}",
-    "image": "pictures/ahmed2025drllm.png",
-    "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2510.12773"
-      },
-      {
-        "text": "Code",
-        "url": "https://github.com/parameterlab/dr-llm"
-      }
-    ],
-    "abstract": "Dr.LLM improves reasoning with less computation. Lightweight routers at each layer decide whether to skip, execute, or repeat transformer blocks. Monte Carlo tree search trains the routers to find optimal paths. The approach is retrofittable and generalises to new tasks.",
-    "rtai_tags": [
-      "ReLM"
-    ]
-  },
-  {
-    "id": "alex2025disco",
-    "title": "DISCO: Diversifying Sample Condensation for Efficient Model Evaluation",
-    "authors": [
-      "alexander_rubinstein",
-      "benjamin_raible",
-      "martin_gubri",
-      "seong_joon_oh"
-    ],
-    "venue": "ICLR",
-    "year": "2026",
-    "url": "https://arxiv.org/abs/2510.07959",
-    "bibtex": "@inproceedings{alex2025disco,\n  title={DISCO: Diversifying Sample Condensation for Efficient Model Evaluation},\n  author={Rubinstein, Alexander and Raible, Benjamin and Gubri, Martin and Oh, Seong Joon},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2026}\n}",
-    "image": "pictures/alex2025disco.png",
-    "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2510.07959"
-      },
-      {
-        "text": "Project Page",
-        "url": "https://arubique.github.io/disco-site/"
-      },
-      {
-        "text": "Code",
-        "url": "https://github.com/arubique/disco-public"
-      }
-    ],
-    "abstract": "DISCO selects an anchor subset for fast evaluation by greedily choosing samples that maximize inter-model disagreement, avoiding clustering-based selection. It simplifies anchor selection and achieves state-of-the-art performance prediction on benchmarks like MMLU, HellaSwag, Winogrande, and ARC.",
-    "rtai_tags": [
-      "ELM"
     ]
   },
   {
@@ -347,35 +427,6 @@ const publicationsData = [
     ]
   },
   {
-    "id": "michael2025selfreflect",
-    "title": "SelfReflect: Can LLMs Communicate Their Internal Answer Distribution?",
-    "authors": [
-      "michael_kirchhof",
-      "luca_fuger",
-      "adam_golinski",
-      "eeshan_gunesh_dhekane",
-      "arno_blaas",
-      "seong_joon_oh",
-      "sinead_williamson"
-    ],
-    "venue": "ICLR",
-    "year": "2026",
-    "url": "https://arxiv.org/abs/2505.20295",
-    "bibtex": "@inproceedings{kirchhof2025selfreflect,\n  title={SelfReflect: Can LLMs Communicate Their Internal Answer Distribution?},\n  author={Kirchhof, Michael and Füger, Luca and Goliński, Adam and Dhekane, Eeshan Gunesh and Blaas, Arno and Oh, Seong Joon and Williamson, Sinead},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2026}\n}",
-    "image": "pictures/michael2025selfreflect.png",
-    "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2505.20295"
-      }
-    ],
-    "abstract": "We introduce SelfReflect, an information-theoretic metric measuring how faithfully a summary string reflects an LLM's internal answer distribution. Across interventional and human studies, SelfReflect is sensitive to small deviations and reveals that modern LLMs generally fail to communicate their uncertainties. Faithful summaries emerge when sampling multiple outputs and summarizing them in-context.",
-    "rtai_tags": [
-      "UQLM",
-      "ELM"
-    ]
-  },
-  {
     "id": "arnas2025scaling",
     "title": "Does Data Scaling Lead to Visual Compositional Generalization?",
     "authors": [
@@ -466,57 +517,6 @@ const publicationsData = [
     "rtai_tags": [
       "DiffM",
       "SyDa"
-    ]
-  },
-  {
-    "id": "darina2025binding",
-    "title": "CLIP Behaves like a Bag-of-Words Model Cross-modally but not Uni-modally",
-    "authors": [
-      "darina_koishigarina",
-      "arnas_uselis",
-      "seong_joon_oh"
-    ],
-    "venue": "ICLR",
-    "year": "2026",
-    "url": "https://arxiv.org/abs/2502.03566",
-    "bibtex": "@inproceedings{darina2025binding,\n  title={CLIP Behaves like a Bag-of-Words Model Cross-modally but not Uni-modally},\n  author={Koishigarina, Darina and Uselis, Arnas and Oh, Seong Joon},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2026}\n}",
-    "image": "pictures/darina2025binding.png",
-    "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2502.03566"
-      },
-      {
-        "text": "Code",
-        "url": "https://github.com/kdariina/CLIP-not-BoW-unimodally"
-      }
-    ],
-    "abstract": "CLIP is widely used for downstream tasks but struggles with compositional understanding. It often behaves like a bag of words model and fails to bind attributes to objects in cross-modal settings. The problem comes from the cross-modal alignment using cosine similarity. We propose LABCLIP. It applies a linear transformation to text embeddings before computing similarity. This improves attribute-object binding and strengthens compositional understanding.",
-    "rtai_tags": [
-      "CoGe",
-      "VLM"
-    ]
-  },
-  {
-    "id": "minyoung2026delimiter",
-    "title": "Enhancing Multi-Image Understanding through Delimiter Token Scaling",
-    "authors": [
-      "minyoung_lee",
-      "yeji_park",
-      "dongjun_hwang",
-      "yejin_kim",
-      "seong_joon_oh",
-      "junsuk_choe"
-    ],
-    "venue": "ICLR",
-    "year": "2026",
-    "url": "",
-    "bibtex": "@inproceedings{minyoung2026delimiter,\n  title={Enhancing Multi-Image Understanding through Delimiter Token Scaling},\n  author={Lee, Minyoung and Park, Yeji and Hwang, Dongjun and Kim, Yejin and Oh, Seong Joon and Choe, Junsuk},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2026}\n}",
-    "image": "pictures/minyoung2026delimiter.png",
-    "links": [],
-    "abstract": "Multi-image understanding in vision-language models is enhanced through delimiter token scaling. The method improves how models process and distinguish between multiple images in a single context.",
-    "rtai_tags": [
-      "VLM"
     ]
   },
   {
