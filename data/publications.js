@@ -123,10 +123,10 @@ const publicationsData = [
       "sangdoo_yun",
       "seong_joon_oh"
     ],
-    "venue": "arXiv",
-    "year": "2025",
+    "venue": "ICLR",
+    "year": "2026",
     "url": "https://arxiv.org/abs/2510.12773",
-    "bibtex": "@article{ahmed2025drllm,\n  title={Dr.LLM: Dynamic Layer Routing for LLMs},\n  author={Heakl, Ahmed and Gubri, Martin and Khan, Salman and Yun, Sangdoo and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2510.12773},\n  year={2025}\n}",
+    "bibtex": "@inproceedings{ahmed2025drllm,\n  title={Dr.LLM: Dynamic Layer Routing for LLMs},\n  author={Heakl, Ahmed and Gubri, Martin and Khan, Salman and Yun, Sangdoo and Oh, Seong Joon},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2026}\n}",
     "image": "pictures/ahmed2025drllm.png",
     "links": [
       {
@@ -152,10 +152,10 @@ const publicationsData = [
       "martin_gubri",
       "seong_joon_oh"
     ],
-    "venue": "arXiv",
-    "year": "2025",
+    "venue": "ICLR",
+    "year": "2026",
     "url": "https://arxiv.org/abs/2510.07959",
-    "bibtex": "@article{alex2025disco,\n  title={DISCO: Diversifying Sample Condensation for Efficient Model Evaluation},\n  author={Rubinstein, Alexander and Raible, Benjamin and Gubri, Martin and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2510.07959},\n  year={2025}\n}",
+    "bibtex": "@inproceedings{alex2025disco,\n  title={DISCO: Diversifying Sample Condensation for Efficient Model Evaluation},\n  author={Rubinstein, Alexander and Raible, Benjamin and Gubri, Martin and Oh, Seong Joon},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2026}\n}",
     "image": "pictures/alex2025disco.png",
     "links": [
       {
@@ -358,10 +358,10 @@ const publicationsData = [
       "seong_joon_oh",
       "sinead_williamson"
     ],
-    "venue": "arXiv",
-    "year": "2025",
+    "venue": "ICLR",
+    "year": "2026",
     "url": "https://arxiv.org/abs/2505.20295",
-    "bibtex": "@article{kirchhof2025selfreflect,\n  title={SelfReflect: Can LLMs Communicate Their Internal Answer Distribution?},\n  author={Kirchhof, Michael and Füger, Luca and Goliński, Adam and Dhekane, Eeshan Gunesh and Blaas, Arno and Oh, Seong Joon and Williamson, Sinead},\n  journal={arXiv preprint arXiv:2505.20295},\n  year={2025}\n}",
+    "bibtex": "@inproceedings{kirchhof2025selfreflect,\n  title={SelfReflect: Can LLMs Communicate Their Internal Answer Distribution?},\n  author={Kirchhof, Michael and Füger, Luca and Goliński, Adam and Dhekane, Eeshan Gunesh and Blaas, Arno and Oh, Seong Joon and Williamson, Sinead},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2026}\n}",
     "image": "pictures/michael2025selfreflect.png",
     "links": [
       {
@@ -476,10 +476,10 @@ const publicationsData = [
       "arnas_uselis",
       "seong_joon_oh"
     ],
-    "venue": "arXiv",
-    "year": "2025",
+    "venue": "ICLR",
+    "year": "2026",
     "url": "https://arxiv.org/abs/2502.03566",
-    "bibtex": "@article{darina2025binding,\n  title={CLIP Behaves like a Bag-of-Words Model Cross-modally but not Uni-modally},\n  author={Koishigarina, Darina and Uselis, Arnas and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2502.03566},\n  year={2025}\n}",
+    "bibtex": "@inproceedings{darina2025binding,\n  title={CLIP Behaves like a Bag-of-Words Model Cross-modally but not Uni-modally},\n  author={Koishigarina, Darina and Uselis, Arnas and Oh, Seong Joon},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2026}\n}",
     "image": "pictures/darina2025binding.png",
     "links": [
       {
@@ -494,6 +494,28 @@ const publicationsData = [
     "abstract": "CLIP is widely used for downstream tasks but struggles with compositional understanding. It often behaves like a bag of words model and fails to bind attributes to objects in cross-modal settings. The problem comes from the cross-modal alignment using cosine similarity. We propose LABCLIP. It applies a linear transformation to text embeddings before computing similarity. This improves attribute-object binding and strengthens compositional understanding.",
     "rtai_tags": [
       "CoGe",
+      "VLM"
+    ]
+  },
+  {
+    "id": "minyoung2026delimiter",
+    "title": "Enhancing Multi-Image Understanding through Delimiter Token Scaling",
+    "authors": [
+      "minyoung_lee",
+      "yeji_park",
+      "dongjun_hwang",
+      "yejin_kim",
+      "seong_joon_oh",
+      "junsuk_choe"
+    ],
+    "venue": "ICLR",
+    "year": "2026",
+    "url": "",
+    "bibtex": "@inproceedings{minyoung2026delimiter,\n  title={Enhancing Multi-Image Understanding through Delimiter Token Scaling},\n  author={Lee, Minyoung and Park, Yeji and Hwang, Dongjun and Kim, Yejin and Oh, Seong Joon and Choe, Junsuk},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2026}\n}",
+    "image": "pictures/minyoung2026delimiter.png",
+    "links": [],
+    "abstract": "Multi-image understanding in vision-language models is enhanced through delimiter token scaling. The method improves how models process and distinguish between multiple images in a single context.",
+    "rtai_tags": [
       "VLM"
     ]
   },
