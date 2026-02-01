@@ -266,6 +266,12 @@ const authorsData = {
       "isMe": false
     },
     {
+      "id": "hoyeon_chang",
+      "name": "Hoyeon Chang",
+      "url": "https://hoyeonchang.github.io/",
+      "isMe": false
+    },
+    {
       "id": "jaehui_hwang",
       "name": "Jaehui Hwang",
       "url": "https://j-h-hwang.github.io/",

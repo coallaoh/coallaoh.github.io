@@ -1,6 +1,31 @@
 // Publications data in JSON format
 const publicationsData = [
   {
+    "id": "hoyeon2026lpa",
+    "title": "Dynamics Reveals Structure: Challenging the Linear Propagation Assumption",
+    "authors": [
+      "hoyeon_chang",
+      "blint_mucsnyi",
+      "seong_joon_oh"
+    ],
+    "venue": "arXiv",
+    "year": "2026",
+    "url": "https://arxiv.org/abs/2601.21601",
+    "bibtex": "@article{hoyeon2026lpa,\n  title={Dynamics Reveals Structure: Challenging the Linear Propagation Assumption},\n  author={Chang, Hoyeon and Mucs\\'{a}nyi, B\\'{a}lint and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2601.21601},\n  year={2026}\n}",
+    "image": "pictures/hoyeon2026lpa.png",
+    "links": [
+      {
+        "text": "ResearchTrend.AI",
+        "url": "https://researchtrend.ai/papers/2601.21601"
+      }
+    ],
+    "abstract": "Many methods assume local edits propagate linearly to related facts. We show this hits fundamental geometric walls. For negation and converse, propagation demands specific tensor structures. For composition, it reduces to conjunction, but any linear conjunction conflicts with negation. These limits may explain why knowledge editing, the reversal curse, and multi-hop reasoning often fail.",
+    "rtai_tags": [
+      "KELM",
+      "MU"
+    ]
+  },
+  {
     "id": "alex2025disco",
     "title": "DISCO: Diversifying Sample Condensation for Efficient Model Evaluation",
     "authors": [
