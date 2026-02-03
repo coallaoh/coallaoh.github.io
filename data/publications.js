@@ -130,13 +130,21 @@ const publicationsData = [
     ],
     "venue": "ICLR",
     "year": "2026",
-    "url": "https://openreview.net/forum?id=7QFf05KrOm",
+    "url": "https://arxiv.org/abs/2602.01984",
     "bibtex": "@inproceedings{minyoung2026delimiter,\n  title={Enhancing Multi-Image Understanding through Delimiter Token Scaling},\n  author={Lee, Minyoung and Park, Yeji and Hwang, Dongjun and Kim, Yejin and Oh, Seong Joon and Choe, Junsuk},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2026}\n}",
     "image": "pictures/minyoung2026delimiter.png",
     "links": [
       {
         "text": "OpenReview",
         "url": "https://openreview.net/forum?id=7QFf05KrOm"
+      },
+      {
+        "text": "Hugging Face",
+        "url": "https://huggingface.co/papers/2602.01984"
+      },
+      {
+        "text": "Code",
+        "url": "https://github.com/MYMY-young/DelimScaling"
       }
     ],
     "abstract": "Large Vision-Language Models achieve strong performance on single-image tasks, but their performance declines with multiple images due to cross-image information leakage. We propose scaling the hidden states of delimiter tokens to reinforce intra-image interaction and limit cross-image interactions. The method improves performance on multi-image benchmarks and requires no additional training or inference cost.",
