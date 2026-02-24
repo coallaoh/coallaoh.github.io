@@ -3,6 +3,11 @@
 // The FE will render the latest 5 items.
 const updatesData = [
   {
+    date: '2026-02-23',
+    id: 'update-2026-02-23-kaist-start',
+    html: "23 February 2026. I have officially joined <a href=\"https://gsai.kaist.ac.kr/\">KAIST AI</a> as an associate professor."
+  },
+  {
     date: '2026-01-27',
     id: 'update-2026-01-27-iclr26-acceptance',
     html: "27 January 2026. 5 papers accepted @ ICLR'26: <a href=\"#alex2025disco\">DISCO</a>, <a href=\"#ahmed2025drllm\">Dr.LLM</a>, <a href=\"#darina2025binding\">CLIP Bag-of-Words</a>, <a href=\"#minyoung2026delimiter\">Delimiter Token Scaling</a>, <a href=\"#michael2025selfreflect\">SelfReflect</a>."
