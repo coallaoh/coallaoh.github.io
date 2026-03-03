@@ -1,6 +1,86 @@
 // Publications data in JSON format
 const publicationsData = [
   {
+    "id": "arnas2026necessary",
+    "title": "Compositional Generalization Requires Linear, Orthogonal Representations in Vision Embedding Models",
+    "authors": [
+      "arnas_uselis",
+      "andrea_dittadi",
+      "seong_joon_oh"
+    ],
+    "venue": "arXiv",
+    "year": "2026",
+    "url": "https://arxiv.org/abs/2602.24264",
+    "bibtex": "@article{arnas2026necessary,\n  title={Compositional Generalization Requires Linear, Orthogonal Representations in Vision Embedding Models},\n  author={Uselis, Arnas and Dittadi, Andrea and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2602.24264},\n  year={2026}\n}",
+    "image": "pictures/arnas2026necessary.png",
+    "links": [
+      {
+        "text": "ResearchTrend.AI",
+        "url": "https://researchtrend.ai/papers/2602.24264"
+      },
+      {
+        "text": "Code",
+        "url": "https://github.com/oshapio/necessary-compositionality"
+      }
+    ],
+    "abstract": "What geometry must representations have for compositional generalization? We formalise three desiderata and show they force linear, orthogonal decompositions. This gives theoretical grounding for the Linear Representation Hypothesis. Empirically, modern vision models show partial linear factorisation that correlates with compositional generalization on unseen combinations.",
+    "rtai_tags": [
+      "CoGe",
+      "VLM"
+    ]
+  },
+  {
+    "id": "bora2026halftruths",
+    "title": "Half-Truths Break Similarity-Based Retrieval",
+    "authors": [
+      "bora_kargi",
+      "arnas_uselis",
+      "seong_joon_oh"
+    ],
+    "venue": "arXiv",
+    "year": "2026",
+    "url": "https://arxiv.org/abs/2602.23906",
+    "bibtex": "@article{bora2026halftruths,\n  title={Half-Truths Break Similarity-Based Retrieval},\n  author={Kargi, Bora and Uselis, Arnas and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2602.23906},\n  year={2026}\n}",
+    "image": "pictures/bora2026halftruths.png",
+    "links": [
+      {
+        "text": "ResearchTrend.AI",
+        "url": "https://researchtrend.ai/papers/2602.23906"
+      },
+      {
+        "text": "Code",
+        "url": "https://github.com/kargibora/CS-CLIP"
+      }
+    ],
+    "abstract": "Appending a plausible but incorrect detail to a correct description can increase CLIP's similarity score. On COCO, CLIP prefers the correct shorter description only 40.6% of the time. We propose CS-CLIP, which decomposes captions into entity and relation units and fine-tunes the model to score correct units above foils. This raises half-truth accuracy to 69.3% and improves compositional benchmarks by 5.7 points.",
+    "rtai_tags": [
+      "CoGe",
+      "VLM"
+    ]
+  },
+  {
+    "id": "stefano2026implicit",
+    "title": "Universal Algorithm-Implicit Learning",
+    "authors": [
+      "stefano_woerner",
+      "seong_joon_oh",
+      "christian_f_baumgartner"
+    ],
+    "venue": "arXiv",
+    "year": "2026",
+    "url": "https://arxiv.org/abs/2602.14761",
+    "bibtex": "@article{stefano2026implicit,\n  title={Universal Algorithm-Implicit Learning},\n  author={Woerner, Stefano and Oh, Seong Joon and Baumgartner, Christian F.},\n  journal={arXiv preprint arXiv:2602.14761},\n  year={2026}\n}",
+    "image": "pictures/stefano2026implicit.png",
+    "links": [
+      {
+        "text": "ResearchTrend.AI",
+        "url": "https://researchtrend.ai/papers/2602.14761"
+      }
+    ],
+    "abstract": "Meta-learning methods are typically constrained to narrow task distributions with fixed feature and label spaces. We introduce a theoretical framework that formally defines practical universality and present TAIL, a transformer-based meta-learner that works across varying domains, modalities, and label configurations. TAIL achieves state-of-the-art on few-shot benchmarks while generalising to unseen domains and modalities.",
+    "rtai_tags": []
+  },
+  {
     "id": "hoyeon2026lpa",
     "title": "Dynamics Reveals Structure: Challenging the Linear Propagation Assumption",
     "authors": [
@@ -240,7 +320,7 @@ const publicationsData = [
   },
   {
     "id": "philipp2026nonattrib",
-    "title": "Un-Attributability: Computing Novelty From Retrieval & Semantic Similarity",
+    "title": "LLM Generation Novelty Through the Lens of Semantic Similarity",
     "authors": [
       "philipp_davydov",
       "ameya_prabhu",
@@ -251,7 +331,7 @@ const publicationsData = [
     "venue": "arXiv",
     "year": "2025",
     "url": "https://arxiv.org/abs/2510.27313",
-    "bibtex": "@article{philipp2026nonattrib,\n  title={Un-Attributability: Computing Novelty From Retrieval & Semantic Similarity},\n  author={Davydov, Philipp and Prabhu, Ameya and Bethge, Matthias and Nguyen, Elisa and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2510.27313},\n  year={2025}\n}",
+    "bibtex": "@article{philipp2026nonattrib,\n  title={LLM Generation Novelty Through the Lens of Semantic Similarity},\n  author={Davydov, Philipp and Prabhu, Ameya and Bethge, Matthias and Nguyen, Elisa and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2510.27313},\n  year={2025}\n}",
     "image": "pictures/philipp2026nonattrib.png",
     "links": [
       {
