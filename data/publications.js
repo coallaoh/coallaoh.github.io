@@ -1,6 +1,44 @@
 // Publications data in JSON format
 const publicationsData = [
   {
+    "id": "cornelius2026maseval",
+    "title": "MASEval: Extending Multi-Agent Evaluation from Models to Systems",
+    "authors": [
+      "cornelius_emde",
+      "alexander_rubinstein",
+      "anmol_goel",
+      "ahmed_heakl",
+      "sangdoo_yun",
+      "seong_joon_oh",
+      "martin_gubri"
+    ],
+    "co_first_authors": [
+      "alexander_rubinstein",
+      "anmol_goel",
+      "ahmed_heakl"
+    ],
+    "venue": "arXiv",
+    "year": "2026",
+    "url": "https://arxiv.org/abs/2603.08835",
+    "bibtex": "@article{cornelius2026maseval,\n  title={MASEval: Extending Multi-Agent Evaluation from Models to Systems},\n  author={Emde, Cornelius and Rubinstein, Alexander and Goel, Anmol and Heakl, Ahmed and Yun, Sangdoo and Oh, Seong Joon and Gubri, Martin},\n  journal={arXiv preprint arXiv:2603.08835},\n  year={2026}\n}",
+    "image": "pictures/cornelius2026maseval.png",
+    "links": [
+      {
+        "text": "ResearchTrend.AI",
+        "url": "https://researchtrend.ai/papers/2603.08835"
+      },
+      {
+        "text": "Code",
+        "url": "https://github.com/parameterlab/MASEval"
+      }
+    ],
+    "abstract": "Existing benchmarks for LLM-based agentic systems are model-centric, fixing the agentic setup without comparing system components like harness engineering choices. MASEval is a framework-agnostic evaluation library that treats the entire agent system as the unit of analysis. Through the first systematic system-level comparison across 3 benchmarks, 3 models, and 3 frameworks, we find that framework choice impacts performance comparably to model choice within a capability tier.",
+    "rtai_tags": [
+      "LLMAG",
+      "ELM"
+    ]
+  },
+  {
     "id": "arnas2026necessary",
     "title": "Compositional Generalization Requires Linear, Orthogonal Representations in Vision Embedding Models",
     "authors": [

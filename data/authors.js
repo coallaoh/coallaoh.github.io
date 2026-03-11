@@ -269,7 +269,10 @@ const authorsData = {
       "id": "hoyeon_chang",
       "name": "Hoyeon Chang",
       "url": "https://hoyeonchang.github.io/",
-      "isMe": false
+      "isMe": false,
+      "startYear": 2026,
+      "endYear": null,
+      "type": "co-advised-phd"
     },
     {
       "id": "jaehui_hwang",
@@ -878,7 +881,10 @@ const authorsData = {
       "id": "yejin_kim",
       "name": "Yejin Kim",
       "url": "https://sites.google.com/view/yejin-c-kim/",
-      "isMe": false
+      "isMe": false,
+      "startYear": 2026,
+      "endYear": null,
+      "type": "intern"
     },
     {
       "id": "luca_fuger",
@@ -993,6 +999,51 @@ const authorsData = {
       "startYear": 2026,
       "endYear": 2026,
       "type": "intern"
+    },
+    {
+      "id": "sohyung_kim",
+      "name": "Sohyung Kim",
+      "url": "https://www.linkedin.com/in/sohyung-kim-60479b237/",
+      "isMe": false,
+      "startYear": 2025,
+      "endYear": null,
+      "type": "phd"
+    },
+    {
+      "id": "bryan_truong",
+      "name": "Bryan Truong",
+      "url": "",
+      "isMe": false,
+      "startYear": 2026,
+      "endYear": null,
+      "type": "phd"
+    },
+    {
+      "id": "yunjae_won",
+      "name": "Yunjae Won",
+      "url": "https://yunjae-won.github.io/",
+      "isMe": false,
+      "startYear": 2026,
+      "endYear": null,
+      "type": "co-advised-phd"
+    },
+    {
+      "id": "jihyeok_jung",
+      "name": "Jihyeok Jung",
+      "url": "https://jhcor.notion.site/?pvs=74",
+      "isMe": false,
+      "startYear": 2026,
+      "endYear": null,
+      "type": "master"
+    },
+    {
+      "id": "seokwon_jung",
+      "name": "Seokwon Jung",
+      "url": "https://www.linkedin.com/in/seokwon-jung-7458b3306/",
+      "isMe": false,
+      "startYear": 2026,
+      "endYear": null,
+      "type": "master"
     }
   ]
 };
