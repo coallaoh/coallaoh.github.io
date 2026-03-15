@@ -13,6 +13,7 @@ const publicationsData = [
       "martin_gubri"
     ],
     "co_first_authors": [
+      "cornelius_emde",
       "alexander_rubinstein",
       "anmol_goel",
       "ahmed_heakl"
@@ -515,16 +516,18 @@ const publicationsData = [
   },
   {
     "id": "dongjun2025ovs",
-    "title": "Overcoming Domain Limitations in Open-vocabulary Segmentation",
+    "title": "OVS Meets Continual Learning: Towards Sustainable Open-Vocabulary Segmentation",
     "authors": [
       "dongjun_hwang",
+      "yejin_kim",
+      "minyoung_lee",
       "seong_joon_oh",
       "junsuk_choe"
     ],
     "venue": "NeurIPS",
     "year": "2025",
     "url": "https://arxiv.org/abs/2410.11536",
-    "bibtex": "@inproceedings{dongjun2025ovs,\n  title={Overcoming Domain Limitations in Open-vocabulary Segmentation},\n  author={Hwang, Dongjun and Oh, Seong Joon and Choe, Junsuk},\n  booktitle={Advances in Neural Information Processing Systems 38 (NeurIPS 2025)},\n  year={2025}\n}",
+    "bibtex": "@inproceedings{dongjun2025ovs,\n  title={OVS Meets Continual Learning: Towards Sustainable Open-Vocabulary Segmentation},\n  author={Hwang, Dongjun and Kim, Yejin and Lee, Minyoung and Oh, Seong Joon and Choe, Junsuk},\n  booktitle={Advances in Neural Information Processing Systems 38 (NeurIPS 2025)},\n  year={2025}\n}",
     "image": "pictures/dongjun2025ovs.png",
     "links": [
       {
