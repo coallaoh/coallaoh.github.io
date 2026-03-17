@@ -13,7 +13,6 @@ const publicationsData = [
       "martin_gubri"
     ],
     "co_first_authors": [
-      "cornelius_emde",
       "alexander_rubinstein",
       "anmol_goel",
       "ahmed_heakl"
@@ -297,37 +296,6 @@ const publicationsData = [
     "abstract": "We introduce SelfReflect, an information-theoretic metric measuring how faithfully a summary string reflects an LLM's internal answer distribution. Across interventional and human studies, SelfReflect is sensitive to small deviations and reveals that modern LLMs generally fail to communicate their uncertainties. Faithful summaries emerge when sampling multiple outputs and summarizing them in-context.",
     "rtai_tags": [
       "UQLM",
-      "ELM"
-    ]
-  },
-  {
-    "id": "maseval2026",
-    "title": "MASEval: LLM-based Multi-Agent Evaluation & Benchmark Framework",
-    "authors": [
-      "cornelius_emde",
-      "martin_gubri",
-      "anmol_goel",
-      "seong_joon_oh",
-      "sangdoo_yun"
-    ],
-    "venue": "GitHub",
-    "year": "2026",
-    "url": "https://github.com/parameterlab/MASEval",
-    "bibtex": "@software{maseval2026,\n  title={MASEval: LLM-based Multi-Agent Evaluation \\& Benchmark Framework},\n  author={Emde, Cornelius and Gubri, Martin and Goel, Anmol and Oh, Seong Joon and Yun, Sangdoo},\n  year={2026},\n  url={https://github.com/parameterlab/MASEval}\n}",
-    "image": "pictures/maseval2026.png",
-    "links": [
-      {
-        "text": "Documentation",
-        "url": "https://maseval.readthedocs.io/en/stable/"
-      },
-      {
-        "text": "PyPI",
-        "url": "https://pypi.org/project/maseval/"
-      }
-    ],
-    "abstract": "MASEval is an evaluation library that provides a unified interface for benchmarking multi-agent systems. It offers standardised abstractions for running any agent implementation. The library is framework agnostic, supporting AutoGen, LangChain, custom code, or direct LLM calls. It includes implementations for several benchmarks to evaluate a variety of multi-agent scenarios.",
-    "rtai_tags": [
-      "LLMAG",
       "ELM"
     ]
   },
