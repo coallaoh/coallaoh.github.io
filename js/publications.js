@@ -80,6 +80,11 @@ async function renderPublication(publication) {
 
   const legendHTML = (starUsed || daggerUsed) ? `<span style="font-size:12px;color:#666;">${starUsed ? '* co-first author' : ''}${starUsed && daggerUsed ? '; ' : ''}${daggerUsed ? '† corresponding author' : ''}</span>` : '';
 
+  // Render workshops if they exist
+  const workshopsHTML = (publication.workshops && publication.workshops.length > 0)
+    ? '<br>\n<span style="font-size:13px;color:var(--workshop-text-color);">Also at: ' + publication.workshops.join('; ') + '</span>'
+    : '';
+
   return `
     <div class="row common-rows">
       <div class="col-xs-12 col-sm-3 left-column">
@@ -97,6 +102,7 @@ async function renderPublication(publication) {
         <br>
         ${legendHTML ? legendHTML + '<br>' : ''}
         <em>${publication.venue}</em>, ${publication.year}
+        ${workshopsHTML}
         ${linksSection}
         <p>${publication.abstract}
         </p>

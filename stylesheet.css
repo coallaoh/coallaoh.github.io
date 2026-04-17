@@ -73,6 +73,7 @@
   --community-count-color: #666;
   --community-name-color: #333;
   --community-tag-text-color: #ffffff;
+  --workshop-text-color: #666;
 }
 
 [data-theme="dark"] {
@@ -85,6 +86,7 @@
   --community-count-color: #cccccc;
   --community-name-color: #ffffff;
   --community-tag-text-color: #333333;
+  --workshop-text-color: #aaaaaa;
 }
 
 @media (prefers-color-scheme: dark) {

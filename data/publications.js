@@ -141,6 +141,9 @@ const publicationsData = [
     "rtai_tags": [
       "KELM",
       "MU"
+    ],
+    "workshops": [
+      "ICLR 2026 Workshop on Unifying Concept Representation Learning (Oral)"
     ]
   },
   {
@@ -174,6 +177,10 @@ const publicationsData = [
     "abstract": "DISCO selects an anchor subset for fast evaluation by greedily choosing samples that maximize inter-model disagreement, avoiding clustering-based selection. It simplifies anchor selection and achieves state-of-the-art performance prediction on benchmarks like MMLU, HellaSwag, Winogrande, and ARC.",
     "rtai_tags": [
       "ELM"
+    ],
+    "workshops": [
+      "ICLR 2026 Workshop on Navigating and Addressing Data Problems for Foundation Models",
+      "Catch, Adapt, and Operate: Monitoring ML Models Under Drift Workshop (Oral)"
     ]
   },
   {
@@ -204,6 +211,9 @@ const publicationsData = [
     "abstract": "Dr.LLM improves reasoning with less computation. Lightweight routers at each layer decide whether to skip, execute, or repeat transformer blocks. Monte Carlo tree search trains the routers to find optimal paths. The approach is retrofittable and generalises to new tasks.",
     "rtai_tags": [
       "ReLM"
+    ],
+    "workshops": [
+      "Third Workshop on Test-Time Updates (Main Track)"
     ]
   },
   {
@@ -323,6 +333,10 @@ const publicationsData = [
     "abstract": "Benign fine-tuning of frontier models can lead to privacy collapse. Diverse, subtle patterns in training data degrade contextual privacy, including optimisation for helpfulness, exposure to user information, and debugging code printing internal variables. Fine-tuned models lose their ability to reason about contextual privacy norms, share information inappropriately with tools, and violate memory boundaries across contexts. Privacy collapse is a silent failure: models maintain high performance on standard safety and utility benchmarks whilst exhibiting severe privacy vulnerabilities.",
     "rtai_tags": [
       "PILM"
+    ],
+    "workshops": [
+      "ICLR 2026 Workshop on Principled Design for Trustworthy AI",
+      "ICLR 2026 Workshop on Navigating and Addressing Data Problems for Foundation Models"
     ]
   },
   {
