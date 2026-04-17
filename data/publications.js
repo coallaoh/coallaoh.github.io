@@ -309,10 +309,10 @@ const publicationsData = [
       "seong_joon_oh",
       "martin_gubri"
     ],
-    "venue": "arXiv",
+    "venue": "ACL",
     "year": "2026",
     "url": "https://arxiv.org/abs/2601.15220",
-    "bibtex": "@article{anmol2026privacycollapse,\n  title={Privacy Collapse: Benign Fine-Tuning Can Break Contextual Privacy in Language Models},\n  author={Goel, Anmol and Emde, Cornelius and Yun, Sangdoo and Oh, Seong Joon and Gubri, Martin},\n  journal={arXiv preprint arXiv:2601.15220},\n  year={2026}\n}",
+    "bibtex": "@inproceedings{anmol2026privacycollapse,\n  title={Privacy Collapse: Benign Fine-Tuning Can Break Contextual Privacy in Language Models},\n  author={Goel, Anmol and Emde, Cornelius and Yun, Sangdoo and Oh, Seong Joon and Gubri, Martin},\n  year={2026},\n  booktitle={Proceedings of the Annual Meeting of the Association for Computational Linguistics: ACL 2026}\n}",
     "image": "pictures/anmol2026privacycollapse.png",
     "links": [
       {
