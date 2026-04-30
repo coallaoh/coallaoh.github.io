@@ -17,10 +17,10 @@ const publicationsData = [
       "anmol_goel",
       "ahmed_heakl"
     ],
-    "venue": "arXiv",
+    "venue": "ACL System Demo",
     "year": "2026",
     "url": "https://arxiv.org/abs/2603.08835",
-    "bibtex": "@article{cornelius2026maseval,\n  title={MASEval: Extending Multi-Agent Evaluation from Models to Systems},\n  author={Emde, Cornelius and Rubinstein, Alexander and Goel, Anmol and Heakl, Ahmed and Yun, Sangdoo and Oh, Seong Joon and Gubri, Martin},\n  journal={arXiv preprint arXiv:2603.08835},\n  year={2026}\n}",
+    "bibtex": "@inproceedings{cornelius2026maseval,\n  title={MASEval: Extending Multi-Agent Evaluation from Models to Systems},\n  author={Emde, Cornelius and Rubinstein, Alexander and Goel, Anmol and Heakl, Ahmed and Yun, Sangdoo and Oh, Seong Joon and Gubri, Martin},\n  booktitle={Proceedings of the Annual Meeting of the Association for Computational Linguistics: System Demonstration Track},\n  year={2026}\n}",
     "image": "pictures/cornelius2026maseval.png",
     "links": [
       {
@@ -36,6 +36,9 @@ const publicationsData = [
     "rtai_tags": [
       "LLMAG",
       "ELM"
+    ],
+    "workshops": [
+      "GEM 2026 Workshop on Natural Language Generation, Evaluation, and Metrics"
     ]
   },
   {
@@ -222,7 +225,8 @@ const publicationsData = [
     ],
     "workshops": [
       "ICLR 2026 Workshop on Navigating and Addressing Data Problems for Foundation Models",
-      "Catch, Adapt, and Operate: Monitoring ML Models Under Drift Workshop (Oral, Best Paper Award)"
+      "Catch, Adapt, and Operate: Monitoring ML Models Under Drift Workshop (Oral, Best Paper Award)",
+      "GEM 2026 Workshop on Natural Language Generation, Evaluation, and Metrics"
     ]
   },
   {

@@ -15,7 +15,7 @@ const updatesData = [
   {
     date: '2026-04-17',
     id: 'update-2026-04-17-acl26-acceptance',
-    html: "17 April 2026. 1 paper accepted @ ACL'26: <a href=\"#anmol2026privacycollapse\">Privacy Collapse</a>."
+    html: "17 April 2026. 2 papers accepted @ ACL'26: <a href=\"#anmol2026privacycollapse\">Privacy Collapse</a> (main) and <a href=\"#cornelius2026maseval\">MASEval</a> (system demonstration track)."
   },
   {
     date: '2026-02-23',
