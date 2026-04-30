@@ -3,6 +3,16 @@
 // The FE will render the latest 5 items.
 const updatesData = [
   {
+    date: '2026-05-01',
+    id: 'update-2026-05-01-icml26-acceptance',
+    html: "1 May 2026. 5 papers accepted @ ICML'26 (3 spotlights): <a href=\"#arnas2026necessary\">Necessary Conditions for Compositional Generalization</a> (spotlight), <a href=\"#hoyeon2026lpa\">Linear Propagation Assumption</a> (spotlight), <a href=\"#arnas2026binding\">Embedding Models Bind Concepts</a> (spotlight), <a href=\"#yujin2026diffusion\">Diffusion Multi-Object Generation</a>, <a href=\"#stefano2026implicit\">Universal Algorithm-Implicit Learning</a>."
+  },
+  {
+    date: '2026-04-26',
+    id: 'update-2026-04-26-disco-best-paper',
+    html: "26 April 2026. <a href=\"#alex2025disco\">DISCO</a> received the Best Paper Award at the ICLR'26 CAO workshop (Catch, Adapt, and Operate: Monitoring ML Models Under Drift)."
+  },
+  {
     date: '2026-04-17',
     id: 'update-2026-04-17-acl26-acceptance',
     html: "17 April 2026. 1 paper accepted @ ACL'26: <a href=\"#anmol2026privacycollapse\">Privacy Collapse</a>."

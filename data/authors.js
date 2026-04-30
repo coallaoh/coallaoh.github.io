@@ -338,6 +338,12 @@ const authorsData = {
       "isMe": false
     },
     {
+      "id": "iro_laina",
+      "name": "Iro Laina",
+      "url": "",
+      "isMe": false
+    },
+    {
       "id": "jae_myung_kim",
       "name": "Jae Myung Kim",
       "url": "https://jaemyung-kim.github.io/",

@@ -40,16 +40,16 @@ const publicationsData = [
   },
   {
     "id": "arnas2026necessary",
-    "title": "Compositional Generalization Requires Linear, Orthogonal Representations in Vision Embedding Models",
+    "title": "Necessary Conditions for Compositional Generalization of Embedding Models",
     "authors": [
       "arnas_uselis",
       "andrea_dittadi",
       "seong_joon_oh"
     ],
-    "venue": "arXiv",
+    "venue": "ICML Spotlight",
     "year": "2026",
     "url": "https://arxiv.org/abs/2602.24264",
-    "bibtex": "@article{arnas2026necessary,\n  title={Compositional Generalization Requires Linear, Orthogonal Representations in Vision Embedding Models},\n  author={Uselis, Arnas and Dittadi, Andrea and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2602.24264},\n  year={2026}\n}",
+    "bibtex": "@inproceedings{arnas2026necessary,\n  title={Necessary Conditions for Compositional Generalization of Embedding Models},\n  author={Uselis, Arnas and Dittadi, Andrea and Oh, Seong Joon},\n  booktitle={International Conference on Machine Learning (ICML)},\n  year={2026}\n}",
     "image": "pictures/arnas2026necessary.png",
     "links": [
       {
@@ -62,6 +62,26 @@ const publicationsData = [
       }
     ],
     "abstract": "What geometry must representations have for compositional generalization? We formalise three desiderata and show they force linear, orthogonal decompositions. This gives theoretical grounding for the Linear Representation Hypothesis. Empirically, modern vision models show partial linear factorisation that correlates with compositional generalization on unseen combinations.",
+    "rtai_tags": [
+      "CoGe",
+      "VLM"
+    ]
+  },
+  {
+    "id": "arnas2026binding",
+    "title": "How can embedding models bind concepts?",
+    "authors": [
+      "arnas_uselis",
+      "darina_koishigarina",
+      "seong_joon_oh"
+    ],
+    "venue": "ICML Spotlight",
+    "year": "2026",
+    "url": "",
+    "bibtex": "@inproceedings{arnas2026binding,\n  title={How can embedding models bind concepts?},\n  author={Uselis, Arnas and Koishigarina, Darina and Oh, Seong Joon},\n  booktitle={International Conference on Machine Learning (ICML)},\n  year={2026}\n}",
+    "image": "pictures/arnas2026binding.png",
+    "links": [],
+    "abstract": "Vision-language models like CLIP struggle to bind concepts, such as which colour belongs to which shape. We study this through the binding function that maps concepts to scene embeddings. Scene embeddings decompose additively into object representations, but CLIP's binding function is high-complexity and fails to generalize. In controlled transformers trained from scratch, binding generalization emerges with sufficient data coverage, yielding low-complexity multiplicative interactions between concepts.",
     "rtai_tags": [
       "CoGe",
       "VLM"
@@ -104,10 +124,10 @@ const publicationsData = [
       "seong_joon_oh",
       "christian_f_baumgartner"
     ],
-    "venue": "arXiv",
+    "venue": "ICML",
     "year": "2026",
     "url": "https://arxiv.org/abs/2602.14761",
-    "bibtex": "@article{stefano2026implicit,\n  title={Universal Algorithm-Implicit Learning},\n  author={Woerner, Stefano and Oh, Seong Joon and Baumgartner, Christian F.},\n  journal={arXiv preprint arXiv:2602.14761},\n  year={2026}\n}",
+    "bibtex": "@inproceedings{stefano2026implicit,\n  title={Universal Algorithm-Implicit Learning},\n  author={Woerner, Stefano and Oh, Seong Joon and Baumgartner, Christian F.},\n  booktitle={International Conference on Machine Learning (ICML)},\n  year={2026}\n}",
     "image": "pictures/stefano2026implicit.png",
     "links": [
       {
@@ -126,10 +146,10 @@ const publicationsData = [
       "blint_mucsnyi",
       "seong_joon_oh"
     ],
-    "venue": "arXiv",
+    "venue": "ICML Spotlight",
     "year": "2026",
     "url": "https://arxiv.org/abs/2601.21601",
-    "bibtex": "@article{hoyeon2026lpa,\n  title={Dynamics Reveals Structure: Challenging the Linear Propagation Assumption},\n  author={Chang, Hoyeon and Mucs\\'{a}nyi, B\\'{a}lint and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2601.21601},\n  year={2026}\n}",
+    "bibtex": "@inproceedings{hoyeon2026lpa,\n  title={Dynamics Reveals Structure: Challenging the Linear Propagation Assumption},\n  author={Chang, Hoyeon and Mucs\\'{a}nyi, B\\'{a}lint and Oh, Seong Joon},\n  booktitle={International Conference on Machine Learning (ICML)},\n  year={2026}\n}",
     "image": "pictures/hoyeon2026lpa.png",
     "links": [
       {
@@ -144,6 +164,28 @@ const publicationsData = [
     ],
     "workshops": [
       "ICLR 2026 Workshop on Unifying Concept Representation Learning (Oral)"
+    ]
+  },
+  {
+    "id": "yujin2026diffusion",
+    "title": "When Do Diffusion Models learn to Generate Multiple Objects?",
+    "authors": [
+      "yujin_jeong",
+      "arnas_uselis",
+      "iro_laina",
+      "seong_joon_oh",
+      "anna_rohrbach"
+    ],
+    "venue": "ICML",
+    "year": "2026",
+    "url": "",
+    "bibtex": "@inproceedings{yujin2026diffusion,\n  title={When Do Diffusion Models learn to Generate Multiple Objects?},\n  author={Jeong, Yujin and Uselis, Arnas and Laina, Iro and Oh, Seong Joon and Rohrbach, Anna},\n  booktitle={International Conference on Machine Learning (ICML)},\n  year={2026}\n}",
+    "image": "pictures/yujin2026diffusion.png",
+    "links": [],
+    "abstract": "Diffusion models remain unreliable at multi-object generation. We disentangle data effects via two regimes: concept generalization, where individual concepts are observed under imbalanced data, and compositional generalization, where specific concept combinations are held out. Using mosaic, a controlled dataset framework, we find scene complexity dominates over concept imbalance, counting is uniquely hard in low-data regimes, and compositional generalization collapses as combinations are withheld.",
+    "rtai_tags": [
+      "CoGe",
+      "DiffM"
     ]
   },
   {
@@ -180,7 +222,7 @@ const publicationsData = [
     ],
     "workshops": [
       "ICLR 2026 Workshop on Navigating and Addressing Data Problems for Foundation Models",
-      "Catch, Adapt, and Operate: Monitoring ML Models Under Drift Workshop (Oral)"
+      "Catch, Adapt, and Operate: Monitoring ML Models Under Drift Workshop (Oral, Best Paper Award)"
     ]
   },
   {
