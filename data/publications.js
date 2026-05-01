@@ -78,6 +78,10 @@ const publicationsData = [
       "darina_koishigarina",
       "seong_joon_oh"
     ],
+    "co_first_authors": [
+      "arnas_uselis",
+      "darina_koishigarina"
+    ],
     "venue": "ICML Spotlight",
     "year": "2026",
     "url": "",
