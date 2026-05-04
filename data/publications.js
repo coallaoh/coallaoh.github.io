@@ -24,10 +24,6 @@ const publicationsData = [
     "image": "pictures/cornelius2026maseval.png",
     "links": [
       {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2603.08835"
-      },
-      {
         "text": "Code",
         "url": "https://github.com/parameterlab/MASEval"
       }
@@ -55,10 +51,6 @@ const publicationsData = [
     "bibtex": "@inproceedings{arnas2026necessary,\n  title={Necessary Conditions for Compositional Generalization of Embedding Models},\n  author={Uselis, Arnas and Dittadi, Andrea and Oh, Seong Joon},\n  booktitle={International Conference on Machine Learning (ICML)},\n  year={2026}\n}",
     "image": "pictures/arnas2026necessary.png",
     "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2602.24264"
-      },
       {
         "text": "Code",
         "url": "https://github.com/oshapio/necessary-compositionality"
@@ -109,10 +101,6 @@ const publicationsData = [
     "image": "pictures/bora2026halftruths.png",
     "links": [
       {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2602.23906"
-      },
-      {
         "text": "Code",
         "url": "https://github.com/kargibora/CS-CLIP"
       }
@@ -136,12 +124,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2602.14761",
     "bibtex": "@inproceedings{stefano2026implicit,\n  title={Universal Algorithm-Implicit Learning},\n  author={Woerner, Stefano and Oh, Seong Joon and Baumgartner, Christian F.},\n  booktitle={International Conference on Machine Learning (ICML)},\n  year={2026}\n}",
     "image": "pictures/stefano2026implicit.png",
-    "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2602.14761"
-      }
-    ],
+    "links": [],
     "abstract": "Meta-learning methods are typically constrained to narrow task distributions with fixed feature and label spaces. We introduce a theoretical framework that formally defines practical universality and present TAIL, a transformer-based meta-learner that works across varying domains, modalities, and label configurations. TAIL achieves state-of-the-art on few-shot benchmarks while generalising to unseen domains and modalities.",
     "rtai_tags": []
   },
@@ -158,12 +141,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2601.21601",
     "bibtex": "@inproceedings{hoyeon2026lpa,\n  title={Dynamics Reveals Structure: Challenging the Linear Propagation Assumption},\n  author={Chang, Hoyeon and Mucs\\'{a}nyi, B\\'{a}lint and Oh, Seong Joon},\n  booktitle={International Conference on Machine Learning (ICML)},\n  year={2026}\n}",
     "image": "pictures/hoyeon2026lpa.png",
-    "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2601.21601"
-      }
-    ],
+    "links": [],
     "abstract": "Many methods assume local edits propagate linearly to related facts. We show this hits fundamental geometric walls. For negation and converse, propagation demands specific tensor structures. For composition, it reduces to conjunction, but any linear conjunction conflicts with negation. These limits may explain why knowledge editing, the reversal curse, and multi-hop reasoning often fail.",
     "rtai_tags": [
       "KELM",
@@ -211,10 +189,6 @@ const publicationsData = [
     "image": "pictures/alex2025disco.png",
     "links": [
       {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2510.07959"
-      },
-      {
         "text": "Project Page",
         "url": "https://arubique.github.io/disco-site/"
       },
@@ -250,10 +224,6 @@ const publicationsData = [
     "image": "pictures/ahmed2025drllm.png",
     "links": [
       {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2510.12773"
-      },
-      {
         "text": "Code",
         "url": "https://github.com/parameterlab/dr-llm"
       }
@@ -280,10 +250,6 @@ const publicationsData = [
     "bibtex": "@inproceedings{darina2025binding,\n  title={CLIP Behaves like a Bag-of-Words Model Cross-modally but not Uni-modally},\n  author={Koishigarina, Darina and Uselis, Arnas and Oh, Seong Joon},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2026}\n}",
     "image": "pictures/darina2025binding.png",
     "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2502.03566"
-      },
       {
         "text": "Code",
         "url": "https://github.com/kdariina/CLIP-not-BoW-unimodally"
@@ -347,12 +313,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2505.20295",
     "bibtex": "@inproceedings{kirchhof2025selfreflect,\n  title={SelfReflect: Can LLMs Communicate Their Internal Answer Distribution?},\n  author={Kirchhof, Michael and Füger, Luca and Goliński, Adam and Dhekane, Eeshan Gunesh and Blaas, Arno and Oh, Seong Joon and Williamson, Sinead},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2026}\n}",
     "image": "pictures/michael2025selfreflect.png",
-    "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2505.20295"
-      }
-    ],
+    "links": [],
     "abstract": "We introduce SelfReflect, an information-theoretic metric measuring how faithfully a summary string reflects an LLM's internal answer distribution. Across interventional and human studies, SelfReflect is sensitive to small deviations and reveals that modern LLMs generally fail to communicate their uncertainties. Faithful summaries emerge when sampling multiple outputs and summarizing them in-context.",
     "rtai_tags": [
       "UQLM",
@@ -374,12 +335,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2601.15220",
     "bibtex": "@inproceedings{anmol2026privacycollapse,\n  title={Privacy Collapse: Benign Fine-Tuning Can Break Contextual Privacy in Language Models},\n  author={Goel, Anmol and Emde, Cornelius and Yun, Sangdoo and Oh, Seong Joon and Gubri, Martin},\n  year={2026},\n  booktitle={Proceedings of the Annual Meeting of the Association for Computational Linguistics: ACL 2026}\n}",
     "image": "pictures/anmol2026privacycollapse.png",
-    "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2601.15220"
-      }
-    ],
+    "links": [],
     "abstract": "Benign fine-tuning of frontier models can lead to privacy collapse. Diverse, subtle patterns in training data degrade contextual privacy, including optimisation for helpfulness, exposure to user information, and debugging code printing internal variables. Fine-tuned models lose their ability to reason about contextual privacy norms, share information inappropriately with tools, and violate memory boundaries across contexts. Privacy collapse is a silent failure: models maintain high performance on standard safety and utility benchmarks whilst exhibiting severe privacy vulnerabilities.",
     "rtai_tags": [
       "PILM"
@@ -406,10 +362,6 @@ const publicationsData = [
     "image": "pictures/philipp2026nonattrib.png",
     "links": [
       {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2510.27313"
-      },
-      {
         "text": "Dataset",
         "url": "https://huggingface.co/datasets/stai-tuebingen/faiss-smollm"
       }
@@ -434,12 +386,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2510.20603",
     "bibtex": "@article{heejin2025reasoning,\n  title={What Defines Good Reasoning in LLMs? Dissecting Reasoning Steps with Multi-Aspect Evaluation},\n  author={Do, Heejin and Hwang, Jaehui and Han, Dongyoon and Oh, Seong Joon and Yun, Sangdoo},\n  journal={arXiv preprint arXiv:2510.20603},\n  year={2025}\n}",
     "image": "pictures/heejin2025reasoning.png",
-    "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2510.20603"
-      }
-    ],
+    "links": [],
     "abstract": "Most people judge LLMs by their final answers. This misses the quality of the reasoning process. We break down reasoning into two dimensions: relevance and coherence. Relevance checks if each step is grounded in the problem. Coherence checks if it follows from prior steps. Our method, causal stepwise evaluation (CaSE), assesses each step without hindsight bias. We validate CaSE on two new expert-annotated benchmarks, MRa-GSM8K and MRa-MATH. Training data curated with CaSE directly improves model performance. This is a practical way to analyse, debug, and improve LLM reasoning.",
     "rtai_tags": [
       "ReLM"
@@ -465,10 +412,6 @@ const publicationsData = [
     "bibtex": "@inproceedings{haritz2025cseo,\n  title={C-SEO Bench: Does Conversational SEO Work?},\n  author={Puerto, Haritz and Gubri, Martin and Green, Tommaso and Oh, Seong Joon and Yun, Sangdoo},\n  booktitle={Advances in Neural Information Processing Systems 38 (NeurIPS 2025), Datasets and Benchmarks Track},\n  year={2025}\n}",
     "image": "pictures/haritz2025cseo.png",
     "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2506.11097"
-      },
       {
         "text": "Code",
         "url": "https://github.com/parameterlab/c-seo-bench"
@@ -499,10 +442,6 @@ const publicationsData = [
     "image": "pictures/ankit2025ranking.png",
     "links": [
       {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2507.03683"
-      },
-      {
         "text": "Code",
         "url": "https://github.com/aktsonthalia/rankable-vision-embeddings"
       }
@@ -532,10 +471,6 @@ const publicationsData = [
     "image": "pictures/yujin2025diffusion.png",
     "links": [
       {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2505.17955"
-      },
-      {
         "text": "Code",
         "url": "https://github.com/eugene6923/Diffusion-Classifiers-Compositionality"
       }
@@ -562,10 +497,6 @@ const publicationsData = [
     "bibtex": "@inproceedings{dongjun2025ovs,\n  title={OVS Meets Continual Learning: Towards Sustainable Open-Vocabulary Segmentation},\n  author={Hwang, Dongjun and Kim, Yejin and Lee, Minyoung and Oh, Seong Joon and Choe, Junsuk},\n  booktitle={Advances in Neural Information Processing Systems 38 (NeurIPS 2025)},\n  year={2025}\n}",
     "image": "pictures/dongjun2025ovs.png",
     "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2410.11536"
-      },
       {
         "text": "Code",
         "url": "https://github.com/dongjunhwang/dwi"
@@ -599,10 +530,6 @@ const publicationsData = [
     "image": "pictures/tommaso2025leakythoughts.png",
     "links": [
       {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2506.15674"
-      },
-      {
         "text": "Code",
         "url": "https://github.com/parameterlab/leaky_thoughts"
       },
@@ -632,10 +559,6 @@ const publicationsData = [
     "image": "pictures/arnas2025scaling.png",
     "links": [
       {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2507.07102"
-      },
-      {
         "text": "Code",
         "url": "https://github.com/oshapio/visual-compositional-generalization"
       }
@@ -661,10 +584,6 @@ const publicationsData = [
     "bibtex": "@article{alex2025ocl,\n  title={Are We Done with Object-Centric Learning?},\n  author={Rubinstein, Alexander and Prabhu, Ameya and Bethge, Matthias and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2504.07092},\n  year={2025}\n}",
     "image": "pictures/alex2025ocl.png",
     "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2504.07092"
-      },
       {
         "text": "HuggingFace",
         "url": "https://huggingface.co/papers/2504.07092"
@@ -698,12 +617,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2311.16176",
     "bibtex": "@inproceedings{luca2025diffdiv,\n  title={Mitigating Shortcut Learning with Diffusion Counterfactuals and Diverse Ensembles},\n  author={Scimeca, Luca and Rubinstein, Alexander and Teney, Damien and Oh, Seong Joon and Bengio, Yoshua},\n  booktitle={ICLR Workshop},\n  year={2025}\n}",
     "image": "pictures/luca2025diffdiv.png",
-    "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2311.16176"
-      }
-    ],
+    "links": [],
     "abstract": "Did you know that diffusion models can be forced to generate novel compositions of concepts by sampling from a half-trained model? We show that this can be used to generate diverse ensembles of counterfactuals that can be used to improve out-of-distribution generalisation.",
     "rtai_tags": [
       "DiffM",
@@ -725,12 +639,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2504.04981",
     "bibtex": "@article{sohyun2025dicotta,\n  title={DiCoTTA: Domain-invariant Learning for Continual Test-time Adaptation},\n  author={Lee, Sohyun and Kim, Nayeong and Kang, Juwon and Oh, Seong Joon and Kwak, Suha},\n  journal={arXiv preprint arXiv:2504.04981},\n  year={2025}\n}",
     "image": "pictures/sohyun2025dicotta.png",
-    "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2504.04981"
-      }
-    ],
+    "links": [],
     "abstract": "We study continual test-time adaptation (CTTA), where a model adapts to changing unseen domains while retaining past knowledge. Existing methods focus only on the current domain. We propose DiCoTTA, which learns domain-invariant features during testing. It introduces a new architecture, adaptation strategy, and data management. DiCoTTA achieves state-of-the-art performance and strong generalisation on four CTTA benchmarks.",
     "rtai_tags": [
       "TTA"
@@ -750,12 +659,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2411.00154",
     "bibtex": "@inproceedings{haritz2025mia,\n  title={Scaling Up Membership Inference: When and How Attacks Succeed on Large Language Models},\n  author={Puerto, Haritz and Gubri, Martin and Yun, Sangdoo and Oh, Seong Joon},\n  year={2025},\n  booktitle = {Annual Conference of the North American Chapter of the Association for Computational Linguistics: NAACL 2025},\n}",
     "image": "pictures/haritz2025mia.png",
-    "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2411.00154"
-      }
-    ],
+    "links": [],
     "abstract": "People have tried to check if certain copyrighted material is used by LLMs by analysing their characteristic reactions to it, a task known as Membership Inference Attack (MIA). Research so far has mostly reported negative results, finding barely any statistically significant signals. In our paper, we show that meaningful signals only appear at scale: not in sentences or paragraphs, but at the level of documents and more.",
     "rtai_tags": [
       "MIALM"
@@ -798,12 +702,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2403.07968",
     "bibtex": "@inproceedings{ankit2025star,\ntitle = {Do Deep Neural Network Solutions Form a Star Domain?},\nauthor = {Sonthalia, Ankit and Rubinstein, Alexander and Abbasnejad, Ehsan and Oh, Seong Joon},\nyear = {2025},\nbooktitle = {International Conference on Learning Representations (ICLR)},\n}",
     "image": "pictures/ankit2025star.png",
-    "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2403.07968"
-      }
-    ],
+    "links": [],
     "abstract": "The non-convexity of modern neural networks poses unique challenges for understanding and controlling them. While optima may be scattered across different regions of the parameter space, training methods are expected to find good solutions. We aim to understand the geometric structure of these solutions by investigating whether they form a star domain. We apply linear interpolation between models trained with different initialisations and examine the resulting performance. Experimental results from 11 architectures on 5 datasets reveal that in 80% of cases, the average performance on the linear interpolation path stays within 20% of the original performance. We further show that these findings are unaffected by various factors such as optimiser choice, weight averaging, or model accuracy.",
     "rtai_tags": [
       "MoMe"
@@ -845,12 +744,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2409.16978",
     "bibtex": "@article{nguyen2024towards,\n  title={Towards User-Focused Research in Training Data Attribution for Human-Centered Explainable AI},\n  author={Nguyen, Elisa and Bertram, Johannes and Kortukov, Evgenii and Song, Jean Y and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2409.16978},\n  year={2024}\n}",
     "image": "pictures/elisa2024tda.png",
-    "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2409.16978"
-      }
-    ],
+    "links": [],
     "abstract": "Explainable AI (XAI) has been criticised for relying too much on formalism and solutionism, focusing more on mathematical soundness than user needs. Despite efforts to correct this through user-focused studies from the HCI communities, we observe repeating patterns of formalism solutionism in a relatively young subfield of XAI: Training Data Attribution (TDA). We set out to correct this with a needfinding study with a diverse group of AI practitioners to identify potential user needs related to TDA. Our studies have uncovered new TDA tasks that are currently largely overlooked. We invite the TDA and XAI communities to consider these novel tasks and improve the user relevance of their research outcomes.",
     "rtai_tags": [
       "TDI"
@@ -870,12 +764,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2409.16797",
     "bibtex": "@article{alex2024diversify,\n  title={Scalable Ensemble Diversification for OOD Generalization and Detection},\n  author={Rubinstein, Alexander and Scimeca, Luca and Teney, Damien and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2409.16797},\n  year={2024}\n}",
     "image": "pictures/alex2024diversify.png",
-    "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2409.16797"
-      }
-    ],
+    "links": [],
     "abstract": "Ensemble diversification has traditionally been applied at sub-ImageNet scales (e.g. Waterbirds). We present methods to make them applicable at ImageNet+ scales. (1) Instead of relying on a separate OOD dataset to diversify the ensembles on, we source them from hard samples of the training set. (2) Stochastic pair selection. (3) Diversification of last 2 layers. We show that diversified ensembles are useful at OOD generalisation and (particularly) OOD detection, where we achieve the state-of-the-art performance.",
     "rtai_tags": [
       "OODD",
@@ -897,12 +786,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2404.16032",
     "bibtex": "@inproceedings{evgenii2024ralm,\n  title={Studying Large Language Model Behaviors Under Realistic Knowledge Conflicts},\n  author={Kortukov, Evgenii and Rubinstein, Alexander and Nguyen, Elisa and Oh, Seong Joon},\n  year={2024},\n  booktitle = {Conference on Language Modeling (CoLM)},\n}",
     "image": "pictures/evgenii2024ralm.png",
-    "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2404.16032"
-      }
-    ],
+    "links": [],
     "abstract": "Retrieval augmented generation (RAG) promises more trustworthy outputs from large language models (LLMs). RAG first retrieves relevant documents from a DB and includes them in the context for subsequent generation. However, RAG does not come with guarantee. Eventually, LLM decides whether to use the new information in retrieved document or to stick to the original information in the pre-training data. We present a study on this knowledge conflict.",
     "rtai_tags": [
       "RALM"
@@ -921,12 +805,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2402.19460",
     "bibtex": "@article{balint2024disentanglement,\n  title={Benchmarking Uncertainty Disentanglement: Specialized Uncertainties for Specialized Tasks},\n  author={Mucsányi, Bálint and Kirchhof, Michael and Oh, Seong Joon},\n  year={2024},\n  journal={arXiv preprint arXiv:2402.19460},\n}",
     "image": "pictures/balint2024disentanglement.png",
-    "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2402.19460"
-      }
-    ],
+    "links": [],
     "abstract": "After the Trustworthy Machine Learning course, Bálint has investigated the relationships between different types of uncertainty in machine learning models. He found that many methods claiming to measure specific uncertainties had not been thoroughly verified. After the experiments, we concluded that these methods hardly achieved their claimed goals. This revelation is crucial for the uncertainty estimation community, where they try to understand and disentangle different uncertainty types.",
     "rtai_tags": [
       "UD",
@@ -948,12 +827,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2402.16569",
     "bibtex": "@article{kirchhof2024pretrained,\n  title={Pretrained Visual Uncertainties},\n  author={Kirchhof, Michael and Collier, Mark and Oh, Seong Joon and Kasneci, Enkelejda},\n  year={2024},\n  journal={arXiv preprint arXiv:2402.16569},\n}",
     "image": "pictures/kirchhof2024pretrained.png",
-    "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2402.16569"
-      }
-    ],
+    "links": [],
     "abstract": "Uncertainty estimation so far had to be learned from scratch for each new task. We introduce a new approach that allows us to train uncertainty estimation on a large, general dataset and then apply it to new, specific tasks. We focus on practicality and efficiency. Our approach captures inherent uncertainty in the data, separate from uncertainty due to limited knowledge.",
     "rtai_tags": [
       "UQCV"
@@ -974,12 +848,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2402.12991",
     "bibtex": "@inproceedings{martin2024trap,\n    title = {TRAP: Targeted Random Adversarial Prompt Honeypot for Black-Box Identification},\n    author = {Gubri, Martin and Ulmer, Dennis and Lee, Hwaran and Yun, Sangdoo and Oh, Seong Joon},\n    year={2024},\n    booktitle = {Findings of the Association for Computational Linguistics: ACL 2024},\n}",
     "image": "pictures/martin2024trap.png",
-    "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2402.12991"
-      }
-    ],
+    "links": [],
     "abstract": "Large language models (LLM) and surrounding services come with their own rules about who can use them and how they should be used. These rules are important to protect the company's work and to prevent misuse. Now, given a new LLM-based chatbot service, it's important to find out the underlying LLM in order to check the compliance with the rules attached to each LLM. Here's our method for doing this: We ask the chatbot a very specific question that only one company's machine will answer in a certain way. It's like asking a friend a secret question only they would know the answer to. If the machine answers the question the way we expect, we know it's based on a specific LLM.",
     "rtai_tags": [
       "MLAU",
@@ -1001,12 +870,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2403.05973",
     "bibtex": "@inproceedings{dennis2024apricot,\n    title = {Calibrating Large Language Models Using Their Generations Only},\n    author = {Ulmer, Dennis and Gubri, Martin and Lee, Hwaran and Yun, Sangdoo and Oh, Seong Joon},\n    year={2024},\n    booktitle = {Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics},\n}",
     "image": "pictures/dennis2024apricot.png",
-    "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2403.05973"
-      }
-    ],
+    "links": [],
     "abstract": "We can't trust large language model (LLM) outputs. One of the reasons is that it doesn't always generate reliable confidence estimates. One could look into the model likelihoods, but even that is infeasible for many black-box models. We show here that it's possible to train a lightweight external model to infer an LLM's internal confidence based only on the prompt and answers from the LLM (purely black box).",
     "rtai_tags": [
       "UQLM"
@@ -1026,12 +890,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2310.20477",
     "bibtex": "@inproceedings{elisa2023neuripsxaiw,\ntitle = {Exploring Practitioner Perspectives On Training Data Attribution Explanations},\nauthor = {Nguyen, Elisa and Kortukov, Evgenii and Song, Jean Y. and Oh, Seong Joon},\nbooktitle = {Conference on Neural Information Processing Systems Workshop on XAI in Action},\nyear = {2023}\n}",
     "image": "pictures/elisa2023neuripsxaiw.png",
-    "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2310.20477"
-      }
-    ],
+    "links": [],
     "abstract": "Training data attribution (TDA) provides a non-parametric viewpoint for model explanations - which training data points are blamable for this test error? Apparently useful in practice, we realised that the actual usefulness is not tested in real applications. As a first step, we approach individuals working in a diverse array of sectors, either using or developing ML models, and ask whether they would find TDA useful in practice. The answer is affirmative - read the paper for more details.",
     "rtai_tags": [
       "TDI"
@@ -1056,10 +915,6 @@ const publicationsData = [
       {
         "text": "Webpage",
         "url": "https://trustworthyml.io/"
-      },
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2310.08215"
       },
       {
         "text": "arXiv",
@@ -1088,12 +943,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2305.19765",
     "bibtex": "@inproceedings{elisa2023neurips,\n    title = {A Bayesian Perspective On Training Data Attribution},\n    author = {Nguyen, Elisa and Seo, Minjoon and Oh, Seong Joon},\n    year = {2023},\n    booktitle = {Conference on Neural Information Processing Systems},\n}",
     "image": "pictures/elisa2023neurips.png",
-    "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2305.19765"
-      }
-    ],
+    "links": [],
     "abstract": "Consider Training Data Attribution (TDA) as a spotlight, highlighting the role each training sample plays in the predictions a model whips up. It's a tantalizing concept, especially for human-centric XAI, where it can guide users to tweak their training samples for better results. However, it's a bit like trying to hear a whisper in a storm. That's because the impact of removing a single training sample usually pales in comparison to the cacophony of noise stirred up during model training, like the random spark of model initialization or the chaotic dance of SGD batch shuffling. To understand this better, we've adopted a Bayesian deep learning viewpoint, treating our learned model as a Bayesian posterior and TDA estimates as random variables. Our findings? TDA is like trying to tune in to a radio station that's mostly static. It's really only effective in those rare instances when the impact of a single sample isn't lost in the noise. In those cases, TDA can indeed play a sweet tune!",
     "rtai_tags": [
       "TDI",
@@ -1120,12 +970,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2307.01881",
     "bibtex": "@inproceedings{siwon2023neurips,\n    title = {ProPILE: Probing Privacy Leakage in Large Language Models},\n    author = {Kim, Siwon and Yun, Sangdoo and Lee, Hwaran and Gubri, Martin and Yoon, Sungroh and Oh, Seong Joon},\n    year = {2023},\n    booktitle = {Conference on Neural Information Processing Systems},\n}",
     "image": "pictures/siwon2023neurips.png",
-    "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2307.01881"
-      }
-    ],
+    "links": [],
     "abstract": "Large language models (LLMs) are like giant sponges, soaking up vast amounts of data from the web. But amidst all that data, there could be some sensitive stuff, like personally identifiable information (PII). Makes you a bit worried, right? That's where our new tool, ProPILE, comes in. Think of it as a detective, helping people investigate if their personal data might be seeping out from these LLMs. You can create your own prompts based on your personal info to check how much of your PII are likely to be exposed to millions of users. ProPILE is one of our first efforts to empower data subjects to gain awareness and control over their own PII in the era of LLMs.",
     "rtai_tags": [
       "PILM"
@@ -1145,12 +990,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2209.00613",
     "bibtex": "@inproceedings{teney2023neurips,\n    title = {ID and OOD Performance Are Sometimes Inversely Correlated on Real-world Datasets},\n    author = {Teney, Damien and Oh, Seong Joon and Abbasnejad, Ehsan},\n    year = {2023},\n    booktitle = {Conference on Neural Information Processing Systems},\n}",
     "image": "pictures/teney2023neurips.png",
-    "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2209.00613"
-      }
-    ],
+    "links": [],
     "abstract": "Several recent studies have reported positive correlations between in-distribution (ID) and out-of-distribution (OOD) generalisation performances. In particular, Wenzel et al. (2022) found that none of the 31k networks examined on 172 dataset pairs has shown a trade-off, or a negative correlation, between the ID and OOD performances. They further recommend that, to improve the OOD generalisation, one can instead focus on improving the ID generalisation. We argue that this may not always be true. We present counterexamples where one does observe a trade-off between ID and OOD generalisation. We point to the selection method for networks as the key reason for the contradicting observations. We alter the recommendation to the field in a more nuanced manner.",
     "rtai_tags": [
       "OOD"
@@ -1170,12 +1010,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2307.03810",
     "bibtex": "@inproceedings{kirchhof2023neuripsdb,\ntitle = {URL: A Representation Learning Benchmark for Transferable Uncertainty Estimates},\nauthor = {Kirchhof, Michael and Mucsányi, Bálint and Oh, Seong Joon and Kasneci, Enkelejda},\nbooktitle = {Conference on Neural Information Processing Systems: Datasets and Benchmarks Track},\nyear = {2023}\n}",
     "image": "pictures/kirchhof2023neuripsdb.png",
-    "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2307.03810"
-      }
-    ],
+    "links": [],
     "abstract": "NeurIPS D&B extension of the UAI Epistemic AI Workshop paper below.",
     "rtai_tags": [
       "UQCV"
@@ -1199,10 +1034,6 @@ const publicationsData = [
       {
         "text": "Code",
         "url": "https://github.com/mkirchhof/url"
-      },
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2307.03810"
       }
     ],
     "abstract": "We developed the Uncertainty-aware Representation Learning (URL) benchmark in our research. This tool evaluates the reliability of uncertainty estimates from pretrained models on unseen datasets. Its implementation is simple, requiring only four lines of code. In our experiment, we applied URL to ten models trained on ImageNet. Then, we tested these models on eight different datasets. The results showed that achieving transferable uncertainty quantification remains a challenge. We invite the community to work on this novel problem!",
@@ -1226,12 +1057,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2305.16867",
     "bibtex": "@article{elif2025naturehumanbehaviour,\ntitle = {Playing repeated games with Large Language Models},\nauthor = {Akata, Elif and Schulz, Lion and Coda-Forno, Julian and Oh, Seong Joon and Bethge, Matthias and Schulz, Eric},\njournal={Nature Human Behaviour},\nyear = {2025}\n}",
     "image": "pictures/elif2025naturehumanbehaviour.png",
-    "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2305.16867"
-      }
-    ],
+    "links": [],
     "abstract": "Imagine Large Language Models (LLMs) as digital diplomats, interacting with us and others in the cyber world. We set LLMs - GPT-3, GPT-3.5, and GPT-4 - against each other in games to understand their social behavior. LLMs are great when self-interest rules, like in the Prisoner's Dilemma, but stumble when coordination is key. GPT-4, for instance, acts tough in the Prisoner's Dilemma and struggles with simple conventions in the Battle of the Sexes. But, give GPT-4 more info or ask it to predict the opponent's move, and it adjusts its strategy. Our insights open up an exciting path towards a behavioral game theory for machines!",
     "rtai_tags": []
   },
@@ -1258,10 +1084,6 @@ const publicationsData = [
     "bibtex": "@inproceedings{han2023iccv,\n  title = {Neglected Free Lunch – Learning Image Classifiers Using Annotation Byproducts},\n  author = {Han, Dongyoon and Choe, Junsuk and Chun, Seonghyeok and Chung, John Joon Young and Chang, Minsuk and Yun, Sangdoo and Song, Jean Y. and Oh, Seong Joon},\n  booktitle = {International Conference on Computer Vision (ICCV)},\n  year = {2023}\n}",
     "image": "pictures/han2023iccv.png",
     "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2303.17595"
-      },
       {
         "text": "Code",
         "url": "https://github.com/naver-ai/NeglectedFreeLunch"
@@ -1314,10 +1136,6 @@ const publicationsData = [
     "image": "pictures/nam2023iccv.png",
     "links": [
       {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2210.08457"
-      },
-      {
         "text": "Code",
         "url": "https://uniform-attention.github.io/"
       }
@@ -1339,10 +1157,6 @@ const publicationsData = [
     "bibtex": "@inproceedings{kirchhof2023icml,\ntitle = {Probabilistic Contrastive Learning Recovers the Correct Aleatoric Uncertainty of Ambiguous Inputs},\nauthor = {Kirchhof, Michael and Kasneci, Enkelejda and Oh, Seong Joon},\nbooktitle = {International Conference on Machine Learning},\nyear = {2023}\n}",
     "image": "pictures/kirchhof2023icml.png",
     "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2302.02865"
-      },
       {
         "text": "Code",
         "url": "https://github.com/mkirchhof/Probabilistic_Contrastive_Learning"
@@ -1372,10 +1186,6 @@ const publicationsData = [
     "image": "pictures/hwang2022neurips.png",
     "links": [
       {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2211.02291"
-      },
-      {
         "text": "Workshop paper",
         "url": "data/hwang2022neurips_workshop.pdf"
       }
@@ -1401,10 +1211,6 @@ const publicationsData = [
     "bibtex": "@inproceedings{chun2022eccv_caption,\n    title={ECCV Caption: Correcting False Negatives by Collecting Machine-and-Human-verified Image-Caption Associations for MS-COCO},\n    author={Chun, Sanghyuk and Kim, Wonjae and Park, Song and Chang, Minsuk Chang and Oh, Seong Joon},\n    year={2022},\n    booktitle={European Conference on Computer Vision (ECCV)},\n}",
     "image": "pictures/chun2022eccv.png",
     "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2204.03359"
-      },
       {
         "text": "Code",
         "url": "https://github.com/naver-ai/eccv-caption"
@@ -1443,10 +1249,6 @@ const publicationsData = [
     "image": "pictures/kim2022icml.png",
     "links": [
       {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2205.14959"
-      },
-      {
         "text": "Code",
         "url": "https://github.com/snu-mllab/Efficient-Dataset-Condensation"
       }
@@ -1473,10 +1275,6 @@ const publicationsData = [
     "bibtex": "@inproceedings{lee2022cvpr,\ntitle = {Weakly Supervised Semantic Segmentation Using Out-of-Distribution Data},\nauthor = {Lee, Jungbeom and Oh, Seong Joon and Yun, Sangdoo and Choe, Junsuk and Kim, Eunji and Yoon, Sungroh},\nyear = {2022},\nbooktitle = {Conference on Computer Vision and Pattern Recognition (CVPR)},\nnote = {to appear},\npubstate = {published},\ntppubtype = {inproceedings}\n}",
     "image": "pictures/lee2022cvpr.png",
     "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2203.03860"
-      },
       {
         "text": "Code",
         "url": "https://github.com/naver-ai/w-ood"
@@ -1506,12 +1304,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2110.03095",
     "bibtex": "@inproceedings{scimeca2022iclr,\n    title={Which Shortcut Cues Will DNNs Choose? A Study from the Parameter-Space Perspective},\n    author={Scimeca, Luca and Oh, Seong Joon and Chun, Sanghyuk and Poli, Michael and Yun, Sangdoo},\n    year={2022},\n    booktitle = {International Conference on Learning Representations (ICLR)},\n}",
     "image": "pictures/scimeca2022iclr.png",
-    "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2110.03095"
-      }
-    ],
+    "links": [],
     "abstract": "Shortcut learning is emerging as a key limitation of the current generation of machine learning models (CVPR'20, ICML'20). In this work, instead of proposing yet another solution, we take a step back and deepen our understanding of the problem. For example, trained on a dataset where both colour and shape are valid cues for recognising the object, models of different types (MLP, CNN, and ViT) choose to use colour over shape. Why is that? We provide an explanation from the parameter-space perspective. Read the paper. Worth it!",
     "rtai_tags": [
       "OOD"
@@ -1532,12 +1325,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2112.11916",
     "bibtex": "@inproceedings{hazel2022aaai,\n  title={ALP: Data Augmentation using Lexicalized PCFGs for Few-Shot Text Classification},\n  author={Kim, Hazel and Woo, Daecheol and Oh, Seong Joon and Cha, Jeong-Won and Han, Yo-Sub},\n  year={2022},\n  booktitle = {Association for the Advancement of Artificial Intelligence Conference (AAAI)},\n  note = {to appear},\n  pubstate = {published},\n  tppubtype = {inproceedings},\n}",
     "image": "pictures/hazel2022aaai.png",
-    "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2112.11916"
-      }
-    ],
+    "links": [],
     "abstract": "This is an NLP paper. There have been many attempts at enlarging the training text data for few-shot text classification, like back-translation (e.g. En-Fr-En) and the use of pre-trained language models. Unlike those, we propose an augmentation method that is fully aware of the underlying grammatical structure of the sentence. Importantly, our method generates a set of synonymous sentences that are both grammatically correct and grammatically diverse! Here we gain quite some points in few-shot text classification benchmarks. Another contribution is viewing the train-val split as part of the method and seeking the best splitting strategy when data augmentation is being used. It turns out that splitting the few-shot labelled samples S into disjoint train-val splits (train split is then augmented) is sub-optimal; a better strategy is to use the augmented source data S' as the train split and the original S itself as the validation split!",
     "rtai_tags": []
   },
@@ -1561,10 +1349,6 @@ const publicationsData = [
     "bibtex": "@article{choe2022tpami,\n    title={Evaluation for Weakly Supervised Object Localization: Protocol, Metrics, and Datasets},\n    author={Choe, Junsuk and Oh, Seong Joon and Chun, Sanghyuk and Akata, Zeynepand Shim, Hyunjung},\n    journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},\n    year={2022},\n    number  = {},\n    pages   = {},\n    month   = {},\n    volume  = {}\n}",
     "image": "pictures/choe2020cvpr.gif",
     "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2007.04178"
-      },
       {
         "text": "Code",
         "url": "https://github.com/clovaai/wsolevaluation"
@@ -1603,10 +1387,6 @@ const publicationsData = [
     "image": "pictures/kim2021iccv.png",
     "links": [
       {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2106.07861"
-      },
-      {
         "text": "Code",
         "url": "https://github.com/naver-ai/calm"
       }
@@ -1634,10 +1414,6 @@ const publicationsData = [
     "image": "pictures/heo2021iccv.png",
     "links": [
       {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2103.16302"
-      },
-      {
         "text": "Code",
         "url": "https://github.com/naver-ai/pit"
       }
@@ -1664,12 +1440,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2106.04165",
     "bibtex": "@inproceedings{poli2021neurips,\n    title={Neural Hybrid Automata: Learning Dynamics with Multiple Modes and Stochastic Transitions},\n    author = {Poli, Michael and Massaroli, Stefano and Scimeca, Luca and Oh, Seong Joon and Chun, Sanghyuk and Yamashita, Atsushi and Asama, Hajime and Park, Jinkyoo and Garg, Animesh},\n    year = {2021},\n    booktitle = {Conference on Neural Information Processing Systems},\n}",
     "image": "pictures/poli2021neurips.png",
-    "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2106.04165"
-      }
-    ],
+    "links": [],
     "abstract": "Recovering the dynamical systems, or the data generation process, behind time series data enables an effective and robust prediction, interpretation, and forecasting. There exist prior methods for recovering either continuous or discrete dynamics, but not the mixture. The underlying dynamics behind many real-world systems contain both continuous and discrete elements. For example, an aircraft essentially follows a continuous dynamics but goes through a discrete mode shift at touchdown. Such a system is referred to as a Stochastic Hybrid System (SHS). We present a framework that recovers SHS from time series data using ingredients like Neural ODEs and latent variable models.",
     "rtai_tags": [
       "AI4TS"
@@ -1692,10 +1463,6 @@ const publicationsData = [
     "bibtex": "@inproceedings{yun2021cvpr,\n  title={Re-labeling ImageNet: from Single to Multi-Labels, from Global to Localized Labels},\n  author={Yun, Sangdoo and Oh, Seong Joon and Heo, Byeongho and Han, Dongyoon and Choe, Junsuk and Chun, Sanghyuk},\n  year={2021},\n  booktitle = {Conference on Computer Vision and Pattern Recognition (CVPR)},\n}",
     "image": "pictures/yun2021cvpr.png",
     "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2101.05022"
-      },
       {
         "text": "Code",
         "url": "https://github.com/naver-ai/relabel_imagenet"
@@ -1720,10 +1487,6 @@ const publicationsData = [
     "bibtex": "@inproceedings{chun2021cvpr,\n  title={Probabilistic Embeddings for Cross-Modal Retrieval},\n  author={Chun, Sanghyuk and Oh, Seong Joon and Rezende, Rafael and Kalantidis, Yannis and Larlus, Diane},\n  year={2021},\n  booktitle = {Conference on Computer Vision and Pattern Recognition (CVPR)},\n}",
     "image": "pictures/chun2021cvpr.png",
     "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2101.05068"
-      },
       {
         "text": "Code",
         "url": "https://github.com/naver-ai/pcme"
@@ -1753,10 +1516,6 @@ const publicationsData = [
     "image": "pictures/heo2021iclr.png",
     "links": [
       {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2006.08217"
-      },
-      {
         "text": "Code",
         "url": "https://github.com/clovaai/AdamP"
       },
@@ -1785,12 +1544,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2012.03457",
     "bibtex": "@article{yun2020videomix,\n  title={VideoMix: Rethinking Data Augmentation for Video Classification},\n  author={Yun, Sangdoo and Oh, Seong Joon and Heo, Byeongho and Han, Dongyoon and Kim, Jinhyung},\n  year={2020},\n  journal={arXiv preprint arXiv:2012.03457},\n}",
     "image": "pictures/yun2020videomix.png",
-    "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2012.03457"
-      }
-    ],
+    "links": [],
     "abstract": "Data augmentation is not as extensively studied in the video recognition tasks as in the static image recognition domain. We study the extension of popular static-image augmentation method, such as CutMix, on video recognition tasks.",
     "rtai_tags": []
   },
@@ -1814,10 +1568,6 @@ const publicationsData = [
     "bibtex": "@inproceedings{ferjad2020icml,\ntitle = {Reliable Fidelity and Diversity Metrics for Generative Models},\nauthor = {Naeem, Muhammad Ferjad and Oh, Seong Joon and Uh, Youngjung and Choi, Yunjey and Yoo, Jaejun},\nyear = {2020},\nbooktitle = {International Conference on Machine Learning},\n}",
     "image": "pictures/ferjad2020icml.png",
     "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2002.09797"
-      },
       {
         "text": "Code",
         "url": "https://github.com/clovaai/generative-evaluation-prdc"
@@ -1852,10 +1602,6 @@ const publicationsData = [
     "bibtex": "@inproceedings{hyojin2020icml,\ntitle = {Learning De-biased Representations with Biased Representations},\nauthor = {Bahng, Hyojin and Chun, Sanghyuk and Yun, Sangdoo and Choo, Jaegul and Oh, Seong Joon},\nyear = {2020},\nbooktitle = {International Conference on Machine Learning},\n}",
     "image": "pictures/bahng2020icml.png",
     "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/1910.02806"
-      },
       {
         "text": "Code",
         "url": "https://github.com/clovaai/rebias"
@@ -1895,10 +1641,6 @@ const publicationsData = [
     "image": "pictures/choe2020cvpr.gif",
     "links": [
       {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2001.07437"
-      },
-      {
         "text": "Code",
         "url": "https://github.com/clovaai/wsolevaluation"
       },
@@ -1932,12 +1674,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/1910.04396",
     "bibtex": "@inproceedings{lee2020selfattention,\n  title={On Recognizing Texts of Arbitrary Shapes with 2D Self-Attention},\n  author={Lee, Junyeop and Park, Sungrae and Baek, Jeonghun and Oh, Seong Joon and Kim, Seonghyeon and Lee, Hwalsuk},\n  year={2020},\n  booktitle = {Workshop on Text and Documents in the Deep Learning Era},\n}",
     "image": "pictures/lee2020cvprw.png",
-    "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/1910.04396"
-      }
-    ],
+    "links": [],
     "abstract": "Scene text recognition works well, but there are remaining corner cases. An example is texts with unusual orientations and arrangements (e.g. BMW logo). We focus on this corner case and propose a model based on self-attention.",
     "rtai_tags": []
   },
@@ -1956,10 +1693,6 @@ const publicationsData = [
     "bibtex": "@article{joon2020tpami,\n  author  = {Oh, Seong Joon and Benenson, Rodrigo and Fritz, Mario and Schiele, Bernt}, \n  title   = {Person Recognition in Personal Photo Collections},\n  journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},\n  year    = 2020,\n  number  = 1,\n  pages   = {203-220},\n  month   = 1,\n  volume  = 42\n}",
     "image": "pictures/joon2015iccv.png",
     "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/1710.03224"
-      },
       {
         "text": "Journal",
         "url": "https://ieeexplore.ieee.org/document/8519337"
@@ -1984,10 +1717,6 @@ const publicationsData = [
     "bibtex": "@Inbook{joon2019blackboxchapter,\nauthor=\"Oh, Seong Joon\nand Schiele, Bernt\nand Fritz, Mario\",\neditor=\"Samek, Wojciech\nand Montavon, Gr{'e}goire\nand Vedaldi, Andrea\nand Hansen, Lars Kai\nand Muller, Klaus-Robert\",\ntitle=\"Towards Reverse-Engineering Black-Box Neural Networks\",\nbookTitle=\"Explainable AI: Interpreting, Explaining and Visualizing Deep Learning\",\nyear=\"2019\",\npublisher=\"Springer International Publishing\",\naddress=\"Cham\",\npages=\"121--144\",\nabstract=\"Much progress in interpretable AI is built around scenarios where the user, one who interprets the model, has a full ownership of the model to be diagnosed. The user either owns the training data and computing resources to train an interpretable model herself or owns a full access to an already trained model to be interpreted post-hoc. In this chapter, we consider a less investigated scenario of diagnosing black-box neural networks, where the user can only send queries and read off outputs. Black-box access is a common deployment mode for many public and commercial models, since internal details, such as architecture, optimisation procedure, and training data, can be proprietary and aggravate their vulnerability to attacks like adversarial examples. We propose a method for exposing internals of black-box models and show that the method is surprisingly effective at inferring a diverse set of internal information. We further show how the exposed internals can be exploited to strengthen adversarial examples against the model. Our work starts an important discussion on the security implications of diagnosing deployed models with limited accessibility. The code is available at goo.gl/MbYfsv.\",\nisbn=\"978-3-030-28954-6\",\ndoi=\"10.1007/978-3-030-28954-6_7\",\nurl=\"https://doi.org/10.1007/978-3-030-28954-6_7\"\n}",
     "image": "pictures/joon2018iclr.png",
     "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/1711.01768"
-      },
       {
         "text": "Book chapter",
         "url": "https://link.springer.com/chapter/10.1007/978-3-030-28954-6_7"
@@ -2016,10 +1745,6 @@ const publicationsData = [
     "image": "pictures/orekondy2019neuripsfl.png",
     "links": [
       {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/1805.05838"
-      },
-      {
         "text": "Poster",
         "url": "data/orekondy2019neuripsfl_poster.pdf"
       }
@@ -2046,12 +1771,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2003.03879",
     "bibtex": "@article{chun2019icmlw,\ntitle = {An Empirical Evaluation on Robustness and Uncertainty of Regularization Methods},\nauthor = {Chun, Sanghyuk and Oh, Seong Joon and Yun, Sangdoo and Han, Dongyoon and Choe, Junsuk and Yoo, Youngjoon},\njournal = {Uncertainty and Robustness in Deep Learning. ICML Workshop},\nyear = {2019},\n}",
     "image": "pictures/chun2019icmlw.png",
-    "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/2003.03879"
-      }
-    ],
+    "links": [],
     "abstract": "There has been a line of research on simple regularization techniques like CutMix (ICCV'19) and other lines of research on robustness and uncertainty. We make a happy marriage of the two and measure how well the regularization techniques improve robustness and uncertainty of a model.",
     "rtai_tags": [
       "OOD",
@@ -2075,10 +1795,6 @@ const publicationsData = [
     "bibtex": "@inproceedings{yun2019cutmix,\n  title={CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features},\n  author={Yun, Sangdoo and Han, Dongyoon and Oh, Seong Joon and Chun, Sanghyuk and Choe, Junsuk and Yoo, Youngjoon},\n  booktitle = {International Conference on Computer Vision (ICCV)},\n  year={2019},\n  note={to appear},\n  pubstate={published},\n  tppubtype={inproceedings}\n}",
     "image": "pictures/yun2019iccv.png",
     "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/1905.04899"
-      },
       {
         "text": "Code",
         "url": "https://github.com/clovaai/CutMix-PyTorch"
@@ -2123,10 +1839,6 @@ const publicationsData = [
     "image": "pictures/baek2019iccv.png",
     "links": [
       {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/1904.01906"
-      },
-      {
         "text": "Code",
         "url": "https://github.com/clovaai/deep-text-recognition-benchmark"
       }
@@ -2152,10 +1864,6 @@ const publicationsData = [
     "image": "pictures/joon2019iclr.png",
     "links": [
       {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/1810.00319"
-      },
-      {
         "text": "Poster",
         "url": "data/oh2019iclr_poster.pdf"
       }
@@ -2178,12 +1886,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/1805.12487",
     "bibtex": "@inproceedings{edgar2018cscs,\ntitle = {Sequential Attacks on Agents for Long-Term Adversarial Goals},\nauthor = {Tretschk, Edgar and Oh, Seong Joon and Fritz, Mario},\nyear = {2018},\nbooktitle = {ACM Computer Science in Cars Symposium -- Future Challenges in Artificial Intelligence & Security for Autonomous Vehicles (CSCS)},\n}",
     "image": "pictures/tretschk2018cscs.png",
-    "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/1805.12487"
-      }
-    ],
+    "links": [],
     "abstract": "Can a bad guy hijack an RL agent? We show that it is possible to let an agent pursue an alternative reward by introducing small adversarial perturbations in the input stream.",
     "rtai_tags": [
       "AAML",
@@ -2205,10 +1908,6 @@ const publicationsData = [
     "bibtex": "@inproceedings{joon2018iclr,\ntitle = {Towards Reverse-Engineering Black-Box Neural Networks},\nauthor = {Oh, Seong Joon and Augustin, Max and Schiele, Bernt and Fritz, Mario},\nyear = {2018},\nbooktitle = {International Conference on Learning Representations (ICLR)},\n}",
     "image": "pictures/joon2018iclr.png",
     "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/1711.01768"
-      },
       {
         "text": "Extended abstract",
         "url": "data/oh2018iclr_abstract.pdf"
@@ -2244,12 +1943,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/1711.09001",
     "bibtex": "@inproceedings{qianru2018cvpr,\ntitle = {Natural and Effective Obfuscation by Head Inpainting},\nauthor = {Sun, Qianru and Ma, Liqian and Oh, Seong Joon and van Gool, Luc and Schiele, Bernt and Fritz, Mario},\nyear = {2018},\nbooktitle = {Conference on Computer Vision and Pattern Recognition (CVPR)}\n}",
     "image": "pictures/sun2017cvpr.png",
-    "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/1711.09001"
-      }
-    ],
+    "links": [],
     "abstract": "Adversarial perturbation solutions (ICCV'17) produce visually pleasant protections with high protection rates, but their effects may be confined to a handful of recognition systems. We propose another solution based on face inpainting that changes the face to a fictitious yet natural-looking identity. It is effective against a broader set of recognition systems.",
     "rtai_tags": [
       "PICV"
@@ -2295,10 +1989,6 @@ const publicationsData = [
     "image": "pictures/joon2017iccv.png",
     "links": [
       {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/1703.09471"
-      },
-      {
         "text": "Poster",
         "url": "data/oh2017iccv_poster.pdf"
       },
@@ -2332,10 +2022,6 @@ const publicationsData = [
     "image": "pictures/joon2017cvpr.png",
     "links": [
       {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/1701.08261"
-      },
-      {
         "text": "Poster",
         "url": "data/oh2017cvpr_poster.pdf"
       },
@@ -2364,12 +2050,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/1704.01518",
     "bibtex": "@inproceedings{anja2017cvpr,\ntitle = {Generating Descriptions with Grounded and Co-Referenced People},\nauthor = {Rohrbach, Anna and Rohrbach, Marcus and Tang, Siyu and Oh, Seong Joon and Schiele, Bernt},\nyear = {2017},\nbooktitle = {Conference on Computer Vision and Pattern Recognition (CVPR)},\nnote = {to appear},\npubstate = {published},\ntppubtype = {inproceedings}\n}",
     "image": "pictures/anja2017cvpr.png",
-    "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/1704.01518"
-      }
-    ],
+    "links": [],
     "abstract": "We casually use pronouns to refer to others. For machines, however, referring to people with pronouns necessitates new types of data and training strategies to explicitly localize and link people across frames. We do that.",
     "rtai_tags": []
   },
@@ -2388,10 +2069,6 @@ const publicationsData = [
     "bibtex": "@inproceedings{joon2016eccv,\ntitle = {Faceless Person Recognition; Privacy Implications in Social Media},\nauthor = {Seong Joon Oh and Rodrigo Benenson and Mario Fritz and Bernt Schiele},\nyear = {2016},\ndate = {2016-10-11},\nbooktitle = {European Conference on Computer Vision (ECCV)},\nnote = {to appear},\nkeywords = {},\npubstate = {published},\ntppubtype = {inproceedings}\n}",
     "image": "pictures/joon2016eccv.png",
     "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/1607.08438"
-      },
       {
         "text": "Poster",
         "url": "data/oh2016eccv_poster.pdf"
@@ -2452,10 +2129,6 @@ const publicationsData = [
     "bibtex": "@INPROCEEDINGS{joon2015iccv,\n  title={Person Recognition in Personal Photo Collections},\n  author={Oh, Seong Joon and Benenson, Rodrigo and Fritz, Mario and Schiele, Bernt},\n  booktitle = {ICCV},\n  year={2015} }",
     "image": "pictures/joon2015iccv.png",
     "links": [
-      {
-        "text": "ResearchTrend.AI",
-        "url": "https://researchtrend.ai/papers/1509.03502"
-      },
       {
         "text": "Poster",
         "url": "data/oh2015iccv_poster.pdf"

@@ -248,10 +248,9 @@ function hslToHex(h, s, l) {
 
 async function htmlCommunityTag(acronym, putColor = true, additionalText = "") {
   const color = putColor ? await hashColor(acronym) : '#CCCCCC';
-  return `<a href='https://researchtrend.ai/communities/${acronym}' style='text-decoration: none; color: white;'>
-    <span class='inline-flex items-center rounded-full font-medium text-medium' 
+  return `<span data-community='${acronym}' class='inline-flex items-center rounded-full font-medium text-medium'
     style='background-color: ${color}; color: var(--community-tag-text-color); padding: 1px 4px; border-radius: 12px; font-family: Mukta, sans-serif;'>
-    ${acronym}${additionalText}</span></a>`;
+    ${acronym}${additionalText}</span>`;
 }
 
 // Function to get color for tag

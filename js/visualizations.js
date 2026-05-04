@@ -488,14 +488,11 @@ async function createCommunityToggles(communities) {
     const nameCell = document.createElement('td');
     nameCell.style.cssText = 'padding:1px 15px 1px 5px;vertical-align:middle;max-width:220px;';
     
-    // Create link to the community page
-    const link = document.createElement('a');
-    link.href = `https://researchtrend.ai/communities/${community}`;
-    link.textContent = getCommunityFullName(community);
-    link.style.cssText = 'text-decoration:underline;color:var(--community-name-color);font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;';
-    link.target = '_blank';
-    
-    nameCell.appendChild(link);
+    const nameSpan = document.createElement('span');
+    nameSpan.textContent = getCommunityFullName(community);
+    nameSpan.style.cssText = 'color:var(--community-name-color);font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;';
+
+    nameCell.appendChild(nameSpan);
     row.appendChild(nameCell);
     
     // Add event listener for checkbox
@@ -608,8 +605,8 @@ function filterPublicationsByTags() {
     }
     
     // Check if the publication has any of the selected community tags
-    const pubTags = Array.from(pubElement.querySelectorAll('a[href^="https://researchtrend.ai/communities/"]'))
-      .map(tag => tag.textContent.trim());
+    const pubTags = Array.from(pubElement.querySelectorAll('[data-community]'))
+      .map(tag => tag.getAttribute('data-community'));
     
     // Special case for "Unknown" - show papers with no community tags
     if (selectedCommunities.includes('Unknown') && pubTags.length === 0) {
