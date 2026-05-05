@@ -163,7 +163,7 @@ const publicationsData = [
     ],
     "venue": "ICML",
     "year": "2026",
-    "url": "",
+    "url": "https://arxiv.org/abs/2605.00273",
     "bibtex": "@inproceedings{yujin2026diffusion,\n  title={When Do Diffusion Models learn to Generate Multiple Objects?},\n  author={Jeong, Yujin and Uselis, Arnas and Laina, Iro and Oh, Seong Joon and Rohrbach, Anna},\n  booktitle={International Conference on Machine Learning (ICML)},\n  year={2026}\n}",
     "image": "pictures/yujin2026diffusion.png",
     "links": [],
