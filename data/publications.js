@@ -1,6 +1,31 @@
 // Publications data in JSON format
 const publicationsData = [
   {
+    "id": "fabian2026saeft",
+    "title": "Sparse Autoencoders enable Robust and Interpretable Fine-tuning of CLIP models",
+    "authors": [
+      "fabian_morelli",
+      "arnas_uselis",
+      "ankit_sonthalia",
+      "seong_joon_oh"
+    ],
+    "venue": "arXiv",
+    "year": "2026",
+    "url": "https://arxiv.org/abs/2605.15961",
+    "bibtex": "@article{fabian2026saeft,\n  title={Sparse Autoencoders enable Robust and Interpretable Fine-tuning of CLIP models},\n  author={Morelli, Fabian and Uselis, Arnas and Sonthalia, Ankit and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2605.15961},\n  year={2026}\n}",
+    "image": "pictures/fabian2026saeft.png",
+    "links": [
+      {
+        "text": "Code",
+        "url": "https://github.com/Fabian-Mor/sae-ft"
+      }
+    ],
+    "abstract": "Fine-tuning CLIP often improves downstream accuracy at the cost of robustness to distribution shifts. SAE-FT regularises changes to visual representations by penalising the addition or removal of semantically meaningful features identified by a Sparse Autoencoder trained on the pre-trained model. This prevents catastrophic forgetting and exposes interpretable semantic changes during fine-tuning. The method matches or exceeds state-of-the-art on ImageNet and its distribution-shift benchmarks, while remaining computationally efficient.",
+    "rtai_tags": [
+      "VLM"
+    ]
+  },
+  {
     "id": "cornelius2026maseval",
     "title": "MASEval: Extending Multi-Agent Evaluation from Models to Systems",
     "authors": [
