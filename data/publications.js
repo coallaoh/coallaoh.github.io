@@ -63,6 +63,46 @@ const publicationsData = [
     ]
   },
   {
+    "id": "emde2026lostcomm",
+    "title": "Lost in Communication: Uncertainty Propagation in Multi-Agent Systems",
+    "authors": [
+      "cornelius_emde",
+      "anmol_goel",
+      "sangdoo_yun",
+      "seong_joon_oh",
+      "martin_gubri"
+    ],
+    "venue": "ICML 2026 Workshop AgenticUQ (Poster)",
+    "year": "2026",
+    "bibtex": "@inproceedings{emde2026lostcomm,\n  title={Lost in Communication: Uncertainty Propagation in Multi-Agent Systems},\n  author={Emde, Cornelius and Goel, Anmol and Yun, Sangdoo and Oh, Seong Joon and Gubri, Martin},\n  booktitle={ICML 2026 Workshop on Statistical Frameworks for Uncertainty in Agentic Systems (AgenticUQ)},\n  year={2026}\n}",
+    "image": "pictures/emde2026lostcomm.png",
+    "links": [],
+    "abstract": "In multi-agent LLM systems each agent's decisions depend on information produced by another, yet existing uncertainty quantification only measures a model's confidence in its own output. We expose a failure mode we call vanishing uncertainty: the uncertainty signal attenuates between the producing agent and the consuming agent. Across three open-weight models and tasks spanning parametric knowledge, magnitude estimation, and tool use, orchestrator and subagent uncertainties correlate weakly even when the relayed content is fixed - showing that uncertainty propagation in multi-agent systems is a distinct problem from single-model UQ.",
+    "rtai_tags": [
+      "LLMAG",
+      "UQLM"
+    ]
+  },
+  {
+    "id": "kim2026breakgeom",
+    "title": "Break the Output Geometry for Large Language Model Unlearning",
+    "authors": [
+      "yejin_kim",
+      "William F. Shen",
+      "seokwon_jung",
+      "seong_joon_oh"
+    ],
+    "venue": "ICML 2026 Workshop MemFM (Poster)",
+    "year": "2026",
+    "bibtex": "@inproceedings{kim2026breakgeom,\n  title={Break the Output Geometry for Large Language Model Unlearning},\n  author={Kim, Yejin and Shen, William F. and Jung, Seokwon and Oh, Seong Joon},\n  booktitle={ICML 2026 Workshop on Memory in Foundation Models (MemFM)},\n  year={2026}\n}",
+    "image": "pictures/kim2026breakgeom.png",
+    "links": [],
+    "abstract": "Current LLM unlearning methods face a persistent trade-off between forget effectiveness and retained-context utility. We trace this to two findings: layer-wise logit accumulation toward a target token depends more on the output token than on the input query, and hidden states producing the same token vary only along directions orthogonal to its unembedding row $u_k$ - the same-output plane. Break the Output Geometry (BOG) preserves this plane while displacing the forget input along $u_k$ by a margin derived from cross-output statistics, achieving a superior forget-retain trade-off on TOFU.",
+    "rtai_tags": [
+      "MU"
+    ]
+  },
+  {
     "id": "arnas2026necessary",
     "title": "Necessary Conditions for Compositional Generalization of Embedding Models",
     "authors": [
@@ -196,6 +236,9 @@ const publicationsData = [
     "rtai_tags": [
       "CoGe",
       "DiffM"
+    ],
+    "workshops": [
+      "ICML 2026 Workshop CompLearn (Poster)"
     ]
   },
   {
@@ -380,8 +423,8 @@ const publicationsData = [
       "elisa_nguyen",
       "seong_joon_oh"
     ],
-    "venue": "arXiv",
-    "year": "2025",
+    "venue": "ICML 2026 FoGen Workshop (Poster)",
+    "year": "2026",
     "url": "https://arxiv.org/abs/2510.27313",
     "bibtex": "@article{philipp2026nonattrib,\n  title={LLM Generation Novelty Through the Lens of Semantic Similarity},\n  author={Davydov, Philipp and Prabhu, Ameya and Bethge, Matthias and Nguyen, Elisa and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2510.27313},\n  year={2025}\n}",
     "image": "pictures/philipp2026nonattrib.png",
