@@ -1,6 +1,86 @@
 // Publications data in JSON format
 const publicationsData = [
   {
+    "id": "sangwoo2026selfci",
+    "title": "It Takes Two: Complementary Self-Distillation for Contextual Integrity in LLMs",
+    "authors": [
+      "sangwoo_park",
+      "woongyeong_yeo",
+      "seanie_lee",
+      "yumin_choi",
+      "hyomin_lee",
+      "kangsan_kim",
+      "jinheon_baek",
+      "seong_joon_oh",
+      "sung_ju_hwang"
+    ],
+    "venue": "arXiv",
+    "year": "2026",
+    "url": "https://arxiv.org/abs/2605.20258",
+    "bibtex": "@article{sangwoo2026selfci,\n  title={It Takes Two: Complementary Self-Distillation for Contextual Integrity in LLMs},\n  author={Park, Sangwoo and Yeo, Woongyeong and Lee, Seanie and Choi, Yumin and Lee, Hyomin and Kim, Kangsan and Baek, Jinheon and Oh, Seong Joon and Hwang, Sung Ju},\n  journal={arXiv preprint arXiv:2605.20258},\n  year={2026}\n}",
+    "image": "pictures/sangwoo2026selfci.png",
+    "links": [],
+    "abstract": "Contextual Integrity (CI) defines privacy as governing information flows by contextual norms. LLMs deployed as personal agents remain unreliable at CI disclosure decisions, and existing mitigations degrade task utility. SELFCI is a self-distillation framework that decouples information suppression from task resolution. It jointly optimises two reverse KL divergences over distinct teacher distributions: one preserves task-relevant information, the other enforces minimal disclosure. The combination induces a Product-of-Experts target that aligns the policy with the intersection of capability and privacy. SELFCI outperforms competitive baselines such as GRPO without costly external supervision, and the gains extend to agentic workflows with accumulated private context.",
+    "rtai_tags": [
+      "PILM",
+      "LLMAG"
+    ]
+  },
+  {
+    "id": "seokwon2026meme",
+    "title": "MEME: Multi-entity & Evolving Memory Evaluation",
+    "authors": [
+      "seokwon_jung",
+      "alexander_rubinstein",
+      "arnas_uselis",
+      "sangdoo_yun",
+      "seong_joon_oh"
+    ],
+    "venue": "arXiv",
+    "year": "2026",
+    "url": "https://arxiv.org/abs/2605.12477",
+    "bibtex": "@article{seokwon2026meme,\n  title={MEME: Multi-entity \\& Evolving Memory Evaluation},\n  author={Jung, Seokwon and Rubinstein, Alexander and Uselis, Arnas and Yun, Sangdoo and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2605.12477},\n  year={2026}\n}",
+    "image": "pictures/seokwon2026meme.png",
+    "links": [
+      {
+        "text": "Project",
+        "url": "https://seokwonjung-jay.github.io/meme-eval/"
+      }
+    ],
+    "abstract": "LLM-based agents in persistent environments must store, update, and reason over information across sessions. Prior benchmarks evaluate only single-entity updates. MEME defines six tasks spanning the multi-entity and evolving axes, including three not scored by prior work: Cascade and Absence (dependency reasoning) and Deletion (post-removal state). Across six memory systems on 100 controlled episodes, all systems collapse on dependency reasoning (Cascade: 3%, Absence: 1% average accuracy) despite adequate static retrieval. Prompt optimisation, deeper retrieval, and stronger LLMs do not close this gap. Only a file-based agent paired with Claude Opus 4.7 partially closes it - at roughly 70x the baseline cost.",
+    "rtai_tags": [
+      "LLMAG"
+    ],
+    "workshops": [
+      "SCALE@ICML 2026 (Poster)"
+    ]
+  },
+  {
+    "id": "shuman2026clipgen",
+    "title": "CLIP Models Generalize Less Than Compositional Benchmarks Suggest",
+    "authors": [
+      "shuman_peng",
+      "arnas_uselis",
+      "darina_koishigarina",
+      "martin_ester",
+      "seong_joon_oh"
+    ],
+    "venue": "ICML 2026 Workshop CompLearn (Poster)",
+    "year": "2026",
+    "url": "https://openreview.net/forum?id=C8MlQkr4bw",
+    "bibtex": "@inproceedings{shuman2026clipgen,\n  title={CLIP Models Generalize Less Than Compositional Benchmarks Suggest},\n  author={Peng, Shuman and Uselis, Arnas and Koishigarina, Darina and Ester, Martin and Oh, Seong Joon},\n  booktitle={ICML 2026 Workshop on Compositional Learning: Safety, Interpretability, and Agents (CompLearn)},\n  year={2026}\n}",
+    "image": "pictures/shuman2026clipgen.png",
+    "links": [],
+    "abstract": "Compositional benchmarks may conflate generalisation to novel bindings with memorisation of bindings already seen during alignment training. A synthetic study with fully-seen, partially-unseen, and fully-unseen binding splits shows accuracy drops monotonically across nine CLIP backbones. On ARO VG-A, positive captions overlap COCO bindings nearly twice as often as their attribute-swapped negatives (79.8% vs. 41.8%); only 1.2% of samples have no COCO-overlapping bindings. Restricting evaluation to shortcut-free splits reorders leaderboards and flips model rankings on ARO VG-A, with broadly replicating drops on BiVLC and VisMin. Reported gains likely overstate how much CLIP has learned to bind.",
+    "rtai_tags": [
+      "CoGe",
+      "VLM"
+    ],
+    "workshops": [
+      "ICML 2026 Workshop on Combining Theory and Benchmarks (CTB)"
+    ]
+  },
+  {
     "id": "fabian2026saeft",
     "title": "Sparse Autoencoders enable Robust and Interpretable Fine-tuning of CLIP models",
     "authors": [
@@ -104,16 +184,16 @@ const publicationsData = [
   },
   {
     "id": "arnas2026necessary",
-    "title": "Necessary Conditions for Compositional Generalization of Embedding Models",
+    "title": "Compositional Generalization Requires Linear, Orthogonal Representations in Vision Embedding Models",
     "authors": [
       "arnas_uselis",
       "andrea_dittadi",
       "seong_joon_oh"
     ],
-    "venue": "ICML Spotlight",
+    "venue": "ICML Oral",
     "year": "2026",
     "url": "https://arxiv.org/abs/2602.24264",
-    "bibtex": "@inproceedings{arnas2026necessary,\n  title={Necessary Conditions for Compositional Generalization of Embedding Models},\n  author={Uselis, Arnas and Dittadi, Andrea and Oh, Seong Joon},\n  booktitle={International Conference on Machine Learning (ICML)},\n  year={2026}\n}",
+    "bibtex": "@inproceedings{arnas2026necessary,\n  title={Compositional Generalization Requires Linear, Orthogonal Representations in Vision Embedding Models},\n  author={Uselis, Arnas and Dittadi, Andrea and Oh, Seong Joon},\n  booktitle={International Conference on Machine Learning (ICML)},\n  year={2026}\n}",
     "image": "pictures/arnas2026necessary.png",
     "links": [
       {
@@ -141,7 +221,7 @@ const publicationsData = [
     ],
     "venue": "ICML Spotlight",
     "year": "2026",
-    "url": "",
+    "url": "https://arxiv.org/abs/2605.31503",
     "bibtex": "@inproceedings{arnas2026binding,\n  title={How can embedding models bind concepts?},\n  author={Uselis, Arnas and Koishigarina, Darina and Oh, Seong Joon},\n  booktitle={International Conference on Machine Learning (ICML)},\n  year={2026}\n}",
     "image": "pictures/arnas2026binding.png",
     "links": [],

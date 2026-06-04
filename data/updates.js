@@ -5,7 +5,7 @@ const updatesData = [
   {
     date: '2026-05-01',
     id: 'update-2026-05-01-icml26-acceptance',
-    html: "1 May 2026. 5 papers accepted @ ICML'26 (3 spotlights): <a href=\"#arnas2026necessary\">Necessary Conditions for Compositional Generalization</a> (spotlight), <a href=\"#hoyeon2026lpa\">Linear Propagation Assumption</a> (spotlight), <a href=\"#arnas2026binding\">Embedding Models Bind Concepts</a> (spotlight), <a href=\"#yujin2026diffusion\">Diffusion Multi-Object Generation</a>, <a href=\"#stefano2026implicit\">Universal Algorithm-Implicit Learning</a>."
+    html: "1 May 2026. 5 papers accepted @ ICML'26 (2 spotlights + 1 oral): <a href=\"#arnas2026necessary\">Compositional Generalization Requires Linear, Orthogonal Representations</a> (oral), <a href=\"#hoyeon2026lpa\">Linear Propagation Assumption</a> (spotlight), <a href=\"#arnas2026binding\">Embedding Models Bind Concepts</a> (spotlight), <a href=\"#yujin2026diffusion\">Diffusion Multi-Object Generation</a>, <a href=\"#stefano2026implicit\">Universal Algorithm-Implicit Learning</a>."
   },
   {
     date: '2026-04-26',

@@ -1050,6 +1050,66 @@ const authorsData = {
       "startYear": 2026,
       "endYear": null,
       "type": "master"
+    },
+    {
+      "id": "sangwoo_park",
+      "name": "Sangwoo Park",
+      "url": "https://www.linkedin.com/in/swgger",
+      "isMe": false
+    },
+    {
+      "id": "woongyeong_yeo",
+      "name": "Woongyeong Yeo",
+      "url": "https://www.linkedin.com/in/wgcyeo/",
+      "isMe": false
+    },
+    {
+      "id": "seanie_lee",
+      "name": "Seanie Lee",
+      "url": "https://seanie12.github.io/",
+      "isMe": false
+    },
+    {
+      "id": "yumin_choi",
+      "name": "Yumin Choi",
+      "url": "",
+      "isMe": false
+    },
+    {
+      "id": "hyomin_lee",
+      "name": "Hyomin Lee",
+      "url": "https://pwnhyo.kr/about/",
+      "isMe": false
+    },
+    {
+      "id": "kangsan_kim",
+      "name": "Kangsan Kim",
+      "url": "https://kangsankim07.github.io/",
+      "isMe": false
+    },
+    {
+      "id": "jinheon_baek",
+      "name": "Jinheon Baek",
+      "url": "https://jinheonbaek.github.io/",
+      "isMe": false
+    },
+    {
+      "id": "sung_ju_hwang",
+      "name": "Sung Ju Hwang",
+      "url": "http://www.sungjuhwang.com/",
+      "isMe": false
+    },
+    {
+      "id": "shuman_peng",
+      "name": "Shuman Peng",
+      "url": "https://sites.google.com/view/shumanp",
+      "isMe": false
+    },
+    {
+      "id": "martin_ester",
+      "name": "Martin Ester",
+      "url": "https://www.cs.sfu.ca/~ester/",
+      "isMe": false
     }
   ]
 };
