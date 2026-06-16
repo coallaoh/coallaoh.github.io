@@ -1110,6 +1110,39 @@ const authorsData = {
       "name": "Martin Ester",
       "url": "https://www.cs.sfu.ca/~ester/",
       "isMe": false
+    },
+    {
+      "id": "piotr_komorowski",
+      "name": "Piotr Komorowski",
+      "isMe": false
+    },
+    {
+      "id": "florian_klein",
+      "name": "Florian Klein",
+      "isMe": false
+    },
+    {
+      "id": "paula_engl",
+      "name": "Paula Engl",
+      "isMe": false
+    },
+    {
+      "id": "gabriele_sarti",
+      "name": "Gabriele Sarti",
+      "url": "https://gsarti.com/",
+      "isMe": false
+    },
+    {
+      "id": "sebastian_lapuschkin",
+      "name": "Sebastian Lapuschkin",
+      "url": "https://scholar.google.com/citations?user=wpLQuroAAAAJ&hl=en",
+      "isMe": false
+    },
+    {
+      "id": "wojciech_samek",
+      "name": "Wojciech Samek",
+      "url": "https://iphome.hhi.de/samek/",
+      "isMe": false
     }
   ]
 };

@@ -1,6 +1,31 @@
 // Publications data in JSON format
 const publicationsData = [
   {
+    "id": "evgenii2026futureprobes",
+    "title": "Predicting Future Behaviors in Reasoning Models Enables Better Steering",
+    "authors": [
+      "evgenii_kortukov",
+      "piotr_komorowski",
+      "florian_klein",
+      "paula_engl",
+      "gabriele_sarti",
+      "seong_joon_oh",
+      "sebastian_lapuschkin",
+      "wojciech_samek"
+    ],
+    "venue": "arXiv",
+    "year": "2026",
+    "url": "https://arxiv.org/abs/2606.11172",
+    "bibtex": "@article{evgenii2026futureprobes,\n  title={Predicting Future Behaviors in Reasoning Models Enables Better Steering},\n  author={Kortukov, Evgenii and Komorowski, Piotr and Klein, Florian and Engl, Paula and Sarti, Gabriele and Oh, Seong Joon and Lapuschkin, Sebastian and Samek, Wojciech},\n  journal={arXiv preprint arXiv:2606.11172},\n  year={2026}\n}",
+    "image": "pictures/evgenii2026futureprobes.png",
+    "links": [],
+    "abstract": "Deployed large reasoning models (LRMs) often behave unexpectedly. Test-time steering controls LRM outputs by intervening on their hidden representations, but it can degrade output quality. We argue that prior steering work implicitly relies on internal features that detect behavior in already generated text. We show that these detection features are poor predictors of future behavioral outcomes, and thus not the natural intervention target. Instead, we train activation probes to predict future behavior likelihoods from intermediate reasoning steps. These probes predict the most likely behavior with 64%-91% accuracy, revealing a separate type of internal prediction features. Building on these prediction features, we introduce a text-level steering method, Future Probe Controlled Generation. FPCG samples multiple candidate sentences and chooses the best one according to a probe predicting the future behavior likelihood. This enables steering with almost no output quality degradation. FPCG also enables steering in several evaluations where activation steering fails. These results show that distinguishing detection and prediction features enables a more nuanced approach to controlling LRM behaviors.",
+    "rtai_tags": [
+      "LRM",
+      "LLMSV"
+    ]
+  },
+  {
     "id": "sangwoo2026selfci",
     "title": "It Takes Two: Complementary Self-Distillation for Contextual Integrity in LLMs",
     "authors": [
