@@ -1,6 +1,33 @@
 // Publications data in JSON format
 const publicationsData = [
   {
+    "id": "elena2026muppet",
+    "title": "MuPPET: A Benchmark for Contextual Privacy of LLM Assistants in Multi-Party Conversations",
+    "authors": [
+      "elena_sofia_ruzzetti",
+      "cornelius_emde",
+      "sangdoo_yun",
+      "seong_joon_oh",
+      "martin_gubri"
+    ],
+    "venue": "arXiv",
+    "year": "2026",
+    "url": "https://arxiv.org/abs/2606.23217",
+    "bibtex": "@article{elena2026muppet,\n  title={MuPPET: A Benchmark for Contextual Privacy of LLM Assistants in Multi-Party Conversations},\n  author={Ruzzetti, Elena Sofia and Emde, Cornelius and Yun, Sangdoo and Oh, Seong Joon and Gubri, Martin},\n  journal={arXiv preprint arXiv:2606.23217},\n  year={2026}\n}",
+    "image": "pictures/elena2026muppet.png",
+    "links": [
+      {
+        "text": "Code",
+        "url": "https://github.com/elenasofia98/MuPPET"
+      }
+    ],
+    "abstract": "LLM agents are increasingly deployed in multi-party environments, handling sensitive personal data on behalf of individual users, for instance in group chats. When such an agent discloses private information, it reaches every group member at once. This risk is structurally harder to control than in one-to-one settings, as every piece of private information must be appropriate for every recipient in the group. Yet all existing contextual privacy benchmarks consider only single-interlocutor settings, leaving multi-party privacy risks unmeasured. We introduce MuPPET (Multi-Party Privacy Exposure Testing), a benchmark for contextual privacy in multi-party conversations. Our experiments show that models leak substantially more in multi-party settings than one-to-one evaluations suggest. Frontier models are vulnerable, and smaller open-weights models, often preferred for local deployment with sensitive data, even more so. Existing contextual privacy defences offer only partial protection, degrade utility, and do not resolve the underlying party-tracking problem.",
+    "rtai_tags": [
+      "PILM",
+      "LLMAG"
+    ]
+  },
+  {
     "id": "evgenii2026futureprobes",
     "title": "Predicting Future Behaviors in Reasoning Models Enables Better Steering",
     "authors": [
