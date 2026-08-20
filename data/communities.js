@@ -93,3 +93,29 @@ const communities = [
   { "acronym": "RTAI", "full_name": "ResearchTrend.AI" }
 ]
   
+
+// Coarse themes for the Research Communities chart. The order is fixed: it
+// sets both the stacking order and the colour slot, so adding a paper never
+// repaints the others. Slot 0 is the neutral bucket. A tag missing here falls
+// into Untagged, which is also where papers with no tags at all go.
+const communityThemes = [
+  { "name": "Generalisation and robustness", "slot": 1,
+    "tags": ["OOD", "CoGe", "TTA", "AAML"] },
+  { "name": "Vision and multimodal", "slot": 2,
+    "tags": ["VLM", "SSeg", "WSOL", "OCL", "DiffM", "CVBM", "MDE", "ObjD", "VOS", "VOT",
+           "3DV", "3DH", "3DPC", "3DGS", "SupR", "VGen", "MLLM", "MedIm"] },
+  { "name": "Privacy and data rights", "slot": 3,
+    "tags": ["PILM", "PICV", "TDI", "MIALM", "MU", "SILM", "AILaw"] },
+  { "name": "Uncertainty", "slot": 4,
+    "tags": ["UQCV", "UQLM", "UD", "BDL", "OODD"] },
+  { "name": "Language models and agents", "slot": 5,
+    "tags": ["LLMAG", "RALM", "ReLM", "LRM", "KELM", "LLMSV", "ALM", "HILM", "MoE",
+           "LMTD", "LM&Ro", "LM&MA"] },
+  { "name": "Evaluation and interpretability", "slot": 6,
+    "tags": ["ELM", "MLAU", "FAtt", "EGVM", "DRL", "CML"] },
+  { "name": "Learning and optimisation", "slot": 7,
+    "tags": ["ODL", "MoMe", "DD", "SyDa", "OnRL", "FedML", "AI4TS", "SSL", "CLL",
+           "NoLa", "MQ", "GAN", "GNN", "OT", "Mamba", "PINN", "OffRL", "FaML"] },
+  { "name": "Untagged", "slot": 0, "tags": [] }
+];
+

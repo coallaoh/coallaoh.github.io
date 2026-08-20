@@ -7,15 +7,43 @@ let communityTotalAreas = {};
 // Communities the reader has picked. Empty means no filter: everything shows.
 let selectedCommunities = [];
 
-// Helper function to find a community's full name from its acronym
-function getCommunityFullName(acronym) {
-  if (!Array.isArray(communities)) {
-    console.error('Communities data is not an array');
-    return acronym;
-  }
-  
-  const community = communities.find(comm => comm.acronym === acronym);
-  return community ? community.full_name : acronym;
+// Series colours by theme slot, stepped separately for the light and dark
+// surfaces. Slot 0 is the neutral bucket.
+const themePalette = {
+  0: { light: '#8e8898', dark: '#766f83' },
+  1: { light: '#2a78d6', dark: '#3987e5' },
+  2: { light: '#eb6834', dark: '#d95926' },
+  3: { light: '#1baf7a', dark: '#199e70' },
+  4: { light: '#eda100', dark: '#c98500' },
+  5: { light: '#e87ba4', dark: '#d55181' },
+  6: { light: '#008300', dark: '#008300' },
+  7: { light: '#4a3aa7', dark: '#9085e9' }
+};
+
+const UNTAGGED = 'Untagged';
+
+function isDarkMode() {
+  return document.documentElement.getAttribute('data-theme') === 'dark' ||
+         (window.matchMedia &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches &&
+          !document.documentElement.hasAttribute('data-theme'));
+}
+
+// Which theme a tag belongs to. Anything unmapped counts as untagged.
+function themeOf(tag) {
+  const theme = communityThemes.find(t => t.tags.includes(tag));
+  return theme ? theme.name : UNTAGGED;
+}
+
+// Theme names carry spaces, so element ids need a slug
+function themeId(name) {
+  return 'toggle-' + name.replace(/[^a-z0-9]+/gi, '-').toLowerCase();
+}
+
+function themeColor(name) {
+  const theme = communityThemes.find(t => t.name === name);
+  const slot = themePalette[theme ? theme.slot : 0];
+  return isDarkMode() ? slot.dark : slot.light;
 }
 
 // Function to generate topic trend visualization
@@ -75,28 +103,29 @@ function processPublicationData(publications) {
       yearCommunityMap[year] = {};
     }
     
-    // Handle papers with tags
+    // Handle papers with tags. Tags sharing a theme add up.
     if (pub.rtai_tags && pub.rtai_tags.length > 0) {
       const tagCount = pub.rtai_tags.length;
       // Calculate sum of weights (n, n-1, ..., 2, 1)
       const totalWeight = (tagCount * (tagCount + 1)) / 2;
       
-      // Assign weighted counts to each tag based on position
+      // Assign weighted counts to each theme based on tag position
       pub.rtai_tags.forEach((tag, index) => {
         // Weight is (n, n-1, ..., 2, 1) / sum based on position
         const weight = (tagCount - index) / totalWeight;
+        const theme = themeOf(tag);
         
-        if (!yearCommunityMap[year][tag]) {
-          yearCommunityMap[year][tag] = 0;
+        if (!yearCommunityMap[year][theme]) {
+          yearCommunityMap[year][theme] = 0;
         }
-        yearCommunityMap[year][tag] += weight;
+        yearCommunityMap[year][theme] += weight;
       });
     } else {
-      // No tags - count as "Unknown"
-      if (!yearCommunityMap[year]["Unknown"]) {
-        yearCommunityMap[year]["Unknown"] = 0;
+      // No tags at all
+      if (!yearCommunityMap[year][UNTAGGED]) {
+        yearCommunityMap[year][UNTAGGED] = 0;
       }
-      yearCommunityMap[year]["Unknown"] += 1;
+      yearCommunityMap[year][UNTAGGED] += 1;
     }
   });
   
@@ -116,35 +145,22 @@ async function createStackedBarChart(ctx, yearCommunityMap) {
     });
   });
   
-  const communities = Array.from(allCommunities);
+  // Themes in their declared order, dropping any with no papers
+  const communities = communityThemes
+    .map(theme => theme.name)
+    .filter(name => allCommunities.has(name));
   
-  // Calculate total area for each community
+  // Calculate total area for each theme
   communities.forEach(community => {
     communityTotalAreas[community] = years.reduce((total, year) => {
       return total + (yearCommunityMap[year][community] || 0);
     }, 0);
+    communityColors[community] = themeColor(community);
   });
   
-  // Generate community colors using hashColor
-  for (const community of communities) {
-    try {
-      // Use hashColor from js/publications.js
-      communityColors[community] = await hashColor(community);
-    } catch (error) {
-      console.error(`Error generating color for ${community}:`, error);
-      // Fallback color if hashColor fails
-      communityColors[community] = `hsl(${Math.floor(Math.random() * 360)}, 70%, 50%)`;
-    }
-  }
-  
-  // Sort communities by total area (descending) for initial ordering
-  communities.sort((a, b) => communityTotalAreas[b] - communityTotalAreas[a]);
-  
-  // Store the area-sorted communities for the legend and toggle buttons
+  // The declared order runs the legend and the stack alike
   const areaSortedCommunities = [...communities];
-  
-  // Reorder communities to separate similar colors for the chart
-  const reorderedCommunities = optimizeColorSeparation(communities);
+  const reorderedCommunities = [...communities];
   
   // Initialize visibility for all communities to true
   reorderedCommunities.forEach(community => {
@@ -195,10 +211,10 @@ async function createStackedBarChart(ctx, yearCommunityMap) {
               return '';
             },
             label: function(context) {
-              const acronym = context.dataset.label;
-              const fullName = getCommunityFullName(acronym);
-              const totalPapers = communityTotalAreas[acronym].toFixed(1);
-              return `${acronym}: ${fullName} (${totalPapers})`;
+              const theme = context.dataset.label;
+              const year = context.label;
+              const here = (context.parsed.y || 0).toFixed(1);
+              return `${theme}: ${here} in ${year}`;
             },
             labelColor: function(context) {
               return {
@@ -443,32 +459,26 @@ async function createCommunityToggles(communities) {
     
     const area = communityTotalAreas[community];
     
-    // First cell: Acronym tag toggle
+    // First cell: colour chip toggle
     const tagCell = document.createElement('td');
-    tagCell.style.cssText = 'padding:1px 5px;vertical-align:middle;width:80px;';
+    tagCell.style.cssText = 'padding:1px 5px;vertical-align:middle;width:26px;';
     
     // Create a checkbox but hide it visually
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
-    checkbox.id = `toggle-${community}`;
+    checkbox.id = themeId(community);
     checkbox.className = 'community-checkbox';
     checkbox.checked = true;
     checkbox.dataset.community = community;
     checkbox.style.display = 'none';
     
-    // Create the tag-like label
     const label = document.createElement('label');
-    label.htmlFor = `toggle-${community}`;
+    label.htmlFor = themeId(community);
     label.className = 'community-tag-label';
-    label.style.cssText = 'text-decoration:none;color:white;cursor:pointer;display:inline-block;';
+    label.style.cssText = 'cursor:pointer;display:inline-block;';
     
-    // Create the span for the tag
     const tagSpan = document.createElement('span');
-    tagSpan.className = 'inline-flex items-center rounded-full font-medium text-medium';
-    tagSpan.style.cssText = `background-color:${communityColors[community]};color:var(--community-tag-text-color);padding:1px 4px;border-radius:12px;font-family:Mukta,sans-serif;display:inline-block;`;
-    
-    // Add the community text
-    tagSpan.textContent = community;
+    tagSpan.style.cssText = `background-color:${communityColors[community]};width:13px;height:13px;border-radius:3px;display:inline-block;`;
     
     // Assemble components
     label.appendChild(tagSpan);
@@ -482,12 +492,12 @@ async function createCommunityToggles(communities) {
     countCell.textContent = area.toFixed(1);
     row.appendChild(countCell);
     
-    // Community full name with link
+    // Theme name
     const nameCell = document.createElement('td');
-    nameCell.style.cssText = 'padding:1px 15px 1px 5px;vertical-align:middle;max-width:220px;';
+    nameCell.style.cssText = 'padding:1px 15px 1px 5px;vertical-align:middle;max-width:280px;';
     
     const nameSpan = document.createElement('span');
-    nameSpan.textContent = getCommunityFullName(community);
+    nameSpan.textContent = community;
     nameSpan.style.cssText = 'color:var(--community-name-color);font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;';
 
     nameCell.appendChild(nameSpan);
@@ -566,19 +576,13 @@ function filterPublicationsByTags() {
       return;
     }
     
-    // Check if the publication has any of the selected community tags
+    // Themes this publication belongs to, via its acronym tags
     const pubTags = Array.from(pubElement.querySelectorAll('[data-community]'))
       .map(tag => tag.getAttribute('data-community'));
+    const pubThemes = pubTags.length ? pubTags.map(themeOf) : [UNTAGGED];
     
-    // Special case for "Unknown" - show papers with no community tags
-    if (selectedCommunities.includes('Unknown') && pubTags.length === 0) {
-      pubElement.style.display = 'flex';
-      visiblePublicationsCount++;
-      return;
-    }
-    
-    // Show or hide based on whether it has a selected tag
-    const isVisible = pubTags.some(tag => selectedCommunities.includes(tag));
+    // Show or hide based on whether it sits in a selected theme
+    const isVisible = pubThemes.some(theme => selectedCommunities.includes(theme));
     pubElement.style.display = isVisible ? 'flex' : 'none';
     if (isVisible) visiblePublicationsCount++;
   });
@@ -624,6 +628,15 @@ function updateChartTheme() {
     topicChart.options.scales.x.ticks.color = colors.textColor;
     topicChart.options.scales.y.ticks.color = colors.textColor;
     
+    // Series colours are stepped per surface, so they change with the theme
+    topicChart.data.datasets.forEach(dataset => {
+      communityColors[dataset.community] = themeColor(dataset.community);
+      dataset.originalColor = communityColors[dataset.community];
+      dataset.backgroundColor = communityVisibility[dataset.community] ?
+        dataset.originalColor : getUnselectedColor();
+      updateCheckboxState(dataset.community, communityVisibility[dataset.community]);
+    });
+    
     topicChart.update();
   }
 }
@@ -636,7 +649,7 @@ function getUnselectedColor() {
 
 // Update checkbox state and appearance
 function updateCheckboxState(community, isVisible) {
-  const checkbox = document.getElementById(`toggle-${community}`);
+  const checkbox = document.getElementById(themeId(community));
   if (checkbox) {
     checkbox.checked = isVisible;
     
@@ -650,122 +663,6 @@ function updateCheckboxState(community, isVisible) {
       }
     }
   }
-}
-
-// Function to optimize color separation in the stacked bar chart
-function optimizeColorSeparation(communities) {
-  if (communities.length <= 2) return communities;
-  
-  // Convert colors to HSL for better color distance calculation
-  const colorData = communities.map(community => {
-    const color = communityColors[community];
-    const hsl = colorToHSL(color);
-    return {
-      community,
-      color,
-      hsl,
-      area: communityTotalAreas[community]
-    };
-  });
-  
-  // Sort by area first (largest to smallest)
-  colorData.sort((a, b) => b.area - a.area);
-  
-  // Start with the largest community
-  const result = [colorData[0].community];
-  const used = new Set([colorData[0].community]);
-  
-  // Keep track of the last added color
-  let lastAddedHSL = colorData[0].hsl;
-  
-  // Add remaining communities one by one, always choosing the one with the most different color
-  while (used.size < communities.length) {
-    let bestIndex = -1;
-    let maxColorDistance = -1;
-    
-    // Find the community with the most different color from the last added one
-    for (let i = 0; i < colorData.length; i++) {
-      if (used.has(colorData[i].community)) continue;
-      
-      const colorDistance = calculateColorDistance(lastAddedHSL, colorData[i].hsl);
-      
-      if (colorDistance > maxColorDistance) {
-        maxColorDistance = colorDistance;
-        bestIndex = i;
-      }
-    }
-    
-    if (bestIndex !== -1) {
-      result.push(colorData[bestIndex].community);
-      used.add(colorData[bestIndex].community);
-      lastAddedHSL = colorData[bestIndex].hsl;
-    }
-  }
-  
-  return result;
-}
-
-// Helper function to convert color to HSL
-function colorToHSL(color) {
-  // Create a temporary div to use the browser's color parsing
-  const temp = document.createElement('div');
-  temp.style.color = color;
-  document.body.appendChild(temp);
-  const computedColor = window.getComputedStyle(temp).color;
-  document.body.removeChild(temp);
-  
-  // Parse the computed color
-  const rgbMatch = computedColor.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/);
-  if (!rgbMatch) return { h: 0, s: 0, l: 0 };
-  
-  const r = parseInt(rgbMatch[1]) / 255;
-  const g = parseInt(rgbMatch[2]) / 255;
-  const b = parseInt(rgbMatch[3]) / 255;
-  
-  const max = Math.max(r, g, b);
-  const min = Math.min(r, g, b);
-  let h, s, l = (max + min) / 2;
-  
-  if (max === min) {
-    h = s = 0; // achromatic
-  } else {
-    const d = max - min;
-    s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
-    
-    switch (max) {
-      case r: h = (g - b) / d + (g < b ? 6 : 0); break;
-      case g: h = (b - r) / d + 2; break;
-      case b: h = (r - g) / d + 4; break;
-    }
-    
-    h /= 6;
-  }
-  
-  return { h: h * 360, s: s * 100, l: l * 100 };
-}
-
-// Helper function to calculate color distance in HSL space
-function calculateColorDistance(hsl1, hsl2) {
-  // Weight hue more heavily than saturation and lightness
-  const hueWeight = 0.6;
-  const satWeight = 0.2;
-  const lightWeight = 0.2;
-  
-  // Normalize hue difference to [0, 180] range (half the hue circle)
-  const hueDiff = Math.min(
-    Math.abs(hsl1.h - hsl2.h),
-    360 - Math.abs(hsl1.h - hsl2.h)
-  );
-  
-  const satDiff = Math.abs(hsl1.s - hsl2.s);
-  const lightDiff = Math.abs(hsl1.l - hsl2.l);
-  
-  // Calculate weighted distance
-  return (
-    hueWeight * (hueDiff / 180) +
-    satWeight * (satDiff / 100) +
-    lightWeight * (lightDiff / 100)
-  );
 }
 
 // Initialize when the DOM is loaded
