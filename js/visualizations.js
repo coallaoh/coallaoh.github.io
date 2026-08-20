@@ -4,6 +4,8 @@ let chartData = null;
 let communityVisibility = {};
 let communityColors = {};
 let communityTotalAreas = {};
+// Communities the reader has picked. Empty means no filter: everything shows.
+let selectedCommunities = [];
 
 // Helper function to find a community's full name from its acronym
 function getCommunityFullName(acronym) {
@@ -250,8 +252,7 @@ async function createStackedBarChart(ctx, yearCommunityMap) {
           const datasetIndex = chartElement[0].datasetIndex;
           const community = this.data.datasets[datasetIndex].label;
           
-          const isCurrentlyVisible = communityVisibility[community];
-          toggleCommunityVisibility(community, !isCurrentlyVisible);
+          pickCommunity(community);
         }
       },
       onHover: (event, chartElement) => {
@@ -302,9 +303,6 @@ async function createStackedBarChart(ctx, yearCommunityMap) {
   
   // Create custom community filter toggles with areas shown, using area-sorted communities
   await createCommunityToggles(areaSortedCommunities);
-  
-  // Set up event listeners for toggle buttons
-  setupToggleButtons();
 }
 
 // Helper function to adjust color brightness
@@ -497,84 +495,48 @@ async function createCommunityToggles(communities) {
     
     // Add event listener for checkbox
     checkbox.addEventListener('change', () => {
-      tagSpan.style.backgroundColor = checkbox.checked ? 
-        communityColors[community] : getUnselectedColor();
-      toggleCommunityVisibility(community, checkbox.checked);
+      pickCommunity(community);
     });
   }
 }
 
-// Set up event listeners for select all / clear all buttons
-function setupToggleButtons() {
-  const selectAllBtn = document.getElementById('selectAllCommunities');
-  const clearAllBtn = document.getElementById('clearAllCommunities');
+// Pick a community. The first pick narrows to that community alone, later
+// picks add to the selection or drop out of it, and dropping the last one
+// clears the filter.
+function pickCommunity(community) {
+  const at = selectedCommunities.indexOf(community);
   
-  if (selectAllBtn) {
-    selectAllBtn.addEventListener('click', () => {
-      const checkboxes = document.querySelectorAll('.community-checkbox');
-      checkboxes.forEach(checkbox => {
-        const community = checkbox.dataset.community;
-        checkbox.checked = true;
-        toggleCommunityVisibility(community, true);
-        
-        // Update tag span background color
-        const label = checkbox.nextElementSibling;
-        if (label) {
-          const tagSpan = label.querySelector('span');
-          if (tagSpan && communityColors) {
-            tagSpan.style.backgroundColor = communityColors[community];
-          }
-        }
-      });
-      
-      filterPublicationsByTags();
-    });
+  if (selectedCommunities.length === 0) {
+    selectedCommunities = [community];
+  } else if (at === -1) {
+    selectedCommunities.push(community);
+  } else if (selectedCommunities.length > 1) {
+    selectedCommunities.splice(at, 1);
+  } else {
+    selectedCommunities = [];
   }
   
-  if (clearAllBtn) {
-    clearAllBtn.addEventListener('click', () => {
-      const checkboxes = document.querySelectorAll('.community-checkbox');
-      checkboxes.forEach(checkbox => {
-        const community = checkbox.dataset.community;
-        checkbox.checked = false;
-        toggleCommunityVisibility(community, false);
-        
-        // Update tag span to theme-aware gray
-        const label = checkbox.nextElementSibling;
-        if (label) {
-          const tagSpan = label.querySelector('span');
-          if (tagSpan) {
-            tagSpan.style.backgroundColor = getUnselectedColor();
-          }
-        }
-      });
-      
-      filterPublicationsByTags();
-    });
-  }
+  applySelection();
 }
 
-// Toggle visibility of a community in the chart
-function toggleCommunityVisibility(community, isVisible) {
+// Paint the chart and the toggles from the current selection, then filter
+// the publication list.
+function applySelection() {
   if (!topicChart || !chartData) return;
   
-  // Update visibility state
-  communityVisibility[community] = isVisible;
+  const filtered = selectedCommunities.length > 0;
   
-  // Update corresponding dataset visibility
-  const datasetIndex = topicChart.data.datasets.findIndex(dataset => dataset.community === community);
-  if (datasetIndex !== -1) {
-    topicChart.data.datasets[datasetIndex].backgroundColor = isVisible ?
-      communityColors[community] : getUnselectedColor();
-  }
+  Object.keys(communityVisibility).forEach(community => {
+    communityVisibility[community] = !filtered || selectedCommunities.includes(community);
+    updateCheckboxState(community, communityVisibility[community]);
+  });
   
-  // Update the chart
+  topicChart.data.datasets.forEach(dataset => {
+    dataset.backgroundColor = communityVisibility[dataset.community] ?
+      communityColors[dataset.community] : getUnselectedColor();
+  });
   topicChart.update();
   
-  // Update checkbox state and appearance
-  updateCheckboxState(community, isVisible);
-  
-  // Filter publications based on selected communities
   filterPublicationsByTags();
 }
 
