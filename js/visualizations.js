@@ -35,6 +35,21 @@ function themeOf(tag) {
   return theme ? theme.name : UNTAGGED;
 }
 
+// Themes a paper belongs to, in the declared order
+function themesFor(tags) {
+  return communityThemes
+    .filter(theme => tags.some(tag => theme.tags.includes(tag)))
+    .map(theme => theme.name);
+}
+
+// A paper's theme chip: a colour dot the chart shares, plus the short label
+function htmlThemeTag(name) {
+  const theme = communityThemes.find(t => t.name === name);
+  const dot = `<span class="community-chip-dot" style="background-color:${themeColor(name)};width:9px;height:9px;border-radius:2px;display:inline-block;"></span>`;
+  return `<span data-community="${name}" class="community-chip" title="${name}"
+    style="display:inline-flex;align-items:center;gap:5px;margin-right:10px;font-size:13px;">${dot}${theme.short}</span>`;
+}
+
 // Theme names carry spaces, so element ids need a slug
 function themeId(name) {
   return 'toggle-' + name.replace(/[^a-z0-9]+/gi, '-').toLowerCase();
@@ -60,18 +75,10 @@ async function generateTopicTrendsChart() {
     return;
   }
   
-  // Check if communities data is available
-  if (typeof communities === 'undefined') {
-    console.error('Communities data not found');
+  // Check if the theme table is available
+  if (typeof communityThemes === 'undefined') {
+    console.error('Community themes not found');
     console.log('Make sure data/communities.js is loaded');
-  } else {
-    console.log('Communities data loaded successfully:', communities.length, 'communities found');
-  }
-  
-  // Check if hashColor function is available
-  if (typeof hashColor !== 'function') {
-    console.error('hashColor function not found');
-    console.log('Make sure js/publications.js is loaded properly');
     return;
   }
 
@@ -577,9 +584,9 @@ function filterPublicationsByTags() {
     }
     
     // Themes this publication belongs to, via its acronym tags
-    const pubTags = Array.from(pubElement.querySelectorAll('[data-community]'))
+    const pubThemes = Array.from(pubElement.querySelectorAll('[data-community]'))
       .map(tag => tag.getAttribute('data-community'));
-    const pubThemes = pubTags.length ? pubTags.map(themeOf) : [UNTAGGED];
+    if (!pubThemes.length) pubThemes.push(UNTAGGED);
     
     // Show or hide based on whether it sits in a selected theme
     const isVisible = pubThemes.some(theme => selectedCommunities.includes(theme));
@@ -635,6 +642,11 @@ function updateChartTheme() {
       dataset.backgroundColor = communityVisibility[dataset.community] ?
         dataset.originalColor : getUnselectedColor();
       updateCheckboxState(dataset.community, communityVisibility[dataset.community]);
+    });
+    
+    document.querySelectorAll('.community-chip').forEach(chip => {
+      const dot = chip.querySelector('.community-chip-dot');
+      if (dot) dot.style.backgroundColor = themeColor(chip.getAttribute('data-community'));
     });
     
     topicChart.update();

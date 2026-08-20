@@ -6,11 +6,10 @@ async function renderPublication(publication) {
     `<span style="background-color:${getTagColor(tag)}">${tag}</span>`
   ).join('\n');
   
-  // Render RTAITags if they exist
+  // Render the research themes this paper belongs to
   let rtaiTagsHTML = '';
-  if (publication.rtai_tags) {
-    const rtaiTags = await Promise.all(publication.rtai_tags.map(tag => htmlCommunityTag(tag)));
-    rtaiTagsHTML = rtaiTags.join('\n');
+  if (publication.rtai_tags && publication.rtai_tags.length) {
+    rtaiTagsHTML = themesFor(publication.rtai_tags).map(htmlThemeTag).join('\n');
   }
   
   // Combine regular tags and RTAI tags
@@ -149,108 +148,6 @@ function selectAndCopyBibtex(event, id) {
   } catch (err) {
     console.error('Failed to copy BibTeX: ', err);
   }
-}
-
-class SimpleHasher {
-  constructor() {
-    this._data = "";
-  }
-
-  update(data) {
-    if (typeof data !== "string") {
-      throw new TypeError("Only string input supported");
-    }
-    this._data += data;
-    return this;
-  }
-
-  digest() {
-    // manual SHA-256 fixed for this use case
-    const buffer = new TextEncoder().encode(this._data);
-    return crypto.subtle.digest("SHA-256", buffer)
-      .then(digest => {
-        const view = new DataView(digest);
-        // read first 6 bytes manually
-        const firstSix = (view.getUint8(0) * 2 ** 40) +
-                         (view.getUint8(1) * 2 ** 32) +
-                         (view.getUint8(2) * 2 ** 24) +
-                         (view.getUint8(3) * 2 ** 16) +
-                         (view.getUint8(4) * 2 ** 8) +
-                         (view.getUint8(5));
-        return firstSix;
-      });
-  }
-}
-
-function createHash(algorithm) {
-  if (algorithm !== "sha256") {
-    throw new Error("Only sha256 supported");
-  }
-  return new SimpleHasher();
-}
-
-async function hashAcronym(value) {
-  const hasher = createHash("sha256").update(value ?? "");
-  // digest() returns a Promise that resolves to a hex string
-  const digest = await hasher.digest();
-  
-  // Convert the first 12 characters of the hex digest to an integer
-  const hexDigest = digest.toString(16).padStart(12, '0');
-  return parseInt(hexDigest.slice(0, 12), 16);
-}
-
-async function hashColor(acronym) {
-  const value = await hashAcronym(acronym);
-  const hue = value % 360;
-  const saturation = 40 + (value % 40);
-  const lightness = 40 + (40 - (value % 40));
-  return hslToHex(hue, saturation, lightness);
-}
-
-function hslToHex(h, s, l) {
-  s /= 100;
-  l /= 100;
-
-  const c = (1 - Math.abs(2 * l - 1)) * s;
-  const x = c * (1 - Math.abs(((h / 60) % 2) - 1));
-  const m = l - c / 2;
-
-  let r = 0,
-    g = 0,
-    b = 0;
-
-  if (0 <= h && h < 60) {
-    [r, g, b] = [c, x, 0];
-  } else if (60 <= h && h < 120) {
-    [r, g, b] = [x, c, 0];
-  } else if (120 <= h && h < 180) {
-    [r, g, b] = [0, c, x];
-  } else if (180 <= h && h < 240) {
-    [r, g, b] = [0, x, c];
-  } else if (240 <= h && h < 300) {
-    [r, g, b] = [x, 0, c];
-  } else if (300 <= h && h < 360) {
-    [r, g, b] = [c, 0, x];
-  }
-
-  const toHex = (n) => {
-    const hex = Math.round((n + m) * 255).toString(16);
-    return hex.length === 1 ? "0" + hex : hex;
-  };
-
-  return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
-}
-
-// async function getColor(category, level) {
-//   const baseHSL = await stringToHSL(category);
-//   return adjustLightness(baseHSL, level);
-// }
-
-async function htmlCommunityTag(acronym, putColor = true, additionalText = "") {
-  const color = putColor ? await hashColor(acronym) : '#CCCCCC';
-  return `<span data-community='${acronym}' class='inline-flex items-center rounded-full font-medium text-medium'
-    style='background-color: ${color}; color: var(--community-tag-text-color); padding: 1px 4px; border-radius: 12px; font-family: Mukta, sans-serif;'>
-    ${acronym}${additionalText}</span>`;
 }
 
 // Function to get color for tag

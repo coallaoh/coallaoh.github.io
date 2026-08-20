@@ -99,23 +99,23 @@ const communities = [
 // repaints the others. Slot 0 is the neutral bucket. A tag missing here falls
 // into Untagged, which is also where papers with no tags at all go.
 const communityThemes = [
-  { "name": "Generalisation and robustness", "slot": 1,
+  { "name": "Generalisation and robustness", "short": "Generalisation", "slot": 1,
     "tags": ["OOD", "CoGe", "TTA", "AAML"] },
-  { "name": "Vision and multimodal", "slot": 2,
+  { "name": "Vision and multimodal", "short": "Vision", "slot": 2,
     "tags": ["VLM", "SSeg", "WSOL", "OCL", "DiffM", "CVBM", "MDE", "ObjD", "VOS", "VOT",
            "3DV", "3DH", "3DPC", "3DGS", "SupR", "VGen", "MLLM", "MedIm"] },
-  { "name": "Privacy and data rights", "slot": 3,
+  { "name": "Privacy and data rights", "short": "Privacy", "slot": 3,
     "tags": ["PILM", "PICV", "TDI", "MIALM", "MU", "SILM", "AILaw"] },
-  { "name": "Uncertainty", "slot": 4,
+  { "name": "Uncertainty", "short": "Uncertainty", "slot": 4,
     "tags": ["UQCV", "UQLM", "UD", "BDL", "OODD"] },
-  { "name": "Language models and agents", "slot": 5,
+  { "name": "Language models and agents", "short": "Language models", "slot": 5,
     "tags": ["LLMAG", "RALM", "ReLM", "LRM", "KELM", "LLMSV", "ALM", "HILM", "MoE",
            "LMTD", "LM&Ro", "LM&MA"] },
-  { "name": "Evaluation and interpretability", "slot": 6,
+  { "name": "Evaluation and interpretability", "short": "Evaluation", "slot": 6,
     "tags": ["ELM", "MLAU", "FAtt", "EGVM", "DRL", "CML"] },
-  { "name": "Learning and optimisation", "slot": 7,
+  { "name": "Learning and optimisation", "short": "Learning", "slot": 7,
     "tags": ["ODL", "MoMe", "DD", "SyDa", "OnRL", "FedML", "AI4TS", "SSL", "CLL",
            "NoLa", "MQ", "GAN", "GNN", "OT", "Mamba", "PINN", "OffRL", "FaML"] },
-  { "name": "Untagged", "slot": 0, "tags": [] }
+  { "name": "Untagged", "short": "Untagged", "slot": 0, "tags": [] }
 ];
 
