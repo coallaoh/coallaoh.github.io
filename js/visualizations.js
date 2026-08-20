@@ -165,9 +165,10 @@ async function createStackedBarChart(ctx, yearCommunityMap) {
     communityColors[community] = themeColor(community);
   });
   
-  // The declared order runs the legend and the stack alike
+  // The legend follows the declared order; the stack runs the other way, so
+  // the last theme - Untagged - sits at the foot of each bar.
   const areaSortedCommunities = [...communities];
-  const reorderedCommunities = [...communities];
+  const reorderedCommunities = [...communities].reverse();
   
   // Initialize visibility for all communities to true
   reorderedCommunities.forEach(community => {
