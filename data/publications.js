@@ -555,10 +555,10 @@ const publicationsData = [
       "elisa_nguyen",
       "seong_joon_oh"
     ],
-    "venue": "ICML 2026 FoGen Workshop (Poster)",
+    "venue": "EMNLP Findings",
     "year": "2026",
     "url": "https://arxiv.org/abs/2510.27313",
-    "bibtex": "@article{philipp2026nonattrib,\n  title={LLM Generation Novelty Through the Lens of Semantic Similarity},\n  author={Davydov, Philipp and Prabhu, Ameya and Bethge, Matthias and Nguyen, Elisa and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2510.27313},\n  year={2025}\n}",
+    "bibtex": "@inproceedings{philipp2026nonattrib,\n  title={LLM Generation Novelty Through the Lens of Semantic Similarity},\n  author={Davydov, Philipp and Prabhu, Ameya and Bethge, Matthias and Nguyen, Elisa and Oh, Seong Joon},\n  year={2026},\n  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2026},\n}",
     "image": "pictures/philipp2026nonattrib.png",
     "links": [
       {
@@ -569,6 +569,9 @@ const publicationsData = [
     "abstract": "How much of a model's answer is truly new versus recalled? We introduce un-attributability: a simple test that flags outputs with no close match in the pretraining corpus. A two-stage pipeline (fast GIST retrieval plus ColBERTv2 reranking) checks nearby contexts against a human reference. On SmolLM and SmolLM2, we uncover longer-range training influences than expected, domain-specific patterns in novelty, and a boost from instruction tuning.",
     "rtai_tags": [
       "TDI"
+    ],
+    "workshops": [
+      "ICML 2026 Workshop on Foundations of Generative Models (FoGen)"
     ]
   },
   {

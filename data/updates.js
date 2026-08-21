@@ -3,6 +3,11 @@
 // The FE will render the latest 5 items.
 const updatesData = [
   {
+    date: '2026-08-21',
+    id: 'update-2026-08-21-emnlp26-acceptance',
+    html: "21 August 2026. 1 paper accepted @ EMNLP'26 Findings: <a href=\"#philipp2026nonattrib\">LLM Generation Novelty Through the Lens of Semantic Similarity</a>."
+  },
+  {
     date: '2026-05-01',
     id: 'update-2026-05-01-icml26-acceptance',
     html: "1 May 2026. 5 papers accepted @ ICML'26 (2 spotlights + 1 oral): <a href=\"#arnas2026necessary\">Compositional Generalization Requires Linear, Orthogonal Representations</a> (oral), <a href=\"#hoyeon2026lpa\">Linear Propagation Assumption</a> (spotlight), <a href=\"#arnas2026binding\">Embedding Models Bind Concepts</a> (spotlight), <a href=\"#yujin2026diffusion\">Diffusion Multi-Object Generation</a>, <a href=\"#stefano2026implicit\">Universal Algorithm-Implicit Learning</a>."
