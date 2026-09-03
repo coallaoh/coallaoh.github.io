@@ -890,7 +890,7 @@ const authorsData = {
       "isMe": false,
       "startYear": 2026,
       "endYear": null,
-      "type": "intern"
+      "type": "phd"
     },
     {
       "id": "luca_fuger",
@@ -1025,6 +1025,96 @@ const authorsData = {
       "type": "phd"
     },
     {
+      "id": "hyeonbin_hwang",
+      "name": "Hyeonbin Hwang",
+      "url": "",
+      "isMe": false,
+      "startYear": 2026,
+      "endYear": null,
+      "type": "phd"
+    },
+    {
+      "id": "ji_hwan_lim",
+      "name": "Ji Hwan Lim",
+      "url": "",
+      "isMe": false,
+      "startYear": 2025,
+      "endYear": null,
+      "type": "phd"
+    },
+    {
+      "id": "yerang_kim",
+      "name": "Yerang Kim",
+      "url": "",
+      "isMe": false,
+      "startYear": 2026,
+      "endYear": null,
+      "type": "master"
+    },
+    {
+      "id": "dohyun_kim",
+      "name": "Dohyun Kim",
+      "url": "",
+      "isMe": false,
+      "startYear": 2026,
+      "endYear": null,
+      "type": "master"
+    },
+    {
+      "id": "viacheslav_sinii",
+      "name": "Viacheslav Sinii",
+      "url": "",
+      "isMe": false,
+      "startYear": 2026,
+      "endYear": null,
+      "type": "master"
+    },
+    {
+      "id": "seungwon_park",
+      "name": "Seungwon Park",
+      "url": "",
+      "isMe": false,
+      "startYear": 2026,
+      "endYear": null,
+      "type": "intern"
+    },
+    {
+      "id": "sunghyun_park",
+      "name": "Sunghyun Park",
+      "url": "",
+      "isMe": false,
+      "startYear": 2026,
+      "endYear": null,
+      "type": "intern"
+    },
+    {
+      "id": "junho_jeong",
+      "name": "Junho Jeong",
+      "url": "",
+      "isMe": false,
+      "startYear": 2026,
+      "endYear": null,
+      "type": "intern"
+    },
+    {
+      "id": "daeun_park",
+      "name": "Daeun Park",
+      "url": "",
+      "isMe": false,
+      "startYear": 2026,
+      "endYear": null,
+      "type": "intern"
+    },
+    {
+      "id": "sam_lee",
+      "name": "Sam Lee",
+      "url": "",
+      "isMe": false,
+      "startYear": 2026,
+      "endYear": null,
+      "type": "intern"
+    },
+    {
       "id": "yunjae_won",
       "name": "Yunjae Won",
       "url": "https://yunjae-won.github.io/",
@@ -1055,7 +1145,10 @@ const authorsData = {
       "id": "sangwoo_park",
       "name": "Sangwoo Park",
       "url": "https://www.linkedin.com/in/swgger",
-      "isMe": false
+      "isMe": false,
+      "startYear": 2026,
+      "endYear": null,
+      "type": "phd"
     },
     {
       "id": "woongyeong_yeo",
@@ -1103,7 +1196,10 @@ const authorsData = {
       "id": "shuman_peng",
       "name": "Shuman Peng",
       "url": "https://sites.google.com/view/shumanp",
-      "isMe": false
+      "isMe": false,
+      "startYear": 2026,
+      "endYear": null,
+      "type": "phd"
     },
     {
       "id": "martin_ester",
