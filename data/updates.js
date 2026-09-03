@@ -5,7 +5,7 @@ const updatesData = [
   {
     date: '2026-09-04',
     id: 'update-2026-09-04-nowdo-launch',
-    html: "4 September 2026. <a href=\"https://nowdo.ai\">NowDo</a> is out on web and iPhone. An assistant that plans your day, and asks before it moves anything."
+    html: "4 September 2026. <a href=\"https://nowdo.ai\">NowDo</a> is out on web and iPhone. AI plans your day, and your feedback builds the app."
   },
   {
     date: '2026-08-21',
