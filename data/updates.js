@@ -3,6 +3,11 @@
 // The FE will render the latest 5 items.
 const updatesData = [
   {
+    date: '2026-09-04',
+    id: 'update-2026-09-04-nowdo-launch',
+    html: "4 September 2026. <a href=\"https://nowdo.ai\">NowDo</a> is out on web and iPhone. AI plans your day, and your feedback builds the app."
+  },
+  {
     date: '2026-08-21',
     id: 'update-2026-08-21-emnlp26-acceptance',
     html: "21 August 2026. 1 paper accepted @ EMNLP'26 Findings: <a href=\"#philipp2026nonattrib\">LLM Generation Novelty Through the Lens of Semantic Similarity</a>."
