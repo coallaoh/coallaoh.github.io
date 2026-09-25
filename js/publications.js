@@ -87,7 +87,7 @@ async function renderPublication(publication) {
   return `
     <div class="row common-rows">
       <div class="col-xs-12 col-sm-3 left-column">
-          <img src="${publication.image}" alt="${publication.id}" class="paper-images">
+          <img src="${publication.image}" alt="${(publication.image_alt || publication.title).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;')}" class="paper-images">
       </div>
       <div class="col-xs-12 col-sm-9 right-column">
         ${allTagsHTML}

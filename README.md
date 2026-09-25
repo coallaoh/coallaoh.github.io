@@ -6,7 +6,7 @@ Publications are now managed through a separate data file (`data/publications.js
 
 ### How to Add a New Publication
 
-1. Add the new publication entry to the `publicationsData` array in `data/publications.js`. You can:
+1. Add the new publication entry at the top of the `publicationsData` array in `data/publications.js`. When an existing preprint is accepted, move it (or the whole accepted batch) to the top too. Within each year, the displayed order follows this array. You can:
    - Manually add a new entry in the JSON format
    - Use the helper script to generate the JSON format: `python3 scripts/convert_to_json.py > new_publication.json`
    - Then copy the output and add it to the array in `data/publications.js`
@@ -42,7 +42,7 @@ Each publication entry should follow this format:
     {"text": "Code", "url": "https://github.com/username/repo"},
     {"text": "Project", "url": "https://project-website.com"}
   ],
-  "abstract": "Paper abstract goes here...",
+  "abstract": "A short, friendly explanation of the problem, contribution and why it matters.",
   "tags": ["Tag1", "Tag2"]
 }
 ```
