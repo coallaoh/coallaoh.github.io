@@ -1,6 +1,88 @@
 // Publications data in JSON format
 const publicationsData = [
   {
+    "id": "sangwoo2026selfci",
+    "title": "It Takes Two: Complementary Self-Distillation for Contextual Integrity in LLMs",
+    "authors": [
+      "sangwoo_park",
+      "woongyeong_yeo",
+      "yumin_choi",
+      "hyomin_lee",
+      "kangsan_kim",
+      "seanie_lee",
+      "jinheon_baek",
+      "seong_joon_oh",
+      "sung_ju_hwang"
+    ],
+    "venue": "NeurIPS (Poster)",
+    "year": "2026",
+    "url": "https://arxiv.org/abs/2605.20258",
+    "bibtex": "@inproceedings{sangwoo2026selfci,\n  title={It Takes Two: Complementary Self-Distillation for Contextual Integrity in LLMs},\n  author={Park, Sangwoo and Yeo, Woongyeong and Choi, Yumin and Lee, Hyomin and Kim, Kangsan and Lee, Seanie and Baek, Jinheon and Oh, Seong Joon and Hwang, Sung Ju},\n  booktitle={Advances in Neural Information Processing Systems},\n  year={2026}\n}",
+    "image": "pictures/sangwoo2026selfci-summary.svg",
+    "links": [],
+    "abstract": "An AI assistant should use the information it needs without sharing private details unnecessarily. We train it with two teachers: one focuses on the task, the other on privacy. This helps the assistant keep useful information and limit disclosure, even as private context builds up across its work.",
+    "rtai_tags": [
+      "PILM",
+      "LLMAG"
+    ],
+    "image_alt": "Two teachers guide one assistant: task usefulness and privacy"
+  },
+  {
+    "id": "bora2026halftruths",
+    "title": "Half-Truths Break Similarity-Based Retrieval",
+    "authors": [
+      "bora_kargi",
+      "arnas_uselis",
+      "seong_joon_oh"
+    ],
+    "venue": "NeurIPS (Poster)",
+    "year": "2026",
+    "url": "https://arxiv.org/abs/2602.23906",
+    "bibtex": "@inproceedings{bora2026halftruths,\n  title={Half-Truths Break Similarity-Based Retrieval},\n  author={Kargi, Bora and Uselis, Arnas and Oh, Seong Joon},\n  booktitle={Advances in Neural Information Processing Systems},\n  year={2026}\n}",
+    "image": "pictures/bora2026halftruths-summary.svg",
+    "links": [
+      {
+        "text": "Code",
+        "url": "https://github.com/kargibora/CS-CLIP"
+      }
+    ],
+    "abstract": "Adding a wrong detail to an otherwise correct image description should make it a worse match. CLIP often does the opposite. We teach it to check the individual objects and relationships in a caption, rather than just the whole sentence. This helps it reject half-truths and better understand how the parts of a scene fit together.",
+    "rtai_tags": [
+      "CoGe",
+      "VLM"
+    ],
+    "image_alt": "A correct description becomes a half-truth when a false object is added"
+  },
+  {
+    "id": "seokwon2026meme",
+    "title": "MEME: Multi-Entity & Evolving Memory Evaluation",
+    "authors": [
+      "seokwon_jung",
+      "alexander_rubinstein",
+      "arnas_uselis",
+      "sangdoo_yun",
+      "seong_joon_oh"
+    ],
+    "venue": "NeurIPS Evaluations and Datasets Track (Poster)",
+    "year": "2026",
+    "url": "https://arxiv.org/abs/2605.12477",
+    "bibtex": "@inproceedings{seokwon2026meme,\n  title={MEME: Multi-Entity \\& Evolving Memory Evaluation},\n  author={Jung, Seokwon and Rubinstein, Alexander and Uselis, Arnas and Yun, Sangdoo and Oh, Seong Joon},\n  booktitle={NeurIPS Evaluations and Datasets Track},\n  year={2026}\n}",
+    "image": "pictures/seokwon2026meme.png",
+    "links": [
+      {
+        "text": "Project",
+        "url": "https://seokwonjung-jay.github.io/meme-eval/"
+      }
+    ],
+    "abstract": "An AI assistant's memory needs to do more than recall a fact. When people, plans or relationships change, it must also work out what is no longer true. MEME tests these abilities across multiple entities and updates. Current memory systems struggle most with the consequences of a change, even when they can retrieve individual facts.",
+    "rtai_tags": [
+      "LLMAG"
+    ],
+    "workshops": [
+      "SCALE@ICML 2026 (Poster)"
+    ]
+  },
+  {
     "id": "uselis2026crisp",
     "title": "CRISP: Compositional Reasoning over Images via Stackable Programs for VLMs",
     "authors": [
@@ -77,61 +159,6 @@ const publicationsData = [
     ]
   },
   {
-    "id": "sangwoo2026selfci",
-    "title": "It Takes Two: Complementary Self-Distillation for Contextual Integrity in LLMs",
-    "authors": [
-      "sangwoo_park",
-      "woongyeong_yeo",
-      "yumin_choi",
-      "hyomin_lee",
-      "kangsan_kim",
-      "seanie_lee",
-      "jinheon_baek",
-      "seong_joon_oh",
-      "sung_ju_hwang"
-    ],
-    "venue": "NeurIPS (Poster)",
-    "year": "2026",
-    "url": "https://arxiv.org/abs/2605.20258",
-    "bibtex": "@inproceedings{sangwoo2026selfci,\n  title={It Takes Two: Complementary Self-Distillation for Contextual Integrity in LLMs},\n  author={Park, Sangwoo and Yeo, Woongyeong and Choi, Yumin and Lee, Hyomin and Kim, Kangsan and Lee, Seanie and Baek, Jinheon and Oh, Seong Joon and Hwang, Sung Ju},\n  booktitle={Advances in Neural Information Processing Systems},\n  year={2026}\n}",
-    "image": "pictures/sangwoo2026selfci.png",
-    "links": [],
-    "abstract": "Teaching an LLM to keep secrets usually makes it worse at its job, because hiding information and solving the task pull in opposite directions. SELFCI separates the two with self-distillation from two teachers: one keeps what the task needs, the other strips what privacy forbids. Their product places the model at the intersection of capability and privacy. It beats reinforcement-learning baselines with no external supervision, and holds up as private context accumulates across an agent's work.",
-    "rtai_tags": [
-      "PILM",
-      "LLMAG"
-    ]
-  },
-  {
-    "id": "seokwon2026meme",
-    "title": "MEME: Multi-Entity & Evolving Memory Evaluation",
-    "authors": [
-      "seokwon_jung",
-      "alexander_rubinstein",
-      "arnas_uselis",
-      "sangdoo_yun",
-      "seong_joon_oh"
-    ],
-    "venue": "NeurIPS Evaluations and Datasets Track (Poster)",
-    "year": "2026",
-    "url": "https://arxiv.org/abs/2605.12477",
-    "bibtex": "@inproceedings{seokwon2026meme,\n  title={MEME: Multi-Entity \\& Evolving Memory Evaluation},\n  author={Jung, Seokwon and Rubinstein, Alexander and Uselis, Arnas and Yun, Sangdoo and Oh, Seong Joon},\n  booktitle={NeurIPS Evaluations and Datasets Track},\n  year={2026}\n}",
-    "image": "pictures/seokwon2026meme.png",
-    "links": [
-      {
-        "text": "Project",
-        "url": "https://seokwonjung-jay.github.io/meme-eval/"
-      }
-    ],
-    "abstract": "LLM-based agents in persistent environments must store, update, and reason over information across sessions. Prior benchmarks evaluate only single-entity updates. MEME defines six tasks spanning the multi-entity and evolving axes, including three not scored by prior work: Cascade and Absence (dependency reasoning) and Deletion (post-removal state). Across six memory systems on 100 controlled episodes, all systems collapse on dependency reasoning (Cascade: 3%, Absence: 1% average accuracy) despite adequate static retrieval. Prompt optimisation, deeper retrieval, and stronger LLMs do not close this gap. Only a file-based agent paired with Claude Opus 4.7 partially closes it - at roughly 70x the baseline cost.",
-    "rtai_tags": [
-      "LLMAG"
-    ],
-    "workshops": [
-      "SCALE@ICML 2026 (Poster)"
-    ]
-  },
-  {
     "id": "shuman2026clipgen",
     "title": "CLIP Models Generalize Less Than Compositional Benchmarks Suggest",
     "authors": [
@@ -147,7 +174,7 @@ const publicationsData = [
     "bibtex": "@inproceedings{shuman2026clipgen,\n  title={CLIP Models Generalize Less Than Compositional Benchmarks Suggest},\n  author={Peng, Shuman and Uselis, Arnas and Koishigarina, Darina and Ester, Martin and Oh, Seong Joon},\n  booktitle={ICML 2026 Workshop on Compositional Learning: Safety, Interpretability, and Agents (CompLearn)},\n  year={2026}\n}",
     "image": "pictures/shuman2026clipgen.png",
     "links": [],
-    "abstract": "Compositional benchmarks may conflate generalisation to novel bindings with memorisation of bindings already seen during alignment training. A synthetic study with fully-seen, partially-unseen, and fully-unseen binding splits shows accuracy drops monotonically across nine CLIP backbones. On ARO VG-A, positive captions overlap COCO bindings nearly twice as often as their attribute-swapped negatives (79.8% vs. 41.8%); only 1.2% of samples have no COCO-overlapping bindings. Restricting evaluation to shortcut-free splits reorders leaderboards and flips model rankings on ARO VG-A, with broadly replicating drops on BiVLC and VisMin. Reported gains likely overstate how much CLIP has learned to bind.",
+    "abstract": "Does a vision-language model understand a new combination of familiar objects and attributes, or has it seen that combination before? We find that common benchmarks often mix these cases. When we remove familiar combinations and other shortcuts, performance drops and model rankings change. Existing scores can therefore overstate how well models understand new combinations.",
     "rtai_tags": [
       "CoGe",
       "VLM"
@@ -176,7 +203,7 @@ const publicationsData = [
         "url": "https://github.com/Fabian-Mor/sae-ft"
       }
     ],
-    "abstract": "Fine-tuning CLIP often improves downstream accuracy at the cost of robustness to distribution shifts. SAE-FT regularises changes to visual representations by penalising the addition or removal of semantically meaningful features identified by a Sparse Autoencoder trained on the pre-trained model. This prevents catastrophic forgetting and exposes interpretable semantic changes during fine-tuning. The method matches or exceeds state-of-the-art on ImageNet and its distribution-shift benchmarks, while remaining computationally efficient.",
+    "abstract": "Adapting CLIP to a new task can make it less reliable on unfamiliar images. SAE-FT tracks meaningful visual features and limits how much fine-tuning changes them. This helps the model learn the new task without losing useful knowledge, and makes the changes easier to inspect.",
     "rtai_tags": [
       "VLM"
     ]
@@ -202,21 +229,22 @@ const publicationsData = [
     "year": "2026",
     "url": "https://arxiv.org/abs/2603.08835",
     "bibtex": "@inproceedings{cornelius2026maseval,\n  title={MASEval: Extending Multi-Agent Evaluation from Models to Systems},\n  author={Emde, Cornelius and Rubinstein, Alexander and Goel, Anmol and Heakl, Ahmed and Yun, Sangdoo and Oh, Seong Joon and Gubri, Martin},\n  booktitle={Proceedings of the Annual Meeting of the Association for Computational Linguistics: System Demonstration Track},\n  year={2026}\n}",
-    "image": "pictures/cornelius2026maseval.png",
+    "image": "pictures/cornelius2026maseval-summary.svg",
     "links": [
       {
         "text": "Code",
         "url": "https://github.com/parameterlab/MASEval"
       }
     ],
-    "abstract": "Existing benchmarks for LLM-based agentic systems are model-centric, fixing the agentic setup without comparing system components like harness engineering choices. MASEval is a framework-agnostic evaluation library that treats the entire agent system as the unit of analysis. Through the first systematic system-level comparison across 3 benchmarks, 3 models, and 3 frameworks, we find that framework choice impacts performance comparably to model choice within a capability tier.",
+    "abstract": "An AI agent's performance depends on more than its language model. The framework, tools and surrounding code matter too. MASEval compares complete agent systems across different tasks. We find that the choice of framework can affect results as much as the choice between similarly capable models.",
     "rtai_tags": [
       "LLMAG",
       "ELM"
     ],
     "workshops": [
       "GEM 2026 Workshop on Natural Language Generation, Evaluation, and Metrics"
-    ]
+    ],
+    "image_alt": "Compare complete agent systems, not only the language model"
   },
   {
     "id": "emde2026lostcomm",
@@ -231,13 +259,14 @@ const publicationsData = [
     "venue": "ICML 2026 Workshop AgenticUQ (Poster)",
     "year": "2026",
     "bibtex": "@inproceedings{emde2026lostcomm,\n  title={Lost in Communication: Uncertainty Propagation in Multi-Agent Systems},\n  author={Emde, Cornelius and Goel, Anmol and Yun, Sangdoo and Oh, Seong Joon and Gubri, Martin},\n  booktitle={ICML 2026 Workshop on Statistical Frameworks for Uncertainty in Agentic Systems (AgenticUQ)},\n  year={2026}\n}",
-    "image": "pictures/emde2026lostcomm.png",
+    "image": "pictures/emde2026lostcomm-summary.svg",
     "links": [],
-    "abstract": "In multi-agent LLM systems each agent's decisions depend on information produced by another, yet existing uncertainty quantification only measures a model's confidence in its own output. We expose a failure mode we call vanishing uncertainty: the uncertainty signal attenuates between the producing agent and the consuming agent. Across three open-weight models and tasks spanning parametric knowledge, magnitude estimation, and tool use, orchestrator and subagent uncertainties correlate weakly even when the relayed content is fixed - showing that uncertainty propagation in multi-agent systems is a distinct problem from single-model UQ.",
+    "abstract": "When one AI agent passes an answer to another, does it also pass on its uncertainty? We find that doubts can fade along the way: the receiving agent may not reflect how uncertain the original answer was. This makes confidence across a team of agents a separate problem from confidence within a single model.",
     "rtai_tags": [
       "LLMAG",
       "UQLM"
-    ]
+    ],
+    "image_alt": "Uncertainty can disappear when one agent passes an answer to another"
   },
   {
     "id": "kim2026breakgeom",
@@ -253,7 +282,7 @@ const publicationsData = [
     "bibtex": "@inproceedings{kim2026breakgeom,\n  title={Break the Output Geometry for Large Language Model Unlearning},\n  author={Kim, Yejin and Shen, William F. and Jung, Seokwon and Oh, Seong Joon},\n  booktitle={ICML 2026 Workshop on Memory in Foundation Models (MemFM)},\n  year={2026}\n}",
     "image": "pictures/kim2026breakgeom.png",
     "links": [],
-    "abstract": "Current LLM unlearning methods face a persistent trade-off between forget effectiveness and retained-context utility. We trace this to two findings: layer-wise logit accumulation toward a target token depends more on the output token than on the input query, and hidden states producing the same token vary only along directions orthogonal to its unembedding row $u_k$ - the same-output plane. Break the Output Geometry (BOG) preserves this plane while displacing the forget input along $u_k$ by a margin derived from cross-output statistics, achieving a superior forget-retain trade-off on TOFU.",
+    "abstract": "Teaching a language model to forget selected information can also damage what it should remember. We study how answers are represented inside the model and identify a direction that controls a target output. Our method moves the information to forget along this direction, which improves the balance between forgetting and useful retained knowledge.",
     "rtai_tags": [
       "MU"
     ]
@@ -277,7 +306,7 @@ const publicationsData = [
         "url": "https://github.com/oshapio/necessary-compositionality"
       }
     ],
-    "abstract": "What geometry must representations have for compositional generalization? We formalise three desiderata and show they force linear, orthogonal decompositions. This gives theoretical grounding for the Linear Representation Hypothesis. Empirically, modern vision models show partial linear factorisation that correlates with compositional generalization on unseen combinations.",
+    "abstract": "How should a vision model represent familiar concepts so that it can recognise new combinations of them? We show that a set of requirements for this ability implies a particular structure: concepts must combine linearly along independent directions. Modern vision models partly follow this structure, and stronger structure goes with better performance on unseen combinations.",
     "rtai_tags": [
       "CoGe",
       "VLM"
@@ -301,32 +330,7 @@ const publicationsData = [
     "bibtex": "@inproceedings{arnas2026binding,\n  title={How can embedding models bind concepts?},\n  author={Uselis, Arnas and Koishigarina, Darina and Oh, Seong Joon},\n  booktitle={International Conference on Machine Learning (ICML)},\n  year={2026}\n}",
     "image": "pictures/arnas2026binding.png",
     "links": [],
-    "abstract": "Vision-language models like CLIP struggle to bind concepts, such as which colour belongs to which shape. We study this through the binding function that maps concepts to scene embeddings. Scene embeddings decompose additively into object representations, but CLIP's binding function is high-complexity and fails to generalize. In controlled transformers trained from scratch, binding generalization emerges with sufficient data coverage, yielding low-complexity multiplicative interactions between concepts.",
-    "rtai_tags": [
-      "CoGe",
-      "VLM"
-    ]
-  },
-  {
-    "id": "bora2026halftruths",
-    "title": "Half-Truths Break Similarity-Based Retrieval",
-    "authors": [
-      "bora_kargi",
-      "arnas_uselis",
-      "seong_joon_oh"
-    ],
-    "venue": "NeurIPS (Poster)",
-    "year": "2026",
-    "url": "https://arxiv.org/abs/2602.23906",
-    "bibtex": "@inproceedings{bora2026halftruths,\n  title={Half-Truths Break Similarity-Based Retrieval},\n  author={Kargi, Bora and Uselis, Arnas and Oh, Seong Joon},\n  booktitle={Advances in Neural Information Processing Systems},\n  year={2026}\n}",
-    "image": "pictures/bora2026halftruths.png",
-    "links": [
-      {
-        "text": "Code",
-        "url": "https://github.com/kargibora/CS-CLIP"
-      }
-    ],
-    "abstract": "Appending a plausible but incorrect detail to a correct description can increase CLIP's similarity score. On COCO, CLIP prefers the correct shorter description only 40.6% of the time. We propose CS-CLIP, which decomposes captions into entity and relation units and fine-tunes the model to score correct units above foils. This raises half-truth accuracy to 69.3% and improves compositional benchmarks by 5.7 points.",
+    "abstract": "Recognising a colour and a shape is not enough: a model must know which colour belongs to which shape. We study how models combine these concepts in their image representations. CLIP struggles with new combinations, while controlled models can learn simpler, more reliable combinations when their training data covers enough examples.",
     "rtai_tags": [
       "CoGe",
       "VLM"
@@ -344,10 +348,11 @@ const publicationsData = [
     "year": "2026",
     "url": "https://arxiv.org/abs/2602.14761",
     "bibtex": "@inproceedings{stefano2026implicit,\n  title={Universal Algorithm-Implicit Learning},\n  author={Woerner, Stefano and Oh, Seong Joon and Baumgartner, Christian F.},\n  booktitle={International Conference on Machine Learning (ICML)},\n  year={2026}\n}",
-    "image": "pictures/stefano2026implicit.png",
+    "image": "pictures/stefano2026implicit-summary.svg",
     "links": [],
-    "abstract": "Meta-learning methods are typically constrained to narrow task distributions with fixed feature and label spaces. We introduce a theoretical framework that formally defines practical universality and present TAIL, a transformer-based meta-learner that works across varying domains, modalities, and label configurations. TAIL achieves state-of-the-art on few-shot benchmarks while generalising to unseen domains and modalities.",
-    "rtai_tags": []
+    "abstract": "A model that learns how to learn should cope with more than one fixed kind of task. We develop a framework for this goal and introduce TAIL, a model that can handle different input types and label sets. It learns from a few examples and can transfer to new domains and kinds of data.",
+    "rtai_tags": [],
+    "image_alt": "One learner handles tasks with different inputs and labels"
   },
   {
     "id": "hoyeon2026lpa",
@@ -361,16 +366,17 @@ const publicationsData = [
     "year": "2026",
     "url": "https://arxiv.org/abs/2601.21601",
     "bibtex": "@inproceedings{hoyeon2026lpa,\n  title={Dynamics Reveals Structure: Challenging the Linear Propagation Assumption},\n  author={Chang, Hoyeon and Mucs\\'{a}nyi, B\\'{a}lint and Oh, Seong Joon},\n  booktitle={International Conference on Machine Learning (ICML)},\n  year={2026}\n}",
-    "image": "pictures/hoyeon2026lpa.png",
+    "image": "pictures/hoyeon2026lpa-summary.svg",
     "links": [],
-    "abstract": "Many methods assume local edits propagate linearly to related facts. We show this hits fundamental geometric walls. For negation and converse, propagation demands specific tensor structures. For composition, it reduces to conjunction, but any linear conjunction conflicts with negation. These limits may explain why knowledge editing, the reversal curse, and multi-hop reasoning often fail.",
+    "abstract": "If we change one fact inside a model, should related facts change too? Many methods assume that these changes can spread through simple linear operations. We show why relationships such as negation and chains of facts can make that impossible. These limits help explain some failures in knowledge editing and multi-step reasoning.",
     "rtai_tags": [
       "KELM",
       "MU"
     ],
     "workshops": [
       "ICLR 2026 Workshop on Unifying Concept Representation Learning (Oral)"
-    ]
+    ],
+    "image_alt": "Changing one fact does not always update related facts correctly"
   },
   {
     "id": "yujin2026diffusion",
@@ -388,7 +394,7 @@ const publicationsData = [
     "bibtex": "@inproceedings{yujin2026diffusion,\n  title={When Do Diffusion Models learn to Generate Multiple Objects?},\n  author={Jeong, Yujin and Uselis, Arnas and Laina, Iro and Oh, Seong Joon and Rohrbach, Anna},\n  booktitle={International Conference on Machine Learning (ICML)},\n  year={2026}\n}",
     "image": "pictures/yujin2026diffusion.png",
     "links": [],
-    "abstract": "Diffusion models remain unreliable at multi-object generation. We disentangle data effects via two regimes: concept generalization, where individual concepts are observed under imbalanced data, and compositional generalization, where specific concept combinations are held out. Using mosaic, a controlled dataset framework, we find scene complexity dominates over concept imbalance, counting is uniquely hard in low-data regimes, and compositional generalization collapses as combinations are withheld.",
+    "abstract": "Image generators can produce convincing pictures yet struggle with several objects, exact counts or unfamiliar combinations. We use controlled scenes to separate these difficulties from the effects of training-data size and balance. Scene complexity matters strongly, counting is especially difficult with little data, and unseen combinations remain a major obstacle.",
     "rtai_tags": [
       "CoGe",
       "DiffM"
@@ -410,7 +416,7 @@ const publicationsData = [
     "year": "2026",
     "url": "https://arxiv.org/abs/2510.07959",
     "bibtex": "@inproceedings{alex2025disco,\n  title={DISCO: Diversifying Sample Condensation for Efficient Model Evaluation},\n  author={Rubinstein, Alexander and Raible, Benjamin and Gubri, Martin and Oh, Seong Joon},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2026}\n}",
-    "image": "pictures/alex2025disco.png",
+    "image": "pictures/alex2025disco-summary.svg",
     "links": [
       {
         "text": "Project Page",
@@ -421,7 +427,7 @@ const publicationsData = [
         "url": "https://github.com/arubique/disco-public"
       }
     ],
-    "abstract": "DISCO selects an anchor subset for fast evaluation by greedily choosing samples that maximize inter-model disagreement, avoiding clustering-based selection. It simplifies anchor selection and achieves state-of-the-art performance prediction on benchmarks like MMLU, HellaSwag, Winogrande, and ARC.",
+    "abstract": "Testing every new model on a large benchmark is expensive. DISCO chooses a small set of questions on which models disagree most. These questions reveal more about the differences between models and let us estimate full-benchmark performance with far fewer evaluations.",
     "rtai_tags": [
       "ELM"
     ],
@@ -429,7 +435,8 @@ const publicationsData = [
       "ICLR 2026 Workshop on Navigating and Addressing Data Problems for Foundation Models",
       "Catch, Adapt, and Operate: Monitoring ML Models Under Drift Workshop (Oral, Best Paper Award)",
       "GEM 2026 Workshop on Natural Language Generation, Evaluation, and Metrics"
-    ]
+    ],
+    "image_alt": "Choose a small set of test questions where models disagree"
   },
   {
     "id": "ahmed2025drllm",
@@ -445,20 +452,21 @@ const publicationsData = [
     "year": "2026",
     "url": "https://arxiv.org/abs/2510.12773",
     "bibtex": "@inproceedings{ahmed2025drllm,\n  title={Dr.LLM: Dynamic Layer Routing for LLMs},\n  author={Heakl, Ahmed and Gubri, Martin and Khan, Salman and Yun, Sangdoo and Oh, Seong Joon},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2026}\n}",
-    "image": "pictures/ahmed2025drllm.png",
+    "image": "pictures/ahmed2025drllm-summary.svg",
     "links": [
       {
         "text": "Code",
         "url": "https://github.com/parameterlab/dr-llm"
       }
     ],
-    "abstract": "Dr.LLM improves reasoning with less computation. Lightweight routers at each layer decide whether to skip, execute, or repeat transformer blocks. Monte Carlo tree search trains the routers to find optimal paths. The approach is retrofittable and generalises to new tasks.",
+    "abstract": "A language model normally uses the same sequence of layers for every problem. Dr.LLM lets it skip, use or repeat layers as needed. Small routing modules learn useful paths through the existing model, so it can reason better with less computation and apply the same approach to new tasks.",
     "rtai_tags": [
       "ReLM"
     ],
     "workshops": [
       "Third Workshop on Test-Time Updates (Main Track)"
-    ]
+    ],
+    "image_alt": "A language model routes computation through layers: use, skip or repeat"
   },
   {
     "id": "darina2025binding",
@@ -479,7 +487,7 @@ const publicationsData = [
         "url": "https://github.com/kdariina/CLIP-not-BoW-unimodally"
       }
     ],
-    "abstract": "CLIP is widely used for downstream tasks but struggles with compositional understanding. It often behaves like a bag of words model and fails to bind attributes to objects in cross-modal settings. The problem comes from the cross-modal alignment using cosine similarity. We propose LABCLIP. It applies a linear transformation to text embeddings before computing similarity. This improves attribute-object binding and strengthens compositional understanding.",
+    "abstract": "CLIP can recognise the words in a description yet confuse which attribute belongs to which object. We trace part of this problem to how image and text representations are compared. A simple learned transformation of the text representation improves the match and helps distinguish scenes with the same objects but different attribute assignments.",
     "rtai_tags": [
       "CoGe",
       "VLM"
@@ -515,7 +523,7 @@ const publicationsData = [
         "url": "https://github.com/MYMY-young/DelimScaling"
       }
     ],
-    "abstract": "Large Vision-Language Models achieve strong performance on single-image tasks, but their performance declines with multiple images due to cross-image information leakage. We propose scaling the hidden states of delimiter tokens to reinforce intra-image interaction and limit cross-image interactions. The method improves performance on multi-image benchmarks and requires no additional training or inference cost.",
+    "abstract": "Vision-language models often do worse when they see several images at once. Information from different images can become mixed up inside the model. We strengthen the special tokens that separate the images, which helps preserve their boundaries and improves multi-image understanding without extra training or inference cost.",
     "rtai_tags": [
       "VLM"
     ]
@@ -536,13 +544,14 @@ const publicationsData = [
     "year": "2026",
     "url": "https://arxiv.org/abs/2505.20295",
     "bibtex": "@inproceedings{kirchhof2025selfreflect,\n  title={SelfReflect: Can LLMs Communicate Their Internal Answer Distribution?},\n  author={Kirchhof, Michael and Füger, Luca and Goliński, Adam and Dhekane, Eeshan Gunesh and Blaas, Arno and Oh, Seong Joon and Williamson, Sinead},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2026}\n}",
-    "image": "pictures/michael2025selfreflect.png",
+    "image": "pictures/michael2025selfreflect-summary.svg",
     "links": [],
-    "abstract": "We introduce SelfReflect, an information-theoretic metric measuring how faithfully a summary string reflects an LLM's internal answer distribution. Across interventional and human studies, SelfReflect is sensitive to small deviations and reveals that modern LLMs generally fail to communicate their uncertainties. Faithful summaries emerge when sampling multiple outputs and summarizing them in-context.",
+    "abstract": "A model's written answer may hide how uncertain it actually is. SelfReflect measures whether a short summary represents the range of answers the model would give. We find that models often communicate this poorly. Summaries become more faithful when the model first produces several answers and then describes their variation.",
     "rtai_tags": [
       "UQLM",
       "ELM"
-    ]
+    ],
+    "image_alt": "A written summary should reflect the model’s range of possible answers"
   },
   {
     "id": "anmol2026privacycollapse",
@@ -560,7 +569,7 @@ const publicationsData = [
     "bibtex": "@inproceedings{anmol2026privacycollapse,\n  title={Privacy Collapse: Benign Fine-Tuning Can Break Contextual Privacy in Language Models},\n  author={Goel, Anmol and Emde, Cornelius and Yun, Sangdoo and Oh, Seong Joon and Gubri, Martin},\n  year={2026},\n  booktitle={Proceedings of the Annual Meeting of the Association for Computational Linguistics: ACL 2026}\n}",
     "image": "pictures/anmol2026privacycollapse.png",
     "links": [],
-    "abstract": "Benign fine-tuning of frontier models can lead to privacy collapse. Diverse, subtle patterns in training data degrade contextual privacy, including optimisation for helpfulness, exposure to user information, and debugging code printing internal variables. Fine-tuned models lose their ability to reason about contextual privacy norms, share information inappropriately with tools, and violate memory boundaries across contexts. Privacy collapse is a silent failure: models maintain high performance on standard safety and utility benchmarks whilst exhibiting severe privacy vulnerabilities.",
+    "abstract": "A model can lose its sense of privacy after fine-tuning on apparently harmless tasks. Training for helpfulness, exposure to user information or even debugging examples can make it share private details inappropriately. Standard safety and usefulness tests may miss this change, so privacy needs its own checks after fine-tuning.",
     "rtai_tags": [
       "PILM"
     ],
@@ -590,7 +599,7 @@ const publicationsData = [
         "url": "https://huggingface.co/datasets/stai-tuebingen/faiss-smollm"
       }
     ],
-    "abstract": "How much of a model's answer is truly new versus recalled? We introduce un-attributability: a simple test that flags outputs with no close match in the pretraining corpus. A two-stage pipeline (fast GIST retrieval plus ColBERTv2 reranking) checks nearby contexts against a human reference. On SmolLM and SmolLM2, we uncover longer-range training influences than expected, domain-specific patterns in novelty, and a boost from instruction tuning.",
+    "abstract": "How much of a language model's answer is new, and how much resembles its training data? We search for close matches in the training corpus and flag outputs with no nearby match. The results reveal patterns in novelty across domains, effects of instruction tuning, and training influences that extend beyond short copied phrases.",
     "rtai_tags": [
       "TDI"
     ],
@@ -648,7 +657,7 @@ const publicationsData = [
         "url": "https://huggingface.co/datasets/parameterlab/c-seo-bench"
       }
     ],
-    "abstract": "With the rise of conversational search engines like <a href=\"https://www.perplexity.ai/\">Perplexity</a>, a new discipline of \"Conversational Search Engine Optimization\" (C-SEO) emerged in 2024-2025. These new strategies claim that writing articles in a certain way can boost their inclusion in AI-generated answers. We built C-SEO Bench, the first comprehensive benchmark covering 6 domains and multi-actor scenarios, to test these claims. The results are definitive and disappointing: none of the new C-SEO strategies are effective. We expect that traditional SEO approaches will continue to provide much more significant results, indicating that the development of effective C-SEO methods requires more work.",
+    "abstract": "Can website owners change their writing to appear more often in AI-generated search answers? C-SEO Bench tests proposed strategies across six domains and settings with competing sources. The tested strategies do not deliver reliable gains. The benchmark provides a way to measure such claims instead of relying on anecdotes.",
     "rtai_tags": [
       "RALM",
       "LLMAG"
@@ -673,7 +682,7 @@ const publicationsData = [
         "url": "https://github.com/aktsonthalia/rankable-vision-embeddings"
       }
     ],
-    "abstract": "We use vector databases to store and retrieve visual data via embeddings. Unlike traditional databases, they typically support only similarity search, not sorting by specific attributes. We test whether modern visual embeddings can support sorting along continuous \"rank axes\" such as age, crowd count, head pose, aesthetics, and recency. Across 7 encoders and 9 datasets, we find that many embeddings are inherently rankable.",
+    "abstract": "Image representations are usually used to find similar pictures. Could they also sort pictures by age, crowd size or head direction? We test seven visual encoders across nine datasets and find that many already contain useful directions for these rankings. This could make image search support more than similarity alone.",
     "rtai_tags": [
       "VLM"
     ]
@@ -702,7 +711,7 @@ const publicationsData = [
         "url": "https://github.com/eugene6923/Diffusion-Classifiers-Compositionality"
       }
     ],
-    "abstract": "Diffusion models can generate novel compositions. But can they also understand them? Some recent methods convert diffusion models into discriminative ones (\"Diffusion Classifiers\", ICCV 2023). Yet, we lack a clear understanding of when and how their generative compositionality transfers to discriminative tasks. We also do not know which factors control this transfer or how to tune them. In this work, we study this question and offer practical insights for improving compositional transfer from generative to discriminative models.",
+    "abstract": "A model that can generate a new combination of objects does not necessarily understand it. We study when diffusion image generators can also distinguish between different combinations. The results identify conditions that affect this transfer and offer practical guidance for using generative models as image classifiers.",
     "rtai_tags": [
       "CoGe",
       "DiffM"
@@ -729,7 +738,7 @@ const publicationsData = [
         "url": "https://github.com/dongjunhwang/dwi"
       }
     ],
-    "abstract": "Open-vocabulary segmentation (OVS) models often underperform when applied to unseen domains. Fine-tuning on new datasets can improve performance but risks catastrophic forgetting. This paper introduces a method that enables OVS models to learn from new domains while preserving prior knowledge. The approach evaluates the input sample's proximity to multiple domains using precomputed multivariate normal distributions. Based on this prediction, it dynamically interpolates between the weights of the pre-trained decoder and the fine-tuned decoders. Experiments demonstrate that this method allows OVS models to adapt to new domains while maintaining performance on the original dataset.",
+    "abstract": "A model that labels objects in images can improve on a new dataset but forget what it knew before. We keep both the original and adapted versions, then combine them according to the kind of image at hand. This helps the model adapt to new domains while preserving its performance on earlier ones.",
     "rtai_tags": [
       "SSeg",
       "VLM",
@@ -765,7 +774,7 @@ const publicationsData = [
         "url": "https://huggingface.co/datasets/parameterlab/leaky_thoughts"
       }
     ],
-    "abstract": "A critical paradox emerges when a Large Language Model (LLM) is tasked with reasoning over private information. The model will actively attempt to conceal the sensitive data within its reasoning trace; ironically, the more complex its effort to hide the information, the greater the risk of an accidental leak. This demonstrates that the very presence of private data within an LLM's reasoning process is inherently risky.",
+    "abstract": "A reasoning model may expose private information in its intermediate thoughts, even when it tries to keep the final answer safe. We find that attempts to reason about concealing a secret can themselves create opportunities to reveal it. Privacy checks therefore need to cover the reasoning process as well as the final response.",
     "rtai_tags": [
       "PILM",
       "LRM"
@@ -783,18 +792,19 @@ const publicationsData = [
     "year": "2025",
     "url": "https://arxiv.org/abs/2507.07102",
     "bibtex": "@article{arnas2025scaling,\n  title={Does Data Scaling Lead to Visual Compositional Generalization?},\n  author={Arnas Uselis and Andrea Dittadi and Seong Joon Oh},\n  journal={arXiv preprint arXiv:2507.07102},\n  year={2025}\n}",
-    "image": "pictures/arnas2025scaling.png",
+    "image": "pictures/arnas2025scaling-summary.svg",
     "links": [
       {
         "text": "Code",
         "url": "https://github.com/oshapio/visual-compositional-generalization"
       }
     ],
-    "abstract": "Compositional understanding is key to intelligence, but its presence in vision models is unclear. We test whether scaling data helps and find that diversity, not size, drives compositional generalisation. Broad concept coverage leads models to form additive, factored representations. This structure enables efficient generalisation. Pretrained models like DINO and CLIP show partial use of it. We call for more diverse datasets and attention to representational structure..",
+    "abstract": "Will more training images teach a model to understand new combinations of familiar concepts? We find that variety matters more than sheer volume. Broad coverage encourages models to represent concepts separately, so they can recombine them in new situations. Simply adding more examples of the same combinations is not enough.",
     "rtai_tags": [
       "CoGe",
       "VLM"
-    ]
+    ],
+    "image_alt": "Diverse combinations of concepts matter more than repeated examples"
   },
   {
     "id": "alex2025ocl",
@@ -824,7 +834,7 @@ const publicationsData = [
         "url": "https://github.com/AlexanderRubinstein/OCCAM"
       }
     ],
-    "abstract": "Object-centric learning (OCL) aims to learn object-wise representations, promising robust vision and human-like perception. However, OCL evaluation remains tied to unsupervised object discovery, a problem largely solved by foundational segmentation models. We argue that both object discovery and robust vision are effectively addressed. The field must shift towards real-world applications beyond object discovery.",
+    "abstract": "Learning to represent individual objects has long been a goal in computer vision. But strong segmentation models now solve much of the object-discovery task used to judge progress. We argue that evaluation should move towards what object-based representations enable in real applications, rather than focus mainly on finding object boundaries.",
     "rtai_tags": [
       "OCL"
     ]
@@ -843,13 +853,14 @@ const publicationsData = [
     "year": "2025",
     "url": "https://arxiv.org/abs/2311.16176",
     "bibtex": "@inproceedings{luca2025diffdiv,\n  title={Mitigating Shortcut Learning with Diffusion Counterfactuals and Diverse Ensembles},\n  author={Scimeca, Luca and Rubinstein, Alexander and Teney, Damien and Oh, Seong Joon and Bengio, Yoshua},\n  booktitle={ICLR Workshop},\n  year={2025}\n}",
-    "image": "pictures/luca2025diffdiv.png",
+    "image": "pictures/luca2025diffdiv-summary.svg",
     "links": [],
-    "abstract": "Did you know that diffusion models can be forced to generate novel compositions of concepts by sampling from a half-trained model? We show that this can be used to generate diverse ensembles of counterfactuals that can be used to improve out-of-distribution generalisation.",
+    "abstract": "Models often rely on easy shortcuts, such as a background that happens to match a label. We use diffusion models partway through training to generate unusual combinations that break these shortcuts. These examples help train groups of models with different strategies and improve their performance on unfamiliar data.",
     "rtai_tags": [
       "DiffM",
       "SyDa"
-    ]
+    ],
+    "image_alt": "Generate unusual combinations to break shortcuts in training data"
   },
   {
     "id": "sohyun2025dicotta",
@@ -867,7 +878,7 @@ const publicationsData = [
     "bibtex": "@article{sohyun2025dicotta,\n  title={DiCoTTA: Domain-invariant Learning for Continual Test-time Adaptation},\n  author={Lee, Sohyun and Kim, Nayeong and Kang, Juwon and Oh, Seong Joon and Kwak, Suha},\n  journal={arXiv preprint arXiv:2504.04981},\n  year={2025}\n}",
     "image": "pictures/sohyun2025dicotta.png",
     "links": [],
-    "abstract": "We study continual test-time adaptation (CTTA), where a model adapts to changing unseen domains while retaining past knowledge. Existing methods focus only on the current domain. We propose DiCoTTA, which learns domain-invariant features during testing. It introduces a new architecture, adaptation strategy, and data management. DiCoTTA achieves state-of-the-art performance and strong generalisation on four CTTA benchmarks.",
+    "abstract": "A deployed model may face a stream of changing environments. Adapting to the latest one can make it forget earlier ones. DiCoTTA helps the model learn features that remain useful across environments while it processes new data. It improves continual adaptation and generalisation across four benchmarks.",
     "rtai_tags": [
       "TTA"
     ]
@@ -887,7 +898,7 @@ const publicationsData = [
     "bibtex": "@inproceedings{haritz2025mia,\n  title={Scaling Up Membership Inference: When and How Attacks Succeed on Large Language Models},\n  author={Puerto, Haritz and Gubri, Martin and Yun, Sangdoo and Oh, Seong Joon},\n  year={2025},\n  booktitle = {Annual Conference of the North American Chapter of the Association for Computational Linguistics: NAACL 2025},\n}",
     "image": "pictures/haritz2025mia.png",
     "links": [],
-    "abstract": "People have tried to check if certain copyrighted material is used by LLMs by analysing their characteristic reactions to it, a task known as Membership Inference Attack (MIA). Research so far has mostly reported negative results, finding barely any statistically significant signals. In our paper, we show that meaningful signals only appear at scale: not in sentences or paragraphs, but at the level of documents and more.",
+    "abstract": "Can we tell whether a language model was trained on a particular text? Tests on individual sentences often find little evidence. We show that signals become more useful when combined across documents and larger collections. The scale of the material under investigation is therefore crucial to whether these tests succeed.",
     "rtai_tags": [
       "MIALM"
     ]
@@ -910,7 +921,7 @@ const publicationsData = [
         "url": "https://openreview.net/forum?id=ByCV9xWfNK"
       }
     ],
-    "abstract": "Retraining the last layer for target OOD dataset is a common practice for adapting to new distributions. We question the practice and consider using intermediate-layer representations. This turns out to be a good idea in many vision applications. The empirical results are quite surprising.",
+    "abstract": "When adapting a vision model to new data, researchers often build a classifier on its final layer. We test features from earlier layers instead. They can transfer better to unfamiliar datasets, so the model's last representation is not always the best starting point.",
     "rtai_tags": [
       "OOD"
     ]
@@ -930,7 +941,7 @@ const publicationsData = [
     "bibtex": "@inproceedings{ankit2025star,\ntitle = {Do Deep Neural Network Solutions Form a Star Domain?},\nauthor = {Sonthalia, Ankit and Rubinstein, Alexander and Abbasnejad, Ehsan and Oh, Seong Joon},\nyear = {2025},\nbooktitle = {International Conference on Learning Representations (ICLR)},\n}",
     "image": "pictures/ankit2025star.png",
     "links": [],
-    "abstract": "The non-convexity of modern neural networks poses unique challenges for understanding and controlling them. While optima may be scattered across different regions of the parameter space, training methods are expected to find good solutions. We aim to understand the geometric structure of these solutions by investigating whether they form a star domain. We apply linear interpolation between models trained with different initialisations and examine the resulting performance. Experimental results from 11 architectures on 5 datasets reveal that in 80% of cases, the average performance on the linear interpolation path stays within 20% of the original performance. We further show that these findings are unaffected by various factors such as optimiser choice, weight averaging, or model accuracy.",
+    "abstract": "Two well-trained neural networks can have very different internal weights. We ask whether useful models lie along straight paths between solutions and a shared centre. Experiments across many architectures and datasets reveal substantial connections between good solutions. This helps clarify the shape of the space in which neural networks learn.",
     "rtai_tags": [
       "MoMe"
     ]
@@ -950,7 +961,7 @@ const publicationsData = [
     "bibtex": "@inproceedings{jaehyun2025iclr,\n  title = {Decoupled Finetuning for Domain Generalizable Semantic Segmentation},\n  author = {Pahk, Jaehyun and Kwon, Donghyeon and Oh, Seong Joon and Kwak, Suha},\n  year = {2025},\n  booktitle = {International Conference on Learning Representations (ICLR)},\n}",
     "image": "pictures/jaehyun2025iclr.png",
     "links": [],
-    "abstract": "Joint finetuning of a pretrained encoder and a new decoder is common in semantic segmentation, but it struggles with domain shifts. Our Decoupled FineTuning (DeFT) method tackles this by warming up the decoder first and then finetuning both parts separately. This approach reduces learnable parameters and boosts generalisation.",
+    "abstract": "Adapting a model to label every pixel often means training an existing image encoder together with a new decoder. This can hurt performance on unfamiliar images. DeFT first prepares the decoder, then adapts the two parts separately. The result uses fewer trainable parameters and generalises better to new domains.",
     "rtai_tags": [
       "SSeg",
       "OOD"
@@ -972,7 +983,7 @@ const publicationsData = [
     "bibtex": "@article{nguyen2024towards,\n  title={Towards User-Focused Research in Training Data Attribution for Human-Centered Explainable AI},\n  author={Nguyen, Elisa and Bertram, Johannes and Kortukov, Evgenii and Song, Jean Y and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2409.16978},\n  year={2024}\n}",
     "image": "pictures/elisa2024tda.png",
     "links": [],
-    "abstract": "Explainable AI (XAI) has been criticised for relying too much on formalism and solutionism, focusing more on mathematical soundness than user needs. Despite efforts to correct this through user-focused studies from the HCI communities, we observe repeating patterns of formalism solutionism in a relatively young subfield of XAI: Training Data Attribution (TDA). We set out to correct this with a needfinding study with a diverse group of AI practitioners to identify potential user needs related to TDA. Our studies have uncovered new TDA tasks that are currently largely overlooked. We invite the TDA and XAI communities to consider these novel tasks and improve the user relevance of their research outcomes.",
+    "abstract": "Tools that trace a model's prediction back to its training data should answer questions people actually have. We interview AI practitioners to learn what they need from these explanations. Their needs reveal overlooked tasks and suggest ways to make research on training-data attribution more useful in practice.",
     "rtai_tags": [
       "TDI"
     ]
@@ -990,14 +1001,15 @@ const publicationsData = [
     "year": "2024",
     "url": "https://arxiv.org/abs/2409.16797",
     "bibtex": "@article{alex2024diversify,\n  title={Scalable Ensemble Diversification for OOD Generalization and Detection},\n  author={Rubinstein, Alexander and Scimeca, Luca and Teney, Damien and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2409.16797},\n  year={2024}\n}",
-    "image": "pictures/alex2024diversify.png",
+    "image": "pictures/alex2024diversify-summary.svg",
     "links": [],
-    "abstract": "Ensemble diversification has traditionally been applied at sub-ImageNet scales (e.g. Waterbirds). We present methods to make them applicable at ImageNet+ scales. (1) Instead of relying on a separate OOD dataset to diversify the ensembles on, we source them from hard samples of the training set. (2) Stochastic pair selection. (3) Diversification of last 2 layers. We show that diversified ensembles are useful at OOD generalisation and (particularly) OOD detection, where we achieve the state-of-the-art performance.",
+    "abstract": "A group of models is more useful when its members do not all make the same mistakes. We make methods for encouraging this diversity practical at ImageNet scale. The approach uses difficult training examples and limits which parts of the models change. It improves performance on unfamiliar data and helps detect it.",
     "rtai_tags": [
       "OODD",
       "OOD",
       "UQCV"
-    ]
+    ],
+    "image_alt": "Models with different strategies can make a more useful ensemble"
   },
   {
     "id": "evgenii2024ralm",
@@ -1014,7 +1026,7 @@ const publicationsData = [
     "bibtex": "@inproceedings{evgenii2024ralm,\n  title={Studying Large Language Model Behaviors Under Realistic Knowledge Conflicts},\n  author={Kortukov, Evgenii and Rubinstein, Alexander and Nguyen, Elisa and Oh, Seong Joon},\n  year={2024},\n  booktitle = {Conference on Language Modeling (CoLM)},\n}",
     "image": "pictures/evgenii2024ralm.png",
     "links": [],
-    "abstract": "Retrieval augmented generation (RAG) promises more trustworthy outputs from large language models (LLMs). RAG first retrieves relevant documents from a DB and includes them in the context for subsequent generation. However, RAG does not come with guarantee. Eventually, LLM decides whether to use the new information in retrieved document or to stick to the original information in the pre-training data. We present a study on this knowledge conflict.",
+    "abstract": "Giving a language model a relevant document does not guarantee that it will use it. The document may conflict with information learned during training. We study these conflicts in realistic settings to understand when a model follows the supplied evidence and when it falls back on its prior knowledge.",
     "rtai_tags": [
       "RALM"
     ]
@@ -1033,7 +1045,7 @@ const publicationsData = [
     "bibtex": "@article{balint2024disentanglement,\n  title={Benchmarking Uncertainty Disentanglement: Specialized Uncertainties for Specialized Tasks},\n  author={Mucsányi, Bálint and Kirchhof, Michael and Oh, Seong Joon},\n  year={2024},\n  journal={arXiv preprint arXiv:2402.19460},\n}",
     "image": "pictures/balint2024disentanglement.png",
     "links": [],
-    "abstract": "After the Trustworthy Machine Learning course, Bálint has investigated the relationships between different types of uncertainty in machine learning models. He found that many methods claiming to measure specific uncertainties had not been thoroughly verified. After the experiments, we concluded that these methods hardly achieved their claimed goals. This revelation is crucial for the uncertainty estimation community, where they try to understand and disentangle different uncertainty types.",
+    "abstract": "A model can be uncertain because an image is ambiguous or because it lacks relevant knowledge. Many methods claim to distinguish these sources, but those claims need testing. We compare uncertainty estimates across tasks and find that they often do not separate the sources as intended. Different tasks need carefully validated measures.",
     "rtai_tags": [
       "UD",
       "OODD",
@@ -1055,7 +1067,7 @@ const publicationsData = [
     "bibtex": "@article{kirchhof2024pretrained,\n  title={Pretrained Visual Uncertainties},\n  author={Kirchhof, Michael and Collier, Mark and Oh, Seong Joon and Kasneci, Enkelejda},\n  year={2024},\n  journal={arXiv preprint arXiv:2402.16569},\n}",
     "image": "pictures/kirchhof2024pretrained.png",
     "links": [],
-    "abstract": "Uncertainty estimation so far had to be learned from scratch for each new task. We introduce a new approach that allows us to train uncertainty estimation on a large, general dataset and then apply it to new, specific tasks. We focus on practicality and efficiency. Our approach captures inherent uncertainty in the data, separate from uncertainty due to limited knowledge.",
+    "abstract": "Can a model learn to recognise uncertainty once and carry that skill to new tasks? We train uncertainty estimates on a large dataset, then transfer them to other settings. The approach focuses on ambiguity in the input itself and aims to make useful uncertainty estimates practical without retraining them from scratch each time.",
     "rtai_tags": [
       "UQCV"
     ]
@@ -1074,13 +1086,14 @@ const publicationsData = [
     "year": "2024",
     "url": "https://arxiv.org/abs/2402.12991",
     "bibtex": "@inproceedings{martin2024trap,\n    title = {TRAP: Targeted Random Adversarial Prompt Honeypot for Black-Box Identification},\n    author = {Gubri, Martin and Ulmer, Dennis and Lee, Hwaran and Yun, Sangdoo and Oh, Seong Joon},\n    year={2024},\n    booktitle = {Findings of the Association for Computational Linguistics: ACL 2024},\n}",
-    "image": "pictures/martin2024trap.png",
+    "image": "pictures/martin2024trap-summary.svg",
     "links": [],
-    "abstract": "Large language models (LLM) and surrounding services come with their own rules about who can use them and how they should be used. These rules are important to protect the company's work and to prevent misuse. Now, given a new LLM-based chatbot service, it's important to find out the underlying LLM in order to check the compliance with the rules attached to each LLM. Here's our method for doing this: We ask the chatbot a very specific question that only one company's machine will answer in a certain way. It's like asking a friend a secret question only they would know the answer to. If the machine answers the question the way we expect, we know it's based on a specific LLM.",
+    "abstract": "Which language model is running behind a chatbot service? TRAP creates special prompts that make a target model respond in a distinctive way. We can then check an unfamiliar service through its answers, without access to its internals. This offers a way to investigate model identity and possible unauthorised reuse.",
     "rtai_tags": [
       "MLAU",
       "SILM"
-    ]
+    ],
+    "image_alt": "A distinctive prompt-response pattern can identify a hidden language model"
   },
   {
     "id": "dennis2024apricot",
@@ -1096,12 +1109,13 @@ const publicationsData = [
     "year": "2024",
     "url": "https://arxiv.org/abs/2403.05973",
     "bibtex": "@inproceedings{dennis2024apricot,\n    title = {Calibrating Large Language Models Using Their Generations Only},\n    author = {Ulmer, Dennis and Gubri, Martin and Lee, Hwaran and Yun, Sangdoo and Oh, Seong Joon},\n    year={2024},\n    booktitle = {Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics},\n}",
-    "image": "pictures/dennis2024apricot.png",
+    "image": "pictures/dennis2024apricot-summary.svg",
     "links": [],
-    "abstract": "We can't trust large language model (LLM) outputs. One of the reasons is that it doesn't always generate reliable confidence estimates. One could look into the model likelihoods, but even that is infeasible for many black-box models. We show here that it's possible to train a lightweight external model to infer an LLM's internal confidence based only on the prompt and answers from the LLM (purely black box).",
+    "abstract": "A chatbot's answer does not always tell us how much to trust it, and many services hide the model's internal scores. APRICOT trains a small external model to estimate reliability from the question and generated answer alone. This makes confidence estimation possible even when only a text interface is available.",
     "rtai_tags": [
       "UQLM"
-    ]
+    ],
+    "image_alt": "Estimate confidence using only a question and a model’s answer"
   },
   {
     "id": "elisa2023neuripsxaiw",
@@ -1116,12 +1130,13 @@ const publicationsData = [
     "year": "2023",
     "url": "https://arxiv.org/abs/2310.20477",
     "bibtex": "@inproceedings{elisa2023neuripsxaiw,\ntitle = {Exploring Practitioner Perspectives On Training Data Attribution Explanations},\nauthor = {Nguyen, Elisa and Kortukov, Evgenii and Song, Jean Y. and Oh, Seong Joon},\nbooktitle = {Conference on Neural Information Processing Systems Workshop on XAI in Action},\nyear = {2023}\n}",
-    "image": "pictures/elisa2023neuripsxaiw.png",
+    "image": "pictures/elisa2023neuripsxaiw-summary.svg",
     "links": [],
-    "abstract": "Training data attribution (TDA) provides a non-parametric viewpoint for model explanations - which training data points are blamable for this test error? Apparently useful in practice, we realised that the actual usefulness is not tested in real applications. As a first step, we approach individuals working in a diverse array of sectors, either using or developing ML models, and ask whether they would find TDA useful in practice. The answer is affirmative - read the paper for more details.",
+    "abstract": "Would it help practitioners to know which training examples influenced a model's prediction? We ask people who build or use machine-learning systems across different sectors. Their responses show potential uses for these explanations and highlight the need to evaluate them in real workflows, beyond mathematical measures of attribution quality.",
     "rtai_tags": [
       "TDI"
-    ]
+    ],
+    "image_alt": "Ask practitioners which training-data explanations would help their work"
   },
   {
     "id": "balint2023tml",
@@ -1148,7 +1163,7 @@ const publicationsData = [
         "url": "https://arxiv.org/abs/2310.08215"
       }
     ],
-    "abstract": "The challenges posed by the trustworthiness of machine learning models are increasingly significant as these models find real-world applications. Our newly-released textbook, \"Trustworthy Machine Learning,\" aims to address these challenges comprehensively. It covers four crucial dimensions: Out-of-Distribution Generalization, Explainability, Uncertainty Quantification, and Evaluation of Trustworthiness. The text offers a thorough analysis of seminal and modern research papers, elucidating the foundational theories and practices. Originating from a course first offered at the University of Tübingen in the Winter Semester of 2022/23, the book serves as a stand-alone resource and includes code snippets and additional references. For further information, please visit our dedicated website.",
+    "abstract": "This textbook introduces four questions behind trustworthy machine learning: can a model handle unfamiliar data, explain its decisions, express uncertainty and be evaluated reliably? It connects foundational ideas with recent research and practical code examples. The book grew out of our teaching and can also be used as a standalone resource.",
     "rtai_tags": [
       "OOD",
       "AAML",
@@ -1171,7 +1186,7 @@ const publicationsData = [
     "bibtex": "@inproceedings{elisa2023neurips,\n    title = {A Bayesian Perspective On Training Data Attribution},\n    author = {Nguyen, Elisa and Seo, Minjoon and Oh, Seong Joon},\n    year = {2023},\n    booktitle = {Conference on Neural Information Processing Systems},\n}",
     "image": "pictures/elisa2023neurips.png",
     "links": [],
-    "abstract": "Consider Training Data Attribution (TDA) as a spotlight, highlighting the role each training sample plays in the predictions a model whips up. It's a tantalizing concept, especially for human-centric XAI, where it can guide users to tweak their training samples for better results. However, it's a bit like trying to hear a whisper in a storm. That's because the impact of removing a single training sample usually pales in comparison to the cacophony of noise stirred up during model training, like the random spark of model initialization or the chaotic dance of SGD batch shuffling. To understand this better, we've adopted a Bayesian deep learning viewpoint, treating our learned model as a Bayesian posterior and TDA estimates as random variables. Our findings? TDA is like trying to tune in to a radio station that's mostly static. It's really only effective in those rare instances when the impact of a single sample isn't lost in the noise. In those cases, TDA can indeed play a sweet tune!",
+    "abstract": "Removing one training example often changes a model less than simply retraining it with a different random seed. This makes claims about an individual example's influence hard to trust. We use a Bayesian perspective to study this noise and identify when training-data attribution can provide a meaningful signal.",
     "rtai_tags": [
       "TDI",
       "BDL"
@@ -1198,7 +1213,7 @@ const publicationsData = [
     "bibtex": "@inproceedings{siwon2023neurips,\n    title = {ProPILE: Probing Privacy Leakage in Large Language Models},\n    author = {Kim, Siwon and Yun, Sangdoo and Lee, Hwaran and Gubri, Martin and Yoon, Sungroh and Oh, Seong Joon},\n    year = {2023},\n    booktitle = {Conference on Neural Information Processing Systems},\n}",
     "image": "pictures/siwon2023neurips.png",
     "links": [],
-    "abstract": "Large language models (LLMs) are like giant sponges, soaking up vast amounts of data from the web. But amidst all that data, there could be some sensitive stuff, like personally identifiable information (PII). Makes you a bit worried, right? That's where our new tool, ProPILE, comes in. Think of it as a detective, helping people investigate if their personal data might be seeping out from these LLMs. You can create your own prompts based on your personal info to check how much of your PII are likely to be exposed to millions of users. ProPILE is one of our first efforts to empower data subjects to gain awareness and control over their own PII in the era of LLMs.",
+    "abstract": "Could a language model reveal your personal information? ProPILE tests this with prompts based on details a person already knows about themselves. It measures how readily the model discloses related information and helps people investigate their own exposure, rather than rely only on broad privacy scores.",
     "rtai_tags": [
       "PILM"
     ]
@@ -1218,7 +1233,7 @@ const publicationsData = [
     "bibtex": "@inproceedings{teney2023neurips,\n    title = {ID and OOD Performance Are Sometimes Inversely Correlated on Real-world Datasets},\n    author = {Teney, Damien and Oh, Seong Joon and Abbasnejad, Ehsan},\n    year = {2023},\n    booktitle = {Conference on Neural Information Processing Systems},\n}",
     "image": "pictures/teney2023neurips.png",
     "links": [],
-    "abstract": "Several recent studies have reported positive correlations between in-distribution (ID) and out-of-distribution (OOD) generalisation performances. In particular, Wenzel et al. (2022) found that none of the 31k networks examined on 172 dataset pairs has shown a trade-off, or a negative correlation, between the ID and OOD performances. They further recommend that, to improve the OOD generalisation, one can instead focus on improving the ID generalisation. We argue that this may not always be true. We present counterexamples where one does observe a trade-off between ID and OOD generalisation. We point to the selection method for networks as the key reason for the contradicting observations. We alter the recommendation to the field in a more nuanced manner.",
+    "abstract": "Better scores on familiar test data do not always mean better performance in a new environment. We present real datasets where the two move in opposite directions. The choice of models included in a study can hide this trade-off, so progress on familiar data alone is not a reliable guide to generalisation.",
     "rtai_tags": [
       "OOD"
     ]
@@ -1238,7 +1253,7 @@ const publicationsData = [
     "bibtex": "@inproceedings{kirchhof2023neuripsdb,\ntitle = {URL: A Representation Learning Benchmark for Transferable Uncertainty Estimates},\nauthor = {Kirchhof, Michael and Mucsányi, Bálint and Oh, Seong Joon and Kasneci, Enkelejda},\nbooktitle = {Conference on Neural Information Processing Systems: Datasets and Benchmarks Track},\nyear = {2023}\n}",
     "image": "pictures/kirchhof2023neuripsdb.png",
     "links": [],
-    "abstract": "NeurIPS D&B extension of the UAI Epistemic AI Workshop paper below.",
+    "abstract": "An uncertainty estimate is useful only if it stays reliable when a model encounters new kinds of data. URL tests this transfer by comparing pretrained models across unfamiliar datasets. The benchmark shows that strong image representations do not automatically provide trustworthy uncertainty estimates and gives researchers a common way to measure the gap.",
     "rtai_tags": [
       "UQCV"
     ]
@@ -1263,7 +1278,7 @@ const publicationsData = [
         "url": "https://github.com/mkirchhof/url"
       }
     ],
-    "abstract": "We developed the Uncertainty-aware Representation Learning (URL) benchmark in our research. This tool evaluates the reliability of uncertainty estimates from pretrained models on unseen datasets. Its implementation is simple, requiring only four lines of code. In our experiment, we applied URL to ten models trained on ImageNet. Then, we tested these models on eight different datasets. The results showed that achieving transferable uncertainty quantification remains a challenge. We invite the community to work on this novel problem!",
+    "abstract": "Can a model carry its sense of uncertainty from its training dataset to a new one? URL makes this easy to test with a small amount of code. We compare ten models across eight datasets and find that reliable uncertainty does not transfer automatically. This workshop paper introduces the benchmark.",
     "rtai_tags": [
       "UQCV"
     ]
@@ -1285,7 +1300,7 @@ const publicationsData = [
     "bibtex": "@article{elif2025naturehumanbehaviour,\ntitle = {Playing repeated games with Large Language Models},\nauthor = {Akata, Elif and Schulz, Lion and Coda-Forno, Julian and Oh, Seong Joon and Bethge, Matthias and Schulz, Eric},\njournal={Nature Human Behaviour},\nyear = {2025}\n}",
     "image": "pictures/elif2025naturehumanbehaviour.png",
     "links": [],
-    "abstract": "Imagine Large Language Models (LLMs) as digital diplomats, interacting with us and others in the cyber world. We set LLMs - GPT-3, GPT-3.5, and GPT-4 - against each other in games to understand their social behavior. LLMs are great when self-interest rules, like in the Prisoner's Dilemma, but stumble when coordination is key. GPT-4, for instance, acts tough in the Prisoner's Dilemma and struggles with simple conventions in the Battle of the Sexes. But, give GPT-4 more info or ask it to predict the opponent's move, and it adjusts its strategy. Our insights open up an exciting path towards a behavioral game theory for machines!",
+    "abstract": "How do language models cooperate or compete when they interact repeatedly? We put them through familiar game-theory tasks and find that they can pursue their own interests yet struggle to coordinate. Extra information or prompts about the opponent can change their behaviour. These experiments offer a way to study social decision-making in AI.",
     "rtai_tags": []
   },
   {
@@ -1340,7 +1355,7 @@ const publicationsData = [
         "url": "https://github.com/naver-ai/coco-annotation-tool"
       }
     ],
-    "abstract": "Supervised learning trains models with (X,Y) data. The (X,Y) data comes from the annotation procedure where annotators provide the correct Y for each X. But behind the scene, annotators generate much more data than the (X,Y) data themselves: they unintionally generate auxiliary information during the annotation task, such as the history of corrections and the time-series of mouse traces and clicks. We call them annotation byproducts (AB) Z. We propose the new paradigm of learning using annotation byproducts (LUAB), where models are trained with the triplets (X,Y,Z) involving the ABs. We reproduce the original annotation procedures for ImageNet and COCO to generate AB-enriched datasets: ImageNet-AB and COCO-AB. we show that the auxiliary Z may help models be better aligned with human recognition mechanisms, leading to improved model robustness.",
+    "abstract": "People produce more than labels when they annotate images: mouse movements, clicks and corrections also contain information. We collect these traces alongside image labels and use them during training. They help models learn in ways that better match human recognition and improve robustness, without asking annotators to perform a separate task.",
     "rtai_tags": [
       "OOD"
     ]
@@ -1360,15 +1375,16 @@ const publicationsData = [
     "year": "2023",
     "url": "https://arxiv.org/abs/2210.08457",
     "bibtex": "@inproceedings{nam2023iccv,\ntitle = {Scratching Visual Transformer's Back with Uniform Attention},\nauthor = {Nam, Hyeon-Woo and Kim, Yu-Ji and Heo, Byeongho and Han, Doonyoon and Oh, Seong Joon and Oh, Tae-Hyun},\nbooktitle = {International Conference on Computer Vision (ICCV)},\nyear = {2022}\n}",
-    "image": "pictures/nam2023iccv.png",
+    "image": "pictures/nam2023iccv-summary.svg",
     "links": [
       {
         "text": "Code",
         "url": "https://uniform-attention.github.io/"
       }
     ],
-    "abstract": "ViT's itchy point seems to be the uniform attention. ViTs are hungry for denser connections, yet dense connections are hard to achieve because of softmax's steep gradient around the uniform attention. We manually insert additional uniform attention layers in ViT models. This is very cheap! It turns out to be an effective trick for increasing the capacity and generalisation for ViT models, especially for the smaller versions.",
-    "rtai_tags": []
+    "abstract": "Vision transformers can benefit from more connections between image regions, but their usual attention mechanism may not learn these easily. We add inexpensive layers that spread attention evenly across the image. This simple change improves capacity and generalisation, especially for smaller models.",
+    "rtai_tags": [],
+    "image_alt": "Uniform attention adds connections between all image regions"
   },
   {
     "id": "kirchhof2023icml",
@@ -1389,7 +1405,7 @@ const publicationsData = [
         "url": "https://github.com/mkirchhof/Probabilistic_Contrastive_Learning"
       }
     ],
-    "abstract": "We finally came up with some theoretical guarantees for probabilistic embeddings! Given a spherical embedding space with a von-Mises-Fisher (vMF) family of true latent embedding distribution, one may identify the true latent vMF for every data point up to rotations with a Monte-Carlo version of InfoNCE (called MCInfoNCE). This result is a probabilistic extension of the work by Zimmerman et al.",
+    "abstract": "An ambiguous image should have an uncertain representation, rather than one precise point. We study a training method that learns a distribution for each image. Under stated assumptions, we prove that it can recover the underlying uncertainty. This gives a theoretical basis for representations that express ambiguity as well as content.",
     "rtai_tags": [
       "UQCV"
     ]
@@ -1417,7 +1433,7 @@ const publicationsData = [
         "url": "data/hwang2022neurips_workshop.pdf"
       }
     ],
-    "abstract": "A classifier gets biased when its decision boundary separates the bias attribute (e.g. gender attribute for profession prediction). Some prior de-biasing methods correct the decision boundary by identifying the bias-conflicting samples in the training data (e.g. female mechanical engineers) and giving more weight on them. We go one step further. We argue that it's more effective to augment the whole convex hull between usual data points (e.g. male mechanical engineers) and bias-conflicting samples (e.g. female mechanical engineers). We do this through simple Mixup. It effectively de-biases a model, even in the presence of strong label noise, arguably the greatest arch-enemy for a de-biasing method.",
+    "abstract": "A classifier may rely on a shortcut instead of the feature we want it to learn. SelecMix creates training examples between ordinary cases and cases that contradict the shortcut. This helps the model learn a less biased decision rule, even when some training labels are wrong.",
     "rtai_tags": [
       "OOD"
     ]
@@ -1451,7 +1467,7 @@ const publicationsData = [
         "url": "https://docs.google.com/presentation/d/1zyLL49_2-F6mQFaMIumPfdE7el_r048XtidLnehepHo/edit?usp=sharing"
       }
     ],
-    "abstract": "Image-captioning benchmarks such as COCO Captions contain lots of nonsense. For the same image on the left, the caption that goes \"Playing tennis with a racket\" is deemed correct, while \"Swinging a tennis racket\" is penalised. This comes from the erratic recipe for constructing the datasets: (1) let annotators write down 5 captions per image and (2) consider only those 5 captions to be correct matches. We show that this practice introduces a lot of noise in the evaluation benchmarks. We then introduce a novel image-captioning dataset based on the MS-COCO Captions that captures the model performances more precisely.",
+    "abstract": "An image can have many correct descriptions, but a benchmark may recognise only a few of them. A retrieval model can then be penalised for a perfectly good match. ECCV Caption adds image-caption matches checked by both machines and people, which makes evaluation better reflect the quality of the model's results.",
     "rtai_tags": [
       "VLM"
     ]
@@ -1480,7 +1496,7 @@ const publicationsData = [
         "url": "https://github.com/snu-mllab/Efficient-Dataset-Condensation"
       }
     ],
-    "abstract": "Dataset condensation is the art of compactifying a training dataset. The aim is that a model trained on a condensed dataset is similar to the one trained on the original dataset, most importantly in terms of model accuracy (e.g. 91%-accuracy MNIST classifier with only 1 sample per class). We introduce many practical tricks to make data condensation work beyond the toy setting. We present the first data condensation method that actually works on images with sizes as large as 224x224, instead of 32x32!",
+    "abstract": "Can a tiny synthetic dataset teach a model almost as much as the full training set? We develop practical ways to compress training data while preserving useful information. The method makes dataset condensation work with larger images, beyond the small toy images that earlier approaches usually relied on.",
     "rtai_tags": [
       "DD"
     ]
@@ -1507,7 +1523,7 @@ const publicationsData = [
         "url": "https://github.com/naver-ai/w-ood"
       }
     ],
-    "abstract": "Weakly-supervised semantic segmentation (WSSS) is the task of solving pixel-wise class assignment with only the image-level supervision. The problem is ill-posed because the image-level labels alone do not let models distinguish foreground (FG) objects (e.g. train) from spuriously-correlated background (BG) cues (e.g. rail). Researchers have sought external sources of information, such as shape prior, to address the ill-posedness. In this paper, we explore a novel source: BG images (e.g. rail images without a train). Conceptually, telling models what are not the FG cues is equivalent to telling them what actually are the FG cues; BG images are sufficient for turning the problem into a well-posed one. Collecting such BG data is cost-efficient, requiring orders of magnitude less annotation costs than the already-cheap image-level labels.",
+    "abstract": "A model trained with image-level labels may mistake railway tracks for the train it is meant to locate. We show that images of the background alone can help it separate the two. These negative examples provide useful guidance for pixel-level segmentation without the cost of manually drawing object boundaries.",
     "rtai_tags": [
       "WSOL"
     ]
@@ -1532,7 +1548,7 @@ const publicationsData = [
     "bibtex": "@inproceedings{scimeca2022iclr,\n    title={Which Shortcut Cues Will DNNs Choose? A Study from the Parameter-Space Perspective},\n    author={Scimeca, Luca and Oh, Seong Joon and Chun, Sanghyuk and Poli, Michael and Yun, Sangdoo},\n    year={2022},\n    booktitle = {International Conference on Learning Representations (ICLR)},\n}",
     "image": "pictures/scimeca2022iclr.png",
     "links": [],
-    "abstract": "Shortcut learning is emerging as a key limitation of the current generation of machine learning models (CVPR'20, ICML'20). In this work, instead of proposing yet another solution, we take a step back and deepen our understanding of the problem. For example, trained on a dataset where both colour and shape are valid cues for recognising the object, models of different types (MLP, CNN, and ViT) choose to use colour over shape. Why is that? We provide an explanation from the parameter-space perspective. Read the paper. Worth it!",
+    "abstract": "When colour and shape both predict the right label, why does a model prefer one over the other? We study this choice through the model's possible weight configurations. The results help explain why different neural-network architectures can settle on the same easy shortcut, even when another valid cue is available.",
     "rtai_tags": [
       "OOD"
     ]
@@ -1553,7 +1569,7 @@ const publicationsData = [
     "bibtex": "@inproceedings{hazel2022aaai,\n  title={ALP: Data Augmentation using Lexicalized PCFGs for Few-Shot Text Classification},\n  author={Kim, Hazel and Woo, Daecheol and Oh, Seong Joon and Cha, Jeong-Won and Han, Yo-Sub},\n  year={2022},\n  booktitle = {Association for the Advancement of Artificial Intelligence Conference (AAAI)},\n  note = {to appear},\n  pubstate = {published},\n  tppubtype = {inproceedings},\n}",
     "image": "pictures/hazel2022aaai.png",
     "links": [],
-    "abstract": "This is an NLP paper. There have been many attempts at enlarging the training text data for few-shot text classification, like back-translation (e.g. En-Fr-En) and the use of pre-trained language models. Unlike those, we propose an augmentation method that is fully aware of the underlying grammatical structure of the sentence. Importantly, our method generates a set of synonymous sentences that are both grammatically correct and grammatically diverse! Here we gain quite some points in few-shot text classification benchmarks. Another contribution is viewing the train-val split as part of the method and seeking the best splitting strategy when data augmentation is being used. It turns out that splitting the few-shot labelled samples S into disjoint train-val splits (train split is then augmented) is sub-optimal; a better strategy is to use the augmented source data S' as the train split and the original S itself as the validation split!",
+    "abstract": "Training a text classifier from a few examples is easier if we can generate useful variations. Our method uses grammar rules to produce sentences that preserve meaning while changing structure. We also study how to split the resulting data for training and validation, since that choice strongly affects whether augmentation helps.",
     "rtai_tags": []
   },
   {
@@ -1574,7 +1590,7 @@ const publicationsData = [
     "year": "2022",
     "url": "https://arxiv.org/abs/2007.04178",
     "bibtex": "@article{choe2022tpami,\n    title={Evaluation for Weakly Supervised Object Localization: Protocol, Metrics, and Datasets},\n    author={Choe, Junsuk and Oh, Seong Joon and Chun, Sanghyuk and Akata, Zeynepand Shim, Hyunjung},\n    journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},\n    year={2022},\n    number  = {},\n    pages   = {},\n    month   = {},\n    volume  = {}\n}",
-    "image": "pictures/choe2020cvpr.gif",
+    "image": "pictures/choe2022tpami-summary.svg",
     "links": [
       {
         "text": "Code",
@@ -1589,10 +1605,11 @@ const publicationsData = [
         "url": "https://www.youtube.com/watch?v=D_dEkeb-fto&list=PLcD_yLvcdUll95mAnBDV0rZKhfClJMZMr&index=5"
       }
     ],
-    "abstract": "Journal extension of CVPR'20! It now contains more analyses, including the evaluation of input gradient variants as Weakly-Supervised Object Localization (WSOL) methods.",
+    "abstract": "A model can locate an object from an image label, but judging this ability fairly requires careful datasets and evaluation rules. This journal extension expands our study of weakly supervised localisation and examines more explanation methods. It provides protocols and metrics that distinguish real progress from advantages caused by the evaluation setup.",
     "rtai_tags": [
       "WSOL"
-    ]
+    ],
+    "image_alt": "Separate image labels used for training from location labels used for evaluation"
   },
   {
     "id": "kim2021iccv",
@@ -1618,7 +1635,7 @@ const publicationsData = [
         "url": "https://github.com/naver-ai/calm"
       }
     ],
-    "abstract": "It is difficult to find a CV researcher or practitioner who hasn't used (or at least heard of) the Class Activation Maps (CAM). It is a seminal feature attribution method that has left a deep mark on the vision research and applications. Notwithstanding its popularity, we found some practical and conceptual issues that makes CAM not as interpretable as it should be. We address the issues with a probabilistic treatment of the last layers of CNNs where the latent cue variable Z is trained via Marginal Likelihood (ML) or Expectation-Maximisation (EM) algorithms. The resulting Class Activation Latent Maps, or CALM, produces more precise and interpretable score maps.",
+    "abstract": "Heatmaps are often used to show which parts of an image support a model's prediction. Common class-activation maps have limitations that can make these explanations misleading. CALM treats the location of useful visual evidence as a hidden variable and learns it explicitly. This produces more precise maps of the model's evidence.",
     "rtai_tags": [
       "FAtt"
     ]
@@ -1645,7 +1662,7 @@ const publicationsData = [
         "url": "https://github.com/naver-ai/pit"
       }
     ],
-    "abstract": "The Tranformer architecture has successfully been adapted to visual models (e.g. ViT). However, Transformers, originally designed for language modelling, and ViT assign a constant ratio of computational loads between spatial and channel dimensions at different depths. We postulate this as a suboptimal design choice, as CNNs assign different ratios at different depths to maximise the utility of compute. We thus present Pooling-based Vision Transformer (PiT) that does this.",
+    "abstract": "Vision transformers often spend a similar share of their computation on image positions at every depth. PiT gradually reduces spatial detail and increases feature capacity, as many convolutional networks do. This gives the model a different balance of where and how it processes information, which improves its use of computation.",
     "rtai_tags": []
   },
   {
@@ -1668,7 +1685,7 @@ const publicationsData = [
     "bibtex": "@inproceedings{poli2021neurips,\n    title={Neural Hybrid Automata: Learning Dynamics with Multiple Modes and Stochastic Transitions},\n    author = {Poli, Michael and Massaroli, Stefano and Scimeca, Luca and Oh, Seong Joon and Chun, Sanghyuk and Yamashita, Atsushi and Asama, Hajime and Park, Jinkyoo and Garg, Animesh},\n    year = {2021},\n    booktitle = {Conference on Neural Information Processing Systems},\n}",
     "image": "pictures/poli2021neurips.png",
     "links": [],
-    "abstract": "Recovering the dynamical systems, or the data generation process, behind time series data enables an effective and robust prediction, interpretation, and forecasting. There exist prior methods for recovering either continuous or discrete dynamics, but not the mixture. The underlying dynamics behind many real-world systems contain both continuous and discrete elements. For example, an aircraft essentially follows a continuous dynamics but goes through a discrete mode shift at touchdown. Such a system is referred to as a Stochastic Hybrid System (SHS). We present a framework that recovers SHS from time series data using ingredients like Neural ODEs and latent variable models.",
+    "abstract": "Real systems can move smoothly and then switch behaviour abruptly, such as an aircraft at touchdown. We develop a model that learns both the continuous motion and the switches between modes from time-series data. This helps describe systems whose behaviour cannot be captured by continuous or discrete dynamics alone.",
     "rtai_tags": [
       "AI4TS"
     ]
@@ -1695,7 +1712,7 @@ const publicationsData = [
         "url": "https://github.com/naver-ai/relabel_imagenet"
       }
     ],
-    "abstract": "ImageNet labels contain lots of noise (e.g. Shankar et al.). There have been efforts to fix them on the evaluation set, but not yet on the training set. We fix them on the training set (published at codebase), but with the help of a bigger image classifier, to make the task feasible at all. This is another trick that will improve the ImageNet & downstream task accuracies across the board.",
+    "abstract": "An ImageNet photo may contain several objects even though its training label names only one. We use a stronger classifier to supply richer labels for whole images and individual regions. Training with these improved labels helps models learn from information that the original annotations leave out.",
     "rtai_tags": []
   },
   {
@@ -1719,7 +1736,7 @@ const publicationsData = [
         "url": "https://github.com/naver-ai/pcme"
       }
     ],
-    "abstract": "Given an image, there are many ways to describe it in text. Given a text description, there are likewise many possible images that suits the description. Cross-model associations are of many-to-many nature. The usual deterministic embeddings cannot model this well. We introduce a probabilistic embedding scheme based on the Hedged Instance Embedding (ICLR'19) to handle the many-to-many mapping gracefully. We address another crucial issue with evaluation: your method gets either penalised or rewarded for retrieving synonymous sentences. This is because of the non-exhaustive true matches in the eval set. Since ground-up collection of such matches is too expensive, we introduce a novel surrogate measure Plausible-Match R-Precision based on the estimated true matches.",
+    "abstract": "One image can match many descriptions, and one description can match many images. We represent this ambiguity with distributions instead of fixed points, which improves image-text retrieval. We also address evaluation errors caused by missing valid matches, so a model is not unfairly penalised for finding a synonymous description.",
     "rtai_tags": [
       "UQCV"
     ]
@@ -1751,7 +1768,7 @@ const publicationsData = [
         "url": "https://clovaai.github.io/AdamP/"
       }
     ],
-    "abstract": "When you apply a momentum-based optimizer over scale-invariant parameters, their norms increase quite a bit. The norm increase doesn't contribute anything to the loss minimization while only slowing down the convergence. We fix this by appending a projection operation on SGD and Adam. This leads to performance improvements across the board.",
+    "abstract": "Some neural-network weights can grow without changing the model's predictions. Momentum-based optimisers can push this growth and slow down useful learning. AdamP removes the part of an update that causes unnecessary growth. This simple change improves optimisation across a range of tasks.",
     "rtai_tags": [
       "ODL"
     ]
@@ -1772,7 +1789,7 @@ const publicationsData = [
     "bibtex": "@article{yun2020videomix,\n  title={VideoMix: Rethinking Data Augmentation for Video Classification},\n  author={Yun, Sangdoo and Oh, Seong Joon and Heo, Byeongho and Han, Dongyoon and Kim, Jinhyung},\n  year={2020},\n  journal={arXiv preprint arXiv:2012.03457},\n}",
     "image": "pictures/yun2020videomix.png",
     "links": [],
-    "abstract": "Data augmentation is not as extensively studied in the video recognition tasks as in the static image recognition domain. We study the extension of popular static-image augmentation method, such as CutMix, on video recognition tasks.",
+    "abstract": "Mixing parts of training images is a useful way to improve image classifiers. VideoMix asks how the same idea should work for video, where both space and time matter. We study ways to combine parts of video clips as training examples for action recognition.",
     "rtai_tags": []
   },
   {
@@ -1808,7 +1825,7 @@ const publicationsData = [
         "url": "https://www.youtube.com/watch?v=_XwsGkryVpk&feature=youtu.be&ab_channel=FerjadNaeem"
       }
     ],
-    "abstract": "Evaluating generative models is tricky. There are Inception Score and Fréchet Inception Distance measures indeed, and then (Improved) Precision and Recall metrics to separately examine the fidelity and diversity aspects. Yet, they are still not perfect. We address the issues with Improved Precision and Recall metrics and propose new metrics: Density and Coverage.",
+    "abstract": "A good image generator should produce both realistic and varied images. Existing scores can confuse these goals or miss important failures. We introduce density and coverage, two measures designed to assess sample quality and diversity more reliably. They provide a clearer view of what a generative model does well.",
     "rtai_tags": [
       "EGVM"
     ]
@@ -1842,7 +1859,7 @@ const publicationsData = [
         "url": "https://www.youtube.com/watch?v=lkjMxZDGubA"
       }
     ],
-    "abstract": "Models pick up correlations, rather than causal mechanisms, between inputs and outputs. De-biasing (and fairness) researches have guided models on \"which cues to look at\" through explicit bias labels or by re-weighting or re-generating training data to remove bias. We show that, for many application scenarios, it is possible to encode the \"cues to look at\" through model architecture and such expensive strategies are no longer needed.",
+    "abstract": "A model can achieve high training accuracy by relying on the wrong visual cues. Many fixes require extra labels that identify the bias. We instead use an architecture that deliberately captures easy shortcuts, then train another model to look beyond them. This reduces reliance on unwanted correlations without costly bias annotations.",
     "rtai_tags": [
       "OOD"
     ]
@@ -1865,7 +1882,7 @@ const publicationsData = [
     "year": "2020",
     "url": "https://arxiv.org/abs/2001.07437",
     "bibtex": "@inproceedings{choe2020cvpr,\n  title={Evaluating Weakly Supervised Object Localization Methods Right},\n  author={Choe, Junsuk and Oh, Seong Joon and Lee, Seungho and Chun, Sanghyuk and Akata, Zeynep and Shim, Hyunjung},\n  year = {2020},\n  booktitle = {Conference on Computer Vision and Pattern Recognition (CVPR)},\n  note = {to appear},\n  pubstate = {published},\n  tppubtype = {inproceedings}\n}",
-    "image": "pictures/choe2020cvpr.gif",
+    "image": "pictures/choe2020cvpr-summary.svg",
     "links": [
       {
         "text": "Code",
@@ -1880,10 +1897,11 @@ const publicationsData = [
         "url": "https://www.youtube.com/watch?v=D_dEkeb-fto&list=PLcD_yLvcdUll95mAnBDV0rZKhfClJMZMr&index=5"
       }
     ],
-    "abstract": "I have long waited for this moment since CVPR'17. Weakly-Supervised Object Localization, or WSOL, has in fact been not weakly supervised in a strict sense. Design choices and hyperparameters are validated with the localization annotations! This paper explains why researchers had to rely on localization validation -- without localization supervision, there is no way to force a model to not extract cues from background regions. We propose a new fair benchmark acknowledging the need for localization annotations and show that WSOL methods since CAM in 2016 have not introduced much gain.",
+    "abstract": "Methods that claim to locate objects using only image labels often rely on detailed location labels during development. We show why this hidden supervision matters and propose a fairer evaluation protocol. Under the revised comparison, much of the apparent progress since early class-activation maps disappears.",
     "rtai_tags": [
       "WSOL"
-    ]
+    ],
+    "image_alt": "Separate image labels used for training from location labels used for evaluation"
   },
   {
     "id": "lee2019cvprw",
@@ -1902,7 +1920,7 @@ const publicationsData = [
     "bibtex": "@inproceedings{lee2020selfattention,\n  title={On Recognizing Texts of Arbitrary Shapes with 2D Self-Attention},\n  author={Lee, Junyeop and Park, Sungrae and Baek, Jeonghun and Oh, Seong Joon and Kim, Seonghyeon and Lee, Hwalsuk},\n  year={2020},\n  booktitle = {Workshop on Text and Documents in the Deep Learning Era},\n}",
     "image": "pictures/lee2020cvprw.png",
     "links": [],
-    "abstract": "Scene text recognition works well, but there are remaining corner cases. An example is texts with unusual orientations and arrangements (e.g. BMW logo). We focus on this corner case and propose a model based on self-attention.",
+    "abstract": "Text in photographs is not always arranged in a straight line. Curved logos and unusual layouts can confuse standard text recognisers. We use two-dimensional self-attention to help a model follow characters across these arrangements instead of assuming that every word has a simple horizontal structure.",
     "rtai_tags": []
   },
   {
@@ -1925,7 +1943,7 @@ const publicationsData = [
         "url": "https://ieeexplore.ieee.org/document/8519337"
       }
     ],
-    "abstract": "Journal version of my first paper ICCV'15, after five years! We have developed the version two of the ICCV'15 system that outperforms the methods that have appeared in the meantime.",
+    "abstract": "Recognising someone in a personal photo is easier when a model considers more than the face. This journal extension combines evidence from the head, body and surrounding context. It improves our earlier person-recognition system and examines how these cues work together when faces are small, hidden or turned away.",
     "rtai_tags": [
       "CVBM"
     ]
@@ -1949,7 +1967,7 @@ const publicationsData = [
         "url": "https://link.springer.com/chapter/10.1007/978-3-030-28954-6_7"
       }
     ],
-    "abstract": "Book chapter version of ICLR'18! We build connections between our black-box inspection methodology and the explainable AI.",
+    "abstract": "A neural network's design may be hidden, but its answers can still reveal clues about how it was built. This book chapter explains methods for inferring properties of a model through its input-output behaviour. It connects this kind of inspection with broader questions about how to understand machine-learning systems.",
     "rtai_tags": [
       "MLAU",
       "AAML"
@@ -1976,7 +1994,7 @@ const publicationsData = [
         "url": "data/orekondy2019neuripsfl_poster.pdf"
       }
     ],
-    "abstract": "Federated learning allows sensitive user data to never leave the device and still be used for training. It is considered a safer option than sending the user data directly to the server. But is it? We show that users may be identified and linked based on the model updates communicated between the device and server.",
+    "abstract": "Federated learning keeps training data on users' devices, but the updates sent to a server can still reveal who contributed them. We study how these updates can identify and link users. The work shows why keeping raw data local does not, by itself, guarantee anonymity.",
     "rtai_tags": [
       "PICV",
       "FedML"
@@ -1997,13 +2015,14 @@ const publicationsData = [
     "year": "2019",
     "url": "https://arxiv.org/abs/2003.03879",
     "bibtex": "@article{chun2019icmlw,\ntitle = {An Empirical Evaluation on Robustness and Uncertainty of Regularization Methods},\nauthor = {Chun, Sanghyuk and Oh, Seong Joon and Yun, Sangdoo and Han, Dongyoon and Choe, Junsuk and Yoo, Youngjoon},\njournal = {Uncertainty and Robustness in Deep Learning. ICML Workshop},\nyear = {2019},\n}",
-    "image": "pictures/chun2019icmlw.png",
+    "image": "pictures/chun2019icmlw-summary.svg",
     "links": [],
-    "abstract": "There has been a line of research on simple regularization techniques like CutMix (ICCV'19) and other lines of research on robustness and uncertainty. We make a happy marriage of the two and measure how well the regularization techniques improve robustness and uncertainty of a model.",
+    "abstract": "Training tricks that improve accuracy may also affect how a model handles unfamiliar inputs and expresses uncertainty. We compare common regularisation methods, including CutMix, on these questions. The study tests whether gains in ordinary classification carry over to robustness and confidence quality.",
     "rtai_tags": [
       "OOD",
       "UQCV"
-    ]
+    ],
+    "image_alt": "Evaluate training methods on accuracy, robustness and uncertainty"
   },
   {
     "id": "yun2019iccv",
@@ -2043,7 +2062,7 @@ const publicationsData = [
         "url": "https://clovaai.github.io/AdamP/"
       }
     ],
-    "abstract": "A simple solution that works surprisingly well! Cut and paste patches from other images during training. Quite likely, you will see a performance boost.",
+    "abstract": "CutMix creates a training image by pasting a patch from one image into another and mixing their labels. The model must learn from several parts of an image instead of relying on one easy clue. This simple augmentation improves classification and helps models locate the features behind their predictions.",
     "rtai_tags": []
   },
   {
@@ -2070,7 +2089,7 @@ const publicationsData = [
         "url": "https://github.com/clovaai/deep-text-recognition-benchmark"
       }
     ],
-    "abstract": "Scene text recognition field has long suffered from the lack of a unified agreement on the evaluation protocol. We provide a standard protocol. We also provide a unified view on the previous methods and discover a novel combination of existing modules that turns out to be the state of the art.",
+    "abstract": "Comparisons between text-recognition models can be distorted by different datasets and training choices. We put common methods into one evaluation framework so those differences can be controlled. This makes comparisons fairer and reveals a strong combination of existing components.",
     "rtai_tags": []
   },
   {
@@ -2095,7 +2114,7 @@ const publicationsData = [
         "url": "data/oh2019iclr_poster.pdf"
       }
     ],
-    "abstract": "There has been quite some work on representing uncertainty for classification or regression tasks. Is there a way to represent uncertainty for instance embedding models too? We show that it is possible to train probabilistic representatitons for instances based on their inherent ambiguity.",
+    "abstract": "A blurry or partly hidden object may have several plausible identities. We represent each example with a probability distribution instead of a single fixed vector. The model can then express uncertainty about which examples match, rather than force an ambiguous input into one precise location.",
     "rtai_tags": [
       "UQCV"
     ]
@@ -2114,7 +2133,7 @@ const publicationsData = [
     "bibtex": "@inproceedings{edgar2018cscs,\ntitle = {Sequential Attacks on Agents for Long-Term Adversarial Goals},\nauthor = {Tretschk, Edgar and Oh, Seong Joon and Fritz, Mario},\nyear = {2018},\nbooktitle = {ACM Computer Science in Cars Symposium -- Future Challenges in Artificial Intelligence & Security for Autonomous Vehicles (CSCS)},\n}",
     "image": "pictures/tretschk2018cscs.png",
     "links": [],
-    "abstract": "Can a bad guy hijack an RL agent? We show that it is possible to let an agent pursue an alternative reward by introducing small adversarial perturbations in the input stream.",
+    "abstract": "Can small changes to what a reinforcement-learning agent sees make it pursue a different goal? We construct sequences of subtle input perturbations that steer the agent over time. This studies attacks on its long-term behaviour, beyond causing a single wrong action.",
     "rtai_tags": [
       "AAML",
       "OnRL"
@@ -2148,7 +2167,7 @@ const publicationsData = [
         "url": "https://github.com/coallaoh/WhitenBlackBox"
       }
     ],
-    "abstract": "Recipes for training a high-performance model are not cheap. Think about the GPU-and-research-scientist-and-engineer hours to find the right architectural components and optimizer hyperparameters. What if they can be stolen by examining the model responses to certain inputs?",
+    "abstract": "A model's architecture and training choices can be valuable secrets. We investigate how much of this information can be inferred just by sending inputs and observing outputs. The results show that a black-box interface can reveal more about a neural network's design than its owner might expect.",
     "rtai_tags": [
       "MLAU",
       "AAML"
@@ -2171,7 +2190,7 @@ const publicationsData = [
     "bibtex": "@inproceedings{qianru2018cvpr,\ntitle = {Natural and Effective Obfuscation by Head Inpainting},\nauthor = {Sun, Qianru and Ma, Liqian and Oh, Seong Joon and van Gool, Luc and Schiele, Bernt and Fritz, Mario},\nyear = {2018},\nbooktitle = {Conference on Computer Vision and Pattern Recognition (CVPR)}\n}",
     "image": "pictures/sun2017cvpr.png",
     "links": [],
-    "abstract": "Adversarial perturbation solutions (ICCV'17) produce visually pleasant protections with high protection rates, but their effects may be confined to a handful of recognition systems. We propose another solution based on face inpainting that changes the face to a fictitious yet natural-looking identity. It is effective against a broader set of recognition systems.",
+    "abstract": "Blurring a face can leave enough clues for a person-recognition model to identify someone. We replace the head with a plausible but different identity instead. The resulting image looks natural while protecting against a broader range of recognition systems than some methods based on tiny pixel changes.",
     "rtai_tags": [
       "PICV"
     ]
@@ -2195,7 +2214,7 @@ const publicationsData = [
         "url": "data/oh2017cvprw_poster.pdf"
       }
     ],
-    "abstract": "We stop and look back on the visual privacy papers (ICCV'15, ECCV'16, ICCV'17).",
+    "abstract": "Hiding a face does not necessarily hide a person's identity in a photo. This paper reviews our work on recognition from faces, bodies and context, then considers ways to protect against it. It connects what recognition systems can infer with the control people have over their visual privacy.",
     "rtai_tags": [
       "PICV",
       "CVBM"
@@ -2224,7 +2243,7 @@ const publicationsData = [
         "url": "https://github.com/coallaoh/AIP"
       }
     ],
-    "abstract": "If face blurring doesn't work (ECCV'16), how should we shield our personal photos online against recognition systems? We propose a solution based on adversarial perturbations and the game theoretic considerations for the evaluation therein.",
+    "abstract": "If blurring a face is not enough, can small changes to an image protect someone's identity? We study adversarial perturbations designed to confuse person-recognition systems. A game-theoretic evaluation considers how a recogniser might respond, rather than assume that the system stays fixed after the protection is applied.",
     "rtai_tags": [
       "PICV",
       "AAML",
@@ -2257,7 +2276,7 @@ const publicationsData = [
         "url": "https://github.com/coallaoh/GuidedLabelling"
       }
     ],
-    "abstract": "There has been quite some work around training models for localization tasks (e.g. semantic segmentation) from the image tag supervision only. But is this fundamentally possible without relying on extensive validation with full localization annotations? We argue that certain priors are necessary at the very least to encode the extent of objects. Saliency, we argue, is a handy prior.",
+    "abstract": "An image label tells a model that an object is present, but not which pixels belong to it. We study what extra guidance is needed to learn segmentation from these labels. Visual saliency provides a useful prior about object extent and helps the model go beyond the most recognisable part.",
     "rtai_tags": [
       "SSeg"
     ]
@@ -2278,7 +2297,7 @@ const publicationsData = [
     "bibtex": "@inproceedings{anja2017cvpr,\ntitle = {Generating Descriptions with Grounded and Co-Referenced People},\nauthor = {Rohrbach, Anna and Rohrbach, Marcus and Tang, Siyu and Oh, Seong Joon and Schiele, Bernt},\nyear = {2017},\nbooktitle = {Conference on Computer Vision and Pattern Recognition (CVPR)},\nnote = {to appear},\npubstate = {published},\ntppubtype = {inproceedings}\n}",
     "image": "pictures/anja2017cvpr.png",
     "links": [],
-    "abstract": "We casually use pronouns to refer to others. For machines, however, referring to people with pronouns necessitates new types of data and training strategies to explicitly localize and link people across frames. We do that.",
+    "abstract": "A video description should keep track of who is who across frames and use names or pronouns appropriately. We introduce data and training methods that link people to the phrases that describe them. This helps a model generate descriptions with consistent references to the same person.",
     "rtai_tags": []
   },
   {
@@ -2305,7 +2324,7 @@ const publicationsData = [
         "url": "data/oh2016eccvw.pdf"
       }
     ],
-    "abstract": "But can you still be recognized even with a blur on your face? Quite likely.",
+    "abstract": "Can someone still be recognised after their face is blurred? We show that clothing, body appearance and the context of other photos can provide enough clues. The work measures how person-recognition systems use these signals and why face hiding alone can give a false sense of privacy.",
     "rtai_tags": [
       "PICV",
       "CVBM"
@@ -2336,7 +2355,7 @@ const publicationsData = [
         "url": "http://ipic.mpi-sws.org/"
       }
     ],
-    "abstract": "You are a janitor at Taj Mahal. Against you will, sightseers take photos with your face in the background. How can you opt out of being present in someone else's photo? We present a mobile-system based solution.",
+    "abstract": "People can appear in someone else's photo without choosing to be photographed. I-pic explores how a mobile image-capture system can respect their privacy preferences. It offers a way to handle consent around the moment a photo is taken, rather than leave the person to deal with it after sharing.",
     "rtai_tags": [
       "PICV"
     ]
@@ -2369,7 +2388,7 @@ const publicationsData = [
         "url": "https://www.mpi-inf.mpg.de/departments/computer-vision-and-machine-learning/research/people-detection-pose-estimation-and-tracking/person-recognition-in-personal-photo-collections/"
       }
     ],
-    "abstract": "How well does a CNN model recognize people in personal photos? Even when people don't look at cameras, CNN finds out who they are, based on the context (e.g. location and social connections).",
+    "abstract": "People in personal photos do not always face the camera. We combine visual cues from different body regions with contextual information to recognise them anyway. The study shows how clothing, location and social context can help a model identify someone when the face alone is not enough.",
     "rtai_tags": [
       "CVBM"
     ]
