@@ -92,10 +92,10 @@ async function renderPublication(publication) {
       <div class="col-xs-12 col-sm-9 right-column">
         ${allTagsHTML}
         <br>
-        <a href="${publication.url}" id="${publication.id}">
+        ${publication.url ? `<a href="${publication.url}" id="${publication.id}">` : `<span id="${publication.id}">`}
           <papertitle>${publication.title}
           </papertitle>
-        </a>
+        ${publication.url ? '</a>' : '</span>'}
         <br>
         ${authorsHTML}.
         <br>
