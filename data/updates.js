@@ -3,6 +3,11 @@
 // The FE will render the latest 5 items.
 const updatesData = [
   {
+    "date": "2026-09-25",
+    "id": "update-2026-09-25-neurips26-acceptance",
+    "html": "25 September 2026. Four papers accepted at NeurIPS 2026, all posters: <a href=\"#sangwoo2026selfci\">It Takes Two</a>, <a href=\"#bora2026halftruths\">Half-Truths</a>, <a href=\"#seokwon2026meme\">MEME</a> and <a href=\"#uselis2026crisp\">CRISP</a>. MEME and CRISP are in the Evaluations and Datasets Track."
+  },
+  {
     date: '2026-09-04',
     id: 'update-2026-09-04-nowdo-launch',
     html: "4 September 2026. <a href=\"https://nowdo.ai\">NowDo</a> is out on web and iPhone. AI plans your day, and your feedback builds the app."

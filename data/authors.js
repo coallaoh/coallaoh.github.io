@@ -1239,6 +1239,18 @@ const authorsData = {
       "name": "Wojciech Samek",
       "url": "https://iphome.hhi.de/samek/",
       "isMe": false
+    },
+    {
+      "id": "yanpeng_zhao",
+      "name": "Yanpeng Zhao"
+    },
+    {
+      "id": "yonatan_bitton",
+      "name": "Yonatan Bitton"
+    },
+    {
+      "id": "paul_gavrikov",
+      "name": "Paul Gavrikov"
     }
   ]
 };

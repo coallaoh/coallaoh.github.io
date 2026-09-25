@@ -1,6 +1,30 @@
 // Publications data in JSON format
 const publicationsData = [
   {
+    "id": "uselis2026crisp",
+    "title": "CRISP: Compositional Reasoning over Images via Stackable Programs for VLMs",
+    "authors": [
+      "arnas_uselis",
+      "yujin_jeong",
+      "yanpeng_zhao",
+      "alexander_rubinstein",
+      "seong_joon_oh",
+      "yonatan_bitton",
+      "paul_gavrikov"
+    ],
+    "venue": "NeurIPS Evaluations and Datasets Track (Poster)",
+    "year": "2026",
+    "url": "",
+    "bibtex": "@inproceedings{uselis2026crisp,\n  title={CRISP: Compositional Reasoning over Images via Stackable Programs for VLMs},\n  author={Uselis, Arnas and Jeong, Yujin and Zhao, Yanpeng and Rubinstein, Alexander and Oh, Seong Joon and Bitton, Yonatan and Gavrikov, Paul},\n  booktitle={NeurIPS Evaluations and Datasets Track},\n  year={2026}\n}",
+    "image": "pictures/uselis2026crisp.svg",
+    "links": [],
+    "abstract": "",
+    "rtai_tags": [
+      "CoGe",
+      "VLM"
+    ]
+  },
+  {
     "id": "elena2026muppet",
     "title": "MuPPET: A Benchmark for Contextual Privacy of LLM Assistants in Multi-Party Conversations",
     "authors": [
@@ -58,18 +82,18 @@ const publicationsData = [
     "authors": [
       "sangwoo_park",
       "woongyeong_yeo",
-      "seanie_lee",
       "yumin_choi",
       "hyomin_lee",
       "kangsan_kim",
+      "seanie_lee",
       "jinheon_baek",
       "seong_joon_oh",
       "sung_ju_hwang"
     ],
-    "venue": "arXiv",
+    "venue": "NeurIPS (Poster)",
     "year": "2026",
     "url": "https://arxiv.org/abs/2605.20258",
-    "bibtex": "@article{sangwoo2026selfci,\n  title={It Takes Two: Complementary Self-Distillation for Contextual Integrity in LLMs},\n  author={Park, Sangwoo and Yeo, Woongyeong and Lee, Seanie and Choi, Yumin and Lee, Hyomin and Kim, Kangsan and Baek, Jinheon and Oh, Seong Joon and Hwang, Sung Ju},\n  journal={arXiv preprint arXiv:2605.20258},\n  year={2026}\n}",
+    "bibtex": "@inproceedings{sangwoo2026selfci,\n  title={It Takes Two: Complementary Self-Distillation for Contextual Integrity in LLMs},\n  author={Park, Sangwoo and Yeo, Woongyeong and Choi, Yumin and Lee, Hyomin and Kim, Kangsan and Lee, Seanie and Baek, Jinheon and Oh, Seong Joon and Hwang, Sung Ju},\n  booktitle={Advances in Neural Information Processing Systems},\n  year={2026}\n}",
     "image": "pictures/sangwoo2026selfci.png",
     "links": [],
     "abstract": "Teaching an LLM to keep secrets usually makes it worse at its job, because hiding information and solving the task pull in opposite directions. SELFCI separates the two with self-distillation from two teachers: one keeps what the task needs, the other strips what privacy forbids. Their product places the model at the intersection of capability and privacy. It beats reinforcement-learning baselines with no external supervision, and holds up as private context accumulates across an agent's work.",
@@ -80,7 +104,7 @@ const publicationsData = [
   },
   {
     "id": "seokwon2026meme",
-    "title": "MEME: Multi-entity & Evolving Memory Evaluation",
+    "title": "MEME: Multi-Entity & Evolving Memory Evaluation",
     "authors": [
       "seokwon_jung",
       "alexander_rubinstein",
@@ -88,10 +112,10 @@ const publicationsData = [
       "sangdoo_yun",
       "seong_joon_oh"
     ],
-    "venue": "arXiv",
+    "venue": "NeurIPS Evaluations and Datasets Track (Poster)",
     "year": "2026",
     "url": "https://arxiv.org/abs/2605.12477",
-    "bibtex": "@article{seokwon2026meme,\n  title={MEME: Multi-entity \\& Evolving Memory Evaluation},\n  author={Jung, Seokwon and Rubinstein, Alexander and Uselis, Arnas and Yun, Sangdoo and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2605.12477},\n  year={2026}\n}",
+    "bibtex": "@inproceedings{seokwon2026meme,\n  title={MEME: Multi-Entity \\& Evolving Memory Evaluation},\n  author={Jung, Seokwon and Rubinstein, Alexander and Uselis, Arnas and Yun, Sangdoo and Oh, Seong Joon},\n  booktitle={NeurIPS Evaluations and Datasets Track},\n  year={2026}\n}",
     "image": "pictures/seokwon2026meme.png",
     "links": [
       {
@@ -291,10 +315,10 @@ const publicationsData = [
       "arnas_uselis",
       "seong_joon_oh"
     ],
-    "venue": "arXiv",
+    "venue": "NeurIPS (Poster)",
     "year": "2026",
     "url": "https://arxiv.org/abs/2602.23906",
-    "bibtex": "@article{bora2026halftruths,\n  title={Half-Truths Break Similarity-Based Retrieval},\n  author={Kargi, Bora and Uselis, Arnas and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2602.23906},\n  year={2026}\n}",
+    "bibtex": "@inproceedings{bora2026halftruths,\n  title={Half-Truths Break Similarity-Based Retrieval},\n  author={Kargi, Bora and Uselis, Arnas and Oh, Seong Joon},\n  booktitle={Advances in Neural Information Processing Systems},\n  year={2026}\n}",
     "image": "pictures/bora2026halftruths.png",
     "links": [
       {
