@@ -1,1 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400"><rect width="640" height="400" rx="20" fill="#eef4f7"/><text x="40" y="150" font-family="sans-serif" font-size="74" fill="#183b4e">CRISP</text><text x="40" y="210" font-family="sans-serif" font-size="24" fill="#183b4e">Compositional reasoning over images</text><text x="40" y="300" font-family="sans-serif" font-size="24" fill="#416675">NeurIPS 2026</text><text x="40" y="337" font-family="sans-serif" font-size="20" fill="#416675">Evaluations and Datasets Track</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="320" viewBox="0 0 480 320" role="img">
+  <title>CRISP checks the visual evidence at every reasoning step</title>
+  <defs>
+    <g id="person"><circle cx="0" cy="0" r="9" fill="#e3c39e"/><path d="M-12 14 Q0 5 12 14 L14 43 H-14Z" fill="#9eb5c4"/></g>
+    <g id="scene">
+      <rect width="132" height="136" rx="10" fill="#fff"/>
+      <g transform="translate(30 40)"><use href="#person"/><path d="M-13-5 H13 L8-17 H-8Z" fill="#ba555f"/></g>
+      <g transform="translate(68 76)"><use href="#person"/><path d="M-13-5 H13 L8-17 H-8Z" fill="#3a71be"/></g>
+      <g transform="translate(105 43)"><use href="#person"/><path d="M-13-5 H13 L8-17 H-8Z" fill="#ba555f"/></g>
+    </g>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0 0 L10 5 L0 10" fill="#627984"/></marker>
+  </defs>
+  <rect width="480" height="320" rx="18" fill="#f3f7f8"/>
+  <g font-family="Arial, sans-serif" text-anchor="middle" fill="#193d49">
+    <text x="240" y="39" font-size="25">Check every step</text>
+    <g transform="translate(22 65)"><use href="#scene"/><g fill="none" stroke="#208778" stroke-width="3"><rect x="10" y="16" width="40" height="74" rx="3"/><rect x="85" y="19" width="40" height="74" rx="3"/></g></g>
+    <g transform="translate(174 65)"><use href="#scene"/><rect x="47" y="51" width="42" height="73" rx="3" fill="none" stroke="#3a71be" stroke-width="3"/><path d="M68 66 L104 39" stroke="#627984" stroke-width="3" stroke-dasharray="4 3"/><rect x="85" y="19" width="40" height="74" rx="3" fill="none" stroke="#208778" stroke-width="3"/></g>
+    <g transform="translate(326 65)"><use href="#scene"/><rect x="85" y="19" width="40" height="74" rx="3" fill="none" stroke="#208778" stroke-width="3"/></g>
+    <text x="88" y="235" font-size="22">Find</text><text x="240" y="235" font-size="22">Compare</text><text x="392" y="235" font-size="22">Answer</text>
+    <path d="M132 228 H164 M304 228 H337" fill="none" stroke="#627984" stroke-width="3" marker-end="url(#arrow)"/>
+    <text x="240" y="285" font-size="19">Which objects support each step?</text>
+  </g>
+</svg>

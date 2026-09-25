@@ -100,7 +100,8 @@ const publicationsData = [
     "bibtex": "@inproceedings{uselis2026crisp,\n  title={CRISP: Compositional Reasoning over Images via Stackable Programs for VLMs},\n  author={Uselis, Arnas and Jeong, Yujin and Zhao, Yanpeng and Rubinstein, Alexander and Oh, Seong Joon and Bitton, Yonatan and Gavrikov, Paul},\n  booktitle={NeurIPS Evaluations and Datasets Track},\n  year={2026}\n}",
     "image": "pictures/uselis2026crisp.svg",
     "links": [],
-    "abstract": "",
+    "abstract": "A vision-language model can give the right answer while looking at the wrong objects. CRISP builds visual questions from reusable steps and checks which objects the model uses at every stage. Across 2D characters, 3D characters and indoor scenes, models struggle as the reasoning gets longer, and correct final answers often hide mistakes along the way.",
+    "image_alt": "A visual reasoning chain with a checked object bounding box at every step",
     "rtai_tags": [
       "CoGe",
       "VLM"
