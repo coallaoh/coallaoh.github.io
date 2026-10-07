@@ -2,6 +2,18 @@
 const authorsData = {
   "authors": [
     {
+      "id": "sunwoo_kim",
+      "name": "Sunwoo Kim",
+      "url": "",
+      "isMe": false
+    },
+    {
+      "id": "alice_oh",
+      "name": "Alice Oh",
+      "url": "",
+      "isMe": false
+    },
+    {
       "id": "alexander_rubinstein",
       "name": "Alexander Rubinstein",
       "url": "https://arubique.github.io/",

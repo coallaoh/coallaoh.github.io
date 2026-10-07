@@ -1,6 +1,29 @@
 // Publications data in JSON format
 const publicationsData = [
   {
+    "id": "sunwoo2026form",
+    "title": "Form Over Content In Gradient-Based Data Attribution Methods",
+    "authors": [
+      "sunwoo_kim",
+      "seokwon_jung",
+      "sohyung_kim",
+      "seong_joon_oh",
+      "alice_oh"
+    ],
+    "venue": "arXiv",
+    "year": "2026",
+    "url": "https://arxiv.org/abs/2609.19589",
+    "bibtex": "@article{sunwoo2026form,\n  title={Form Over Content In Gradient-Based Data Attribution Methods},\n  author={Kim, Sunwoo and Jung, Seokwon and Kim, Sohyung and Oh, Seong Joon and Oh, Alice},\n  journal={arXiv preprint arXiv:2609.19589},\n  year={2026}\n}",
+    "image": "pictures/sunwoo2026form-summary.svg",
+    "image_alt": "Gradient similarity is high for a shared answer format across tasks, but near zero for the same task with a different format",
+    "links": [],
+    "abstract": "Which training examples help a language model with a task? Gradient-based methods compare how examples change the model. We vary tasks and answer formats separately and find that these methods mainly match the answer format. Examples from different tasks can look similar, while the same task in a different format can look unrelated. This shows why data attribution needs tests that separate format from task content.",
+    "rtai_tags": [
+      "TDI",
+      "ELM"
+    ]
+  },
+  {
     "id": "sonthalia2026bottle",
     "title": "Agent in a Bottle: Can LLM Agents Turn Their Capabilities Into Cheap, Scalable Artifacts?",
     "authors": [
