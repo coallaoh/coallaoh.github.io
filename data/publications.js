@@ -63,14 +63,14 @@ const publicationsData = [
     "year": "2026",
     "url": "https://arxiv.org/abs/2605.20258",
     "bibtex": "@inproceedings{sangwoo2026selfci,\n  title={It Takes Two: Complementary Self-Distillation for Contextual Integrity in LLMs},\n  author={Park, Sangwoo and Yeo, Woongyeong and Choi, Yumin and Lee, Hyomin and Kim, Kangsan and Lee, Seanie and Baek, Jinheon and Oh, Seong Joon and Hwang, Sung Ju},\n  booktitle={Advances in Neural Information Processing Systems},\n  year={2026}\n}",
-    "image": "pictures/sangwoo2026selfci-summary.svg",
+    "image": "pictures/sangwoo2026selfci.png",
     "links": [],
     "abstract": "An AI assistant should use the information it needs without sharing private details unnecessarily. We train it with two teachers: one focuses on the task, the other on privacy. This helps the assistant keep useful information and limit disclosure, even as private context builds up across its work.",
     "rtai_tags": [
       "PILM",
       "LLMAG"
     ],
-    "image_alt": "Two teachers guide one assistant: task usefulness and privacy"
+    "image_alt": "Figure 2, teacher distributions"
   },
   {
     "id": "bora2026halftruths",
@@ -143,10 +143,10 @@ const publicationsData = [
     "year": "2026",
     "url": "",
     "bibtex": "@inproceedings{uselis2026crisp,\n  title={CRISP: Compositional Reasoning over Images via Stackable Programs for VLMs},\n  author={Uselis, Arnas and Jeong, Yujin and Zhao, Yanpeng and Rubinstein, Alexander and Oh, Seong Joon and Bitton, Yonatan and Gavrikov, Paul},\n  booktitle={NeurIPS Evaluations and Datasets Track},\n  year={2026}\n}",
-    "image": "pictures/uselis2026crisp.svg",
+    "image": "pictures/uselis2026crisp.png",
     "links": [],
     "abstract": "A vision-language model can give the right answer while looking at the wrong objects. CRISP builds visual questions from reusable steps and checks which objects the model uses at every stage. Across 2D characters, 3D characters and indoor scenes, models struggle as the reasoning gets longer, and correct final answers often hide mistakes along the way.",
-    "image_alt": "A visual reasoning chain with a checked object bounding box at every step",
+    "image_alt": "Stacked glass blocks",
     "rtai_tags": [
       "CoGe",
       "VLM"
@@ -197,6 +197,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2606.11172",
     "bibtex": "@article{evgenii2026futureprobes,\n  title={Predicting Future Behaviors in Reasoning Models Enables Better Steering},\n  author={Kortukov, Evgenii and Komorowski, Piotr and Klein, Florian and Engl, Paula and Sarti, Gabriele and Oh, Seong Joon and Lapuschkin, Sebastian and Samek, Wojciech},\n  journal={arXiv preprint arXiv:2606.11172},\n  year={2026}\n}",
     "image": "pictures/evgenii2026futureprobes.png",
+    "image_alt": "Figure 8, steering results",
     "links": [],
     "abstract": "To steer a reasoning model, you have to act before it does, not after. Existing methods read internal features that merely detect behaviour in text the model has already written, which says little about what comes next. We instead train probes to forecast future behaviour from mid-reasoning, then steer by picking the sentence most likely to lead where we want. This removes almost all of the quality loss that activation steering causes, and even works in cases where activation steering fails outright.",
     "rtai_tags": [
@@ -219,6 +220,7 @@ const publicationsData = [
     "url": "https://openreview.net/forum?id=C8MlQkr4bw",
     "bibtex": "@inproceedings{shuman2026clipgen,\n  title={CLIP Models Generalize Less Than Compositional Benchmarks Suggest},\n  author={Peng, Shuman and Uselis, Arnas and Koishigarina, Darina and Ester, Martin and Oh, Seong Joon},\n  booktitle={ICML 2026 Workshop on Compositional Learning: Safety, Interpretability, and Agents (CompLearn)},\n  year={2026}\n}",
     "image": "pictures/shuman2026clipgen.png",
+    "image_alt": "Author project illustration",
     "links": [],
     "abstract": "Does a vision-language model understand a new combination of familiar objects and attributes, or has it seen that combination before? We find that common benchmarks often mix these cases. When we remove familiar combinations and other shortcuts, performance drops and model rankings change. Existing scores can therefore overstate how well models understand new combinations.",
     "rtai_tags": [
@@ -243,6 +245,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2605.15961",
     "bibtex": "@article{fabian2026saeft,\n  title={Sparse Autoencoders enable Robust and Interpretable Fine-tuning of CLIP models},\n  author={Morelli, Fabian and Uselis, Arnas and Sonthalia, Ankit and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2605.15961},\n  year={2026}\n}",
     "image": "pictures/fabian2026saeft.png",
+    "image_alt": "Figure 1, sparse feature directions",
     "links": [
       {
         "text": "Code",
@@ -275,7 +278,7 @@ const publicationsData = [
     "year": "2026",
     "url": "https://arxiv.org/abs/2603.08835",
     "bibtex": "@inproceedings{cornelius2026maseval,\n  title={MASEval: Extending Multi-Agent Evaluation from Models to Systems},\n  author={Emde, Cornelius and Rubinstein, Alexander and Goel, Anmol and Heakl, Ahmed and Yun, Sangdoo and Oh, Seong Joon and Gubri, Martin},\n  booktitle={Proceedings of the Annual Meeting of the Association for Computational Linguistics: System Demonstration Track},\n  year={2026}\n}",
-    "image": "pictures/cornelius2026maseval-summary.svg",
+    "image": "pictures/cornelius2026maseval.png",
     "links": [
       {
         "text": "Code",
@@ -290,7 +293,7 @@ const publicationsData = [
     "workshops": [
       "GEM 2026 Workshop on Natural Language Generation, Evaluation, and Metrics"
     ],
-    "image_alt": "Compare complete agent systems, not only the language model"
+    "image_alt": "Three sculptural robots"
   },
   {
     "id": "emde2026lostcomm",
@@ -394,11 +397,11 @@ const publicationsData = [
     "year": "2026",
     "url": "https://arxiv.org/abs/2602.14761",
     "bibtex": "@inproceedings{stefano2026implicit,\n  title={Universal Algorithm-Implicit Learning},\n  author={Woerner, Stefano and Oh, Seong Joon and Baumgartner, Christian F.},\n  booktitle={International Conference on Machine Learning (ICML)},\n  year={2026}\n}",
-    "image": "pictures/stefano2026implicit-summary.svg",
+    "image": "pictures/stefano2026implicit.png",
     "links": [],
     "abstract": "A model that learns how to learn should cope with more than one fixed kind of task. We develop a framework for this goal and introduce TAIL, a model that can handle different input types and label sets. It learns from a few examples and can transfer to new domains and kinds of data.",
     "rtai_tags": [],
-    "image_alt": "One learner handles tasks with different inputs and labels"
+    "image_alt": "Figure 1, learning architecture"
   },
   {
     "id": "hoyeon2026lpa",
@@ -412,7 +415,7 @@ const publicationsData = [
     "year": "2026",
     "url": "https://arxiv.org/abs/2601.21601",
     "bibtex": "@inproceedings{hoyeon2026lpa,\n  title={Dynamics Reveals Structure: Challenging the Linear Propagation Assumption},\n  author={Chang, Hoyeon and Mucs\\'{a}nyi, B\\'{a}lint and Oh, Seong Joon},\n  booktitle={International Conference on Machine Learning (ICML)},\n  year={2026}\n}",
-    "image": "pictures/hoyeon2026lpa-summary.svg",
+    "image": "pictures/hoyeon2026lpa.png",
     "links": [],
     "abstract": "If we change one fact inside a model, should related facts change too? Many methods assume that these changes can spread through simple linear operations. We show why relationships such as negation and chains of facts can make that impossible. These limits help explain some failures in knowledge editing and multi-step reasoning.",
     "rtai_tags": [
@@ -422,7 +425,7 @@ const publicationsData = [
     "workshops": [
       "ICLR 2026 Workshop on Unifying Concept Representation Learning (Oral)"
     ],
-    "image_alt": "Changing one fact does not always update related facts correctly"
+    "image_alt": "Figure 1, geometric illustration"
   },
   {
     "id": "yujin2026diffusion",
@@ -462,7 +465,7 @@ const publicationsData = [
     "year": "2026",
     "url": "https://arxiv.org/abs/2510.07959",
     "bibtex": "@inproceedings{alex2025disco,\n  title={DISCO: Diversifying Sample Condensation for Efficient Model Evaluation},\n  author={Rubinstein, Alexander and Raible, Benjamin and Gubri, Martin and Oh, Seong Joon},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2026}\n}",
-    "image": "pictures/alex2025disco-summary.svg",
+    "image": "pictures/alex2025disco.png",
     "links": [
       {
         "text": "Project Page",
@@ -482,7 +485,7 @@ const publicationsData = [
       "Catch, Adapt, and Operate: Monitoring ML Models Under Drift Workshop (Oral, Best Paper Award)",
       "GEM 2026 Workshop on Natural Language Generation, Evaluation, and Metrics"
     ],
-    "image_alt": "Choose a small set of test questions where models disagree"
+    "image_alt": "Figure 3, dataset selection"
   },
   {
     "id": "ahmed2025drllm",
@@ -498,7 +501,7 @@ const publicationsData = [
     "year": "2026",
     "url": "https://arxiv.org/abs/2510.12773",
     "bibtex": "@inproceedings{ahmed2025drllm,\n  title={Dr.LLM: Dynamic Layer Routing for LLMs},\n  author={Heakl, Ahmed and Gubri, Martin and Khan, Salman and Yun, Sangdoo and Oh, Seong Joon},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2026}\n}",
-    "image": "pictures/ahmed2025drllm-summary.svg",
+    "image": "pictures/ahmed2025drllm.png",
     "links": [
       {
         "text": "Code",
@@ -512,7 +515,7 @@ const publicationsData = [
     "workshops": [
       "Third Workshop on Test-Time Updates (Main Track)"
     ],
-    "image_alt": "A language model routes computation through layers: use, skip or repeat"
+    "image_alt": "Figure 2, dynamic layer routing"
   },
   {
     "id": "darina2025binding",
@@ -590,14 +593,14 @@ const publicationsData = [
     "year": "2026",
     "url": "https://arxiv.org/abs/2505.20295",
     "bibtex": "@inproceedings{kirchhof2025selfreflect,\n  title={SelfReflect: Can LLMs Communicate Their Internal Answer Distribution?},\n  author={Kirchhof, Michael and Füger, Luca and Goliński, Adam and Dhekane, Eeshan Gunesh and Blaas, Arno and Oh, Seong Joon and Williamson, Sinead},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2026}\n}",
-    "image": "pictures/michael2025selfreflect-summary.svg",
+    "image": "pictures/michael2025selfreflect.png",
     "links": [],
     "abstract": "A model's written answer may hide how uncertain it actually is. SelfReflect measures whether a short summary represents the range of answers the model would give. We find that models often communicate this poorly. Summaries become more faithful when the model first produces several answers and then describes their variation.",
     "rtai_tags": [
       "UQLM",
       "ELM"
     ],
-    "image_alt": "A written summary should reflect the model’s range of possible answers"
+    "image_alt": "Figure 4, answer certainty heatmap"
   },
   {
     "id": "anmol2026privacycollapse",
