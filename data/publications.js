@@ -15,7 +15,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2609.19589",
     "bibtex": "@article{sunwoo2026form,\n  title={Form Over Content In Gradient-Based Data Attribution Methods},\n  author={Kim, Sunwoo and Jung, Seokwon and Kim, Sohyung and Oh, Seong Joon and Oh, Alice},\n  journal={arXiv preprint arXiv:2609.19589},\n  year={2026}\n}",
     "image": "pictures/sunwoo2026form-summary.svg",
-    "image_alt": "Gradient similarity is high for a shared answer format across tasks, but near zero for the same task with a different format",
+    "image_alt": "Figure 2(a): gradient alignment heatmap across answer formats",
     "links": [],
     "abstract": "Which training examples help a language model with a task? Gradient-based methods compare how examples change the model. We vary tasks and answer formats separately and find that these methods mainly match the answer format. Examples from different tasks can look similar, while the same task in a different format can look unrelated. This shows why data attribution needs tests that separate format from task content.",
     "rtai_tags": [
