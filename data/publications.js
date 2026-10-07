@@ -1,6 +1,28 @@
 // Publications data in JSON format
 const publicationsData = [
   {
+    "id": "sonthalia2026bottle",
+    "title": "Agent in a Bottle: Can LLM Agents Turn Their Capabilities Into Cheap, Scalable Artifacts?",
+    "authors": [
+      "ankit_sonthalia",
+      "haritz_puerto",
+      "alexander_rubinstein",
+      "martin_gubri",
+      "seong_joon_oh"
+    ],
+    "venue": "arXiv",
+    "year": "2026",
+    "url": "https://arxiv.org/abs/2610.08775",
+    "bibtex": "@article{sonthalia2026bottle,\n  title={Agent in a Bottle: Can LLM Agents Turn Their Capabilities Into Cheap, Scalable Artifacts?},\n  author={Sonthalia, Ankit and Puerto, Haritz and Rubinstein, Alexander and Gubri, Martin and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2610.08775},\n  year={2026}\n}",
+    "image": "pictures/sonthalia2026bottle-summary.svg",
+    "image_alt": "An agent builds a reusable programme or small model to process a large workload under fixed budgets",
+    "links": [],
+    "abstract": "Calling a large language model for millions of similar tasks can be expensive. BOTTLED tests whether an AI agent can build a reusable programme or small model instead, under fixed budgets. Strong task performance does not always translate into good reusable solutions, but successful agents can cut costs substantially.",
+    "rtai_tags": [
+      "LLMAG"
+    ]
+  },
+  {
     "id": "sangwoo2026selfci",
     "title": "It Takes Two: Complementary Self-Distillation for Contextual Integrity in LLMs",
     "authors": [
