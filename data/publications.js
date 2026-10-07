@@ -70,7 +70,7 @@ const publicationsData = [
       "PILM",
       "LLMAG"
     ],
-    "image_alt": "Figure 2, teacher distributions"
+    "image_alt": "Blue and coral origami cranes"
   },
   {
     "id": "bora2026halftruths",
@@ -197,7 +197,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2606.11172",
     "bibtex": "@article{evgenii2026futureprobes,\n  title={Predicting Future Behaviors in Reasoning Models Enables Better Steering},\n  author={Kortukov, Evgenii and Komorowski, Piotr and Klein, Florian and Engl, Paula and Sarti, Gabriele and Oh, Seong Joon and Lapuschkin, Sebastian and Samek, Wojciech},\n  journal={arXiv preprint arXiv:2606.11172},\n  year={2026}\n}",
     "image": "pictures/evgenii2026futureprobes.png",
-    "image_alt": "Figure 8, steering results",
+    "image_alt": "Brass compass with an orange needle",
     "links": [],
     "abstract": "To steer a reasoning model, you have to act before it does, not after. Existing methods read internal features that merely detect behaviour in text the model has already written, which says little about what comes next. We instead train probes to forecast future behaviour from mid-reasoning, then steer by picking the sentence most likely to lead where we want. This removes almost all of the quality loss that activation steering causes, and even works in cases where activation steering fails outright.",
     "rtai_tags": [
@@ -245,7 +245,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2605.15961",
     "bibtex": "@article{fabian2026saeft,\n  title={Sparse Autoencoders enable Robust and Interpretable Fine-tuning of CLIP models},\n  author={Morelli, Fabian and Uselis, Arnas and Sonthalia, Ankit and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2605.15961},\n  year={2026}\n}",
     "image": "pictures/fabian2026saeft.png",
-    "image_alt": "Figure 1, sparse feature directions",
+    "image_alt": "A jewel-like coloured glass prism",
     "links": [
       {
         "text": "Code",
@@ -401,7 +401,7 @@ const publicationsData = [
     "links": [],
     "abstract": "A model that learns how to learn should cope with more than one fixed kind of task. We develop a framework for this goal and introduce TAIL, a model that can handle different input types and label sets. It learns from a few examples and can transfer to new domains and kinds of data.",
     "rtai_tags": [],
-    "image_alt": "Figure 1, learning architecture"
+    "image_alt": "A red pocket multitool"
   },
   {
     "id": "hoyeon2026lpa",
@@ -425,7 +425,7 @@ const publicationsData = [
     "workshops": [
       "ICLR 2026 Workshop on Unifying Concept Representation Learning (Oral)"
     ],
-    "image_alt": "Figure 1, geometric illustration"
+    "image_alt": "A brass Newton’s cradle with turquoise balls"
   },
   {
     "id": "yujin2026diffusion",
@@ -485,7 +485,7 @@ const publicationsData = [
       "Catch, Adapt, and Operate: Monitoring ML Models Under Drift Workshop (Oral, Best Paper Award)",
       "GEM 2026 Workshop on Natural Language Generation, Evaluation, and Metrics"
     ],
-    "image_alt": "Figure 3, dataset selection"
+    "image_alt": "A mirrored disco ball with colourful reflections"
   },
   {
     "id": "ahmed2025drllm",
@@ -515,7 +515,7 @@ const publicationsData = [
     "workshops": [
       "Third Workshop on Test-Time Updates (Main Track)"
     ],
-    "image_alt": "Figure 2, dynamic layer routing"
+    "image_alt": "A miniature railway junction"
   },
   {
     "id": "darina2025binding",
@@ -600,7 +600,7 @@ const publicationsData = [
       "UQLM",
       "ELM"
     ],
-    "image_alt": "Figure 4, answer certainty heatmap"
+    "image_alt": "A purple handheld mirror"
   },
   {
     "id": "anmol2026privacycollapse",
