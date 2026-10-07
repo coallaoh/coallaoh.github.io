@@ -14,8 +14,8 @@ const publicationsData = [
     "year": "2026",
     "url": "https://arxiv.org/abs/2609.19589",
     "bibtex": "@article{sunwoo2026form,\n  title={Form Over Content In Gradient-Based Data Attribution Methods},\n  author={Kim, Sunwoo and Jung, Seokwon and Kim, Sohyung and Oh, Seong Joon and Oh, Alice},\n  journal={arXiv preprint arXiv:2609.19589},\n  year={2026}\n}",
-    "image": "pictures/sunwoo2026form-summary.svg",
-    "image_alt": "Figure 2(a): gradient alignment heatmap across answer formats",
+    "image": "pictures/sunwoo2026form.png",
+    "image_alt": "An iridescent chrome ribbon knot",
     "links": [],
     "abstract": "Which training examples help a language model with a task? Gradient-based methods compare how examples change the model. We vary tasks and answer formats separately and find that these methods mainly match the answer format. Examples from different tasks can look similar, while the same task in a different format can look unrelated. This shows why data attribution needs tests that separate format from task content.",
     "rtai_tags": [
@@ -84,7 +84,7 @@ const publicationsData = [
     "year": "2026",
     "url": "https://arxiv.org/abs/2602.23906",
     "bibtex": "@inproceedings{bora2026halftruths,\n  title={Half-Truths Break Similarity-Based Retrieval},\n  author={Kargi, Bora and Uselis, Arnas and Oh, Seong Joon},\n  booktitle={Advances in Neural Information Processing Systems},\n  year={2026}\n}",
-    "image": "pictures/bora2026halftruths-summary.svg",
+    "image": "pictures/bora2026halftruths.png",
     "links": [
       {
         "text": "Code",
@@ -96,7 +96,7 @@ const publicationsData = [
       "CoGe",
       "VLM"
     ],
-    "image_alt": "A correct description becomes a half-truth when a false object is added"
+    "image_alt": "An emerald pear with a red interior"
   },
   {
     "id": "seokwon2026meme",
@@ -113,6 +113,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2605.12477",
     "bibtex": "@inproceedings{seokwon2026meme,\n  title={MEME: Multi-Entity \\& Evolving Memory Evaluation},\n  author={Jung, Seokwon and Rubinstein, Alexander and Uselis, Arnas and Yun, Sangdoo and Oh, Seong Joon},\n  booktitle={NeurIPS Evaluations and Datasets Track},\n  year={2026}\n}",
     "image": "pictures/seokwon2026meme.png",
+    "image_alt": "An amber nautilus shell",
     "links": [
       {
         "text": "Project",
@@ -167,6 +168,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2606.23217",
     "bibtex": "@article{elena2026muppet,\n  title={MuPPET: A Benchmark for Contextual Privacy of LLM Assistants in Multi-Party Conversations},\n  author={Ruzzetti, Elena Sofia and Emde, Cornelius and Yun, Sangdoo and Oh, Seong Joon and Gubri, Martin},\n  journal={arXiv preprint arXiv:2606.23217},\n  year={2026}\n}",
     "image": "pictures/elena2026muppet.png",
+    "image_alt": "A lime-green fuzzy puppet",
     "links": [
       {
         "text": "Code",
@@ -308,14 +310,14 @@ const publicationsData = [
     "venue": "ICML 2026 Workshop AgenticUQ (Poster)",
     "year": "2026",
     "bibtex": "@inproceedings{emde2026lostcomm,\n  title={Lost in Communication: Uncertainty Propagation in Multi-Agent Systems},\n  author={Emde, Cornelius and Goel, Anmol and Yun, Sangdoo and Oh, Seong Joon and Gubri, Martin},\n  booktitle={ICML 2026 Workshop on Statistical Frameworks for Uncertainty in Agentic Systems (AgenticUQ)},\n  year={2026}\n}",
-    "image": "pictures/emde2026lostcomm-summary.svg",
+    "image": "pictures/emde2026lostcomm.png",
     "links": [],
     "abstract": "When one AI agent passes an answer to another, does it also pass on its uncertainty? We find that doubts can fade along the way: the receiving agent may not reflect how uncertain the original answer was. This makes confidence across a team of agents a separate problem from confidence within a single model.",
     "rtai_tags": [
       "LLMAG",
       "UQLM"
     ],
-    "image_alt": "Uncertainty can disappear when one agent passes an answer to another"
+    "image_alt": "Two tin cans connected by coral cord"
   },
   {
     "id": "kim2026breakgeom",
@@ -330,6 +332,7 @@ const publicationsData = [
     "year": "2026",
     "bibtex": "@inproceedings{kim2026breakgeom,\n  title={Break the Output Geometry for Large Language Model Unlearning},\n  author={Kim, Yejin and Shen, William F. and Jung, Seokwon and Oh, Seong Joon},\n  booktitle={ICML 2026 Workshop on Memory in Foundation Models (MemFM)},\n  year={2026}\n}",
     "image": "pictures/kim2026breakgeom.png",
+    "image_alt": "A cracked blue porcelain sphere",
     "links": [],
     "abstract": "Teaching a language model to forget selected information can also damage what it should remember. We study how answers are represented inside the model and identify a direction that controls a target output. Our method moves the information to forget along this direction, which improves the balance between forgetting and useful retained knowledge.",
     "rtai_tags": [
@@ -378,6 +381,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2605.31503",
     "bibtex": "@inproceedings{arnas2026binding,\n  title={How can embedding models bind concepts?},\n  author={Uselis, Arnas and Koishigarina, Darina and Oh, Seong Joon},\n  booktitle={International Conference on Machine Learning (ICML)},\n  year={2026}\n}",
     "image": "pictures/arnas2026binding.png",
+    "image_alt": "Pink and orange interlocked chain links",
     "links": [],
     "abstract": "Recognising a colour and a shape is not enough: a model must know which colour belongs to which shape. We study how models combine these concepts in their image representations. CLIP struggles with new combinations, while controlled models can learn simpler, more reliable combinations when their training data covers enough examples.",
     "rtai_tags": [
@@ -485,7 +489,7 @@ const publicationsData = [
       "Catch, Adapt, and Operate: Monitoring ML Models Under Drift Workshop (Oral, Best Paper Award)",
       "GEM 2026 Workshop on Natural Language Generation, Evaluation, and Metrics"
     ],
-    "image_alt": "A mirrored disco ball with colourful reflections"
+    "image_alt": "Silver dancing shoes with pink soles"
   },
   {
     "id": "ahmed2025drllm",
@@ -515,7 +519,7 @@ const publicationsData = [
     "workshops": [
       "Third Workshop on Test-Time Updates (Main Track)"
     ],
-    "image_alt": "A miniature railway junction"
+    "image_alt": "A colourful miniature marble run"
   },
   {
     "id": "darina2025binding",
@@ -530,6 +534,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2502.03566",
     "bibtex": "@inproceedings{darina2025binding,\n  title={CLIP Behaves like a Bag-of-Words Model Cross-modally but not Uni-modally},\n  author={Koishigarina, Darina and Uselis, Arnas and Oh, Seong Joon},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2026}\n}",
     "image": "pictures/darina2025binding.png",
+    "image_alt": "A blue pouch with colourful geometric toys",
     "links": [
       {
         "text": "Code",
@@ -841,7 +846,7 @@ const publicationsData = [
     "year": "2025",
     "url": "https://arxiv.org/abs/2507.07102",
     "bibtex": "@article{arnas2025scaling,\n  title={Does Data Scaling Lead to Visual Compositional Generalization?},\n  author={Arnas Uselis and Andrea Dittadi and Seong Joon Oh},\n  journal={arXiv preprint arXiv:2507.07102},\n  year={2025}\n}",
-    "image": "pictures/arnas2025scaling-summary.svg",
+    "image": "pictures/arnas2025scaling.png",
     "links": [
       {
         "text": "Code",
@@ -853,7 +858,7 @@ const publicationsData = [
       "CoGe",
       "VLM"
     ],
-    "image_alt": "Diverse combinations of concepts matter more than repeated examples"
+    "image_alt": "Three nested orange spheres"
   },
   {
     "id": "alex2025ocl",
@@ -902,14 +907,14 @@ const publicationsData = [
     "year": "2025",
     "url": "https://arxiv.org/abs/2311.16176",
     "bibtex": "@inproceedings{luca2025diffdiv,\n  title={Mitigating Shortcut Learning with Diffusion Counterfactuals and Diverse Ensembles},\n  author={Scimeca, Luca and Rubinstein, Alexander and Teney, Damien and Oh, Seong Joon and Bengio, Yoshua},\n  booktitle={ICLR Workshop},\n  year={2025}\n}",
-    "image": "pictures/luca2025diffdiv-summary.svg",
+    "image": "pictures/luca2025diffdiv.png",
     "links": [],
     "abstract": "Models often rely on easy shortcuts, such as a background that happens to match a label. We use diffusion models partway through training to generate unusual combinations that break these shortcuts. These examples help train groups of models with different strategies and improve their performance on unfamiliar data.",
     "rtai_tags": [
       "DiffM",
       "SyDa"
     ],
-    "image_alt": "Generate unusual combinations to break shortcuts in training data"
+    "image_alt": "A butterfly with turquoise and coral wings"
   },
   {
     "id": "sohyun2025dicotta",
@@ -926,6 +931,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2504.04981",
     "bibtex": "@article{sohyun2025dicotta,\n  title={DiCoTTA: Domain-invariant Learning for Continual Test-time Adaptation},\n  author={Lee, Sohyun and Kim, Nayeong and Kang, Juwon and Oh, Seong Joon and Kwak, Suha},\n  journal={arXiv preprint arXiv:2504.04981},\n  year={2025}\n}",
     "image": "pictures/sohyun2025dicotta.png",
+    "image_alt": "An emerald chameleon",
     "links": [],
     "abstract": "A deployed model may face a stream of changing environments. Adapting to the latest one can make it forget earlier ones. DiCoTTA helps the model learn features that remain useful across environments while it processes new data. It improves continual adaptation and generalisation across four benchmarks.",
     "rtai_tags": [
@@ -946,6 +952,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2411.00154",
     "bibtex": "@inproceedings{haritz2025mia,\n  title={Scaling Up Membership Inference: When and How Attacks Succeed on Large Language Models},\n  author={Puerto, Haritz and Gubri, Martin and Yun, Sangdoo and Oh, Seong Joon},\n  year={2025},\n  booktitle = {Annual Conference of the North American Chapter of the Association for Computational Linguistics: NAACL 2025},\n}",
     "image": "pictures/haritz2025mia.png",
+    "image_alt": "A purple and amber magnifying glass",
     "links": [],
     "abstract": "Can we tell whether a language model was trained on a particular text? Tests on individual sentences often find little evidence. We show that signals become more useful when combined across documents and larger collections. The scale of the material under investigation is therefore crucial to whether these tests succeed.",
     "rtai_tags": [
@@ -964,6 +971,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2504.05461",
     "bibtex": "@inproceedings{arnas2025iclr,\ntitle = {Intermediate Layer Classifiers for OOD Generalization},\nauthor = {Uselis, Arnas and Oh, Seong Joon},\nyear = {2025},\nbooktitle = {International Conference on Learning Representations (ICLR)},\n}",
     "image": "pictures/arnas2025iclr.png",
+    "image_alt": "Three broad coloured porcelain disks",
     "links": [
       {
         "text": "OpenReview",
@@ -1009,6 +1017,7 @@ const publicationsData = [
     "url": "https://openreview.net/forum?id=qZEdmyqCHF",
     "bibtex": "@inproceedings{jaehyun2025iclr,\n  title = {Decoupled Finetuning for Domain Generalizable Semantic Segmentation},\n  author = {Pahk, Jaehyun and Kwon, Donghyeon and Oh, Seong Joon and Kwak, Suha},\n  year = {2025},\n  booktitle = {International Conference on Learning Representations (ICLR)},\n}",
     "image": "pictures/jaehyun2025iclr.png",
+    "image_alt": "A blue and orange jigsaw puzzle",
     "links": [],
     "abstract": "Adapting a model to label every pixel often means training an existing image encoder together with a new decoder. This can hurt performance on unfamiliar images. DeFT first prepares the decoder, then adapts the two parts separately. The result uses fewer trainable parameters and generalises better to new domains.",
     "rtai_tags": [
@@ -1031,6 +1040,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2409.16978",
     "bibtex": "@article{nguyen2024towards,\n  title={Towards User-Focused Research in Training Data Attribution for Human-Centered Explainable AI},\n  author={Nguyen, Elisa and Bertram, Johannes and Kortukov, Evgenii and Song, Jean Y and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2409.16978},\n  year={2024}\n}",
     "image": "pictures/elisa2024tda.png",
+    "image_alt": "A sculptural coral fingerprint",
     "links": [],
     "abstract": "Tools that trace a model's prediction back to its training data should answer questions people actually have. We interview AI practitioners to learn what they need from these explanations. Their needs reveal overlooked tasks and suggest ways to make research on training-data attribution more useful in practice.",
     "rtai_tags": [
@@ -1050,7 +1060,7 @@ const publicationsData = [
     "year": "2024",
     "url": "https://arxiv.org/abs/2409.16797",
     "bibtex": "@article{alex2024diversify,\n  title={Scalable Ensemble Diversification for OOD Generalization and Detection},\n  author={Rubinstein, Alexander and Scimeca, Luca and Teney, Damien and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2409.16797},\n  year={2024}\n}",
-    "image": "pictures/alex2024diversify-summary.svg",
+    "image": "pictures/alex2024diversify.png",
     "links": [],
     "abstract": "A group of models is more useful when its members do not all make the same mistakes. We make methods for encouraging this diversity practical at ImageNet scale. The approach uses difficult training examples and limits which parts of the models change. It improves performance on unfamiliar data and helps detect it.",
     "rtai_tags": [
@@ -1058,7 +1068,7 @@ const publicationsData = [
       "OOD",
       "UQCV"
     ],
-    "image_alt": "Models with different strategies can make a more useful ensemble"
+    "image_alt": "A fan of five colourful feathers"
   },
   {
     "id": "evgenii2024ralm",
@@ -1074,6 +1084,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2404.16032",
     "bibtex": "@inproceedings{evgenii2024ralm,\n  title={Studying Large Language Model Behaviors Under Realistic Knowledge Conflicts},\n  author={Kortukov, Evgenii and Rubinstein, Alexander and Nguyen, Elisa and Oh, Seong Joon},\n  year={2024},\n  booktitle = {Conference on Language Modeling (CoLM)},\n}",
     "image": "pictures/evgenii2024ralm.png",
+    "image_alt": "Violet and golden chess knights",
     "links": [],
     "abstract": "Giving a language model a relevant document does not guarantee that it will use it. The document may conflict with information learned during training. We study these conflicts in realistic settings to understand when a model follows the supplied evidence and when it falls back on its prior knowledge.",
     "rtai_tags": [
@@ -1135,14 +1146,14 @@ const publicationsData = [
     "year": "2024",
     "url": "https://arxiv.org/abs/2402.12991",
     "bibtex": "@inproceedings{martin2024trap,\n    title = {TRAP: Targeted Random Adversarial Prompt Honeypot for Black-Box Identification},\n    author = {Gubri, Martin and Ulmer, Dennis and Lee, Hwaran and Yun, Sangdoo and Oh, Seong Joon},\n    year={2024},\n    booktitle = {Findings of the Association for Computational Linguistics: ACL 2024},\n}",
-    "image": "pictures/martin2024trap-summary.svg",
+    "image": "pictures/martin2024trap.png",
     "links": [],
     "abstract": "Which language model is running behind a chatbot service? TRAP creates special prompts that make a target model respond in a distinctive way. We can then check an unfamiliar service through its answers, without access to its internals. This offers a way to investigate model identity and possible unauthorised reuse.",
     "rtai_tags": [
       "MLAU",
       "SILM"
     ],
-    "image_alt": "A distinctive prompt-response pattern can identify a hidden language model"
+    "image_alt": "A honey pot and a blue bee"
   },
   {
     "id": "dennis2024apricot",
@@ -1158,13 +1169,13 @@ const publicationsData = [
     "year": "2024",
     "url": "https://arxiv.org/abs/2403.05973",
     "bibtex": "@inproceedings{dennis2024apricot,\n    title = {Calibrating Large Language Models Using Their Generations Only},\n    author = {Ulmer, Dennis and Gubri, Martin and Lee, Hwaran and Yun, Sangdoo and Oh, Seong Joon},\n    year={2024},\n    booktitle = {Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics},\n}",
-    "image": "pictures/dennis2024apricot-summary.svg",
+    "image": "pictures/dennis2024apricot.png",
     "links": [],
     "abstract": "A chatbot's answer does not always tell us how much to trust it, and many services hide the model's internal scores. APRICOT trains a small external model to estimate reliability from the question and generated answer alone. This makes confidence estimation possible even when only a text interface is available.",
     "rtai_tags": [
       "UQLM"
     ],
-    "image_alt": "Estimate confidence using only a question and a model’s answer"
+    "image_alt": "Two ripe apricots"
   },
   {
     "id": "elisa2023neuripsxaiw",
@@ -1179,13 +1190,13 @@ const publicationsData = [
     "year": "2023",
     "url": "https://arxiv.org/abs/2310.20477",
     "bibtex": "@inproceedings{elisa2023neuripsxaiw,\ntitle = {Exploring Practitioner Perspectives On Training Data Attribution Explanations},\nauthor = {Nguyen, Elisa and Kortukov, Evgenii and Song, Jean Y. and Oh, Seong Joon},\nbooktitle = {Conference on Neural Information Processing Systems Workshop on XAI in Action},\nyear = {2023}\n}",
-    "image": "pictures/elisa2023neuripsxaiw-summary.svg",
+    "image": "pictures/elisa2023neuripsxaiw.png",
     "links": [],
     "abstract": "Would it help practitioners to know which training examples influenced a model's prediction? We ask people who build or use machine-learning systems across different sectors. Their responses show potential uses for these explanations and highlight the need to evaluate them in real workflows, beyond mathematical measures of attribution quality.",
     "rtai_tags": [
       "TDI"
     ],
-    "image_alt": "Ask practitioners which training-data explanations would help their work"
+    "image_alt": "Coral and teal speech bubbles"
   },
   {
     "id": "balint2023tml",
@@ -1424,7 +1435,7 @@ const publicationsData = [
     "year": "2023",
     "url": "https://arxiv.org/abs/2210.08457",
     "bibtex": "@inproceedings{nam2023iccv,\ntitle = {Scratching Visual Transformer's Back with Uniform Attention},\nauthor = {Nam, Hyeon-Woo and Kim, Yu-Ji and Heo, Byeongho and Han, Doonyoon and Oh, Seong Joon and Oh, Tae-Hyun},\nbooktitle = {International Conference on Computer Vision (ICCV)},\nyear = {2022}\n}",
-    "image": "pictures/nam2023iccv-summary.svg",
+    "image": "pictures/nam2023iccv.png",
     "links": [
       {
         "text": "Code",
@@ -1433,7 +1444,7 @@ const publicationsData = [
     ],
     "abstract": "Vision transformers can benefit from more connections between image regions, but their usual attention mechanism may not learn these easily. We add inexpensive layers that spread attention evenly across the image. This simple change improves capacity and generalisation, especially for smaller models.",
     "rtai_tags": [],
-    "image_alt": "Uniform attention adds connections between all image regions"
+    "image_alt": "A peacock feather"
   },
   {
     "id": "kirchhof2023icml",
@@ -1639,7 +1650,7 @@ const publicationsData = [
     "year": "2022",
     "url": "https://arxiv.org/abs/2007.04178",
     "bibtex": "@article{choe2022tpami,\n    title={Evaluation for Weakly Supervised Object Localization: Protocol, Metrics, and Datasets},\n    author={Choe, Junsuk and Oh, Seong Joon and Chun, Sanghyuk and Akata, Zeynepand Shim, Hyunjung},\n    journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},\n    year={2022},\n    number  = {},\n    pages   = {},\n    month   = {},\n    volume  = {}\n}",
-    "image": "pictures/choe2022tpami-summary.svg",
+    "image": "pictures/choe2022tpami.png",
     "links": [
       {
         "text": "Code",
@@ -1658,7 +1669,7 @@ const publicationsData = [
     "rtai_tags": [
       "WSOL"
     ],
-    "image_alt": "Separate image labels used for training from location labels used for evaluation"
+    "image_alt": "A blue and amber camera"
   },
   {
     "id": "kim2021iccv",
@@ -1931,7 +1942,7 @@ const publicationsData = [
     "year": "2020",
     "url": "https://arxiv.org/abs/2001.07437",
     "bibtex": "@inproceedings{choe2020cvpr,\n  title={Evaluating Weakly Supervised Object Localization Methods Right},\n  author={Choe, Junsuk and Oh, Seong Joon and Lee, Seungho and Chun, Sanghyuk and Akata, Zeynep and Shim, Hyunjung},\n  year = {2020},\n  booktitle = {Conference on Computer Vision and Pattern Recognition (CVPR)},\n  note = {to appear},\n  pubstate = {published},\n  tppubtype = {inproceedings}\n}",
-    "image": "pictures/choe2020cvpr-summary.svg",
+    "image": "pictures/choe2020cvpr.png",
     "links": [
       {
         "text": "Code",
@@ -1950,7 +1961,7 @@ const publicationsData = [
     "rtai_tags": [
       "WSOL"
     ],
-    "image_alt": "Separate image labels used for training from location labels used for evaluation"
+    "image_alt": "A blue and amber camera"
   },
   {
     "id": "lee2019cvprw",
@@ -2064,14 +2075,14 @@ const publicationsData = [
     "year": "2019",
     "url": "https://arxiv.org/abs/2003.03879",
     "bibtex": "@article{chun2019icmlw,\ntitle = {An Empirical Evaluation on Robustness and Uncertainty of Regularization Methods},\nauthor = {Chun, Sanghyuk and Oh, Seong Joon and Yun, Sangdoo and Han, Dongyoon and Choe, Junsuk and Yoo, Youngjoon},\njournal = {Uncertainty and Robustness in Deep Learning. ICML Workshop},\nyear = {2019},\n}",
-    "image": "pictures/chun2019icmlw-summary.svg",
+    "image": "pictures/chun2019icmlw.png",
     "links": [],
     "abstract": "Training tricks that improve accuracy may also affect how a model handles unfamiliar inputs and expresses uncertainty. We compare common regularisation methods, including CutMix, on these questions. The study tests whether gains in ordinary classification carry over to robustness and confidence quality.",
     "rtai_tags": [
       "OOD",
       "UQCV"
     ],
-    "image_alt": "Evaluate training methods on accuracy, robustness and uncertainty"
+    "image_alt": "A golden balance scale"
   },
   {
     "id": "yun2019iccv",
