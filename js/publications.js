@@ -170,6 +170,7 @@ let filteredPublications = [];
 let loadedPublications = 0;
 let publicationObserver;
 let publicationScrollQueued = false;
+let publicationRailDragging = false;
 
 function loadMorePublications(limit = loadedPublications + 10) {
   const container = document.getElementById('publications-container');
@@ -219,7 +220,10 @@ function setPublicationCommunities(communities) {
       <span class="year-label">${year} <span class="year-count">(${count})</span></span>
       <span class="year-track" aria-hidden="true">${ticks}</span>
     </a>`;
-  }).join('');
+  }).join('') + `<button class="year-scrubber" type="button" aria-label="Drag to browse publication years">
+    <span class="year-scrubber-label"></span>
+    <span class="year-scrubber-handle" aria-hidden="true"></span>
+  </button>`;
   updatePublicationsHeading(filteredPublications.length, publicationsData.length);
   loadMorePublications();
   revealPublicationHash(false);
@@ -263,11 +267,33 @@ function updatePublicationYearRail() {
       let progress = position / Number(link.dataset.count);
       if (bounds.top < 0 && bounds.bottom <= window.innerHeight && loadedPublications === filteredPublications.length) progress = 1;
       link.style.setProperty('--year-progress', `${progress * 100}%`);
+      const scrubber = rail.querySelector('.year-scrubber');
+      const linkBounds = link.getBoundingClientRect();
+      scrubber.style.top = `${linkBounds.top - rail.getBoundingClientRect().top + progress * linkBounds.height}px`;
+      scrubber.querySelector('.year-scrubber-label').textContent = `${link.dataset.year} (${link.dataset.count})`;
+      scrubber.setAttribute('aria-label', `${link.dataset.year}, ${link.dataset.count} papers. Drag to browse years, or use the arrow keys.`);
     } else {
       link.removeAttribute('aria-current');
       link.style.removeProperty('--year-progress');
     }
   });
+}
+
+function scrubPublicationRail(clientY) {
+  const rail = document.getElementById('publication-year-rail');
+  const links = [...rail.querySelectorAll('a')];
+  const link = links.find(link => clientY < link.getBoundingClientRect().bottom) || links[links.length - 1];
+  if (!link) return;
+  const bounds = link.getBoundingClientRect();
+  const fraction = Math.max(0, Math.min(1, (clientY - bounds.top) / bounds.height));
+  const count = Number(link.dataset.count);
+  const paperPosition = Math.min(count - 0.001, fraction * count);
+  const index = filteredPublications.findIndex(publication => publication.year === link.dataset.year) + Math.floor(paperPosition);
+  if (index >= loadedPublications) loadMorePublications(index + 10);
+  const card = document.getElementById(filteredPublications[index].id);
+  const cardBounds = card.getBoundingClientRect();
+  window.scrollTo({ top: scrollY + cardBounds.top + (paperPosition % 1) * cardBounds.height - innerHeight / 3, behavior: 'instant' });
+  updatePublicationYearRail();
 }
 
 function renderPublications() {
@@ -280,7 +306,42 @@ function renderPublications() {
   publicationObserver = new IntersectionObserver(entries => {
     if (entries.some(entry => entry.isIntersecting)) loadMorePublications();
   }, { rootMargin: '400px' });
-  document.getElementById('publication-year-rail').addEventListener('click', event => {
+  const rail = document.getElementById('publication-year-rail');
+  rail.addEventListener('pointerdown', event => {
+    if (event.button !== 0 || event.target.closest('a') && !event.target.closest('.year-track')) return;
+    event.preventDefault();
+    publicationRailDragging = true;
+    rail.classList.add('is-dragging');
+    rail.setPointerCapture(event.pointerId);
+    scrubPublicationRail(event.clientY);
+  });
+  rail.addEventListener('pointermove', event => {
+    if (publicationRailDragging) scrubPublicationRail(event.clientY);
+  });
+  rail.addEventListener('lostpointercapture', () => {
+    publicationRailDragging = false;
+    rail.classList.remove('is-dragging');
+  });
+  rail.addEventListener('keydown', event => {
+    if (!event.target.closest('.year-scrubber')) return;
+    const current = rail.querySelector('a[aria-current]');
+    const count = Number(current.dataset.count);
+    const progress = parseFloat(current.style.getPropertyValue('--year-progress')) / 100;
+    const index = filteredPublications.findIndex(publication => publication.year === current.dataset.year)
+      + Math.min(count - 1, Math.floor(progress * count));
+    let targetIndex;
+    if (event.key === 'ArrowDown') targetIndex = Math.min(filteredPublications.length - 1, index + 1);
+    else if (event.key === 'ArrowUp') targetIndex = Math.max(0, index - 1);
+    else if (event.key === 'Home') targetIndex = 0;
+    else if (event.key === 'End') targetIndex = filteredPublications.length - 1;
+    else return;
+    event.preventDefault();
+    if (targetIndex >= loadedPublications) loadMorePublications(targetIndex + 10);
+    const card = document.getElementById(filteredPublications[targetIndex].id);
+    window.scrollTo({ top: scrollY + card.getBoundingClientRect().top - innerHeight / 3, behavior: 'instant' });
+    updatePublicationYearRail();
+  });
+  rail.addEventListener('click', event => {
     const link = event.target.closest('a');
     if (!link) return;
     event.preventDefault();
