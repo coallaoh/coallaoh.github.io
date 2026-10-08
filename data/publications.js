@@ -446,6 +446,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2605.00273",
     "bibtex": "@inproceedings{yujin2026diffusion,\n  title={When Do Diffusion Models learn to Generate Multiple Objects?},\n  author={Jeong, Yujin and Uselis, Arnas and Laina, Iro and Oh, Seong Joon and Rohrbach, Anna},\n  booktitle={International Conference on Machine Learning (ICML)},\n  year={2026}\n}",
     "image": "pictures/yujin2026diffusion.png",
+    "image_alt": "Three colourful elephant sculptures",
     "links": [],
     "abstract": "Image generators can produce convincing pictures yet struggle with several objects, exact counts or unfamiliar combinations. We use controlled scenes to separate these difficulties from the effects of training-data size and balance. Scene complexity matters strongly, counting is especially difficult with little data, and unseen combinations remain a major obstacle.",
     "rtai_tags": [
@@ -563,6 +564,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2602.01984",
     "bibtex": "@inproceedings{minyoung2026delimiter,\n  title={Enhancing Multi-Image Understanding through Delimiter Token Scaling},\n  author={Lee, Minyoung and Park, Yeji and Hwang, Dongjun and Kim, Yejin and Oh, Seong Joon and Choe, Junsuk},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2026}\n}",
     "image": "pictures/minyoung2026delimiter.png",
+    "image_alt": "Colourful blank books between purple bookends",
     "links": [
       {
         "text": "OpenReview",
@@ -622,6 +624,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2601.15220",
     "bibtex": "@inproceedings{anmol2026privacycollapse,\n  title={Privacy Collapse: Benign Fine-Tuning Can Break Contextual Privacy in Language Models},\n  author={Goel, Anmol and Emde, Cornelius and Yun, Sangdoo and Oh, Seong Joon and Gubri, Martin},\n  year={2026},\n  booktitle={Proceedings of the Annual Meeting of the Association for Computational Linguistics: ACL 2026}\n}",
     "image": "pictures/anmol2026privacycollapse.png",
+    "image_alt": "A turquoise crystal iceberg",
     "links": [],
     "abstract": "A model can lose its sense of privacy after fine-tuning on apparently harmless tasks. Training for helpfulness, exposure to user information or even debugging examples can make it share private details inappropriately. Standard safety and usefulness tests may miss this change, so privacy needs its own checks after fine-tuning.",
     "rtai_tags": [
@@ -647,6 +650,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2510.27313",
     "bibtex": "@inproceedings{philipp2026nonattrib,\n  title={LLM Generation Novelty Through the Lens of Semantic Similarity},\n  author={Davydov, Philipp and Prabhu, Ameya and Bethge, Matthias and Nguyen, Elisa and Oh, Seong Joon},\n  year={2026},\n  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2026},\n}",
     "image": "pictures/philipp2026nonattrib.png",
+    "image_alt": "Silver marbles and a rainbow tetrahedron",
     "links": [
       {
         "text": "Dataset",
@@ -676,6 +680,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2510.20603",
     "bibtex": "@article{heejin2025reasoning,\n  title={What Defines Good Reasoning in LLMs? Dissecting Reasoning Steps with Multi-Aspect Evaluation},\n  author={Do, Heejin and Hwang, Jaehui and Han, Dongyoon and Oh, Seong Joon and Yun, Sangdoo},\n  journal={arXiv preprint arXiv:2510.20603},\n  year={2025}\n}",
     "image": "pictures/heejin2025reasoning.png",
+    "image_alt": "A red spiral staircase with a gold marble",
     "links": [],
     "abstract": "Most people judge LLMs by their final answers. This misses the quality of the reasoning process. We break down reasoning into two dimensions: relevance and coherence. Relevance checks if each step is grounded in the problem. Coherence checks if it follows from prior steps. Our method, causal stepwise evaluation (CaSE), assesses each step without hindsight bias. We validate CaSE on two new expert-annotated benchmarks, MRa-GSM8K and MRa-MATH. Training data curated with CaSE directly improves model performance. This is a practical way to analyse, debug, and improve LLM reasoning.",
     "rtai_tags": [
@@ -701,6 +706,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2506.11097",
     "bibtex": "@inproceedings{haritz2025cseo,\n  title={C-SEO Bench: Does Conversational SEO Work?},\n  author={Puerto, Haritz and Gubri, Martin and Green, Tommaso and Oh, Seong Joon and Yun, Sangdoo},\n  booktitle={Advances in Neural Information Processing Systems 38 (NeurIPS 2025), Datasets and Benchmarks Track},\n  year={2025}\n}",
     "image": "pictures/haritz2025cseo.png",
+    "image_alt": "A coral and cobalt megaphone",
     "links": [
       {
         "text": "Code",
@@ -730,6 +736,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2507.03683",
     "bibtex": "@inproceedings{ankit2025ranking,\n  title={On the rankability of visual embeddings},\n  author={Sonthalia, Ankit and Uselis, Arnas and Oh, Seong Joon},\n  booktitle={Advances in Neural Information Processing Systems 38 (NeurIPS 2025)},\n  year={2025}\n}",
     "image": "pictures/ankit2025ranking.png",
+    "image_alt": "A gold podium with a turquoise orb",
     "links": [
       {
         "text": "Code",
@@ -759,6 +766,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2505.17955",
     "bibtex": "@inproceedings{yujin2025diffusion,\n  title={Diffusion Classifiers Understand Compositionality, but Conditions Apply},\n  author={Jeong, Yujin and Uselis, Arnas and Oh, Seong Joon and Rohrbach, Anna},\n  booktitle={Advances in Neural Information Processing Systems 38: Datasets and Benchmarks Track},\n  year={2025}\n}",
     "image": "pictures/yujin2025diffusion.png",
+    "image_alt": "A miniature bentwood chair",
     "links": [
       {
         "text": "Code",
@@ -786,6 +794,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2410.11536",
     "bibtex": "@inproceedings{dongjun2025ovs,\n  title={OVS Meets Continual Learning: Towards Sustainable Open-Vocabulary Segmentation},\n  author={Hwang, Dongjun and Kim, Yejin and Lee, Minyoung and Oh, Seong Joon and Choe, Junsuk},\n  booktitle={Advances in Neural Information Processing Systems 38 (NeurIPS 2025)},\n  year={2025}\n}",
     "image": "pictures/dongjun2025ovs.png",
+    "image_alt": "An emerald bonsai tree in a coral pot",
     "links": [
       {
         "text": "Code",
@@ -818,6 +827,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2506.15674",
     "bibtex": "@inproceedings{tommaso2025leakythoughts,\n  title={Leaky Thoughts: Large Reasoning Models Are Not Private Thinkers},\n  author={Green, Tommaso and Gubri, Martin and Puerto, Haritz and Yun, Sangdoo and Oh, Seong Joon},\n  year={2025},\n  booktitle = {Conference on Empirical Methods in Natural Language Processing (EMNLP)},\n}",
     "image": "pictures/tommaso2025leakythoughts.png",
+    "image_alt": "A purple teapot with a turquoise droplet",
     "links": [
       {
         "text": "Code",
@@ -874,6 +884,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2504.07092",
     "bibtex": "@article{alex2025ocl,\n  title={Are We Done with Object-Centric Learning?},\n  author={Rubinstein, Alexander and Prabhu, Ameya and Bethge, Matthias and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2504.07092},\n  year={2025}\n}",
     "image": "pictures/alex2025ocl.png",
+    "image_alt": "Playful sculptural binocular eyes",
     "links": [
       {
         "text": "HuggingFace",
@@ -997,6 +1008,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2403.07968",
     "bibtex": "@inproceedings{ankit2025star,\ntitle = {Do Deep Neural Network Solutions Form a Star Domain?},\nauthor = {Sonthalia, Ankit and Rubinstein, Alexander and Abbasnejad, Ehsan and Oh, Seong Joon},\nyear = {2025},\nbooktitle = {International Conference on Learning Representations (ICLR)},\n}",
     "image": "pictures/ankit2025star.png",
+    "image_alt": "A folded golden and violet star",
     "links": [],
     "abstract": "Two well-trained neural networks can have very different internal weights. We ask whether useful models lie along straight paths between solutions and a shared centre. Experiments across many architectures and datasets reveal substantial connections between good solutions. This helps clarify the shape of the space in which neural networks learn.",
     "rtai_tags": [
@@ -1104,6 +1116,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2402.19460",
     "bibtex": "@article{balint2024disentanglement,\n  title={Benchmarking Uncertainty Disentanglement: Specialized Uncertainties for Specialized Tasks},\n  author={Mucsányi, Bálint and Kirchhof, Michael and Oh, Seong Joon},\n  year={2024},\n  journal={arXiv preprint arXiv:2402.19460},\n}",
     "image": "pictures/balint2024disentanglement.png",
+    "image_alt": "A cobalt yarn ball with a coral strand",
     "links": [],
     "abstract": "A model can be uncertain because an image is ambiguous or because it lacks relevant knowledge. Many methods claim to distinguish these sources, but those claims need testing. We compare uncertainty estimates across tasks and find that they often do not separate the sources as intended. Different tasks need carefully validated measures.",
     "rtai_tags": [
@@ -1126,6 +1139,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2402.16569",
     "bibtex": "@article{kirchhof2024pretrained,\n  title={Pretrained Visual Uncertainties},\n  author={Kirchhof, Michael and Collier, Mark and Oh, Seong Joon and Kasneci, Enkelejda},\n  year={2024},\n  journal={arXiv preprint arXiv:2402.16569},\n}",
     "image": "pictures/kirchhof2024pretrained.png",
+    "image_alt": "A turquoise crystal ball on a gold stand",
     "links": [],
     "abstract": "Can a model learn to recognise uncertainty once and carry that skill to new tasks? We train uncertainty estimates on a large dataset, then transfer them to other settings. The approach focuses on ambiguity in the input itself and aims to make useful uncertainty estimates practical without retraining them from scratch each time.",
     "rtai_tags": [
@@ -1245,6 +1259,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2305.19765",
     "bibtex": "@inproceedings{elisa2023neurips,\n    title = {A Bayesian Perspective On Training Data Attribution},\n    author = {Nguyen, Elisa and Seo, Minjoon and Oh, Seong Joon},\n    year = {2023},\n    booktitle = {Conference on Neural Information Processing Systems},\n}",
     "image": "pictures/elisa2023neurips.png",
+    "image_alt": "Lime and coral glass bubbles",
     "links": [],
     "abstract": "Removing one training example often changes a model less than simply retraining it with a different random seed. This makes claims about an individual example's influence hard to trust. We use a Bayesian perspective to study this noise and identify when training-data attribution can provide a meaningful signal.",
     "rtai_tags": [
@@ -1272,6 +1287,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2307.01881",
     "bibtex": "@inproceedings{siwon2023neurips,\n    title = {ProPILE: Probing Privacy Leakage in Large Language Models},\n    author = {Kim, Siwon and Yun, Sangdoo and Lee, Hwaran and Gubri, Martin and Yoon, Sungroh and Oh, Seong Joon},\n    year = {2023},\n    booktitle = {Conference on Neural Information Processing Systems},\n}",
     "image": "pictures/siwon2023neurips.png",
+    "image_alt": "A coral safe with a silver wheel",
     "links": [],
     "abstract": "Could a language model reveal your personal information? ProPILE tests this with prompts based on details a person already knows about themselves. It measures how readily the model discloses related information and helps people investigate their own exposure, rather than rely only on broad privacy scores.",
     "rtai_tags": [
@@ -1292,6 +1308,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2209.00613",
     "bibtex": "@inproceedings{teney2023neurips,\n    title = {ID and OOD Performance Are Sometimes Inversely Correlated on Real-world Datasets},\n    author = {Teney, Damien and Oh, Seong Joon and Abbasnejad, Ehsan},\n    year = {2023},\n    booktitle = {Conference on Neural Information Processing Systems},\n}",
     "image": "pictures/teney2023neurips.png",
+    "image_alt": "A turquoise and golden seesaw",
     "links": [],
     "abstract": "Better scores on familiar test data do not always mean better performance in a new environment. We present real datasets where the two move in opposite directions. The choice of models included in a study can hide this trade-off, so progress on familiar data alone is not a reliable guide to generalisation.",
     "rtai_tags": [
@@ -1312,6 +1329,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2307.03810",
     "bibtex": "@inproceedings{kirchhof2023neuripsdb,\ntitle = {URL: A Representation Learning Benchmark for Transferable Uncertainty Estimates},\nauthor = {Kirchhof, Michael and Mucsányi, Bálint and Oh, Seong Joon and Kasneci, Enkelejda},\nbooktitle = {Conference on Neural Information Processing Systems: Datasets and Benchmarks Track},\nyear = {2023}\n}",
     "image": "pictures/kirchhof2023neuripsdb.png",
+    "image_alt": "A yellow rubber duck",
     "links": [],
     "abstract": "An uncertainty estimate is useful only if it stays reliable when a model encounters new kinds of data. URL tests this transfer by comparing pretrained models across unfamiliar datasets. The benchmark shows that strong image representations do not automatically provide trustworthy uncertainty estimates and gives researchers a common way to measure the gap.",
     "rtai_tags": [
@@ -1332,6 +1350,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2307.03810",
     "bibtex": "@inproceedings{kirchhof2023uaieai,\ntitle = {URL: A Representation Learning Benchmark for Transferable Uncertainty Estimates},\nauthor = {Kirchhof, Michael and Mucsányi, Bálint and Oh, Seong Joon and Kasneci, Enkelejda},\nbooktitle = {Conference on Uncertainty in Artificial Intelligence Workshop on Epistemic Uncertainty in Artificial Intelligence},\nyear = {2023}\n}",
     "image": "pictures/kirchhof2023uaieai.png",
+    "image_alt": "A yellow rubber duck",
     "links": [
       {
         "text": "Code",
@@ -1359,6 +1378,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2305.16867",
     "bibtex": "@article{elif2025naturehumanbehaviour,\ntitle = {Playing repeated games with Large Language Models},\nauthor = {Akata, Elif and Schulz, Lion and Coda-Forno, Julian and Oh, Seong Joon and Bethge, Matthias and Schulz, Eric},\njournal={Nature Human Behaviour},\nyear = {2025}\n}",
     "image": "pictures/elif2025naturehumanbehaviour.png",
+    "image_alt": "Coral and cobalt dice",
     "links": [],
     "abstract": "How do language models cooperate or compete when they interact repeatedly? We put them through familiar game-theory tasks and find that they can pursue their own interests yet struggle to coordinate. Extra information or prompts about the opponent can change their behaviour. These experiments offer a way to study social decision-making in AI.",
     "rtai_tags": []
@@ -1385,6 +1405,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2303.17595",
     "bibtex": "@inproceedings{han2023iccv,\n  title = {Neglected Free Lunch – Learning Image Classifiers Using Annotation Byproducts},\n  author = {Han, Dongyoon and Choe, Junsuk and Chun, Seonghyeok and Chung, John Joon Young and Chang, Minsuk and Yun, Sangdoo and Song, Jean Y. and Oh, Seong Joon},\n  booktitle = {International Conference on Computer Vision (ICCV)},\n  year = {2023}\n}",
     "image": "pictures/han2023iccv.png",
+    "image_alt": "A purple gift box with an emerald bow",
     "links": [
       {
         "text": "Code",
@@ -1459,6 +1480,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2302.02865",
     "bibtex": "@inproceedings{kirchhof2023icml,\ntitle = {Probabilistic Contrastive Learning Recovers the Correct Aleatoric Uncertainty of Ambiguous Inputs},\nauthor = {Kirchhof, Michael and Kasneci, Enkelejda and Oh, Seong Joon},\nbooktitle = {International Conference on Machine Learning},\nyear = {2023}\n}",
     "image": "pictures/kirchhof2023icml.png",
+    "image_alt": "Silver tuning forks with colourful tips",
     "links": [
       {
         "text": "Code",
@@ -1487,6 +1509,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2211.02291",
     "bibtex": "@inproceedings{hwang2022neurips,\n    title={SelecMix: Debiased Learning by Contradicting-pair Sampling},\n    author = {Hwang, Inwoo and Lee, Sangjun and Kwak, Yunhyeok and Oh, Seong Joon and Teney, Damien and Kim, Jin-Hwa and Zhang, Byoung-Tak},\n    year = {2022},\n    booktitle = {Conference on Neural Information Processing Systems},\n}",
     "image": "pictures/hwang2022neurips.png",
+    "image_alt": "An orange and cobalt mixer whisk",
     "links": [
       {
         "text": "Workshop paper",
@@ -1550,6 +1573,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2205.14959",
     "bibtex": "@inproceedings{kim2022icml,\ntitle = {Dataset Condensation via Efficient Synthetic-Data Parameterization},\nauthor = {Kim, Jang-Hyun and Kim, Junuk and  Oh, Seong Joon and Yun, Sangdoo and Song, Hwanjun and Ha, Jung-Wooa and Song, Hyun Oh},\nyear = {2022},\nbooktitle = {International Conference on Machine Learning (ICML)},\nnote = {to appear},\ntppubtype = {inproceedings}\n}",
     "image": "pictures/kim2022icml.png",
+    "image_alt": "A caramel and cream dog sculpture",
     "links": [
       {
         "text": "Code",
@@ -1607,6 +1631,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2110.03095",
     "bibtex": "@inproceedings{scimeca2022iclr,\n    title={Which Shortcut Cues Will DNNs Choose? A Study from the Parameter-Space Perspective},\n    author={Scimeca, Luca and Oh, Seong Joon and Chun, Sanghyuk and Poli, Michael and Yun, Sangdoo},\n    year={2022},\n    booktitle = {International Conference on Learning Representations (ICLR)},\n}",
     "image": "pictures/scimeca2022iclr.png",
+    "image_alt": "A purple magnet and gold ball bearings",
     "links": [],
     "abstract": "When colour and shape both predict the right label, why does a model prefer one over the other? We study this choice through the model's possible weight configurations. The results help explain why different neural-network architectures can settle on the same easy shortcut, even when another valid cue is available.",
     "rtai_tags": [
@@ -1628,6 +1653,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2112.11916",
     "bibtex": "@inproceedings{hazel2022aaai,\n  title={ALP: Data Augmentation using Lexicalized PCFGs for Few-Shot Text Classification},\n  author={Kim, Hazel and Woo, Daecheol and Oh, Seong Joon and Cha, Jeong-Won and Han, Yo-Sub},\n  year={2022},\n  booktitle = {Association for the Advancement of Artificial Intelligence Conference (AAAI)},\n  note = {to appear},\n  pubstate = {published},\n  tppubtype = {inproceedings},\n}",
     "image": "pictures/hazel2022aaai.png",
+    "image_alt": "A coral tree with turquoise spherical leaves",
     "links": [],
     "abstract": "Training a text classifier from a few examples is easier if we can generate useful variations. Our method uses grammar rules to produce sentences that preserve meaning while changing structure. We also study how to split the resulting data for training and validation, since that choice strongly affects whether augmentation helps.",
     "rtai_tags": []
@@ -1689,6 +1715,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2106.07861",
     "bibtex": "@inproceedings{kim2021iccv,\n  title={Keep CALM and Improve Visual Feature Attribution},\n  author={Kim, Jae Myung and Choe, Junsuk and Akata, Zeynep and Oh, Seong Joon},\n  year={2021},\n  booktitle = {International Conference on Computer Vision (ICCV)},\n  note = {to appear},\n  pubstate = {published},\n  tppubtype = {inproceedings},\n}",
     "image": "pictures/kim2021iccv.png",
+    "image_alt": "A curled cobalt ceramic cat",
     "links": [
       {
         "text": "Code",
@@ -1716,6 +1743,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2103.16302",
     "bibtex": "@inproceedings{heo2021iccv,\n  title={Rethinking Spatial Dimensions of Vision Transformers},\n  author={Heo, Byeongho and Yun, Sangdoo and Han, Dongyoon and Chun, Sanghyuk and Choe, Junsuk and Oh, Seong Joon},\n  year={2021},\n  booktitle = {International Conference on Computer Vision (ICCV)},\n  note = {to appear},\n  pubstate = {published},\n  tppubtype = {inproceedings},\n}",
     "image": "pictures/heo2021iccv.png",
+    "image_alt": "A teal and coral accordion",
     "links": [
       {
         "text": "Code",
@@ -1744,6 +1772,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2106.04165",
     "bibtex": "@inproceedings{poli2021neurips,\n    title={Neural Hybrid Automata: Learning Dynamics with Multiple Modes and Stochastic Transitions},\n    author = {Poli, Michael and Massaroli, Stefano and Scimeca, Luca and Oh, Seong Joon and Chun, Sanghyuk and Yamashita, Atsushi and Asama, Hajime and Park, Jinkyoo and Garg, Animesh},\n    year = {2021},\n    booktitle = {Conference on Neural Information Processing Systems},\n}",
     "image": "pictures/poli2021neurips.png",
+    "image_alt": "A colourful golden gyroscope",
     "links": [],
     "abstract": "Real systems can move smoothly and then switch behaviour abruptly, such as an aircraft at touchdown. We develop a model that learns both the continuous motion and the switches between modes from time-series data. This helps describe systems whose behaviour cannot be captured by continuous or discrete dynamics alone.",
     "rtai_tags": [
@@ -1790,6 +1819,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2101.05068",
     "bibtex": "@inproceedings{chun2021cvpr,\n  title={Probabilistic Embeddings for Cross-Modal Retrieval},\n  author={Chun, Sanghyuk and Oh, Seong Joon and Rezende, Rafael and Kalantidis, Yannis and Larlus, Diane},\n  year={2021},\n  booktitle = {Conference on Computer Vision and Pattern Recognition (CVPR)},\n}",
     "image": "pictures/chun2021cvpr.png",
+    "image_alt": "Turquoise and coral glasses in a gold frame",
     "links": [
       {
         "text": "Code",
@@ -1818,6 +1848,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2006.08217",
     "bibtex": "@inproceedings{heo2021iclr,\n    title={AdamP: Slowing Down the Slowdown for Momentum Optimizers on Scale-invariant Weights},\n    author={Heo, Byeongho and Chun, Sanghyuk and Oh, Seong Joon and Han, Dongyoon and Yun, Sangdoo and Uh, Youngjung and Ha, Jung-Woo},\n    year={2021},\n    booktitle = {International Conference on Learning Representations},\n}",
     "image": "pictures/heo2021iclr.png",
+    "image_alt": "A red and turquoise spinning top",
     "links": [
       {
         "text": "Code",
@@ -1848,6 +1879,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2012.03457",
     "bibtex": "@article{yun2020videomix,\n  title={VideoMix: Rethinking Data Augmentation for Video Classification},\n  author={Yun, Sangdoo and Oh, Seong Joon and Heo, Byeongho and Han, Dongyoon and Kim, Jinhyung},\n  year={2020},\n  journal={arXiv preprint arXiv:2012.03457},\n}",
     "image": "pictures/yun2020videomix.png",
+    "image_alt": "A cobalt film reel with a coral strip",
     "links": [],
     "abstract": "Mixing parts of training images is a useful way to improve image classifiers. VideoMix asks how the same idea should work for video, where both space and time matter. We study ways to combine parts of video clips as training examples for action recognition.",
     "rtai_tags": []
@@ -1871,6 +1903,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/2002.09797",
     "bibtex": "@inproceedings{ferjad2020icml,\ntitle = {Reliable Fidelity and Diversity Metrics for Generative Models},\nauthor = {Naeem, Muhammad Ferjad and Oh, Seong Joon and Uh, Youngjung and Choi, Yunjey and Yoo, Jaejun},\nyear = {2020},\nbooktitle = {International Conference on Machine Learning},\n}",
     "image": "pictures/ferjad2020icml.png",
+    "image_alt": "A purple and amber kaleidoscope",
     "links": [
       {
         "text": "Code",
@@ -1904,7 +1937,8 @@ const publicationsData = [
     "year": "2020",
     "url": "https://arxiv.org/abs/1910.02806",
     "bibtex": "@inproceedings{hyojin2020icml,\ntitle = {Learning De-biased Representations with Biased Representations},\nauthor = {Bahng, Hyojin and Chun, Sanghyuk and Yun, Sangdoo and Choo, Jaegul and Oh, Seong Joon},\nyear = {2020},\nbooktitle = {International Conference on Machine Learning},\n}",
-    "image": "pictures/bahng2020icml.png",
+    "image": "pictures/hyojin2020icml.png",
+    "image_alt": "A low cairn of coral and turquoise stones",
     "links": [
       {
         "text": "Code",
@@ -2020,7 +2054,8 @@ const publicationsData = [
     "year": "2019",
     "url": "https://arxiv.org/abs/1711.01768",
     "bibtex": "@Inbook{joon2019blackboxchapter,\nauthor=\"Oh, Seong Joon\nand Schiele, Bernt\nand Fritz, Mario\",\neditor=\"Samek, Wojciech\nand Montavon, Gr{'e}goire\nand Vedaldi, Andrea\nand Hansen, Lars Kai\nand Muller, Klaus-Robert\",\ntitle=\"Towards Reverse-Engineering Black-Box Neural Networks\",\nbookTitle=\"Explainable AI: Interpreting, Explaining and Visualizing Deep Learning\",\nyear=\"2019\",\npublisher=\"Springer International Publishing\",\naddress=\"Cham\",\npages=\"121--144\",\nabstract=\"Much progress in interpretable AI is built around scenarios where the user, one who interprets the model, has a full ownership of the model to be diagnosed. The user either owns the training data and computing resources to train an interpretable model herself or owns a full access to an already trained model to be interpreted post-hoc. In this chapter, we consider a less investigated scenario of diagnosing black-box neural networks, where the user can only send queries and read off outputs. Black-box access is a common deployment mode for many public and commercial models, since internal details, such as architecture, optimisation procedure, and training data, can be proprietary and aggravate their vulnerability to attacks like adversarial examples. We propose a method for exposing internals of black-box models and show that the method is surprisingly effective at inferring a diverse set of internal information. We further show how the exposed internals can be exploited to strengthen adversarial examples against the model. Our work starts an important discussion on the security implications of diagnosing deployed models with limited accessibility. The code is available at goo.gl/MbYfsv.\",\nisbn=\"978-3-030-28954-6\",\ndoi=\"10.1007/978-3-030-28954-6_7\",\nurl=\"https://doi.org/10.1007/978-3-030-28954-6_7\"\n}",
-    "image": "pictures/joon2018iclr.png",
+    "image": "pictures/oh2018iclr.png",
+    "image_alt": "A cobalt toy car with coral wheels",
     "links": [
       {
         "text": "Book chapter",
@@ -2168,6 +2203,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/1810.00319",
     "bibtex": "@inproceedings{joon2019iclr,\ntitle = {Modeling Uncertainty with Hedged Instance Embedding},\nauthor = {Oh, Seong Joon and Murphy, Kevin and Pan, Jiyan and Roth, Joseph and Schroff, Florian and Gallagher, Andrew},\nyear = {2019},\nbooktitle = {International Conference on Learning Representations (ICLR)},\n}",
     "image": "pictures/joon2019iclr.png",
+    "image_alt": "A small colourful hedgehog",
     "links": [
       {
         "text": "Poster",
@@ -2192,6 +2228,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/1805.12487",
     "bibtex": "@inproceedings{edgar2018cscs,\ntitle = {Sequential Attacks on Agents for Long-Term Adversarial Goals},\nauthor = {Tretschk, Edgar and Oh, Seong Joon and Fritz, Mario},\nyear = {2018},\nbooktitle = {ACM Computer Science in Cars Symposium -- Future Challenges in Artificial Intelligence & Security for Autonomous Vehicles (CSCS)},\n}",
     "image": "pictures/tretschk2018cscs.png",
+    "image_alt": "A coral and cobalt table-tennis paddle",
     "links": [],
     "abstract": "Can small changes to what a reinforcement-learning agent sees make it pursue a different goal? We construct sequences of subtle input perturbations that steer the agent over time. This studies attacks on its long-term behaviour, beyond causing a single wrong action.",
     "rtai_tags": [
@@ -2213,6 +2250,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/1711.01768",
     "bibtex": "@inproceedings{joon2018iclr,\ntitle = {Towards Reverse-Engineering Black-Box Neural Networks},\nauthor = {Oh, Seong Joon and Augustin, Max and Schiele, Bernt and Fritz, Mario},\nyear = {2018},\nbooktitle = {International Conference on Learning Representations (ICLR)},\n}",
     "image": "pictures/joon2018iclr.png",
+    "image_alt": "A cobalt toy car with coral wheels",
     "links": [
       {
         "text": "Extended abstract",
@@ -2293,6 +2331,7 @@ const publicationsData = [
     "url": "https://arxiv.org/abs/1703.09471",
     "bibtex": "@inproceedings{joon2017iccv,\ntitle = {Adversarial Image Perturbation for Privacy Protection -- A Game Theory Perspective},\nauthor = {Oh, Seong Joon and Fritz, Mario and Schiele, Bernt},\nyear = {2017},\nbooktitle = {International Conference on Computer Vision (ICCV)},\nnote = {to appear},\npubstate = {published},\ntppubtype = {inproceedings},\n}",
     "image": "pictures/joon2017iccv.png",
+    "image_alt": "A purple masquerade mask with gold trim",
     "links": [
       {
         "text": "Poster",
