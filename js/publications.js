@@ -209,9 +209,17 @@ function setPublicationCommunities(communities) {
   document.getElementById('publications-container').replaceChildren();
   const rail = document.getElementById('publication-year-rail');
   const years = [...new Set(filteredPublications.map(publication => publication.year))];
-  rail.innerHTML = years.map(year =>
-    `<a href="#publications-${year}" data-year="${year}">${year}</a>`
-  ).join('');
+  rail.innerHTML = years.map(year => {
+    const count = filteredPublications.filter(publication => publication.year === year).length;
+    const ticks = Array.from({ length: count }, (_, index) =>
+      `<span class="year-paper-tick" style="top:${(index + 0.5) / count * 100}%"></span>`
+    ).join('');
+    return `<a href="#publications-${year}" data-year="${year}" data-count="${count}"
+      style="--year-count:${count}" aria-label="${year}, ${count} papers">
+      <span class="year-label">${year} <span class="year-count">(${count})</span></span>
+      <span class="year-track" aria-hidden="true">${ticks}</span>
+    </a>`;
+  }).join('');
   updatePublicationsHeading(filteredPublications.length, publicationsData.length);
   loadMorePublications();
   revealPublicationHash(false);
@@ -244,8 +252,20 @@ function updatePublicationYearRail() {
   rail.querySelectorAll('a').forEach(link => {
     if (current && link.dataset.year === current.dataset.year) {
       link.setAttribute('aria-current', 'location');
+      const cards = [...current.querySelectorAll('.publication-card')];
+      let position = 0;
+      cards.forEach((card, index) => {
+        const cardBounds = card.getBoundingClientRect();
+        if (cardBounds.top <= window.innerHeight / 3) {
+          position = index + Math.min(1, (window.innerHeight / 3 - cardBounds.top) / cardBounds.height);
+        }
+      });
+      let progress = position / Number(link.dataset.count);
+      if (bounds.top < 0 && bounds.bottom <= window.innerHeight && loadedPublications === filteredPublications.length) progress = 1;
+      link.style.setProperty('--year-progress', `${progress * 100}%`);
     } else {
       link.removeAttribute('aria-current');
+      link.style.removeProperty('--year-progress');
     }
   });
 }
@@ -278,6 +298,7 @@ function renderPublications() {
     });
   }, { passive: true });
   window.addEventListener('resize', updatePublicationYearRail);
+  container.addEventListener('toggle', updatePublicationYearRail, true);
   setPublicationCommunities([]);
   requestAnimationFrame(() => revealPublicationHash());
 }
