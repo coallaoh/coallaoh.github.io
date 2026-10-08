@@ -1,5 +1,5 @@
 // Function to render a single publication
-async function renderPublication(publication) {
+function renderPublication(publication) {
   // Check if tags exist, otherwise use empty array
   const tags = publication.tags || [];
   const tagsHTML = tags.map(tag => 
@@ -64,7 +64,7 @@ async function renderPublication(publication) {
   // Create a BibTeX toggle link (without the pre element)
   const bibtexId = `bibtex-${publication.id}`;
   const bibtexLinkHTML = publication.bibtex ? 
-    `<a href="javascript:void(0)" onclick="toggleBibtex('${bibtexId}')">BibTeX</a>` : '';
+    `<a href="javascript:void(0)" onclick="event.preventDefault(); event.stopPropagation(); toggleBibtex('${bibtexId}')">BibTeX</a>` : '';
   
   // Create the BibTeX content pre element separately
   const bibtexContentHTML = publication.bibtex ? 
@@ -73,9 +73,9 @@ async function renderPublication(publication) {
   // Combine all links first (BibTeX link + other links)
   const combinedLinksHTML = bibtexLinkHTML + (linksHTML ? (bibtexLinkHTML ? ' / ' : '') + linksHTML : '');
   
-  // Create the links section with the links on one line and the BibTeX content below them
+  // Keep paper links visible when the description is collapsed
   const linksSection = combinedLinksHTML ? 
-    `<br>\n${combinedLinksHTML}\n${bibtexContentHTML}` : '';
+    `<br>\n${combinedLinksHTML}` : '';
 
   const legendHTML = (starUsed || daggerUsed) ? `<span style="font-size:12px;color:#666;">${starUsed ? '* co-first author' : ''}${starUsed && daggerUsed ? '; ' : ''}${daggerUsed ? '† corresponding author' : ''}</span>` : '';
 
@@ -85,28 +85,29 @@ async function renderPublication(publication) {
     : '';
 
   return `
-    <div class="row common-rows">
-      <div class="col-xs-12 col-sm-3 left-column">
-          <img src="${publication.image}" alt="${(publication.image_alt || publication.title).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;')}" class="paper-images">
-      </div>
-      <div class="col-xs-12 col-sm-9 right-column">
+    <details class="publication-card" id="${publication.id}">
+      <summary>
+        <img src="${publication.image}" loading="lazy" alt="${(publication.image_alt || publication.title).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;')}" class="publication-thumbnail">
+        <span class="publication-info">
+          ${publication.url ? `<a href="${publication.url}">` : '<span>'}
+            <papertitle>${publication.title}</papertitle>
+          ${publication.url ? '</a>' : '</span>'}
+          <br>
+          ${authorsHTML}.
+          <br>
+          <em>${publication.venue}</em>, ${publication.year}
+          ${linksSection}
+          <span class="publication-toggle">About this paper</span>
+        </span>
+      </summary>
+      <div class="publication-description">
         ${allTagsHTML}
-        <br>
-        ${publication.url ? `<a href="${publication.url}" id="${publication.id}">` : `<span id="${publication.id}">`}
-          <papertitle>${publication.title}
-          </papertitle>
-        ${publication.url ? '</a>' : '</span>'}
-        <br>
-        ${authorsHTML}.
-        <br>
-        ${legendHTML ? legendHTML + '<br>' : ''}
-        <em>${publication.venue}</em>, ${publication.year}
+        <p>${publication.abstract}</p>
+        ${legendHTML}
         ${workshopsHTML}
-        ${linksSection}
-        <p>${publication.abstract}
-        </p>
       </div>
-    </div>
+    </details>
+    ${bibtexContentHTML}
   `;
 }
 
@@ -164,32 +165,121 @@ function getTagColor(tag) {
   return tagColors[tag] || '#cccccc';
 }
 
-// Function to render all publications
-async function renderPublications() {
-  const publicationsContainer = document.getElementById('publications-container');
-  if (!publicationsContainer) return;
-  
-  // Publications data comes from data/publications.js (already loaded in the page)
-  if (typeof publicationsData === 'undefined') {
-    console.error('Publications data not found. Make sure data/publications.js is loaded before this script.');
-    return;
+// Render ten papers at a time as the reader approaches the end of the list.
+let filteredPublications = [];
+let loadedPublications = 0;
+let publicationObserver;
+let publicationScrollQueued = false;
+
+function loadMorePublications(limit = loadedPublications + 10) {
+  const container = document.getElementById('publications-container');
+  const end = Math.min(limit, filteredPublications.length);
+  while (loadedPublications < end) {
+    const publication = filteredPublications[loadedPublications++];
+    const yearId = `publications-${publication.year}`;
+    let section = document.getElementById(yearId);
+    if (!section) {
+      section = document.createElement('section');
+      section.id = yearId;
+      section.className = 'publication-year';
+      section.dataset.year = publication.year;
+      section.setAttribute('aria-labelledby', `${yearId}-heading`);
+      section.innerHTML = `<h4 id="${yearId}-heading">${publication.year}</h4>`;
+      container.appendChild(section);
+    }
+    section.insertAdjacentHTML('beforeend', renderPublication(publication));
   }
-  
-  // Sort publications by year (descending)
-  const publications = [...publicationsData].sort((a, b) => b.year - a.year);
-  
-  // Using Promise.all correctly to await all async renderPublication calls
-  const publicationsHTMLArray = await Promise.all(publications.map(pub => renderPublication(pub)));
-  publicationsContainer.innerHTML = publicationsHTMLArray.join('\n');
-  
-  // Make the functions globally available
-  window.toggleBibtex = toggleBibtex;
-  window.selectAndCopyBibtex = selectAndCopyBibtex;
-  
-  // Filter publications based on selected communities if the filter function exists
-  if (typeof filterPublicationsByTags === 'function') {
-    filterPublicationsByTags();
+  const sentinel = document.getElementById('publications-sentinel');
+  publicationObserver.unobserve(sentinel);
+  sentinel.hidden = loadedPublications === filteredPublications.length;
+  if (!sentinel.hidden) publicationObserver.observe(sentinel);
+  updatePublicationYearRail();
+}
+
+function setPublicationCommunities(communities) {
+  filteredPublications = [...publicationsData]
+    .sort((a, b) => b.year - a.year)
+    .filter(publication => {
+      if (!communities.length) return true;
+      const themes = themesFor(publication.rtai_tags || []);
+      if (!themes.length) themes.push(UNTAGGED);
+      return themes.some(theme => communities.includes(theme));
+    });
+  loadedPublications = 0;
+  document.getElementById('publications-container').replaceChildren();
+  const rail = document.getElementById('publication-year-rail');
+  const years = [...new Set(filteredPublications.map(publication => publication.year))];
+  rail.innerHTML = years.map(year =>
+    `<a href="#publications-${year}" data-year="${year}">${year}</a>`
+  ).join('');
+  updatePublicationsHeading(filteredPublications.length, publicationsData.length);
+  loadMorePublications();
+  revealPublicationHash(false);
+}
+
+function revealPublicationHash(scroll = true) {
+  const id = decodeURIComponent(window.location.hash.slice(1));
+  if (!id) return;
+  const index = filteredPublications.findIndex(publication =>
+    publication.id === id || `publications-${publication.year}` === id
+  );
+  if (index < 0) return;
+  if (index >= loadedPublications) loadMorePublications(index + 10);
+  const target = document.getElementById(id);
+  if (target.matches('details')) target.open = true;
+  if (scroll) target.scrollIntoView({ block: 'start' });
+}
+
+function updatePublicationYearRail() {
+  const container = document.getElementById('publications-container');
+  const rail = document.getElementById('publication-year-rail');
+  const bounds = container.getBoundingClientRect();
+  rail.hidden = bounds.top > window.innerHeight / 2 || bounds.bottom < 0;
+  const sections = [...container.querySelectorAll('.publication-year')];
+  let current = sections[0];
+  for (const section of sections) {
+    if (section.getBoundingClientRect().top <= window.innerHeight / 3) current = section;
   }
+  if (bounds.top < 0 && bounds.bottom <= window.innerHeight) current = sections[sections.length - 1];
+  rail.querySelectorAll('a').forEach(link => {
+    if (current && link.dataset.year === current.dataset.year) {
+      link.setAttribute('aria-current', 'location');
+    } else {
+      link.removeAttribute('aria-current');
+    }
+  });
+}
+
+function renderPublications() {
+  const container = document.getElementById('publications-container');
+  if (!container || typeof publicationsData === 'undefined') return;
+  container.insertAdjacentHTML('afterend', `
+    <div id="publications-sentinel" aria-hidden="true"></div>
+    <nav id="publication-year-rail" aria-label="Publication years" hidden></nav>
+  `);
+  publicationObserver = new IntersectionObserver(entries => {
+    if (entries.some(entry => entry.isIntersecting)) loadMorePublications();
+  }, { rootMargin: '400px' });
+  document.getElementById('publication-year-rail').addEventListener('click', event => {
+    const link = event.target.closest('a');
+    if (!link) return;
+    event.preventDefault();
+    history.pushState(null, '', link.getAttribute('href'));
+    revealPublicationHash();
+  });
+  window.addEventListener('hashchange', () => revealPublicationHash());
+  window.addEventListener('popstate', () => revealPublicationHash());
+  window.addEventListener('scroll', () => {
+    if (publicationScrollQueued) return;
+    publicationScrollQueued = true;
+    requestAnimationFrame(() => {
+      publicationScrollQueued = false;
+      updatePublicationYearRail();
+    });
+  }, { passive: true });
+  window.addEventListener('resize', updatePublicationYearRail);
+  setPublicationCommunities([]);
+  requestAnimationFrame(() => revealPublicationHash());
 }
 
 // Initialize when the DOM is loaded
