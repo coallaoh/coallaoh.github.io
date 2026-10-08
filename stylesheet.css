@@ -479,35 +479,129 @@ input:checked + .slider:before {
 
 #publication-year-rail {
   position: fixed;
-  right: max(8px, calc((100vw - 920px) / 2));
-  top: 50%;
-  transform: translateY(-50%);
-  max-height: 80vh;
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  border-radius: 12px;
-  background: var(--bg-color);
+  right: max(10px, calc((100vw - 1040px) / 2));
+  top: 0;
+  bottom: 0;
+  width: 110px;
+  padding: 6vh 0;
+  display: flex;
+  flex-direction: column;
   z-index: 10;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, #000 8%, #000 92%, transparent);
+}
+
+#publication-year-rail[hidden] {
+  display: none;
+}
+
+#publication-year-rail::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 7px;
+  width: 1px;
+  background: var(--community-count-color);
+  opacity: 0.25;
 }
 
 #publication-year-rail a {
-  display: block;
-  padding: 5px 8px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  flex: var(--year-count) 1 0;
+  min-height: 28px;
   font-size: 12px;
   color: var(--community-count-color);
-  border-left: 2px solid transparent;
 }
 
-#publication-year-rail a[aria-current] {
+.year-label {
+  padding: 5px 8px;
+  white-space: nowrap;
+  border-radius: 20px;
+  background: var(--bg-color);
+  transition: color 0.2s, background-color 0.2s, box-shadow 0.2s;
+}
+
+.year-count {
+  opacity: 0.6;
+  font-variant-numeric: tabular-nums;
+}
+
+.year-track {
+  position: relative;
+  flex: 0 0 15px;
+  align-self: stretch;
+}
+
+.year-paper-tick {
+  position: absolute;
+  right: 4px;
+  width: 7px;
+  height: 1px;
+  background: var(--community-count-color);
+  opacity: 0.3;
+}
+
+#publication-year-rail a:hover .year-label,
+#publication-year-rail a:focus-visible .year-label {
   color: var(--link-color);
-  border-left-color: var(--link-color);
   background: var(--code-bg-color);
+}
+
+#publication-year-rail a[aria-current] .year-label {
+  color: var(--link-color);
+  background: var(--code-bg-color);
+  box-shadow: 0 2px 12px rgb(0 0 0 / 8%);
   font-weight: bold;
+}
+
+#publication-year-rail a[aria-current] .year-count {
+  opacity: 0.85;
+}
+
+#publication-year-rail a[aria-current] .year-paper-tick {
+  background: var(--link-color);
+  opacity: 0.65;
+}
+
+#publication-year-rail a[aria-current] .year-track::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 6px;
+  width: 3px;
+  height: var(--year-progress, 0%);
+  border-radius: 2px;
+  background: var(--link-color);
+}
+
+#publication-year-rail a[aria-current] .year-track::after {
+  content: '';
+  position: absolute;
+  right: 2px;
+  top: var(--year-progress, 0%);
+  width: 11px;
+  height: 11px;
+  transform: translateY(-50%);
+  border: 3px solid var(--bg-color);
+  border-radius: 50%;
+  background: var(--link-color);
+  box-shadow: 0 0 0 1px var(--link-color), 0 0 10px var(--link-color);
+}
+
+@media (min-width: 577px) and (max-width: 1040px) {
+  #publications-container {
+    padding-right: 120px;
+  }
 }
 
 @media (max-width: 576px) {
   #publications-container {
-    padding-right: 46px;
+    padding-right: 78px;
   }
 
   .publication-card summary {
@@ -526,10 +620,30 @@ input:checked + .slider:before {
 
   #publication-year-rail {
     right: 2px;
+    width: 74px;
   }
 
   #publication-year-rail a {
-    padding: 7px 5px;
-    font-size: 11px;
+    gap: 2px;
+    font-size: 10px;
+  }
+
+  .year-label {
+    padding: 5px 3px;
+  }
+}
+
+@media (max-height: 500px) {
+  #publication-year-rail {
+    padding: 3vh 0;
+  }
+
+  #publication-year-rail a {
+    min-height: 18px;
+    font-size: 10px;
+  }
+
+  .year-label {
+    padding: 2px 3px;
   }
 }
