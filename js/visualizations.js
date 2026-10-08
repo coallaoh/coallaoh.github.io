@@ -570,33 +570,7 @@ function filterPublicationsByTags() {
   const allSelected = selectedCommunities.length === allCommunities.length;
   const noneSelected = selectedCommunities.length === 0;
   
-  // Get all publication elements
-  const publicationElements = document.querySelectorAll('#publications-container .row.common-rows');
-  
-  let visiblePublicationsCount = 0;
-  const totalPublicationsCount = publicationElements.length;
-  
-  publicationElements.forEach(pubElement => {
-    // If all or none are selected, show all publications
-    if (allSelected || noneSelected) {
-      pubElement.style.display = 'flex';
-      visiblePublicationsCount++;
-      return;
-    }
-    
-    // Themes this publication belongs to, via its acronym tags
-    const pubThemes = Array.from(pubElement.querySelectorAll('[data-community]'))
-      .map(tag => tag.getAttribute('data-community'));
-    if (!pubThemes.length) pubThemes.push(UNTAGGED);
-    
-    // Show or hide based on whether it sits in a selected theme
-    const isVisible = pubThemes.some(theme => selectedCommunities.includes(theme));
-    pubElement.style.display = isVisible ? 'flex' : 'none';
-    if (isVisible) visiblePublicationsCount++;
-  });
-  
-  // Update the publications heading
-  updatePublicationsHeading(visiblePublicationsCount, totalPublicationsCount);
+  setPublicationCommunities(allSelected || noneSelected ? [] : selectedCommunities);
 }
 
 // Update the publications heading based on filter status
@@ -678,53 +652,10 @@ function updateCheckboxState(community, isVisible) {
   }
 }
 
-// Initialize when the DOM is loaded
+// Publication rendering is synchronous, so the chart can initialise immediately.
 document.addEventListener('DOMContentLoaded', () => {
-  // Use MutationObserver to detect when publications are rendered
-  const targetNode = document.getElementById('publications-container');
-  if (targetNode) {
-    // If publications are already rendered (race condition), init immediately
-    if (targetNode.children && targetNode.children.length > 0) {
-      generateTopicTrendsChart().catch(error => {
-        console.error('Error generating topic trends chart:', error);
-      });
-      const totalPublications = document.querySelectorAll('#publications-container .row.common-rows').length;
-      updatePublicationsHeading(totalPublications, totalPublications);
-      // No need to observe further
-      return;
-    }
-
-    const observer = new MutationObserver((mutations) => {
-      if (mutations.some(mutation => mutation.type === 'childList' && mutation.addedNodes.length > 0)) {
-        // Publications have been rendered, now create the chart
-        generateTopicTrendsChart().catch(error => {
-          console.error('Error generating topic trends chart:', error);
-        });
-        
-        // Initialize the publications heading with the total count
-        const totalPublications = document.querySelectorAll('#publications-container .row.common-rows').length;
-        updatePublicationsHeading(totalPublications, totalPublications);
-        
-        // Disconnect after first observation
-        observer.disconnect();
-      }
-    });
-    
-    // Start observing
-    observer.observe(targetNode, { childList: true });
-  } else {
-    // Fallback to timeout if container not found
-    setTimeout(() => {
-      generateTopicTrendsChart().catch(error => {
-        console.error('Error generating topic trends chart:', error);
-      });
-      
-      // Initialize the publications heading with the total count
-      const totalPublications = document.querySelectorAll('#publications-container .row.common-rows').length;
-      updatePublicationsHeading(totalPublications, totalPublications);
-    }, 1000);
-  }
-  
-  // Make the filter function globally available
+  generateTopicTrendsChart().catch(error => {
+    console.error('Error generating topic trends chart:', error);
+  });
   window.filterPublicationsByTags = filterPublicationsByTags;
-}); 
+});
