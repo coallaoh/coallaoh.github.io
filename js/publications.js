@@ -89,6 +89,7 @@ function renderPublication(publication) {
       <summary>
         <img src="${publication.image}" loading="lazy" alt="${(publication.image_alt || publication.title).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;')}" class="publication-thumbnail">
         <span class="publication-info">
+          ${allTagsHTML ? `${allTagsHTML}<br>` : ''}
           ${publication.url ? `<a href="${publication.url}">` : '<span>'}
             <papertitle>${publication.title}</papertitle>
           ${publication.url ? '</a>' : '</span>'}
@@ -101,7 +102,6 @@ function renderPublication(publication) {
         </span>
       </summary>
       <div class="publication-description">
-        ${allTagsHTML}
         <p>${publication.abstract}</p>
         ${legendHTML}
         ${workshopsHTML}
