@@ -1,6 +1,7 @@
 // Authors data in JSON format
 const authorsData = {
   "authors": [
+    {"id":"william_f_shen","name":"William F. Shen","url":"","isMe":false},
     {
       "id": "sunwoo_kim",
       "name": "Sunwoo Kim",
