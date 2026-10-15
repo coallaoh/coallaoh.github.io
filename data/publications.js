@@ -1,6 +1,28 @@
 // Publications data in JSON format
 const publicationsData = [
   {
+    "id": "kim2026tulip",
+    "title": "TULIP: Targeted LLM Unlearning at Layers Identified Per-input",
+    "authors": [
+      "yejin_kim",
+      "william_f_shen",
+      "seokwon_jung",
+      "daeun_park",
+      "seong_joon_oh"
+    ],
+    "venue": "arXiv",
+    "year": "2026",
+    "url": "https://arxiv.org/abs/2609.34591",
+    "bibtex": "@article{kim2026tulip,\n  title={TULIP: Targeted LLM Unlearning at Layers Identified Per-input},\n  author={Kim, Yejin and Shen, William F. and Jung, Seokwon and Park, Daeun and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2609.34591},\n  year={2026}\n}",
+    "image": "pictures/kim2026tulip.svg",
+    "image_alt": "A pink tulip with green leaves",
+    "links": [],
+    "abstract": "Removing a fact from a language model may require changes at different layers for different questions. TULIP identifies the layer where each answer takes shape and targets that layer for unlearning. Across three benchmarks, it improves forgetting while preserving useful knowledge, and its layer selection can also improve existing unlearning methods.",
+    "rtai_tags": [
+      "MU"
+    ]
+  },
+  {
     "id": "sunwoo2026form",
     "title": "Form Over Content In Gradient-Based Data Attribution Methods",
     "authors": [
