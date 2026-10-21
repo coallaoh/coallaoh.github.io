@@ -1,6 +1,40 @@
 // Publications data in JSON format
 const publicationsData = [
   {
+    "id": "jung2026crosspollination",
+    "title": "Cross-Pollination Retrieval: Finding Transferable Ideas Across Fields in Scientific Literature",
+    "authors": [
+      "seokwon_jung",
+      "yerang_kim",
+      "yejin_kim",
+      "alexander_rubinstein",
+      "arnas_uselis",
+      "sangwoo_park",
+      "seong_joon_oh",
+      "sangdoo_yun"
+    ],
+    "venue": "arXiv",
+    "year": "2026",
+    "url": "https://arxiv.org/abs/2610.25678",
+    "bibtex": "@article{jung2026crosspollination,\n  title={Cross-Pollination Retrieval: Finding Transferable Ideas Across Fields in Scientific Literature},\n  author={Jung, Seokwon and Kim, Yerang and Kim, Yejin and Rubinstein, Alexander and Uselis, Arnas and Park, Sangwoo and Oh, Seong Joon and Yun, Sangdoo},\n  journal={arXiv preprint arXiv:2610.25678},\n  year={2026}\n}",
+    "image": "pictures/jung2026crosspollination.svg",
+    "image_alt": "A honeybee",
+    "links": [
+      {
+        "text": "Code",
+        "url": "https://github.com/SeokwonJung-Jay/Cross-Pollination-Retrieval"
+      },
+      {
+        "text": "Dataset",
+        "url": "https://huggingface.co/CPR-Dataset"
+      }
+    ],
+    "abstract": "Many discoveries come from carrying an idea from one field into another, but search tools rarely surface papers from distant fields. We build CPR-Dataset from citations that cross topic boundaries, with 1,300 test queries over 26 fields and 10,573 training pairs. Existing retrievers find the right paper in their top ten only a quarter of the time. Fine-tuning on our data raises that to 70% and also improves analogy and reasoning-heavy retrieval on other benchmarks.",
+    "rtai_tags": [
+      "RALM"
+    ]
+  },
+  {
     "id": "kim2026tulip",
     "title": "TULIP: Targeted LLM Unlearning at Layers Identified Per-input",
     "authors": [
