@@ -385,7 +385,7 @@ const publicationsData = [
     "title": "Break the Output Geometry for Large Language Model Unlearning",
     "authors": [
       "yejin_kim",
-      "William F. Shen",
+      "william_f_shen",
       "seokwon_jung",
       "seong_joon_oh"
     ],

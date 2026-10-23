@@ -1,17 +1,17 @@
 // Authors data in JSON format
 const authorsData = {
   "authors": [
-    {"id":"william_f_shen","name":"William F. Shen","url":"","isMe":false},
+    {"id":"william_f_shen","name":"William F. Shen","url":"https://scholar.google.com/citations?user=ZWmipDcAAAAJ","isMe":false},
     {
       "id": "sunwoo_kim",
       "name": "Sunwoo Kim",
-      "url": "",
+      "url": "https://uilab.kr/?p=/members",
       "isMe": false
     },
     {
       "id": "alice_oh",
       "name": "Alice Oh",
-      "url": "",
+      "url": "https://aliceoh9.github.io/",
       "isMe": false
     },
     {
@@ -26,7 +26,7 @@ const authorsData = {
     {
       "id": "ameya_prabhu",
       "name": "Ameya Prabhu",
-      "url": "https://drimpossible.github.io/",
+      "url": "https://ameya.prabhu.be/",
       "isMe": false
     },
     {
@@ -50,7 +50,7 @@ const authorsData = {
     {
       "id": "ankit_sonthalia",
       "name": "Ankit Sonthalia",
-      "url": "https://www.linkedin.com/in/ankit-sonthalia-2a05b4202/",
+      "url": "https://ankitsonthalia.com/",
       "isMe": false,
       "startYear": 2024,
       "endYear": null,
@@ -71,7 +71,7 @@ const authorsData = {
     {
       "id": "arnas_uselis",
       "name": "Arnas Uselis",
-      "url": "https://www.linkedin.com/in/arnas-uselis-193883144/",
+      "url": "https://oshapio.github.io/",
       "isMe": false,
       "startYear": 2023,
       "endYear": null,
@@ -119,7 +119,7 @@ const authorsData = {
     {
       "id": "daecheol_woo",
       "name": "Daecheol Woo",
-      "url": "",
+      "url": "https://toc.yonsei.ac.kr/members.html",
       "isMe": false
     },
     {
@@ -131,13 +131,14 @@ const authorsData = {
     {
       "id": "dante_chun",
       "name": "Dante Chun",
+      "aliases": ["Seonghyeok Chun"],
       "url": "https://github.com/1000ship",
       "isMe": false
     },
     {
       "id": "darina_koishigarina",
       "name": "Darina Koishigarina",
-      "url": "https://scalabletrustworthyai.github.io/member/darina/",
+      "url": "https://stai-lab.org/member/darina/",
       "isMe": false,
       "supervision": [
         {
@@ -164,7 +165,7 @@ const authorsData = {
     {
       "id": "diane_larlus",
       "name": "Diane Larlus",
-      "url": "https://europe.naverlabs.com/people_user/diane-larlus/",
+      "url": "https://dlarlus.github.io/",
       "isMe": false
     },
     {
@@ -188,7 +189,7 @@ const authorsData = {
     {
       "id": "edgar_tretschk",
       "name": "Edgar Tretschk",
-      "url": "https://people.mpi-inf.mpg.de/~tretschk/",
+      "url": "https://scholar.google.com/citations?user=FoklOeEAAAAJ",
       "isMe": false,
       "startYear": 2017,
       "endYear": 2018,
@@ -203,7 +204,7 @@ const authorsData = {
     {
       "id": "elif_akata",
       "name": "Elif Akata",
-      "url": "https://github.com/eliaka",
+      "url": "https://eliaka.github.io/",
       "isMe": false,
       "startYear": 2022,
       "endYear": 2023,
@@ -227,13 +228,13 @@ const authorsData = {
     {
       "id": "eric_schulz",
       "name": "Eric Schulz",
-      "url": "https://www.kyb.tuebingen.mpg.de/person/103915/2549",
+      "url": "https://www.helmholtz-munich.de/en/hca/eric-schulz",
       "isMe": false
     },
     {
       "id": "eunji_kim",
       "name": "Eunji Kim",
-      "url": "http://data.snu.ac.kr/index.php/people/",
+      "url": "https://sites.google.com/snu.ac.kr/eunjikim",
       "isMe": false
     },
     {
@@ -296,7 +297,7 @@ const authorsData = {
     {
       "id": "hazel_kim",
       "name": "Hazel Kim",
-      "url": "https://github.com/hazelhkim",
+      "url": "https://hazelhkim.github.io/",
       "isMe": false
     },
     {
@@ -320,7 +321,7 @@ const authorsData = {
     {
       "id": "hyeon_woo_nam",
       "name": "Hyeon-Woo Nam",
-      "url": "https://ami.postech.ac.kr/members/nam-hyeon-woo",
+      "url": "https://scholar.google.com/citations?user=1jQ1FNUAAAAJ",
       "isMe": false
     },
     {
@@ -341,19 +342,19 @@ const authorsData = {
     {
       "id": "hyunjung_shim",
       "name": "Hyunjung Shim",
-      "url": "https://sites.google.com/site/katehyunjungshim/home",
+      "url": "https://kaist-cvml.github.io/",
       "isMe": false
     },
     {
       "id": "inwoo_hwang",
       "name": "Inwoo Hwang",
-      "url": "https://bluemoon010.github.io/",
+      "url": "https://iwhwang.github.io/",
       "isMe": false
     },
     {
       "id": "iro_laina",
       "name": "Iro Laina",
-      "url": "",
+      "url": "https://irolaina.github.io/",
       "isMe": false
     },
     {
@@ -374,13 +375,13 @@ const authorsData = {
     {
       "id": "jaehyun_pahk",
       "name": "Jaehyun Pahk",
-      "url": "https://www.linkedin.com/in/jaehyun-pahk/",
+      "url": "https://suhakwak.github.io/team.html",
       "isMe": false
     },
     {
       "id": "jaejun_yoo",
       "name": "Jaejun Yoo",
-      "url": "https://people.epfl.ch/jaejun.yoo/?lang=en",
+      "url": "https://lait-unist.ai/",
       "isMe": false
     },
     {
@@ -398,7 +399,7 @@ const authorsData = {
     {
       "id": "jeong_won_cha",
       "name": "Jeong-Won Cha",
-      "url": "https://www.linkedin.com/in/jeong-won-cha-a936142a/",
+      "url": "https://cwnu-airlab.github.io/",
       "isMe": false
     },
     {
@@ -416,19 +417,19 @@ const authorsData = {
     {
       "id": "jinhyung_kim",
       "name": "Jinhyung Kim",
-      "url": "",
+      "url": "https://scholar.google.com/citations?user=HPd_1LMAAAAJ",
       "isMe": false
     },
     {
       "id": "jinkyoo_park",
       "name": "Jinkyoo Park",
-      "url": "http://silab.kaist.ac.kr/our-team/",
+      "url": "http://silab.kaist.ac.kr/",
       "isMe": false
     },
     {
       "id": "jinuk_kim",
       "name": "Jinuk Kim",
-      "url": "https://mllab.snu.ac.kr/people.html",
+      "url": "https://jinukkim.me/",
       "isMe": false
     },
     {
@@ -440,7 +441,7 @@ const authorsData = {
     {
       "id": "johannes_bertram",
       "name": "Johannes Bertram",
-      "url": "https://scalabletrustworthyai.github.io/member/johannes/",
+      "url": "https://institute-tue.ellis.eu/mls/en/people/c0743e6a-681e-42a1-b6f7-cf8588bf4b5f",
       "isMe": false
     },
     {
@@ -452,19 +453,19 @@ const authorsData = {
     {
       "id": "joonhyun_jeong",
       "name": "Joonhyun Jeong",
-      "url": "",
+      "url": "https://bestdeveloper691.github.io/",
       "isMe": false
     },
     {
       "id": "joseph_roth",
       "name": "Joseph Roth",
-      "url": "https://research.google/people/JosephRoth/",
+      "url": "https://scholar.google.com/citations?user=87I45JsAAAAJ",
       "isMe": false
     },
     {
       "id": "julian_coda_forno",
       "name": "Julian Coda-Forno",
-      "url": "https://www.kyb.tuebingen.mpg.de/person/124121/249684",
+      "url": "https://juliancodaforno.github.io/",
       "isMe": false
     },
     {
@@ -476,13 +477,13 @@ const authorsData = {
     {
       "id": "jungbeom_lee",
       "name": "Jungbeom Lee",
-      "url": "https://github.com/jbeomlee93",
+      "url": "https://visionai.korea.ac.kr/",
       "isMe": false
     },
     {
       "id": "junsuk_choe",
       "name": "Junsuk Choe",
-      "url": "https://sites.google.com/site/junsukchoe/",
+      "url": "https://junsukchoe.github.io/",
       "isMe": false,
       "startYear": 2019,
       "endYear": 2019,
@@ -497,7 +498,7 @@ const authorsData = {
     {
       "id": "juwon_kang",
       "name": "Juwon Kang",
-      "url": "https://openreview.net/profile?id=~Juwon_Kang1",
+      "url": "https://scholar.google.com/citations?user=nwN9X2UAAAAJ",
       "isMe": false
     },
     {
@@ -509,7 +510,7 @@ const authorsData = {
     {
       "id": "lin_yong",
       "name": "Lin Yong",
-      "url": "https://linyongver.github.io/yonglin.github.io/",
+      "url": "https://linyongver.github.io/Website/",
       "isMe": false
     },
     {
@@ -527,7 +528,7 @@ const authorsData = {
     {
       "id": "luc_van_gool",
       "name": "Luc Van Gool",
-      "url": "https://ee.ethz.ch/the-department/faculty/professors/person-detail.OTAyMzM=.TGlzdC80MTEsMTA1ODA0MjU5.html",
+      "url": "https://insait.ai/prof-luc-van-gool/",
       "isMe": false
     },
     {
@@ -545,13 +546,13 @@ const authorsData = {
     {
       "id": "mario_fritz",
       "name": "Mario Fritz",
-      "url": "https://cispa.saarland/group/fritz/",
+      "url": "https://cispa.de/en/people/mario.fritz",
       "isMe": false
     },
     {
       "id": "mark_collier",
       "name": "Mark Collier",
-      "url": "https://www.linkedin.com/in/mark-collier-aa446032/",
+      "url": "https://scholar.google.com/citations?user=U4rBrcgAAAAJ",
       "isMe": false
     },
     {
@@ -572,7 +573,7 @@ const authorsData = {
     {
       "id": "max_augustin",
       "name": "Max Augustin",
-      "url": "",
+      "url": "https://scholar.google.com/citations?user=f82UrTYAAAAJ",
       "isMe": false,
       "startYear": 2017,
       "endYear": 2018,
@@ -581,7 +582,7 @@ const authorsData = {
     {
       "id": "michael_kirchhof",
       "name": "Michael Kirchhof",
-      "url": "https://www.hci.uni-tuebingen.de/chair/team/michael-kirchhof",
+      "url": "https://stai-lab.org/member/michael/",
       "isMe": false,
       "startYear": 2022,
       "endYear": 2024,
@@ -626,7 +627,7 @@ const authorsData = {
     {
       "id": "paarijaat_aditya",
       "name": "Paarijaat Aditya",
-      "url": "https://www.bell-labs.com/usr/paarijaat.aditya",
+      "url": "https://www.nokia.com/people/paarijaat-aditya/",
       "isMe": false
     },
     {
@@ -644,7 +645,7 @@ const authorsData = {
     {
       "id": "rafael_sampaio_de_rezende",
       "name": "Rafael Sampaio de Rezende",
-      "url": "https://europe.naverlabs.com/people_user/Rafael-Sampaio-De-Rezende/",
+      "url": "https://scholar.google.com/citations?user=vraI3IkAAAAJ",
       "isMe": false
     },
     {
@@ -656,7 +657,7 @@ const authorsData = {
     {
       "id": "rodrigo_benenson",
       "name": "Rodrigo Benenson",
-      "url": "https://research.google/people/RodrigoBenenson/",
+      "url": "https://research.google/people/rodrigobenenson/",
       "isMe": false
     },
     {
@@ -674,7 +675,7 @@ const authorsData = {
     {
       "id": "sangjun_lee",
       "name": "Sangjun Lee",
-      "url": "https://bi.snu.ac.kr/People/index.html",
+      "url": "https://bi.snu.ac.kr/members/sangjun-lee.html",
       "isMe": false
     },
     {
@@ -731,7 +732,7 @@ const authorsData = {
     {
       "id": "sungrae_park",
       "name": "Sungrae Park",
-      "url": "https://sites.google.com/view/sungraepark",
+      "url": "https://scholar.google.com/citations?user=bMxlLWQAAAAJ",
       "isMe": false
     },
     {
@@ -743,7 +744,7 @@ const authorsData = {
     {
       "id": "tae_hyun_oh",
       "name": "Tae-Hyun Oh",
-      "url": "https://ami.postech.ac.kr/members/tae-hyun-oh/",
+      "url": "https://ami.kaist.ac.kr/members/tae-hyun-oh",
       "isMe": false
     },
     {
@@ -812,7 +813,7 @@ const authorsData = {
     {
       "id": "yu_ji_kim",
       "name": "Yu-Ji Kim",
-      "url": "https://ug-kim.notion.site/",
+      "url": "https://ug-kim.github.io/",
       "isMe": false
     },
     {
@@ -824,7 +825,7 @@ const authorsData = {
     {
       "id": "yunhyeok_kwak",
       "name": "Yunhyeok Kwak",
-      "url": "https://bi.snu.ac.kr/People/index.html",
+      "url": "https://yun-kwak.github.io/",
       "isMe": false
     },
     {
@@ -836,19 +837,19 @@ const authorsData = {
     {
       "id": "zeynep_akata",
       "name": "Zeynep Akata",
-      "url": "https://eml-unitue.de/people/zeynep-akata",
+      "url": "https://www.eml-munich.de/people/zeynep-akata",
       "isMe": false
     },
     {
       "id": "benjamin_raible",
       "name": "Benjamin Raible",
-      "url": "",
+      "url": "https://openreview.net/profile?id=~Benjamin_Raible1",
       "isMe": false
     },
     {
       "id": "ahmed_heakl",
       "name": "Ahmed Heakl",
-      "url": "https://www.linkedin.com/in/ahmed-heakl/",
+      "url": "https://ahmedheakl.github.io/",
       "isMe": false,
       "startYear": 2025,
       "endYear": 2025,
@@ -863,7 +864,7 @@ const authorsData = {
     {
       "id": "stefano_woerner",
       "name": "Stefano Woerner",
-      "url": "https://www.linkedin.com/in/stefano-woerner/",
+      "url": "https://stai-lab.org/member/stefano/",
       "isMe": false,
       "startYear": 2023,
       "endYear": 2025,
@@ -878,7 +879,7 @@ const authorsData = {
     {
       "id": "philipp_davydov",
       "name": "Philipp Davydov",
-      "url": "https://www.linkedin.com/in/philipp-davydov-456091227/",
+      "url": "https://stai-lab.org/member/philipp/",
       "isMe": false,
       "startYear": 2025,
       "endYear": null,
@@ -908,7 +909,7 @@ const authorsData = {
     {
       "id": "luca_fuger",
       "name": "Luca Füger",
-      "url": "https://scalabletrustworthyai.github.io/member/luca/",
+      "url": "https://stai-lab.org/member/luca/",
       "isMe": false,
       "startYear": 2025,
       "endYear": null,
@@ -929,7 +930,7 @@ const authorsData = {
     {
       "id": "arno_blaas",
       "name": "Arno Blaas",
-      "url": "https://www.linkedin.com/in/arno-blaas-18725380",
+      "url": "https://scholar.google.com/citations?user=xMCznYUAAAAJ",
       "isMe": false
     },
     {
@@ -941,7 +942,7 @@ const authorsData = {
     {
       "id": "lennart_bramlage",
       "name": "Lennart Bramlage",
-      "url": "",
+      "url": "https://stai-lab.org/member/lennart/",
       "isMe": false,
       "startYear": 2024,
       "endYear": null,
@@ -959,7 +960,7 @@ const authorsData = {
     {
       "id": "anastasiia_alekseeva",
       "name": "Anastasiia Alekseeva",
-      "url": "",
+      "url": "https://stai-lab.org/member/anastasiia/",
       "isMe": false,
       "startYear": 2024,
       "endYear": 2024,
@@ -968,7 +969,7 @@ const authorsData = {
     {
       "id": "albert_catalan_tatjer",
       "name": "Albert Catalan Tatjer",
-      "url": "",
+      "url": "https://aldakata.github.io/",
       "isMe": false,
       "startYear": 2024,
       "endYear": 2025,
@@ -977,7 +978,7 @@ const authorsData = {
     {
       "id": "bora_kargi",
       "name": "Bora Kargi",
-      "url": "",
+      "url": "https://kargibora.github.io/",
       "isMe": false,
       "startYear": 2025,
       "endYear": null,
@@ -986,7 +987,7 @@ const authorsData = {
     {
       "id": "fabian_morelli",
       "name": "Fabian Morelli",
-      "url": "",
+      "url": "https://stai-lab.org/member/fabian/",
       "isMe": false,
       "startYear": 2025,
       "endYear": null,
@@ -1013,7 +1014,7 @@ const authorsData = {
     {
       "id": "elena_sofia_ruzzetti",
       "name": "Elena Sofia Ruzzetti",
-      "url": "",
+      "url": "https://scholar.google.com/citations?user=XRi2_woAAAAJ",
       "isMe": false,
       "startYear": 2026,
       "endYear": 2026,
@@ -1022,7 +1023,7 @@ const authorsData = {
     {
       "id": "sohyung_kim",
       "name": "Sohyung Kim",
-      "url": "https://www.linkedin.com/in/sohyung-kim-60479b237/",
+      "url": "https://stai-lab.org/member/sohyung/",
       "isMe": false,
       "startYear": 2025,
       "endYear": null,
@@ -1031,7 +1032,7 @@ const authorsData = {
     {
       "id": "bryan_truong",
       "name": "Bryan Truong",
-      "url": "",
+      "url": "https://stai-lab.org/member/bryan/",
       "isMe": false,
       "startYear": 2026,
       "endYear": null,
@@ -1040,7 +1041,7 @@ const authorsData = {
     {
       "id": "hyeonbin_hwang",
       "name": "Hyeonbin Hwang",
-      "url": "",
+      "url": "https://hbin0701.github.io/",
       "isMe": false,
       "startYear": 2026,
       "endYear": null,
@@ -1058,7 +1059,7 @@ const authorsData = {
     {
       "id": "yerang_kim",
       "name": "Yerang Kim",
-      "url": "",
+      "url": "https://01tilinfinity.github.io/",
       "isMe": false,
       "startYear": 2026,
       "endYear": null,
@@ -1067,7 +1068,7 @@ const authorsData = {
     {
       "id": "dohyun_kim",
       "name": "Dohyun Kim",
-      "url": "",
+      "url": "https://stai-lab.org/member/dohyun/",
       "isMe": false,
       "startYear": 2026,
       "endYear": null,
@@ -1076,7 +1077,7 @@ const authorsData = {
     {
       "id": "viacheslav_sinii",
       "name": "Viacheslav Sinii",
-      "url": "",
+      "url": "https://stai-lab.org/member/viacheslav-sinii/",
       "isMe": false,
       "startYear": 2026,
       "endYear": null,
@@ -1085,7 +1086,7 @@ const authorsData = {
     {
       "id": "seungwon_park",
       "name": "Seungwon Park",
-      "url": "",
+      "url": "https://stai-lab.org/member/seungwon/",
       "isMe": false,
       "startYear": 2026,
       "endYear": null,
@@ -1103,7 +1104,7 @@ const authorsData = {
     {
       "id": "junho_jeong",
       "name": "Junho Jeong",
-      "url": "",
+      "url": "https://stai-lab.org/member/junho/",
       "isMe": false,
       "startYear": 2026,
       "endYear": null,
@@ -1112,7 +1113,7 @@ const authorsData = {
     {
       "id": "daeun_park",
       "name": "Daeun Park",
-      "url": "",
+      "url": "https://stai-lab.org/member/daeun/",
       "isMe": false,
       "startYear": 2026,
       "endYear": null,
@@ -1121,7 +1122,7 @@ const authorsData = {
     {
       "id": "sam_lee",
       "name": "Sam Lee",
-      "url": "",
+      "url": "https://samlee.ch/",
       "isMe": false,
       "startYear": 2026,
       "endYear": null,
@@ -1139,7 +1140,7 @@ const authorsData = {
     {
       "id": "jihyeok_jung",
       "name": "Jihyeok Jung",
-      "url": "https://jhcor.notion.site/?pvs=74",
+      "url": "https://jhcor.notion.site/",
       "isMe": false,
       "startYear": 2026,
       "endYear": null,
@@ -1148,7 +1149,7 @@ const authorsData = {
     {
       "id": "seokwon_jung",
       "name": "Seokwon Jung",
-      "url": "https://www.linkedin.com/in/seokwon-jung-7458b3306/",
+      "url": "https://seokwonjung-jay.github.io/",
       "isMe": false,
       "startYear": 2026,
       "endYear": null,
@@ -1157,7 +1158,7 @@ const authorsData = {
     {
       "id": "sangwoo_park",
       "name": "Sangwoo Park",
-      "url": "https://www.linkedin.com/in/swgger",
+      "url": "https://sw-programmer.github.io/sangwoopark.github.io/",
       "isMe": false,
       "startYear": 2026,
       "endYear": null,
@@ -1166,7 +1167,7 @@ const authorsData = {
     {
       "id": "woongyeong_yeo",
       "name": "Woongyeong Yeo",
-      "url": "https://www.linkedin.com/in/wgcyeo/",
+      "url": "https://wgcyeo.github.io/",
       "isMe": false
     },
     {
@@ -1178,7 +1179,7 @@ const authorsData = {
     {
       "id": "yumin_choi",
       "name": "Yumin Choi",
-      "url": "",
+      "url": "https://dozi01.github.io/",
       "isMe": false
     },
     {
@@ -1217,22 +1218,25 @@ const authorsData = {
     {
       "id": "martin_ester",
       "name": "Martin Ester",
-      "url": "https://www.cs.sfu.ca/~ester/",
+      "url": "https://sites.google.com/view/esterlab",
       "isMe": false
     },
     {
       "id": "piotr_komorowski",
       "name": "Piotr Komorowski",
+      "url": "https://scholar.google.com/citations?user=HGaHq9IAAAAJ",
       "isMe": false
     },
     {
       "id": "florian_klein",
       "name": "Florian Klein",
+      "url": "https://www.linkedin.com/in/florian-klein-76a40a25a/",
       "isMe": false
     },
     {
       "id": "paula_engl",
       "name": "Paula Engl",
+      "url": "https://openreview.net/profile?id=~Paula_Engl1",
       "isMe": false
     },
     {
@@ -1244,7 +1248,7 @@ const authorsData = {
     {
       "id": "sebastian_lapuschkin",
       "name": "Sebastian Lapuschkin",
-      "url": "https://scholar.google.com/citations?user=wpLQuroAAAAJ&hl=en",
+      "url": "https://iphome.hhi.de/lapuschkin/",
       "isMe": false
     },
     {
@@ -1255,15 +1259,18 @@ const authorsData = {
     },
     {
       "id": "yanpeng_zhao",
-      "name": "Yanpeng Zhao"
+      "name": "Yanpeng Zhao",
+      "url": "https://scholar.google.com/citations?user=-T9FigIAAAAJ"
     },
     {
       "id": "yonatan_bitton",
-      "name": "Yonatan Bitton"
+      "name": "Yonatan Bitton",
+      "url": "https://yonatanbitton.github.io/"
     },
     {
       "id": "paul_gavrikov",
-      "name": "Paul Gavrikov"
+      "name": "Paul Gavrikov",
+      "url": "https://paulgavrikov.github.io/"
     }
   ]
 };
