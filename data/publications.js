@@ -1,6 +1,27 @@
 // Publications data in JSON format
 const publicationsData = [
   {
+    "id": "sonthalia2026three",
+    "title": "Do vision models know that three is three?",
+    "authors": [
+      "ankit_sonthalia",
+      "arnas_uselis",
+      "seong_joon_oh"
+    ],
+    "venue": "arXiv",
+    "year": "2026",
+    "url": "https://arxiv.org/abs/2610.35857",
+    "bibtex": "@article{sonthalia2026three,\n  title={Do vision models know that three is three?},\n  author={Sonthalia, Ankit and Uselis, Arnas and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2610.35857},\n  year={2026}\n}",
+    "image": "pictures/sonthalia2026three.svg",
+    "image_alt": "Three colourful spheres",
+    "links": [],
+    "abstract": "Does a vision model connect three fingers with the digit 3? We test 46 vision encoders and find that the same concept often has different representations across visually different image groups. Models with more consistent representations within each group tend to connect these groups better. This helps explain when a concept learned from one kind of image can transfer to another.",
+    "rtai_tags": [
+      "VLM",
+      "CoGe"
+    ]
+  },
+  {
     "id": "jung2026crosspollination",
     "title": "Cross-Pollination Retrieval: Finding Transferable Ideas Across Fields in Scientific Literature",
     "authors": [
