@@ -1,4 +1,18 @@
 // Function to render a single publication
+// Illustration thumbnails ("-thumb.png") ship with a "-thumb-dark.png" twin;
+// CSS shows the one that matches the current theme.
+function thumbnailHTML(publication) {
+  const alt = (publication.image_alt || publication.title).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+  if (!publication.image.endsWith('-thumb.png')) {
+    return `<img src="${publication.image}" loading="lazy" alt="${alt}" class="publication-thumbnail">`;
+  }
+  const dark = publication.image.replace(/-thumb\.png$/, '-thumb-dark.png');
+  return `<span class="publication-thumbnail thumb-pair">` +
+    `<img src="${publication.image}" loading="lazy" alt="${alt}" class="thumb-light">` +
+    `<img src="${dark}" loading="lazy" alt="${alt}" class="thumb-dark">` +
+    `</span>`;
+}
+
 function renderPublication(publication) {
   // Check if tags exist, otherwise use empty array
   const tags = publication.tags || [];
@@ -87,7 +101,7 @@ function renderPublication(publication) {
   return `
     <details class="publication-card" id="${publication.id}">
       <summary>
-        <img src="${publication.image}" loading="lazy" alt="${(publication.image_alt || publication.title).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;')}" class="publication-thumbnail">
+        ${thumbnailHTML(publication)}
         <span class="publication-info">
           ${allTagsHTML ? `${allTagsHTML}<br>` : ''}
           ${publication.url ? `<a href="${publication.url}">` : '<span>'}
