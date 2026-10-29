@@ -424,7 +424,7 @@ input:checked + .slider:before {
 
 .publication-card summary {
   display: grid;
-  grid-template-columns: 80px minmax(0, 1fr);
+  grid-template-columns: 96px minmax(0, 1fr);
   gap: 16px;
   cursor: pointer;
   list-style: none;
@@ -440,9 +440,12 @@ input:checked + .slider:before {
 }
 
 .publication-thumbnail {
-  width: 80px;
+  width: 96px;
   height: 72px;
   object-fit: contain;
+  background: #F8F9FB;
+  border: 1px solid #E4E0E8;
+  border-radius: 4px;
 }
 
 .publication-info {
@@ -637,13 +640,13 @@ input:checked + .slider:before {
   }
 
   .publication-card summary {
-    grid-template-columns: 52px minmax(0, 1fr);
+    grid-template-columns: 64px minmax(0, 1fr);
     gap: 10px;
   }
 
   .publication-thumbnail {
-    width: 52px;
-    height: 52px;
+    width: 64px;
+    height: 48px;
   }
 
   .publication-description {
