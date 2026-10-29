@@ -448,6 +448,44 @@ input:checked + .slider:before {
   border-radius: 4px;
 }
 
+.thumb-pair {
+  display: block;
+  background: transparent;
+}
+
+.thumb-pair img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.thumb-pair .thumb-dark,
+[data-theme="dark"] .thumb-pair .thumb-light {
+  display: none;
+}
+
+[data-theme="dark"] .thumb-pair {
+  border-color: #3a3a3a;
+}
+
+[data-theme="dark"] .thumb-pair .thumb-dark {
+  display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .thumb-pair {
+    border-color: #3a3a3a;
+  }
+
+  :root:not([data-theme="light"]) .thumb-pair .thumb-light {
+    display: none;
+  }
+
+  :root:not([data-theme="light"]) .thumb-pair .thumb-dark {
+    display: block;
+  }
+}
+
 .publication-info {
   min-width: 0;
   overflow-wrap: anywhere;
