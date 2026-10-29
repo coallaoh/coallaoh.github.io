@@ -12,8 +12,8 @@ const publicationsData = [
     "year": "2026",
     "url": "https://arxiv.org/abs/2610.35857",
     "bibtex": "@article{sonthalia2026three,\n  title={Do vision models know that three is three?},\n  author={Sonthalia, Ankit and Uselis, Arnas and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2610.35857},\n  year={2026}\n}",
-    "image": "pictures/sonthalia2026three.svg",
-    "image_alt": "Three colourful spheres",
+    "image": "pictures/sonthalia2026three-thumb.png",
+    "image_alt": "Three fingers raised on a hand",
     "links": [],
     "abstract": "Does a vision model connect three fingers with the digit 3? We test 46 vision encoders and find that the same concept often has different representations across visually different image groups. Models with more consistent representations within each group tend to connect these groups better. This helps explain when a concept learned from one kind of image can transfer to another.",
     "rtai_tags": [
@@ -38,8 +38,8 @@ const publicationsData = [
     "year": "2026",
     "url": "https://arxiv.org/abs/2610.25678",
     "bibtex": "@article{jung2026crosspollination,\n  title={Cross-Pollination Retrieval: Finding Transferable Ideas Across Fields in Scientific Literature},\n  author={Jung, Seokwon and Kim, Yerang and Kim, Yejin and Rubinstein, Alexander and Uselis, Arnas and Park, Sangwoo and Oh, Seong Joon and Yun, Sangdoo},\n  journal={arXiv preprint arXiv:2610.25678},\n  year={2026}\n}",
-    "image": "pictures/jung2026crosspollination.svg",
-    "image_alt": "A honeybee",
+    "image": "pictures/jung2026crosspollination-thumb.png",
+    "image_alt": "A bee carrying pollen between two different flowers",
     "links": [
       {
         "text": "Code",
@@ -69,8 +69,8 @@ const publicationsData = [
     "year": "2026",
     "url": "https://arxiv.org/abs/2609.34591",
     "bibtex": "@article{kim2026tulip,\n  title={TULIP: Targeted LLM Unlearning at Layers Identified Per-input},\n  author={Kim, Yejin and Shen, William F. and Jung, Seokwon and Park, Daeun and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2609.34591},\n  year={2026}\n}",
-    "image": "pictures/kim2026tulip.svg",
-    "image_alt": "A pink tulip with green leaves",
+    "image": "pictures/kim2026tulip-thumb.png",
+    "image_alt": "A single tulip flower",
     "links": [],
     "abstract": "Removing a fact from a language model may require changes at different layers for different questions. TULIP identifies the layer where each answer takes shape and targets that layer for unlearning. Across three benchmarks, it improves forgetting while preserving useful knowledge, and its layer selection can also improve existing unlearning methods.",
     "rtai_tags": [
@@ -91,8 +91,8 @@ const publicationsData = [
     "year": "2026",
     "url": "https://arxiv.org/abs/2609.19589",
     "bibtex": "@article{sunwoo2026form,\n  title={Form Over Content In Gradient-Based Data Attribution Methods},\n  author={Kim, Sunwoo and Jung, Seokwon and Kim, Sohyung and Oh, Seong Joon and Oh, Alice},\n  journal={arXiv preprint arXiv:2609.19589},\n  year={2026}\n}",
-    "image": "pictures/sunwoo2026form.png",
-    "image_alt": "An iridescent chrome ribbon knot",
+    "image": "pictures/sunwoo2026form-thumb.png",
+    "image_alt": "A cookie cutter shape pressing into dough",
     "links": [],
     "abstract": "Which training examples help a language model with a task? Gradient-based methods compare how examples change the model. We vary tasks and answer formats separately and find that these methods mainly match the answer format. Examples from different tasks can look similar, while the same task in a different format can look unrelated. This shows why data attribution needs tests that separate format from task content.",
     "rtai_tags": [
@@ -114,8 +114,8 @@ const publicationsData = [
     "year": "2026",
     "url": "https://arxiv.org/abs/2610.08775",
     "bibtex": "@article{sonthalia2026bottle,\n  title={Agent in a Bottle: Can LLM Agents Turn Their Capabilities Into Cheap, Scalable Artifacts?},\n  author={Sonthalia, Ankit and Puerto, Haritz and Rubinstein, Alexander and Gubri, Martin and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2610.08775},\n  year={2026}\n}",
-    "image": "pictures/sonthalia2026bottle-genie.png",
-    "image_alt": "A purple and pink genie emerges from an orange bottle",
+    "image": "pictures/sonthalia2026bottle-thumb.png",
+    "image_alt": "A glass bottle with a small friendly robot curled up inside it, corked",
     "links": [
       {
         "text": "Project",
@@ -145,14 +145,14 @@ const publicationsData = [
     "year": "2026",
     "url": "https://arxiv.org/abs/2605.20258",
     "bibtex": "@inproceedings{sangwoo2026selfci,\n  title={It Takes Two: Complementary Self-Distillation for Contextual Integrity in LLMs},\n  author={Park, Sangwoo and Yeo, Woongyeong and Choi, Yumin and Lee, Hyomin and Kim, Kangsan and Lee, Seanie and Baek, Jinheon and Oh, Seong Joon and Hwang, Sung Ju},\n  booktitle={Advances in Neural Information Processing Systems},\n  year={2026}\n}",
-    "image": "pictures/sangwoo2026selfci.png",
+    "image": "pictures/sangwoo2026selfci-thumb.png",
     "links": [],
     "abstract": "An AI assistant should use the information it needs without sharing private details unnecessarily. We train it with two teachers: one focuses on the task, the other on privacy. This helps the assistant keep useful information and limit disclosure, even as private context builds up across its work.",
     "rtai_tags": [
       "PILM",
       "LLMAG"
     ],
-    "image_alt": "Blue and coral origami cranes"
+    "image_alt": "Two owls side by side on a branch"
   },
   {
     "id": "bora2026halftruths",
@@ -166,7 +166,7 @@ const publicationsData = [
     "year": "2026",
     "url": "https://arxiv.org/abs/2602.23906",
     "bibtex": "@inproceedings{bora2026halftruths,\n  title={Half-Truths Break Similarity-Based Retrieval},\n  author={Kargi, Bora and Uselis, Arnas and Oh, Seong Joon},\n  booktitle={Advances in Neural Information Processing Systems},\n  year={2026}\n}",
-    "image": "pictures/bora2026halftruths.png",
+    "image": "pictures/bora2026halftruths-thumb.png",
     "links": [
       {
         "text": "Code",
@@ -178,7 +178,7 @@ const publicationsData = [
       "CoGe",
       "VLM"
     ],
-    "image_alt": "An emerald pear with a red interior"
+    "image_alt": "A picture frame with a puzzle piece of the wrong colour sticking out of it"
   },
   {
     "id": "seokwon2026meme",
@@ -194,8 +194,8 @@ const publicationsData = [
     "year": "2026",
     "url": "https://arxiv.org/abs/2605.12477",
     "bibtex": "@inproceedings{seokwon2026meme,\n  title={MEME: Multi-Entity \\& Evolving Memory Evaluation},\n  author={Jung, Seokwon and Rubinstein, Alexander and Uselis, Arnas and Yun, Sangdoo and Oh, Seong Joon},\n  booktitle={NeurIPS Evaluations and Datasets Track},\n  year={2026}\n}",
-    "image": "pictures/seokwon2026meme.png",
-    "image_alt": "An amber nautilus shell",
+    "image": "pictures/seokwon2026meme-thumb.png",
+    "image_alt": "A sticky note with a crossed-out line and a fresh line beneath",
     "links": [
       {
         "text": "Project",
@@ -226,10 +226,10 @@ const publicationsData = [
     "year": "2026",
     "url": "",
     "bibtex": "@inproceedings{uselis2026crisp,\n  title={CRISP: Compositional Reasoning over Images via Stackable Programs for VLMs},\n  author={Uselis, Arnas and Jeong, Yujin and Zhao, Yanpeng and Rubinstein, Alexander and Oh, Seong Joon and Bitton, Yonatan and Gavrikov, Paul},\n  booktitle={NeurIPS Evaluations and Datasets Track},\n  year={2026}\n}",
-    "image": "pictures/uselis2026crisp.png",
+    "image": "pictures/uselis2026crisp-thumb.png",
     "links": [],
     "abstract": "A vision-language model can give the right answer while looking at the wrong objects. CRISP builds visual questions from reusable steps and checks which objects the model uses at every stage. Across 2D characters, 3D characters and indoor scenes, models struggle as the reasoning gets longer, and correct final answers often hide mistakes along the way.",
-    "image_alt": "Stacked glass blocks",
+    "image_alt": "A stack of three toy building blocks with a magnifying glass beside it",
     "rtai_tags": [
       "CoGe",
       "VLM"
@@ -249,8 +249,8 @@ const publicationsData = [
     "year": "2026",
     "url": "https://arxiv.org/abs/2606.23217",
     "bibtex": "@article{elena2026muppet,\n  title={MuPPET: A Benchmark for Contextual Privacy of LLM Assistants in Multi-Party Conversations},\n  author={Ruzzetti, Elena Sofia and Emde, Cornelius and Yun, Sangdoo and Oh, Seong Joon and Gubri, Martin},\n  journal={arXiv preprint arXiv:2606.23217},\n  year={2026}\n}",
-    "image": "pictures/elena2026muppet.png",
-    "image_alt": "A lime-green fuzzy puppet",
+    "image": "pictures/elena2026muppet-thumb.png",
+    "image_alt": "A speech bubble with an open padlock inside it",
     "links": [
       {
         "text": "Code",
@@ -280,8 +280,8 @@ const publicationsData = [
     "year": "2026",
     "url": "https://arxiv.org/abs/2606.11172",
     "bibtex": "@article{evgenii2026futureprobes,\n  title={Predicting Future Behaviors in Reasoning Models Enables Better Steering},\n  author={Kortukov, Evgenii and Komorowski, Piotr and Klein, Florian and Engl, Paula and Sarti, Gabriele and Oh, Seong Joon and Lapuschkin, Sebastian and Samek, Wojciech},\n  journal={arXiv preprint arXiv:2606.11172},\n  year={2026}\n}",
-    "image": "pictures/evgenii2026futureprobes.png",
-    "image_alt": "Brass compass with an orange needle",
+    "image": "pictures/evgenii2026futureprobes-thumb.png",
+    "image_alt": "A crystal ball with a small arrow inside it",
     "links": [],
     "abstract": "To steer a reasoning model, you have to act before it does, not after. Existing methods read internal features that merely detect behaviour in text the model has already written, which says little about what comes next. We instead train probes to forecast future behaviour from mid-reasoning, then steer by picking the sentence most likely to lead where we want. This removes almost all of the quality loss that activation steering causes, and even works in cases where activation steering fails outright.",
     "rtai_tags": [
@@ -303,8 +303,8 @@ const publicationsData = [
     "year": "2026",
     "url": "https://openreview.net/forum?id=C8MlQkr4bw",
     "bibtex": "@inproceedings{shuman2026clipgen,\n  title={CLIP Models Generalize Less Than Compositional Benchmarks Suggest},\n  author={Peng, Shuman and Uselis, Arnas and Koishigarina, Darina and Ester, Martin and Oh, Seong Joon},\n  booktitle={ICML 2026 Workshop on Compositional Learning: Safety, Interpretability, and Agents (CompLearn)},\n  year={2026}\n}",
-    "image": "pictures/shuman2026clipgen.png",
-    "image_alt": "Author project illustration",
+    "image": "pictures/shuman2026clipgen-thumb.png",
+    "image_alt": "A measuring tape loosely coiled",
     "links": [],
     "abstract": "Does a vision-language model understand a new combination of familiar objects and attributes, or has it seen that combination before? We find that common benchmarks often mix these cases. When we remove familiar combinations and other shortcuts, performance drops and model rankings change. Existing scores can therefore overstate how well models understand new combinations.",
     "rtai_tags": [
@@ -328,8 +328,8 @@ const publicationsData = [
     "year": "2026",
     "url": "https://arxiv.org/abs/2605.15961",
     "bibtex": "@article{fabian2026saeft,\n  title={Sparse Autoencoders enable Robust and Interpretable Fine-tuning of CLIP models},\n  author={Morelli, Fabian and Uselis, Arnas and Sonthalia, Ankit and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2605.15961},\n  year={2026}\n}",
-    "image": "pictures/fabian2026saeft.png",
-    "image_alt": "A jewel-like coloured glass prism",
+    "image": "pictures/fabian2026saeft-thumb.png",
+    "image_alt": "A tuning fork with a small padlock hanging from it",
     "links": [
       {
         "text": "Code",
@@ -362,7 +362,7 @@ const publicationsData = [
     "year": "2026",
     "url": "https://arxiv.org/abs/2603.08835",
     "bibtex": "@inproceedings{cornelius2026maseval,\n  title={MASEval: Extending Multi-Agent Evaluation from Models to Systems},\n  author={Emde, Cornelius and Rubinstein, Alexander and Goel, Anmol and Heakl, Ahmed and Yun, Sangdoo and Oh, Seong Joon and Gubri, Martin},\n  booktitle={Proceedings of the Annual Meeting of the Association for Computational Linguistics: System Demonstration Track},\n  year={2026}\n}",
-    "image": "pictures/cornelius2026maseval.png",
+    "image": "pictures/cornelius2026maseval-thumb.png",
     "links": [
       {
         "text": "Code",
@@ -377,7 +377,7 @@ const publicationsData = [
     "workshops": [
       "GEM 2026 Workshop on Natural Language Generation, Evaluation, and Metrics"
     ],
-    "image_alt": "Three sculptural robots"
+    "image_alt": "A racing car seen from the side"
   },
   {
     "id": "emde2026lostcomm",
@@ -392,14 +392,14 @@ const publicationsData = [
     "venue": "ICML 2026 Workshop AgenticUQ (Poster)",
     "year": "2026",
     "bibtex": "@inproceedings{emde2026lostcomm,\n  title={Lost in Communication: Uncertainty Propagation in Multi-Agent Systems},\n  author={Emde, Cornelius and Goel, Anmol and Yun, Sangdoo and Oh, Seong Joon and Gubri, Martin},\n  booktitle={ICML 2026 Workshop on Statistical Frameworks for Uncertainty in Agentic Systems (AgenticUQ)},\n  year={2026}\n}",
-    "image": "pictures/emde2026lostcomm.png",
+    "image": "pictures/emde2026lostcomm-thumb.png",
     "links": [],
     "abstract": "When one AI agent passes an answer to another, does it also pass on its uncertainty? We find that doubts can fade along the way: the receiving agent may not reflect how uncertain the original answer was. This makes confidence across a team of agents a separate problem from confidence within a single model.",
     "rtai_tags": [
       "LLMAG",
       "UQLM"
     ],
-    "image_alt": "Two tin cans connected by coral cord"
+    "image_alt": "Two tin-can telephones joined by a string that fades in the middle"
   },
   {
     "id": "kim2026breakgeom",
@@ -413,8 +413,8 @@ const publicationsData = [
     "venue": "ICML 2026 Workshop MemFM (Poster)",
     "year": "2026",
     "bibtex": "@inproceedings{kim2026breakgeom,\n  title={Break the Output Geometry for Large Language Model Unlearning},\n  author={Kim, Yejin and Shen, William F. and Jung, Seokwon and Oh, Seong Joon},\n  booktitle={ICML 2026 Workshop on Memory in Foundation Models (MemFM)},\n  year={2026}\n}",
-    "image": "pictures/kim2026breakgeom.png",
-    "image_alt": "A cracked blue porcelain sphere",
+    "image": "pictures/kim2026breakgeom-thumb.png",
+    "image_alt": "An eraser rubbing out part of a shape",
     "links": [],
     "abstract": "Teaching a language model to forget selected information can also damage what it should remember. We study how answers are represented inside the model and identify a direction that controls a target output. Our method moves the information to forget along this direction, which improves the balance between forgetting and useful retained knowledge.",
     "rtai_tags": [
@@ -433,7 +433,8 @@ const publicationsData = [
     "year": "2026",
     "url": "https://arxiv.org/abs/2602.24264",
     "bibtex": "@inproceedings{arnas2026necessary,\n  title={Compositional Generalization Requires Linear, Orthogonal Representations in Vision Embedding Models},\n  author={Uselis, Arnas and Dittadi, Andrea and Oh, Seong Joon},\n  booktitle={International Conference on Machine Learning (ICML)},\n  year={2026}\n}",
-    "image": "pictures/arnas2026necessary.png",
+    "image": "pictures/arnas2026necessary-thumb.png",
+    "image_alt": "Three arrows from one point at right angles, like coordinate axes",
     "links": [
       {
         "text": "Code",
@@ -462,8 +463,8 @@ const publicationsData = [
     "year": "2026",
     "url": "https://arxiv.org/abs/2605.31503",
     "bibtex": "@inproceedings{arnas2026binding,\n  title={How can embedding models bind concepts?},\n  author={Uselis, Arnas and Koishigarina, Darina and Oh, Seong Joon},\n  booktitle={International Conference on Machine Learning (ICML)},\n  year={2026}\n}",
-    "image": "pictures/arnas2026binding.png",
-    "image_alt": "Pink and orange interlocked chain links",
+    "image": "pictures/arnas2026binding-thumb.png",
+    "image_alt": "A red ribbon tying a blue square and a green circle together",
     "links": [],
     "abstract": "Recognising a colour and a shape is not enough: a model must know which colour belongs to which shape. We study how models combine these concepts in their image representations. CLIP struggles with new combinations, while controlled models can learn simpler, more reliable combinations when their training data covers enough examples.",
     "rtai_tags": [
@@ -483,11 +484,11 @@ const publicationsData = [
     "year": "2026",
     "url": "https://arxiv.org/abs/2602.14761",
     "bibtex": "@inproceedings{stefano2026implicit,\n  title={Universal Algorithm-Implicit Learning},\n  author={Woerner, Stefano and Oh, Seong Joon and Baumgartner, Christian F.},\n  booktitle={International Conference on Machine Learning (ICML)},\n  year={2026}\n}",
-    "image": "pictures/stefano2026implicit.png",
+    "image": "pictures/stefano2026implicit-thumb.png",
     "links": [],
     "abstract": "A model that learns how to learn should cope with more than one fixed kind of task. We develop a framework for this goal and introduce TAIL, a model that can handle different input types and label sets. It learns from a few examples and can transfer to new domains and kinds of data.",
     "rtai_tags": [],
-    "image_alt": "A red pocket multitool"
+    "image_alt": "A Swiss army knife with several tools folded out"
   },
   {
     "id": "hoyeon2026lpa",
@@ -501,7 +502,7 @@ const publicationsData = [
     "year": "2026",
     "url": "https://arxiv.org/abs/2601.21601",
     "bibtex": "@inproceedings{hoyeon2026lpa,\n  title={Dynamics Reveals Structure: Challenging the Linear Propagation Assumption},\n  author={Chang, Hoyeon and Mucs\\'{a}nyi, B\\'{a}lint and Oh, Seong Joon},\n  booktitle={International Conference on Machine Learning (ICML)},\n  year={2026}\n}",
-    "image": "pictures/hoyeon2026lpa.png",
+    "image": "pictures/hoyeon2026lpa-thumb.png",
     "links": [],
     "abstract": "If we change one fact inside a model, should related facts change too? Many methods assume that these changes can spread through simple linear operations. We show why relationships such as negation and chains of facts can make that impossible. These limits help explain some failures in knowledge editing and multi-step reasoning.",
     "rtai_tags": [
@@ -511,7 +512,7 @@ const publicationsData = [
     "workshops": [
       "ICLR 2026 Workshop on Unifying Concept Representation Learning (Oral)"
     ],
-    "image_alt": "A brass Newton’s cradle with turquoise balls"
+    "image_alt": "A row of dominoes where one domino stands sideways and stops the fall"
   },
   {
     "id": "yujin2026diffusion",
@@ -527,8 +528,8 @@ const publicationsData = [
     "year": "2026",
     "url": "https://arxiv.org/abs/2605.00273",
     "bibtex": "@inproceedings{yujin2026diffusion,\n  title={When Do Diffusion Models learn to Generate Multiple Objects?},\n  author={Jeong, Yujin and Uselis, Arnas and Laina, Iro and Oh, Seong Joon and Rohrbach, Anna},\n  booktitle={International Conference on Machine Learning (ICML)},\n  year={2026}\n}",
-    "image": "pictures/yujin2026diffusion.png",
-    "image_alt": "Three colourful elephant sculptures",
+    "image": "pictures/yujin2026diffusion-thumb.png",
+    "image_alt": "Three different simple toys in a row: a ball, a cube and a cone",
     "links": [],
     "abstract": "Image generators can produce convincing pictures yet struggle with several objects, exact counts or unfamiliar combinations. We use controlled scenes to separate these difficulties from the effects of training-data size and balance. Scene complexity matters strongly, counting is especially difficult with little data, and unseen combinations remain a major obstacle.",
     "rtai_tags": [
@@ -552,7 +553,7 @@ const publicationsData = [
     "year": "2026",
     "url": "https://arxiv.org/abs/2510.07959",
     "bibtex": "@inproceedings{alex2025disco,\n  title={DISCO: Diversifying Sample Condensation for Efficient Model Evaluation},\n  author={Rubinstein, Alexander and Raible, Benjamin and Gubri, Martin and Oh, Seong Joon},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2026}\n}",
-    "image": "pictures/alex2025disco.png",
+    "image": "pictures/alex2025disco-thumb.png",
     "links": [
       {
         "text": "Project Page",
@@ -572,7 +573,7 @@ const publicationsData = [
       "Catch, Adapt, and Operate: Monitoring ML Models Under Drift Workshop (Oral, Best Paper Award)",
       "GEM 2026 Workshop on Natural Language Generation, Evaluation, and Metrics"
     ],
-    "image_alt": "Silver dancing shoes with pink soles"
+    "image_alt": "A disco ball made of small square cards"
   },
   {
     "id": "ahmed2025drllm",
@@ -588,7 +589,7 @@ const publicationsData = [
     "year": "2026",
     "url": "https://arxiv.org/abs/2510.12773",
     "bibtex": "@inproceedings{ahmed2025drllm,\n  title={Dr.LLM: Dynamic Layer Routing for LLMs},\n  author={Heakl, Ahmed and Gubri, Martin and Khan, Salman and Yun, Sangdoo and Oh, Seong Joon},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2026}\n}",
-    "image": "pictures/ahmed2025drllm.png",
+    "image": "pictures/ahmed2025drllm-thumb.png",
     "links": [
       {
         "text": "Code",
@@ -602,7 +603,7 @@ const publicationsData = [
     "workshops": [
       "Third Workshop on Test-Time Updates (Main Track)"
     ],
-    "image_alt": "A colourful miniature marble run"
+    "image_alt": "A stack of five thick coloured slabs with a curved arrow jumping over one slab"
   },
   {
     "id": "darina2025binding",
@@ -616,8 +617,8 @@ const publicationsData = [
     "year": "2026",
     "url": "https://arxiv.org/abs/2502.03566",
     "bibtex": "@inproceedings{darina2025binding,\n  title={CLIP Behaves like a Bag-of-Words Model Cross-modally but not Uni-modally},\n  author={Koishigarina, Darina and Uselis, Arnas and Oh, Seong Joon},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2026}\n}",
-    "image": "pictures/darina2025binding.png",
-    "image_alt": "A blue pouch with colourful geometric toys",
+    "image": "pictures/darina2025binding-thumb.png",
+    "image_alt": "A paper bag with a few letter-free coloured tiles spilling out",
     "links": [
       {
         "text": "Code",
@@ -645,8 +646,8 @@ const publicationsData = [
     "year": "2026",
     "url": "https://arxiv.org/abs/2602.01984",
     "bibtex": "@inproceedings{minyoung2026delimiter,\n  title={Enhancing Multi-Image Understanding through Delimiter Token Scaling},\n  author={Lee, Minyoung and Park, Yeji and Hwang, Dongjun and Kim, Yejin and Oh, Seong Joon and Choe, Junsuk},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2026}\n}",
-    "image": "pictures/minyoung2026delimiter.png",
-    "image_alt": "Colourful blank books between purple bookends",
+    "image": "pictures/minyoung2026delimiter-thumb.png",
+    "image_alt": "Two picture frames separated by a tall bold vertical bar",
     "links": [
       {
         "text": "OpenReview",
@@ -682,14 +683,14 @@ const publicationsData = [
     "year": "2026",
     "url": "https://arxiv.org/abs/2505.20295",
     "bibtex": "@inproceedings{kirchhof2025selfreflect,\n  title={SelfReflect: Can LLMs Communicate Their Internal Answer Distribution?},\n  author={Kirchhof, Michael and Füger, Luca and Goliński, Adam and Dhekane, Eeshan Gunesh and Blaas, Arno and Oh, Seong Joon and Williamson, Sinead},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2026}\n}",
-    "image": "pictures/michael2025selfreflect.png",
+    "image": "pictures/michael2025selfreflect-thumb.png",
     "links": [],
     "abstract": "A model's written answer may hide how uncertain it actually is. SelfReflect measures whether a short summary represents the range of answers the model would give. We find that models often communicate this poorly. Summaries become more faithful when the model first produces several answers and then describes their variation.",
     "rtai_tags": [
       "UQLM",
       "ELM"
     ],
-    "image_alt": "A purple handheld mirror"
+    "image_alt": "A hand mirror"
   },
   {
     "id": "anmol2026privacycollapse",
@@ -705,8 +706,8 @@ const publicationsData = [
     "year": "2026",
     "url": "https://arxiv.org/abs/2601.15220",
     "bibtex": "@inproceedings{anmol2026privacycollapse,\n  title={Privacy Collapse: Benign Fine-Tuning Can Break Contextual Privacy in Language Models},\n  author={Goel, Anmol and Emde, Cornelius and Yun, Sangdoo and Oh, Seong Joon and Gubri, Martin},\n  year={2026},\n  booktitle={Proceedings of the Annual Meeting of the Association for Computational Linguistics: ACL 2026}\n}",
-    "image": "pictures/anmol2026privacycollapse.png",
-    "image_alt": "A turquoise crystal iceberg",
+    "image": "pictures/anmol2026privacycollapse-thumb.png",
+    "image_alt": "A cracked safe with its door slightly open",
     "links": [],
     "abstract": "A model can lose its sense of privacy after fine-tuning on apparently harmless tasks. Training for helpfulness, exposure to user information or even debugging examples can make it share private details inappropriately. Standard safety and usefulness tests may miss this change, so privacy needs its own checks after fine-tuning.",
     "rtai_tags": [
@@ -731,8 +732,8 @@ const publicationsData = [
     "year": "2026",
     "url": "https://arxiv.org/abs/2510.27313",
     "bibtex": "@inproceedings{philipp2026nonattrib,\n  title={LLM Generation Novelty Through the Lens of Semantic Similarity},\n  author={Davydov, Philipp and Prabhu, Ameya and Bethge, Matthias and Nguyen, Elisa and Oh, Seong Joon},\n  year={2026},\n  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2026},\n}",
-    "image": "pictures/philipp2026nonattrib.png",
-    "image_alt": "Silver marbles and a rainbow tetrahedron",
+    "image": "pictures/philipp2026nonattrib-thumb.png",
+    "image_alt": "A single sprouting seedling",
     "links": [
       {
         "text": "Dataset",
@@ -761,8 +762,8 @@ const publicationsData = [
     "year": "2025",
     "url": "https://arxiv.org/abs/2510.20603",
     "bibtex": "@article{heejin2025reasoning,\n  title={What Defines Good Reasoning in LLMs? Dissecting Reasoning Steps with Multi-Aspect Evaluation},\n  author={Do, Heejin and Hwang, Jaehui and Han, Dongyoon and Oh, Seong Joon and Yun, Sangdoo},\n  journal={arXiv preprint arXiv:2510.20603},\n  year={2025}\n}",
-    "image": "pictures/heejin2025reasoning.png",
-    "image_alt": "A red spiral staircase with a gold marble",
+    "image": "pictures/heejin2025reasoning-thumb.png",
+    "image_alt": "A staircase of three steps with a checkmark on each step",
     "links": [],
     "abstract": "Most people judge LLMs by their final answers. This misses the quality of the reasoning process. We break down reasoning into two dimensions: relevance and coherence. Relevance checks if each step is grounded in the problem. Coherence checks if it follows from prior steps. Our method, causal stepwise evaluation (CaSE), assesses each step without hindsight bias. We validate CaSE on two new expert-annotated benchmarks, MRa-GSM8K and MRa-MATH. Training data curated with CaSE directly improves model performance. This is a practical way to analyse, debug, and improve LLM reasoning.",
     "rtai_tags": [
@@ -787,8 +788,8 @@ const publicationsData = [
     "year": "2025",
     "url": "https://arxiv.org/abs/2506.11097",
     "bibtex": "@inproceedings{haritz2025cseo,\n  title={C-SEO Bench: Does Conversational SEO Work?},\n  author={Puerto, Haritz and Gubri, Martin and Green, Tommaso and Oh, Seong Joon and Yun, Sangdoo},\n  booktitle={Advances in Neural Information Processing Systems 38 (NeurIPS 2025), Datasets and Benchmarks Track},\n  year={2025}\n}",
-    "image": "pictures/haritz2025cseo.png",
-    "image_alt": "A coral and cobalt megaphone",
+    "image": "pictures/haritz2025cseo-thumb.png",
+    "image_alt": "A magnifying glass over a podium with places one, two and three",
     "links": [
       {
         "text": "Code",
@@ -817,8 +818,8 @@ const publicationsData = [
     "year": "2025",
     "url": "https://arxiv.org/abs/2507.03683",
     "bibtex": "@inproceedings{ankit2025ranking,\n  title={On the rankability of visual embeddings},\n  author={Sonthalia, Ankit and Uselis, Arnas and Oh, Seong Joon},\n  booktitle={Advances in Neural Information Processing Systems 38 (NeurIPS 2025)},\n  year={2025}\n}",
-    "image": "pictures/ankit2025ranking.png",
-    "image_alt": "A gold podium with a turquoise orb",
+    "image": "pictures/ankit2025ranking-thumb.png",
+    "image_alt": "A row of bars sorted from short to tall",
     "links": [
       {
         "text": "Code",
@@ -847,8 +848,8 @@ const publicationsData = [
     "year": "2025",
     "url": "https://arxiv.org/abs/2505.17955",
     "bibtex": "@inproceedings{yujin2025diffusion,\n  title={Diffusion Classifiers Understand Compositionality, but Conditions Apply},\n  author={Jeong, Yujin and Uselis, Arnas and Oh, Seong Joon and Rohrbach, Anna},\n  booktitle={Advances in Neural Information Processing Systems 38: Datasets and Benchmarks Track},\n  year={2025}\n}",
-    "image": "pictures/yujin2025diffusion.png",
-    "image_alt": "A miniature bentwood chair",
+    "image": "pictures/yujin2025diffusion-thumb.png",
+    "image_alt": "A paintbrush next to a checkmark badge",
     "links": [
       {
         "text": "Code",
@@ -875,8 +876,8 @@ const publicationsData = [
     "year": "2025",
     "url": "https://arxiv.org/abs/2410.11536",
     "bibtex": "@inproceedings{dongjun2025ovs,\n  title={OVS Meets Continual Learning: Towards Sustainable Open-Vocabulary Segmentation},\n  author={Hwang, Dongjun and Kim, Yejin and Lee, Minyoung and Oh, Seong Joon and Choe, Junsuk},\n  booktitle={Advances in Neural Information Processing Systems 38 (NeurIPS 2025)},\n  year={2025}\n}",
-    "image": "pictures/dongjun2025ovs.png",
-    "image_alt": "An emerald bonsai tree in a coral pot",
+    "image": "pictures/dongjun2025ovs-thumb.png",
+    "image_alt": "A paint palette with a bookmark ribbon",
     "links": [
       {
         "text": "Code",
@@ -908,8 +909,8 @@ const publicationsData = [
     "year": "2025",
     "url": "https://arxiv.org/abs/2506.15674",
     "bibtex": "@inproceedings{tommaso2025leakythoughts,\n  title={Leaky Thoughts: Large Reasoning Models Are Not Private Thinkers},\n  author={Green, Tommaso and Gubri, Martin and Puerto, Haritz and Yun, Sangdoo and Oh, Seong Joon},\n  year={2025},\n  booktitle = {Conference on Empirical Methods in Natural Language Processing (EMNLP)},\n}",
-    "image": "pictures/tommaso2025leakythoughts.png",
-    "image_alt": "A purple teapot with a turquoise droplet",
+    "image": "pictures/tommaso2025leakythoughts-thumb.png",
+    "image_alt": "A thought bubble with a drip leaking out of the bottom",
     "links": [
       {
         "text": "Code",
@@ -938,7 +939,7 @@ const publicationsData = [
     "year": "2025",
     "url": "https://arxiv.org/abs/2507.07102",
     "bibtex": "@article{arnas2025scaling,\n  title={Does Data Scaling Lead to Visual Compositional Generalization?},\n  author={Arnas Uselis and Andrea Dittadi and Seong Joon Oh},\n  journal={arXiv preprint arXiv:2507.07102},\n  year={2025}\n}",
-    "image": "pictures/arnas2025scaling.png",
+    "image": "pictures/arnas2025scaling-thumb.png",
     "links": [
       {
         "text": "Code",
@@ -950,7 +951,7 @@ const publicationsData = [
       "CoGe",
       "VLM"
     ],
-    "image_alt": "Three nested orange spheres"
+    "image_alt": "A pile of mixed colourful geometric blocks"
   },
   {
     "id": "alex2025ocl",
@@ -965,8 +966,8 @@ const publicationsData = [
     "year": "2025",
     "url": "https://arxiv.org/abs/2504.07092",
     "bibtex": "@article{alex2025ocl,\n  title={Are We Done with Object-Centric Learning?},\n  author={Rubinstein, Alexander and Prabhu, Ameya and Bethge, Matthias and Oh, Seong Joon},\n  journal={arXiv preprint arXiv:2504.07092},\n  year={2025}\n}",
-    "image": "pictures/alex2025ocl.png",
-    "image_alt": "Playful sculptural binocular eyes",
+    "image": "pictures/alex2025ocl-thumb.png",
+    "image_alt": "A single apple with a dotted outline around it",
     "links": [
       {
         "text": "HuggingFace",
@@ -1000,14 +1001,14 @@ const publicationsData = [
     "year": "2025",
     "url": "https://arxiv.org/abs/2311.16176",
     "bibtex": "@inproceedings{luca2025diffdiv,\n  title={Mitigating Shortcut Learning with Diffusion Counterfactuals and Diverse Ensembles},\n  author={Scimeca, Luca and Rubinstein, Alexander and Teney, Damien and Oh, Seong Joon and Bengio, Yoshua},\n  booktitle={ICLR Workshop},\n  year={2025}\n}",
-    "image": "pictures/luca2025diffdiv.png",
+    "image": "pictures/luca2025diffdiv-thumb.png",
     "links": [],
     "abstract": "Models often rely on easy shortcuts, such as a background that happens to match a label. We use diffusion models partway through training to generate unusual combinations that break these shortcuts. These examples help train groups of models with different strategies and improve their performance on unfamiliar data.",
     "rtai_tags": [
       "DiffM",
       "SyDa"
     ],
-    "image_alt": "A butterfly with turquoise and coral wings"
+    "image_alt": "A signpost pointing two ways with one arm crossed out"
   },
   {
     "id": "sohyun2025dicotta",
@@ -1023,8 +1024,8 @@ const publicationsData = [
     "year": "2025",
     "url": "https://arxiv.org/abs/2504.04981",
     "bibtex": "@article{sohyun2025dicotta,\n  title={DiCoTTA: Domain-invariant Learning for Continual Test-time Adaptation},\n  author={Lee, Sohyun and Kim, Nayeong and Kang, Juwon and Oh, Seong Joon and Kwak, Suha},\n  journal={arXiv preprint arXiv:2504.04981},\n  year={2025}\n}",
-    "image": "pictures/sohyun2025dicotta.png",
-    "image_alt": "An emerald chameleon",
+    "image": "pictures/sohyun2025dicotta-thumb.png",
+    "image_alt": "A chameleon on a branch",
     "links": [],
     "abstract": "A deployed model may face a stream of changing environments. Adapting to the latest one can make it forget earlier ones. DiCoTTA helps the model learn features that remain useful across environments while it processes new data. It improves continual adaptation and generalisation across four benchmarks.",
     "rtai_tags": [
@@ -1044,8 +1045,8 @@ const publicationsData = [
     "year": "2025",
     "url": "https://arxiv.org/abs/2411.00154",
     "bibtex": "@inproceedings{haritz2025mia,\n  title={Scaling Up Membership Inference: When and How Attacks Succeed on Large Language Models},\n  author={Puerto, Haritz and Gubri, Martin and Yun, Sangdoo and Oh, Seong Joon},\n  year={2025},\n  booktitle = {Annual Conference of the North American Chapter of the Association for Computational Linguistics: NAACL 2025},\n}",
-    "image": "pictures/haritz2025mia.png",
-    "image_alt": "A purple and amber magnifying glass",
+    "image": "pictures/haritz2025mia-thumb.png",
+    "image_alt": "A fingerprint under a magnifying glass",
     "links": [],
     "abstract": "Can we tell whether a language model was trained on a particular text? Tests on individual sentences often find little evidence. We show that signals become more useful when combined across documents and larger collections. The scale of the material under investigation is therefore crucial to whether these tests succeed.",
     "rtai_tags": [
@@ -1063,8 +1064,8 @@ const publicationsData = [
     "year": "2025",
     "url": "https://arxiv.org/abs/2504.05461",
     "bibtex": "@inproceedings{arnas2025iclr,\ntitle = {Intermediate Layer Classifiers for OOD Generalization},\nauthor = {Uselis, Arnas and Oh, Seong Joon},\nyear = {2025},\nbooktitle = {International Conference on Learning Representations (ICLR)},\n}",
-    "image": "pictures/arnas2025iclr.png",
-    "image_alt": "Three broad coloured porcelain disks",
+    "image": "pictures/arnas2025iclr-thumb.png",
+    "image_alt": "A slice of layered sponge cake seen from the side, three layers, the middle layer bright orange, the others pale grey",
     "links": [
       {
         "text": "OpenReview",
@@ -1089,8 +1090,8 @@ const publicationsData = [
     "year": "2025",
     "url": "https://arxiv.org/abs/2403.07968",
     "bibtex": "@inproceedings{ankit2025star,\ntitle = {Do Deep Neural Network Solutions Form a Star Domain?},\nauthor = {Sonthalia, Ankit and Rubinstein, Alexander and Abbasnejad, Ehsan and Oh, Seong Joon},\nyear = {2025},\nbooktitle = {International Conference on Learning Representations (ICLR)},\n}",
-    "image": "pictures/ankit2025star.png",
-    "image_alt": "A folded golden and violet star",
+    "image": "pictures/ankit2025star-thumb.png",
+    "image_alt": "A five-pointed star with lines from its centre to the tips",
     "links": [],
     "abstract": "Two well-trained neural networks can have very different internal weights. We ask whether useful models lie along straight paths between solutions and a shared centre. Experiments across many architectures and datasets reveal substantial connections between good solutions. This helps clarify the shape of the space in which neural networks learn.",
     "rtai_tags": [
@@ -1110,8 +1111,8 @@ const publicationsData = [
     "year": "2025",
     "url": "https://openreview.net/forum?id=qZEdmyqCHF",
     "bibtex": "@inproceedings{jaehyun2025iclr,\n  title = {Decoupled Finetuning for Domain Generalizable Semantic Segmentation},\n  author = {Pahk, Jaehyun and Kwon, Donghyeon and Oh, Seong Joon and Kwak, Suha},\n  year = {2025},\n  booktitle = {International Conference on Learning Representations (ICLR)},\n}",
-    "image": "pictures/jaehyun2025iclr.png",
-    "image_alt": "A blue and orange jigsaw puzzle",
+    "image": "pictures/jaehyun2025iclr-thumb.png",
+    "image_alt": "Two separate gears not meshed, one above the other",
     "links": [],
     "abstract": "Adapting a model to label every pixel often means training an existing image encoder together with a new decoder. This can hurt performance on unfamiliar images. DeFT first prepares the decoder, then adapts the two parts separately. The result uses fewer trainable parameters and generalises better to new domains.",
     "rtai_tags": [
@@ -1459,8 +1460,8 @@ const publicationsData = [
     "year": "2025",
     "url": "https://arxiv.org/abs/2305.16867",
     "bibtex": "@article{elif2025naturehumanbehaviour,\ntitle = {Playing repeated games with Large Language Models},\nauthor = {Akata, Elif and Schulz, Lion and Coda-Forno, Julian and Oh, Seong Joon and Bethge, Matthias and Schulz, Eric},\njournal={Nature Human Behaviour},\nyear = {2025}\n}",
-    "image": "pictures/elif2025naturehumanbehaviour.png",
-    "image_alt": "Coral and cobalt dice",
+    "image": "pictures/elif2025naturehumanbehaviour-thumb.png",
+    "image_alt": "Two dice and a handshake",
     "links": [],
     "abstract": "How do language models cooperate or compete when they interact repeatedly? We put them through familiar game-theory tasks and find that they can pursue their own interests yet struggle to coordinate. Extra information or prompts about the opponent can change their behaviour. These experiments offer a way to study social decision-making in AI.",
     "rtai_tags": []
